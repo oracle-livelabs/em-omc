@@ -5,7 +5,7 @@
 LiveLabs is the place to explore Oracle's products and services using workshops designed to enhance your experience building and deploying applications on the Cloud and On-Premises.   Our library of workshops cover everything from how to provision the world's first autonomous database to setting up a webserver on our world class OCI Generation 2 infrastructure, machine learning and much more.  Use your existing Oracle Cloud account, a Free Tier account or a LiveLabs Cloud Account to build, test, and deploy applications on Oracle's Cloud.
 
 ### How do I get started?
-Visit [LiveLabs](http://bit.ly/golivelabs) now to get started.  Workshops are added weekly, please visit frequently for new content.
+Visit [LiveLabs](https://developer.oracle.com/livelabs) now to get started.  Workshops are added weekly, please visit frequently for new content.
 
 [![](./common/images/livelabs-homepage-march.png)](http://bit.ly/golivelabs)
 
@@ -42,14 +42,13 @@ Visit [LiveLabs](http://bit.ly/golivelabs) now to get started.  Workshops are ad
 - [Multitenant Lifecycle Management](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?p180_id=656)
 
 ## Contributing
-Pull requests are currently not being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.  To get your workshop featured on this page, please contact Michelle Malcher or Kevin Lazarz.
+Pull requests are being accepted. See [CONTRIBUTING](CONTRIBUTING.md) for details.  To get your workshop featured on this page, please contact Michelle Malcher or Kevin Lazarz.
 
-## License
 Copyright (c) 2014, 2022 Oracle and/or its affiliates
 The Universal Permissive License (UPL), Version 1.0
-See [LICENSE](LICENSE.md) for details.
+See [LICENSE](LICENSE.txt) for details.
 
 ## Need Help?
-Please first consult the "Need Help?" lab located at the bottom of your workshop to see if our FAQ can solve your problem.  If you have an issue that is specific to the contents of the workshop, please reach out to the author located in the "Acknowledgements" section at the bottom of each lab via email. Please include your workshop name and lab name. You can also include screenshots and attach files. If you have a more general issue, or would like to reach out to the LiveLabs management team, email us [here](mailto:livelabs-help_us@oracle.com).   
+Please first consult the "Need Help?" lab located at the bottom of your workshop to see if our FAQ can solve your problem.  If you have an issue that is specific to the contents of the workshop, please reach out to the author located in the "Acknowledgements" section at the bottom of each lab via email. Please include your workshop name and lab name. You can also include screenshots and attach files. If you have a more general issue or comment, please [reach out to the LiveLabs team](mailto:livelabs-help_us@oracle.com).   
 
-If you do not have an Oracle Account, click [here](https://profile.oracle.com/myprofile/account/create-account.jspx) to create one.
+For workshop reservations you will need to [create an Oracle account](https://profile.oracle.com/myprofile/account/create-account.jspx).
