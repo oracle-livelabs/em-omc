@@ -1,0 +1,52 @@
+{
+  "workshoptitle": "Deploy and Manage Oracle Databases with Ansible and Enterprise Manager",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Deploy and Manage Oracle Databases with Ansible and Enterprise Manager Workshop",
+      "filename": "./../../intro/intro-devops-workshop.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Get a Free Trial",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/pre-register-free-tier-account.md"
+    },
+    {
+      "title": "Lab 1: Prepare Setup",
+      "description": "How to download your ORM stack and update security rules for an existing VCN",
+      "publisheddate": "09/28/2020",
+      "filename": "../../prepare-setup/prepare-setup.md",
+      "type": "devops-automation"
+    },
+    {
+      "title": "Lab 2: Environment Setup",
+      "description": "How to provision the workshop environment and connect to it",
+      "publisheddate": "06/30/2020",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+    },
+    {
+      "title": "Lab 3: Initialize Environment",
+      "description": "How to initialize and start all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 4: Deploy and Manage Oracle Databases with Ansible and Enterprise Manager",
+      "description": "The objective is to become familiar with the extensibility capabilities of Oracle Enterprise Manager and how to integrate them with 3rd party automation/orchestration DevOps tools",
+      "publisheddate": "1/16/2022",
+      "filename": "./../../em-devops-automation/em-devops-automation.md"
+    },
+    {
+      "title": "Appendix: Frequently Asked Questions (FAQ)",
+      "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
+      "publisheddate": "8/12/2020",
+      "filename": "./../../faq/faq.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
