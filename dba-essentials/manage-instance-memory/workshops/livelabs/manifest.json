@@ -1,0 +1,43 @@
+{
+  "workshoptitle": "DBA Essentials - Manage Database Instance and Memory for Oracle Database 21c",
+  "help": "livelabs-help-em_us_grp@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction.",
+      "filename": "./../../intro-instance-memory/intro-instance-memory.md",
+      "type": "em-dba"
+    },
+    {
+      "title": "Lab 1: Environment Setup",
+      "description": "Verify Setup of compute instance",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
+    },
+    {
+      "title": "Lab 2: Initialize Environment",
+      "description": "How to initialize and start all the workshop components.",
+      "publisheddate": "12/21/2021",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 3: Shut down and Start up the Database Instance",
+      "description": "How to shut down and start up an Oracle instance using SQL commands and Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
+      "filename": "./../../shutdown-startup-instance/shutdown-startup-instance.md"
+    },
+    {
+      "title": "Lab 4: Manage Initialization Parameters",
+      "description": "How to to view and modify initialization parameters in Oracle Enterprise Manager Cloud Control (Oracle EMCC) to specify the properties of the Database Instance.",
+      "filename": "./../../initialize-parameters/initialize-parameters.md"
+    },
+    {
+      "title": "Lab 5: Automatic Memory Management",
+      "description": "How to enable Automatic Memory Management for Oracle Database from Oracle Enterprise Manager Cloud Control (Oracle EMCC) and SQL command line.",
+      "filename": "./../../auto-memory-management/auto-memory-management.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
