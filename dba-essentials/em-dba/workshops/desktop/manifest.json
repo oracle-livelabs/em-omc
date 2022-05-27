@@ -1,0 +1,48 @@
+{
+  "workshoptitle": "DBA Essentials - DB Admin with Oracle Enterprise Manager Cloud Control",
+  "help": "livelabs-help-em_us_grp@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction.",
+      "filename": "./../../intro-emcc/intro-emcc.md",
+      "type": "em-dba"
+    },
+    {
+      "title": "Using noVNC Remote Desktop",
+      "description": "Using noVNC Remote Desktop",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+    },
+    {
+      "title": "Lab 1: Initialize Environment",
+      "description": "How to initialize and start all the workshop components.",
+      "publisheddate": "12/21/2021",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 2: Connect to SQL Plus and View Container Details",
+      "description": "How to log in to SQL Plus and explore the Container Database (CDB) and Pluggable Database (PDB) with basic SQL commands.",
+      "filename": "./../../sqlplus-container-details/sqlplus-container-details.md"
+    },
+    {
+      "title": "Lab 3: Log in to Oracle EMCC",
+      "description": "How to log in to Oracle Enterprise Manager Cloud Control (Oracle EMCC) and access the home page.",
+      "filename": "./../../log-into-emcc/log-into-emcc.md"
+    },
+    {
+      "title": "Lab 4: Manage Targets - Oracle Database and Listener",
+      "description": "How to manage the targets discovered by Oracle EMCC. View details of Oracle Database and listener and administer them from Oracle EMCC as managed targets.",
+      "filename": "./../../manage-targets/manage-targets.md"
+    },
+    {
+      "title": "Lab 5: Access Container Home Page",
+      "description": "How to access the container home page from Oracle EMCC. Learn how to switch between containers and manage your favorites.",
+      "filename": "./../../access-homepage/access-homepage.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
