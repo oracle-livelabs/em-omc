@@ -1,0 +1,39 @@
+{
+  "workshoptitle": "Oracle Enterprise Manager - Real Application Testing",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Real Application Testing workshop",
+      "filename": "./../../intro/intro-rat-overview.md"
+    },
+    {
+      "title": "Get Started with noVNC Remote Desktop",
+      "description": "Using noVNC Remote Desktop",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+    },
+    {
+      "title": "Lab 1: Initialize Environment",
+      "description": "How to initialize and start all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 2: Get Started with Real Application Testing",
+      "description": "The objective of this lab is to become familiar with Real Application Testing capabilities using Oracle Enterprise Manager Cloud Control 13c.",
+      "publisheddate": "6/16/2021",
+      "filename": "./../../em-rat-spa-dbreplay/em-rat-spa-dbreplay.md"
+    },
+    {
+      "title": "Appendix: Frequently Asked Questions (FAQ)",
+      "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
+      "publisheddate": "8/12/2020",
+      "filename": "./../../faq/faq.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
