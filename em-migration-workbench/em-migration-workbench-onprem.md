@@ -52,7 +52,7 @@ In the interest of simplifying the setup and save time, the following steps were
 
 - orcl is our source database
 - cdb19c is our destination container database in task 2
-- orcl19 is our destination database in task 2a
+- orcl19 is our destination database in task 3
   ![Databases](images/a_t1_01_databases.png " ")
 
 ### **Export and Import User Requirement**

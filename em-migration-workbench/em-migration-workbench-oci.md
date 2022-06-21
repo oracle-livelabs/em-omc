@@ -29,9 +29,11 @@ In this lab you will perform the Tasks below. The pre-requisites in task 1 will 
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU5, and database 19.12 as Oracle Management Repository.
 
-## Task 1: Perform Migration Workbench Pre-Requisites
+## Task 1: Review Source Database Pre-Requisites Completed in Advance
 
-### **Verify source database discovered in Enterprise Manager**
+In the interest of simplifying the setup and save time, the following pre-Requisite steps for the source database were completed in advance for this lab. Please review accordingly for reference:
+
+### **Source database target discovered in Enterprise Manager**
 
 1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below.
 
@@ -45,26 +47,29 @@ In this lab you will perform the Tasks below. The pre-requisites in task 1 will 
 
     ![Login Page](../initialize-environment/images/em-login.png " ")
 
-    The Enterprise Summary page shows some down targets. This is OK as We shut down some databases not used in this workshop.
-    ![Enterprise Summary](../em-migration-workbench-onprem/images/t1_01_enterprise_summary.png " ")
 2. Click on "Targets"->"Databases":
-    ![Databases](images/t1_01_databases.png " ")
-    - orcl is our source database
 
-### **Create storage bucket and destination autonomous database**
+  ![Databases](images/b_t1_01_databases.png " ")
+- orcl is our source database
 
-1. Create Object Storage Bucket in OCI
-    - In OCI Console, navigate to Storage->Buckets
-    - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
-    - Click "Create Bucket"
-    - Bucket Name:
+### **Export User Requirement**
+  - For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
+  - To learn more about the the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
 
-        ```
-        <copy>bucket-mwb</copy>
-        ```
+### **Named Credential Requirement**
+  - Named credential "EXP\_USER" created in Enterprise Manager for user "EXP\_USER" on database "orcl"
+  - To review the credential in OEM console, navigate to "Setup"->"Security"->"Named Credentials"
+  - To learn more about named credentials review "[Named Credentials](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emsec/security-features.html#GUID-345595B0-3FA4-4F2C-A606-596B1A10A13E)" in the Enterprise Manager documentation
 
-    - Leave all other fields at default and click Create.
-2. Create Autonomous Database
+### **Data Pump Directory Requirement**
+  - Migration workbench requires a local directory on the source database with sufficient space to host the data pump dump files
+  - Created the following directory on the host: /u01/app/oracle/migration_workbench
+  - Created directory object "MWB_DIR" in the source database pointing to this directory
+  - Granted read and write privileges on the directory object to user exp\_user in the source database
+
+## Task 2: Create destination autonomous database and storage bucket in OCI
+
+1. Create Autonomous Database
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
     - Click on "Create Autonomous Database"
@@ -100,29 +105,40 @@ In this lab you will perform the Tasks below. The pre-requisites in task 1 will 
         - Select "Bring Your Own License (BYOL)"
         - Database Edition options will be shown. Keep selected option (EE)
     - Click "Create Autonomous Database"
-    ![Create ATP](images/t1_02_create_atp.png " ")
+    ![Create ATP](images/b_t2_01_create_atp.png " ")
 
-### **Discover the destination autonomous database in Enterprise Manager**
-
-  1. Download the ATP-ORCL client wallet using OCI console:
+  2. Download the ATP-ORCL client wallet using OCI console:
 
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
-    ![ATP Home](images/t1_03_atp_home.png " ")
-    - Click "Service Console". The database console opens in a new browser tab
-    - On the Service Console click on the "Administration" link in the left navigation bar
-    - Click on "Download Client Credentials (Wallet)" tile
+    ![ATP Home](images/b_t2_02_atp_home.png " ")
+    - Click "Database Actions". The Database Actions page opens in a new browser tab
+    - Click on "Download Client Credentials (Wallet)" tile under "Administration". You may have to scroll down the page
     - On the pop-up window, enter password and click "Download":
-        
+
         ```
         <copy>welcome1</copy>
         ```
 
     - The wallet zip file will be downloaded to the local "Downloads" directory:
-    ![Wallet Download](images/t1_04_wallet_download.png " ")
 
-  2. Add ATP-ORCL as a target to Enterprise Manager:
-  
+
+3. Create Object Storage Bucket in OCI
+    - In OCI Console, navigate to Storage->Buckets
+    - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
+    - Click "Create Bucket"
+    - Bucket Name:
+
+        ```
+        <copy>bucket-mwb</copy>
+        ```
+
+    - Leave all other fields at default and click Create.
+
+## Task 3: Perform Target Autonomous Database Pre-Requisites
+
+  1. Discover ATP-ORCL in Enterprise Manager:
+
     - In Enterprise Manager console on the first tab of the browser, navigate to "Setup"->"Add Target"->"Add Target Manually"
     - On the "Add Targets Manually" screen, click the "Add Target Manually" button
     - On the resulting pop-up window:
@@ -140,95 +156,41 @@ In this lab you will perform the Tasks below. The pre-requisites in task 1 will 
 
         - Hit Enter
         - Select "Autonomous Transaction Processing" and click "Add":
-    ![Add ATP](images/t1_05_add_atp.png " ")
+    ![Add ATP](images/b_t3_01_add_atp.png " ")
     - On the "Add Autonomous Transaction Processing: Properties" screen, enter:
       - Target Name:
-        
+
         ```
         <copy>ATP-ORCL</copy>
         ```
 
       - OCI Client Credential (Wallet): click "Choose File" and select the wallet zip file you saved in the previous step
       - Wallet Password:
-        
+
         ```
         <copy>welcome1</copy>
         ```
 
       - Service Name: Choose "**orcl_high**" from the drop-down list
       - Monitoring Username: The default monitoring user "adbsnmp" is initially locked. For this lab we'll just use the ADMIN user for monitoring. Replace "adbsnmp" with "ADMIN" (upper case):
-        
+
         ```
         <copy>ADMIN</copy>
         ```
     - Monitoring Password:
-        
+
         ```
         <copy>Welcome12345</copy>
         ```
 
     - Click "Test Connection" (it may take a couple of minutes to get the result back):
-    ![ATP Props](images/t1_06_atp_props.png " ")
+    ![ATP Props](images/b_t3_02_atp_props.png " ")
     - Click Next
     - On the Review screen click Submit
     - Click on "Targets"->"Databases". The new autonomous database has been discovered in Enterprise Manager:
-    ![ATP Target](images/t1_07_atp_target.png " ")
+    ![ATP Target](images/b_t3_03_atp_target.png " ")
 
-### **Create a local directory for migration data**
-
-Execute the following task in a terminal window:
-
-- Create a local directory on the source host for the export data. We'll create a directory object for this directory next. Note we could have used the existing DATA\_PUMP\_DIR directory object and its corresponding directory, but we are opting to separate Migration Workbench data in its own directory.
-
-    ```
-    <copy>mkdir -p /u01/app/oracle/mwb</copy>
-    ```
-
-### **Prerequisites required by the source database**
-
-Note: The script below may take a few minutes to complete. Do not cancel or close the terminal window. To see the content of the script before executing, replace "sh" with "cat" in the command.
-  
-  1. For orcl (Source database): Enable archive log mode, create directory object, create export user and assign required privileges.
-
-    ```
-    <copy>
-    sh $HOME/scripts/mwb/prepare_source_db_orcl.sh
-    </copy>
-    ```
-
-  2. Create Named Credentials for the Migration Workbench user
-    - Using the Enterprise Manager console, navigate to "Setup"->"Security"->"Named Credentials"
-    - Click "Create"
-    - On the "Create Credential" screen, enter:
-    - Credential name:
-
-        ```
-        <copy>MWBUSER</copy>
-        ```
-
-    - Authenticating Target Type: Database Instance
-    - Credential type: Database Credentials
-    - Scope: Global
-    - UserName:
-
-        ```
-        <copy>MWBUSER</copy>
-       ```
-
-    - Password:
-
-        ```
-        <copy>welcome1</copy>
-        ```
-
-    - Role: Normal
-      ![MWB User Credential](../em-migration-workbench-onprem/images/t1_03_mwbuser_credential.png " ")
-    - Click “Test and Save”. Choose database **orcl** to test. You should get "Confirmation credential operation successful". If not, review the steps above and retry.
-      ![Credential Created](../em-migration-workbench-onprem/images/t1_04_credential_created.png " ")
-
-### **Prerequisites required by the destination autonomous database**
-
-  1. Create ATP Credential in OEM
+  2. Create ATP Credential in OEM
     - Using the Enterprise Manager console, navigate to "Setup"->"Security"->"Named Credentials"
     - Click "Create"
     - On the "Create Credential" screen, enter:
@@ -265,11 +227,11 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
 
       - Role: Normal
 
-    ![ATP Credential](images/t1_08_atp_credential.png " ")
+    ![ATP Credential](images/b_t3_04_atp_credential.png " ")
 
     - Click “Test and Save”. You should get "Confirmation credential operation successful". If not, review the steps above and retry.
 
-  2. Generate RSA key pair in PEM format
+  3. Generate RSA key pair in PEM format
 
     In the top-right corner of the Console, open the Profile menu (User menu icon), then click User Settings to view the details:
     - In the left navigation bar, under "Resources", click on "API Keys"
@@ -277,11 +239,11 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
     - In the pop-up window, keep the default option "Generate API Key Pair" selected
     - Click "Download Private Key" and save it to the Downloads folder in your NoVNC window (the file name will have an extension of ".pem")
     - Click "Add"
-    ![Add API Key](images/t1_10_add_api_Key.png " ")
+    ![Add API Key](images/b_t3_05_add_api_Key.png " ")
     - The text shown under "Fingerprint" is the public key. Make a note of it as it will be used in a subsequent step. To save it to a text file, click on "Applications" on the top left corner of your NoVNC window, then "Accessories"->"Text Editor". Paste the public key and save the file to the desktop
-    ![API Key](images/t1_11_api_Key.png " ")
+    ![API Key](images/b_t3_06_api_Key.png " ")
 
-  3. Create an OCI Auth Token
+  4. Create an OCI Auth Token
 
     While on the same screen in the OCI Console from previous step:
     - In the left navigation bar, under "Resources", click on "Auth Tokens"
@@ -297,9 +259,9 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
     - The new Auth Token is displayed
     - Copy the auth token and save it to a file to retrieve it later, it won't be shown again in the Console. Open a new tab in the Text Editor you launched in the previous step, paste the token, and save the file to the desktop
     - Close the Generate Token dialog:
-    ![Auth Token](images/t1_09_auth_token.png " ")
+    ![Auth Token](images/b_t3_07_auth_token.png " ")
 
-  4. Create OCI Credential in Enterprise Manager
+  5. Create OCI Credential in Enterprise Manager
     - Make a note of your Tenancy OCID and User OCID:
         - Open a new tab in the Text Editor you launched in the previous step. You will save your tenancy OCID and USer OCID here to use later in this step
         - On the OCI console, click on the user icon on the top right of the screen
@@ -336,20 +298,20 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
         - Public Key Fingerprint: Public Key Fingerprint you saved to your desktop
         - Private Key: Private Key you saved to the Downloads folder (file with extension of ".pem")
 
-      ![OCI Credential](images/t1_12_oci_credential.png " ")
+      ![OCI Credential](images/b_t3_08_oci_credential.png " ")
 
     - Click Save. You should get "Confirmation credential operation successful". If not, review the steps above and retry
 
-  5. Create Authentication Credential in ADB
+  6. Create Authentication Credential in ADB
 
     Create an "Auth Token" based credential in the Autonomous Database and set it as a default credential that will be required for authentication between the Autonomous Database and OCI object storage.
 
     - This step requires your fully qualified OCI username, not your user OCID used in the previous step. In OCI console, click on the user icon on the top right of the page, then click on "User Details". Make a note of your fully qualified username at the top of the screen
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
-    ![ATP Home](images/t1_03_atp_home.png " ")
-    - Click "Service Console" to display the database console
-    - On the Service Console click on the "Development" link, then click on "Database Actions"
+    ![ATP Home](images/b_t2_02_atp_home.png " ")
+    - Click "Database Actions". The Database Actions page opens in a new browser tab
+    - If you get the database login screen, login in as user ADMIN:
     - Username:
 
         ```
@@ -362,7 +324,7 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
         <copy>Welcome12345</copy>
         ```
           
-    - On the "Development" screen, click on "SQL" (first tile) 
+    - Under "Development" heading, click on "SQL" (first tile) 
     - Execute the following code:
 
         ```
@@ -376,7 +338,7 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
         /
         </copy>
         ```
-      ![Obj Store Cred](images/t1_13_obj_store_cred.png " ")
+      ![Obj Store Cred](images/b_t3_09_obj_store_cred.png " ")
     - Next execute the following SQL statement:
 
         ```
@@ -384,23 +346,9 @@ Note: The script below may take a few minutes to complete. Do not cancel or clos
         ALTER DATABASE PROPERTY SET default_credential = 'ADMIN.OBJ_STORE_CRED';
         </copy>
         ```
-      ![ATP Default Cred](images/t1_14_atp_default_cred.png " ")
+      ![ATP Default Cred](images/b_t3_10_atp_default_cred.png " ")
 
-### **Check the Destination ADB doesn't have the HR schema**
-
-Our source database has the HR sample schema. Our target database does not before the migration. In addition to the validation checks done by the tool, we can do an additional validation to check the existence of this schema in the destination database before and after the migration.
-
-- Using the same SQL Worksheet from the previous step, execute the following query:
-
-    ```
-    <copy>select count(*) from dba_users where username='HR';</copy>
-    ```
-
-    ![Query Result](images/t1_15_query_result.png " ")
-
-    The query result (**0**) indicates the HR schema doesn't exist in the destination database.
-
-## Task 2: Migrate and upgrade a 12c non-container database to autonomous database in Oracle Cloud
+## Task 4: Migrate and upgrade a 12c non-container database to autonomous database in Oracle Cloud
 
 ### **Overview**
 
@@ -408,10 +356,9 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 
 ### **Execution**
 
-1. Log into your Enterprise Manager as **sysman** as indicated in the Prerequisites step if not already done.
+1. Log into your Enterprise Manager as **sysman** as indicated in the Prerequisites step if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-3. On the "Database Migration" page, collapse the "Getting Started" region and click on "Create Migration Activity"
-![Database Migration](../em-migration-workbench-onprem/images/t2_01_database_migration.png " ")
+3. On the "Database Migration" page, click on "Create Migration Activity"
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -419,25 +366,19 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
         <copy>Database Migration ORCL to ATP-ORCL</copy>
         ```
 
-
     - Migrate: Full Database
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: ATP-ORCL
-    - If you receive a warning on Tools Validation, click "Upload Migration Tools"
-      ![Migration Tools](images/t2_01_mig_tools.png " ")
-    - Upload the "p32613591\_112048\_Generic.zip" file from the Downloads folder
-      ![Select CPAT](images/t2_02_select_cpat.png " ")
-      - Click Continue
-      ![CPAT Available](images/t2_03_cpat_available.png " ")
+      ![Add Details](images/b_t4_01_create_migration.png " ")
+    - Click Continue
 5. On the Add Details screen:
 
-    Source:
-    - Database Credentials: MWBUSER (Named)
-    - Host Credential: ORACLE (Named)
+    - Database Credentials: EXP_USER (Named Credential)
+    - Host Credential: ORACLE (Named Credential)
 
     Target:
-    - Database Credential: ADMIN (Named)
-    - Agent Host Credential: ORACLE (Named)
+    - Database Credential: ADMIN (Named Credential)
+    - Agent Host Credential: ORACLE (Named Credential)
     - Service Name: orcl_high (TCPS)
 
     Action:
@@ -466,64 +407,44 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - OCI Credential: OCI
     - Database OCI Auth Credential: ADMIN.MWB_CRED
     - Click Next
-      ![Add Details](images/t2_04_add_details.png " ")
+      ![Add Details](images/b_t4_02_add_details.png " ")
     - Click Next
 
 6. On the Customize screen
-    - Under Export Options/Parallel: change from default to 4
-    - Under Import options/Parallel: change from default 2
     - Notice mapping the Users tablespace in the source database to Data table space in the destination database
-    - Leave everything else at default for the purpose of this demo
+    - Leave everything at default for the purpose of this demo
+    ![customize](images/b_t4_03_customize.png " ")
     - Click Review
-    ![customize](images/t2_05_customize.png " ")
 
 7. On the Review and Submit screen
 
     - Review your entries and click Analyze Source.
-    ![Anaylze Source](images/t2_06_anayze_source.png " ")
+    ![Anaylze Source](images/b_t4_04_anayze_source.png " ")
     - When the analysis is completed the button text will change to "View Analysis Report". Click the button and the report will open in a new browser tab. Review CPAT Results
-    ![CPAT Results](images/t2_07_cpat_results.png " ")
-    - Review the results. In the blockers section, the migration privileges in the source database are not available in autonomous database, this is expected and we can proceed.
-    - Note you can download the CPAT results if desired. Click on the previous tab to continue with the migration process.
-    ![Validate](images/t2_08_validate.png " ")
+    ![CPAT Results](images/b_t4_05_cpat_results.png " ")
+    - Review the results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis. In our case we can proceed.
+    - Note you can download the CPAT results if desired. Click on the previous browser tab to continue with the migration process.
+    ![Validate](images/b_t4_06_validate.png " ")
     - Click "Validate"
 
 8. Validation checks run for a few minutes and all checks should pass. Click "Close & Submit". If not check your previous steps, fix the error and revalidate
- ![Validate Activity](images/t2_09_validate_activity.png " ")
+ ![Validate Activity](images/b_t4_07_validate_activity.png " ")
 9. On the Submit Activity screen, check the "Confirm that you have done source analysis" checkbox
-  ![Submit Activity](images/t2_10_submit_activity.png " ")
+  ![Submit Activity](images/b_t4_08_submit_activity.png " ")
 10. Click submit, then click "Close and Go Back to Activities Page"
 11. On the activity page, change the Auto Refresh to 1 minute
- ![Activity Page](images/t2_11_activity_page.png " ")
+ ![Activity Page](images/b_t4_09_activity_page.png " ")
 11. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped"
- ![Procedure Activity](images/t2_12_procedure_activity.png " ")
+ ![Procedure Activity](images/b_t4_10_procedure_activity.png " ")
 12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
- ![Procedure Activity Completed](images/t2_13_procedure_activity_completed.png " ")
+ ![Procedure Activity Completed](images/b_t4_11_procedure_activity_completed.png " ")
 13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Notice althouh the status is "Completed with Errors", The summary region at the top shows the exit level of the activity was Warning, not Problems. Click on the View Analysis link.
 14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate.
- ![View Analysis](images/t2_14_view_analysis.png " ")
+ ![View Analysis](images/b_t4_11_view_analysis.png " ")
 15. Go back to the activity page and click on the "Compare Performance" link.
 16. Examine the Performace Comparison report to analyze the database performance before and after the migration
- ![Performance Comparison](images/t2_15_performance_comparison.png " ")
-17. Finally let's validate the HR schema has been migrated and has the same number of objects as in the source database:
+ ![Performance Comparison](images/b_t4_12_performance_comparison.png " ")
 
-- In OCI Console, navigate to Oracle Database->Autonomous Database
-- Click on the "ATP-ORCL" database to display the database homepage
-  ![ATP Home](images/t1_03_atp_home.png " ")
-- Click "Service Console" to display the database console
-- On the Service Console click on the "Development" link, then click "Database Actions"
-- Login with username "ADMIN" and password
-- On the "Development" screen, click on "SQL" (first tile)
-- Execute the following query:
-
-    ```
-    <copy>
-    select count(*) from dba_objects where owner='HR';
-    </copy>
-    ```
-
-    The query result shows the HR schema now exists in the target database and owns **34** objects.
-    ![Query Result](images/t2_16_query_result.png " ")
     You have now completed this task.
 
 This completes the Lab!
