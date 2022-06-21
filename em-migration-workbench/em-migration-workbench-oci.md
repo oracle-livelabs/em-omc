@@ -239,9 +239,9 @@ In the interest of simplifying the setup and save time, the following pre-Requis
     - In the pop-up window, keep the default option "Generate API Key Pair" selected
     - Click "Download Private Key" and save it to the Downloads folder in your NoVNC window (the file name will have an extension of ".pem")
     - Click "Add"
-    ![Add API Key](images/b_t3_05_add_api_Key.png " ")
+    ![Add API Key](images/b_t3_05_add_api_key.png " ")
     - The text shown under "Fingerprint" is the public key. Make a note of it as it will be used in a subsequent step. To save it to a text file, click on "Applications" on the top left corner of your NoVNC window, then "Accessories"->"Text Editor". Paste the public key and save the file to the desktop
-    ![API Key](images/b_t3_06_api_Key.png " ")
+    ![API Key](images/b_t3_06_api_key.png " ")
 
   4. Create an OCI Auth Token
 
