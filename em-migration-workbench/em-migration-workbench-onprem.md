@@ -72,7 +72,7 @@ In the interest of simplifying the setup and save time, the following steps were
   - Created directory object "MWB_DIR" in both source and target databases pointing to this directory
   - Granted read and write privileges on the directory object in each database to the corresponding user (exp\_user in source database and imp\_user in target database)
 
-## Task 2: Migrate and upgrade a 12c non-container database to a new pdb in a 19c container database
+## Task 2: Migrate and Upgrade a 12c Non-Container Database to a New PDB in a 19c Container Database
 
 ### **Overview**
 
@@ -90,7 +90,7 @@ In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a 
         <copy>Database Migration ORCL to cdb19c/orclpdb</copy>
         ```
 
-    - Migrate: Full Database
+    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "**Full Database**" in this workshop
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: Select "Create Pluggable Database" from the drop-down list
     - On the "Create a New Pluggable Database" pop-up window, enter:
@@ -179,10 +179,11 @@ In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a 
 
 You have now completed this task. 
 
-## Task 3: Migrate and upgrade a 12c non-container database to 19c in a new destination
+## Task 3: Migrate and Upgrade a 12c Non-Container Database to 19c in a New Destination (Optional)
 
 ### **Overview**
 
+** Note: This is an optional task. Consider completing the next lab (Migrating to Autonomous) then return here if you still have time**
 In this task we'll migrate and upgrade an Oracle 12c database to version 19c in a new destination. This would be the case when refreshing hardware and/or moving the database to a new host in your data center. Our source database is "orcl" and our target container database is "orcl19c".
 
 For this use case Migration Workbench supports using Data Pump only as of EM 13.5 RU7. 
@@ -199,7 +200,7 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
         <copy>Database Migration ORCL to ORCL19c</copy>
         ```
 
-    - Migrate: Full Database
+    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "**Full Database**" in this workshop
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: orcl19c.subnet.vcn.oraclevcn.com
 
@@ -267,32 +268,14 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
     ![Procedure Activity](images/a_t3_08_procedure_activity.png " ")
 
 12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
- ![Procedure Activity Completed](images/t2_09_procedure_activity_completed.png " ")
-13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Notice although the status is "Completed with Errors", The summary region at the top shows the exit level of the activity was Warning, not Problems. Click on the View Analysis link.
- ![Activity Page](images/t2_10_activity_page.png " ")
+ ![Procedure Activity Completed](images/a_t3_09_procedure_activity_completed.png " ")
+13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
 14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate.
- ![View Analysis](images/t2_11_view_analysis.png " ")
-15. Go back to the activity page and click on the "Compare Performance" link:
- ![Activity Page](images/t2_12_activity_page.png " ")
+ ![View Analysis](images/a_t3_09_view_analysis.png " ")
+15. Go back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right of the activity row
 16. Examine the Performace Comparison report to analyze the database performance before and after the migration
- ![Performance Comparison](images/t2_13_performance_comparison.png " ")
-17. Finally let's validate the HR schema has been migrated and has the same number of objects as in the source database:
-In a terminal window, execute the following query:
-  Target database:
-
-    ```
-    <copy>
-    export ORACLE_SID=orcl19c
-    export ORACLE_HOME=/u01/app/oracle/product/19/dbhome_1
-    export PATH=$ORACLE_HOME/bin:$PATH
-    $ORACLE_HOME/bin/sqlplus '/as sysdba'<<- _ORCL19C
-    select count(*) from dba_objects where owner='HR';
-    _ORCL19C
-    </copy>
-    ```
-
-    The query result shows the HR schema now exists in the target database and owns **34** objects.
-  18. Navigate back to "Enterprise"->"Migration and Consolidation"->"Database Migration Workbench". On the activity page click on the drop-down list at the end of the row for your activity and click "Mark as Completed"
+ ![Performance Comparison](images/a_t3_10_performance_comparison.png " ")
+17. Navigate back to "Enterprise"->"Migration and Consolidation"->"Database Migration Workbench". On the activity page click on the drop-down list at the end of the row for your activity and click "Mark as Completed"
 
 You have now completed this task.
 

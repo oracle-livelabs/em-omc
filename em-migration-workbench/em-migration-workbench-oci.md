@@ -67,7 +67,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
   - Created directory object "MWB_DIR" in the source database pointing to this directory
   - Granted read and write privileges on the directory object to user exp\_user in the source database
 
-## Task 2: Create destination autonomous database and storage bucket in OCI
+## Task 2: Create Destination Autonomous Database and Storage Bucket in OCI
 
 1. Create Autonomous Database
     - In OCI Console, navigate to Oracle Database->Autonomous Database
@@ -348,7 +348,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
         ```
       ![ATP Default Cred](images/b_t3_10_atp_default_cred.png " ")
 
-## Task 4: Migrate and upgrade a 12c non-container database to autonomous database in Oracle Cloud
+## Task 4: Migrate and Upgrade a 12c Non-Container Database to Autonomous Database in Oracle Cloud
 
 ### **Overview**
 
@@ -366,7 +366,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
         <copy>Database Migration ORCL to ATP-ORCL</copy>
         ```
 
-    - Migrate: Full Database
+    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "**Full Database**" in this workshop
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: ATP-ORCL
       ![Add Details](images/b_t4_01_create_migration.png " ")
@@ -440,10 +440,10 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
  ![Procedure Activity Completed](images/b_t4_11_procedure_activity_completed.png " ")
 13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Notice althouh the status is "Completed with Errors", The summary region at the top shows the exit level of the activity was Warning, not Problems. Click on the View Analysis link.
 14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate.
- ![View Analysis](images/b_t4_11_view_analysis.png " ")
+ ![View Analysis](images/b_t4_12_view_analysis.png " ")
 15. Go back to the activity page and click on the "Compare Performance" link.
 16. Examine the Performace Comparison report to analyze the database performance before and after the migration
- ![Performance Comparison](images/b_t4_12_performance_comparison.png " ")
+ ![Performance Comparison](images/b_t4_13_performance_comparison.png " ")
 
     You have now completed this task.
 
