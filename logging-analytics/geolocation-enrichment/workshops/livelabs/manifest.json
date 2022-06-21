@@ -1,0 +1,40 @@
+{
+    "workshoptitle": "Introduction to Logging Analytics",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+              "title": "Getting Started",
+              "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Preparing Your OCI Environment",
+            "filename": "../../preparing-the-environment/preparing-the-environment.md"
+        },
+        {
+            "title": "Lab 2: Getting Familar with Log Explorer",
+            "description": "Labs that follow the introduction are numbered, starting with Lab 1",
+            "filename": "../../getting-familiar-with-log-explorer/getting-familiar-with-log-explorer.md"
+        },
+        {
+            "title": "Lab 3: Explore Logs Using Cluster",
+            "filename": "../../explore-logs-using-cluster/explore-logs-using-cluster.md"
+        },
+        {
+            "title": "Lab 4: Explore Logs using Link",
+            "filename": "../../explore-logs-using-link/explore-logs-using-link.md"
+        },
+        {
+            "title": "Lab 5: Create Dashboards",
+            "filename": "../../create-dashbaords/create-dashbaords.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
