@@ -1,5 +1,5 @@
 # Configuration and Compliance Management
-
+#Modified by  Shiva
 ## Introduction
 The objective of this lab is to highlight Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities related to configuration and security compliance management of managed targets. Each activity focuses on different capabilities for an administrator.
 
