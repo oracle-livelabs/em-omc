@@ -50,22 +50,26 @@ In the interest of simplifying the setup and save time, the following pre-Requis
 2. Click on "Targets"->"Databases":
 
   ![Databases](images/b_t1_01_databases.png " ")
+
 - orcl is our source database
 
 ### **Export User Requirement**
-  - For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
-  - To learn more about the the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
+
+- For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
+- To learn more about the the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
 
 ### **Named Credential Requirement**
-  - Named credential "EXP\_USER" created in Enterprise Manager for user "EXP\_USER" on database "orcl"
-  - To review the credential in OEM console, navigate to "Setup"->"Security"->"Named Credentials"
-  - To learn more about named credentials review "[Named Credentials](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emsec/security-features.html#GUID-345595B0-3FA4-4F2C-A606-596B1A10A13E)" in the Enterprise Manager documentation
+
+- Named credential "EXP\_USER" created in Enterprise Manager for user "EXP\_USER" on database "orcl"
+- To review the credential in OEM console, navigate to "Setup"->"Security"->"Named Credentials"
+- To learn more about named credentials review "[Named Credentials](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emsec/security-features.html#GUID-345595B0-3FA4-4F2C-A606-596B1A10A13E)" in the Enterprise Manager documentation
 
 ### **Data Pump Directory Requirement**
-  - Migration workbench requires a local directory on the source database with sufficient space to host the data pump dump files
-  - Created the following directory on the host: /u01/app/oracle/migration_workbench
-  - Created directory object "MWB_DIR" in the source database pointing to this directory
-  - Granted read and write privileges on the directory object to user exp\_user in the source database
+
+- Migration workbench requires a local directory on the source database with sufficient space to host the data pump dump files
+- Created the following directory on the host: /u01/app/oracle/migration_workbench
+- Created directory object "MWB_DIR" in the source database pointing to this directory
+- Granted read and write privileges on the directory object to user exp\_user in the source database
 
 ## Task 2: Create Destination Autonomous Database and Storage Bucket in OCI
 
@@ -107,7 +111,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
     - Click "Create Autonomous Database"
     ![Create ATP](images/b_t2_01_create_atp.png " ")
 
-  2. Download the ATP-ORCL client wallet using OCI console:
+2. Download the ATP-ORCL client wallet using OCI console:
 
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
@@ -121,7 +125,6 @@ In the interest of simplifying the setup and save time, the following pre-Requis
         ```
 
     - The wallet zip file will be downloaded to the local "Downloads" directory:
-
 
 3. Create Object Storage Bucket in OCI
     - In OCI Console, navigate to Storage->Buckets
@@ -317,13 +320,13 @@ In the interest of simplifying the setup and save time, the following pre-Requis
         ```
         <copy>ADMIN</copy>
         ```
-          
+
     - Password:
 
         ```
         <copy>Welcome12345</copy>
         ```
-          
+
     - Under "Development" heading, click on "SQL" (first tile) 
     - Execute the following code:
 
@@ -358,7 +361,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 
 1. Log into your Enterprise Manager as **sysman** as indicated in the Prerequisites step if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-3.  On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
+3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -366,7 +369,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
         <copy>Database Migration ORCL to ATP-ORCL</copy>
         ```
 
-    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "**Full Database**" in this workshop
+    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "Full Database" in this workshop
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: ATP-ORCL
       ![Add Details](images/b_t4_01_create_migration.png " ")
