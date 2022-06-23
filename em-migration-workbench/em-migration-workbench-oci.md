@@ -358,7 +358,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 
 1. Log into your Enterprise Manager as **sysman** as indicated in the Prerequisites step if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-3. On the "Database Migration" page, click on "Create Migration Activity"
+3.  On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -376,7 +376,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - Database Credentials: EXP_USER (Named Credential)
     - Host Credential: ORACLE (Named Credential)
 
-    Target:
+    Destination:
     - Database Credential: ADMIN (Named Credential)
     - Agent Host Credential: ORACLE (Named Credential)
     - Service Name: orcl_high (TCPS)

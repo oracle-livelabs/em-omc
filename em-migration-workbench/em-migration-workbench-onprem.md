@@ -28,7 +28,7 @@ In this lab you will perform the Tasks below. The pre-requisites in task have al
   - Lab: Environment Setup
   - Lab: Initialize Environment
 
-*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU5, and database 19.12 as Oracle Management Repository.
+*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU7, and database 19.12 as Oracle Management Repository.
 
 ## Task 1: Review Pre-Requisite Tasks Completed in Advance
 
@@ -76,13 +76,13 @@ In the interest of simplifying the setup and save time, the following steps were
 
 ### **Overview**
 
-In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a container database. Our source database is "orcl" and our target container database is "cdb19c". We'll name the PDB "orclpdb". We'll user the Transportable Tablespaces (TTS) migration method in this task. Note with TTS you must do the migration as a user with SYSDBA privileges on both source and destination databases.
+In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a container database. Our source database is "orcl" and our target container database is "cdb19c". We'll name the PDB "orclpdb". We'll use the Transportable Tablespaces (TTS) migration method in this task. Note with TTS you must do the migration as a user with SYSDBA privileges on both source and destination databases.
 
 ### **Execution**
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-3. On the "Database Migration" page, click on "Create Migration Activity"
+3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -90,9 +90,9 @@ In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a 
         <copy>Database Migration ORCL to cdb19c/orclpdb</copy>
         ```
 
-    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "**Full Database**" in this workshop
-    - Select Source Database: orcl.subnet.vcn.oraclevcn.com
-    - Select Destination Database: Select "Create Pluggable Database" from the drop-down list
+    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "Full Database" in this workshop
+    - Select Source Database: Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
+    - Select Destination Database: Click inside the field and select "Create Pluggable Database" from the drop-down list
     - On the "Create a New Pluggable Database" pop-up window, enter:
         - Container Database: Select "cdb19c" from the drop-down list
         - Name:
@@ -119,11 +119,11 @@ In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a 
     - Click Continue
 5. On the Add Details screen:
     - Source:
-        - Database Credentials: SYS (Ignore the error message since we will choose Transportable Tablespace for migration method)
-        - Host Credential: (default)
-    - Target:
-        - Database Credential: SYS
-        - Agent Host Credential: (default)
+        - Database Credentials: SYS (Named). Ignore the error message since we will choose Transportable Tablespace for migration method
+        - Host Credential: Normal Host Credentials (Preferred)
+    - Destination:
+        - Database Credential: SYS (Named). Ignore the error message since we will choose Transportable Tablespace for migration method
+        - Agent Host Credential: Normal Host Credentials (Preferred)
     - Action:
         - Migration Method: Transportable Tablespace
         - Compare Performance After Migration: Checked (default)
@@ -192,7 +192,7 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-3. On the "Database Migration" page, collapse the "Getting Started" region and click on "Create Migration Activity"
+3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -200,9 +200,9 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
         <copy>Database Migration ORCL to ORCL19c</copy>
         ```
 
-    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "**Full Database**" in this workshop
-    - Select Source Database: orcl.subnet.vcn.oraclevcn.com
-    - Select Destination Database: orcl19c.subnet.vcn.oraclevcn.com
+    - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "Full Database" in this workshop
+    - Select Source Database:  Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
+    - Select Destination Database:  Click inside the field and select "orcl19c.subnet.vcn.oraclevcn.com" from the drop-down list
 
       ![Create Migration Activity](images/a_t3_01_create_migration_activity.png " ")
 
@@ -213,10 +213,10 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
     - Database Credentials: EXP_USER (Named Credential)
     - Host Credential: ORACLE (Named Credential)
 
-    Target:
+    Destination:
     - Database Credential: IMP_USER (Named Credential)
     - Agent Host Credential: ORACLE (Named Credential)
-    
+
     Action:
     - Migration Method: Data Pump (default)
     - Recompile Invalid Objects After Migration: Unchecked (default)
@@ -232,9 +232,9 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
 
     - Click Next
 
-  6. On the Customize screen
+  6. On the Customize screen:
+    - Examine the various options you can configure for Export and Import. For the purpose of this lab we'll go with the defaults shown
     - Under "Transfer options": Check the "Datapump Directory is shared" checkbox
-    - Leave everything else at default for the purpose of this demo
 
     ![customize](images/a_t3_03_customize.png " ")
 
@@ -242,7 +242,7 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
 
 7. On the "Review & Submit" screen:
     - Review your entries and click "Analyze Source" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
-    - When the analysis is complete review CPAT Results. The blocker with regards to Multimedia Types being desupported in 19c can be ignored. Tables with Multimedia objects in 12c will not be migrated to 19c. The 3 warnings can also be ignored for the purpose of this demo:
+    - When the analysis is complete review CPAT Results. The blocker with regards to Multimedia Types being desupported in 19c can be ignored. Tables with Multimedia objects in 12c will not be migrated to 19c. The 3 warnings can also be ignored for the purpose of this lab:
 
       ![CPAT Results](images/a_t3_04_cpat_results.png " ")
 
