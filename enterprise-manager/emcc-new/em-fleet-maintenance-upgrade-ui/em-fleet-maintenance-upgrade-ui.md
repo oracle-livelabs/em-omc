@@ -21,7 +21,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 - Ability to schedule/retry/suspend/resume operations.
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle Exadata
 
-  ![](images/em-fleet-maintenance-overview-1.png " ")
+  ![](images/new-em-fleet-maintenance-overview-1.png " ")
 
 
 ### Objectives
@@ -66,7 +66,9 @@ This exercise enables us to analyze the database estate using Software Standardi
 
 Software Standardization Advisor enables administrators to understand various database configurations prevailing in their environment. Each deployment with a unique platform, release and patch level is identified as a distinct configuration. This provides the administrators a view of the configuration pollution in their estate. It also analyzes and provides a recommendation to standardize the environment and reduce the number of configurations required for managing the database estate.
 
-  ![](images/em-fleet-maintenance-overview-2.png " ")
+  <!--![](images/em-fleet-maintenance-overview-2.png " ")  -->
+
+  ![](images/new-em-fleet-maintenance-overview-2.png " ")
 
 1.  On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -114,6 +116,11 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/84e0ac92b29e45e91b9d17a8e0b3a2da.jpg " ")
 
+    Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
+
+    ![](images/workshop_instance.png " ")
+
+    Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
 
     ![](images/em-pollution-detection-3.png " ")
@@ -123,6 +130,7 @@ Software Standardization Advisor enables administrators to understand various da
     ![](images/06ff90fdba8aa5abebd066086e33f700.jpg " ")
 
     The recommendation is based on a union of bugs included in the patches in all Oracle homes and based on the configuration type.
+
 
   <!-- This completes Step 1. In this section, you learned how to perform the following:
 
@@ -143,8 +151,9 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 A gold image is the end of state software definition that contains information about the base software version plus the additional patches. Targets, to be upgraded, subscribe to a relevant Gold Image. Target subscription persists through the lifecycle of the Target or Gold Image unless modified by an administrator.
 
 
-   ![](images/DB_Fleet_Upgrade.png " ")
+   <!--![](images/DB_Fleet_Upgrade.png " ") -->
 
+   ![](images/New-DB-Fleet-Patching.png " ")
 ### **Upgrading with Fleet Maintenance**
 
 We will go through steps for upgrading database target ***finance.subnet.vcn.oraclevcn.com***, a Single Instance Database currently at 18.10.0.0.0 version that was previously patched from 18.8.0.0.0 using Fleet Maintenance. The goal is to upgrade this target to 19.7.0.0.0.
@@ -377,7 +386,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/input-values.png "enter values for operation")
+    ![](images/new-input-values.png "enter values for operation")
 
     We can enter following values
     Under Maintenance tasks
@@ -393,7 +402,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
-    Once deployment of new Oracle home is complete, we can change the schedule of the Deployment Procedure for migrate listener and update database to execute these tasks immediately.
+    Once deployment of new Oracle home is complete, the Deployment Procedures for migrate listener and update database will execute immediately ( if we have selected start as Immediately/Auto ).
 
 4. We can validate our entries (new Oracle home, log file location, credentials) of previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation.  There are two validation modes Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation.
 
@@ -425,57 +434,37 @@ Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate 
 7. Review the Deployment Procedures (DP).
 
 Select the DP related to Deploy and click on it.
-    ![](images/all-dp.png "all-dp-submitted")
+    ![](images/new-all-dp.png "all-dp-submitted")
 
 It will show details of the activity performed by the DP.
-    ![](images/dp-deploy.png "dp-deploy")
+    ![](images/new-dp-deploy.png "dp-deploy")
 
 Here, we see that the DP has successfully installed new Oracle home.
 
 ## Task 8: Migrate Listener to New Upgraded home
 
-1. In task 7 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task has a scheduled state. In the interest of time and to complete this workshop, we can change it to run immediately. To do so, navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select migrate DP.
+1. In task 7 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task is in running state.
 
-    Click on reschedule.
-    ![](images/migrate-dp.png "migrate-dp")
 
-    In the new page, select immediately for start and reschedule.
-    ![](images/51-reschedule.png "reschdule dp")
-
-    We can now see that migrate operation is running.
-    ![](images/51-Running.png "dp running post reschedule")
+    ![](images/new-listener-mig.png "dp running post reschedule")
     We can select it and see the various steps performed by it.
 
-    ![](images/dp-migrate-details.png "dp-migrate-details")
+    ![](images/new-dp-migrate-completed.png "dp-migrate-completed")
     We can now see that the migration operation completed successfully.
-
-    ![](images/dp-migrate-completed.png "dp-migrate-completed")
-
-    Lets validate the version of ***finance*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***finance*** database.
-    ![](images/post_upgrade_db_version.png " ")
 
 ## Task 9: Update Database – Upgrade to 19.7
 
 After the deploy operation and migrate listener task have completed successfully, we are ready to run the final UPDATE operation which will upgrade the finance database by switching it to the newly deployed home.
 
-1.  Similar to migrate listener, we had submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7). In the interest of time and to complete this Live Lab workshop, we can change its schedule to run immediately. Navigate to  ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select update.
+1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7). We see that this task is in running state.
 
-    Click on reschedule.
+    ![](images/new-db-update-1.png "update")
 
-    ![](images/update.png "update dp")
-
-    In the new page, select immediately for start and reschedule.
-
-    ![](images/53-reschedule.png "update dp reschedule")
-    We can now see that update operation is running.
-    ![](images/53-running.png "update dp running")
     We can select it and see the various steps performed by it.
-
-    ![](images/update-dp-steps.png "update-dp-steps")
+    ![](images/new-db-update-steps.png "update dp running")
 
     Update operation has completed successfully.
-
-    ![](images/update-dp-completed.png "update-dp-completed ")
+    ![](images/new-db-update-complete.png "update-dp-steps")
 
     Lets validate the version of ***finance*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***finance*** database.
     ![](images/post_upgrade_db_version.png "db version post operation")
@@ -584,4 +573,4 @@ You may now proceed to the next lab.
     - Rene Fontcha, LiveLabs Platform Lead, NA Technology
     - Romit Acharya, Oracle Enterprise Manager Product Management
   - **Contributors** -
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, January 2022
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2022
