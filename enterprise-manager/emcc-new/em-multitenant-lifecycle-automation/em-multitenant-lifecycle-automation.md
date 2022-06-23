@@ -286,6 +286,42 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 
   ![](images/6b842b0948b11c52c1d56d2f9cdf1088.jpg " ")
 
+17. The compliance management portal also provides you an option to have a dashboard view of  compliance summary against all the associated targets. The Dashboard provides a brief summary of the violatons , corrective actions and a complaince standard score. 
+  
+  From the home page Navigate to Enterprise >> Compliance >> Dashboard
+
+
+![](images/Navigate_to_Compliance_dashboard.jpg " ")
+
+  Dashboard View
+
+![](images/Compliance_dashboard_sample.jpg " ")
+
+
+18. You can also generate a comprehensive compliance report for 
+
+    A. Each compliance standard and all its associated targets.
+
+    B. Each Target with all Compliance standard associated to it.
+  
+
+  From the home page Navigate to Enterprise >> Compliance >> Dashboard. Towards bottom of the page in the Compliance Summary section, cick on the report against each Compliance standard or Targets. 
+ 
+  ![](images/Compliance_report1.jpg " ")
+
+
+  ![](images/Compliance_target.jpg " ")
+
+  Sample report 
+
+ ![](images/Compliance_report_Sample1.jpg " ")
+ ![](images/Compliance_report_Sample3.jpg " ")
+
+
+
+
+
+
  Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS).
 
 ## Task 5: Self-Service to Request PDB Using PDBaaS
