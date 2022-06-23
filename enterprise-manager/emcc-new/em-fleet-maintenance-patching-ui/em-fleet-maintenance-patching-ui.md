@@ -19,7 +19,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 - Ability to schedule/retry/suspend/resume operations.
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle Exadata
 
-![](images/em-fleet-maintenance-overview-1.png " ")
+![](images/new-em-fleet-maintenance-overview-1.png " ")
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
@@ -60,8 +60,10 @@ To ensure smooth execution of the use cases, we have pre-hosted the scripts to b
 In this lab activity, you will analyze the database estate to identify any configuration drift (pollution) using the Software Standardization Advisor.
 
 Software Standardization Advisor enables administrators to understand various database configurations prevailing in their environment. Each deployment with a unique platform, release and patch level is identified as a distinct configuration. This provides the administrators a view of the configuration pollution in their estate. It also analyzes and provides a recommendation to standardize the environment and reduce the number of configurations required for managing the database estate.
-
+<!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
+-->
+  ![](images/new-em-fleet-maintenance-overview-2.png " ")
 
 1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -109,6 +111,12 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/84e0ac92b29e45e91b9d17a8e0b3a2da.jpg " ")
 
+    Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
+
+    ![](images/workshop_instance.png " ")
+
+    Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
+
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
 
     ![](images/em-pollution-detection-3.png " ")
@@ -138,7 +146,8 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 A gold image is the end of state software definition that contains information about the base software version plus the additional patches. Targets, to be patched, subscribe to a relevant Gold Image. Target subscription persists through the lifecycle of the Target or Gold Image unless modified by an administrator.
 
 
-  ![](images/DB_Fleet_Patching.png " ")
+  <!--![](images/DB_Fleet_Patching.png " ")  -->
+  ![](images/New-DB-Fleet-Patching.png " ")
 
 ### **Patching with Fleet Maintenance**
 
@@ -310,7 +319,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/input-values.png "input values")
+    ![](images/new-input-values.png "input values")
 
     We can enter following values
     Under Maintenance tasks
@@ -327,7 +336,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
-    Once deployment of new Oracle home is complete, we can change the schedule of the Deployment Procedure for migrate listener and update database to execute these tasks immediately.  
+    Once deployment of new Oracle home is complete, the Deployment Procedures for migrate listener and update database will execute immediately ( if we have selected start as Immediately/Auto ).  
 
 4. We can validate our entries (new Oracle home, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation mode
 
@@ -357,51 +366,37 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 7. Review the Deployment Procedures (DP).
 
-   ![](images/review-dp.png "review")
+   ![](images/new-review-dp.png "review")
 
    Select DP related to Deploy and click on it. It will show details of the activity performed by the DP.
 
-   ![](images/dp-layout.png "review dp for layout OH")
+   ![](images/new-dp-layout.png "review dp for layout OH")
 
    Here, we see that the DP has successfully installed new Oracle home.(putty screen shows the new Oracle home layout)
 
 ## Task 7: Migrate Listener
 
-1. In task 6 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task has a scheduled state. In the interest of time and to complete this workshop, we can change it to run immediately. To do so, navigate to  ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select migrate DP.
-  Click on reschedule.
+1. In task 6 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task is in running state.
 
-  ![](images/mig-listener-rsch.png "DP for migrate listener")
+    ![](images/state-mig-listener.png "DP for migrate listener")
+    We can select it and see the various steps performed by it.
 
-  In the new page, select immediately for start and reschedule.
-
-  ![](images/listener-rsch.png "reschedule migrate dp")
-
-  We can now see that migrate operation is running. We can select it and see the various steps performed by it.
-
-  ![](images/select-listener.png "select DP")
-
-  ![](images/listener-details.png "details of DP")
+    ![](images/new-listener-details.png "details of DP")
 
 ## Task 8: Update Database – Patch 18.3 to 18.10
 
-1. Similar to listener migration, that submitted for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). We see that this task is at scheduled state. In the interest of time and to complete this Live Lab workshop, we can change its schedule to run immediately. Navigate to  ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select update DP.
+1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). We see that this task is in running state.
 
-   Click on reschedule.
+   ![](images/state-db-update.png "DP update")
 
-   ![](images/db-update.png "DP update")
-
-   In the new page, select immediately for start and reschedule.
-   ![](images/31-reschedule.png "Update DP reschedule")   
-
-   We have selected update operation and see the various steps performed by it. In the terminal, we can see that ***hr*** database is down for Oracle home switch over. After startup, ***hr*** database will run from new Oracle home.
-
-   ![](images/hr-new-home.png "layout of new oracle home")
+   We have selected update operation and see the various steps performed by it.
 
    Update operation has completed successfully.
 
-   ![](images/hr-new-home-completed.png "DP completed")
+   ![](images/new-hr-new-home-completed.png "DP completed")
 
    Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
+
    ![](images/post_patch_db_version.png "new version check")
 
 ## Task 9:  Rollback Database – Reversed Patch 18.10 to 18.3
