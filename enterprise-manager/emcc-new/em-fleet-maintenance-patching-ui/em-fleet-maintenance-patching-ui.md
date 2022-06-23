@@ -563,4 +563,4 @@ You may now proceed to the next lab.
     - Rene Fontcha, LiveLabs Platform Lead, NA Technology
     - Romit Acharya, Oracle Enterprise Manager Product Management
   - **Contributors** -
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, January 2022
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2022
