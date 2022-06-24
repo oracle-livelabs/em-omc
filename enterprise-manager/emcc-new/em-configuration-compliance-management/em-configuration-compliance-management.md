@@ -24,10 +24,10 @@ In this lab you will perform the following steps
 | 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of new database provisioned aligns with IT configuration policy                          |
 | 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration |
                               |
-| 4                                                         | Health Insurance Portability and Accountability(HIPAA)  compliance using Host security compliance standard | 10 minutes   | Host security compliance                                                                                       | Monitor security compliance for host targets from one customized dashboard.  
-                               |
-| 5                                                         | Database security Compliance using CIS standard | 10 minutes   | Database security CIS compliance for Oracle Database 19c target                                                                                      | Monitor CSI security compliance for database targets from one customized dashboard.                                  
-                                |
+| 4                                                         | Health Insurance Portability and Accountability(HIPAA) compliance using Host security compliance standard                                 | 20 minutes   | Host security compliance.                                                                                                                      | Monitor security compliance for host targets from one customized dashboard. |
+                                                            |
+| 5                                                         | Database security Compliance using CIS standard | standard                                 | 10 minutes   | Monitor CSI security compliance for database targets from one customized dashboard.                                                      | Monitor security compliance for host targets from one customized dashboard. |
+
 
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
