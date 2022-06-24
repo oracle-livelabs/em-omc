@@ -402,15 +402,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
 
-    ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
 
-    ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
 
 By clicking **Target name** column arrow
 
 19. Critical Violations rules can be seen in this pop up page details
 
-    ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
 
 20. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
 
