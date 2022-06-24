@@ -430,11 +430,11 @@ And clicking on Result Details arrow **emcc.marketplace.com: Health Insurance Po
 
  22. Look and feel individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually. By clicking on the violation number to see more details of the Violations can be verified.
 
-    ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
+  ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
 
-    ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
+  ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
 
-    ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
+  ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
 
 
 All these will give you a security posture of host target
