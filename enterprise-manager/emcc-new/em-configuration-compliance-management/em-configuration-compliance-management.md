@@ -394,9 +394,9 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   Click on  **Non-Compliant Targets** column number to see Compliance score,
 
-    ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
+  ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
 
-    ![](images/HIPAA_Compliance_Score_Image_18.png " ")
+  ![](images/HIPAA_Compliance_Score_Image_18.png " ")
 
     Click on 'X' to close the pop up window
 
