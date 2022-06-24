@@ -569,8 +569,8 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   All these will give you a CIS Compliance security posture of database target.
 
-  <!-- With this step, you got a hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess overall security compliance of all
-  Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target specific security compliance -->
+  <!--- With this step, you got a hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess overall security compliance of all
+  Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target specific security compliance --->
 
   This completes the Lab!
 
