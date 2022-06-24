@@ -22,10 +22,12 @@ In this lab you will perform the following steps:
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | 1                                                         | Inventory & Usage details                                               | 10 minutes   | IT Manager wants to get an inventory of all existing databases managed by Enterprise Manager including different versions of databases, number of instances deployed over a period of time | Reduce number of different configuration sets and increase standardization across the data center.                  |
 | 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of new database provisioned aligns with IT configuration policy                          |
-| 3                                                         | Database configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration |
-| 4                                                         | Database security compliance using CSI standard | 10 minutes   | Database security compliance for Oracle Database 12c target                                                                                      | Monitor security compliance for database targets from one customized dashboard.                                 |
-| 5                                                         | Health Insurance Portability and Accountability(HIPAA)  compliance using Host security compliance standard | 10 minutes   | Host security compliance                                                                                       | Monitor security compliance for host targets from one customized dashboard.                                 |
-
+| 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration |
+                              |
+| 4                                                         | Health Insurance Portability and Accountability(HIPAA)  compliance using Host security compliance standard | 10 minutes   | Host security compliance                                                                                       | Monitor security compliance for host targets from one customized dashboard.  
+                               |
+| 5                                                         | Database security Compliance using CIS standard | 10 minutes   | Database security CIS compliance for Oracle Database 19c target                                                                                      | Monitor CSI security compliance for database targets from one customized dashboard.                                  
+                                |
 
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
@@ -85,7 +87,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
   ![](images/ecm1_inventory_usage_details_report.png " ")
 
-## Task 3: One Time Database Comparison
+## Task 2: One Time Database Comparison
 
 ### Overview
 
@@ -178,7 +180,7 @@ In this step, you will compare two database targets to determine configuration d
 
 <!-- In this step, you learned steps to compare two database targets to determine configuration differences. This one-time database (or any Enterprise Manager managed targets) comparison will help you quickly determine specific configuration changes when compared with reference configuration. This is very ideal for troubleshooting any target configuration parameters. -->
 
-## Task 4: Database Configuration Drift Management
+## Task 3: Database Configuration Drift Management
 
 ### Overview
 
@@ -302,7 +304,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
-## Task 5: Health Insurance Portability and Accountability(HIPAA)  compliance
+## Task 4: Health Insurance Portability and Accountability(HIPAA) compliance
 ### Overview
 
 Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
@@ -311,7 +313,7 @@ Compliance Management provides the ability to evaluate the compliance of targets
 
 Terminology Used in this Compliance specific workshop
 
-### Compliance Standard
+### HIPAA Compliance Standard
 
 Health Insurance Portability and Accountability Act (HIPAA) is the when it comes to health data confidentiality. Any company that deals with Protected Health Information (PHI) must have the proper information technology network, physical storage hardware severs, and security measures in place to ensure they are in compliance with HIPAA. Compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. Compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
@@ -438,92 +440,141 @@ And clicking on Result Details arrow **emcc.marketplace.com: Health Insurance Po
 
 
 All these will give you a security posture of host target
-## Task 6: Host Security Compliance
+
+## Task 5: Database Security Compliance using CIS standard
 
 ### Overview
 
 Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
 
-<!-- In this workshop, you will setup a compliance standard for monitoring security compliance of Oracle Linux host target and analyze the compliance score and violations -->
+<!-- In this lab, you will setup a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
 
 Terminology Used in this Compliance specific workshop
 
-### Compliance Standard
+### Center of Internet Security compliance(CIS) Standard
 
-  A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+The Center of Internet Security compliance(CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provide the baseline configurations to ensure oracle database compliance with CIS standards.  A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
-  A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
+A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
 
 ### Compliance Standard Rule
 
-  A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards
+A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards
 
 ### Execution
 
 1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
 
-2.  From the Enterprise menu, select **Compliance**, then select **Library**
+2.  From the Enterprise menu, select **Compliance**, then select **Library**.
 
-    ![](images/ecm5_host_compliance_menu.png " ")
+  ![](images/CIS_Compliance_Welcome_Image_1.png " ")
 
-3. Search for Secure Configuration for Host and select that standard
+3.  Compliance Standards tab contains all standards for various supported targets.
 
-  ![](images/ecm5_host_compliance_library1.png " ")
+  ![](images/CIS_All_Compliance_Libraries_Image_2.png " ")
 
-4. Create a copy of this host standard by clicking on ‘Create Like’. Give a unique name to the new standard you are creating to imply this is a new host standard. Also change the Author name as per your preference
+4.  In the Compliance Standards tab, search for Applicate To column **Database Instance** standard.
 
-  ![](images/ecm5_host_compliance_library2.png " ")
+  ![](images/CIS_Db_Compliance_Libraries_Image_3.png " ")
 
-5. Review the various compliance rules for Basic Security standard grouped based on the configuration area. Click Save.
+5.  Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
-  ![](images/ecm5_host_compliance_library3.png " ")
+  ![](images/CIS_Db_Compliance_19c_Libraries_Image_4.png " ")
 
-6. A new custom host standard is created. Pop-up confirms the successful creation of this standards.
+6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard, here example CIS_DEMO you are creating to imply this is a new database standard. Also change the name per your preference and Continue
 
-  ![](images/ecm5_host_compliance_library4.png " ")
+  ![](images/CIS_Db_Compliance_19c_Libraries_Create_Like_Image_5.png " ")
 
-7. Select the newly created custom host standard.
+  ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6.png " ")
 
-  ![](images/ecm5_host_compliance_library5.png " ")
+7.  Review the various compliance rules for CIS Security standard grouped based on the configuration area. Click Save.
 
-8. Click on **Associate Targets** to associate a host target for this newly created custom standard.
+  ![](images/CIS_Db_Compliance_CIS_DEMO_Standard_Details_Image_7.png " ")
 
-  ![](images/ecm5_host_compliance_library6.png " ")
+  ![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8.png " ")
 
-9. When Associate Target option is chosen, you will be taken to a page to add database targets.
+8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of this standards.
 
-  ![](images/ecm5_host_compliance_library7.png " ")
+  ![](images/CIS_Db_Compliance_Standard_Create_Image_9.png " ")
 
-10. Choose **emcc.marketplace.com** target to check the compliance security posture.
+9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![](images/ecm5_host_compliance_library8.png " ")
+  ![](images/CIS_Db_Compliance_Associate_Target_Image_10.png " ")
 
-11. The list of targets chosen will show up in the target association page as shown below
+10. When Associate Target option is chosen, you will be taken to a page to add database targets.
 
-  ![](images/ecm5_host_compliance_library9.png " ")    
+  Click Add to add targets for association with this compliance standard
 
-12. Click OK and a pop-up shows up to confirm association. Click Yes to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
+  ![](images/CIS_Db_Compliance_Associate_Target_Image_11.png " ")
 
-  ![](images/ecm5_host_compliance_library10.png " ")    
+  ![](images/CIS_Db_Compliance_Add_Target_Image_12.png " ")
 
-13. Go to Compliance Dashboard page to check the compliance posture.
+11. The list of targets chosen will show up in the target association page as shown below, Choose **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![](images/ecm5_host_compliance_results1.png " ")
+  ![](images/CIS_Db_Compliance_Select_Target_Image_13.png " ")
 
-  ![](images/ecm5_host_compliance_results2.png " ")
+12. The list of targets chosen will show up in the target association page as shown below.
 
-14. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
+  ![](images/CIS_Db_Compliance_Added_Target_Image_14.png " ")
 
-  ![](images/ecm5_host_compliance_results3.png " ")
+13. Click OK and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  All these will give you a security posture of host target
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15.png " ")
 
-<!-- With this step, you got a hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess overall security compliance of all
-Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target specific security compliance -->
+14. To check if the compliance check is complete, click the target number in ‘Association Count’ column.
 
-This completes the Lab!
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_16.png " ")
 
-You may now [proceed to the next lab](#next).
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_17.png " ")
+
+15. If the Transfer Status indicates ‘Successfully Done’, it means compliance check is complete.
+
+  ![](images/CIS_Db_Compliance_Success_Target_Image_18.png " ")
+
+  Click cancel button.
+
+  ![](images/CIS_Db_Compliance_Success_Target_Image_19.png " ")
+
+16. Go to **Compliance Dashboard** page to check the CIS compliance posture.
+
+  ![](images/CIS_Db_Compliance_Dashboard_Image_20.png " ")
+
+  ![](images/CIS_Db_Compliance_Dashboard_Image_21.png " ")
+
+17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
+
+  ![](images/CIS_Db_Compliance_Dashboard_Image_22.png " ")
+
+  For Clicking on Critical column number, you will see details like each violation, last evaluation date, rule name violated and rationale for the violation.
+
+  ![](images/CIS_Db_Compliance_Dashboard_Image_23.png " ")
+
+  ![](images/CIS_Db_Compliance_Dashboard_Image_24.png " ")
+
+  And also by clicking on Report,
+
+  ![](images/CIS_Db_Compliance_Report_Image_25.png " ")
+
+  Evaluation Details can be reviewed by clicking on symbol **emrep.us.oracle.com: CIS_DEMO**
+
+  ![](images/CIS_Db_Compliance_Report_Image_26.png " ")
+
+
+18. Highlight and click on the standard that you created in the previous steps to review the overall compliance score, target evaluations and violation rules details.
+
+  ![](images/CIS_Db_Compliance_Dashboard_Image_22.png " ")
+
+  ![](images/CIS_Db_Compliance_Results_Image_27.png " ")
+
+
+  All these will give you a CIS Compliance security posture of database target.
+
+  <!-- With this step, you got a hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess overall security compliance of all
+  Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target specific security compliance -->
+
+  This completes the Lab!
+
+  You may now [proceed to the next lab](#next).
 
 ## Learn More
 
