@@ -457,108 +457,108 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   2.  From the Enterprise menu,select **Compliance**, then select **Library**.
 
-    ![](images/HIPAA_Compliance_Welcome_Image_1.png " ")
+  ![](images/HIPAA_Compliance_Welcome_Image_1.png " ")
 
   3.  Compliance Standards tab contains all standards for various supported targets.
 
-    ![](images/HIPAA_All_Libraries_Image_2.png " ")
+  ![](images/HIPAA_All_Libraries_Image_2.png " ")
 
   4.  In the Compliance Standards tab, search for Keywords column for word **HIPAA**.
 
-    ![](images/HIPAA_All_Libraries_Image_3.png " ")
+  ![](images/HIPAA_All_Libraries_Image_3.png " ")
 
   5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard.
 
-    ![](images/HIPAA_Standard_Libraries_Image_4.png " ")
+  ![](images/HIPAA_Standard_Libraries_Image_4.png " ")
 
   6. After Selecting Health Insurance Portability and Accountability Act (HIPAA) OL-7standard by clicking on **Show Details**.
 
-    ![](images/HIPAA_Standard_Details_Image_5.png " ")
+  ![](images/HIPAA_Standard_Details_Image_5.png " ")
 
 
   7. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click **Done** .
 
-    ![](images/HIPAA_Associate_Target_Image_6.png " ")
+  ![](images/HIPAA_Associate_Target_Image_6.png " ")
 
   8. Click on **Associate Targets** to associate a database target for this selected standard.
 
-    ![](images/HIPAA_Associate_Target_Image_7.png " ")
+  ![](images/HIPAA_Associate_Target_Image_7.png " ")
 
   9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
 
     Click Add to add targets for association with this compliance standard
 
-    ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
+  ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
 
   10.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-    ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
+  ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
 
   11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click OK
 
-    ![](images/HIPAA_Associate_list_Host_Target_Image_10.png " ")
+  ![](images/HIPAA_Associate_list_Host_Target_Image_10.png " ")
 
   12. Click **OK** and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
 
-    ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
+  ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
 
   13. Once, Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-    ![](images/HIPAA_Compliance_Submit_Image_12.png " ")
+  ![](images/HIPAA_Compliance_Submit_Image_12.png " ")
 
   14. To check if the compliance processing is complete, click the target number in **Association Count** column.
 
-    ![](images/HIPAA_Validate_Submit_Image_13.png " ")
+  ![](images/HIPAA_Validate_Submit_Image_13.png " ")
 
   15. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete. Click **cancel** button.
 
-    ![](images/HIPAA_Associate_Target_Success_Image_14.png " ")
+  ![](images/HIPAA_Associate_Target_Success_Image_14.png " ")
 
   16. Go to **Compliance Dashboard** page to check the compliance posture
 
-    ![](images/HIPAA_Associate_Target_Success_Image_15.png " ")
+  ![](images/HIPAA_Associate_Target_Success_Image_15.png " ")
 
-    ![](images/HIPAA_Dashboard_Results_Image_16.png " ")
+  ![](images/HIPAA_Dashboard_Results_Image_16.png " ")
 
   17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
 
     Click on the number under Non-Compliant Targets column to see details of the host that is non-compliant,
 
-    ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
+  ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
 
-    ![](images/HIPAA_Compliance_Score_Image_18.png " ")
+  ![](images/HIPAA_Compliance_Score_Image_18.png " ")
 
       Click on 'X' to close the pop up window
 
   18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
 
-    ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
 
-    ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
 
   By clicking **Target name** column arrow
 
    Critical Violations rules can be seen in this pop up page details
 
-    ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
 
   19. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
 
-    ![](images/HIPAA_Compliance_Report_Score_Image_19.png " ")
+  ![](images/HIPAA_Compliance_Report_Score_Image_19.png " ")
 
   And clicking on  **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation Details
 
-    ![](images/HIPAA_Compliance_Report_Score_Image_20.png " ")
+  ![](images/HIPAA_Compliance_Report_Score_Image_20.png " ")
 
   20. Individual rules can be further explored with select Enterprise Main Menu, then select Compliance and Results Page  
 
-    ![](images/HIPAA_Main_Results_Image_24.png " ")
+  ![](images/HIPAA_Main_Results_Image_24.png " ")
 
     It takes you to Compliance Results page,
 
-    ![](images/HIPAA_Compliance_Results_Image_25.png " ")
+  ![](images/HIPAA_Compliance_Results_Image_25.png " ")
 
   21. In Compliance Results page, selecting **Compliance standards** by clicking on **Show Details**
 
@@ -566,11 +566,11 @@ A compliance standard rule is a specific test to determine if a configuration da
 
    22.  Individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually.
 
-    ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
+  ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
 
     By clicking on the violation number to see more details of the Violations can be verified.
 
-    ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
+  ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
 
 
   All these will give you a security posture of host target
