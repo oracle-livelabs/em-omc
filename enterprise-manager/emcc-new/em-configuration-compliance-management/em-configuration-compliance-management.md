@@ -23,7 +23,7 @@ In this lab you will perform the following steps
 | 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of new database provisioned aligns with IT configuration policy.                          |
 | 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration. |
 | 4                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Databases target.                | Monitor CSI security compliance for database targets from one customized dashboard.                                                      | Monitor security compliance for host targets from one customized dashboard. |
-| 5                                                         | Health Insurance Portability and Accountability(HIPAA) Compliance                                  | 10 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one reference compliance. |
+| 5                                                         | Host Security Compliance                                  | 10 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one reference compliance. |
 
 
 
@@ -304,7 +304,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 
 
-## Task 5: Database Security Compliance using CIS standard
+## Task 4: Database Security Compliance using CIS standard
 
 ### Overview
 
@@ -330,124 +330,134 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 2.  From the Enterprise menu, select **Compliance**, then select **Library**.
 
-  ![](images/CIS_Compliance_Welcome_Image_1.png " ")
+![](images/CIS_Compliance_Welcome_Image_1.png " ")
 
 3.  Compliance Standards tab contains all standards for various supported targets.
 
-  ![](images/CIS_All_Compliance_Libraries_Image_2.png " ")
+![](images/CIS_All_Compliance_Libraries_Image_2.png " ")
 
 4.  In the Compliance Standards tab, search for Applicate To column **Database Instance** standard.
-
-  ![](images/CIS_Db_Compliance_Libraries_Image_3.png " ")
+![](images/CIS_Db_Compliance_Libraries_Image_3.png " ")
 
 5.  Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
-  ![](images/CIS_Db_Compliance_19c_Libraries_Image_4.png " ")
+![](images/CIS_Db_Compliance_19c_Libraries_Image_4.png " ")
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard, here example CIS_DEMO you are creating to imply this is a new database standard. Also change the name per your preference and Continue
 
-  ![](images/CIS_Db_Compliance_19c_Libraries_Create_Like_Image_5.png " ")
+![](images/CIS_Db_Compliance_19c_Libraries_Create_Like_Image_5.png " ")
 
-  ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6.png " ")
+![](images/CIS_Db_Compliance_CIS_DEMO_Image_6.png " ")
 
 7.  Review the various compliance rules for CIS Security standard grouped based on the configuration area. Click Save.
 
-  ![](images/CIS_Db_Compliance_CIS_DEMO_Standard_Details_Image_7.png " ")
+![](images/CIS_Db_Compliance_CIS_DEMO_Standard_Details_Image_7.png " ")
 
-  ![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8.png " ")
+![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8.png " ")
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of this standards.
 
-  ![](images/CIS_Db_Compliance_Standard_Create_Image_9.png " ")
+![](images/CIS_Db_Compliance_Standard_Create_Image_9.png " ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_10.png " ")
+![](images/CIS_Db_Compliance_Associate_Target_Image_10.png " ")
 
 10. When Associate Target option is chosen, you will be taken to a page to add database targets.
 
+
+![](images/CIS_Db_Compliance_Associate_Target_Image_11.png " ")
+
   Click Add to add targets for association with this compliance standard
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_11.png " ")
-
-  ![](images/CIS_Db_Compliance_Add_Target_Image_12.png " ")
+![](images/CIS_Db_Compliance_Add_Target_Image_12.png " ")
 
 11. The list of targets chosen will show up in the target association page as shown below, Choose **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![](images/CIS_Db_Compliance_Select_Target_Image_13.png " ")
+![](images/CIS_Db_Compliance_Select_Target_Image_13.png " ")
 
 12. The list of targets chosen will show up in the target association page as shown below.
 
-  ![](images/CIS_Db_Compliance_Added_Target_Image_14.png " ")
+![](images/CIS_Db_Compliance_Added_Target_Image_14.png " ")
 
 13. Click OK and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15.png " ")
+![](images/CIS_Db_Compliance_Confirm_Target_Image_15.png " ")
+
+![](images/CIS_Db_Compliance_Confirm_Target_Image_30.png " ")
 
 14. To check if the compliance check is complete, click the target number in ‘Association Count’ column.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_16.png " ")
+![](images/CIS_Db_Compliance_Confirm_Target_Image_16.png " ")
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_17.png " ")
+![](images/CIS_Db_Compliance_Confirm_Target_Image_17.png " ")
 
-15. If the Transfer Status indicates ‘Successfully Done’, it means compliance check is complete.
+15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete.
 
-  ![](images/CIS_Db_Compliance_Success_Target_Image_18.png " ")
+![](images/CIS_Db_Compliance_Success_Target_Image_18.png " ")
 
   Click cancel button.
 
-  ![](images/CIS_Db_Compliance_Success_Target_Image_19.png " ")
+![](images/CIS_Db_Compliance_Success_Target_Image_19.png " ")
 
 16. Go to **Compliance Dashboard** page to check the CIS compliance posture.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_20.png " ")
+![](images/CIS_Db_Compliance_Dashboard_Image_20.png " ")
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_21.png " ")
+ Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
 
-17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
+![](images/CIS_Db_Compliance_Dashboard_Image_21.png " ")
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_22.png " ")
+17. For Clicking on Critical column number, you will see details like each violation, last evaluation date, rule name violated and rationale for the violation.
 
-  For Clicking on Critical column number, you will see details like each violation, last evaluation date, rule name violated and rationale for the violation.
+![](images/CIS_Db_Compliance_Dashb_Image_22.png " ")
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_23.png " ")
+ By clicking on arrow, under Target Name,
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_24.png " ")
-
-  And also by clicking on Report,
-
-  ![](images/CIS_Db_Compliance_Report_Image_25.png " ")
-
-  Evaluation Details can be reviewed by clicking on symbol **emrep.us.oracle.com: CIS_DEMO**
-
-  ![](images/CIS_Db_Compliance_Report_Image_26.png " ")
+![](images/CIS_Db_Compliance_Dashboard_Image_23.png " ")
 
 
-18. Highlight and click on the standard that you created in the previous steps to review the overall compliance score, target evaluations and violation rules details.
+![](images/CIS_Db_Compliance_Dashboard_Image_24.png " ")
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_22.png " ")
+18.  And also by clicking on Report,
+![](images/CIS_Db_Compliance_Dashboard_Image_28.png " ")
 
-  ![](images/CIS_Db_Compliance_Results_Image_27.png " ")
+![](images/CIS_Db_Compliance_Report_Image_25.png " ")
 
+19. Under Result Details, arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules
+
+![](images/CIS_Db_Compliance_Report_Image_30.png " ")
+
+![](images/CIS_Db_Compliance_Report_Image_26.png " ")
+
+
+20. Highlight and click on the standard that you created in the previous steps to review the overall compliance score.
+
+![](images/CIS_Db_Compliance_Dashboard_Image_31.png " ")
+
+By cliscking CIS_DEMO, target evaluations and individual violation rules details can be evaluated
+
+![](images/CIS_Db_Compliance_Results_Image_27.png " ")
 
   All these will give you a CIS Compliance security posture of database target.
 
-  ## Task 4: Health Insurance Portability and Accountability(HIPAA) compliance
+  ## Task 5: Host Security Compliance
+
   ### Overview
 
   Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
 
-  <!-- In this lab, you will setup a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
+  <!-- In this workshop, you will setup a compliance standard for monitoring security compliance of Oracle Linux host target and analyze the compliance score and violations -->
 
   Terminology Used in this Compliance specific workshop
 
-  ### Compliance Standard
+### Compliance Standard
 
-   Compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. Compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+  A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
   A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
 
-  ### Compliance Standard Rule
+### Compliance Standard Rule
 
   A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards
 
