@@ -1,5 +1,4 @@
 # Configuration and Compliance Management
-#Modified by  Shiva
 ## Introduction
 The objective of this lab is to highlight Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities related to configuration and security compliance management of managed targets. Each activity focuses on different capabilities for an administrator.
 
@@ -21,10 +20,11 @@ In this lab you will perform the following steps
 | Step No.                                      | Feature                                                                 | Approx. Time | Details                                                                                                                                                                                    | Value proposition                                                                                                   |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
 | 1                                                         | Inventory & Usage details                                               | 10 minutes   | IT Manager wants to get an inventory of all existing databases managed by Enterprise Manager including different versions of databases, number of instances deployed over a period of time | Reduce number of different configuration sets and increase standardization across the data center.                  |
-| 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of new database provisioned aligns with IT configuration policy                          |
-| 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration |
-| 4                                                         | Health Insurance Portability and Accountability(HIPAA) Compliance                                  | 20 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one customized dashboard. |
-| 5                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Databases target.                | Monitor CSI security compliance for database targets from one customized dashboard.                                                      | Monitor security compliance for host targets from one customized dashboard. |
+| 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of new database provisioned aligns with IT configuration policy.                          |
+| 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration. |
+| 4                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Databases target.                | Monitor CSI security compliance for database targets from one customized dashboard.                                                      | Monitor security compliance for host targets from one customized dashboard. |
+| 5                                                         | Health Insurance Portability and Accountability(HIPAA) Compliance                                  | 10 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one reference compliance. |
+
 
 
 ###  Prerequisites
@@ -302,142 +302,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
-## Task 4: Health Insurance Portability and Accountability(HIPAA) compliance
-### Overview
 
-Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
-
-<!-- In this lab, you will setup a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
-
-Terminology Used in this Compliance specific workshop
-
-### HIPAA Compliance Standard
-
-Health Insurance Portability and Accountability Act (HIPAA) is the when it comes to health data confidentiality. Any company that deals with Protected Health Information (PHI) must have the proper information technology network, physical storage hardware severs, and security measures in place to ensure they are in compliance with HIPAA. Compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. Compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
-
-A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
-
-### Compliance Standard Rule
-
-A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards
-
-### Execution
-
-1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
-
-2.  From the Enterprise menu,select **Compliance**, then select **Library**.
-
-  ![](images/HIPAA_Compliance_Welcome_Image_1.png " ")
-
-3.  Compliance Standards tab contains all standards for various supported targets.
-
-  ![](images/HIPAA_All_Libraries_Image_2.png " ")
-
-4.  In the Compliance Standards tab, search for Keywords column for word **SCAP**.
-
-  ![](images/HIPAA_All_Libraries_Image_3.png " ")
-
-5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard.
-
-  ![](images/HIPAA_Standard_Libraries_Image_4.png " ")
-
-6. After Selecting Health Insurance Portability and Accountability Act (HIPAA) OL-7standard by clicking on **Show Details**.
-
-  ![](images/HIPAA_Standard_Details_Image_5.png " ")
-
-
-7. After Selecting  **Show Details** Review the various HIPAA OL-7 standard rules grouped together, Click **Done** .
-
-  ![](images/HIPAA_Associate_Target_Image_6.png " ")
-
-8. Click on **Associate Targets** to associate a database target for this selected standard.
-
-  ![](images/HIPAA_Associate_Target_Image_7.png " ")
-
-9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
-
-  Click Add to add targets for association with this compliance standard
-
-  ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
-
-10.  Choose **emcc.us.oracle.com** target to check the compliance security posture.
-
-  ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
-
-11.  The list of host target chosen will show up in the target association page as shown below.
-
-  ![](images/HIPAA_Associate_list_Host_Target_Image_10.png " ")
-
-12. Click **OK** and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
-
-  ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
-
-13. Once, Compliance standard host target is submitted you will be taken to a page Compliance Library with Compliance standard is submitted for processing.
-
-  ![](images/HIPAA_Compliance_Submit_Image_12.png " ")
-
-14. To check if the compliance processing is complete, click the target number in **Association Count** column.
-
-  ![](images/HIPAA_Validate_Submit_Image_13.png " ")
-
-15. If the Transfer Status indicates ‘Successfully Done’, it means compliance check is complete. Click **cancel** button.
-
-  ![](images/HIPAA_Associate_Target_Success_Image_14.png " ")
-
-16. Go to **Compliance Dashboard** page to check the compliance posture
-
-  ![](images/HIPAA_Associate_Target_Success_Image_15.png " ")
-
-  ![](images/HIPAA_Dashboard_Results_Image_16.png " ")
-
-17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
-
-  Click on  **Non-Compliant Targets** column number to see Compliance score,
-
-  ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
-
-  ![](images/HIPAA_Compliance_Score_Image_18.png " ")
-
-    Click on 'X' to close the pop up window
-
-18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
-
-  ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
-
-  ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
-
-By clicking **Target name** column arrow
-
-19. Critical Violations rules can be seen in this pop up page details
-
-  ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
-
-20. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
-
-  ![](images/HIPAA_Compliance_Report_Score_Image_19.png " ")
-
-And clicking on Result Details arrow **emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation Details
-
-  ![](images/HIPAA_Compliance_Report_Score_Image_20.png " ")
-
-21. Individual rules can be further explored with select Configuration, then select Configuration and Results Page  
-
-  ![](images/HIPAA_Main_Results_Image_24.png " ")
-
-  It takes you to Compliance Results page,
-
-  ![](images/HIPAA_Compliance_Results_Image_25.png " ")
-
- 22. Look and feel individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually. By clicking on the violation number to see more details of the Violations can be verified.
-
-  ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
-
-  ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
-
-  ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
-
-
-All these will give you a security posture of host target
 
 ## Task 5: Database Security Compliance using CIS standard
 
@@ -566,6 +431,143 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 
   All these will give you a CIS Compliance security posture of database target.
+
+  ## Task 4: Health Insurance Portability and Accountability(HIPAA) compliance
+  ### Overview
+
+  Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
+
+  <!-- In this lab, you will setup a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
+
+  Terminology Used in this Compliance specific workshop
+
+  ### HIPAA Compliance Standard
+
+  Health Insurance Portability and Accountability Act (HIPAA) is the when it comes to health data confidentiality. Any company that deals with Protected Health Information (PHI) must have the proper information technology network, physical storage hardware severs, and security measures in place to ensure they are in compliance with HIPAA. Compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. Compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+
+  A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
+
+  ### Compliance Standard Rule
+
+  A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards
+
+  ### Execution
+
+  1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
+
+  2.  From the Enterprise menu,select **Compliance**, then select **Library**.
+
+    ![](images/HIPAA_Compliance_Welcome_Image_1.png " ")
+
+  3.  Compliance Standards tab contains all standards for various supported targets.
+
+    ![](images/HIPAA_All_Libraries_Image_2.png " ")
+
+  4.  In the Compliance Standards tab, search for Keywords column for word **SCAP**.
+
+    ![](images/HIPAA_All_Libraries_Image_3.png " ")
+
+  5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard.
+
+    ![](images/HIPAA_Standard_Libraries_Image_4.png " ")
+
+  6. After Selecting Health Insurance Portability and Accountability Act (HIPAA) OL-7standard by clicking on **Show Details**.
+
+    ![](images/HIPAA_Standard_Details_Image_5.png " ")
+
+
+  7. After Selecting  **Show Details** Review the various HIPAA OL-7 standard rules grouped together, Click **Done** .
+
+    ![](images/HIPAA_Associate_Target_Image_6.png " ")
+
+  8. Click on **Associate Targets** to associate a database target for this selected standard.
+
+    ![](images/HIPAA_Associate_Target_Image_7.png " ")
+
+  9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
+
+    Click Add to add targets for association with this compliance standard
+
+    ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
+
+  10.  Choose **emcc.us.oracle.com** target to check the compliance security posture.
+
+    ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
+
+  11.  The list of host target chosen will show up in the target association page as shown below.
+
+    ![](images/HIPAA_Associate_list_Host_Target_Image_10.png " ")
+
+  12. Click **OK** and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
+
+    ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
+
+  13. Once, Compliance standard host target is submitted you will be taken to a page Compliance Library with Compliance standard is submitted for processing.
+
+    ![](images/HIPAA_Compliance_Submit_Image_12.png " ")
+
+  14. To check if the compliance processing is complete, click the target number in **Association Count** column.
+
+    ![](images/HIPAA_Validate_Submit_Image_13.png " ")
+
+  15. If the Transfer Status indicates ‘Successfully Done’, it means compliance check is complete. Click **cancel** button.
+
+    ![](images/HIPAA_Associate_Target_Success_Image_14.png " ")
+
+  16. Go to **Compliance Dashboard** page to check the compliance posture
+
+    ![](images/HIPAA_Associate_Target_Success_Image_15.png " ")
+
+    ![](images/HIPAA_Dashboard_Results_Image_16.png " ")
+
+  17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
+
+    Click on  **Non-Compliant Targets** column number to see Compliance score,
+
+    ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
+
+    ![](images/HIPAA_Compliance_Score_Image_18.png " ")
+
+      Click on 'X' to close the pop up window
+
+  18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
+
+    ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
+
+    ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
+
+  By clicking **Target name** column arrow
+
+  19. Critical Violations rules can be seen in this pop up page details
+
+    ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
+
+  20. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
+
+    ![](images/HIPAA_Compliance_Report_Score_Image_19.png " ")
+
+  And clicking on Result Details arrow **emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation Details
+
+    ![](images/HIPAA_Compliance_Report_Score_Image_20.png " ")
+
+  21. Individual rules can be further explored with select Configuration, then select Configuration and Results Page  
+
+    ![](images/HIPAA_Main_Results_Image_24.png " ")
+
+    It takes you to Compliance Results page,
+
+    ![](images/HIPAA_Compliance_Results_Image_25.png " ")
+
+   22. Look and feel individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually. By clicking on the violation number to see more details of the Violations can be verified.
+
+    ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
+
+    ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
+
+    ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
+
+
+  All these will give you a security posture of host target
 
   <!---- With this step, you got a hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess overall security compliance of all
   Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target specific security compliance ---->
