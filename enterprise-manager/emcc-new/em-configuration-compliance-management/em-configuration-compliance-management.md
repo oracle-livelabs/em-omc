@@ -162,17 +162,17 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/ecm2_one_time_database_comparison_dashboard2.png " ")
 
-15. Click on **One-Time Comparison Results** tab to review all corresponding comparison definitions
+16. Click on **One-Time Comparison Results** tab to review all corresponding comparison definitions
 
   ![](images/ecm2_one_time_database_comparison_dashboard3.png " ")
 
   You should see the comparison definition you created in this page.
 
-16. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+17. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
   ![](images/ecm2_one_time_database_comparison_report1.png " ")
 
-17. Exported results in excel for offline analysis looks like:
+18. Exported results in excel for offline analysis looks like:
 
   ![](images/ecm2_one_time_database_comparison_report2.png " ")
 
@@ -441,9 +441,9 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   Terminology Used in this Compliance specific workshop
 
-  ### HIPAA Compliance Standard
+  ### Compliance Standard
 
-  Health Insurance Portability and Accountability Act (HIPAA) is the when it comes to health data confidentiality. Any company that deals with Protected Health Information (PHI) must have the proper information technology network, physical storage hardware severs, and security measures in place to ensure they are in compliance with HIPAA. Compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. Compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+   Compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. Compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
   A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
 
@@ -463,7 +463,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![](images/HIPAA_All_Libraries_Image_2.png " ")
 
-  4.  In the Compliance Standards tab, search for Keywords column for word **SCAP**.
+  4.  In the Compliance Standards tab, search for Keywords column for word **HIPAA**.
 
     ![](images/HIPAA_All_Libraries_Image_3.png " ")
 
@@ -476,7 +476,7 @@ A compliance standard rule is a specific test to determine if a configuration da
     ![](images/HIPAA_Standard_Details_Image_5.png " ")
 
 
-  7. After Selecting  **Show Details** Review the various HIPAA OL-7 standard rules grouped together, Click **Done** .
+  7. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click **Done** .
 
     ![](images/HIPAA_Associate_Target_Image_6.png " ")
 
@@ -490,11 +490,13 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
 
-  10.  Choose **emcc.us.oracle.com** target to check the compliance security posture.
+  10.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
     ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
 
-  11.  The list of host target chosen will show up in the target association page as shown below.
+  11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
+
+  Click OK
 
     ![](images/HIPAA_Associate_list_Host_Target_Image_10.png " ")
 
@@ -502,7 +504,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
 
-  13. Once, Compliance standard host target is submitted you will be taken to a page Compliance Library with Compliance standard is submitted for processing.
+  13. Once, Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
     ![](images/HIPAA_Compliance_Submit_Image_12.png " ")
 
@@ -510,7 +512,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![](images/HIPAA_Validate_Submit_Image_13.png " ")
 
-  15. If the Transfer Status indicates ‘Successfully Done’, it means compliance check is complete. Click **cancel** button.
+  15. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete. Click **cancel** button.
 
     ![](images/HIPAA_Associate_Target_Success_Image_14.png " ")
 
@@ -522,7 +524,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
 
-    Click on  **Non-Compliant Targets** column number to see Compliance score,
+    Click on the number under Non-Compliant Targets column to see details of the host that is non-compliant,
 
     ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
 
@@ -538,19 +540,19 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   By clicking **Target name** column arrow
 
-  19. Critical Violations rules can be seen in this pop up page details
+   Critical Violations rules can be seen in this pop up page details
 
     ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
 
-  20. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
+  19. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
 
     ![](images/HIPAA_Compliance_Report_Score_Image_19.png " ")
 
-  And clicking on Result Details arrow **emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation Details
+  And clicking on  **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation Details
 
     ![](images/HIPAA_Compliance_Report_Score_Image_20.png " ")
 
-  21. Individual rules can be further explored with select Configuration, then select Configuration and Results Page  
+  20. Individual rules can be further explored with select Enterprise Main Menu, then select Compliance and Results Page  
 
     ![](images/HIPAA_Main_Results_Image_24.png " ")
 
@@ -558,11 +560,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![](images/HIPAA_Compliance_Results_Image_25.png " ")
 
-   22. Look and feel individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually. By clicking on the violation number to see more details of the Violations can be verified.
+  21. In Compliance Results page, selecting **Compliance standards** by clicking on **Show Details**
 
-    ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
+  ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
+
+   22.  Individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually.
 
     ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
+
+    By clicking on the violation number to see more details of the Violations can be verified.
 
     ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
 
