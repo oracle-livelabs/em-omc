@@ -453,6 +453,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 
 20. Highlight and click on the standard that you created in the previous steps to review the overall compliance score.
+
   ![](images/CIS_Db_Compliance_Dashboard_Image_31.png " ")
 
 By cliscking CIS_DEMO, target evaluations and individual violation rules details can be evaluated
