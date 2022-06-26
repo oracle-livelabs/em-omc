@@ -105,7 +105,7 @@ In this step, you will compare two database targets to determine configuration d
 
 4.	Select **Create Comparison** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_IMage_2.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_2.png " ")
 
 5.  Choose the reference target that you want other targets to be compared with.
 
