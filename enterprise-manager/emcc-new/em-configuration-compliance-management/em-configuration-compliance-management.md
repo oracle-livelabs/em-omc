@@ -55,7 +55,7 @@ All the items in this step are read-only, primary goal is to learn about invento
     Password: <copy>welcome1</copy>
     ```
 
-    ![](../initialize-environment/images/em-login.png " ")
+  ![](../initialize-environment/images/em-login.png " ")
 
 2.  From the Enterprise menu, select Configuration, then select Inventory and  Usage Details
 
@@ -225,13 +225,14 @@ In this workshop, you will learn about continuous configuration drift monitoring
   To begin with, uncheck all configuration items.
 
   ![](images/Compare_and_Drift_Demo_Image_7.png " ")
+
 7.  Select the following three configuration items only
     - Instance Caging Information
     - Instance Information
     - Initialization Parameters under Instance Information configuration item
     - Click Save
 
-    ![](images/Compare_and_Drift_Demo_Image_8.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_8.png " ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
