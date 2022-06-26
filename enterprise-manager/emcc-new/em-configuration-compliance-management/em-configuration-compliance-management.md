@@ -242,42 +242,45 @@ In this workshop, you will learn about continuous configuration drift monitoring
   ![](images/Compare_and_Drift_Demo_Image_10.png " ")
 
 10. Click on **Create Definition** under Drift Management.
+
+    ![](images/Compare_and_Drift_Demo_Image_11.png " ")
+
     - Choose Database Instance as the Target Type
     - Select the template created in the previous step
     - Click OK
 
-    ![](images/ecm3_create_drift_definiton2.png " ")
+    ![](images/Compare_and_Drift_Demo_Image_12.png)
 
 11. In the drift definition details page, provide a unique name for the drift definition.
 
-  ![](images/ecm3_create_drift_definiton3.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_13.png " ")
 
 12. Under Source Configuration, do the following:
 
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target  
 
-    ![](images/ecm3_create_drift_definiton4.png " ")
+    ![](images/Compare_and_Drift_Demo_Image_14.png " ")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**.
 
-  ![](images/ecm3_create_drift_definiton5.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_15.png " ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
-  ![](images/ecm3_create_drift_definiton6.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_16.png " ")
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
-  ![](images/ecm3_create_drift_definiton7.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_17.png " ")
 
 16. Click on **Add** to select and associate a target to be monitored for drift.
 
-  ![](images/ecm3_create_drift_definiton8.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_18.png " ")
 
 17. Select **finance.subnet.vcn.oraclevcn.com** as the target.
 
-  ![](images/ecm3_create_drift_definiton9.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_19.png " ")
 
 18. Click **Select**. You will see one target selected to be associated with drift definition.
 
