@@ -456,7 +456,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_31.png " ")
 
-By cliscking CIS_DEMO, target evaluations and individual violation rules details can be evaluated
+By clicking CIS_DEMO, target evaluations and individual violation rules details can be evaluated
 
   ![](images/CIS_Db_Compliance_Results_Image_27.png " ")
 
