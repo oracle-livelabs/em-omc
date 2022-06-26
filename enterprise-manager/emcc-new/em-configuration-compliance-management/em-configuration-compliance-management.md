@@ -182,7 +182,7 @@ In this step, you will compare two database targets to determine configuration d
 
 17. Exported results in excel for offline analysis looks like:
 
-  ![](images/ecm2_one_time_database_comparison_report2.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_one_time_comparison_Report_Image_15.png " ")
 
 <!-- In this step, you learned steps to compare two database targets to determine configuration differences. This one-time database (or any Enterprise Manager managed targets) comparison will help you quickly determine specific configuration changes when compared with reference configuration. This is very ideal for troubleshooting any target configuration parameters. -->
 
@@ -284,23 +284,23 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 18. Click **Select**. You will see one target selected to be associated with drift definition.
 
-  ![](images/ecm3_create_drift_definiton10.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_20.png " ")
 
 19. Click OK. A pop-up will ask for confirmation to save association. Select Yes. This will start the association of this target to drift definition and initiated the configuration comparison and continuous drift monitoring.
 
-  ![](images/ecm3_create_drift_definiton11.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_21.png " ")
 
-20. Once you select Yes in the previous step, drift monitoring is in progress. Go to Dashboard page. After a minute, refresh the page to see the drift monitoring completed. You should see a new or updated donut chart under ‘Drifted Overview’ dashlet.
+20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see the drift monitoring completed. You should see a new or updated donut chart under ‘Drifted Overview’ dashlet.
 
-  ![](images/ecm3_drift_results_summary.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_22.png)
 
 21. Click on Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
-  ![](images/ecm3_drift_results_details1.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_23.png " ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift) for detailed analysis of configuration drift.
 
-  ![](images/ecm3_drift_results_details2.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_24.png)
 
   You can see the differences in the Initialization Parameters between the two targets.
 
@@ -314,11 +314,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 23. Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
-  ![](images/ecm3_drift_report1.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_25.png " ")
 
 24. Exported results in excel for offline analysis looks like:
 
-  ![](images/ecm3_drift_report2.png " ")
+  ![](images/Compare_and_Drift_Demo_Report_Image_26.png)
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
@@ -619,6 +619,6 @@ By cliscking CIS_DEMO, target evaluations and individual violation rules details
   - [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
 
 ## Acknowledgements
-  - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
+  - **Author** - Harish Niddagatta, Shiva Prasad, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
   - **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, July 2021
