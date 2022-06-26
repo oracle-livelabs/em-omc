@@ -137,6 +137,8 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_6.png " ")
 
+  Once the target is chosen, it appear as below
+
   ![](images/ecm2_one_time_database_comparison_ref_target8.png " ")
 
 12. Click **Submit**.
