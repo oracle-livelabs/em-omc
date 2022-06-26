@@ -251,7 +251,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Click OK
 
     ![](images/Compare_and_Drift_Demo_Image_12.png)
-    
+
 11. In the drift definition details page, provide a unique name for the drift definition.
 
   ![](images/Compare_and_Drift_Demo_Image_13.png " ")
