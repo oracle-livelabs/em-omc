@@ -101,7 +101,7 @@ In this step, you will compare two database targets to determine configuration d
 
 3.  Review the different types of comparisons supported by mouse-over on the info icon.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_1.png " ")
+  ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
 
 4.	Select **Create Comparison** tab on the left side of the dashboard page. Click **Create Comparison**
 
@@ -166,25 +166,21 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_10.png " ")
 
-15. In the dashboard page, donut chart for Comparison Overview dashlet gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
+15. In the dashboard page, donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_11.png " ")
-
-16. Click on **One-Time Comparison Results** tab to review all corresponding comparison definitions
-
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_12.png)
 
   You should see the comparison definition you created in this page.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_13.png " ")
 
-17. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+16. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_14.png " ")
 
   After Exporting, Click **Cancel** to exit
 
-18. Exported results in excel for offline analysis looks like:
+17. Exported results in excel for offline analysis looks like:
 
   ![](images/ecm2_one_time_database_comparison_report2.png " ")
 
@@ -200,41 +196,50 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***. Review the different types of comparisons supported.
 
-  ![](images/ecm3_database_drift_menu.png " ")
+  ![](images/ecm2_one_time_database_comparison_menu.png " ")
 
-  ![](images/ecm3_drift_management.png " ")
+  Chose Templates left side of the panel of the Dashboard.
+
+  ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
 
 3.  Go to Templates library on the left panel and look for Database Instance Template as shown below.
 
-  ![](images/ecm3_drift_comparison_template1.png " ")
+  ![](images/compare_and_Drift_template_Image_1.png)
 
 4.  With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click OK.
 
-  ![](images/ecm3_drift_comparison_template2.png " ")
+  ![](images/Compare_and_Drift_template_Image_2.png " ")
 
-5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by default Highlight this new template and click Edit.
+  ![](images/Compare_and_Drift_Demo_Image_3.png " ")
 
-  ![](images/ecm3_drift_comparison_template3.png " ")
+5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by **Search** with name created, by  default Highlight this new template and click Edit.
 
-6.  In this lab, we will customize this template and monitor configuration drift for two configuration items. To begin with, uncheck all configuration items.
+  ![](images/Compare_and_Drift_Demo_Image_4.png)
 
-  ![](images/ecm3_drift_comparison_template4.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_5.png " ")
 
+6.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
+
+  ![](images/Compare_and_Drift_Demo_Image_6.png " ")
+
+  To begin with, uncheck all configuration items.
+
+  ![](images/Compare_and_Drift_Demo_Image_7.png " ")
 7.  Select the following three configuration items only
     - Instance Caging Information
     - Instance Information
     - Initialization Parameters under Instance Information configuration item
     - Click Save
 
-    ![](images/ecm3_drift_comparison_template5.png " ")
+    ![](images/Compare_and_Drift_Demo_Image_8.png " ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
-  ![](images/ecm3_drift_comparison_template6.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_9.png " ")
 
 9.  Go to Drift Results tab and create a drift definition.
 
-  ![](images/ecm3_create_drift_definiton1.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_10.png " ")
 
 10. Click on **Create Definition** under Drift Management.
     - Choose Database Instance as the Target Type
