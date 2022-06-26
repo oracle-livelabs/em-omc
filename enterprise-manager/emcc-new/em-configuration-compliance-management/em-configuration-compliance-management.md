@@ -59,17 +59,17 @@ All the items in this step are read-only, primary goal is to learn about invento
 
 2.  From the Enterprise menu, select Configuration, then select Inventory and  Usage Details
 
-  ![](images/ecm1_inventory_usage_menu_item.png " ")
+  ![](images/Configuration_InventoryUsage_Image_1.png " ")
 
 3.  In the ‘Show’ filter menu, select **Databases** to see all database instances managed by Enterprise Manager
 
-  ![](images/ecm1_inventory_usage_details1.png " ")
+  ![](images/Em_Configs_Complianes_dbs_Image_2.png " ")
 
 4.  Analyze various database versions and number of instances for each version
 
 5.  Explore pie chart to see the break-down of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of given database instance over a period of time.
 
-  ![](images/ecm1_inventory_usage_details2.png " ")
+  ![](images/Em_Config_Compliane_db_Trends_Image_3.png)
 
 6.  In the Details table below, you will see details like
 
@@ -101,15 +101,15 @@ In this step, you will compare two database targets to determine configuration d
 
 3.  Review the different types of comparisons supported by mouse-over on the info icon.
 
-  ![](images/ecm2_comparison_drift_management.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_1.png " ")
 
 4.	Select **Create Comparison** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![](images/ecm2_one_time_database_create-comparison.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_IMage_2.png " ")
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target1.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_3.png " ")
 
 6.  Identify the reference target to compare other targets. To begin with, filter ‘Target Type’ to Database Instance.
 
@@ -123,7 +123,7 @@ In this step, you will compare two database targets to determine configuration d
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target5.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_4.png " ")
 
 9.  Provide a name for Comparison.
 
@@ -131,19 +131,25 @@ In this step, you will compare two database targets to determine configuration d
 
 10.  Add targets to be compared.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target7.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_5.png " ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with reference target.
 
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_6.png " ")
+
   ![](images/ecm2_one_time_database_comparison_ref_target8.png " ")
 
-12. Click **Submit**. Comparison of the selected targets happens and below are the results.
+12. Click **Submit**.
 
-  ![](images/ecm2_one_time_database_comparison_results1.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_7.png " ")
+
+  Comparison of the selected targets happens and below are the results.
+
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_8.png " ")
 
 13. Filter configurations items to review only Initialization Parameters.
 
-  ![](images/ecm2_one_time_database_comparison_results2.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_9.png " ")
 
   You can see the differences in the Initialization Parameters between the two targets.
 
@@ -156,21 +162,25 @@ In this step, you will compare two database targets to determine configuration d
 
 14. Now, let us go to Comparison and Drift Management dashboard page for further analysis of results
 
-  ![](images/ecm2_one_time_database_comparison_dashboard1.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_10.png " ")
 
 15. In the dashboard page, donut chart for Comparison Overview dashlet gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![](images/ecm2_one_time_database_comparison_dashboard2.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_11.png " ")
 
 16. Click on **One-Time Comparison Results** tab to review all corresponding comparison definitions
 
-  ![](images/ecm2_one_time_database_comparison_dashboard3.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_12.png)
 
   You should see the comparison definition you created in this page.
 
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_13.png " ")
+
 17. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
-  ![](images/ecm2_one_time_database_comparison_report1.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_14.png " ")
+
+  After Exporting, Click **Cancel** to exit
 
 18. Exported results in excel for offline analysis looks like:
 
