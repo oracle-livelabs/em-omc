@@ -83,11 +83,11 @@ Software Standardization Advisor enables administrators to understand various da
 
 3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select Software ***Standardization Advisor***
 
-    ![](images/software-std-advisor.jpg " ")
+    ![](images/new-software-std-advisor.png "additional items in drop down ")
 
 4.  Software Standardization Advisor shows two graphs depicting current configuration and recommended configuration.
 
-    ![](images/em-pollution-detection-1.png " ")
+    ![](images/generate-report.png "pollution detection report generation ")
 
     Graphs may look different from the ones represented in the workbook.
     A Software Configuration is identified by the database release, platform, and the patches installed on the target.
@@ -97,11 +97,13 @@ Software Standardization Advisor enables administrators to understand various da
     Next, we will review the report generated.
 
 
-5.  On the same page, click on **Generate Report**.
+5.  On the same page, click on **Generate Report**. Select yes when it prompts to generate the report.
+    ![](images/generate-report-confirmation.png "pollution detection report generation ")
+
 
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/em-pollution-detection-2.png " ")
+    ![](images/current-config.png " ")
 
     When you download the report, should a warning on XLS format and file extension mismatch pop up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
@@ -119,7 +121,7 @@ Software Standardization Advisor enables administrators to understand various da
 
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
 
-    ![](images/em-pollution-detection-3.png " ")
+    ![](images/recommend-config.png "recommended changes ")
 
     <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
 
@@ -161,7 +163,7 @@ We will go through steps for patching database target ***hr.subnet.vcn.oraclevcn
     ![](images/ec0b6926d4f65b52a771483ace24055c.png " ")
 
 You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a pluggable database ‘HRPDB’. Both the container database and pluggable database targets have status ‘UP’ and version 18.3.0.0.0. If the target status is ‘DOWN’, then start the target (using */home/oracle/start\_db\_hr.sh*).
-    ![](images/c064eebf1a17dfd14d9c5921a88f93cb.jpg " ")
+    ![](images/target-hr-status.png "hr db status ")
 
 
 
@@ -191,11 +193,11 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     <copy>cd ~/fleet
     sh create_image_Tier2_sidb_x64.sh</copy>
     ```
-    ![](images/1791b5df10396b908e81340d2c6abed4.png " ")
+    ![](images/create_image_Tier2_sidb_x64.png "create image ")
 
 4. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
+    ![](images/dp-create-image-1.png "dp for create GI ")
 
 5. Click on ‘CreateGoldImageProfile\_...’ run and review the steps performed.  
 
