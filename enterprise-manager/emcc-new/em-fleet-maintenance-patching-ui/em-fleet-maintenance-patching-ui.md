@@ -121,7 +121,9 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/em-pollution-detection-3.png " ")
 
-    The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration.
+    <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
+
+    The reports recommendation is to consolidate the configuration drift (pollution) from the current five database to two (18c and 19c). This recommendation would reduce the number of configurations and standardize the environment for easier management.
 
     ![](images/06ff90fdba8aa5abebd066086e33f700.jpg " ")
 
@@ -376,24 +378,26 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 ## Task 7: Migrate Listener
 
-1. In task 6 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task is in running state.
+1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). The image below shows the task is in a running state.
 
     ![](images/state-mig-listener.png "DP for migrate listener")
-    We can select it and see the various steps performed by it.
+
+    Select the running task to see the various steps performed.
 
     ![](images/new-listener-details.png "details of DP")
+    We can now see that the migration operation completed successfully.
 
 ## Task 8: Update Database – Patch 18.3 to 18.10
 
-1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). We see that this task is in running state.
+1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). The image below shows the task is in a running state.
 
    ![](images/state-db-update.png "DP update")
 
-   We have selected update operation and see the various steps performed by it.
-
-   Update operation has completed successfully.
+   Select the running task to see the various steps performed.
 
    ![](images/new-hr-new-home-completed.png "DP completed")
+
+   Update operation has completed successfully.
 
    Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
 

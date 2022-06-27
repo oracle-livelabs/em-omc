@@ -125,7 +125,9 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/em-pollution-detection-3.png " ")
 
-    The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration.
+    <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
+
+    The reports recommendation is to consolidate the configuration drift (pollution) from the current five database to two (18c and 19c). This recommendation would reduce the number of configurations and standardize the environment for easier management.
 
     ![](images/06ff90fdba8aa5abebd066086e33f700.jpg " ")
 
@@ -443,11 +445,11 @@ Here, we see that the DP has successfully installed new Oracle home.
 
 ## Task 8: Migrate Listener to New Upgraded home
 
-1. In task 7 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task is in running state.
+1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). The image below shows the task is in a running state.
 
 
     ![](images/new-listener-mig.png "dp running post reschedule")
-    We can select it and see the various steps performed by it.
+    Select the running task to see the various steps performed.
 
     ![](images/new-dp-migrate-completed.png "dp-migrate-completed")
     We can now see that the migration operation completed successfully.
@@ -456,11 +458,11 @@ Here, we see that the DP has successfully installed new Oracle home.
 
 After the deploy operation and migrate listener task have completed successfully, we are ready to run the final UPDATE operation which will upgrade the finance database by switching it to the newly deployed home.
 
-1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7). We see that this task is in running state.
+1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7). The image below shows the task is in a running state.
 
     ![](images/new-db-update-1.png "update")
 
-    We can select it and see the various steps performed by it.
+    Select the running task to see the various steps performed.
     ![](images/new-db-update-steps.png "update dp running")
 
     Update operation has completed successfully.
