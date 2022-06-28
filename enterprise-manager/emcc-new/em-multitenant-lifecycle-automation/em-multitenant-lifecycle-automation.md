@@ -265,11 +265,11 @@ Incase of any  violations, you will see details like last evaluation date, rule 
   From the home page Navigate to Enterprise >> Compliance >> Dashboard
 
 
-![](images/Navigate_to_Compliance_dashboard.jpg " ")
+![](images/Task4-Navigate-to-Dashboard-latest.jpg " ")
 
   Dashboard View
 
-![](images/Compliance_dashboard_sample.jpg " ")
+![](images/Task4-Compliance-Dashboard-latest.jpg " ")
 
 
 13. You can also generate a comprehensive compliance report for 
@@ -281,15 +281,17 @@ Incase of any  violations, you will see details like last evaluation date, rule 
 
   From the home page Navigate to Enterprise >> Compliance >> Dashboard. Towards bottom of the page in the Compliance Summary section, cick on the report against each Compliance standard or Targets. 
  
-  ![](images/Compliance_report1.jpg " ")
+  ![](images/Task4-13a.jpg " ")
 
 
-  ![](images/Compliance_target.jpg " ")
+  ![](images/Task4-13b.jpg " ")
 
   Sample report 
 
- ![](images/Compliance_report_Sample1.jpg " ")
- ![](images/Compliance_report_Sample3.jpg " ")
+ ![](images/Task4-Compliancereport1.jpg " ")
+ ![](images/Task4-Compliancereport2.jpg " ")
+ ![](images/Task4-Compliancereport3.jpg " ")
+ ![](images/Task4-Compliancereport4.jpg " ")
 
 
 
