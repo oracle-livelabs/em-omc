@@ -221,9 +221,9 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 
   ![](images/dblmcompliancelibrary.png " ")
 
-2. Click the **Compliance Standards** tab,  Select the row **Corporate Database Standard**, and then Click the Associate Targets tab.
+2. Click the **Compliance Standards** tab,  Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the Associate Targets tab.
 
-  ![](images/8ed5400adb044b81194db800cfd4c953.jpg " ")
+  ![](images/Task4-Compliance-Standard-name.jpg " ")
 
 3.  Then Click Add and choose the row with your PDB, then Click OK.
 
@@ -245,48 +245,22 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 
   ![](images/1317deb228d80211d9e6a2edf2cbba9e.png " ")
 
-8. Click Corporate Database Standard under Compliance Standards
+8. Click High Security Configuration for Oracle Pluggable Database under Compliance Standards
 
-  ![](images/4fd761f917fd5b2374e852575b2fe99f.jpg " ")
+  ![](images/Task4-Navigate_to_Compliance-Result-1.jpg " ")
 
 9. And you  will see the following screen
 
-  ![](images/1376bfeae918518dbfd16d32ffc67b72.jpg " ")
+  ![](images/Task4-Compliance-Results.jpg " ")
 
-10.  Click on the Violations link and click on one of the Open Cursor Setting lines on the left under the Corporate Database Standard heading (red x).
+10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations. 
+Incase of any  violations, you will see details like last evaluation date, rule name violated and rationale for the violation under the violation tab.
 
-  ![](images/e48f5a64f52812e23a631e0f3f270371.jpg " ")
+  ![](images/Task4-Violations-tab.jpg " ")
 
-11. You will see open cursors notification. Scroll down as needed then Click on the link “Submit from Library” link under the Corrective Actions heading.
 
-  ![](images/19317a4da691bc2a1049ca7923414db3.png " ")
 
-12. From the Corrective Actions popup box, Select the “FIX OPEN CURSOR” corrective action.
-
-  ![](images/61ea7b2393701bf4ce48bd301a67b332.jpg " ")
-
-13. Then review/enter the Named Credentials for the database and host and Click the Submit button
-
-    -  For the database named credentials use: OEM\_SYS (scroll down after Database Credentials to see Host Credentials
-    -  For the host credentials use: ORACLE\_HOST
-
-    ![](images/6ccf17bb69cbc79dae30f95bc508f640.jpg " ")
-
-14.  You will then see the popup as shown below. Click on the link **Click here to view the execution details**
-
-  ![](images/21e5a02e32296dd7dea196a7edfd29ac.jpg " ")
-
-  The job will take about a minute to complete. Click on refresh icon if the job did not complete. You will see the status change to Succeeded
-
-  ![](images/3be714a84eeca17c22b2c786688b567a.jpg " ")
-
-15. Once the status changes to Succeeded, Click **Databases >> View >> Expand All** and Click on Your PDB that you choose in the earlier step.
-
-16. On the Database target home page, under Administration drop down menu, click **Initialization Parameters**, then Scroll down and you will see the “open\_cursors” initialization parameter set to 400 as shown.
-
-  ![](images/6b842b0948b11c52c1d56d2f9cdf1088.jpg " ")
-
-17. The compliance management portal also provides you an option to have a dashboard view of  compliance summary against all the associated targets. The Dashboard provides a brief summary of the violatons , corrective actions and a complaince standard score. 
+12. The compliance management portal also provides you an option to have a dashboard view of  compliance summary against all the associated targets. The Dashboard provides a brief summary of the violatons , corrective actions and a complaince standard score. 
   
   From the home page Navigate to Enterprise >> Compliance >> Dashboard
 
@@ -298,7 +272,7 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 ![](images/Compliance_dashboard_sample.jpg " ")
 
 
-18. You can also generate a comprehensive compliance report for 
+13. You can also generate a comprehensive compliance report for 
 
     A. Each compliance standard and all its associated targets.
 
