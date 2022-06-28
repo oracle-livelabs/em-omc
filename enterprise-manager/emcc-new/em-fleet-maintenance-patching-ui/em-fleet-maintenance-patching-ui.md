@@ -313,7 +313,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 2. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
 
-    ![](images/db-selection.png "selection")
+    ![](images/HR-patch-screen1.png "selection")
 
     Where:
     -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***Tier #2 SI DB Linux64***.
@@ -323,7 +323,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/new-input-values.png "input values")
+    ![](images/HR-patch-screen2.png "input values")
 
     We can enter following values
     Under Maintenance tasks
@@ -337,6 +337,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
         Normal Host Credentials as ***ORACLE***
         Privileged Host Credentials as ***ROOT***
         SYSDBA Database Credentials as ***SYS_SALES***
+    Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
