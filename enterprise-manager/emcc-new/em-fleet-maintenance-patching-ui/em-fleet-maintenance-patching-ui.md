@@ -193,27 +193,27 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     <copy>cd ~/fleet
     sh create_image_Tier2_sidb_x64.sh</copy>
     ```
-    ![](images/create_image_Tier2_sidb_x64.png "create image ")
+    ![](images/create_image_Tier2_sidb_x64.png "script to create GI ")
 
 4. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
-    ![](images/dp-create-image-1.png "dp for create GI ")
+    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
 5. Click on ‘CreateGoldImageProfile\_...’ run and review the steps performed.  
 
-    ![](images/f30e3920a7a7e18e4bdfffa328e9d483.png " ")
+    ![](images/dp-create-image-1.png "dp for gold image ")
 
 6. Use ‘Show’ filter ‘Steps Not Skipped’ ; View:‘Expand All’ for detailed view of all the steps performed to complete an operation.
 
-    ![](images/c3d174049d514ac6c22ce65167d55776.png " ")
+    ![](images/DP-1-completed.png "DP completed ")
 
 7. List Available Gold Images. Execute the following commands in the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#2 SI DB Linux64*’* in the emcli command output:
 
-    ```
+    ```DP completed
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](images/979c7a2ab44a65b0a6faf911cac1b64a.png " ")
+    ![](images/GI1-imageid.png "GI1 image details ")
 
     IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
 
@@ -221,7 +221,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     If the image id is same as the one highlighted above, you may use the below command
     ```
-    <copy>emcli db_software_maintenance -getVersions -image_id=A79586CA133F1E27E0532A00000A5633</copy>
+    <copy>emcli db_software_maintenance -getVersions -image_id=E27275341BC25561E053AD00000A3CBD</copy>
     ```   
 
     else make changes in the below command and execute it.
@@ -232,7 +232,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     This command lists Gold Image versions with their VERSION ID and STATUS.
 
-    ![](images/a9b1233fb416f91b34518744dc0d7e9a.png " ")
+    ![](images/GI1-versionid.png "GI1 version id ")
 
     When a Gold Image is created for the first time, its first version is created as per the input and marked as current. Whenever we run a DEPLOY operation for a target, Gold Image version marked as CURRENT is used to deploy the new Oracle home.
 
@@ -243,7 +243,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     - Review and execute below emcli command. If the image id is same as the one highlighted above, you may use the below command:  
 
     ```
-    <copy>emcli db_software_maintenance -checkApplicability -image_id=A79586CA133F1E27E0532A00000A5633 -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
+    <copy>emcli db_software_maintenance -checkApplicability -image_id=E27275341BC25561E053AD00000A3CBD -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
     ```
 
     else
@@ -258,7 +258,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     - Output of above emcli command is redirected to a file. You may review the output using any standard editor or tool of your choice.
 
-    ![](images/5f050173735f58aabd279987996192ea.png " ")
+    ![](images/image_applicable.png "image applicable ")
 
     This command can show one of the following results:
 
@@ -276,7 +276,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     If the image id is same as the one highlighted above (Task 4, step 7), you may use the below command:
     ```
-    <copy>emcli db_software_maintenance -subscribeTarget -target_name=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id=A79586CA133F1E27E0532A00000A5633</copy>
+    <copy>emcli db_software_maintenance -subscribeTarget -target_name=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id=E27275341BC25561E053AD00000A3CBD</copy>
     ```
 
     else
@@ -290,7 +290,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
    -  target\_type – type of target to be patched. This should be oracle\_database in this case
    -  image\_id – ID of the Gold Image to which the target should be patched
 
-    ![](images/ca94c4b76f9c24eee24f4d06b35c6764.png " ")
+    ![](images/hr_subscribe.png "hr subscribe ")
 
 ## Task 6: Deploy Image
 
