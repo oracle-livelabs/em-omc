@@ -350,7 +350,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     If the image id is same as the one highlighted above, you may use the below command
 
     ```
-    <copy>emcli db_software_maintenance -subscribeTarget -target_name=finance.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id="D5807C29FD2A7F92E0538D00000A9A64"</copy>
+    <copy>emcli db_software_maintenance -subscribeTarget -target_name=finance.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id="E27CAAC5D6F67979E053AD00000A8212"</copy>
     ```
 
     else make changes in the below command and execute it.
@@ -398,10 +398,10 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
         ```
     Check both Migrate Listener and Update Database options
     Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
-        Normal Host Credentials as ***ORACLE***
-        Privileged Host Credentials as ***ROOT***
-        SYSDBA Database Credentials as ***SYS_SALES***
-    Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
+    -  Normal Host Credentials as ***ORACLE***
+    -  Privileged Host Credentials as ***ROOT***
+    -  SYSDBA Database Credentials as ***SYS_SALES***
+    -  Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
