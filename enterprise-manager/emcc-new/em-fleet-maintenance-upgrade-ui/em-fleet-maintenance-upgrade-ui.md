@@ -88,11 +88,11 @@ Software Standardization Advisor enables administrators to understand various da
 
 3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select Software ***Standardization Advisor***
 
-    ![](images/software-std-advisor.jpg " ")
+    ![](images/new-software-std-advisor.png " ")
 
 4.  Software Standardization Advisor shows two graphs depicting current configuration and recommended configuration.
 
-    ![](images/em-pollution-detection-1.png " ")
+    ![](images/generate-report.png "pollution detection report generation" )
 
     Graphs may look different from the ones represented in the workbook.
     A Software Configuration is identified by the database release, platform, and the patches installed on the target.
@@ -103,10 +103,10 @@ Software Standardization Advisor enables administrators to understand various da
     Next, we will review the report generated.
 
 5.  On the same page, click on **Generate Report**.
-
+    ![](images/generate-report-confirmation.png "pollution detection report generation ")
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/em-pollution-detection-2.png " ")
+    ![](images/current-config.png " ")
 
     When you download the report, should a warning on XLS format and file extension mismatch pop up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
@@ -123,7 +123,7 @@ Software Standardization Advisor enables administrators to understand various da
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
 
-    ![](images/em-pollution-detection-3.png " ")
+    ![](images/recommend-config.png "recommended changes ")
 
     <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
 
@@ -164,7 +164,7 @@ We will go through steps for upgrading database target ***finance.subnet.vcn.ora
 
     ![](images/ec0b6926d4f65b52a771483ace24055c.png " ")
 
-    ![](images/05ab9d53e622fe6b226647d67750c1dd.jpg " ")
+    ![](images/finance-db.png " ")
 
     You will see the *finance.subnet.vcn.oraclevcn.com* database. If the target status is ‘DOWN’, then start the target (using */home/oracle/start\_db\_finance.sh*).
 
@@ -302,18 +302,18 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
     **OR**  
     ```
-    <copy>sh create_image_version197_tier1_sidb_x64.sh</copy>
+    <copy>cd ~/fleet ; sh create_image_version197_tier1_sidb_x64.sh</copy>
     ```
 
-    ![](images/create_image_197.png " ")
+    ![](images/submit-create-image.png " ")
 
 4. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘CreateGoldImage\*’ run
 
-    ![](images/197_procedure_activity.png " ")
+    ![](images/submit-create-image-dp.png " ")
 
 5. Review the Procedure Activity steps performed.
 
-    ![](images/dp_197.png " ")
+    ![](images/upg-gi-creation.png " ")
 
 
 ## Task 6: Subscribe Database
@@ -326,7 +326,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     <copy>emcli db_software_maintenance -getTargetSubscriptions -target_name=finance.subnet.vcn.oraclevcn.com  -target_type=oracle_database</copy>
     ```
 
-    ![](images/unsubscribe_finance.png "unsubscribe finance db")
+    ![](images/Unsubscribe-finance.png "unsubscribe finance db")
 
     If the image id is same as the one highlighted above, you may use the below command
     ```
@@ -344,7 +344,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](images/finance_subscribe_197.png "subscribe finance db to new image")
+    ![](images/new-subscribe-finance.png "subscribe finance db to new image")
 
 
     If the image id is same as the one highlighted above, you may use the below command
@@ -378,7 +378,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
 2. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
 
-    ![](images/options.png "choose options")
+    ![](images/finance-upgarde-1.png "choose options")
 
     Where:
     -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***Tier1 SIDB 19c Linux-x64***.
@@ -388,7 +388,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/new-input-values.png "enter values for operation")
+    ![](images/finance-upgrade-values.png "enter values for operation")
 
     We can enter following values
     Under Maintenance tasks
@@ -401,6 +401,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
         Normal Host Credentials as ***ORACLE***
         Privileged Host Credentials as ***ROOT***
         SYSDBA Database Credentials as ***SYS_SALES***
+    Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
@@ -418,7 +419,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
 6. ***Submit*** the operation. Here, we can see that we have opted to deploy, migrate and update the database at once. These tasks will be performed independently based on their schedule.
 
-    ![](images/final-review.png "final-review")    
+    ![](images/finance-upgrade-values-2.png "final-review")    
 
     We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
 
@@ -436,10 +437,10 @@ Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate 
 7. Review the Deployment Procedures (DP).
 
 Select the DP related to Deploy and click on it.
-    ![](images/new-all-dp.png "all-dp-submitted")
+    ![](images/deploy-dp.png "all-dp-submitted")
 
 It will show details of the activity performed by the DP.
-    ![](images/new-dp-deploy.png "dp-deploy")
+    ![](images/deploy-dp-completed.png "dp-deploy")
 
 Here, we see that the DP has successfully installed new Oracle home.
 
@@ -448,10 +449,10 @@ Here, we see that the DP has successfully installed new Oracle home.
 1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). The image below shows the task is in a running state.
 
 
-    ![](images/new-listener-mig.png "dp running post reschedule")
+    ![](images/listener-dp-running.png "dp running post reschedule")
     Select the running task to see the various steps performed.
 
-    ![](images/new-dp-migrate-completed.png "dp-migrate-completed")
+    ![](images/migrate-dp-completed.png "dp-migrate-completed")
     We can now see that the migration operation completed successfully.
 
 ## Task 9: Update Database – Upgrade to 19.7
@@ -460,16 +461,16 @@ After the deploy operation and migrate listener task have completed successfully
 
 1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7). The image below shows the task is in a running state.
 
-    ![](images/new-db-update-1.png "update")
+    ![](images/upgrade-dp-running.png "update")
 
     Select the running task to see the various steps performed.
-    ![](images/new-db-update-steps.png "update dp running")
+    ![](images/upgrade-dp-details.png "update dp running")
 
     Update operation has completed successfully.
-    ![](images/new-db-update-complete.png "update-dp-steps")
+    ![](images/upgrade-dp-complete.png "update-dp-steps")
 
     Lets validate the version of ***finance*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***finance*** database.
-    ![](images/post_upgrade_db_version.png "db version post operation")
+    ![](images/finance-version.png "db version post operation")
 ## Task 10: Cleanup Old homes
 
 1. Review and execute the following command as a dry-run to report on cleanup impact for *finance.subnet.vcn.oraclevcn.com*  
@@ -484,7 +485,7 @@ After the deploy operation and migrate listener task have completed successfully
     <copy>sh cleanup_finance_report.sh</copy>
     ```
 
-    ![](images/228ae0280ff2878bb4902cb263529bb9.png " ")
+    ![](images/finance-cleanup-report.png " ")
 
 2. Review and execute the following command to cleanup *finance.subnet.vcn.oraclevcn.com*  
 
@@ -499,15 +500,15 @@ After the deploy operation and migrate listener task have completed successfully
     sh cleanup_finance.sh</copy>
     ```
 
-    ![](images/3f41abadf32e4b8d4900467985a093ef.png " ")
+    ![](images/finance-cleanup-submitted.png " ")
 
 3. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
-    ![](images/94954554c777d24280599507c28a75d3.png " ")
+    ![](images/cleanup-dp.png " ")
 
 4. Review the Procedure Activity steps performed
 
-    ![](images/777053c04e0851859856c8d32b9d94c2.png " ")
+    ![](images/cleanup.png " ")
 
 5. Verify to confirm that the two old Oracle homes reported have been removed
 
@@ -528,7 +529,7 @@ After the deploy operation and migrate listener task have completed successfully
     <copy>lsnrctl start LISTENER_1525</copy>
     ```
 
-    ![](images/b3d1a555c6eeb3d0d899da4291a6441c.png " ")
+    ![](images/listener-1525.png " ")
 
 8. Force Listener registration and confirm that it is now servicing “*finance.subnet.vcn.oraclevcn.com*”
 
@@ -544,7 +545,7 @@ After the deploy operation and migrate listener task have completed successfully
     <copy>lsnrctl status LISTENER_1525</copy>
     ```
 
-    ![](images/7626fd3264e4a514fde576ecd9369456.png " ")
+    ![](images/New-status-listener1525.png " ")
 
 
 That completes the Automated Database Upgrade at Scale with Fleet Maintenance UI workshop.
