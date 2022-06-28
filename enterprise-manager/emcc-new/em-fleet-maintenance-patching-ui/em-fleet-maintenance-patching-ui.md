@@ -398,13 +398,13 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
    Select the running task to see the various steps performed.
 
-   ![](images/new-hr-new-home-completed.png "DP completed")
+   ![](images/HR-update-complete.png "DP completed")
 
    Update operation has completed successfully.
 
    Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
 
-   ![](images/post_patch_db_version.png "new version check")
+   ![](images/HR-status-post-patch.png "new version check")
 
 ## Task 9:  Rollback Database – Reversed Patch 18.10 to 18.3
 
@@ -423,20 +423,20 @@ Once the database is updated, we will perform a rollback to Oracle Database 18.3
     sh rollback_hr.sh</copy>
     ```
 
-    ![](images/acb8ad0f4fb9ad39503081f5cdfb9e79.png " ")
+    ![](images/HR-rollback-submit.png " ")
 
 2. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
 
-    ![](images/6999f44a0845085f3660f365bb24d7d3.png " ")
+    ![](images/Rollback-DP.png " ")
 
 3. Review the Procedure Activity steps performed         
 
-    ![](images/6a12674bdf0e9535535b90cf043a1605.png " ")
+    ![](images/Rollback-DP-complete.png " ")
 
 4. Verify the rolled back target by going to ***Targets >> Databases*** as shown
 below.
 
-    ![](images/7afa56b6cb5fee053c57b141a5c08245.png " ")
+    ![](images/HR-rollback.png " ")
 
 ## Task 10:  Cleanup Old homes
 
@@ -456,7 +456,7 @@ below.
     <copy>sh update_hr.sh</copy>
     ```
 
-    ![](images/05dc434c461c068b157f9dd7cd6b10ce.png " ")
+    ![](images/new-update-hr.png " ")
 
     Where:
       -  Name – Name of the operation. This is a logical name and should be kept unique Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
@@ -464,11 +464,11 @@ below.
 
 3. Verify that the update has been completed successfully before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
 
-    ![](images/444749cbf21602a501446fe9c14b1949.png " ")
+    ![](images/Fleet-update.png " ")
 
 4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below
 
-    ![](images/05d8c8153c8c990ac80810fef434baa3.png " ")
+    ![](images/New-HR-status.png " ")
 
 5. Review and execute the following command as a dry-run to report on cleanup impact for *hr.subnet.vcn.oraclevcn.com*  
 
@@ -482,7 +482,7 @@ below.
     <copy>sh cleanup_hr_report.sh</copy>
     ```
 
-    ![](images/9b5d405577571043afe9ead1fc723392.png " ")
+    ![](images/cleanup-report.png " ")
 
 6. Review and execute the following command to cleanup *hr.subnet.vcn.oraclevcn.com*   
     ```
@@ -495,15 +495,15 @@ below.
     <copy>sh cleanup_hr.sh</copy>
     ```
 
-    ![](images/f0443cb23cec56d4d3c3818720c73c80.png " ")
+    ![](images/cleanup-hr.png " ")
 
 7. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
-    ![](images/1ffb1bc964b9ca980d6f6034d4882156.png " ")
+    ![](images/cleanup-dp.png " ")
 
 8. Review the Procedure Activity steps performed        
 
-    ![](images/c2062c09719c5c4b41ceff3138b3d44e.png " ")
+    ![](images/cleanup-dp-details.png " ")
 
 9. Verify to confirm the old Oracle home has been removed
 
@@ -511,7 +511,7 @@ below.
     <copy>ls -l /u01/app/1806/hr</copy>
     ```
 
-    ![](images/31324fdd072b03be848fa9362de9ae7b.png " ")
+    ![](images/no-18006.png " ")
 
 10.  As part of the cleanup operation, LISTENER\_1522 which support “***hr.subnet.oraclevcn.com***” is shutdown. Set your environment by passing “***hr***” to “***oraenv***” when prompted and start the listener back up.
 
@@ -525,7 +525,7 @@ below.
       <copy>lsnrctl start LISTENER_1522</copy>
       ```
 
-  ![](images/465b2cea9ae4e176c314eff253ef4b68.png " ")
+  ![](images/oraenv.png " ")
 
 12. Force Listener registration and confirm that it is now servicing “***hr.subnet.vcn.oraclevcn.com***”
 
@@ -542,7 +542,7 @@ below.
     <copy>lsnrctl status LISTENER_1522</copy>
     ```
 
-    ![](images/b95a982c86b233dfa1af34d29c03aa6e.png " ")
+    ![](images/listener-register.png " ")
 
 <!-- This completes Step 2. In this section, you learned how to perform the following:
 -   Create Oracle Database Software Gold Image
