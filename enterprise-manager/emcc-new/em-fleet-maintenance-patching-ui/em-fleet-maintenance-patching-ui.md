@@ -334,10 +334,10 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     Check both Migrate Listener and Update Database options
     Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
-        Normal Host Credentials as ***ORACLE***
-        Privileged Host Credentials as ***ROOT***
-        SYSDBA Database Credentials as ***SYS_SALES***
-    Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
+    -  Normal Host Credentials as ***ORACLE***
+    -  Privileged Host Credentials as ***ROOT***
+    -  SYSDBA Database Credentials as ***SYS_SALES***
+    -  Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
