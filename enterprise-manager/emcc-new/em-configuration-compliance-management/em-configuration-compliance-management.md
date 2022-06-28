@@ -212,9 +212,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_and_Drift_Demo_Image_3.png " ")
 
-5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by **Search** with name created, by  default Highlight this new template and click Edit.
+5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by **Search** with name **ECM003_Drift_Demo** created, by  default Highlight this new template and click Edit.
 
-  ![](images/Compare_and_Drift_Demo_Image_4.png)
+  ![](images/Compare_and_Drift_Demo_Image_4.png " ")
 
   ![](images/Compare_and_Drift_Demo_Image_5.png " ")
 
