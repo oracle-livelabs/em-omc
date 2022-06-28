@@ -355,7 +355,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 6. ***Submit*** the operation. Here, we can see that we have opted to deploy, migrate and update the database at once. These tasks will be performed independently based on their schedule.
 
-    ![](images/submit.png "submit operation")    
+    ![](images/New-Submit.png "submit operation")    
 
     We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
     ```
@@ -371,11 +371,11 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 7. Review the Deployment Procedures (DP).
 
-   ![](images/new-review-dp.png "review")
+   ![](images/new-deploy-1.png "review")
 
    Select DP related to Deploy and click on it. It will show details of the activity performed by the DP.
 
-   ![](images/new-dp-layout.png "review dp for layout OH")
+   ![](images/HR-Deploy-complete.png "review dp for layout OH")
 
    Here, we see that the DP has successfully installed new Oracle home.(putty screen shows the new Oracle home layout)
 
@@ -383,18 +383,18 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). The image below shows the task is in a running state.
 
-    ![](images/state-mig-listener.png "DP for migrate listener")
+    ![](images/HR-listener-running.png "DP for migrate listener")
 
     Select the running task to see the various steps performed.
 
-    ![](images/new-listener-details.png "details of DP")
+    ![](images/HR-listener-complete.png "details of DP")
     We can now see that the migration operation completed successfully.
 
 ## Task 8: Update Database – Patch 18.3 to 18.10
 
 1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). The image below shows the task is in a running state.
 
-   ![](images/state-db-update.png "DP update")
+   ![](images/HR-update-running.png "DP update")
 
    Select the running task to see the various steps performed.
 
