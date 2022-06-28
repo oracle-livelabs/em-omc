@@ -50,15 +50,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 2.  Navigate to the ***Enterprise menu >> Provisioning and Patching >> Database provisioning***.
 
-  ![](images/167e561726cc8d0a58d8b90a37274b06.jpg " ")
+  ![](images/DB_provisioning-flow-main.jpg " ")
 
 3.  In the Database Provisioning page, in the related Links section of the left menu pane, click **Provision Pluggable Databases**
 
-  ![](images/PDB-Provisioning.jpg " ")
+  ![](images/PDB_provisioning-flow-main.jpg " ")
 
 4.  In the Provision Pluggable Database Console, in the **Container Database** section, select the **CDB (CDB186 – 18.8 version)** within which you want to create new PDBs.
 
-  ![](images/4a1835f78c064502ccac88138075133c.jpg " ")
+  ![](images/Select-CDB-main-flow.jpg " ")
 
 5.  In the PDB Operations section, select **Create Pluggable Databases**, Click Launch
 
@@ -101,15 +101,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 1. Navigate to the ***Enterprise menu >> Provisioning and Patching >> Database provisioning***.
 
-  ![](images/167e561726cc8d0a58d8b90a37274b06.jpg " ")
+  ![](images/DB_provisioning-flow-main.jpg " ")
 
 2. In the Database Provisioning page, in the Related Links section of the left menu pane, click “**Provision Pluggable Databases**”
 
-  ![](images/33b77cf547caf09fe9c2d56b23fbaf43.jpg " ")
+  ![](images/PDB_provisioning-flow-main.jpg " ")
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, select the CDB (**CDB186**) within which you want to create new PDBs.
 
-  ![](images/4a1835f78c064502ccac88138075133c.jpg " ")
+  ![](images/Select-CDB-main-flow.jpg " ")
 
 4.  In the PDB Operations section, **select Unplug** Pluggable Databases, then Click Launch.
 
@@ -131,15 +131,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 9.  Let us continue to the next steps and plug the same PDB back into the container database. Navigate to the **“Enterprise menu >> Provisioning and Patching >> Database provisioning”**.
 
-  ![](images/167e561726cc8d0a58d8b90a37274b06.jpg " ")
+  ![](images/DB_provisioning-flow-main.jpg " ")
 
 10. In the Database Provisioning page, in the Related Links section of the left menu pane, click Provision Pluggable Databases
 
-  ![](images/33b77cf547caf09fe9c2d56b23fbaf43.jpg " ")
+  ![](images/PDB_provisioning-flow-main.jpg " ")
 
 11. In the Provision Pluggable Database Console, in the Container Database section, select the **CDB** (**CDB186**) within which you want to create new PDBs.
 
-  ![](images/4a1835f78c064502ccac88138075133c.jpg " ")
+  ![](images/Select-CDB-main-flow.jpg " ")
 
 12. In the PDB Operations section, select **Create New Pluggable Databases** , Click Launch.
 
@@ -177,15 +177,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 1.  Navigate to the “***Enterprise menu >> Provisioning and Patching >> Database provisioning***”.
 
-  ![](images/167e561726cc8d0a58d8b90a37274b06.jpg " ")
+  ![](images/DB_provisioning-flow-main.jpg " ")
 
 2.  In the Database Provisioning page, in the Related Links section of the left menu pane, click Provision Pluggable Databases
 
-  ![](images/33b77cf547caf09fe9c2d56b23fbaf43.jpg " ")
+  ![](images/PDB_provisioning-flow-main.jpg " ")
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, select the CDB (**CDB186**) within which you want to create new PDBs.
 
-  ![](images/4a1835f78c064502ccac88138075133c.jpg " ")
+  ![](images/Select-CDB-main-flow.jpg " ")
 
 4.  In the PDB Operations section, select **Create New Pluggable Databases**, Click Launch
 
