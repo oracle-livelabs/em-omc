@@ -459,7 +459,8 @@ below.
     ![](images/new-update-hr.png " ")
 
     Where:
-      -  Name – Name of the operation. This is a logical name and should be kept unique Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
+    -  Name – Name of the operation. This is a logical name and should be kept unique.
+    -  Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
 
 
 3. Verify that the update has been completed successfully before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
