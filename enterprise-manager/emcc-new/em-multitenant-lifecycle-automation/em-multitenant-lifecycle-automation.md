@@ -307,7 +307,7 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
 1. Login into Enterprise Manager as a Self-Service User. Self-Service User credentials are: **cyrus/welcome1**
 2. By default, you will see the Database Cloud Self Service Portal landing page as shown below.
 
-  ![](images/2d9dd5550b4774b590ccb4b1815ac70d.jpg " ")
+  ![](images/CMP-HomePage.jpg " ")
 
 3. Click the **Create Instance** button and then Click on Select icon for **Provision New Empty Pluggable Database**.
 
@@ -353,7 +353,7 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
 
 7. Instance Duration - For Instance Duration Start: Accept the default (Immediately). For Duration: Specify 4 hours from the current time by selecting the “Until” radio button, changing to current date and specify time to be 4 hours from the current time
 
-    ![](images/3035739cd46353882939fd894197f2ed.jpg " ")
+    ![](images/CMP-Task5-point7.jpg " ")
 
 8. Click on Submit button
 
@@ -371,7 +371,7 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
 
 9.  Once you submit a request, you will be redirected back to the “**Database Cloud Services**” Page. Your PDB creation request has been submitted to Enterprise Manager for execution. Under “**Requests**” region, you should see 2 requests: “**Create**” and “**Delete**” request
 
-  ![](images/0d01a3a45ebb7f97fcc8752d52241b9d.jpg " ")
+  ![](images/CMP-Task5-point9.jpg " ")
 
 10. At this point, provisioning engine has received a request to create a PDB based on the service template and input provided by self-service user. You will also notice the delete operation is scheduled for future (not started yet) time. Click on the **hourglass** icon under Status column for the Create Pluggable Database step. You will see details of request.
 
@@ -384,15 +384,15 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
   The request should take less than 10 minutes to complete. Click on refresh icon or as an alternative set Refresh to 30 seconds. The success status
 indicates that PDB database was successfully created. The new PDB database should be visible under Database Cloud Services page.
 
-  ![](images/3fc668c3d45cc0a1a7dc3c3f7233bfe6.jpg " ")
+  ![](images/CMP-PDB_creation-success.jpg " ")
 
 12. Click on Close button. You will see the following under Requests section.
 
-  ![](images/9bd785e399889d2a53d9e7284bf6c329.jpg " ")
+  ![](images/CMP-Task5-point12.jpg " ")
 
 13. Click on the Home Icon. You will see new PDB instance.
 
-  ![](images/ee3e8bccf25b8a836bea2f9a3a487cb7.jpg " ")
+  ![](images/CMP-Task5-point13.jpg " ")
 
   *Note*: Following widgets are shown on the Database Cloud Services landing Page
 
@@ -426,11 +426,11 @@ indicates that PDB database was successfully created. The new PDB database shoul
 
 18. Click on the action menu for new PDB and delete this instance.
 
-  ![](images/877bc45ab2f0ab8acd7ea6507baee575.jpg " ")
+  ![](images/CMP-Task5-point18-latest.jpg " ")
 
 19. While deleting instance you can preserve a backup of the instance and create a new instance using this backup. To store backup of this instance, select check-box: **Preserve a backup of this instance**
 
-  ![](images/2840b2e0869edc22af3245e98dba13eb.jpg " ")
+  ![](images/CMP-Task5-point19-latest.jpg " ")
 
 20. Click OK. You will see confirmation to delete the instance.
 
@@ -458,7 +458,7 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
 4. You are taken to the Zone Home page; you can see all the details of a Zone such as the host members of this zone. You can explore more about the zone on this page.
 
-  ![](images/b3ddc4d5e436d1e6dec7eb0ed795f0b7.jpg " ")
+  ![](images/CMP-Task6-point4.jpg " ")
 
 ### **Pluggable Database Pool**
 
@@ -470,7 +470,7 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
 6. Click on name of the pool to see more details.
 
-  ![](images/5fa7e9b6bb3648c664e4afc7aeac5670.jpg " ")
+  ![](images/CMP-Task6-point6.jpg " ")
 
 7. Scroll down to see details of Members and Service Templates.
 
