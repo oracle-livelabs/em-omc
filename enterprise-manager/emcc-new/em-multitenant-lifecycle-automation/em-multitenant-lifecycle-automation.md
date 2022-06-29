@@ -60,7 +60,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/Select-CDB-main-flow.jpg " ")
 
-5.  In the PDB Operations section, select **Create Pluggable Databases**, Click Launch
+5.  In the PDB Operations section, select **Create New Pluggable Databases**, Click Launch
 
   ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
