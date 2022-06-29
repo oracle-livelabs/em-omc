@@ -243,11 +243,18 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 
   ![](images/dblmcompliancelibrary.png " ")
 
-2. Click the **Compliance Standards** tab,  Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the Associate Targets tab.
+2. Click the **Compliance Standards** tab, Click on the Dropdown next to **Search**
+Key in "High Security" as the key word and hit search.
+
+ Do not click on the Compliance standard result , but only Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the Associate Targets tab.
 
   ![](images/Task4-Compliance-Standard-name.jpg " ")
 
-3.  Then Click Add and choose the row with your PDB, then Click OK.
+3.  Then Click Add and choose the row with your PDB, click **Select**
+Verify the PDB name added and Click **OK**
+
+![](images/Task4-Step3.jpg " ")
+![](images/Task4-Step3a.jpg " ")
 
 4. In the Save Association dialog box, Click Yes.
 
@@ -257,7 +264,7 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 
   ![](images/a01dffb956af685a866f02e68eff72b1.png " ")
 
-6.  You need to refresh PDB statistics to see notifications. To refresh:
+6. Optionally, you can refresh PDB statistics to see notifications. To refresh:
 
     - Click the ***target icon >> Databases >> View >> Expand All***
     - Right Click on ***PDB >> Oracle Database >> Configuration >> Latest.***
@@ -340,15 +347,19 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
     -  **Provision New Empty Pluggable Database**: This template enables users to create a new pluggable database in a container database configured by DBA.
     -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
 
-4. In the **Pluggable Database Configuration** section, enter Service and SID details:
+4. In the **Pluggable Database Configuration** section, 
+      
+      
+**Step 1**
+      Enter Service and SID details:
 
       * Name: **YOUR INITIALS\_PDB2** (e.g. AS\_PDB2)
       * Database Service Name **: SERVICE\_YOUR INITIALS\_PDB2 (e.g. SERVICE\_AS\_PDB2)**
       * Workload Size: Choose **Small**
 
-    ![](images/fd8fe73465009dbd65e2231503481e40.jpg " ")
-
-5. Enter the Credentials details in the “**Pluggable Database Administrator Account**” and for Tablespaces, select **Accept default**
+  
+**Step 2**
+ Enter the Credentials details in the “**Pluggable Database Administrator Account**” and for Tablespaces, select **Accept default**
 
     ```
     Administrator Name: <copy>PDBADMIN</copy>
@@ -359,9 +370,9 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
     ```
 
 
-    ![](images/181bed80a9978ed3e02c050838749f2b.jpg " ")
-
-6. Instance Details, keep all defaults as they are. The Properties Page has the properties for the instance. The Self-Service Administrator has configured this as a optional step. However, properties can help users locate an instance more quickly. So Enter:
+  
+**Step 3**
+Instance Details, keep all defaults as they are. The Properties Page has the properties for the instance. The Self-Service Administrator has configured this as a optional step. However, properties can help users locate an instance more quickly. So Enter:
 
     ```
     Contact: <copy>CYRUS</copy>
@@ -371,13 +382,15 @@ With the Self-Service Portal, cloud users can request an  Pluggable Database thr
     Lifecycle Status: <copy>Test</copy>
     ```
 
-    ![](images/f5f29e12efaaf8a1fce318e871d9009d.jpg " ")
+  
+**Step 4**
+Instance Duration - For Instance Duration Start: Accept the default (Immediately). For Duration: Specify 4 hours from the current time by selecting the “Until” radio button, changing to current date and specify time to be 4 hours from the current time
 
-7. Instance Duration - For Instance Duration Start: Accept the default (Immediately). For Duration: Specify 4 hours from the current time by selecting the “Until” radio button, changing to current date and specify time to be 4 hours from the current time
 
-    ![](images/CMP-Task5-point7.jpg " ")
+**Step 5**
+Click on Submit button
 
-8. Click on Submit button
+![](images/Task5-Consolidated.jpg " ")
 
   What do these options represent? In most cases the PDBaaS options are self-explanatory. The self-service user should be able to provision a PDB by entering minimal information. Fields with an ‘\*’ represent mandatory input fields. Please refer to the table listed below for a description of each option:
 
