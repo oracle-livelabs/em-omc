@@ -56,8 +56,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-4.  In the Provision Pluggable Database Console, in the **Container Database** section, select the **CDB (CDB186 – 18.8 version)** within which you want to create new PDBs.
-
+4.  In the Provision Pluggable Database Console, in the **Container Database** section, click on the magnifier to select the **CDB (CDB186 – 18.8 version)** within which you want to create new PDBs.
+  
+  ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
 5.  In the PDB Operations section, select **Create New Pluggable Databases**, Click Launch
@@ -68,19 +69,26 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/9be6823423a692b7e1f0e240c10567c9.jpg " ")
 
-7.  In the Identification page, Enter a unique name for the PDB you are creating (your initial\_pdb). Optionally, select the check box to “create multiple DBs” and put **2** as the number of copies.
+7. In the Identification page, Enter a unique name for the PDB you are creating (your initial\_pdb). Optionally, select the check box to “create multiple DBs” and put **2** as the number of copies.
 
-8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB. **UserName**: pdbadmin **Password**: welcome1 .Click **Next**.
 
-  ![](images/7442f8d5bf4704af57849ae9741f5a36.jpg " ")
+8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB. *UserName*: **pdbadmin** 
+*Password*: **welcome1** .
+Click **Next**.
+
+  ![](images/Task1-step8-latest.jpg " ")
 
 9. For storage option, select **Use Common Location for PDB Datafiles** and leave defaults as-is.
+Click **Next**
 
-  ![](images/CreatePluggableDatabaseStorage.jpg " ")
+  ![](images/Task1-point9.jpg " ")
 
-10. Optionally, you may also want to select a post-script, which will run post creation of PDB. Choose “Select from software library” and then search for
+10. Optionally, you may also want to select a post-script, which will run post creation of PDB. 
+Under the **Post Creation Scripts** 
+Choose “Select from software library” and then search for
 “**unlock**” and select unlock.sql (Or you can upload a SQL file from your system).
 
+  ![](images/Unock-helper.jpg " ")
   ![](images/7d3fcabc8fe5f6f80fe20e55bb28655d.jpg " ")
 
 11. In the Schedule page, select the check box immediately next to Start. Click Next.
@@ -107,8 +115,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-3.  In the Provision Pluggable Database Console, in the Container Database section, select the CDB (**CDB186**) within which you want to create new PDBs.
-
+3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to create new PDBs.
+  ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
 4.  In the PDB Operations section, **select Unplug** Pluggable Databases, then Click Launch.
@@ -123,7 +131,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/4ad828f403bf702b7318f718ad98f117.jpg " ")
 
-7.  In the Schedule page, Select the check box immediately next to Start. Click Next. In the Review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. In the Procedure Activity page, view the status of the procedure.
+7.  In the Schedule page, Select the check box immediately next to Start. 
+Click **Next**. 
+![](images/Task2-Step7.jpg " ")
+
+In the Review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. 
+
+![](images/Task2-step7a.jpg " ")
+
+In the Procedure Activity page, view the status of the procedure.
 
   ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
@@ -137,8 +153,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-11. In the Provision Pluggable Database Console, in the Container Database section, select the **CDB** (**CDB186**) within which you want to create new PDBs.
-
+11. In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**CDB186**) within which you want to create new PDBs.
+  ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
 12. In the PDB Operations section, select **Create New Pluggable Databases** , Click Launch.
@@ -155,11 +171,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   *Note*: We will keep pdbadmin as a default admin. So, don’t select anything in this section.
 
-15. On the Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box. Select the Name which you created during Unplug .Click Next
-
+15. On the Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box. 
+Select the Name which you created during Unplug,incase of multiple options, choose the latest image based on timestamp.
+Click **Next**
+  
   ![](images/dad1846d73cd9ca339bab04718e09816.jpg " ")
+  ![](images/Task2-step15.jpg " ")
 
-16. Select **Use Common Location for PDB Datafiles** and use **/tmp** as temporary working directory.
+
+16. Select **Use Common Location for PDB Datafiles** and type **/tmp** as temporary working directory.
 
   ![](images/a6353f812935eeb6148a79693ae0c4fd.jpg " ")
 
@@ -183,8 +203,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-3.  In the Provision Pluggable Database Console, in the Container Database section, select the CDB (**CDB186**) within which you want to create new PDBs.
-
+3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to create new PDBs.
+  ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
 4.  In the PDB Operations section, select **Create New Pluggable Databases**, Click Launch
@@ -195,9 +215,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/472126037592bdeca5eaa6027ebb57a3.jpg " ")
 
-6.  Enter new PDB name
+6.  Enter new PDB name. The PDB Administrator user will inherit the user from the source PDB, hence this section does not need any inputs.
+An additional PDB Administrator user can also be created.
+Click **Next**
 
-  ![](images/4a4164d7ee405fed16dc5a0aeefe430f.jpg " ")
+  ![](images/Task2-step6.jpg " ")
 
 7.  Select **Use Common Location for PDB Datafiles** in the Source page of the Create Pluggable Database Wizard, please enter **/tmp** in temporary working directory.
 
