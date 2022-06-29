@@ -31,7 +31,7 @@ In this lab you will perform the following steps:
 | Step No. | Feature                                                   | Approx. Time | Details                                                                                                              | Value Proposition |
 |----------------------|-----------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------|-------------------|
 | 1                    | Detect Configuration Pollution                            | 10 minutes  | Analyze the database estate using Software Standardization.                                                          |                   |
-| 2                    | Oracle Database Upgrade with Fleet Maintenance | 50 min   | Upgrade your Oracle Database Software at scale with minimal downtime using Oracle Enterprise Manager 13c Fleet Maintenance. |                   |
+| 2                    | Oracle Database Upgrade with Fleet Maintenance | 50 minutes   | Upgrade your Oracle Database Software at scale with minimal downtime using Oracle Enterprise Manager 13c Fleet Maintenance. |                   |
 
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
