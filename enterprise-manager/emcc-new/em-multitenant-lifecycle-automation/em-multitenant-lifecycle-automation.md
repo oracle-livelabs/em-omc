@@ -103,7 +103,7 @@ Choose “Select from software library” and then search for
 
 14. Once the procedure is completed (takes about 3-5 mins), you can **Navigate to Targets >> Databases, Click on CDB186** and you will see the newly created PDB
 
-  ![](images/657ef309d7087942b8d871256a359050.jpg " ")
+  ![](images/Task1-step14.jpg " ")
 
 ## Task 2: Unplug/Plug an existing Pluggable Database (PDB)
 
@@ -129,7 +129,7 @@ Choose “Select from software library” and then search for
 
 6.  In the Destination page, select the type of PDB template you want to generate for unplugging the PDB, and the location where you want to store it. The PDB template consists of all datafiles as well as the metadata XML file. Select radio button for software library. Select Generate PDB archive. Enter /tmp in location under Temporary working directory
 
-  ![](images/4ad828f403bf702b7318f718ad98f117.jpg " ")
+  ![](images/Task2-step6-latest.jpg " ")
 
 7.  In the Schedule page, Select the check box immediately next to Start. 
 Click **Next**. 
@@ -144,6 +144,8 @@ In the Procedure Activity page, view the status of the procedure.
   ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
 8.  You can Navigate to ***Targets >> Databases***, Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
+
+![](images/Task2-step8.jpg " ")
 
 9.  Let us continue to the next steps and plug the same PDB back into the container database. Navigate to the **“Enterprise menu >> Provisioning and Patching >> Database provisioning”**.
 
@@ -175,7 +177,7 @@ In the Procedure Activity page, view the status of the procedure.
 Select the Name which you created during Unplug,incase of multiple options, choose the latest image based on timestamp.
 Click **Next**
   
-  ![](images/dad1846d73cd9ca339bab04718e09816.jpg " ")
+  ![](images/Task2-step15-latest.jpg " ")
   ![](images/Task2-step15.jpg " ")
 
 
@@ -184,12 +186,19 @@ Click **Next**
   ![](images/a6353f812935eeb6148a79693ae0c4fd.jpg " ")
 
 17.  In the Schedule page, select the check box immediately next to Start. Click Next.
+![](images/Task2-step17.jpg " ")
 
 18.  In the review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. You can now click on View Execution Details link to see details.
 
+![](images/Task2-step18.jpg " ")
+ 
 19.  In the Procedure Activity page, view the status of the procedure.
 
+![](images/Task2-step19.jpg " ")
+
 20. Optionally Click the status link for each step to view the details of the execution of each step. Once the procedure is completed, you can Navigate to ***Targets >> Databases***. Click on CDB186 and you will see the newly created PDB
+
+![](images/Task2-step20.jpg " ")
 
   *Note*: You do not have to wait until the steps complete and move on to the next section.
 
