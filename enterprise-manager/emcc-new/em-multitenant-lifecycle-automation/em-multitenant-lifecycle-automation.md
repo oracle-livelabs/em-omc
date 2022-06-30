@@ -242,7 +242,14 @@ Click **Next**
 
 9.  After the Review page appears, and you have confirmed the information is correct for your deployment, click Submit. You can now click on View Execution Details link to see details and on the Procedure Activity page see the status of the procedure.
 
+![](images/task3-step9.jpg " ")
+![](images/task3-step9a.jpg " ")
+
+![](images/task3-step10.jpg " ")
+
 10.  Once the procedure is completed,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the newly created PDB
+
+![](images/task3-step10a.jpg " ")
 
 ## Task 4: Compliance Management for Pluggable Database
 
@@ -252,7 +259,7 @@ Now database administrator applies a Corporate Standard on the newly created PDB
 
   ![](images/dblmcompliancelibrary.png " ")
 
-2. Click the **Compliance Standards** tab, Click on the Dropdown next to **Search**
+2. Click the **Compliance Standards** tab, Click on the Dropdown next to **Search**, 
 Key in "High Security" as the key word and hit search.
 
  Do not click on the Compliance standard result , but only Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the Associate Targets tab.
