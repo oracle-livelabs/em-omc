@@ -246,7 +246,8 @@ Click **Next**
   ![](images/task3-step9a.jpg " ")
 
   ![](images/task3-step10.jpg " ")
-  
+
+
 
 10.  Once the procedure is completed,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the newly created PDB
 
