@@ -242,10 +242,10 @@ Click **Next**
 
 9.  After the Review page appears, and you have confirmed the information is correct for your deployment, click Submit. You can now click on View Execution Details link to see details and on the Procedure Activity page see the status of the procedure.
 
-  ![](images/task3-step9.jpg " ")
-  ![](images/task3-step9a.jpg " ")
+  ![](images/Task3-step9.jpg " ")
+  ![](images/Task3-step9a.jpg " ")
 
-  ![](images/task3-step10.jpg " ")
+  ![](images/Task3-step10.jpg " ")
 
 
 
@@ -271,8 +271,8 @@ Key in "High Security" as the key word and hit search.
 3.  Then Click Add and choose the row with your PDB, click **Select**
 Verify the PDB name added and Click **OK**
 
-![](images/Task4-Step3.jpg " ")
-![](images/Task4-Step3a.jpg " ")
+![](images/Task4-step3.jpg " ")
+![](images/Task4-step3aa.jpg " ")
 
 4. In the Save Association dialog box, Click Yes.
 
@@ -292,7 +292,7 @@ Verify the PDB name added and Click **OK**
 
   ![](images/1317deb228d80211d9e6a2edf2cbba9e.png " ")
 
-8. Click High Security Configuration for Oracle Pluggable Database under Compliance Standards
+8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards
 
   ![](images/Task4-Navigate_to_Compliance-Result-1.jpg " ")
 
