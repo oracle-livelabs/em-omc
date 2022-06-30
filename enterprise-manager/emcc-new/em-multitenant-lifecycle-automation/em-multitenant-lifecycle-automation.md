@@ -242,10 +242,10 @@ Click **Next**
 
 9.  After the Review page appears, and you have confirmed the information is correct for your deployment, click Submit. You can now click on View Execution Details link to see details and on the Procedure Activity page see the status of the procedure.
 
-![](images/task3-step9.jpg " ")
-![](images/task3-step9a.jpg " ")
+  ![](images/task3-step9.jpg " ")
+  ![](images/task3-step9a.jpg " ")
 
-![](images/task3-step10.jpg " ")
+  ![](images/task3-step10.jpg " ")
 
 10.  Once the procedure is completed,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the newly created PDB
 
