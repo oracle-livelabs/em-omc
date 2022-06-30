@@ -527,7 +527,7 @@ After the deploy operation and migrate listener task have completed successfully
     <copy>ls -l /u01/app/18c/sales188 /u01/app/oracle/product/18/db_home1</copy>
     ```
 
-    ![](images/58ba7d42eb61331e3d0bec6588086b47.png " ")
+  ![](images/58ba7d42eb61331e3d0bec6588086b47.png " ")
 
 6. As part of the cleanup operation, *LISTENER\_1525* which support *“finance.subnet.oraclevcn.com”* is shutdown. Set your environment by passing *“finance”* to *“oraenv”* when prompted.
 
