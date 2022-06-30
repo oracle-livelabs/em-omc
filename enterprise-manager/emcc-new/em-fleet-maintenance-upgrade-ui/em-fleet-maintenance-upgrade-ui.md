@@ -519,7 +519,7 @@ After the deploy operation and migrate listener task have completed successfully
 
     ![](images/cleanup-retry.png " ")
 
-    Verify the completion of this DP. Once completed perform below tasks.
+    This will re-run the DP from its point of failure.( It will not run all the steps from the beginning ).Verify the completion of this DP. Once completed perform below tasks.
 
   5. Verify to confirm that the two old Oracle homes reported have been removed
 
