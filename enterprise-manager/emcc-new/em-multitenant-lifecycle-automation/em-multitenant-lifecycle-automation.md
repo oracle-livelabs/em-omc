@@ -249,7 +249,7 @@ Click **Next**
 
 10.  Once the procedure is completed,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the newly created PDB
 
-![](images/task3-step10a.jpg " ")
+  ![](images/task3-step10a.jpg " ")
 
 ## Task 4: Compliance Management for Pluggable Database
 
