@@ -513,15 +513,15 @@ After the deploy operation and migrate listener task have completed successfully
     In case the above DP fails, then run the below command in terminal
 
     ```
-    <copy>rm -rf /u01/app/18c/sales188/listener.ora</copy>
+    <copy>rm -rf /u01/app/18c/sales188/listener.ora </copy>
     ```
     After running the above command, navigate back to the deployment procedure, under show select ***Failed Steps*** from drop down, under steps select ***De-configures/Drops Oracle Database*** and then in the right panel select ***Actions***  and then ***Retry***
 
     ![](images/cleanup-retry.png " ")
 
     Verify the completion of this DP. Once completed perform below tasks.
-    
-    5. Verify to confirm that the two old Oracle homes reported have been removed
+
+  5. Verify to confirm that the two old Oracle homes reported have been removed
 
     ```
     <copy>ls -l /u01/app/18c/sales188 /u01/app/oracle/product/18/db_home1</copy>
