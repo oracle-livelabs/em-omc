@@ -375,7 +375,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_19c_Libraries_Create_Like_Image_5.png " ")
 
-  Here, for example **CIS_DEMO** you are creating to imply this is a new database standard. Also change the name per your preference and Continue
+  Here, for example **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue
 
   ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6.png " ")
 
