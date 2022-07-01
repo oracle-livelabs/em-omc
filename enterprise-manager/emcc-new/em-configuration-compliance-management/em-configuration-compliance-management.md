@@ -539,6 +539,8 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
+  Click **OK**.
+
   ![](images/HIPAA_Associate_List_Image_10.png " ")
 
   Click **OK**.
