@@ -511,6 +511,7 @@ Logout as **Cyrus** user
 ![](images/Task6-step1.jpg " ")
 
 
+
 Login to the EM Console as super administrator **sysman/welcome1**
 
 ![](images/Task6-sysmanlogin.jpg " ")
