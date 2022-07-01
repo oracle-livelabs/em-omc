@@ -123,7 +123,7 @@ In this step, you will compare two database targets to determine configuration d
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/Em_ComP_Conf_Drift_Mgmt_Image_4.png)
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_4.png)
 
 9.  Provide a name for Comparison.
 
@@ -412,6 +412,8 @@ A compliance standard rule is a specific test to determine if a configuration da
 13. Click OK and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_15.png " ")
+
+  Click **OK**
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_30.png " ")
 
