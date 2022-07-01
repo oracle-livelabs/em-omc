@@ -539,7 +539,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
-  ![](images/HIPAA_Associate_List_Host_Target_Image_10.png)
+  ![](images/HIPAA_Associate_List_Image_10.png " ")
 
   Click **OK**.
 
@@ -638,5 +638,5 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
   - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
   - **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, July 2021
-  
+
     - Shiva Prasad, Oracle Enterprise Manager Product Management June 2022
