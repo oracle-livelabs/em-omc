@@ -400,17 +400,18 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6).
     ![](images/uncheck-update-db.png " ")
-The image below shows the task is in a running state.
 
-   ![](images/HR-update-running.png "DP update")
+    The image below shows the task is in a running state.
 
-   Select the running task to see the various steps performed.
+    ![](images/HR-update-running.png "DP update")
 
-   ![](images/HR-update-complete.png "DP completed")
+    Select the running task to see the various steps performed.
 
-   Update operation has completed successfully.
+    ![](images/HR-update-complete.png "DP completed")
 
-   Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
+    Update operation has completed successfully.
+
+    Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
 
    ![](images/HR-status-post-patch.png "new version check")
 
