@@ -262,9 +262,9 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     This command can show one of the following results:
 
-    - Applicable: The image and database target contain the same set of bug fixes(part of a patch). The image can be applied on the specified target.
-    - Applicable and Image has more bug fixes(part of a patch): The image contains more bug fixes than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
-    - Not Applicable: The database contains more bug fixes(part of a patch) than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
+    - **Applicable**: The image and database target contain the same set of bug fixes(part of a patch). The image can be applied on the specified target.
+    - **Applicable and Image has more bug fixes**: The image contains more bug fixes(part of a patch) than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
+    - **Not Applicable**: The database contains more bug fixes(part of a patch) than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
 
 ## Task 5: Subscribe Database
 

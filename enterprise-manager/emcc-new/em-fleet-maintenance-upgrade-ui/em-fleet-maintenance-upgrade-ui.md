@@ -191,7 +191,10 @@ Just for your reference, specific tasks related to patching on the target databa
     ```
     <copy>Orasidb18c_home1_2020_05_13_04_10_9_emcc.marketplace.com_3192</copy>
     ```
-
+    ![](images/All-Targets.png " ")
+    Search will return the below screen.
+    ![](images/All-Targets-result.png " ")
+    Click on the target name to review the details.
     ![](images/ea2416958193764cc47426f0ad8a0a67.jpg " ")
 
 3. Review “Create New Gold Image” from the terminal on your remote desktop using the following emcli command
@@ -233,9 +236,9 @@ This step verifies if the image can be used to patch a specified database target
 
     This command can show one of the following results:
 
-    - **Applicable**: The image and database target contain the same set of bug fixes. The image can be applied on the specified target.
-    - **Applicable and Image has more bug fixes**: The image contains more bug fixes than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
-    - **Not Applicable**: The database contains more bug fixes than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
+    - **Applicable**: The image and database target contain the same set of bug fixes(part of a patch). The image can be applied on the specified target.
+    - **Applicable and Image has more bug fixes**: The image contains more bug fixes(part of a patch) than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
+    - **Not Applicable**: The database contains more bug fixes(part of a patch) than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
 
 ### **Subscribe Database** - [JUST FOR REFERENCE – This step has already been implemented]
 
@@ -446,7 +449,9 @@ Here, we see that the DP has successfully installed new Oracle home.
 
 ## Task 8: Migrate Listener to New Upgraded home
 
-1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). The image below shows the task is in a running state.
+1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
+    ![](images/uncheck-mig-listener.png " ")
+The image below shows the task is in a running state.
 
 
     ![](images/listener-dp-running.png "dp running post reschedule")
@@ -459,7 +464,9 @@ Here, we see that the DP has successfully installed new Oracle home.
 
 After the deploy operation and migrate listener task have completed successfully, we are ready to run the final UPDATE operation which will upgrade the finance database by switching it to the newly deployed home.
 
-1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7). The image below shows the task is in a running state.
+1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7).
+    ![](images/uncheck-update-db.png " ")
+The image below shows the task is in a running state.
 
     ![](images/upgrade-dp-running.png "update")
 
