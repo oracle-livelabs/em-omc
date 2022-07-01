@@ -296,8 +296,12 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     Just as it was done for the first version of this image, a reference 19.7 Oracle home is needed to create a new version of the image and was setup in advance. [*/u01/app/oracle/product/19/db\_home\_src*]. This reference Oracle home is discovered in Enterprise Manager as shown below and will be used to create and new version of the Gold Image.
 
 2. Navigate to “***Targets >> All Targets***” and type in “*Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953*” in the “*Search Target Name*” box.
+    ![](images/All-Targets.png " ")
+    Search will return the below screen.
+    ![](images/Task5-19c.png " ")
+    Click on the target name to review the details.
 
-    ![](images/a3ba55228f1e4a239c81bd01ed86c299.png " ")
+    ![](images/task5_home.png " ")
 
 3. Review and execute the following command to create new Image version 19.7 to "*Tier1 SIDB 19c Linux-x64*"
 
