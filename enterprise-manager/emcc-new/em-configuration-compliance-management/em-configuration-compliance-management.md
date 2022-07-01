@@ -307,7 +307,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift) for detailed analysis of configuration drift.
 
-  ![](images/Compare_And_Drift_Demo_Image_24.png)
+  ![](images/Compare_and_Drift_Demo_Image_24.png)
 
   You can see the differences in the Initialization Parameters between the two targets.
 
