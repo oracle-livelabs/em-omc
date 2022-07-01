@@ -202,7 +202,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
 
-3.  Go to Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.  **Sort Name Alphabetically** look for Database Instance Template as shown below.
+3.  Go to Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page. **Sort Name Alphabetically** look for Database Instance Template as shown below.
 
   ![](images/Compare_And_Drift_template_Image_1.png " ")
 
