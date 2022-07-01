@@ -379,9 +379,11 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6.png " ")
 
-7.  Review the various compliance rules for CIS Security standard grouped based on the configuration area. Click Save.
+7.  Review the various compliance rules for CIS Security standard grouped based on the configuration area.
 
   ![](images/CIS_Db_Compliance_CIS_DEMO_Standard_Details_Image_7.png " ")
+
+  Click Save.
 
   ![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8.png " ")
 
