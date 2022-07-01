@@ -543,7 +543,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   ![](images/HIPAA_Associate_List_Image_10.png " ")
 
-  12. Click **OK** and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
+  12. A pop-up window shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
 
   ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
 
