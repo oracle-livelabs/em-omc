@@ -386,7 +386,8 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
     ![](images/uncheck-mig-listener.png " ")
-The image below shows the task is in a running state.
+
+    The image below shows the task is in a running state.
 
     ![](images/HR-listener-running.png "DP for migrate listener")
 
