@@ -473,7 +473,8 @@ Verify that the update has been completed successfully. Before proceeding with a
 4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below.
 
     ![](images/038585c9308635261ae7e4aa956525af.png " ")
-Review the version of HR database.
+
+    Review the version of HR database.
     ![](images/New-HR-status.png " ")
 
 5. Review and execute the following command as a dry-run to report on cleanup impact for *hr.subnet.vcn.oraclevcn.com*  
