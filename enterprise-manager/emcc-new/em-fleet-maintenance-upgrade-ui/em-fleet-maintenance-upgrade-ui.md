@@ -456,9 +456,8 @@ Here, we see that the DP has successfully installed new Oracle home.
 ## Task 8: Migrate Listener to New Upgraded home
 
 1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
-
     ![](images/uncheck-mig-listener.png " ")
-The image below shows the task is in a running state.
+    The image below shows the task is in a running state.
     ![](images/listener-dp-running.png "dp running post reschedule")
 Select the running task to see the various steps performed.
     ![](images/migrate-dp-completed.png "dp-migrate-completed")
@@ -469,9 +468,8 @@ We can now see that the migration operation completed successfully.
 After the deploy operation and migrate listener task have completed successfully, we are ready to run the final UPDATE operation which will upgrade the finance database by switching it to the newly deployed home.
 
 1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7).
-
     ![](images/uncheck-update-db.png " ")
-The image below shows the task is in a running state.
+    The image below shows the task is in a running state.
     ![](images/upgrade-dp-running.png "update")
 Select the running task to see the various steps performed.
     ![](images/upgrade-dp-details.png "update dp running")
