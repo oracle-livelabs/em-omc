@@ -445,10 +445,10 @@ Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate 
 
 7. Review the Deployment Procedures (DP).
 
-Select the DP related to Deploy and click on it.
+    Select the DP related to Deploy and click on it.
     ![](images/deploy-dp.png "all-dp-submitted")
 
-It will show details of the activity performed by the DP.
+    It will show details of the activity performed by the DP.
     ![](images/deploy-dp-completed.png "dp-deploy")
 
 Here, we see that the DP has successfully installed new Oracle home.
@@ -458,10 +458,12 @@ Here, we see that the DP has successfully installed new Oracle home.
 1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
     ![](images/uncheck-mig-listener.png " ")
     The image below shows the task is in a running state.
+
     ![](images/listener-dp-running.png "dp running post reschedule")
-Select the running task to see the various steps performed.
+    Select the running task to see the various steps performed.
+
     ![](images/migrate-dp-completed.png "dp-migrate-completed")
-We can now see that the migration operation completed successfully.
+    We can now see that the migration operation completed successfully.
 
 ## Task 9: Update Database – Upgrade to 19.7
 
@@ -470,10 +472,13 @@ After the deploy operation and migrate listener task have completed successfully
 1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7).
     ![](images/uncheck-update-db.png " ")
     The image below shows the task is in a running state.
+
     ![](images/upgrade-dp-running.png "update")
-Select the running task to see the various steps performed.
+    Select the running task to see the various steps performed.
+
     ![](images/upgrade-dp-details.png "update dp running")
-Update operation has completed successfully.
+    Update operation has completed successfully.
+
     ![](images/upgrade-dp-complete.png "update-dp-steps")
 
     Lets validate the version of ***finance*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***finance*** database.
