@@ -221,7 +221,7 @@ Click **Next**
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to create new PDBs.
+3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to clone new PDBs.
   ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
