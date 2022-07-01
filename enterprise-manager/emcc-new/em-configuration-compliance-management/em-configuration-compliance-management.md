@@ -535,7 +535,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   10.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-  ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
+  Shiva
 
   11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
