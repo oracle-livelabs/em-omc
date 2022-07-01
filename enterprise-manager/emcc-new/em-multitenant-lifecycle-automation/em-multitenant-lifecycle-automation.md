@@ -264,7 +264,7 @@ Click **Next**
 
 ## Task 4: Compliance Management for Pluggable Database
 
-Now database administrator applies a Corporate Standard on the newly created PDB database, which results in a “Violation”. Then, the DBA fixes the issue using corrective actions. Let us examine how a DBA applies the fixes in the following steps.
+Now a database administrator applies 'High Security Configuration for Oracle Pluggable Database' standard against a newly created PDB and verifies the results.Let us examine how a DBA can associate a target and view compliance results.
 
 1. Navigate to ***Enterprise >> Compliance >> Library*** to get started
 
@@ -280,7 +280,7 @@ Key in "High Security" as the key word and hit search.
 3.  Then Click Add and choose the row with your PDB, click **Select**
 Verify the PDB name added and Click **OK**
 
-![](images/Task4-step3.jpg " ")
+![](images/Task4-Step3.jpg " ")
 ![](images/Task4-step3aa.jpg " ")
 
 4. In the Save Association dialog box, Click Yes.
@@ -354,13 +354,18 @@ Incase of any  violations, you will see details like last evaluation date, rule 
 
 
 
- Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS).
+ Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN. 
+
+  ![](images/logout_as_sysman.jpg " ")
 
 ## Task 5: Self-Service to Request PDB Using PDBaaS
 
 With the Self-Service Portal, cloud users can request an  Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. Expiry time is provided while requesting the PDB instance and PDB is automatically deleted based on the expiry time.
 
 1. Login into Enterprise Manager as a Self-Service User. Self-Service User credentials are: **cyrus/welcome1**
+
+![](images/login_as_cyrus.jpg " ")
+
 2. By default, you will see the Database Cloud Self Service Portal landing page as shown below.
 
   ![](images/CMP-HomePage.jpg " ")
@@ -443,7 +448,7 @@ Click on Submit button
      * Create a resource plan based on the workload size
      * Create and register the database
 
-  The request should take less than 10 minutes to complete. Click on refresh icon or as an alternative set Refresh to 30 seconds. The success status
+  The request should take less than 7 minutes to complete. Click on refresh icon or as an alternative set Refresh to 30 seconds. The success status
 indicates that PDB database was successfully created. The new PDB database should be visible under Database Cloud Services page.
 
   ![](images/CMP-PDB_creation-success.jpg " ")
@@ -495,7 +500,7 @@ indicates that PDB database was successfully created. The new PDB database shoul
   ![](images/CMP-Task5-point19-latest.jpg " ")
 
 20. Click OK. You will see confirmation to delete the instance.
-
+Click **Close** to close the confirmation dialog box
   ![](images/2b44dd4c41f594cddd9adc74dd193297.jpg " ")
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
