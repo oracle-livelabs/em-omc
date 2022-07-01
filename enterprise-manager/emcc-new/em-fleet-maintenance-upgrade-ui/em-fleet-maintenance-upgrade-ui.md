@@ -195,7 +195,8 @@ Just for your reference, specific tasks related to patching on the target databa
     Search will return the below screen.
     ![](images/All-Targets-result.png " ")
     Click on the target name to review the details.
-    ![](images/ea2416958193764cc47426f0ad8a0a67.jpg " ")
+    <!--![](images/ea2416958193764cc47426f0ad8a0a67.jpg " ") -->
+    ![](images/target-details.png " ")
 
 3. Review “Create New Gold Image” from the terminal on your remote desktop using the following emcli command
 
@@ -204,7 +205,8 @@ Just for your reference, specific tasks related to patching on the target databa
     cat create_image_Tier1_sidb_x64.sh</copy>
     ```
 
-    ![](images/e4a3896e00184146230d4d974e64a528.png " ")
+    ![](images/e4a3896e00184146230d4d974e64a52.png " ")
+
 
 4. List Available Gold Images. Execute the following commands from the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#1 SI DB Linux64*’* in the emcli command output:
 
