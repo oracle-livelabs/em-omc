@@ -45,7 +45,7 @@ The IT Manager wants to get an inventory of all existing databases managed by En
 All the items in this step are read-only, primary goal is to learn about inventory usage details within Enterprise Manager for all supported targets
 
 ### Execution
-1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below.
+1. On the browser window on the right preloaded with **Enterprise Manager**, if not already logged in, click on the **Username** field and login with the credentials provided below.
 
     ```
     Username: <copy>sysman</copy>
@@ -57,15 +57,15 @@ All the items in this step are read-only, primary goal is to learn about invento
 
   ![](../initialize-environment/images/em-login.png " ")
 
-2.  From the Enterprise menu, select Configuration, then select Inventory and  Usage Details
+2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**
 
   ![](images/Configuration_InventoryUsage_Image_1.png " ")
 
-3.  In the ‘Show’ filter menu, select **Databases** to see all database instances managed by Enterprise Manager
+3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager
 
   ![](images/Em_Configs_Complianes_dbs_Image_2.png " ")
 
-4.  Analyze various database versions and number of instances for each version
+4.  Analyze various database versions and number of instances for each version or you can choose PDB 18.3 highlighted
 
 5.  Explore pie chart to see the break-down of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of given database instance over a period of time.
 
@@ -103,7 +103,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
 
-4.	Select **Create Comparison** tab on the left side of the dashboard page. Click **Create Comparison**
+4.	Select **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_2.png " ")
 
@@ -123,7 +123,7 @@ In this step, you will compare two database targets to determine configuration d
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_4.png " ")
+  ![](images/Em_ComP_Conf_Drift_Mgmt_Image_4.png)
 
 9.  Provide a name for Comparison.
 
@@ -212,9 +212,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_and_Drift_Demo_Image_3.png " ")
 
-5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by **Search** with name **ECM003_Drift_Demo** created, by  default Highlight this new template and click Edit.
+5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by **Search** with name **ECM003_Drift_Demo** created.
 
   ![](images/Compare_and_Drift_Demo_Image_4.png " ")
+
+   Highlight this new template and click Edit.
 
   ![](images/Compare_and_Drift_Demo_Image_5.png " ")
 
