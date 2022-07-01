@@ -507,7 +507,11 @@ Click **Close** to close the confirmation dialog box
 
 Previous exercises demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
 
+Logout as **Cyrus** user
+![](images/Task6-step1.jpg " ")
 Login to the EM Console as super administrator **sysman/welcome1**
+
+![](images/Task6-sysmanlogin.jpg " ")
 
 ### **PaaS Infrastructure Zone**
 
