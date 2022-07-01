@@ -564,6 +564,8 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   ![](images/HIPAA_Associate_Target_Success_Image_15.png " ")
 
+  Compliance Dashboard populates.
+
   ![](images/HIPAA_Dashboard_Results_Image_16.png " ")
 
   17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
@@ -636,4 +638,5 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
   - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
   - **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, July 2021
-   Shiva Prasad, Oracle Enterprise Manager Product Management, June 2022
+  
+  Shiva Prasad, Oracle Enterprise Manager Product Management, June 2022
