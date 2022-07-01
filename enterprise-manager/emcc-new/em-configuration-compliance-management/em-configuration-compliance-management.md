@@ -65,15 +65,15 @@ All the items in this step are read-only, primary goal is to learn about invento
 
   ![](images/Em_Configs_Complianes_dbs_Image_2.png " ")
 
-4.  Analyze various database versions and number of instances for each version or you can choose PDB 18.3 highlighted
+4.  Analyze various database versions and number of instances for each version or you can choose PDB 18.3 highlighted above page
 
 5.  Explore pie chart to see the break-down of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of given database instance over a period of time.
 
   ![](images/Em_Config_Compliane_db_Trends_Image_3.png)
 
-6.  In the Details table below, you will see details like
+6.  In the Details excel fie table output below, you will see details like
 
-    - Database instance name
+    - Database instance name Target
     - Host on which this database is located
     - Database type - cluster or single instance
     - Database version number
