@@ -105,7 +105,7 @@ Click **Next**
 
   ![](images/3657eb9bb536b26d163c148e40a99332.jpg " ")
 
-13. Once the procedure is completed (takes about 3-5 mins), you can **Navigate to Targets >> Databases, Click on CDB186** and you will see the newly created PDB
+13. Once the procedure is completed (takes about 2-3 mins), you can **Navigate to Targets >> Databases, Click on CDB186** and you will see the newly created PDB
 
   ![](images/Task1-step14.jpg " ")
 
@@ -119,7 +119,7 @@ Click **Next**
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to create new PDBs.
+3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to Unplug PDBs.
   ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
@@ -143,6 +143,9 @@ In the Review page, review the details you have provided for the deployment proc
 
 ![](images/Task2-step7a.jpg " ")
 
+Click **View Execution Details**.  
+![](images/View_execution_details.jpg " ")
+
 In the Procedure Activity page, view the status of the procedure.
 
   ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
@@ -159,7 +162,7 @@ In the Procedure Activity page, view the status of the procedure.
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-11. In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**CDB186**) within which you want to create new PDBs.
+11. In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**CDB186**) within which you want to Plug the PDBs.
   ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
@@ -177,7 +180,7 @@ In the Procedure Activity page, view the status of the procedure.
 
   *Note*: We will keep pdbadmin as a default admin. So, don’t select anything in this section.
 
-15. On the Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box. 
+15. On the same Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box. 
 Select the Name which you created during Unplug,incase of multiple options, choose the latest image based on timestamp.
 Click **Next**
   
@@ -195,6 +198,8 @@ Click **Next**
 18.  In the review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. You can now click on View Execution Details link to see details.
 
 ![](images/Task2-step18.jpg " ")
+![](images/View_execution_details.jpg " ")
+
  
 19.  In the Procedure Activity page, view the status of the procedure.
 
