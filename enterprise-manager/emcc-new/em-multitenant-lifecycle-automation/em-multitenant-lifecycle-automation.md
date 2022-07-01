@@ -78,8 +78,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/Task1-step8-latest.jpg " ")
 
-8. For storage option, select **Use Common Location for PDB Datafiles** and leave defaults as-is.
-Click **Next**
+8. For storage option, select **Use Common Location for PDB Datafiles** and leave the **Storage type** and **Location** defaults as-is.
+The Temporary Working Directory is auto filled as **/tmp**
+
 
   ![](images/Task1-point9.jpg " ")
 
@@ -87,11 +88,14 @@ Click **Next**
 Under the **Post Creation Scripts** 
 Choose “Select from software library” and then search for
 “**unlock**” and select unlock.sql (Or you can upload a SQL file from your system).
+Click **Next**
 
   ![](images/Unock-helper.jpg " ")
   ![](images/7d3fcabc8fe5f6f80fe20e55bb28655d.jpg " ")
 
 10. In the Schedule page, select the check box immediately next to Start. Click Next.
+
+  ![](images/Task1-step10.jpg " ")
 
 11. In the Review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. You can now click on View Execution Details link to see details.
 
