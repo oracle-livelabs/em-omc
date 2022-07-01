@@ -72,9 +72,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 7. In the Identification page, Enter a unique name for the PDB you are creating (your initial\_pdb). Optionally, select the check box to “create multiple DBs” and put **2** as the number of copies.
 
 
-In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB. *UserName*: **pdbadmin** 
-*Password*: **welcome1** .
-Click **Next**.
+  In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB. *UserName*: **pdbadmin** 
+  *Password*: **welcome1** .
+  Click **Next**.
 
   ![](images/Task1-step8-latest.jpg " ")
 
