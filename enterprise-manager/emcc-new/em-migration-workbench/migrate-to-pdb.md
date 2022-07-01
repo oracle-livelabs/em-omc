@@ -4,7 +4,7 @@
 
 You can use the database migration workbench to migrate your on-premises databases to new destinations in your data center or to Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Note since this workshop is fully contained on a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
 
-*Estimated Time:* 25 minutes
+*Estimated Time:* 30 minutes
 
 ### About Migration Workbench
 
@@ -17,7 +17,7 @@ In this lab you will perform the Tasks below. The pre-requisites in task have al
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | Review Pre-Requisites completed in advance| 10 minutes | Review pre-requisites required on the source and destination databases, hosts, and in Enterprise Manager |
-| 2 | Migrate and upgrade a 12c non-container database to a new pdb in a 19c container database | 15 minutes | Source database: orcl, destination pdb: cdb19c/orclpdb
+| 2 | Migrate and upgrade a 12c non-container database to a new pdb in a 19c container database | 20 minutes | Source database: orcl, destination pdb: cdb19c/orclpdb
 
 ### Prerequisites
 
@@ -55,7 +55,7 @@ In the interest of simplifying the setup and save time, the following steps were
 
 ### **Export and Import User Requirement**
 
-In this task we will migrate the database using the Transportable Tablespace (TTS) migration method. With this method the migration must done as a user with SYSDBA role. We will use SYS on both source and destination databasesmm so there's no additional user requirements
+In this task we will migrate the database using the Transportable Tablespace (TTS) migration method. With this method the migration must done as a user with SYSDBA role. We will use SYS on both source and destination databases so there's no additional user requirements
 
 ### **Named Credential Requirement**
 
@@ -86,6 +86,7 @@ For this use case Migration Workbench supports using either Data Pump or Transpo
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
+          ![MWB Menu Item](images/a_t2_00_mwb_menu_item.png " ")
 3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
           ![Getting Started](images/a_t2_01_getting_started.png " ")
 4. On the Create Migration Activity screen:
@@ -148,7 +149,7 @@ For this use case Migration Workbench supports using either Data Pump or Transpo
 
 7. On the Review & Submit screen, review your entries and click Validate:
 
-    ![Review and Submit](images/a_t2_06_review_submit.png " ")
+    ![Validate](images/a_t2_06_validate.png " ")
 
 8. Validation checks run for a few minutes and the result shows all checks passed and 2 ware skipped as they don't apply to this migration. If your results are different check your previous steps, fix the error and revalidate:
 
@@ -169,22 +170,32 @@ For this use case Migration Workbench supports using either Data Pump or Transpo
 
     ![Procedure Activity Completed](images/a_t2_10_procedure_activity_completed.png " ")
 
-13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right
-    ![Activity Page](images/a_t2_11_activity_page.png " ")
-14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate:
+13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
+    ![View Analysis](images/a_t2_11_view_analysis.png " ")
+14. Examine the analysis report. Click on each error error to understand the issue. For this lab these can be ignored. When you run the report in your environment be sure to address each item as appropriate:
 
- ![View Analysis](images/a_t2_12_view_analysis.png " ")
+ ![Analysis](images/a_t2_12_analysis.png " ")
 
-15. Go back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right. Examine the Performance Comparison report to analyze the database performance before and after the migration:
+15. Navigate back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right of the activity row
 
- ![Performance Comparison](images/a_t2_13_performance_comparison.png " ")
+ ![Compare Performance](images/a_t2_13_compare_performance.png " ")
 
-16. Validate the new PDB has been created. In EM console, navigate to "Targets"->"Databases", and expand "cdb19c" container database:
+16. Examine the Performance Comparison report to analyze the database performance before and after the migration:
 
- ![PDB Created](images/a_t2_14_pdb_created.png " ")
+ ![Performance Comparison](images/a_t2_14_performance_comparison.png " ")
 
-17. Navigate back to "Enterprise"->"Migration and Consolidation"->"Database Migration Workbench". On the activity page click on the drop-down list at the end of the row for your activity and click "Mark as Completed"
- ![PDB Created](images/a_t2_15_marked_completed.png " ")
+17. Validate the new PDB has been created. In EM console, navigate to "Targets"->"Databases", and expand "cdb19c" container database:
+
+ ![PDB Created](images/a_t2_15_pdb_created.png " ")
+
+18. Navigate back to the activity page and click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
+ ![Mark Completed](images/a_t2_16_mark_completed.png " ")
+
+19. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
+ ![Confirmation](images/a_t2_17_confirmation.png " ")
+
+20. Activity is marked completed
+ ![PDB Created](images/a_t2_18_marked_completed.png " ")
 
 You have now completed this task.
 

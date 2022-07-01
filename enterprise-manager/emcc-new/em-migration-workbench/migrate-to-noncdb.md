@@ -4,7 +4,7 @@
 
 You can use the database migration workbench to migrate your on-premises databases to new destinations in your data center or to Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Note since this workshop is fully contained on a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
 
-*Estimated Time:* 25 minutes
+*Estimated Time:* 30 minutes
 
 ### About Migration Workbench
 
@@ -17,7 +17,7 @@ In this lab you will perform the Tasks below. The pre-requisites in task have al
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | Review Pre-Requisites completed in advance| 10 minutes | Review pre-requisites required on the source and destination databases, hosts, and in Enterprise Manager |
-| 2 | Migrate and upgrade a 12c non-container database to 19c in a new destination | 15 minutes   | Source database: orcl, destination database: orcl19c |
+| 2 | Migrate and upgrade a 12c non-container database to 19c in a new destination | 20 minutes   | Source database: orcl, destination database: orcl19c |
 
 ### Prerequisites
 
@@ -88,6 +88,7 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
+          ![MWB Menu Item](images/b_t2_00_mwb_menu_item.png " ")
 3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
           ![Getting Started](images/b_t2_01_getting_started.png " ")
 4. On the Create Migration Activity screen:
@@ -132,7 +133,7 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
 6. On the Customize screen:
     - Examine the various options you can configure for Export and Import
     - For the purpose of this lab, we'll go with the default options for Export and Import options except for Parallel. The degree of parallelism you choose depends on the number of CPU cores on your source and target databases. We'll choose 2 for this lab
-    - Under "Compare Performance After Migration" choose "Use Existing" then select STS "SH2 -- SH2STS"
+    - Under "Compare Performance After Migration" choose "Use Existing" then select STS "EXP_USER -- SH2STS"
     - Under "Transfer options": Check the "Datapump Directory is shared" checkbox since this is the case in our lab
 
         ![Customize](images/b_t2_05_customize.png " ")
@@ -169,14 +170,26 @@ For this use case Migration Workbench supports using Data Pump only as of EM 13.
 
 12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
  ![Procedure Activity Completed](images/b_t2_12_procedure_activity_completed.png " ")
+
 13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
-    ![Activity Page](images/b_t2_13_activity_page.png " ")
-14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate.
- ![View Analysis](images/b_t2_14_view_analysis.png " ")
-15. Go back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right of the activity row. Examine the Performace Comparison report to analyze the database performance before and after the migration
- ![Performance Comparison](images/b_t2_15_performance_comparison.png " ")
-16. Navigate back to "Enterprise"->"Migration and Consolidation"->"Database Migration Workbench". On the activity page click on the drop-down list at the end of the row for your activity and click "Mark as Completed"
-     ![PDB Created](images/b_t2_16_marked_completed.png " ")
+    ![View Analysis](images/b_t2_13_view_analysis.png " ")
+14. Examine the analysis report. Click on each error error to understand the issue. For this lab these can be ignored. When you run the report in your environment be sure to address each item as appropriate:
+ ![Analysis](images/b_t2_14_analysis.png " ")
+
+15. Navigate back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right of the activity row
+ ![Compare Performance](images/b_t2_15_compare_performance.png " ")
+
+16. Examine the Performance Comparison report to analyze the database performance before and after the migration:
+ ![Performance Comparison](images/b_t2_16_performance_comparison.png " ")
+
+17. Navigate back to the activity page and click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
+ ![Mark Completed](images/b_t2_17_mark_completed.png " ")
+
+18. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
+ ![Confirmation](images/b_t2_18_confirmation.png " ")
+
+19. Activity is marked completed
+     ![Marked Completed](images/b_t2_19_marked_completed.png " ")
 
 You have now completed this task.
 

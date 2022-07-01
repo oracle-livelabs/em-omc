@@ -4,7 +4,7 @@
 
 You can use the database migration workbench to migrate your on-premises databases to to new destinations in your data center or to Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **Oracle Cloud Infrastructure (OCI)** migration.
 
-*Estimated Lab Time:* 40 minutes
+*Estimated Time:* 60 minutes
 
 ### About Migration Workbench
 
@@ -16,8 +16,8 @@ In this lab you will perform the Tasks below. The pre-requisites in task 1 will 
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | Perform Migration Workbench Pre-Requisites| 25 minutes | Perform pre-requisites required on the source and destination databases, source hosts and in Enterprise Manager |
-| 2 | Migrate and upgrade a 12c non-container database to autonomous database in OCI | 15 minutes   | Source database: orcl, destination database: ATP-ORCL |
+| 1 | Perform Migration Workbench Pre-Requisites| 40 minutes | Perform pre-requisites required on the source and destination databases, source hosts and in Enterprise Manager |
+| 2 | Migrate and upgrade a 12c non-container database to autonomous database in OCI | 20 minutes   | Source database: orcl, destination database: ATP-ORCL |
 
 ### Prerequisites
 
@@ -343,6 +343,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 
 1. Log into your Enterprise Manager as sysman as indicated in the Prerequisites step if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
+          ![MWB Menu Item](images/b_t2_00_mwb_menu_item.png " ")
 3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
           ![Getting Started](images/c_t4_01_getting_started.png " ")
 
@@ -402,7 +403,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 6. On the Customize screen
     - Examine the various options you can configure for Export and Import
     - For the purpose of this lab, we'll go with the default options for Export and Import options except for Parallel. The degree of parallelism you choose depends on the number of CPU cores on your source and target databases. We'll choose 2 for this lab
-    - Under "Compare Performance After Migration" choose "Use Existing" then select STS "SH2 -- SH2STS"
+    - Under "Compare Performance After Migration" choose "Use Existing" then select STS "EXP_USER -- SH2STS"
     - Notice mapping the Users tablespace in the source database to Data table space in the destination database
     - Leave everything else at default for the purpose of this lab
     ![Customize](images/c_t4_05_customize.png " ")
@@ -431,13 +432,22 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
  ![Procedure Activity Completed](images/c_t4_13_procedure_activity_completed.png " ")
 13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row 
- ![View Analysis](images/c_t4_14_activity_page.png " ")
+ ![View Analysis](images/c_t4_14_view_analysis.png " ")
 14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate.
- ![View Analysis](images/c_t4_15_view_analysis.png " ")
-15. Go back to the activity page and click on the "Compare Performance" link. Examine the Performace Comparison report to analyze the database performance before and after the migration
- ![Performance Comparison](images/c_t4_16_performance_comparison.png " ")
-  16. Navigate back to "Enterprise"->"Migration and Consolidation"->"Database Migration Workbench". On the activity page click on the drop-down list at the end of the row for your activity and click "Mark as Completed"
-     ![PDB Created](images/c_t4_17_marked_completed.png " ")
+ ![Analysis](images/c_t4_15_analysis.png " ")
+
+15. Navigate back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right of the activity row
+ ![Compare Performance](images/c_t4_16_compare_performance.png " ")
+16. Examine the Performance Comparison report to analyze the database performance before and after the migration:
+ ![Performance Comparison](images/c_t4_17_performance_comparison.png " ")
+17. Navigate back to the activity page and click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
+ ![Mark Completed](images/c_t4_18_mark_completed.png " ")
+
+18. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
+ ![Confirmation](images/c_t4_19_confirmation.png " ")
+
+19. Activity is marked completed
+     ![Marked Completed](images/c_t4_20_marked_completed.png " ")
 
 
     You have now completed this task.
