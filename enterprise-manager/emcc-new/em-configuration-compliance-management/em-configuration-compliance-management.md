@@ -399,7 +399,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Associate_Target_Image_11.png " ")
 
-  Click Add to add targets for association with this compliance standard
+  Click Add to add targets for association with this compliance standard.
 
   ![](images/CIS_Db_Compliance_Add_Target_Image_12.png " ")
 
