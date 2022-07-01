@@ -463,12 +463,17 @@ below.
     -  Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
 
 
-3. Verify that the update has been completed successfully( Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select the highlighted DP ) before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
+3. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
+    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
+
+Verify that the update has been completed successfully. Before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
     ![](images/Fleet-update.png " ")
 
-4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below
+4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below.
 
+    ![](images/038585c9308635261ae7e4aa956525af.png " ")
+Review the version of HR database.
     ![](images/New-HR-status.png " ")
 
 5. Review and execute the following command as a dry-run to report on cleanup impact for *hr.subnet.vcn.oraclevcn.com*  
