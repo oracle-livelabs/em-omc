@@ -72,18 +72,18 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 7. In the Identification page, Enter a unique name for the PDB you are creating (your initial\_pdb). Optionally, select the check box to “create multiple DBs” and put **2** as the number of copies.
 
 
-8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB. *UserName*: **pdbadmin** 
+In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB. *UserName*: **pdbadmin** 
 *Password*: **welcome1** .
 Click **Next**.
 
   ![](images/Task1-step8-latest.jpg " ")
 
-9. For storage option, select **Use Common Location for PDB Datafiles** and leave defaults as-is.
+8. For storage option, select **Use Common Location for PDB Datafiles** and leave defaults as-is.
 Click **Next**
 
   ![](images/Task1-point9.jpg " ")
 
-10. Optionally, you may also want to select a post-script, which will run post creation of PDB. 
+9. Optionally, you may also want to select a post-script, which will run post creation of PDB. 
 Under the **Post Creation Scripts** 
 Choose “Select from software library” and then search for
 “**unlock**” and select unlock.sql (Or you can upload a SQL file from your system).
@@ -91,17 +91,17 @@ Choose “Select from software library” and then search for
   ![](images/Unock-helper.jpg " ")
   ![](images/7d3fcabc8fe5f6f80fe20e55bb28655d.jpg " ")
 
-11. In the Schedule page, select the check box immediately next to Start. Click Next.
+10. In the Schedule page, select the check box immediately next to Start. Click Next.
 
-12. In the Review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. You can now click on View Execution Details link to see details.
+11. In the Review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. You can now click on View Execution Details link to see details.
 
   ![](images/d12c1a1d5e3c3f394248da7d12813b6b.jpg " ")
 
-13. In the Procedure Activity page, view the status of the procedure. Click the Status link for each step to view the details of the execution of each step.
+12. In the Procedure Activity page, view the status of the procedure. Click the Status link for each step to view the details of the execution of each step.
 
   ![](images/3657eb9bb536b26d163c148e40a99332.jpg " ")
 
-14. Once the procedure is completed (takes about 3-5 mins), you can **Navigate to Targets >> Databases, Click on CDB186** and you will see the newly created PDB
+13. Once the procedure is completed (takes about 3-5 mins), you can **Navigate to Targets >> Databases, Click on CDB186** and you will see the newly created PDB
 
   ![](images/Task1-step14.jpg " ")
 
