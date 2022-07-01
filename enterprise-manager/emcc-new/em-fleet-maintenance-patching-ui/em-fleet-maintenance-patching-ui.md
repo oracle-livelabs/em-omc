@@ -425,7 +425,7 @@ Once the database is updated, we will perform a rollback to Oracle Database 18.3
 
     ![](images/HR-rollback-submit.png " ")
 
-2. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
+2. Navigate to the Procedure Activity Page (***Enterprise >> Provisioning and Patching >> Procedure Activity***) and monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
 
     ![](images/Rollback-DP.png " ")
 
@@ -463,7 +463,7 @@ below.
     -  Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
 
 
-3. Verify that the update has been completed successfully before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
+3. Verify that the update has been completed successfully( Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select the highlighted DP ) before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
 
     ![](images/Fleet-update.png " ")
 
@@ -498,7 +498,10 @@ below.
 
     ![](images/cleanup-hr.png " ")
 
-7. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
+7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provising >> Procedure Activity***.
+    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
+
+    Monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
     ![](images/cleanup-dp.png " ")
 
