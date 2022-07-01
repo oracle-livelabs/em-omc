@@ -383,7 +383,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_CIS_DEMO_Standard_Details_Image_7.png " ")
 
-  Click Save.
+  Click **Save**.
 
   ![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8.png " ")
 
@@ -415,7 +415,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_15.png " ")
 
-  Click **OK**
+  Click **OK**.
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_30.png " ")
 
