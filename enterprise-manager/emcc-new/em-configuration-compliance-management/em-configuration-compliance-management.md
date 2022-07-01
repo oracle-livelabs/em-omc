@@ -429,7 +429,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Success_Target_Image_18.png " ")
 
-  Click cancel button.
+  Click **Cancel** button.
 
   ![](images/CIS_Db_Compliance_Success_Target_Image_19.png " ")
 
@@ -437,7 +437,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_20.png " ")
 
-  Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
+  Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation by clicking numbers below each column names.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_21.png " ")
 
@@ -468,7 +468,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_31.png " ")
 
-By clicking CIS_DEMO, target evaluations and individual violation rules details can be evaluated
+By clicking CIS_DEMO, target evaluations and individual violation rules details can be evaluated.
 
   ![](images/CIS_Db_Compliance_Results_Image_27.png " ")
 
@@ -529,7 +529,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
 
-    Click Add to add targets for association with this compliance standard
+    Click Add to add targets for association with this compliance standard.
 
   ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
 
@@ -541,7 +541,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   Click OK
 
-  ![](images/HIPAA_Associate_list_Host_Target_Image_10.png " ")
+  ![](images/HIPAA_Associate_list_Host_Target_image_10.png " ")
 
   12. Click **OK** and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
 
