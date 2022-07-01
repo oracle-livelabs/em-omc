@@ -19,16 +19,22 @@
       "filename": "./../../initialize-environment/initialize-environment.md"
     },
     {
-      "title": "Lab 2: Migration Workbench - On-Premises Destinations",
+      "title": "Lab 2: Migrate 12c Database to 19c Pluggable Database",
       "description": "This lab provides an overview of Migration Workbench features in. It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/em-migration-workbench-onprem.md"
+      "filename": "./../../em-migration-workbench/migrate-to-pdb.md"
     },
     {
-      "title": "Lab 3: Migration Workbench - Oracle Cloud Destinations",
+      "title": "Lab 3: Migrate 12c Database to 19c Database in New Destination",
       "description": "This lab provides an overview of Migration Workbench features in. It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/em-migration-workbench-oci.md"
+      "filename": "./../../em-migration-workbench/migrate-to-noncdb.md"
+    },
+    {
+      "title": "Lab 4: (Optional) Migrate 12c Database to Autonomous Database in Oracle Cloud",
+      "description": "This lab provides an overview of Migration Workbench features in. It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
+      "publisheddate": "7/16/2020",
+      "filename": "./../../em-migration-workbench/migrate-to-adb.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
