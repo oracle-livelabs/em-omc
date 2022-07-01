@@ -179,13 +179,16 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***All Targets.***
 
-    Then on the All Targets page, in the upper left search field, type or copy “*Orasidb18c\_home1\_2020\_05\_13\_04\_10\_9\_emcc.marketplace.com\_3192*” in the “Search Target Name” box. Click on Search icon and in the results page click on the target name.
+    Then on the All Targets page, in the upper left search field, type or copy “*Orasidb18c\_home1\_2020\_05\_13\_04\_10\_9\_emcc.marketplace.com\_3192*” in the “Search Target Name” box. Click on Search icon.
+
 
     ```
     <copy>Orasidb18c_home1_2020_05_13_04_10_9_emcc.marketplace.com_3192</copy>
     ```
+    ![](images/patch-3192.png " ")
+    In the results page click on the target name.
 
-    ![](images/ea2416958193764cc47426f0ad8a0a67.jpg " ")
+    ![](images/patch-3192-details.png " ")
 
 3. From the terminal on your remote desktop, Create the New Gold Image using the following emcli command
 
@@ -381,7 +384,9 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 ## Task 7: Migrate Listener
 
-1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). The image below shows the task is in a running state.
+1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
+    ![](images/uncheck-mig-listener.png " ")
+The image below shows the task is in a running state.
 
     ![](images/HR-listener-running.png "DP for migrate listener")
 
@@ -392,7 +397,9 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 ## Task 8: Update Database – Patch 18.3 to 18.10
 
-1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). The image below shows the task is in a running state.
+1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6).
+    ![](images/uncheck-update-db.png " ")
+The image below shows the task is in a running state.
 
    ![](images/HR-update-running.png "DP update")
 
