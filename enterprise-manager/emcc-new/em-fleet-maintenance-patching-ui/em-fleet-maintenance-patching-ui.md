@@ -427,7 +427,7 @@ Once the database is updated, we will perform a rollback to Oracle Database 18.3
 
 2.From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
     ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
-  Monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
+    Monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
     ![](images/Rollback-DP.png " ")
 
 3. Review the Procedure Activity steps performed         
