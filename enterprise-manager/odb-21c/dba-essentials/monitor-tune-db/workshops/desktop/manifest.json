@@ -1,0 +1,42 @@
+{
+  "workshoptitle": "DBA Essentials - Monitor and tune Oracle Database 21c",
+  "help": "livelabs-help-em_us_grp@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction.",
+      "publisheddate": "06/10/2022",
+      "filename": "./../../intro-optimize-db-performance/intro-optimize-db-performance.md"
+    },
+    {
+      "title": "Using noVNC remote desktop",
+      "description": "Using noVNC Remote Desktop",
+      "publisheddate": "06/10/2022",
+      "filename": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/remote-desktop/using-novnc-remote-desktop.md"
+    },
+    {
+      "title": "Lab 1: Initialize environment",
+      "description": "How to initialize and start all the workshop components.",
+      "publisheddate": "04/29/2022",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 2: Monitor general state of Oracle Database",
+      "description": "How to monitor the state of the database from Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
+      "publisheddate": "06/10/2022",
+      "filename": "./../../monitor-general-state-database/monitor-general-state-database.md"
+    },
+    {
+      "title": "Lab 3: Diagnose problems and improve performance using SQL Tuning Advisor",
+      "description": "How to improve the performance of the database using Automatic SQL Tuning Advisor from Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
+      "publisheddate": "06/10/2022",
+      "filename": "./../../improve-db-performance-using-sql-tuning-advisor/improve-db-performance-using-sql-tuning-advisor.md"
+    },
+    {
+      "title": "Need help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "publisheddate": "06/10/2022",
+      "filename": "https://objectstorage.us-phoenix-1.oraclecloud.com/p/SJgQwcGUvQ4LqtQ9xGsxRcgoSN19Wip9vSdk-D_lBzi7bhDP6eG1zMBl0I21Qvaz/n/c4u02/b/common/o/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
