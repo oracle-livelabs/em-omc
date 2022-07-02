@@ -81,7 +81,7 @@ All the items in this step are read-only, primary goal is to learn about invento
     - Most importantly, LOB/Department information
       Details table gives more information of each Database instance for you to get a good understanding of number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business or Department, then you will be able to determine the number of targets deployed for a given business unit.Explore these features to get a good handle on Inventory and Usage details.
 
-7. Export inventory details to excel for reports. These inventory details can be exported to an excel file for offline analysis or sharing the report to management. With the excel report, you can filter based on the properties you are using to show department or line of business specific assets allocation and usage.
+7. Export inventory details to excel for reports. These inventory details can be exported to an excel file for offline analysis or sharing the report to management. With the excel report, you can filter based on the properties you are using to show department or line of business specific assets allocation and usage. (**OPTIONAL**)
 
   ![](images/ecm1_inventory_usage_details_report.png " ")
 
@@ -180,7 +180,7 @@ In this step, you will compare two database targets to determine configuration d
 
   After Exporting, Click **Cancel** to exit
 
-17. Exported results in excel for offline analysis looks like:
+17. Exported results in excel for offline analysis looks like: (**OPTIONAL**)
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_one_time_comparison_Report_Image_15.png " ")
 
@@ -319,7 +319,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
       - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
 
-23. Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+23. Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results. You can choose the specific results to export. (**OPTIONAL**)
 
   ![](images/Compare_and_Drift_Demo_Image_25.png " ")
 
@@ -638,4 +638,4 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
   - **Contributors** -  Rene Fontcha
   - **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, July 2021
 
-    - Shiva Prasad, Oracle Enterprise Manager Product Management June 2022
+  - Shiva Prasad, Oracle Enterprise Manager Product Management June 2022
