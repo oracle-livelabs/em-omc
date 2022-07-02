@@ -323,7 +323,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_and_Drift_Demo_Image_25.png " ")
 
-24. Exported results in excel for offline analysis looks like:
+24. Exported results in excel for offline analysis looks like:(**OPTIONAL**)
 
   ![](images/Compare_and_Drift_Demo_Report_Image_26.png)
 
