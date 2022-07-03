@@ -169,15 +169,24 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![](images/Select-CDB-main-flow-helper.jpg " ")
     ![](images/Select-CDB-main-flow.jpg " ")
 
-4.  In the PDB Operations section, **select Unplug** Pluggable Databases, then Click Launch.
+4.  In the PDB Operations section, select **Unplug Pluggable Databases**, then Click **Launch**
+
+
 
     ![](images/b727e1673cfa38c85130ef6e2365055d.jpg " ")
 
-5.  In the Select PDB page of the Unplug Pluggable Database Wizard, in the Select Pluggable Database section, select the PDB you want to unplug. Also Select Named credentials “ORACLE”.
+5.  On the Select PDB page in  Pluggable Database section click on the magnifier to choose the PDB(PROV_PDB) you want to unplug. 
+
+    Also Select Named credentials "ORACLE"
+    Click **Next**
 
     ![](images/39102476b5e5915a1491e28525af88f5.jpg " ")
 
-6.  In the Destination page, select the type of PDB template you want to generate for unplugging the PDB, and the location where you want to store it. The PDB template consists of all datafiles as well as the metadata XML file. Select radio button for software library. Select Generate PDB archive. Enter /tmp in location under Temporary working directory
+6.  On the Destination page, Click on the **Software Library**  radio button to define the location of PDB template. 
+
+    Click on the **Generate PDB Archive** option to store the template.
+
+    Incase the Temporary Working Directory is not defined , type /tmp in the location space. If it is predefined, ignore and click **Next**
 
     ![](images/Task2-step6-latest.jpg " ")
 
@@ -185,16 +194,18 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 Click **Next**.
   ![](images/Task2-Step7.jpg " ")
 
-In the Review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit.
 
+
+8. In the Review page, verify the details and  click **Submit** .
 
   ![](images/Task2-step7a.jpg " ")
 
-Click **View Execution Details**.  
-    ![](images/View_execution_details.jpg " ")
+  Click **View Execution Details**
+  ![](images/View_execution_details.jpg " ")
 
-In the Procedure Activity page, view the status of the procedure.
-    ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
+
+  On the Procedure Activity page, view the status of the procedure.
+  ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
 8.  You can Navigate to ***Targets >> Databases***, Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
 
@@ -204,59 +215,78 @@ In the Procedure Activity page, view the status of the procedure.
 
     ![](images/DB_provisioning-flow-main.jpg " ")
 
-10. In the Database Provisioning page, in the Related Links section of the left menu pane, click Provision Pluggable Databases
+10. In the Database Provisioning page, in the Related Links section of the left menu pane, click **Provision Pluggable Databases**
 
     ![](images/PDB_provisioning-flow-main.jpg " ")
 
-11. In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**CDB186**) within which you want to Plug the PDBs.
+11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**CDB186**) within which you want to Plug the PDBs.
 
     ![](images/Select-CDB-main-flow-helper.jpg " ")
       ![](images/Select-CDB-main-flow.jpg " ")
 
-12. In the PDB Operations section, select **Create New Pluggable Databases** , Click Launch.
+12. In the PDB Operations section, select **Create New Pluggable Databases** , Click **Launch**.
 
     ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
-13. In the Create Pluggable Database Wizard, in the Create Options section, select **Plug an unplugged PDB**. Select Named credentials **“ORACLE”**
+13. On the Create Pluggable Database Wizard, in the Create Options section, select **Plug an unplugged PDB**. Select Named credentials **“ORACLE”**
+Click **Next**
 
 
     ![](images/5427807b6e4c677bd991497cfc5468ce.jpg " ")
 
 
-14. In the Identification page, enter a unique name for the PDB you are plugging in. Select **Create As Clone** to ensure that Oracle Database generates unique PDB DBID, GUID, and other identifiers expected for the new PDB. Enter PDB name like “clone\_pdb”.
+14. The Identification page has 3 sections. 
 
-    ![](images/2ac79b220d664b868c62e4529791e187.jpg " ")
+    Under the PDB Name section provide a name for the PDB(prov_pdb) and select the optiopn *create as clone*, this ensure Oracle generated a unique PDB DBID, GUID, and other identifiers expected for the new PDB.
 
-  *Note*: We will keep pdbadmin as a default admin. So, don’t select anything in this section.
+
+    In the next section under PDB Administrator we will keep the values default and not do any changes. 
+
+      ![](images/2ac79b220d664b868c62e4529791e187.jpg " ")
+
 
 15. On the same Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box.
-Select the Name which you created during Unplug,incase of multiple options, choose the latest image based on timestamp.
-Click **Next**
-
-    ![](images/Task2-step15-latest.jpg " ")
-    ![](images/Task2-step15.jpg " ")
 
 
-16. Select **Use Common Location for PDB Datafiles** and type **/tmp** as temporary working directory.
+    Select the Name which you created during Unplug,incase of multiple options, choose the latest image based on timestamp.
+    Click **Next**
+      ![](images/Task2-step15.jpg " ")
+      ![](images/Task2-step15-latest.jpg " ")
+
+    
+    Validate all the options and click **Next**
+
+    ![](images/Task2-step16.jpg " ")
+
+
+16. On the Stoarge Page select **Use Common Location for PDB Datafiles** and type **/tmp** as temporary working directory.
+  Click **Next**
+
 
     ![](images/a6353f812935eeb6148a79693ae0c4fd.jpg " ")
 
-17.  In the Schedule page, select the check box immediately next to Start. Click Next.
+17.  
+    On the Schedule page, choose to start immediately and  Click **Next**.
 
-  ![](images/Task2-step17.jpg " ")
+    ![](images/Task2-step17.jpg " ")
 
-18.  In the review page, review the details you have provided for the deployment procedure. If you are satisfied with the details, click Submit. You can now click on View Execution Details link to see details.
+    
+
+18.  In the review page, verify the details and click **Submit**. You can now click on View Execution Details link to see details.
     ![](images/Task2-step18.jpg " ")
     ![](images/View_execution_details.jpg " ")
 
 
 19.  In the Procedure Activity page, view the status of the procedure.
+    ![](images/Task2-step19.jpg " ")
 
-![](images/Task2-step19.jpg " ")
+20. Optionally Click the status link for each step to view the details of the execution of each step. 
 
-20. Optionally Click the status link for each step to view the details of the execution of each step. Once the procedure is completed, you can Navigate to ***Targets >> Databases***. Click on CDB186 and you will see the newly created PDB
 
-![](images/Task2-step20.jpg " ")
+    Once the procedure is completed, you can Navigate to ***Targets >> Databases***. Click on CDB186 and you will see the newly created PDB
+
+
+    ![](images/Task2-step20.jpg " ")
 
   *Note*: You do not have to wait until the steps complete and move on to the next section.
 
@@ -274,7 +304,8 @@ Click **Next**
   ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
-4.  In the PDB Operations section, select **Create New Pluggable Databases**, Click Launch
+4.  In the PDB Operations section, select **Create New Pluggable Databases**.
+   Click **Launch**
 
   ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
