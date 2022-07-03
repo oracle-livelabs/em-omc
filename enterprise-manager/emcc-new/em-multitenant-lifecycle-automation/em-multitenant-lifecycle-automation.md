@@ -363,38 +363,42 @@ Click **Next**
 
 
 
-10.  Once the procedure is completed,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the newly created PDB
+10.  Once the procedure is complete,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the  cloned PDB
 
   ![](images/Task3-step10a.jpg " ")
 
 ## Task 4: Compliance Management for Pluggable Database
 
-Now a database administrator applies 'High Security Configuration for Oracle Pluggable Database' standard against a newly created PDB and verifies the results.Let us examine how a DBA can associate a target and view compliance results.
+Now a database administrator is tasked to apply 'High Security Configuration for Oracle Pluggable Database' standard against a  PDB and verify the results.Let us examine how a DBA can associate a target and view compliance results.
 
 1. Navigate to ***Enterprise >> Compliance >> Library*** to get started
 
-  ![](images/dblmcompliancelibrary.png " ")
+    ![](images/dblmcompliancelibrary.jpg " ")
 
 2. Click the **Compliance Standards** tab, Click on the Dropdown next to **Search**,
 Key in "High Security" as the key word and hit search.
 
- Do not click on the Compliance standard result , but only Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the Associate Targets tab.
+    Do not click on the Compliance standard result , but only Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-  ![](images/Task4-Compliance-Standard-name.jpg " ")
+      ![](images/Task4-Compliance-Standard-name.jpg " ")
 
-3.  Then Click Add and choose the row with your PDB, click **Select**
-Verify the PDB name added and Click **OK**
+3.  Click Add and choose the row with your PDB you wish to associate (DWH_TEST), click **Select**.
 
-![](images/Task4-Step3.jpg " ")
-![](images/Task4-step3aa.jpg " ")
+    Verify the PDB name is added and Click **OK**
+
+
+    ![](images/Task4-Step3.jpg " ")
+    ![](images/Task4-step3aa.jpg " ")
 
 4. In the Save Association dialog box, Click Yes.
 
-  ![](images/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png " ")
 
-5. Then upon the Information processing prompt, Click OK.
+    ![](images/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png " ")
 
-  ![](images/a01dffb956af685a866f02e68eff72b1.png " ")
+5. Click OK on the Information processing prompt. 
+
+
+    ![](images/a01dffb956af685a866f02e68eff72b1.png " ")
 
 6. Optionally, you can refresh PDB statistics to see notifications. To refresh:
 
@@ -404,33 +408,35 @@ Verify the PDB name added and Click **OK**
 
 7. Now Navigate to ***Enterprise >> Compliance >> Results***
 
-  ![](images/1317deb228d80211d9e6a2edf2cbba9e.png " ")
+    ![](images/1317deb228d80211d9e6a2edf2cbba9e.jpg " ")
 
 8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards
 
-  ![](images/Task4-Navigate_to_Compliance-Result-1.jpg " ")
+    ![](images/Task4-Navigate_to_Compliance-Result-1.jpg " ")
 
 9. And you  will see the following screen
 
-  ![](images/Task4-Compliance-Results.jpg " ")
+    ![](images/Task4-Compliance-Results.jpg " ")
 
 10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations.
 Incase of any  violations, you will see details like last evaluation date, rule name violated and rationale for the violation under the violation tab.
 
-  ![](images/Task4-Violations-tab.jpg " ")
+      ![](images/Task4-Violations-tab.jpg " ")
 
 
 
 12. The compliance management portal also provides you an option to have a dashboard view of  compliance summary against all the associated targets. The Dashboard provides a brief summary of the violatons , corrective actions and a complaince standard score.
 
-  From the home page Navigate to Enterprise >> Compliance >> Dashboard
+    
+    From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**
 
 
-![](images/Task4-Navigate-to-Dashboard-latest.jpg " ")
+    ![](images/Task4-Navigate-to-Dashboard-latest.jpg " ")
 
-  Dashboard View
+      
+      **Dashboard View**
 
-![](images/Task4-Compliance-Dashboard-latest.jpg " ")
+    ![](images/Task4-Compliance-Dashboard-latest.jpg " ")
 
 
 13. You can also generate a comprehensive compliance report for
@@ -440,19 +446,21 @@ Incase of any  violations, you will see details like last evaluation date, rule 
     B. Each Target with all Compliance standard associated to it.
 
 
-  From the home page Navigate to Enterprise >> Compliance >> Dashboard. Towards bottom of the page in the Compliance Summary section, cick on the report against each Compliance standard or Targets.
+    From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**. 
+    
+    Towards bottom of the page in the **Compliance Summary** section, cick on the report against each Compliance standard or Targets.
 
-  ![](images/Task4-13a.jpg " ")
+    ![](images/Task4-13a.jpg " ")
 
 
-  ![](images/Task4-13b.jpg " ")
+    ![](images/Task4-13b.jpg " ")
 
-  Sample report
+    **Sample report**
 
- ![](images/Task4-Compliancereport1.jpg " ")
- ![](images/Task4-Compliancereport2.jpg " ")
- ![](images/Task4-Compliancereport3.jpg " ")
- ![](images/Task4-Compliancereport4.jpg " ")
+    ![](images/Task4-Compliancereport1.jpg " ")
+    ![](images/Task4-Compliancereport2.jpg " ")
+    ![](images/Task4-Compliancereport3.jpg " ")
+    ![](images/Task4-Compliancereport4.jpg " ")
 
 
 
@@ -465,69 +473,93 @@ Incase of any  violations, you will see details like last evaluation date, rule 
 
 ## Task 5: Self-Service to Request PDB Using PDBaaS
 
-With the Self-Service Portal, cloud users can request an  Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. Expiry time is provided while requesting the PDB instance and PDB is automatically deleted based on the expiry time.
+With the Self-Service Portal, cloud users can request a Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. Expiry time is provided while requesting the PDB instance and PDB is automatically deleted based on the expiry time.
 
-1. Login into Enterprise Manager as a Self-Service User. Self-Service User credentials are: **cyrus/welcome1**
+1. Login into Enterprise Manager as a Self-Service User.
+
+    Credentials : **cyrus/welcome1**
 
 ![](images/login_as_cyrus.jpg " ")
 
 2. By default, you will see the Database Cloud Self Service Portal landing page as shown below.
 
-  ![](images/CMP-HomePage.jpg " ")
+    Click on  **Create Instance** button.
 
-3. Click the **Create Instance** button and then Click on Select icon for **Provision New Empty Pluggable Database**.
+    ![](images/CMP-HomePage.jpg " ")
 
-  ![](images/ee694403e4c718e224a01ae91dbc88fd.jpg " ")
+3.   
+    Select **Provision New Empty Pluggable Database**.
 
-  Note: There are two service templates pertaining to Pluggable Database
 
-    -  **Provision New Empty Pluggable Database**: This template enables users to create a new pluggable database in a container database configured by DBA.
-    -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
+    ![](images/ee694403e4c718e224a01ae91dbc88fd.jpg " ")
+
+      Note: There are two service templates pertaining to Pluggable Database
+
+        -  **Provision New Empty Pluggable Database**: This template enables users to create a new pluggable database in a container database configured by DBA.
+        -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
 
 4. In the **Pluggable Database Configuration** section,
 
 
-**Step 1**
-      Enter Service and SID details:
+      **Step 1**
 
-      * Name: **YOUR INITIALS\_PDB2** (e.g. AS\_PDB2)
-      * Database Service Name **: SERVICE\_YOUR INITIALS\_PDB2 (e.g. SERVICE\_AS\_PDB2)**
-      * Workload Size: Choose **Small**
-
-
-**Step 2**
- Enter the Credentials details in the “**Pluggable Database Administrator Account**” and for Tablespaces, select **Accept default**
-
-    ```
-    Administrator Name: <copy>PDBADMIN</copy>
-    ```
-
-    ```
-    Password: <copy>welcome1</copy>
-    ```
+      Enter PDB and Service details:
+      
+      ```
+      PDB Name: AS_PDB2
+      ```
+      ```
+      Database Service Name : Service_AS_PDB2
+      ```
+      ```
+      Workload Size: Small
+      ```
 
 
+      **Step 2**
 
-**Step 3**
-Instance Details, keep all defaults as they are. The Properties Page has the properties for the instance. The Self-Service Administrator has configured this as a optional step. However, properties can help users locate an instance more quickly. So Enter:
+      Enter the credentails as suggested below. 
+        
+      ```
+      Administrator Name: PDBADMIN
+      ```
+      ```
+      Password : welcome1
+      ```
 
-    ```
-    Contact: <copy>CYRUS</copy>
-    ```
-
-    ```
-    Lifecycle Status: <copy>Test</copy>
-    ```
-
-
-**Step 4**
-Instance Duration - For Instance Duration Start: Accept the default (Immediately). For Duration: Specify 4 hours from the current time by selecting the “Until” radio button, changing to current date and specify time to be 4 hours from the current time
+      Tablespace name is auto populated.  
 
 
-**Step 5**
-Click on Submit button
+    **Step 3**
 
-![](images/Task5-Consolidated.jpg " ")
+    **Instance Details** will have values auto filled.
+    
+    **Properties**  can help user locate an instance more quickly. 
+
+      ```
+      Contact: <copy>CYRUS</copy>
+      ```
+      ```
+      Lifecycle Status: <copy>Test</copy>
+      ```
+
+
+    **Step 4**
+
+      Instance Duration - 
+      
+      Start: Accept the default (Immediately).
+      
+      Duration: Specify 4 hours from the current time by selecting the “Until” radio button, changing to current date and specify time to be 4 hours from the current time.
+
+
+    **Step 5**
+
+    Validate all the details and Click on **Submit** button
+
+
+
+    ![](images/Task5-Consolidated.jpg " ")
 
   What do these options represent? In most cases the PDBaaS options are self-explanatory. The self-service user should be able to provision a PDB by entering minimal information. Fields with an ‘\*’ represent mandatory input fields. Please refer to the table listed below for a description of each option:
 
@@ -541,24 +573,37 @@ Click on Submit button
 | Schedule Request            | Self-service user has the ability to create a PDB database immediately or choose to create at a later time. In this lab exercise, the administrator has defined a policy, so a self- service user has to specify time duration. The PDB database will be automatically deleted after the duration. |
 | Administrator Name/Password | A database user with required administrative privileges will be created on the provisioned PDB. A self-service user will be able to administer the PDB database by logging in as this database user.                                                                                               |
 
-9.  Once you submit a request, you will be redirected back to the “**Database Cloud Services**” Page. Your PDB creation request has been submitted to Enterprise Manager for execution. Under “**Requests**” region, you should see 2 requests: “**Create**” and “**Delete**” request
+9.  Once you submit a request, you will be redirected back to the “**Database Cloud Services**” Page. 
 
-  ![](images/CMP-Task5-point9.jpg " ")
+    Your PDB creation request has been submitted for execution. 
 
-10. At this point, provisioning engine has received a request to create a PDB based on the service template and input provided by self-service user. You will also notice the delete operation is scheduled for future (not started yet) time. Click on the **hourglass** icon under Status column for the Create Pluggable Database step. You will see details of request.
+    Under “**Requests**” region, you should see 2 requests: 
+    “**Create**” and “**Delete**” request
 
-11.  It will perform the following actions:
+      ![](images/CMP-Task5-point9.jpg " ")
 
-     * Create database roles and PDB
-     * Create a resource plan based on the workload size
-     * Create and register the database
 
-  The request should take less than 7 minutes to complete. Click on refresh icon or as an alternative set Refresh to 30 seconds. The success status
-indicates that PDB database was successfully created. The new PDB database should be visible under Database Cloud Services page.
+10. At this point, provisioning engine has received a request to create a PDB based on the service template and input provided by self-service user. 
 
-  ![](images/CMP-PDB_creation-success.jpg " ")
+  You will also notice the delete operation is scheduled for future (not started yet) time. 
 
-12. Click on Close button. You will see the following under Requests section.
+  Click on the **hourglass** icon under Status column for the Create Pluggable Database step. You will see details of request.
+
+11.  PDB Provisioning perform the following actions:
+
+          * Create database roles and PDB
+          * Create a resource plan based on the workload size
+          * Create and register the database
+
+      The request should take less than 7 minutes to complete. 
+        
+      Click on refresh icon or as an alternative set Refresh to 30 seconds. 
+        
+      The success status indicates that PDB database was successfully created. The new PDB database should be visible under Database Cloud Services page.
+
+      ![](images/CMP-PDB_creation-success.jpg " ")
+
+12. Click on Close button. The screen indicated the PDB creation is successful.
 
   ![](images/CMP-Task5-point12.jpg " ")
 
@@ -568,45 +613,54 @@ indicates that PDB database was successfully created. The new PDB database shoul
 
   *Note*: Following widgets are shown on the Database Cloud Services landing Page
 
-    * **Instances** show the number and status (Up/Down) of the DB/PDB Instances provisioned by the self-service user.
-    * **Expiry**, shows the expiration summary of DB/PDB Instances.
-    * **Usage**, resource usage status for the Self-Service user, status of the resource consumption for this user.
-    * **Memory**, current memory consumption against the Quota for this user.
-    * **Storage**, current storage consumption against the Quota for this user.
+      * **Instances** show the number and status (Up/Down) of the DB/PDB Instances provisioned by the self-service user.
+      * **Expiry**, shows the expiration summary of DB/PDB Instances.
+      * **Usage**, resource usage status for the Self-Service user, status of the resource consumption for this user.
+      * **Memory**, current memory consumption against the Quota for this user.
+      * **Storage**, current storage consumption against the Quota for this user.
 
 14. Click on the name of the PDB. You can use the connection details to connect to the PDB using SQL tools.
 
-  ![](images/9ca31e90c86263e6cddde14da1c6954f.jpg " ")
+    ![](images/9ca31e90c86263e6cddde14da1c6954f.jpg " ")
 
 15. Click on **Resize** button to resize a PDB instance.
+
+    Select **large** and click **resize**
 
   ![](images/20537907e3a274a9df16e7c54f73713f.jpg " ")
 
     * Resize allows you to resize your instance to other available resource sizes.
-    * We have 2 resource sizes available for Service Template. Both are displayed.
+    * We have 2 resource sizes available for Service Template. Small and Large.
     * Current size of PDB instance is Small, you can now resize it to large.
 
-  ![](images/cc03cc86d7e3d8146a3d799b52583a83.jpg " ")
+16. Once you click on **Resize**, a job will be submitted to resize instance. 
 
-16. Once you click on **Resize**, a job will be submitted to resize instance. In few minutes instance resize is completed. Expand **Resource Usage** section on PDB Home page. This shows now new resource usage limits.
+    In few minutes instance resize is completed. Expand **Resource Usage** section on PDB Home page. 
 
-  ![](images/64a8954df11d2e688a930fd92ae38cd8.jpg " ")
+    This shows now new resource usage limits.
 
-17.  Next delete the database Instance: Go to the Database Cloud Services Home page by clicking on **Database Cloud Service Portal link**
 
-  ![](images/a24b112c579e1df59bb4919a0bbe2b67.jpg " ")
+      ![](images/64a8954df11d2e688a930fd92ae38cd8.jpg " ")
+
+17.  Next delete the database Instance: 
+
+      Go to the Database Cloud Services Home page by clicking on **Database Cloud Service Portal link**
+
+
+      ![](images/a24b112c579e1df59bb4919a0bbe2b67.jpg " ")
 
 18. Click on the action menu for new PDB and delete this instance.
 
-  ![](images/CMP-Task5-point18-latest.jpg " ")
+    ![](images/CMP-Task5-point18-latest.jpg " ")
 
-19. While deleting instance you can preserve a backup of the instance and create a new instance using this backup. To store backup of this instance, select check-box: **Preserve a backup of this instance**
+19. While deleting instance you can preserve a backup and create a new instance incase required. 
+  Select check-box: **Preserve a backup of this instance**
+  
+    Click **Ok**
 
-  ![](images/CMP-Task5-point19-latest.jpg " ")
+    ![](images/CMP-Task5-point19-latest.jpg " ")
 
-20. Click OK. You will see confirmation to delete the instance.
-Click **Close** to close the confirmation dialog box
-  ![](images/2b44dd4c41f594cddd9adc74dd193297.jpg " ")
+20.  Click **Close** to close the confirmation dialog box. The Instance has been successfuly deleted. 
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
