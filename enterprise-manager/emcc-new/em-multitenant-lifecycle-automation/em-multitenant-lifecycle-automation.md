@@ -664,30 +664,35 @@ With the Self-Service Portal, cloud users can request a Pluggable Database throu
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
-Previous exercises demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
+  Previous exercises demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
 
-Logout as **Cyrus** user
-![](images/Task6-step1.jpg " ")
+  Logout as **Cyrus** user
 
+  ![](images/Task6-step1.jpg " ")
 
 
 Login to the EM Console as super administrator **sysman/welcome1**
+
 
 ![](images/Task6-sysmanlogin.jpg " ")
 
 ### **PaaS Infrastructure Zone**
 
-1. On the EM Console, go to Setup ->> Cloud ->> Database.
+1. On the EM Console, go to **Setup** ->> **Cloud** ->> **Database**.
 
-  ![](images/edfbce40d3abb0f21705992cc042c3ee.jpg " ")
+    ![](images/edfbce40d3abb0f21705992cc042c3ee.jpg " ")
 
 2. Select **Pluggable Database** from the drop-down menu.
 
   ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ")
 
-3. Then click on **PaaS Infrastructure Zone** **Sales Infra Zone** is the zone where PDBs were provisioned in the previous sections. Click on name of the zone.
+3. Then click on **PaaS Infrastructure Zone**. 
 
-  ![](images/8ed6c692f382172bbc9f6e2b90179f9e.jpg " ")
+    Zone is a pool of Hosts where the PDBs can be provisioned. 
+      Click on **Sales Infra Zone**
+
+      ![](images/8ed6c692f382172bbc9f6e2b90179f9e.jpg " ")
+
 
 4. You are taken to the Zone Home page; you can see all the details of a Zone such as the host members of this zone. You can explore more about the zone on this page.
 
@@ -695,43 +700,60 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
 ### **Pluggable Database Pool**
 
-5. On the EM Console, go to **Setup**, then **Cloud**, then **Database**. Select **Pluggable Database** from the drop-down menu. And then click on **Pluggable Database Pool**’.
+5. On the EM Console, Click on **Setup** --> **Cloud** -->  **Database**. 
 
-  A Pluggable Database Pool consists of a set of Container Databases on which PDBs will be provisioned.
+      ![](images/edfbce40d3abb0f21705992cc042c3ee.jpg " ")
 
-  ![](images/b49f455842d0fb11dd7de44fcaccfe26.jpg " ")
+6. Select **Pluggable Database** from the drop-down menu. 
+  ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ")
 
-6. Click on name of the pool to see more details.
+   
+    Click on **Pluggable Database Pool**’. A Pluggable Database Pool consists of a set of Container Databases on which PDBs will be provisioned.
 
-  ![](images/CMP-Task6-point6.jpg " ")
+    Click on name of the pool to see more details.
 
-7. Scroll down to see details of Members and Service Templates.
+    ![](images/b49f455842d0fb11dd7de44fcaccfe26.jpg " ")
 
-  ![](images/243ed347412f16a2159b2184c2dacdf7.jpg " ")
+7. You are taken to the Database pool. Explore the Memory allocation and CPU allocation details
+
+    ![](images/CMP-Task6-point6.jpg " ")
+
+   Scroll down to see details of Members and Service Templates.
+
+    ![](images/243ed347412f16a2159b2184c2dacdf7.jpg " ")
 
 ### **Data Sources**
 
-8. On the EM Console, go to **Setup**, then **Cloud**, then **Database**. Select Pluggable Database from the drop-down menu. And then click on **Data Sources** observe that the profile is based on Schema Export(s). This Data Profile was used for provisioning a PDB with data.
+8. On the EM Console, Click on **Setup** --> **Cloud** -->  **Database**.
 
-  ![](images/d834209bf1c6a238679ae419098ee0f3.jpg " ")
+    Select Pluggable Database from the drop-down menu.
 
-9. Select the row with profile to see more details.
+    ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ") 
+    
+    
+9. Click on **Data Sources**. Observe that the profile is based on Schema Export(s). This Data Profile was used for provisioning a PDB with data.
 
-  ![](images/532db10bbaab85fcdd83f245bd317a6b.jpg " ")
+    ![](images/d834209bf1c6a238679ae419098ee0f3.jpg " ")
+
+10. Select the row with profile to see more details.
+
+    ![](images/532db10bbaab85fcdd83f245bd317a6b.jpg " ")
+
+    Close the Provisioning Profile pop up box. 
 
 ### **Service Templates**
-10. On the EM Console, go to **Setup**, then **Cloud**, then **Database**. Select Pluggable Database from the drop-down menu. And then click on **Service Templates from you left menu.**
+10. From the Cloud Home page , Select Pluggable Database from the drop-down menu. And then click on **Service Templates** 
 
-  ![](images/47baba2a1e7567bfb0b5f89429a7831d.jpg " ")
+    ![](images/47baba2a1e7567bfb0b5f89429a7831d.jpg " ")
 
-  There are two service templates pertaining to Pluggable Database
+    There are two service templates pertaining to Pluggable Database
 
       * **Provision New Empty Pluggable Database**: This template enables the user to create a new pluggable database in a container database configured by DBA
       * **Provision Pluggable Database with Data**: This template enables user to create a new pluggable database with data from a non-container database.
 
 11. Click on name of any template to explore more details.
 
-  ![](images/a0efb63a12d01e1254593656765ec52a.jpg " ")
+    ![](images/a0efb63a12d01e1254593656765ec52a.jpg " ")
 
 This completes the Lab!
 
