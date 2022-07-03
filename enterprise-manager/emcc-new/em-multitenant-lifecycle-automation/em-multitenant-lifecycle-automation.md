@@ -288,7 +288,7 @@ Click **Next**
 
     ![](images/Task2-step20.jpg " ")
 
-  *Note*: You do not have to wait until the steps complete and move on to the next section.
+    *Note*: You do not have to wait until the steps complete and move on to the next section.
 
 ## Task 3: Clone an existing Pluggable Database (PDB)
 
@@ -307,34 +307,59 @@ Click **Next**
 4.  In the PDB Operations section, select **Create New Pluggable Databases**.
    Click **Launch**
 
-  ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
+    ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
-5.  Select **Clone and Existing PDB** PDB and select as source, a PDB from the CDB186 CDB (if you choose any other CDB, this operation might fail). Please keep Database link box empty. Select named credentials “ORACLE”, Click Next.
+5.  Under the PDB creation options, select **Clone an Existing PDB** . 
 
-  ![](images/472126037592bdeca5eaa6027ebb57a3.jpg " ")
+    Select **Full Clone** and  select a source PDB(PROV_PDB) from which you want to clone the PDB. 
 
-6.  Enter new PDB name. The PDB Administrator user will inherit the user from the source PDB, hence this section does not need any inputs.
-An additional PDB Administrator user can also be created.
-Click **Next**
+    Leave the Database Link blank.
 
-  ![](images/Task2-step6.jpg " ")
+    Choose the Database Host Named Credential as "Oracle". 
 
-7.  Select **Use Common Location for PDB Datafiles** in the Source page of the Create Pluggable Database Wizard, please enter **/tmp** in temporary working directory.
+    Click **Next**
 
-  Optionally, you can select the postscript as we did in the creation flow. Click Next.
+    ![](images/472126037592bdeca5eaa6027ebb57a3.jpg " ")
 
-  ![](images/ff556eb15570c55dfd477361c20051d6.jpg " ")
+    ![](images/Task3-step5.jpg " ")
 
-8.  When you see the Schedule page, just select the check box immediately next to Start. Then Click Next.
+6.  Enter new PDB name (full_clonepdb).
 
-  ![](images/dblmschedulepage.jpg " ")
+    The PDB Administrator user will inherit the user credentials from the source PDB, hence this section does not need any inputs.
 
-9.  After the Review page appears, and you have confirmed the information is correct for your deployment, click Submit. You can now click on View Execution Details link to see details and on the Procedure Activity page see the status of the procedure.
+    Optinally, an additional PDB Administrator user can also be created incase needed. 
 
-  ![](images/Task3-step9.jpg " ")
-  ![](images/Task3-step9a.jpg " ")
+    Click **Next**
 
-  ![](images/Task3-step10.jpg " ")
+      ![](images/Task2-step6.jpg " ")
+
+7.  Select **Use Common Location for PDB Datafiles** in the Storage page of the Create Pluggable Database Wizard. 
+
+    Enter **/tmp** in temporary working directory.
+
+
+    Optionally, you can select the postscript as we did in the creation flow. 
+    
+
+    Click **Next** .
+
+
+    ![](images/ff556eb15570c55dfd477361c20051d6.jpg " ")
+
+8.  In the Schedule page, choose to start  **immediately**.
+
+    Click **Next**.
+
+      ![](images/dblmschedulepage.jpg " ")
+
+9.  Review the details and  click **Submit**. 
+
+    Click on View Execution Details link to see details and of the Procedure.
+
+      ![](images/Task3-step9.jpg " ")
+      ![](images/Task3-step9a.jpg " ")
+
+      ![](images/Task3-step10.jpg " ")
 
 
 
