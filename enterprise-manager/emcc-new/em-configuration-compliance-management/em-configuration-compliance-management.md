@@ -206,9 +206,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_and_Drift_template_Image_1.png " ")
 
-4.  With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click OK.
+4.  With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization.
 
   ![](images/Compare_and_Drift_template_Image_2.png " ")
+
+   Provide a unique name to the new template and click OK.
 
   ![](images/Compare_and_Drift_Demo_Image_3.png " ")
 
