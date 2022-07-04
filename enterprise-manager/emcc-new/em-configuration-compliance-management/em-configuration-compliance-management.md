@@ -534,7 +534,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
     Click Add to add target for association with this compliance standard.
 
-  ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
+  ![](images/HIPAA_Associate_Host_Target_Image_8.png)
 
   10.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
