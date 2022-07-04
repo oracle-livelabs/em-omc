@@ -26,7 +26,6 @@ In this lab you will perform the following steps
 | 5                                                         | Host Security Compliance                                  | 10 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one reference compliance. |
 
 
-
 ###  Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
@@ -160,7 +159,6 @@ In this step, you will compare two database targets to determine configuration d
       - Not equal sign indicates parameter properties are different across the reference and target compared
       - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
       - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
-
 
 14. Now, let us go to Comparison and Drift Management dashboard page for further analysis of results
 
