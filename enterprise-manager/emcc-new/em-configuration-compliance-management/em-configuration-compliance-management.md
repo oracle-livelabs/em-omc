@@ -319,7 +319,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
       - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
 
-23. Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results. You can choose the specific results to export. (**OPTIONAL**)
+23. Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**OPTIONAL**)
 
   ![](images/Compare_and_Drift_Demo_Image_25.png " ")
 
