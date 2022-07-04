@@ -518,7 +518,6 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   ![](images/HIPAA_Standard_Details_Image_5.png " ")
 
-
   7. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click **Done** .
 
   ![](images/HIPAA_Associate_Target_Image_6.png " ")
