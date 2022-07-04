@@ -443,13 +443,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_21.png " ")
 
-17. For Clicking on Critical column number, you will see details like each violation, last evaluation date, rule name violated and rationale for the violation.
+17. For Clicking on Critical column number, you will see details like each violation, last evaluation date
 
   ![](images/CIS_Db_Compliance_Dashb_Image_22.png " ")
 
  By clicking on arrow, under Target Name,
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_23.png " ")
+
+  Each rule name violated and rationale for the violation can be explored below,
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_24.png " ")
 
