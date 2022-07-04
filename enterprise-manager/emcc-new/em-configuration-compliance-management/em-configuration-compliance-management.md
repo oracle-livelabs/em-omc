@@ -114,8 +114,8 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/ecm2_one_time_database_comparison_ref_target2.png " ")
 
-  ![](images/one_time_database_comparison_ref_target3.png " ")
-  
+  ![](images/ecm2_one_time_database_comparison_ref_target3.png)
+
 7.  Select **emrep.us.oracle.com** as reference target.
 
   ![](images/ecm2_one_time_database_comparison_ref_target4.png " ")
