@@ -664,7 +664,7 @@ With the Self-Service Portal, cloud users can request a Pluggable Database throu
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
-  Previous exercises demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
+  Previous exercise demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
 
   Logout as **Cyrus** user
 
@@ -686,7 +686,7 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
   ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ")
 
-3. Then click on **PaaS Infrastructure Zone**. 
+3. Click on **PaaS Infrastructure Zone**. 
 
     Zone is a pool of Hosts where the PDBs can be provisioned. 
       Click on **Sales Infra Zone**
@@ -694,9 +694,11 @@ Login to the EM Console as super administrator **sysman/welcome1**
       ![](images/8ed6c692f382172bbc9f6e2b90179f9e.jpg " ")
 
 
-4. You are taken to the Zone Home page; you can see all the details of a Zone such as the host members of this zone. You can explore more about the zone on this page.
+4. You are taken to the Zone Home page; you can see all the details of a Zone such as the host members of this zone. 
 
-  ![](images/CMP-Task6-point4.jpg " ")
+    You can explore more about the zone on this page.
+
+      ![](images/CMP-Task6-point4.jpg " ")
 
 ### **Pluggable Database Pool**
 
@@ -735,7 +737,9 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
     ![](images/d834209bf1c6a238679ae419098ee0f3.jpg " ")
 
-10. Select the row with profile to see more details.
+10. Select the row with profile to see more details. 
+    This will open a Provisioning Profile Dialog box with details of PDB name , tablespaces , and creation details.
+
 
     ![](images/532db10bbaab85fcdd83f245bd317a6b.jpg " ")
 
@@ -753,9 +757,15 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
 11. Click on name of any template to explore more details.
 
+
     ![](images/a0efb63a12d01e1254593656765ec52a.jpg " ")
 
-This completes the Lab!
+    Close the Service template Pop up window.
+
+
+    
+
+**This completes the Lab!**
 
 You may now [proceed to the next lab](#next).
 
