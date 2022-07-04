@@ -579,7 +579,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
 
-  ![](images/HIPAA_Crtical_Violations_Image_21.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_21.png)
 
   ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
 
