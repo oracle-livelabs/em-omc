@@ -532,7 +532,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
 
-    Click Add to add targets for association with this compliance standard.
+    Click Add to add target for association with this compliance standard.
 
   ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
 
