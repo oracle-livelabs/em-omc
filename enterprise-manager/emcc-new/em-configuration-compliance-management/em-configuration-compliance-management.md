@@ -534,7 +534,7 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
     Click Add to add target for association with this compliance standard.
 
-  ![](images/HIPAA_Associate_Host_Target_Image_8.png)
+  ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
 
   10.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
@@ -576,17 +576,17 @@ By clicking CIS_DEMO, target evaluations and individual violation rules details 
 
   ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
 
-  ![](images/HIPAA_Compliance_Score_Image_18.png " ")
+  Click on 'X' to close the pop up window
 
-      Click on 'X' to close the pop up window
+  ![](images/HIPAA_Compliance_Score_Image_18.png " ")
 
   18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
 
   ![](images/HIPAA_Crtical_Violations_Image_21.png)
 
-  ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
+    By clicking **Target name** column arrow
 
-  By clicking **Target name** column arrow
+  ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
 
    Critical Violations rules can be seen in this pop up page details
 
