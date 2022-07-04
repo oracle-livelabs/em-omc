@@ -473,7 +473,9 @@ Incase of any  violations, you will see details like last evaluation date, rule 
 
 ## Task 5: Self-Service to Request PDB Using PDBaaS
 
-With the Self-Service Portal, cloud users can request a Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. Expiry time is provided while requesting the PDB instance and PDB is automatically deleted based on the expiry time.
+With the Self-Service Portal, cloud users can request a Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. PDBs are created with a predefined expiry time and is automatically deleted.
+
+The PDBs are created using a predefined service template on CDBs which are virtually grouped as a pool.
 
 1. Login into Enterprise Manager as a Self-Service User.
 
@@ -495,8 +497,8 @@ With the Self-Service Portal, cloud users can request a Pluggable Database throu
 
       Note: There are two service templates pertaining to Pluggable Database
 
-        -  **Provision New Empty Pluggable Database**: This template enables users to create a new pluggable database in a container database configured by DBA.
-        -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
+      -  **Provision New Empty Pluggable Database**: This     template enables users to create a new pluggable database in a container database configured by DBA.
+       -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
 
 4. In the **Pluggable Database Configuration** section,
 
@@ -561,13 +563,17 @@ With the Self-Service Portal, cloud users can request a Pluggable Database throu
 
     ![](images/Task5-Consolidated.jpg " ")
 
-  What do these options represent? In most cases the PDBaaS options are self-explanatory. The self-service user should be able to provision a PDB by entering minimal information. Fields with an ‘\*’ represent mandatory input fields. Please refer to the table listed below for a description of each option:
+  What do these options represent? In most cases the PDBaaS options are self-explanatory.
+  The self-service user should be able to provision a PDB by entering minimal information. 
+  Fields with an ‘\*’ represent mandatory input fields. 
+  
+  Please refer to the table listed below for a description of each option:
 
   | **Field**                   | **Description**                                                                                                                                                                                                                                                                                    |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Request Name                | By default, it is the Self-Service User Requestor name with timestamp. This field can be modified                                                                                                                                                                                                  |
 | Zone                        | The Zone is a PaaS Zone that represents hosts/vm, where the PDB database will be deployed for this request. The zones are configured by the administrator. Self-service user need not know the host or platform details.                                                                           |
-| PDB Name                    | Required input. PDB database with user defined will be created for the container database                                                                                                                                                                                                          |
+| PDB Name                    | PDB database with user defined will be created for the container database                                                                                                                                                                                                          |
 | Database Service Name       | The user defined prefix for the database service or alias for this self-service PDB. The rest of the service name will be system generated and will be associated with a database resource management plan.                                                                                        |
 | Workload Size               | The resources allocated to the Database Service. The database resource management plan is derived from this option. You can configure multiple workload sizes. Each service template will contain unique workload sizes. This typically depends on the roles assigned to self-service user.        |
 | Schedule Request            | Self-service user has the ability to create a PDB database immediately or choose to create at a later time. In this lab exercise, the administrator has defined a policy, so a self- service user has to specify time duration. The PDB database will be automatically deleted after the duration. |
@@ -599,13 +605,14 @@ With the Self-Service Portal, cloud users can request a Pluggable Database throu
         
       Click on refresh icon or as an alternative set Refresh to 30 seconds. 
         
-      The success status indicates that PDB database was successfully created. The new PDB database should be visible under Database Cloud Services page.
+      The success status indicates that PDB database was successfully created. 
+      Click on Close button when the procedure is complete. 
 
       ![](images/CMP-PDB_creation-success.jpg " ")
 
-12. Click on Close button. The screen indicated the PDB creation is successful.
+12.  The screen indicated the PDB creation is successful.
 
-  ![](images/CMP-Task5-point12.jpg " ")
+      ![](images/CMP-Task5-point12.jpg " ")
 
 13. Click on the Home Icon. You will see new PDB instance.
 
