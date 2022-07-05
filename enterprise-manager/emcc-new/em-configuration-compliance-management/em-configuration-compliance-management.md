@@ -108,7 +108,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/ecm2_one_time_database_comparison_menu.png " ")
 
-3.  Review the different types of comparisons supported by mouse-over on the info icon.
+3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
   ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
 
