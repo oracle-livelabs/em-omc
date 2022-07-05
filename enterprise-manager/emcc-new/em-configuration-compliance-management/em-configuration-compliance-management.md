@@ -74,7 +74,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
  ![](images/Em_Config_Compliane_Db_Trends_Image_4.png)
 
- Click **Close**
+ Click **Close**.
 
 6.  In the Details excel fie table output below, you will see details like
 
@@ -86,7 +86,11 @@ All the items in this step are read-only, primary goal is to learn about invento
     - Most importantly, LOB/Department information
       Details table gives more information of each Database instance for you to get a good understanding of number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business or Department, then you will be able to determine the number of targets deployed for a given business unit.Explore these features to get a good handle on Inventory and Usage details.
 
-7. Export inventory details to excel for reports. These inventory details can be exported to an excel file for offline analysis or sharing the report to management. With the excel report, you can filter based on the properties you are using to show department or line of business specific assets allocation and usage. (**OPTIONAL**)
+7. Export inventory details to excel for reports.
+
+  ![](images/Em_Config_Compliane_db_Trends_Image_5.png " ")
+
+ These inventory details can be exported to an excel file for offline analysis or sharing the report to management. With the excel report, you can filter based on the properties you are using to show department or line of business specific assets allocation and usage. (**OPTIONAL**)
 
   ![](images/ecm1_inventory_usage_details_report.png " ")
 
