@@ -68,7 +68,13 @@ All the items in this step are read-only, primary goal is to learn about invento
 
 5.  Explore pie chart to see the break-down of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of given database instance over a period of time.
 
-  ![](images/Em_Config_Compliane_db_Trends_Image_3.png)
+ ![](images/Em_Config_Compliane_Db_Trends_Image_3.png)
+
+ Click on Table View, further details explore.
+
+ ![](images/Em_Config_Compliane_Db_Trends_Image_4.png)
+
+ Click **Close**
 
 6.  In the Details excel fie table output below, you will see details like
 
