@@ -76,7 +76,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
  Click **Close**.
 
-6.  In the Details excel fie table output below, you will see details like
+6.  In the Details excel fie table output below, you will see details as follows
 
     - Database instance name Target
     - Host on which this database is located
