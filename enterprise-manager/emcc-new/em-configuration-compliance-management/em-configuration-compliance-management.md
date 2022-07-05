@@ -58,11 +58,11 @@ All the items in this step are read-only, primary goal is to learn about invento
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**
 
-  ![](images/Configuration_InventoryUsage_Image_1.png " ")
+  ![](images/Configuration_Inventoryusage_Image_1.png " ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager
 
-  ![](images/Em_Configs_Complianes_dbs_Image_2.png " ")
+  ![](images/Em_Compliance_Config_Alldbs_Image_2.png " ")
 
 4.  Analyze various database versions and number of instances for each version or you can choose PDB 18.3 highlighted above page
 
