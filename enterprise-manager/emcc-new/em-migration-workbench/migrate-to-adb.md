@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can use the database migration workbench to migrate your on-premises databases to to new destinations in your data center or to Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **Oracle Cloud Infrastructure (OCI)** migration.
+You can use Database Migration Workbench to migrate your on-premises databases to to new destinations in your data center or to Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **Oracle Cloud Infrastructure (OCI)** migration.
 
 *Estimated Time:* 60 minutes
 
@@ -12,20 +12,22 @@ Oracle Enterprise Manager Database Migration Workbench provides an accurate appr
 
 ### Objectives
 
-In this lab you will perform the Tasks below. The pre-requisites in task 1 will be mostly performed in a terminal window, but we'll use the Enterprise manager console for the migration tasks. In the the migration task you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will validate the destination database and compare performance before and after the migration.
+In this lab you will perform the tasks below. Task 1 is about reviewing the pre-requisites that have been completed in advance for this lab. In task 2 you will create an autonomous database in Oracle Cloud. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will validate the destination database and compare performance before and after the migration.
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | Perform Migration Workbench Pre-Requisites| 40 minutes | Perform pre-requisites required on the source and destination databases, source hosts and in Enterprise Manager |
-| 2 | Migrate and upgrade a 12c non-container database to autonomous database in OCI | 20 minutes   | Source database: orcl, destination database: ATP-ORCL |
+| 1 | Review Source Database Pre-Requisites Completed in Advance | 10 minutes | Review pre-requisites completed on the source database, host, and in Enterprise Manager |
+| 2 | Create Destination Autonomous Database and Storage Bucket in OCI | 10 minutes   | Create the autonomous database and download the client wallet. Create a storage bucket to store migration files |
+| 3 | Perform Target Autonomous Database Pre-Requisites | 20 minutes   | Discover the autonomous database in Enterprise Manager. Create required credentials |
+| 4 | Migrate and Upgrade a 12c Non-Container Database to Autonomous Database in Oracle Cloud | 20 minutes   | Source database: orcl, destination database: ATP-ORCL |
 
 ### Prerequisites
 
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
-  - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-  - Lab: Environment Setup
-  - Lab: Initialize Environment
+    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+    - Lab: Environment Setup
+    - Lab: Initialize Environment
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU5, and database 19.12 as Oracle Management Repository.
 
@@ -45,7 +47,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
     Password: <copy>welcome1</copy>
     ```
 
-    ![Login Page](../initialize-environment/images/em-login.png " ")
+    ![Login Page](images/mwb-em-login.png " ")
 
 2. Click on "Targets"->"Databases":
 
@@ -70,6 +72,20 @@ In the interest of simplifying the setup and save time, the following pre-Requis
 - Created the following directory on the host: /u01/app/oracle/migration_workbench
 - Created directory object "MWB_DIR" in the source database pointing to this directory
 - Granted read and write privileges on the directory object to user EXP\_USER in the source database
+
+### **Compare Performance Requirement**
+Migrating a database can change the execution plans of SQL statements, resulting in a significant impact on SQL performance, resulting in performance degradation. SQL Performance Analyzer can review and help correct these issues.
+
+SQL Performance Analyzer (SPA): Automates the process of assessing the overall effect of a change on the  SQL workload by identifying performance divergence for each SQL statement. A report that shows the net impact on workload performance due to the change is provided. For regressed SQL statements, SQL Performance Analyzer also provides appropriate executions plan details along with tuning recommendations. As a result, you can remedy any negative outcome before the end-users are affected. Furthermore, you can validate—with time and cost savings—that migration will result in net improvement.
+
+An SQL Tuning Set (STS) containing the SQL and relevant execution metadata from the source database is needed to compare performance before and after the migration. Database Migration Workbench can create an STS from AWR during migration, or you can create one in advance and and pass it to to the migration procedure. For this lab we created an STS in advance (SH2STS) by running a workload against the SH2 schema in the source database and capturing the SQL statements executing during the load test.
+
+### **(Optional) Upload Migration Tools**
+Migration Workbench uses Instant Client and the Cloud Premigration Advisor Tool (CPAT) as part of its migration toolkit. Enterprise Manager automatically downloads the latest version of the tools when setup with either a MOS Proxy or direct internet connection. The tools can also be uploaded manually as described in [Upload Migration Tools] (https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emlcm/upload-migration-tools.html) in the Migration Workbench documentation.
+
+We uploaded the migration tools in advance for this lab. For additional detail on the Cloud Premigration Advisor Tool refer to this MOS document:
+
+*Cloud Premigration Advisor Tool (CPAT) Analyzes Databases for Suitability of Cloud Migration (Doc ID 2758371.1)*
 
 ## Task 2: Create Destination Autonomous Database and Storage Bucket in OCI
 
@@ -110,7 +126,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
 
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
-    - Click "Database Actions". The Database Actions page opens in a new browser tab. If the browser blocks opening the new tab allow pop-ups from the OCI URL: 
+    - Click "Database Actions". The Database Actions page opens in a new browser tab. If the browser blocks opening the new tab allow pop-ups from the OCI URL:
     ![ATP Home](images/c_t2_02_atp_home.png " ")
     - On the new tab ("Database Actions|Launchpad", click on "Download Client Credentials (Wallet)" tile under "Administration" (You may have to scroll down the page to get to that tile):
     - On the pop-up window, enter password and click "Download":
@@ -359,8 +375,8 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: ATP-ORCL
     - Note checkmark for "Tools Validation". For this lab, CPAT tool was uploaded to Enterprise Manager in advance
-      ![Create Migration Activity](images/c_t4_03_create_migration_activity.png " ")
     - Click Continue
+      ![Create Migration Activity](images/c_t4_03_create_migration_activity.png " ")
 5. On the Add Details screen:
 
     - Database Credentials: EXP_USER (Named Credential)
@@ -398,7 +414,6 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - Database OCI Auth Credential: ADMIN.MWB_CRED
     - Click Next
       ![Add Details](images/c_t4_04_add_details.png " ")
-    - Click Next
 
 6. On the Customize screen
     - Examine the various options you can configure for Export and Import
@@ -406,49 +421,65 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - Under "Compare Performance After Migration" choose "Use Existing" then select STS "EXP_USER -- SH2STS"
     - Notice mapping the Users tablespace in the source database to Data table space in the destination database
     - Leave everything else at default for the purpose of this lab
-    ![Customize](images/c_t4_05_customize.png " ")
     - Click Review
+    ![Customize](images/c_t4_05_customize.png " ")
 
-7. On the Review and Submit screen
-
-    - Review your entries and click "Analyze Source" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
+7. On the "Review & Submit" screen, review your entries and click "Analyze Source" in the Source column
     ![Anaylze Source](images/c_t4_06_anayze_source.png " ")
-    - When the analysis is complete review CPAT Results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis. In our case we can proceed.
+    - The analysis will open in a new browser tab and will take a few minutes to complete
+    - When the analysis is complete review CPAT Results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis. You can download the CPAT results if desired
     ![CPAT Results](images/c_t4_07_cpat_results.png " ")
-    - Note you can download the CPAT results if desired.
-    - Click on the previous browser tab to continue with the migration process.
-    ![Validate](images/c_t4_08_validate.png " ")
+    - Click on the previous browser tab to continue with the migration process
     - Click "Validate"
+    ![Validate](images/c_t4_08_validate.png " ")
 
-8. Validation checks run for a few minutes and all checks should pass. Click "Close & Submit". If not check your previous steps, fix the error and revalidate
- ![Validate Activity](images/c_t4_09_validate_activity.png " ")
+8. Validation checks run for a few minutes and all checks should pass. If your results are different check your previous steps, fix the error and revalidate
+    - Click "Close & Submit"
+    ![Validate Activity](images/c_t4_09_validate_activity.png " ")
+
 9. On the Submit Activity screen, check the "Confirm that you have done source analysis" checkbox
-  ![Submit Activity](images/c_t4_10_submit_activity.png " ")
+    ![Submit Activity](images/c_t4_10_submit_activity.png " ")
 10. Click submit, then click "Close and Go Back to Activities Page"
 11. On the activity page, change the Auto Refresh to 1 minute
- ![Activity Page](images/c_t4_11_activity_page.png " ")
+    ![Activity Page](images/c_t4_11_activity_page.png " ")
 11. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped"
- ![Procedure Activity](images/c_t4_12_procedure_activity.png " ")
+    ![Procedure Activity](images/c_t4_12_procedure_activity.png " ")
 12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
- ![Procedure Activity Completed](images/c_t4_13_procedure_activity_completed.png " ")
-13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row 
- ![View Analysis](images/c_t4_14_view_analysis.png " ")
-14. On the "View Analysis" page, examine the errors. You should be able to ignore most of these, but those that need to be addressed are generally specific to the database being migrated and should be addressed by the database administrator as appropriate.
- ![Analysis](images/c_t4_15_analysis.png " ")
+    ![Procedure Activity Completed](images/c_t4_13_procedure_activity_completed.png " ")
+13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
+    ![View Analysis](images/c_t4_14_view_analysis.png " ")
+14. Examine the analysis report
+    - Review validation checks that passed, failed or skipped
+    - Review the export and import tabs for time taken to complete export and import activities, the number of objects exported and imported, and the errors reported during export and import activities
+    - For further details on the errors you can review log file using procedure activity step mentioned in step #12
+    - In your environment you may need to take actions such as granting specific object privileges to fix the errors. However for this lab the errors shown can be ignored
+    - When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the activity page
+    ![Analysis](images/c_t4_15_analysis.png " ")
 
-15. Navigate back to the activity page and click on the "Compare Performance" link from the drop-down menu on the right of the activity row
- ![Compare Performance](images/c_t4_16_compare_performance.png " ")
-16. Examine the Performance Comparison report to analyze the database performance before and after the migration:
- ![Performance Comparison](images/c_t4_17_performance_comparison.png " ")
-17. Navigate back to the activity page and click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
- ![Mark Completed](images/c_t4_18_mark_completed.png " ")
+15. Click on the "Compare Performance" link from the drop-down menu on the right of the activity row
+
+    ![Compare Performance](images/c_t4_16_compare_performance.png " ")
+
+16. Examine the Performance Comparison report to analyze the database performance before and after the migration
+    - Review overall performance impact on application to end user after the migration
+    - Analyze top 100 impacted SQLs shown in absolute percentage. SQLs highlighted in green have improved performance due to improved execution plan or query cost. Those highlghted in red have regressed due to execution plan change or execution problems (for example query returning no rows, or number of rows returned is different in destination than in source, etc.)
+    - Check regressed SQLs to see execution statistics, before and after migration change analysis
+    - Analyze findings provided for each query to see which factors impacted the regressed SQLs. You can take action based on findings provided to improve  performance
+    - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the activity page
+
+      ![Performance Comparison](images/c_t4_17_performance_comparison.png " ")
+
+17. Click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
+
+    ![Mark Completed](images/c_t4_18_mark_completed.png " ")
 
 18. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
- ![Confirmation](images/c_t4_19_confirmation.png " ")
+
+    ![Confirmation](images/c_t4_19_confirmation.png " ")
 
 19. Activity is marked completed
-     ![Marked Completed](images/c_t4_20_marked_completed.png " ")
 
+     ![Marked Completed](images/c_t4_20_marked_completed.png " ")
 
     You have now completed this task.
 
