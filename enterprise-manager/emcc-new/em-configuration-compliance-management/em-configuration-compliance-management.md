@@ -114,7 +114,7 @@ In this step, you will compare two database targets to determine configuration d
 
 4.	Select **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_2.png " ")
+  ![](images/Em_One_Create_Comparison_Image_2.png " ")
 
 5.  Choose the reference target that you want other targets to be compared with.
 
