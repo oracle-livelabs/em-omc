@@ -45,7 +45,7 @@ In the interest of simplifying the setup and save time, the following steps were
     Password: <copy>welcome1</copy>
     ```
 
-    ![Login Page](images/mwb-em-login.png " ")
+    ![Login Page](../initialize-environment/images/em-login-mwb.png " ")
 
 2. Click on "Targets"->"Databases":
 
@@ -53,7 +53,7 @@ In the interest of simplifying the setup and save time, the following steps were
 - cdb19c is our destination container database
   ![Databases](images/a_t1_01_databases.png " ")
 
-### **Export and Import User Requirement**
+### **Transportable Tablespace User Requirement**
 
 In this task we will migrate the database using the Transportable Tablespace (TTS) migration method. With this method the migration must be done as a user with SYSDBA role. We will use SYS on both source and destination databases so there's no additional user requirements
 
@@ -96,9 +96,9 @@ We'll use the Transportable Tablespace (TTS) migration method in this task. With
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-          ![MWB Menu Item](images/a_t2_00_mwb_menu_item.png " ")
+          ![MWB Menu Item](images/a_t2_01_mwb_menu_item.png " ")
 3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
-          ![Getting Started](images/a_t2_01_getting_started.png " ")
+          ![Getting Started](images/a_t2_02_getting_started.png " ")
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -107,7 +107,7 @@ We'll use the Transportable Tablespace (TTS) migration method in this task. With
         ```
 
     - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "Full Database" in this lab
-        ![Migrate Options](images/a_t2_02_migrate_options.png " ")
+        ![Migrate Options](images/a_t2_03_migrate_options.png " ")
     - Select Source Database: Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
     - Select Destination Database: Click inside the field and select "Create Pluggable Database" from the drop-down list
     - On the "Create a New Pluggable Database" pop-up window, enter:
@@ -131,9 +131,9 @@ We'll use the Transportable Tablespace (TTS) migration method in this task. With
             ```
 
         - Click OK
-    - Click Continue
 
-          ![Create Migration Activity](images/a_t2_03_create_migration_activity.png " ")
+          ![Create Migration Activity](images/a_t2_04_create_migration_activity.png " ")
+    - Click Continue
 
 5. On the Add Details screen:
     - Source:
@@ -146,77 +146,80 @@ We'll use the Transportable Tablespace (TTS) migration method in this task. With
         - Migration Method: Transportable Tablespace
         - Compare Performance After Migration: Checked (default)
         - Keep the next 3 fields at default values
-        - Click Next
 
-      ![Add Details](images/a_t2_04_add_details.png " ")
+            ![Add Details](images/a_t2_05_add_details.png " ")
+        - Click Next
 
 6. On the Customize screen:
     - Under "Migration Details" choose "Complete Migration" for migration phase. Note Migration Workbench allows you to do the migration in phases, where you create an RMAN backup in the first phase, update the backup with incremental backups as needed, then complete the migration in the final phase. This allows you to do the migration with minimal downtime. For this workshop however we'll do the migration in a single phase.
     - Under "Compare Performance After Migration", select "Use Existing" and choose SQL Tuning Set "EXP_USER -- SH2STS"
-    - Click Review
 
-        ![Customize](images/a_t2_05_customize.png " ")
+        ![Customize](images/a_t2_06_customize.png " ")
+    - Click Review
 
 7. On the "Review & Submit" screen, review your entries and click Validate
 
-    ![Validate](images/a_t2_06_validate.png " ")
+    ![Validate](images/a_t2_07_validate.png " ")
 
 8. Validation checks run for a few minutes. The result shows all checks passed and 2 were skipped as they don't apply to this migration. If your results are different check your previous steps, fix the error and revalidate
     - Click "Close & Submit"
 
-        ![Validate Activity](images/a_t2_07_validate_activity.png " ")
+        ![Validate Activity](images/a_t2_08_validate_activity.png " ")
 
-9. On the Submit Activity screen, click submit, then on the next screen click "Close and Go Back to Activities Page"
+9. On the Submit Activity screen, click Submit
 
-    ![Submit Activity](images/a_t2_08_submit_activity.png " ")
+    ![Submit Activity](images/a_t2_09_submit_activity.png " ")
 
-10. On the activity page, the status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute:
+10. On the next screen click "Close and Go Back to Activities Page"
 
-    ![Activity Page](images/a_t2_09_activity_page.png " ")
+    ![Close](images/a_t2_10_close.png " ")
 
-11. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped". The procedure should take about 10 minutes to complete. You can switch to the next lab and complete task 1, then come back here to finish this task
+11. On the activity page, the status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute:
 
-    ![Procedure Activity](images/a_t2_10_procedure_activity.png " ")
+    ![Activity Page](images/a_t2_11_activity_page.png " ")
 
-12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
+12. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped". The procedure should take about 10 minutes to complete. You may want to switch to the next lab and complete task 1, then come back here to finish this task
 
-    ![Procedure Activity Completed](images/a_t2_11_procedure_activity_completed.png " ")
+    ![Procedure Activity](images/a_t2_12_procedure_activity.png " ")
 
-13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
-    ![View Analysis](images/a_t2_12_view_analysis.png " ")
-14. Examine the analysis report
+13. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
+
+    ![Procedure Activity Completed](images/a_t2_13_procedure_activity_completed.png " ")
+
+14. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
+    ![View Analysis](images/a_t2_14_view_analysis.png " ")
+15. Examine the analysis report
     - Review validation checks that passed, failed or skipped
     - Review the export and import tabs for time taken to complete export and import activities, the number of objects exported and imported, and the errors reported during export and import activities
     - For further details on the errors you can review log file using procedure activity step mentioned in step #12
     - In your environment you may need to take actions such as granting specific object privileges to fix the errors. However for this lab the errors shown can be ignored
+        ![Analysis](images/a_t2_15_analysis.png " ")
     - When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the activity page
-        ![Analysis](images/a_t2_13_analysis.png " ")
+16. Click on the "Compare Performance" link from the drop-down menu on the right of the activity row
 
-15. Click on the "Compare Performance" link from the drop-down menu on the right of the activity row
+    ![Compare Performance](images/a_t2_16_compare_performance.png " ")
 
-    ![Compare Performance](images/a_t2_14_compare_performance.png " ")
-
-16. Examine the Performance Comparison report to analyze the database performance before and after the migration
+17. Examine the Performance Comparison report to analyze the database performance before and after the migration
     - Review overall performance impact on application to end user after the migration
     - Analyze top 100 impacted SQLs shown in absolute percentage. SQLs highlighted in green have improved performance due to improved execution plan or query cost. Those highlghted in red have regressed due to execution plan change or execution problems (for example query returning no rows, or number of rows returned is different in destination than in source, etc.)
     - Check regressed SQLs to see execution statistics, before and after migration change analysis
     - Analyze findings provided for each query to see which factors impacted the regressed SQLs. You can take action based on findings provided to improve  performance
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the activity page
 
-        ![Performance Comparison](images/a_t2_15_performance_comparison.png " ")
+        ![Performance Comparison](images/a_t2_17_performance_comparison.png " ")
 
-17. Click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
-    ![Mark Completed](images/a_t2_16_mark_completed.png " ")
+18. Click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
+    ![Mark Completed](images/a_t2_18_mark_completed.png " ")
 
-18. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
-    ![Confirmation](images/a_t2_17_confirmation.png " ")
+19. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
+    ![Confirmation](images/a_t2_19_confirmation.png " ")
 
-19. Activity is marked completed
-    ![PDB Created](images/a_t2_18_marked_completed.png " ")
+20. Activity is marked completed
+    ![PDB Created](images/a_t2_20_marked_completed.png " ")
 
-20. Finally validate the new PDB has been created. In EM console, navigate to "Targets"->"Databases", and expand "cdb19c" container database:
+21. Finally validate the new PDB has been created. In EM console, navigate to "Targets"->"Databases", and expand "cdb19c" container database:
 
-    ![PDB Created](images/a_t2_19_pdb_created.png " ")
+    ![PDB Created](images/a_t2_21_pdb_created.png " ")
 
 You have now completed this task.
 
@@ -228,10 +231,10 @@ You may now [proceed to the next lab](#next).
 
 - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
 - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-- [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
+- [Database Migration Workbench Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/index.html)
 
 ## Acknowledgements
 
 - **Author** - Amine Tarhini, Systems Management Specialist, Oracle Platform Solution Engineering
 - **Contributors** -  Harish Niddagatta, Oracle Enterprise Manager Product Management
-- **Last Updated By/Date** - Amine Tarhini, June 2022
+- **Last Updated By/Date** - Amine Tarhini, July 2022

@@ -47,7 +47,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
     Password: <copy>welcome1</copy>
     ```
 
-    ![Login Page](images/mwb-em-login.png " ")
+    ![Login Page](../initialize-environment/images/em-login-mwb.png " ")
 
 2. Click on "Targets"->"Databases":
 
@@ -55,7 +55,7 @@ In the interest of simplifying the setup and save time, the following pre-Requis
 
 - orcl is our source database
 
-### **Export User Requirement**
+### **Data Pump User Requirement**
 
 - For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
 - To learn more about the the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
@@ -359,7 +359,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 
 1. Log into your Enterprise Manager as sysman as indicated in the Prerequisites step if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-          ![MWB Menu Item](images/b_t2_00_mwb_menu_item.png " ")
+          ![MWB Menu Item](images/b_t2_01_mwb_menu_item.png " ")
 3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
           ![Getting Started](images/c_t4_01_getting_started.png " ")
 
@@ -427,7 +427,7 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
 7. On the "Review & Submit" screen, review your entries and click "Analyze Source" in the Source column
     ![Anaylze Source](images/c_t4_06_anayze_source.png " ")
     - The analysis will open in a new browser tab and will take a few minutes to complete
-    - When the analysis is complete review CPAT Results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis. You can download the CPAT results if desired
+    - When the analysis is complete review CPAT Results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis
     ![CPAT Results](images/c_t4_07_cpat_results.png " ")
     - Click on the previous browser tab to continue with the migration process
     - Click "Validate"
@@ -437,28 +437,28 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - Click "Close & Submit"
     ![Validate Activity](images/c_t4_09_validate_activity.png " ")
 
-9. On the Submit Activity screen, check the "Confirm that you have done source analysis" checkbox
+9. On the Submit Activity screen, check the "Confirm that you have done source analysis" checkbox then click Submit
     ![Submit Activity](images/c_t4_10_submit_activity.png " ")
-10. Click submit, then click "Close and Go Back to Activities Page"
+10. On the next screen click "Close and Go Back to Activities Page"
+    ![Close](images/c_t4_11_close.png " ")
 11. On the activity page, change the Auto Refresh to 1 minute
-    ![Activity Page](images/c_t4_11_activity_page.png " ")
-11. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped"
-    ![Procedure Activity](images/c_t4_12_procedure_activity.png " ")
+    ![Activity Page](images/c_t4_12_activity_page.png " ")
+11. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped". The procedure should take about 8 minutes to complete.
+    ![Procedure Activity](images/c_t4_13_procedure_activity.png " ")
 12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
-    ![Procedure Activity Completed](images/c_t4_13_procedure_activity_completed.png " ")
+    ![Procedure Activity Completed](images/c_t4_14_procedure_activity_completed.png " ")
 13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
-    ![View Analysis](images/c_t4_14_view_analysis.png " ")
+    ![View Analysis](images/c_t4_15_view_analysis.png " ")
 14. Examine the analysis report
     - Review validation checks that passed, failed or skipped
     - Review the export and import tabs for time taken to complete export and import activities, the number of objects exported and imported, and the errors reported during export and import activities
     - For further details on the errors you can review log file using procedure activity step mentioned in step #12
     - In your environment you may need to take actions such as granting specific object privileges to fix the errors. However for this lab the errors shown can be ignored
+    ![Analysis](images/c_t4_16_analysis.png " ")
     - When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the activity page
-    ![Analysis](images/c_t4_15_analysis.png " ")
-
 15. Click on the "Compare Performance" link from the drop-down menu on the right of the activity row
 
-    ![Compare Performance](images/c_t4_16_compare_performance.png " ")
+    ![Compare Performance](images/c_t4_17_compare_performance.png " ")
 
 16. Examine the Performance Comparison report to analyze the database performance before and after the migration
     - Review overall performance impact on application to end user after the migration
@@ -467,19 +467,19 @@ In this step we'll migrate and upgrade an Oracle 12c database to autonomous data
     - Analyze findings provided for each query to see which factors impacted the regressed SQLs. You can take action based on findings provided to improve  performance
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the activity page
 
-      ![Performance Comparison](images/c_t4_17_performance_comparison.png " ")
+      ![Performance Comparison](images/c_t4_18_performance_comparison.png " ")
 
 17. Click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
 
-    ![Mark Completed](images/c_t4_18_mark_completed.png " ")
+    ![Mark Completed](images/c_t4_19_mark_completed.png " ")
 
 18. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
 
-    ![Confirmation](images/c_t4_19_confirmation.png " ")
+    ![Confirmation](images/c_t4_20_confirmation.png " ")
 
 19. Activity is marked completed
 
-     ![Marked Completed](images/c_t4_20_marked_completed.png " ")
+     ![Marked Completed](images/c_t4_21_marked_completed.png " ")
 
     You have now completed this task.
 
@@ -491,10 +491,10 @@ You may now [proceed to the next lab](#next).
 
 - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
 - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-- [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
+- [Database Migration Workbench Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/index.html)
 
 ## Acknowledgements
 
 - **Author** - Amine Tarhini, Systems Management Specialist, Oracle Platform Solution Engineering
 - **Contributors** -  Harish Niddagatta, Oracle Enterprise Manager Product Management
-- **Last Updated By/Date** - Amine Tarhini, June 2022
+- **Last Updated By/Date** - Amine Tarhini, July 2022

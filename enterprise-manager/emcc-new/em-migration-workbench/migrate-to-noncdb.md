@@ -45,7 +45,7 @@ In the interest of simplifying the setup and save time, the following steps were
     Password: <copy>welcome1</copy>
     ```
 
-    ![Login Page](images/mwb-em-login.png " ")
+    ![Login Page](../initialize-environment/images/em-login-mwb.png " ")
 
 2. Click on "Targets"->"Databases":
 
@@ -53,7 +53,7 @@ In the interest of simplifying the setup and save time, the following steps were
 - orcl19 is our destination database
   ![Databases](images/b_t1_01_databases.png " ")
 
-### **Export and Import User Requirement**
+### **Data Pump User Requirement**
 
 - For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
 - For migrating the database to a new non-container database, an import user (IMP_USER) was created in the target database (orcl19c) with password "welcome1" and the required privileges
@@ -98,9 +98,9 @@ We'll use the Data Pump migration method in this task.
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu, navigate to "Migration and Consolidation"->"Database Migration Workbench"
-          ![MWB Menu Item](images/b_t2_00_mwb_menu_item.png " ")
+          ![MWB Menu Item](images/b_t2_01_mwb_menu_item.png " ")
 3. On the "Database Migration" page, expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow, then click on "Create Migration Activity"
-          ![Getting Started](images/b_t2_01_getting_started.png " ")
+          ![Getting Started](images/b_t2_02_getting_started.png " ")
 4. On the Create Migration Activity screen:
     - Activity Name:
 
@@ -109,12 +109,12 @@ We'll use the Data Pump migration method in this task.
         ```
 
     - Migrate: Expand the drop-down list. Note the options are "Full Database", "Schemas", and "Tablespaces". We'll choose "Full Database" in this lab
-        ![Migrate Options](images/b_t2_02_migrate_options.png " ")
+        ![Migrate Options](images/b_t2_03_migrate_options.png " ")
     - Select Source Database:  Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
     - Select Destination Database:  Click inside the field and select "orcl19c.subnet.vcn.oraclevcn.com" from the drop-down list
     - Note checkmark for "Tools Validation". For this lab, CPAT tool was uploaded to Enterprise Manager in advance
     - Click Continue
-      ![Create Migration Activity](images/b_t2_03_create_migration_activity.png " ")
+      ![Create Migration Activity](images/b_t2_04_create_migration_activity.png " ")
 5. On the Add Details screen:
 
     Source:
@@ -138,7 +138,7 @@ We'll use the Data Pump migration method in this task.
           ```
     - Click Next
 
-      ![Add Details](images/b_t2_04_add_details.png " ")
+      ![Add Details](images/b_t2_05_add_details.png " ")
 
 6. On the Customize screen:
     - Examine the various options you can configure for Export and Import
@@ -147,69 +147,72 @@ We'll use the Data Pump migration method in this task.
     - Under "Transfer options": Check the "Datapump Directory is shared" checkbox since this is the case in our lab
     - Click Review
 
-        ![Customize](images/b_t2_05_customize.png " ")
+        ![Customize](images/b_t2_06_customize.png " ")
 
 7. On the "Review & Submit" screen, review your entries and click "Analyze Source" in the Source column
-        ![customize](images/b_t2_06_analyze_source.png " ")
+        ![customize](images/b_t2_07_analyze_source.png " ")
     - The analysis will open in a new browser tab and will take a few minutes to complete
-    - When the analysis is complete review CPAT Results. The warnings shown can be ignored for the purpose of this lab. When you run this activity in your environment ensure you address any issues identified on a case by case basis. You can download the CPAT results if desired
+    - When the analysis is complete review CPAT Results. The warnings shown can be ignored for the purpose of this lab. When you run this activity in your environment ensure you address any issues identified on a case by case basis
 
-        ![CPAT Results](images/b_t2_07_cpat_results.png " ")
+        ![CPAT Results](images/b_t2_08_cpat_results.png " ")
 
     - Click on the previous tab to continue with the migration process
     - Click Validate
 
-        ![Validate](images/b_t2_08_validate.png " ")
+        ![Validate](images/b_t2_09_validate.png " ")
 
 8. Validation checks run for a few minutes and all checks should pass. If your results are different check your previous steps, fix the error and revalidate
     - Click "Close & Submit"
 
-        ![Validate Activity](images/b_t2_09_validate_activity.png " ")
+        ![Validate Activity](images/b_t2_10_validate_activity.png " ")
 
-9. On the Submit Activity screen, click submit, then on the next screen click "Close and Go Back to Activities Page"
+9. On the Submit Activity screen, click Submit
 
-    ![Submit Activity](images/b_t2_10_submit_activity.png " ")
+    ![Submit Activity](images/b_t2_11_submit_activity.png " ")
 
-10. On the activity page, the status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute
+10. On the next screen click "Close and Go Back to Activities Page"
 
-    ![Activity Page](images/b_t2_11_activity_page.png " ")
+    ![Close](images/b_t2_12_close.png " ")
 
-11. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped". The procedure should take about 5 minutes to complete. You can switch to the next lab and start task 1, then come back here in about 5 minutes to finish this task
+11. On the activity page, the status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute
 
-    ![Procedure Activity](images/b_t2_12_procedure_activity.png " ")
+    ![Activity Page](images/b_t2_13_activity_page.png " ")
 
-12. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
-    ![Procedure Activity Completed](images/b_t2_13_procedure_activity_completed.png " ")
+12. Click on the "Running" link under Status to go to the procedure activity page. Choose Show: "Steps Not Skipped". The procedure should take about 5 minutes to complete
 
-13. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
-    ![View Analysis](images/b_t2_14_view_analysis.png " ")
-14. Examine the analysis report
+    ![Procedure Activity](images/b_t2_14_procedure_activity.png " ")
+
+13. When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration:
+    ![Procedure Activity Completed](images/b_t2_15_procedure_activity_completed.png " ")
+
+14. From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to check the activity page. Click on the View Analysis link from the drop-down menu on the right of the activity row
+    ![View Analysis](images/b_t2_16_view_analysis.png " ")
+15. Examine the analysis report
     - Review validation checks that passed, failed or skipped
     - Review the export and import tabs for time taken to complete export and import activities, the number of objects exported and imported, and the errors reported during export and import activities
     - For further details on the errors you can review log file using procedure activity step mentioned in step #12
     - In your environment you may need to take actions such as granting specific object privileges to fix the errors. However for this lab the errors shown can be ignored
+    ![Analysis](images/b_t2_17_analysis.png " ")
     - When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the activity page
-    ![Analysis](images/b_t2_15_analysis.png " ")
+16. Click on the "Compare Performance" link from the drop-down menu on the right of the activity row
+    ![Compare Performance](images/b_t2_18_compare_performance.png " ")
 
-15. Click on the "Compare Performance" link from the drop-down menu on the right of the activity row
-    ![Compare Performance](images/b_t2_16_compare_performance.png " ")
-
-16. Examine the Performance Comparison report to analyze the database performance before and after the migration
+17. Examine the Performance Comparison report to analyze the database performance before and after the migration
     - Review overall performance impact on application to end user after the migration
-    - Analyze top 100 impacted SQLs shown in absolute percentage. SQLs highlighted in green have improved performance due to improved execution plan or query cost. Those highlghted in red have regressed due to execution plan change or execution problems (for example query returning no rows, or number of rows returned is different in destination than in source, etc.)
+    - Analyze top 100 impacted SQLs shown in absolute percentage. SQLs highlighted in green have improved performance due to improved execution plan or query cost. Those highlighted in red have regressed due to execution plan change or execution problems (for example query returning no rows, or number of rows returned is different in destination than in source, etc.)
     - Check regressed SQLs to see execution statistics, before and after migration change analysis
     - Analyze findings provided for each query to see which factors impacted the regressed SQLs. You can take action based on findings provided to improve  performance
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the activity page
-        ![Performance Comparison](images/b_t2_17_performance_comparison.png " ")
+        ![Performance Comparison](images/b_t2_19_performance_comparison.png " ")
 
-17. Click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
-    ![Mark Completed](images/b_t2_18_mark_completed.png " ")
+18. Click on the "Mark as Completed" link from the drop-down menu on the right of the activity row
+    ![Mark Completed](images/b_t2_20_mark_completed.png " ")
 
-18. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
-    ![Confirmation](images/b_t2_19_confirmation.png " ")
+19. Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate, then click yes
+    ![Confirmation](images/b_t2_21_confirmation.png " ")
 
-19. Activity is marked completed
-    ![Marked Completed](images/b_t2_20_marked_completed.png " ")
+20. Activity is marked completed
+    ![Marked Completed](images/b_t2_22_marked_completed.png " ")
 
 You have now completed this task.
 
@@ -221,10 +224,10 @@ You may now [proceed to the next lab](#next).
 
 - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
 - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-- [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
+- [Database Migration Workbench Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/index.html)
 
 ## Acknowledgements
 
 - **Author** - Amine Tarhini, Systems Management Specialist, Oracle Platform Solution Engineering
 - **Contributors** -  Harish Niddagatta, Oracle Enterprise Manager Product Management
-- **Last Updated By/Date** - Amine Tarhini, June 2022
+- **Last Updated By/Date** - Amine Tarhini, July 2022
