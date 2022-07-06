@@ -296,12 +296,12 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     Just as it was done for the first version of this image, a reference 19.7 Oracle home is needed to create a new version of the image and was setup in advance. [*/u01/app/oracle/product/19/db\_home\_src*]. This reference Oracle home is discovered in Enterprise Manager as shown below and will be used to create and new version of the Gold Image.
 
 2. Navigate to “***Targets >> All Targets***” and type in “*Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953*” in the “*Search Target Name*” box.
-    ![](images/All-Targets.png " ")
+    ![](images/All-Targets-19c.png " ")
     Search will return the below screen.
     ![](images/Task5-19c.png " ")
     Click on the target name to review the details.
 
-    ![](images/task5_home.png " ")
+    ![](images/task5-home.png " ")
 
 3. Review and execute the following command to create new Image version 19.7 to "*Tier1 SIDB 19c Linux-x64*"
 
@@ -371,7 +371,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
 1. As we have completed the pre-requisite task (associating database to image in Task 6), we can now upgrade the finance database. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then ***Databases***
 
-    ![](images/navigation.png "navigation")
+    ![](images/ec0b6926d4f65b52a771483ace24055c.png "navigation")
 
     and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
 
