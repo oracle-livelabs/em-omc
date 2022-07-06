@@ -307,7 +307,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
 
-    ![](images/targets-databases.png "navigation")
+    ![](images/ec0b6926d4f65b52a771483ace24055c.png "navigation")
 
     and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
 
