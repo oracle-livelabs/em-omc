@@ -119,6 +119,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     The Temporary Working Directory is auto filled as **/tmp**
 
+    Click **Next**
+
     ![](images/Task1-point9.jpg " ")
 
 
