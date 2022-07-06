@@ -138,7 +138,7 @@ In this step, you will compare two database targets to determine configuration d
 
 9.  Provide a name for Comparison.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target6.png " ")
+  ![](images/ecm2_one_time_database_comparison_ref_target_Image_7.png)
 
 10.  Add targets to be compared.
 
