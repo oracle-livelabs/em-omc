@@ -206,10 +206,12 @@ Click **Next**.
 
 8. In the Review page, verify the details and  click **Submit** .
 
-  ![](images/Task2-step7a.jpg " ")
+    ![](images/Task2-step7a.jpg " ")
 
-  Click **View Execution Details**
-  ![](images/View_execution_details.jpg " ")
+    Click **View Execution Details**
+
+
+    ![](images/View_execution_details.jpg " ")
 
 
   On the Procedure Activity page, view the status of the procedure.
