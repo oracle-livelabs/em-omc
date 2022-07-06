@@ -54,14 +54,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![](../initialize-environment/images/em-login.png " ")
 
 
-2.  Navigate to the ***Enterprise menu >> Provisioning and Patching >>
+2.  Navigate to  ***Enterprise >> Provisioning and Patching >>
     Database provisioning***
 
    ![](images/DB_provisioning-flow-main.jpg " ")
 
 
 
-3.  On the Database Provisioning page, in the related Links section on the left menu pane, click **Provision Pluggable Databases**
+3.  On the Database Provisioning page, in the *Related Links* section on the left menu pane, click **Provision Pluggable Databases**
 
     ![](images/PDB_provisioning-flow-main.jpg " ")
 
