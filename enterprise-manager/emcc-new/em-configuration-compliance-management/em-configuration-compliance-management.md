@@ -118,7 +118,7 @@ In this step, you will compare two database targets to determine configuration d
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_3.png " ")
+  ![](images/Em_Comp_Conf_Drift_MgmT_Image_3.png)
 
 6.  Identify the reference target to compare other targets.
 
