@@ -96,7 +96,10 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Optionally, select the check box to “create multiple DBs” incase you wish to create more than one PDB.
 
 
-8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB.     ```
+8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB.     
+
+
+    ```
     Username: <copy>pdbadmin</copy>
     ```
 
