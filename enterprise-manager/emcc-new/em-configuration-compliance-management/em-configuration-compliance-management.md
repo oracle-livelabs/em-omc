@@ -146,7 +146,7 @@ In this step, you will compare two database targets to determine configuration d
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with reference target.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_6.png " ")
+  ![](images/Em_Comp_Conf_Drifts_Mgmt_Image_6.png " ")
 
   Once the target is chosen, it appear as below
 
