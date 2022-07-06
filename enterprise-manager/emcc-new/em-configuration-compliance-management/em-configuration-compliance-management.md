@@ -106,7 +106,7 @@ In this step, you will compare two database targets to determine configuration d
 
 2.  From the Enterprise menu, select **Configuration**, then select **Configuration & Drift Management**
 
-  ![](images/ecm2_One_Time_Database_Comparison_menu.png)
+  ![](images/ecm2_One_Time_Database_Comparison_menu.png " ")
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
