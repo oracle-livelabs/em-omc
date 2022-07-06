@@ -130,7 +130,7 @@ In this step, you will compare two database targets to determine configuration d
 
 7.  Select **emrep.us.oracle.com** as reference target.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target4.png " ")
+  ![](images/ecm2_one_time_database_comparison_ref_target_Image_6.png " ")
 
 8.  Choose Database Instance Template for Comparison Template.
 
