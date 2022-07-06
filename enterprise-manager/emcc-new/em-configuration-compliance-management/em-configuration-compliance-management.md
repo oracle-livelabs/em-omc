@@ -136,13 +136,13 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_4.png)
 
-9.  Provide a name for Comparison.
+9.  Provide a name for Comparison, example name like **ECM002-Compare-Demo - One time Comparison**.
 
   ![](images/ecm2_one_time_database_comparison_ref_target_Image_7.png)
 
 10.  Add targets to be compared.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_5.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Target_Image_5.png " ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with reference target.
 
