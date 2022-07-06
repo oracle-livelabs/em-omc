@@ -88,7 +88,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
 7. Export inventory details to excel for reports.
 
-  ![](images/Em_Config_Compliane_db_Trends_Image_5.png " ")
+  ![](images/Em_Configs_Compliane_db_Trends_Image_5.png " ")
 
  These inventory details can be exported to an excel file for offline analysis or sharing the report to management. With the excel report, you can filter based on the properties you are using to show department or line of business specific assets allocation and usage. (**OPTIONAL**)
 
