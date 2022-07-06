@@ -153,11 +153,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_one_time_database_comparison_referred_target_Image_8.png " ")
 
-12.
-
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_7.png " ")
-
-  Comparison of the selected targets happens and below are the results.
+12.  Comparison would take few seconds for selected targets and below are the results.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_8.png " ")
 
