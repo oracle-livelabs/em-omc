@@ -148,11 +148,12 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drifts_Mgmt_Image_6.png " ")
 
-  Once the target is chosen, it appear as below
+  Once the target is chosen, it appears as below
+  Click **Submit**.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target8.png " ")
+  ![](images/Em_one_time_database_comparison_referred_target_Image_8.png " ")
 
-12. Click **Submit**.
+12.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_7.png " ")
 
