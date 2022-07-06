@@ -214,8 +214,8 @@ Click **Next**.
     ![](images/View_execution_details.jpg " ")
 
 
-  On the Procedure Activity page, view the status of the procedure.
-  ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
+    On the Procedure Activity page, view the status of the procedure.
+    ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
 8.  You can Navigate to ***Targets >> Databases***, Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
 
