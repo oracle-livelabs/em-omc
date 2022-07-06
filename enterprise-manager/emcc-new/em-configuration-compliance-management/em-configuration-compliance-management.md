@@ -118,15 +118,15 @@ In this step, you will compare two database targets to determine configuration d
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/Em_Comp_ConfDrift_Mgmt_Image_3.png)
+  ![](images/Em_Comp_ConfDrift_Mgmt_Image_3.png " ")
 
 6.  Identify the reference target to compare other targets.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target2.png " ")
+  ![](images/ecm2_one_time_database_comparison_ref_Target_Image_4.png " ")
 
   To begin with, filter ‘Target Type’ to Database Instance.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target3.png)
+  ![](images/ecm2_one_time_database_comparison_ref_Target_Image_5.png " ")
 
 7.  Select **emrep.us.oracle.com** as reference target.
 
