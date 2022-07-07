@@ -155,7 +155,11 @@ In this step, you will compare two database targets to determine configuration d
 
 12.  Comparison would take few seconds for selected targets and below are the results.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_9.png)
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_9.png " ")
+
+   Click **Clear All** at Configuration Items(Differences)
+
+   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png)
 
 13. Filter configurations items to review only Initialization Parameters.
 
