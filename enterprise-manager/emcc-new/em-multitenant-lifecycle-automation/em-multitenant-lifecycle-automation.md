@@ -67,7 +67,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 
 
-4.  On the Provision Pluggable Database Console, in the **Container   Database** section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
+4.  On the Provision Pluggable Database Console, in the *Container   Database* section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
 
     ![](images/Select-CDB-main-flow-helper.jpg " ")
     ![](images/Select-CDB-main-flow.jpg " ")
@@ -82,7 +82,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 6.  In the PDB Creation Options section, choose **Create a New PDB**. 
 
-    Use the Named credentials (ORACLE) for login.
+    Use the Named credentials (*ORACLE*) for login.
 
     Click **Next**
 
@@ -91,18 +91,18 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 
 
-7. In the Identification page, Enter a unique name for the PDB you are creating (prov_pdb). 
+7. In the Identification page, Enter a unique name for the PDB you are creating (*prov_pdb*). 
 
 
     *In your data center, if you want to create multiple pluggable databases on a container, you can select ‘Create Multiple Copies’ to optimize time required to create these multiple pluggable databases*
 
 
 
-8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB.     
+    In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB.     
 
 
     ```
-    Username: <copy>pdbadmin</copy>
+    Username: <copy>PDBADMIN</copy>
     ```
 
     ```
@@ -131,7 +131,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     On the same Storage Configuration page under the **Post Creation Scripts**  , click on  “Select from software library” radio button and click on the magnifier to choose the script. 
   ![](images/Task1-poin10.jpg " ")
 
-  In the dialog box that appears, type “**unlock**” and click on the magnifier. select the script 'Script to unlock account' and click **select**
+  In the dialog box that appears, type “**unlock**” and click on the magnifier. select the script '*Script to unlock account*' and click **select**
 
   ![](images/Unock-helper.jpg " ")
 
@@ -142,7 +142,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 
 
-11. In the Schedule page, select the check box immediately next to Start. Click Next.
+11. Schedule **Immediately** or later. 
+
+    Click **Next**.
 
     ![](images/Task1-step10.jpg " ")
 
@@ -150,13 +152,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 12. In the Review page, review the details you have provided for the deployment procedure and  click **Submit**
 
-    You can now click on View Execution Details link to see details.
+    You can now click on **View Execution Details** link to see details.
 
     ![](images/d12c1a1d5e3c3f394248da7d12813b6b.jpg " ")
 
 
 
-13. In the Procedure Activity page, view the status of the procedure. Click the Status link for each step to view the details of the execution of each step.
+13. On Procedure Activity, select specific execution step from the procedure step tree to see details of the execution log.
+
+    Setup View Data to be refreshed with specific time interval to refresh page
 
     ![](images/3657eb9bb536b26d163c148e40a99332.jpg " ")
 
