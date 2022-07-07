@@ -271,7 +271,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 9.  Go to Drift Results tab and create a drift definition.
 
-  ![](images/Compare_and_Drift_Demo_Image_10.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_10.png " ")
 
 10. Click on **Create Definition** under Drift Management.
 
