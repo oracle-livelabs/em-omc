@@ -226,7 +226,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
 
-  ![](images/Compare_Drift_Demo_Image_3.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_3.png " ")
 
 5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
 
@@ -250,9 +250,10 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_Drift_Demo_Image_7.png " ")
 
-7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
+7.  In this lab, we will customize this template and monitor configuration drift    for  two configuration items.
 
-Select the following three configuration items only
+    Select the following three configuration items only
+
     - Instance Caging Information
     - Instance Information
     - Initialization Parameters under Instance Information configuration item
