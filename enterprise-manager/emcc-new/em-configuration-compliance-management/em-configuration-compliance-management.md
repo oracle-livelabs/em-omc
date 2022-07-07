@@ -226,7 +226,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
 
-  ![](images/Compare_And_Drift_Demo_Image_3.png " ")
+  
 
 5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, by **Search** with name **ECM003-Drift_Demo** created.
 
