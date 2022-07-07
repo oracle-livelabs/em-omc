@@ -174,15 +174,13 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_11.png " ")
 
-
-
 14. Now, let us go to Comparison and Drift Management dashboard page for further analysis of results
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_10.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_12.png " ")
 
 15. In the dashboard page, donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_11.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_13.png)
 
   You should see the comparison definition you created in this page.
 
