@@ -275,13 +275,13 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 10. Click on **Create Definition** under Drift Management.
 
-  ![](images/Compare_And_Drift_Demo_Image_11.png)
+  ![](images/Compare_And_Drift_Demo_Image_11.png " ")
 
     - Choose Database Instance as the Target Type
     - Select the template created in the previous step
     - Click OK
 
-  ![](images/Compare_And_Drift_Demo_Image_12.png)
+  ![](images/Compare_And_Drift_Demo_Image_12.png " ")
 
 11. In the drift definition details page, provide a unique name for the drift definition.
 
