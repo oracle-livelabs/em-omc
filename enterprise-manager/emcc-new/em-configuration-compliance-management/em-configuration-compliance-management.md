@@ -110,7 +110,7 @@ In this step, you will compare two database targets to determine configuration d
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
-  ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
+  ![](images/ecm2_One_Time_Database_Comparison_Menu.png " ")
 
 4.	Select **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
@@ -208,11 +208,13 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***. Review the different types of comparisons supported.
 
-    ![](images/ecm2_One_Time_Database_Comparison_menu.png " ")
+    ![](images/ecm2_one_time_database_comparison_menus.png)
 
-  Chose Templates left side of the panel of the Dashboard.
+   By Clicking on the **i** icon, review the different types of comparisons.
 
-  ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
+   -  Chose Templates left side of the panel of the Dashboard.
+
+  ![](images/ecm2_One_Time_Database_Comparison_Menu.png " ")
 
 3.  Go to Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
