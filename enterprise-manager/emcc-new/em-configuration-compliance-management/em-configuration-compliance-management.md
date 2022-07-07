@@ -240,11 +240,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    Highlight this new template and click Edit.
 
-  ![](images/)
+  ![](images/Compared_And_Drift_Demo_Image_5.png " ")
 
 6.  Configuration templates page appears below.
 
-  ![](images/Compare_Drift_Demo_Image_6.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_6.png " ")
 
   To begin with, uncheck all configuration items.
 
