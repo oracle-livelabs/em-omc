@@ -414,7 +414,8 @@ Securing a provisioned Oracle Database is critical to protect your data. You nee
 2. Click the **Compliance Standards** tab, Click on the Dropdown next to **Search**,
 Key in "High Security" as the key word and hit search.
 
-    Do not click on the Compliance standard result , but only Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+    Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+
 
       ![](images/Task4-Compliance-Standard-name.jpg " ")
 
@@ -441,22 +442,20 @@ Key in "High Security" as the key word and hit search.
 
     ![](images/1317deb228d80211d9e6a2edf2cbba9e.jpg " ")
 
-8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards
+8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards.
+
 
     ![](images/Task4-Navigate_to_Compliance-Result-1.jpg " ")
 
-9. And you  will see the following screen
-
-    ![](images/Task4-Compliance-Results.jpg " ")
-
-10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations.
-In case of any  violations, you will see details like last evaluation date, rule name violated and rationale for the violation under the violation tab.
-
-      ![](images/Task4-Violations-tab.jpg " ")
 
 
+10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations. 
+    Incase of violations you will dee details like last evaluation date, name of the rule violated and rationale for the violation under the violation tab
+    ![](images/Task4-Violations-tab.jpg " ")
 
-12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations  , corrective actions and a compliance standard score.
+
+12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. 
+The Dashboard provides a brief summary of the violations  , corrective actions and compliance standard score.
 
     
     From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**
@@ -464,8 +463,10 @@ In case of any  violations, you will see details like last evaluation date, rule
 
     ![](images/Task4-Navigate-to-Dashboard-latest.jpg " ")
 
-      
+    
+
       **Dashboard View**
+
 
     ![](images/Task4-Compliance-Dashboard-latest.jpg " ")
 
@@ -748,7 +749,7 @@ Login to the EM Console as super administrator **sysman/welcome1**
    
     Click on **Pluggable Database Pool**’. A Pluggable Database Pool consists of a set of Container Databases on which PDBs will be provisioned.
 
-    Click on name of the pool to see more details.
+    Click on name of the pool **pdbpool** to see more details.
 
     ![](images/b49f455842d0fb11dd7de44fcaccfe26.jpg " ")
 
