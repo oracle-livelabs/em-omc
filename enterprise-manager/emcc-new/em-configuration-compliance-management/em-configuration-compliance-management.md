@@ -250,7 +250,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_7.png " ")
 
-7.  In this lab, we will customize this template and monitor configuration drift    for  two configuration items.
+7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
     Select the following three configuration items only
 
@@ -263,11 +263,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
-  ![](images/Compare_And_Drift_Demo_image_9.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_9-1.png " ")
 
   **Search** with Template name **ECM003-Drift_Demo** shows with Confirmation page
 
-  ![](images/Compare_and_Drift_Demo_Image_9a.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_10-1.png " ")
 
 9.  Go to Drift Results tab and create a drift definition.
 
