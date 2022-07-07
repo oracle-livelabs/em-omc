@@ -208,19 +208,19 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***. Review the different types of comparisons supported.
 
-  ![](images/ecm2_one_time_database_comparison_menu.png " ")
+    ![](images/ecm2_One_Time_Database_Comparison_menu.png " ")
 
   Chose Templates left side of the panel of the Dashboard.
 
   ![](images/Comparion_and_Drift_Mgmt_Dashboard_Image.png " ")
 
-3.  Go to Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page. **Sort Name Alphabetically** look for Database Instance Template as shown below.
+3.  Go to Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
-  ![](images/Compare_and_Drift_template_Image_1.png " ")
+  ![](images/Compare_and_Drift_Template_Image_1.png " ")
 
-4.  With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization.
+4.  **Sort Name Alphabetically** look for Database Instance Template as shown below. With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization.
 
-  ![](images/Compare_and_Drift_template_Image_2.png " ")
+  ![](images/Compare_And_Drift_Template_Image_2.png " ")
 
    Provide a unique name to the new template and click OK.
 
