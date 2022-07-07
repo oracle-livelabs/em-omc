@@ -180,15 +180,15 @@ In this step, you will compare two database targets to determine configuration d
 
 15. In the dashboard page, donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_13.png)
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_13.png " ")
 
   You should see the comparison definition you created in this page.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png)
 
 16. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_14.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_15.png " ")
 
   After Exporting, Click **Cancel** to exit
 
