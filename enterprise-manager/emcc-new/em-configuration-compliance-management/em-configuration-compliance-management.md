@@ -231,7 +231,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
 
   ```
-  name: <copy>ECM003-Drift_Demo</copy>
+   <copy>ECM003-Drift_Demo</copy>
 
   ```
   And click **Search**.
@@ -240,7 +240,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    Highlight this new template and click Edit.
 
-  ![](images/Compare_and_Drift_Demo_Image_5.png " ")
+  ![](images/Compare_Drift_Demo_Image_5.png " ")
 
 6.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
