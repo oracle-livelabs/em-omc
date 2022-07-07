@@ -242,15 +242,17 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_Drift_Demo_Image_5.png " ")
 
-6.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
+6.  Configuration templates page appears below.
 
-  ![](images/Compare_and_Drift_Demo_Image_6.png " ")
+  ![](images/Compare_Drift_Demo_Image_6.png " ")
 
   To begin with, uncheck all configuration items.
 
   ![](images/Compare_and_Drift_Demo_Image_7.png " ")
 
-7.  Select the following three configuration items only
+7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
+
+Select the following three configuration items only
     - Instance Caging Information
     - Instance Information
     - Initialization Parameters under Instance Information configuration item
