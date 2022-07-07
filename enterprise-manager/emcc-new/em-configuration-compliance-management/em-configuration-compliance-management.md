@@ -184,7 +184,7 @@ In this step, you will compare two database targets to determine configuration d
 
   You should see the comparison definition you created in this page.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_13.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png " ")
 
 16. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
