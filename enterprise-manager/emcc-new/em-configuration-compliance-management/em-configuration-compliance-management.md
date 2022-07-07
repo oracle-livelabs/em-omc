@@ -240,7 +240,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    Highlight this new template and click Edit.
 
-  ![](images/Compare_Drift_Demo_Image_5.png " ")
+  ![](images/Compare_And_Drift_DemO_Image_5.png)
 
 6.  Configuration templates page appears below.
 
