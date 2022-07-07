@@ -78,14 +78,13 @@ All the items in this step are read-only, primary goal is to learn about invento
 
 6.  In the Details excel fie table output below, you will see details as follows
 
-
-    - Database instance name Target
-    - Host on which this database is located
-    - Database type - cluster or single instance
-    - Database version number
-    - OS specific details like OS version, platform, etc.
-    - Most importantly, LOB/Department information
-      Details table gives more information of each Database instance for you to get a good understanding of number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business or Department, then you will be able to determine the number of targets deployed for a given business unit.Explore these features to get a good handle on Inventory and Usage details.
+      - Database instance name Target
+      - Host on which this database is located
+      - Database type - cluster or single instance
+      - Database version number
+      - OS specific details like OS version, platform, etc.
+      - Most importantly, LOB/Department information
+        Details table gives more information of each Database instance for you to get a good understanding of number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business or Department, then you will be able to determine the number of targets deployed for a given business unit.Explore these features to get a good handle on Inventory and Usage details.
 
 7. Export inventory details to excel for reports.
 
