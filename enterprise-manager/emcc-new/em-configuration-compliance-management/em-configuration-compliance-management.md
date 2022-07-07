@@ -159,13 +159,14 @@ In this step, you will compare two database targets to determine configuration d
 
    Click **Clear All** at Configuration Items(Differences)
 
-   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png)
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png)
 
 13. Filter configurations items to review only Initialization Parameters.
 
   You can see the differences in the Initialization Parameters between the two targets.
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
+  
     - Equal sign means parameter properties are same across the reference and target compared
     - Not equal sign indicates parameter properties are different across the reference and target compared
     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
