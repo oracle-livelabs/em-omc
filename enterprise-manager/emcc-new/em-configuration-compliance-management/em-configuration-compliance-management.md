@@ -155,19 +155,21 @@ In this step, you will compare two database targets to determine configuration d
 
 12.  Comparison would take few seconds for selected targets and below are the results.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_8.png " ")
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_9.png)
 
 13. Filter configurations items to review only Initialization Parameters.
-
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_9.png " ")
 
   You can see the differences in the Initialization Parameters between the two targets.
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
-      - Equal sign means parameter properties are same across the reference and target compared
-      - Not equal sign indicates parameter properties are different across the reference and target compared
-      - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
-      - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+    - Equal sign means parameter properties are same across the reference and target compared
+    - Not equal sign indicates parameter properties are different across the reference and target compared
+    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
+    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_9.png " ")
+
+
 
 14. Now, let us go to Comparison and Drift Management dashboard page for further analysis of results
 
