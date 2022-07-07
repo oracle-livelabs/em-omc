@@ -1,7 +1,7 @@
 # Multitenant Database Lifecycle Management
 ## Introduction
 
-This workshop will help you understand how one can utilise Enterprise Manager to make the best use of Oracle Database Multitenancy , and Lifecycle Management capabilities. We also have labs which will help you understand how organisations can utilise the Database Private Cloud which allows self service users to request and manage PDBs with ease. 
+This workshop will help you understand how one can utilize Enterprise Manager to make the best use of Oracle Database Multitenancy , and Lifecycle Management capabilities. We also have labs which will help you understand how organizations can utilize the Database Private Cloud which allows self-service users to request and manage PDBs with ease. 
 
 *Estimated Lab Time: 60 minutes*
 
@@ -12,7 +12,7 @@ Watch the video below for a quick walk through of the lab.
 
 Oracle Enterprise Manager Database Lifecycle Management (DBLM) Pack  comes with out-of-box Deployment Procedures to provision, clone, and patch various configurations of the Oracle Database. The Management Pack offers new capabilities that simplify support for the entire lifecycle of pluggable databases, including migration, plugging and unplugging. The Management Pack features include pluggable database (PDB) provisioning and management from the self-service portal, PDB patching and upgrades, and PDB relocation to new platforms.
 
-On the other hand, DBLM, when combined with Cloud Management Pack (CMP) provides the lifecycle management of PDBs on Database Private Cloud. This enables the Self Service Users to Provision, Plug-Unplug , Clone and Migrate PDBs  on the Private Cloud.
+Cloud Management Pack (CMP) that resides on top of DBLM, provides  lifecycle management of PDBs in Database Private Cloud. This enables the Self Service Users to Provision, Plug-Unplug , Clone and Migrate PDBs in the Private Cloud.
 
 
 
@@ -26,7 +26,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 | 2    | Un-plug/Plug an existing Pluggable Database | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed (Create from unplugged)                                                                                                                       | Unplug a PDB when not needed and plug it back as per need hence maximizing resource utilization in your organization. Easily upgrade PDBs with few clicks by moving from one container to another.                                                                                                                  |
 | 3    | Clone an existing Pluggable Database                                 | 5min                      | Create multiple copies (Clones) of a PDB to dev/test purpose                                                                                                                     | Create multiple PDBs clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                      |
 | 4    | Compliance Management for Pluggable Database                                                         | 10min                     | Apply a compliance standard on PDB and use corrective action to fix the violation                                                                                                | Make sure PDBs comply with compliance standards and fix them with a click of a button if there is any anomaly.                                                                                                                         |
-| 5    | Self- service to request a PDB using PDBaaS            | 10min                     | Request PDB pluggable database using Service Catalog. (Private Cloud) Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
+| 5    | Self- service to request a PDB using PDBaaS            | 10min                     | Request PDB pluggable database using Service Catalogue. (Private Cloud) Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
 | 6    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10min                     | An overview of the administrative setup involved for PDBaaS (Private Cloud) which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc. | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm and make sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
 
 
@@ -67,7 +67,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 
 
-4.  On the Provision Pluggable Database Console, in the **Container   Database** section, click on the magnifier to select the **CDB (CDB186 – 18.8 version)** within which you want to create new PDBs.
+4.  On the Provision Pluggable Database Console, in the **Container   Database** section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
 
     ![](images/Select-CDB-main-flow-helper.jpg " ")
     ![](images/Select-CDB-main-flow.jpg " ")
@@ -93,7 +93,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 7. In the Identification page, Enter a unique name for the PDB you are creating (prov_pdb). 
 
-    Optionally, select the check box to “create multiple DBs” incase you wish to create more than one PDB.
+
+    *In your data center, if you want to create multiple pluggable databases on a container, you can select ‘Create Multiple Copies’ to optimize time required to create these multiple pluggable databases*
+
 
 
 8. In the PDB Administrator section, enter the credentials of the admin user account you need to create for administering the PDB.     
@@ -126,7 +128,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 10. Optionally, you can also select a post-script, which will be executed post PDB creation.
 
-    On the same Storage Configration page under the **Post Creation Scripts**  , click on  “Select from software library” radio button and click on the magnifier to choose the script. 
+    On the same Storage Configuration page under the **Post Creation Scripts**  , click on  “Select from software library” radio button and click on the magnifier to choose the script. 
   ![](images/Task1-poin10.jpg " ")
 
   In the dialog box that appears, type “**unlock**” and click on the magnifier. select the script 'Script to unlock account' and click **select**
@@ -174,7 +176,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/PDB_provisioning-flow-main.jpg " ")
 
-3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to Unplug PDBs.
+3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to Unplug PDBs.
     ![](images/Select-CDB-main-flow-helper.jpg " ")
     ![](images/Select-CDB-main-flow.jpg " ")
 
@@ -186,21 +188,27 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 5.  On the Select PDB page in  Pluggable Database section click on the magnifier to choose the PDB(PROV_PDB) you want to unplug. 
 
-    Also Select Named credentials "ORACLE"
+    
+    Select Named credentials “ORACLE” in container Database Host Credentials
+
     Click **Next**
 
     ![](images/39102476b5e5915a1491e28525af88f5.jpg " ")
 
 6.  On the Destination page, Click on the **Software Library**  radio button to define the location of PDB template. 
 
-    Click on the **Generate PDB Archive** option to store the template.
+    Select **Generate PDB Archive** option to unplug pdb  
 
-    Incase the Temporary Working Directory is not defined , type /tmp in the location space. If it is predefined, ignore and click **Next**
+    PDB Template Name will be prepopulated using combination of CDB and PDB name but you have option to change it. 
+
+    By default temporary working directory is prepopulated as **/tmp**  but you have option to change it. 
+    
+    click **Next**
 
     ![](images/Task2-step6-latest.jpg " ")
 
-7.  In the Schedule page, Select the check box immediately next to Start.
-Click **Next**.
+7.   Schedule immediately or later .
+    Click **Next**.
   ![](images/Task2-Step7.jpg " ")
 
 
@@ -215,10 +223,16 @@ Click **Next**.
     ![](images/View_execution_details.jpg " ")
 
 
-    On the Procedure Activity page, view the status of the procedure.
+    On the Procedure Activity page, select specific execution step from the procedure step tree to see detail procedure execution log. 
+
+    Setup View Data to be refreshed with specific time interval to refresh page
+
     ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
-8.  You can Navigate to ***Targets >> Databases***, Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
+8.  Once procedure successfully complete, You can Navigate to **Targets** >> **Databases**.
+
+     Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
+
 
     ![](images/Task2-step8.jpg " ")
 
@@ -230,7 +244,7 @@ Click **Next**.
 
     ![](images/PDB_provisioning-flow-main.jpg " ")
 
-11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**CDB186**) within which you want to Plug the PDBs.
+11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**cdb186.subnet.vcn.oraclevcn.com186**) within which you want to Plug the PDBs.
 
     ![](images/Select-CDB-main-flow-helper.jpg " ")
       ![](images/Select-CDB-main-flow.jpg " ")
@@ -248,10 +262,10 @@ Click **Next**
 
 14. The Identification page has 3 sections. 
 
-    Under the PDB Name section provide a name for the PDB(prov_pdb) and select the optiopn *create as clone*, this ensure Oracle generated a unique PDB DBID, GUID, and other identifiers expected for the new PDB.
+    Under the *PDB Name* section provide a name for the PDB(prov_pdb) and select the option *create as clone*, this ensures Oracle generates a unique PDB DBID, GUID, and other identifiers expected for the new PDB.
 
 
-    In the next section under PDB Administrator we will keep the values default and not do any changes. 
+    In the next section under *PDB Administrator* we will keep the values default and not do any changes as shown below.
 
       ![](images/2ac79b220d664b868c62e4529791e187.jpg " ")
 
@@ -259,8 +273,9 @@ Click **Next**
 15. On the same Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box.
 
 
-    Select the Name which you created during Unplug,incase of multiple options, choose the latest image based on timestamp.
-    Click **Next**
+    Select the Name which you created during Unplug. 
+    In case of multiple options, choose the latest image based on timestamp.
+    Click **Select**
       ![](images/Task2-step15.jpg " ")
       ![](images/Task2-step15-latest.jpg " ")
 
@@ -270,14 +285,18 @@ Click **Next**
     ![](images/Task2-step16.jpg " ")
 
 
-16. On the Stoarge Page select **Use Common Location for PDB Datafiles** and type **/tmp** as temporary working directory.
-  Click **Next**
+16. On the Storage Page select **Use Common Location for PDB Datafiles** , the Storage Type and Location fields are autopopulated as showed below.
+
+    Type **/tmp** in temporary working directory option.
+
+    Click **Next**
 
 
     ![](images/a6353f812935eeb6148a79693ae0c4fd.jpg " ")
 
 17.  
-    On the Schedule page, choose to start immediately and  Click **Next**.
+    Schedule immediately or later.
+     Click **Next**.
 
     ![](images/Task2-step17.jpg " ")
 
@@ -288,13 +307,18 @@ Click **Next**
     ![](images/View_execution_details.jpg " ")
 
 
-19.  In the Procedure Activity page, view the status of the procedure.
+19. On the Procedure Activity page, select specific execution step from the procedure step tree to see detail procedure execution log.
+
+    Setup View Data to be refreshed with specific time interval to refresh page
+
+    The procedure takes 2-3 minutes to complete.
+
     ![](images/Task2-step19.jpg " ")
 
-20. Optionally Click the status link for each step to view the details of the execution of each step. 
+    Optionally,  Click the status link for each step to view the details of the execution of each step. 
 
 
-    Once the procedure is completed, you can Navigate to ***Targets >> Databases***. Click on CDB186 and you will see the newly created PDB
+20. Once the procedure is completed, you can Navigate to ***Targets >> Databases***. Click on CDB186 and you will see the newly created PDB
 
 
     ![](images/Task2-step20.jpg " ")
@@ -311,7 +335,7 @@ Click **Next**
 
   ![](images/PDB_provisioning-flow-main.jpg " ")
 
-3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**CDB186**) within which you want to clone new PDBs.
+3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to clone new PDBs.
   ![](images/Select-CDB-main-flow-helper.jpg " ")
   ![](images/Select-CDB-main-flow.jpg " ")
 
@@ -338,7 +362,7 @@ Click **Next**
 
     The PDB Administrator user will inherit the user credentials from the source PDB, hence this section does not need any inputs.
 
-    Optinally, an additional PDB Administrator user can also be created incase needed. 
+    Optionally, an additional PDB Administrator user can also be created in case needed. 
 
     Click **Next**
 
@@ -380,7 +404,8 @@ Click **Next**
 
 ## Task 4: Compliance Management for Pluggable Database
 
-Now a database administrator is tasked to apply 'High Security Configuration for Oracle Pluggable Database' standard against a  PDB and verify the results.Let us examine how a DBA can associate a target and view compliance results.
+Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry or regulatory standard benchmarks or custom policies. In this lab, we will use High Security Configuration for Oracle Pluggable Database compliance standard to secure configuration of provisioned database
+
 
 1. Navigate to ***Enterprise >> Compliance >> Library*** to get started
 
@@ -411,11 +436,6 @@ Key in "High Security" as the key word and hit search.
 
     ![](images/a01dffb956af685a866f02e68eff72b1.png " ")
 
-6. Optionally, you can refresh PDB statistics to see notifications. To refresh:
-
-    - Click the ***target icon >> Databases >> View >> Expand All***
-    - Right Click on ***PDB >> Oracle Database >> Configuration >> Latest.***
-    - Click the Refresh icon on the page (it will take few minutes for refresh to complete)
 
 7. Now Navigate to ***Enterprise >> Compliance >> Results***
 
@@ -430,13 +450,13 @@ Key in "High Security" as the key word and hit search.
     ![](images/Task4-Compliance-Results.jpg " ")
 
 10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations.
-Incase of any  violations, you will see details like last evaluation date, rule name violated and rationale for the violation under the violation tab.
+In case of any  violations, you will see details like last evaluation date, rule name violated and rationale for the violation under the violation tab.
 
       ![](images/Task4-Violations-tab.jpg " ")
 
 
 
-12. The compliance management portal also provides you an option to have a dashboard view of  compliance summary against all the associated targets. The Dashboard provides a brief summary of the violatons , corrective actions and a complaince standard score.
+12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations  , corrective actions and a compliance standard score.
 
     
     From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**
@@ -459,7 +479,7 @@ Incase of any  violations, you will see details like last evaluation date, rule 
 
     From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**. 
     
-    Towards bottom of the page in the **Compliance Summary** section, cick on the report against each Compliance standard or Targets.
+    Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
 
     ![](images/Task4-13a.jpg " ")
 
@@ -531,7 +551,7 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
       **Step 2**
 
-      Enter the credentails as suggested below. 
+      Enter the credentials as suggested below. 
         
       ```
       Administrator Name: PDBADMIN
@@ -671,22 +691,20 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
     ![](images/CMP-Task5-point18-latest.jpg " ")
 
-19. While deleting instance you can preserve a backup and create a new instance incase required. 
+19. While deleting instance you can preserve a backup and create a new instance in case required. 
   Select check-box: **Preserve a backup of this instance**
   
     Click **Ok**
 
     ![](images/CMP-Task5-point19-latest.jpg " ")
 
-20.  Click **Close** to close the confirmation dialog box. The Instance has been successfuly deleted. 
+20.  Click **Close** to close the confirmation dialog box. The Instance has been successfully deleted. 
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
   Previous exercise demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
 
-  Logout as **Cyrus** user
-
-  ![](images/Task6-step1.jpg " ")
+  Logout as **Cyrus** user. 
 
 
 Login to the EM Console as super administrator **sysman/welcome1**
