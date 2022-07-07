@@ -248,7 +248,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   To begin with, uncheck all configuration items.
 
-  ![](images/Compare_Drift_Demo_Image_7.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_7.png " ")
 
 7.  In this lab, we will customize this template and monitor configuration drift    for  two configuration items.
 
@@ -259,7 +259,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Initialization Parameters under Instance Information configuration item
     - Click Save
 
-  ![](images/Compare_and_Drift_Demo_Image_8.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_8.png " ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
