@@ -159,7 +159,7 @@ In this step, you will compare two database targets to determine configuration d
 
    Click **Clear All** at Configuration Items(Differences)
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png)
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png " ")
 
 13. Filter configurations items to review only Initialization Parameters.
 
@@ -184,7 +184,7 @@ In this step, you will compare two database targets to determine configuration d
 
   You should see the comparison definition you created in this page.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png)
+  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png " ")
 
 16. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
@@ -333,11 +333,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-  ![](images/Compare_And_Drift_Demo_Image_23-1.png)
+  ![](images/Compare_And_Drift_Demo_Image_23-1.png " ")
 
  For detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-  ![](images/Compare_and_Drift_Demo_Image_24.png)
+  ![](images/Compare_and_Drift_Demo_Image_24.png " ")
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
 
@@ -349,11 +349,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
-![](images/Compare_and_Drift_Demo_Image_22-1.png)
+  ![](images/Compare_and_Drift_Demo_Image_22-1.png " ")
 
  Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**OPTIONAL**)
 
-  ![](images/Compare_and_Drift_Demo_Image_25.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_25.png " ")
 
 24. Exported results in excel for offline analysis looks like:(**OPTIONAL**)
 
