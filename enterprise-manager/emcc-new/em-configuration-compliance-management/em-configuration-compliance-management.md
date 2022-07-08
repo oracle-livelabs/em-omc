@@ -405,11 +405,11 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard.
 
-  ![](images/CIS_Db_Compliance_19c_Libraries_Create_Like_Image_5.png " ")
+  ![](images/CIS_Db_Compliance_19c_Create_Like_Image_5-1.png " ")
 
   Here, for example **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue
 
-  ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6-1.png " ") 
+  ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6.png " ")
 
 7.  Review the various compliance rules for CIS Security standard grouped based on the configuration area.
 
