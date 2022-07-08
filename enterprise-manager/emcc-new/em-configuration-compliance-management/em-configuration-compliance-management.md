@@ -316,11 +316,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 18. Click **Select**. You will see one target selected to be associated with drift definition, Click OK.
 
-  ![](images/Compare_And_Drift_Demo_Image_20-1.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_20-1.12.png " ")
 
 19.  A pop-up will ask for confirmation to save association. Select **Yes**. This will start the association of this target to drift definition and initiated the configuration comparison and continuous drift monitoring.
 
-  ![](images/Compare_And_Drift_Demo_Image_21.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_21-1.png " ")
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see the drift monitoring completed. You should see a new or updated donut chart under ‘Drifted Overview’ dashlet.
 
