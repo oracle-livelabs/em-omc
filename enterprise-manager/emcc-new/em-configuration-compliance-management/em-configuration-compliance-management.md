@@ -393,7 +393,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 3.  Compliance Standards tab contains all standards for various supported targets.
 
-  ![](images/CIS_All_Compliance_Libraries_Image_2.png " ")
+  ![](images/CIS_All_Compliance_Libraries_Image_.png " ")
 
 4.  In the Compliance Standards tab, search for Applicate To column **Database Instance** standard.
 
