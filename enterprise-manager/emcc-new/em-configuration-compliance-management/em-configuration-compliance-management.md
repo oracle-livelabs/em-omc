@@ -458,7 +458,7 @@ Click **Cancel** button.
 
 16. Go to **Compliance Dashboard** page to check the CIS compliance posture.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_20.png " ")
+  ![](images/CIS_Db_Compliance_Dashboard_Image_20-1.png " ")
 
   Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation by clicking numbers below each column names.
 
