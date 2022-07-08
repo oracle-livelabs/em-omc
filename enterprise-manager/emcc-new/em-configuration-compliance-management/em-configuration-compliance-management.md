@@ -419,9 +419,9 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8-1.png " ")
 
-8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of this standards.
+8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of this standards, Click **OK**.
 
-  ![](images/CIS_Db_Compliance_Standard_Create_Image_9.png " ")
+  ![](images/CIS_Db_Compliance_Standard_Create_Image_9-1.png " ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
