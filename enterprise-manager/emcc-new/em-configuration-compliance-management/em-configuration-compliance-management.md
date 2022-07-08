@@ -304,7 +304,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
-  ![](images/Compare_And_Drift_Demo_Image_17.23..." ")
+  ![](images/Compare_And_Drift_Demo_Image_17.png" ")
 
 16. Click on **Add** to select and associate a target to be monitored for drift.
 
