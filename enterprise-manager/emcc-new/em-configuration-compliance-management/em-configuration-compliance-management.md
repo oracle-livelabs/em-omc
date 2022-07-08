@@ -316,7 +316,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 18. Click **Select**. You will see one target selected to be associated with drift definition, Click OK.
 
-  ![](images/Compare_And_Drift_Demo_Image_20.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_20-2.png " ")
 
 19.  A pop-up will ask for confirmation to save association. Select **Yes**. This will start the association of this target to drift definition and initiated the configuration comparison and continuous drift monitoring.
 
