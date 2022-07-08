@@ -208,7 +208,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***. Review the different types of comparisons supported.
 
-    ![](images/ecm2_one_time_database_comparison_menus.png)
+  ![](images/ecm2_One_Tme_Database_Comparison_Menu.png " ")
 
    By Clicking on the **i** icon, review the different types of comparisons.
 
