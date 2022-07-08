@@ -337,7 +337,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
  For detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-  ![](images/Compare_and_Drift_Demo_Image_24.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_24.007.png " ")
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
 
