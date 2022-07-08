@@ -4,8 +4,8 @@
 
 The Database Migration Workbench workshop is a fully functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
 
-- It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant
-- The Workshop VM comes preinstalled with Enterprise Manager 13.5 RU7 and Oracle Database targets 12.2 and and 19.12
+- It is intended to familiarize you with Database Migration Workbench which can be invaluable in your journey to 19c and multitenant
+- The Workshop VM comes preinstalled with Enterprise Manager 13.5 RU7 and Oracle Database targets 12.2 and 19.12
 - It's easy and quick to deploy with everything starting automatically in under 20 minutes
 
 Estimated Workshop Time: 2 hours

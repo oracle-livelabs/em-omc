@@ -2,21 +2,29 @@
 
 ## Introduction
 
-You can use Database Migration Workbench to migrate your on-premises databases to to new destinations in your data center or to Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **Oracle Cloud Infrastructure (OCI)** migration.
+You can use Database Migration Workbench to migrate your on-premises databases to to new destinations in your data center or Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **OCI** migration.
 
 Estimated Time: 60 minutes
 
 ### About Migration Workbench
 
-Oracle Enterprise Manager Database Migration Workbench provides an accurate approach to migration and consolidation by eliminating human errors allowing you to easily move your on-premises databases to Oracle Cloud, Multitenant architecture or upgrade your infrastructure. Advantages of using Database Migration Workbench include: Near Zero Downtime, Assured Zero Data Loss, seamless on-premises or Cloud migrations and, MAA and Cloud Security compliant.
+Oracle Enterprise Manager Database Migration Workbench provides an accurate approach to migration and consolidation by eliminating human errors allowing you to easily move your on-premises databases to Oracle Cloud, Multitenant architecture, or upgrade your infrastructure. Advantages of using Database Migration Workbench include: Near-Zero Downtime, Assured Zero Data Loss, seamless on-premises or Cloud migrations, and, MAA and Cloud Security compliant.
+
+- _Analyze Migration Activities:_ Database Migration Workbench offers robust tools for monitoring and troubleshooting your recently completed migrations. Database Migration Workbench also offers clean-up tools that aid in recovering important disk space from dump files. This lab covers both of these features.
+
+- _Analyze Migrated Database Performance:_ Migrating a database can change the execution plans of SQL statements, resulting in a significant impact on SQL performance, resulting in performance degradation. Database Migration Workbench is integrated with [SQL Performance Analyzer (SPA)] (https://docs.oracle.com/en/database/oracle/oracle-database/19/ratug/sql-performance-analyzer.html) which can help correct these issues. This lab uses SPA to compare the performance of the database before and after the migration.
+
+- _Security Compliance:_ Since Database Migration Workbench is a component of Oracle Enterprise Manager, your migrated databases are automatically added/updated in Enterprise Manager. You can utilize the [Compliance Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/manage-compliance.html) feature in Enterprise Manager to improve your database fleet security posture. Enterprise Manager Compliance Management leverages industry/regulatory standards for secure configuration such as CIS Benchmark, DISA STIG, and Oracle Security Best Practices.
+
+>**Note:** Enterprise Manager Compliance Management is licensed under the Database Lifecycle Management Pack (DBLM).
 
 ### Objectives
 
-In this lab you will perform the tasks below. Task 1 is reviewing the pre-requisites that have been completed in advance for this lab. In task 2 you will create an autonomous database in Oracle Cloud. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will validate the destination database and compare performance before and after the migration.
+In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create an autonomous database in Oracle Cloud. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | Review pre-requisites completed in advance | 10 minutes | Review pre-requisites completed on the source database, host, and in Enterprise Manager |
+| 1 | Review prerequisites completed in advance | 10 minutes | Review prerequisites completed on the source database, host, and in Enterprise Manager |
 | 2 | Create destination autonomous database and storage bucket in OCI | 10 minutes   | Create the autonomous database and download the client wallet. Create a storage bucket to store migration files |
 | 3 | Perform target autonomous database pre-requisites | 20 minutes   | Discover the autonomous database in Enterprise Manager. Create required credentials |
 | 4 | Migrate and upgrade a 12c non-container database to 19c autonomous database in Oracle Cloud | 20 minutes   | Source database: orcl, destination database: ATP-ORCL |
@@ -29,11 +37,11 @@ In this lab you will perform the tasks below. Task 1 is reviewing the pre-requis
     - Lab: Environment Setup
     - Lab: Initialize Environment
 
->**Note:** This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU5, and database 19.12 as Oracle Management Repository.
+>**Note:** This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU7, and database 19.12 as Oracle Management Repository.
 
-## Task 1: Review pre-requisites completed in advance
+## Task 1: Review prerequisites completed in advance
 
-In the interest of simplifying the setup and to save time, the following pre-Requisite steps for the source database were completed in advance for this lab. Please review accordingly for reference.
+In the interest of simplifying the setup and to save time, the following requirements for the source database were completed in advance for this lab. Please review accordingly for reference.
 
 - Source database target discovered in Enterprise Manager
     1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below.
@@ -69,14 +77,16 @@ In the interest of simplifying the setup and to save time, the following pre-Req
 
     SQL Performance Analyzer (SPA) automates the process of assessing the overall effect of a change on the  SQL workload by identifying performance divergence for each SQL statement. A report that shows the net impact on workload performance due to the change is provided. For regressed SQL statements, SQL Performance Analyzer also provides appropriate execution plan details along with tuning recommendations. As a result, you can remedy any negative outcome before the end-users are affected. Furthermore, you can validate -with time and cost savings- that migration will result in net improvement.
 
-    An SQL Tuning Set (STS) containing the SQL and relevant execution metadata from the source database is needed to compare performance before and after the migration. Database Migration Workbench can create an STS from AWR during migration, or you can create one in advance and and pass it to to the migration procedure.
+    An SQL Tuning Set (STS) containing the SQL and relevant execution metadata from the source database is needed to compare performance before and after the migration. Database Migration Workbench can create an STS from AWR during migration, or you can create one in advance and pass it to the migration procedure.
 
-    - For this lab we created an STS in advance (SH2STS) by running a workload against the SH2 schema in the source database and capturing the SQL statements executing during the load test
+    - For this lab, an STS was created in advance (SH2STS) by running a workload against the SH2 schema in the source database and capturing the SQL statements executing during the load test
 - Upload migration tools
 
-    Migration Workbench uses Instant Client and the Cloud Premigration Advisor Tool (CPAT) as part of its migration toolkit. Enterprise Manager automatically downloads the latest version of the tools when setup with either a MOS Proxy or direct internet connection. The tools can also be uploaded manually as described in [Upload Migration Tools] (<https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emlcm/upload-migration-tools.html>) in the Migration Workbench documentation.
+    Migration Workbench uses Instant Client and the Cloud Premigration Advisor Tool (CPAT) as part of its migration toolkit. Enterprise Manager automatically downloads the latest version of the tools when set up with either a MOS Proxy or direct internet connection. The tools can also be uploaded manually as described in [Upload Migration Tools] (<https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emlcm/upload-migration-tools.html>) in the Migration Workbench documentation.
 
-    - For this lab we uploaded the migration tools in advance. For additional detail on the Cloud Premigration Advisor Tool refer to this MOS document: *Cloud Premigration Advisor Tool (CPAT) Analyzes Databases for Suitability of Cloud Migration (Doc ID 2758371.1)*
+    - For this lab the migration tools were uploaded in advance. For additional detail on the Cloud Premigration Advisor Tool refer to this MOS document: *Cloud Premigration Advisor Tool (CPAT) Analyzes Databases for Suitability of Cloud Migration (Doc ID 2758371.1)*
+
+    You have now completed this task.
 
 ## Task 2: Create destination autonomous database and storage bucket in OCI
 
@@ -84,8 +94,9 @@ In the interest of simplifying the setup and to save time, the following pre-Req
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
     - Click on "Create Autonomous Database"
-    - On the "Create Autonomous Database" screen:
-    - Under "Provide basic information for the Autonomous Database":
+    - On the "Create Autonomous Database" screen, enter:
+
+        Under "Provide basic information for the Autonomous Database"
         - Compartment field will be already populated
         - Display Name:
 
@@ -96,35 +107,39 @@ In the interest of simplifying the setup and to save time, the following pre-Req
         - Database Name: (Important) Leave at default value shown so that database names are unique among lab participants
         - Choose a Workload Type: Transaction Processing
         - Choose a Deployment Type: Shared Infrastructure
-    - Under "Configure the database":
+
+        Under "Configure the database"
         - Leave all fields at default values
-    - Under "Create administrator credentials"
-        - Enter a password. For the purpose of this demo use:
+
+        Under "Create administrator credentials"
+        - Enter a password:
 
             ```text
             <copy>Welcome12345</copy>
             ```
 
-    - Under "Choose network access":
+        Under "Choose network access"
         - Leave all fields at default values
-    - Under "Choose License and Oracle Database Edition":
+
+        Under "Choose License and Oracle Database Edition"
         - Select "Bring Your Own License (BYOL)"
         - Database Edition options will be shown. Keep selected option (EE)
-    ![Create ATP](images/create-atp.png " ")
+
+        ![Create ATP](images/create-atp.png " ")
     - Click "Create Autonomous Database"
-2. Download the ATP-ORCL client wallet using OCI console:
+2. Download the ATP-ORCL client wallet using OCI console
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
-    - Click "Database Actions". The Database Actions page opens in a new browser tab. If the browser blocks opening the new tab allow pop-ups from the OCI URL:
+    - Click "Database Actions". The Database Actions page opens in a new browser tab. If the browser blocks creating a new tab, allow pop-ups from the OCI URL:
     ![ATP Home](images/atp-home.png " ")
-    - On the new tab ("Database Actions|Launchpad", click on "Download Client Credentials (Wallet)" tile under "Administration" (You may have to scroll down the page to get to that tile):
-    - On the pop-up window, enter password and click "Download":
+    - On the new tab ("Database Actions|Launchpad"), click on "Download Client Credentials (Wallet)" tile under "Administration" (You may have to scroll down the page):
+    - On the pop-up window, enter password:
 
         ```text
         <copy>welcome1</copy>
         ```
 
-    - The wallet zip file will be saved in the local "Downloads" directory
+    - Click Download. The wallet zip file will be saved in the local "Downloads" directory
 3. Create Object Storage Bucket in OCI
     - In OCI Console, navigate to Storage->Buckets
     - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
@@ -137,9 +152,11 @@ In the interest of simplifying the setup and to save time, the following pre-Req
 
     - Leave all other fields at default and click Create.
 
+    You have now completed this task.
+
 ## Task 3: Perform target autonomous database pre-requisites
 
-1. Discover ATP-ORCL in Enterprise Manager:
+1. Discover ATP-ORCL in Enterprise Manager
     - In Enterprise Manager console on the first tab of the browser, navigate to "Setup"->"Add Target"->"Add Target Manually"
     - On the "Add Targets Manually" screen, click the "Add Target Manually" button
     - On the resulting pop-up window:
@@ -165,7 +182,7 @@ In the interest of simplifying the setup and to save time, the following pre-Req
         <copy>ATP-ORCL</copy>
         ```
 
-      - OCI Client Credential (Wallet): click "Choose File" and select the wallet zip file you saved in the previous step
+      - OCI Client Credential (Wallet): Click "Choose File" and select the wallet zip file you saved in the previous step
       - Wallet Password:
 
         ```text
@@ -227,8 +244,9 @@ In the interest of simplifying the setup and to save time, the following pre-Req
 
     - Role: Normal
     ![ATP Credential](images/atp-credential.png " ")
-    - Click “Test and Save”. You should get "*Confirmation credential operation successful*". If not, review the steps above and retry.
+    - Click “Test and Save”. You should get "*Confirmation credential operation successful*". If not, review the previous steps and retry.
 3. Generate RSA key pair in PEM format
+
     In the top-right corner of the Console, open the Profile menu (User menu icon), then click User Settings to view the details:
     - In the left navigation bar, under "Resources", click on "API Keys"
     - Under “API Keys” click “Add API Key”.
@@ -239,6 +257,7 @@ In the interest of simplifying the setup and to save time, the following pre-Req
     - The text shown under "Fingerprint" is the public key. Make a note of it as it will be used in a subsequent step. To save it to a text file, click on "Applications" on the top left corner of your NoVNC window, then "Accessories"->"Text Editor". Paste the public key and save the file to the desktop
     ![API Key](images/api-key.png " ")
 4. Create an OCI Auth Token
+
     While on the same screen in the OCI Console from previous step:
     - In the left navigation bar, under "Resources", click on "Auth Tokens"
     - Under "Auth Tokens" click Generate Token:
@@ -252,7 +271,7 @@ In the interest of simplifying the setup and to save time, the following pre-Req
 
     - The new Auth Token is displayed
     - Copy the auth token and save it to a file to retrieve it later, it won't be shown again in the Console. Open a new tab in the Text Editor you launched in the previous step, paste the token, and save the file to the desktop
-    - Close the Generate Token dialog:
+    - Close the Generate Token dialog
     ![Auth Token](images/auth-token.png " ")
 5. Create OCI Credential in Enterprise Manager
     - Make a note of your Tenancy OCID and User OCID:
@@ -291,16 +310,17 @@ In the interest of simplifying the setup and to save time, the following pre-Req
         - Private Key: Private Key you saved to the Downloads folder (file with extension of ".pem")
 
       ![OCI Credential](images/oci-credential.png " ")
-    - Click Save. You should get "Confirmation credential operation successful". If not, review the steps above and retry
+    - Click Save. You should get "Confirmation credential operation successful". If not, review the previous steps and retry
 6. Create Authentication Credential in ADB
-    Create an "Auth Token" based credential in the Autonomous Database and set it as a default credential that will be required for authentication between the Autonomous Database and OCI object storage.
-    - This step requires your fully qualified OCI username, not your user OCID used in the previous step. In OCI console, click on the user icon on the top right of the page, then click on "User Details". Make a note of your fully qualified username at the top of the screen
+
+    Create an "Auth Token" based credential in the Autonomous Database and set it as a default credential that will be required for authentication between the Autonomous Database and OCI object storage. This step requires your fully qualified OCI username, not your user OCID used in the previous step.
+    - In OCI console, click on the user icon on the top right of the page, then click on "User Details". Make a note of your fully qualified username at the top of the screen
       ![OCI Username](images/oci-username.png " ")
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
     - Click "Database Actions". The Database Actions page opens in a new browser tab
     - Under "Development" heading, click on "SQL" (first tile)
-    - Execute the following code:
+    - Execute the following code after filling in the values for username and password as described in the code snippet:
 
         ```text
         <copy>
@@ -325,6 +345,8 @@ In the interest of simplifying the setup and to save time, the following pre-Req
         ```
 
       ![ATP Default Cred](images/atp-default-cred.png " ")
+
+    You have now completed this task.
 
 ## Task 4: Migrate and upgrade a 12c non-container database to 19c autonomous database in Oracle Cloud
 
@@ -454,24 +476,34 @@ We'll use the Data Pump migration method in this task.
     ![View Analysis](images/view-analysis.png " ")
     - Click on View Analysis
 13. On the View Analysis screen:
-    - Examine the analysis report
-        - Review validation checks that passed, failed or skipped
-        - Review the export and import tabs for time taken to complete export and import activities, the number of objects exported and imported, and the errors reported during export and import activities
-        - For further details on the errors review the log file using the Procedure Activity page shown earlier. On that page you can check the checkbox for any step to display the log file on the screen. You can also download the file for offline viewing
-        - In your environment you may need to take actions such as granting specific object privileges to fix the errors. However for this lab the errors shown can be ignored
 
-        ![Analysis](images/analysis.png " ")
-    - When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
+    Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Analysis, Export, and Import.
+    - On the summary dashboard, review information and statistics for the validation activity, export phase, and import phase
+    - In the details section:
+        - Click the Validation tab to review validation checks that passed, failed, or skipped
+        - Click the Export tab to review details on object errors encountered during export, export options, and export files
+        - Click on the Import tab to review details on object errors encountered during import, import options, and import files
+        - For further details on the errors review the log file using the Procedure Activity page shown earlier. On that page, you can check the checkbox for any step to display the log file on the screen. You can also download the file for offline viewing
+        - In your environment, you may need to take actions such as granting specific object privileges to fix the errors. However, for this lab, the errors shown can be ignored
+
+    ![Analysis](images/analysis.png " ")
+
+    When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
 14. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
     ![Compare Performance](images/compare-performance.png " ")
     - Click on Compare Performance
 15. On the Compare Performance screen:
-    - Examine the Performance Comparison report to analyze the database performance before and after the migration
-        - Review overall performance impact on application to end user after the migration
-        - Analyze top 100 impacted SQLs shown in absolute percentage. SQLs highlighted in green have improved performance due to improved execution plan or query cost. Those highlighted in red have regressed due to execution plan change or execution problems (for example query returning no rows, or number of rows returned is different in destination than in source, etc.)
-        - Check regressed SQLs to see execution statistics, before and after migration change analysis
-        - Analyze findings provided for each query to see which factors impacted the regressed SQLs. You can take action based on findings provided to improve  performance
+
+    Examine the Performance Comparison report to analyze the database performance before and after the migration. The report has 3 sections:
+    1. General Information: Contains information about the task, workload, execution, and analysis before and after migration. The  comparison metric used is "Elapsed Time"
+    2. Report Summary: Contains 3 sections:
+        - Projected Workload Change Impact: This shows the overall impact of the migration on the SQL workload, the improvement impact, and the regression impact
+        - SQL Statement Count: This shows the overall statement count, the number of SQLs that improved, regressed, or were unchanged
+        - Top 100 SQL Sorted by Absolute Value of Change Impact on the Workload: This shows the top 100 impacted SQLs with absolute percentage improvement. SQLs highlighted in green have improved performance due to improved execution plans or query costs. Those highlighted in red have regressed due to execution plan change or execution problems (for example query returning no rows or number of rows returned is different in the destination than in source, etc.)
+
+            Check regressed SQLs to see execution statistics, before and after migration change analysis. Understand findings provided for each query to see which factors impacted the regressed SQLs. You can then take action based on findings provided in the Report Details section to improve SQL performance
+    3. Report Details: Contains detailed execution details for each SQL statement in the STS, including the SQL test, execution frequency, executions statistics, notes, findings, and execution plan before and after the migration
 
         ![Performance Comparison](images/performance-comparison.png " ")
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
