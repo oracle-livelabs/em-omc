@@ -337,7 +337,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
  For detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-  ![](images/Compare_And_Drift_Demo_Image_24.007.png " ")
+  ![](images/Compare_AND_Drift_Demo_Image_24.png " ")
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
 
@@ -353,7 +353,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
  Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**OPTIONAL**)
 
-  ![](images/Compare_And_Drift_Demo_Image_25.png " ")
+  ![](images/Compare_AND_Drift_Demo_Image_25.png " ")
 
 24. Exported results in excel for offline analysis looks like:(**OPTIONAL**)
 
