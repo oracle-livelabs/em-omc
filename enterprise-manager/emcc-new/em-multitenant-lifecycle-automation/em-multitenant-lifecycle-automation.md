@@ -682,7 +682,7 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
 15. Select **large** and click **resize**
 
-  ![](images/20537907e3a274a9df16e7c54f73713f.jpg " ")
+    ![](images/20537907e3a274a9df16e7c54f73713f.jpg " ")
 
     * Resize allows you to resize your instance to other available resource sizes.
     * We have 2 resource sizes available for Service Template. Small and Large.
