@@ -397,7 +397,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 4.  In the Compliance Standards tab, search for Applicate To column **Database Instance** standard.
 
-  ![](images/CIS_Db_Compliance_Libraries_Image_3.png " ")
+  ![](images/CIS_Db_Compliance_Libraries_Image_3-1.png " ")
 
 5.  Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
