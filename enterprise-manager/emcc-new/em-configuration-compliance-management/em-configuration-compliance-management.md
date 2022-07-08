@@ -431,9 +431,9 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Associate_Target_Image_11-1.png " ")
 
-11. The list of targets chosen will show up in the target association page as shown below, Choose **emrep.us.oracle.com** target to check the compliance security posture.
+11. The list of targets chosen will show up in the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![](images/CIS_Db_Compliance_Select_Target_Image_13.png " ")
+  ![](images/CIS_Db_Compliance_Select_Target_Image_13-1.png " ")
 
 12. The list of targets chosen will show up in the target association page as shown below.
 
