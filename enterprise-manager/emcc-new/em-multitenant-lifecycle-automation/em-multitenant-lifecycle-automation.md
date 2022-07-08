@@ -528,20 +528,21 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 3.   
     Select **Provision New Empty Pluggable Database**.
 
-
-    ![](images/ee694403e4c718e224a01ae91dbc88fd.jpg " ")
-
       Note: There are two service templates pertaining to Pluggable Database
 
       -  **Provision New Empty Pluggable Database**: This     template enables users to create a new pluggable database in a container database configured by DBA.
        -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
+
+
+    ![](images/ee694403e4c718e224a01ae91dbc88fd.jpg " ")
+
 
 4. In the **Pluggable Database Configuration** section,
 
 
       **Step 1**
 
-      Enter PDB and Service details:
+      Enter PDB Name , Service and Size details:
       
       ```
       PDB Name: AS_PDB2
@@ -565,14 +566,24 @@ The PDBs are created using a predefined service template on CDBs which are virtu
       Password : welcome1
       ```
 
-      Tablespace name is auto populated.  
+      Tablespace name is auto populated. 
+
+      ```
+      Tablespace name : pdb_tbs1
+      ```
 
 
     **Step 3**
 
-    **Instance Details** will have values auto filled.
+    **Instance Details** 
+
+    **Request Name** :  Autofilled with latest timestamp. Can be mofidied incase needed. 
+
+    **Zone** : Autofilled with default option, Sales Infra Zone.
+
     
     **Properties**  can help user locate an instance more quickly. 
+    Click on the dropdown to update. 
 
       ```
       Contact: <copy>CYRUS</copy>
@@ -588,7 +599,7 @@ The PDBs are created using a predefined service template on CDBs which are virtu
       
       Start: Accept the default (Immediately).
       
-      Duration: Specify 4 hours from the current time by selecting the “Until” radio button, changing to current date and specify time to be 4 hours from the current time.
+      Duration: Specify 4 hours from the current time by selecting the “Until” radio button, change to current date and specify time to be 4 hours from the current time.
 
 
     **Step 5**
@@ -617,40 +628,41 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
 9.  Once you submit a request, you will be redirected back to the “**Database Cloud Services**” Page. 
 
-    Your PDB creation request has been submitted for execution. 
 
     Under “**Requests**” region, you should see 2 requests: 
     “**Create**” and “**Delete**” request
 
-      ![](images/CMP-Task5-point9.jpg " ")
+    You will also notice the delete operation is scheduled for future (not started yet) time. 
+
+    Click on the **hourglass** icon under status column for the Create Pluggable Database step. You will see details of request.
+
+    ![](images/CMP-Task5-point9.jpg " ")
 
 
-10. At this point, provisioning engine has received a request to create a PDB based on the service template and input provided by self-service user. 
+11. PDB Provisioning perform the following actions:
 
-  You will also notice the delete operation is scheduled for future (not started yet) time. 
+        a. Create database roles and PDB
 
-  Click on the **hourglass** icon under Status column for the Create Pluggable Database step. You will see details of request.
+        b. Create a resource plan based on the workload size
 
-11.  PDB Provisioning perform the following actions:
+        c. Create and register the database
 
-          * Create database roles and PDB
-          * Create a resource plan based on the workload size
-          * Create and register the database
 
-      The request should take less than 7 minutes to complete. 
-        
-      Click on refresh icon or as an alternative set Refresh to 30 seconds. 
-        
-      The success status indicates that PDB database was successfully created. 
-      Click on Close button when the procedure is complete. 
+    The request should take less than 7 minutes to complete. 
+                
+    Click on refresh icon or as an alternative set Refresh to 30 seconds. 
+                
+    The success status indicates that PDB database was successfully created. 
 
-      ![](images/CMP-PDB_creation-success.jpg " ")
+    Click on Close button when the procedure is complete. 
+
+    ![](images/CMP-PDB_creation-success.jpg " ")
 
 12.  The screen indicated the PDB creation is successful.
 
       ![](images/CMP-Task5-point12.jpg " ")
 
-13. Click on the Home Icon. You will see new PDB instance.
+13. Click on the Home Icon. You will see new PDB instance. Click on the PDB recently created. 
 
   ![](images/CMP-Task5-point13.jpg " ")
 
@@ -662,13 +674,13 @@ The PDBs are created using a predefined service template on CDBs which are virtu
       * **Memory**, current memory consumption against the Quota for this user.
       * **Storage**, current storage consumption against the Quota for this user.
 
-14. Click on the name of the PDB. You can use the connection details to connect to the PDB using SQL tools.
+14. On the PDB details page you can use the connection details to connect to the PDB using SQL tools.
+
+    Click on **Resize** button to resize a PDB instance.
 
     ![](images/9ca31e90c86263e6cddde14da1c6954f.jpg " ")
 
-15. Click on **Resize** button to resize a PDB instance.
-
-    Select **large** and click **resize**
+15. Select **large** and click **resize**
 
   ![](images/20537907e3a274a9df16e7c54f73713f.jpg " ")
 
