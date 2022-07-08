@@ -257,6 +257,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Instance Caging Information
     - Instance Information
     - Initialization Parameters under Instance Information configuration item
+    - Making sure **Instance Information** is highlighted
     - Click Save
 
   ![](images/Compare_And_Drift_Demo_Image_8-1.png " ")
@@ -330,11 +331,13 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_23.png " ")
 
-22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift) for detailed analysis of configuration drift.
+22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
+
+  ![](images/Compare_And_Drift_Demo_Image_23-1.png)
+  
+ For detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![](images/Compare_and_Drift_Demo_Image_24.png)
-
-  You can see the differences in the Initialization Parameters between the two targets.
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
 
