@@ -296,7 +296,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**.
 
-  ![](images/Compare_and_Drift_Demo_Image_15.png " ")
+  ![](images/Compare_and_Drift_Demo_Image_1526.png " ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
