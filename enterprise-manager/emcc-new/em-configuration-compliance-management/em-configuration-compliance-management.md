@@ -292,7 +292,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target
 
-  ![](images/Compare_And_Drift_Demo_Image_1426.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_14.png " ")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**.
 
