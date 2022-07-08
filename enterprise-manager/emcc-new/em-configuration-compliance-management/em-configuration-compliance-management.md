@@ -357,7 +357,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 24. Exported results in excel for offline analysis looks like:(**OPTIONAL**)
 
-  ![](images/Compare_and_Drift_Demo_Report_Image_26.png)
+  ![](images/Compare_And_Drift_Demo_Report_Image_26-1.png " ")
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
