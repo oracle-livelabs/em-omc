@@ -425,7 +425,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_10.png " ")
+  ![](images/CIS_Db_Compliance_Associate_Target_Image_10-1.png " ")
 
 10. When Associate Target option is chosen, you will be taken to a page to add database targets.
 
