@@ -328,7 +328,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 21. Click on Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
-  ![](images/Compare_and_Drift_Demo_Image_23.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_23.png " ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift) for detailed analysis of configuration drift.
 
