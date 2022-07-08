@@ -334,20 +334,24 @@ In this workshop, you will learn about continuous configuration drift monitoring
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
   ![](images/Compare_And_Drift_Demo_Image_23-1.png)
-  
+
  For detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![](images/Compare_and_Drift_Demo_Image_24.png)
 
   Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
 
-      - Equal sign means parameter properties are same across the reference and target compared
-      - Not equal sign indicates parameter properties are different across the reference and target compared
-      - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
-      - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+    - Equal sign means parameter properties are same across the reference and target compared
+    - Not equal sign indicates parameter properties are different across the reference and target compared
+    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
+    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
 
-23. Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**OPTIONAL**)
+23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
+
+![](images/Compare_and_Drift_Demo_Image_22-1.png)
+
+ Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**OPTIONAL**)
 
   ![](images/Compare_and_Drift_Demo_Image_25.png " ")
 
