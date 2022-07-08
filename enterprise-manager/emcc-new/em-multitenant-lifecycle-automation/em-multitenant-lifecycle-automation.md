@@ -160,7 +160,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 13. On Procedure Activity, select specific execution step from the procedure step tree to see details of the execution log.
 
-    Setup View Data to be refreshed with specific time interval to refresh page
+    setup View Data to be refreshed with specific time interval to refresh page
 
     ![](images/3657eb9bb536b26d163c148e40a99332.jpg " ")
 
@@ -707,7 +707,7 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
-  Previous exercise demonstrated the process of requesting PDBs using available service templates as performed by a Self-Service user. In this section, we will see the Administrative setup for PDBaaS.
+Previous exercise demonstrated the process of Self-Service User requesting PDBs using available service templates. In this section, we will see the Administrative setup for PDBaaS.
 
   Logout as **Cyrus** user. 
 
@@ -751,7 +751,7 @@ Login to the EM Console as super administrator **sysman/welcome1**
   ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ")
 
    
-    Click on **Pluggable Database Pool**’. A Pluggable Database Pool consists of a set of Container Databases on which PDBs will be provisioned.
+    Click on **Pluggable Database Pool**. A Pluggable Database Pool consists of a set of Container Databases on which PDBs will be provisioned.
 
     Click on name of the pool **pdbpool** to see more details.
 
@@ -774,34 +774,42 @@ Login to the EM Console as super administrator **sysman/welcome1**
     ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ") 
     
     
-9. Click on **Data Sources**. Observe that the profile is based on Schema Export(s). This Data Profile was used for provisioning a PDB with data.
+9. Click on **Data Sources**. Observe that the profile is based on Schema Export(s). This Data Profile will be used for provisioning a PDB with data.
 
     ![](images/d834209bf1c6a238679ae419098ee0f3.jpg " ")
 
-10. Select the row with profile to see more details. 
+10. Click on the row with profile to see more details. 
     This will open a Provisioning Profile Dialog box with details of PDB name , tablespaces , and creation details.
+
+    Once done, close the Provisioning Profile pop up box. 
 
 
     ![](images/532db10bbaab85fcdd83f245bd317a6b.jpg " ")
 
-    Close the Provisioning Profile pop up box. 
+ 
 
 ### **Service Templates**
-10. From the Cloud Home page , Select Pluggable Database from the drop-down menu. And then click on **Service Templates** 
-
-    ![](images/47baba2a1e7567bfb0b5f89429a7831d.jpg " ")
+10. From the Cloud Home page , Select Pluggable Database from the drop-down menu.                                                                                   
+Click on **Service Templates**. 
 
     There are two service templates pertaining to Pluggable Database
 
-      * **Provision New Empty Pluggable Database**: This template enables the user to create a new pluggable database in a container database configured by DBA
+      * **Provision New Empty Pluggable Database**: This template enables the user to create a new empty pluggable database in a container database configured by DBA
       * **Provision Pluggable Database with Data**: This template enables user to create a new pluggable database with data from a non-container database.
+ 
+
+    ![](images/47baba2a1e7567bfb0b5f89429a7831d.jpg " ")
+
+
 
 11. Click on name of any template to explore more details.
+
+    Once done, close the Service template Pop up window.
 
 
     ![](images/a0efb63a12d01e1254593656765ec52a.jpg " ")
 
-    Close the Service template Pop up window.
+
 
 
     
