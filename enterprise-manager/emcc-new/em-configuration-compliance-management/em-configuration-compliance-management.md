@@ -427,13 +427,9 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Associate_Target_Image_10-1.png " ")
 
-10. When Associate Target option is chosen, you will be taken to a page to add database targets.
+10. When Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_11.png " ")
-
-  Click Add to add targets for association with this compliance standard.
-
-  ![](images/CIS_Db_Compliance_Add_Target_Image_12.png " ")
+  ![](images/CIS_Db_Compliance_Associate_Target_Image_11-1.png " ")
 
 11. The list of targets chosen will show up in the target association page as shown below, Choose **emrep.us.oracle.com** target to check the compliance security posture.
 
