@@ -441,7 +441,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 13. Click OK and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15.png " ")
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-1.png " ") 
 
   Click **OK**.
 
