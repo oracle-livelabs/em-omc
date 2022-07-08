@@ -45,7 +45,7 @@ This lab assumes you have:
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/em-login-mwb.png " ")
+    ![](images/em-login.png " ")
 
     If the login page is not functioning properly (Please note that it takes up to 15 minutes after instance provisioning for all processes to fully start), open a terminal session and restart Enterprise Manager Services (OMS and emagent).
 
@@ -58,7 +58,7 @@ This lab assumes you have:
 
 3. Confirm successful login. Please note that it takes up to 15 minutes after instance provisioning for all processes to fully start.
 
-    ![](images/em-landing-mwb.png " ")
+    ![](images/em-landing.png " ")
 
     If successful, the page above is displayed and as a result your environment is now ready.
 
@@ -82,7 +82,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![](images/listener-service-status-mwb.png " ")
+    ![](images/listener-service-status.png " ")
 
     - Enterprise Manager Services (OMS and emagent)
 
@@ -92,7 +92,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![](images/em-service-status.png " ")
+    ![](./../../initialize-environment/images/em-service-status.png " ")
 
 5. If you see questionable output(s), failure or down component(s), restart the corresponding service(s) accordingly
 
@@ -137,7 +137,7 @@ This lab assumes you have:
 
 2. Accept defaults for file and passphrase by pressing *Enter* three times to create a key with no passphrase.
 
-    ![](images/ssh-key-gen.png " ")
+    ![](./../../initialize-environment/images/ssh-key-gen.png " ")
 
 3.  Update *`~/.ssh/authorized_keys`* and copy the *private key* to */tmp*.
 
@@ -149,7 +149,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![](images/update_ssh_creds-0.png " ")
+    ![](./../../initialize-environment/images/update_ssh_creds-0.png " ")
 
 ### **Update the Named Credentials with the new SSH Key**
 
@@ -161,33 +161,33 @@ This lab assumes you have:
     - Delete any content from *SSH Public Key* Textbox
     - Click *Browse* to select the *Private Key*
 
-    ![](images/update_ssh_creds-1-mwb.png " ")
+    ![](images/update_ssh_creds-1.png " ")
 
 6. On the file browser, navigate to *"+Other Locations >> tmp"* and select the file *rsa_priv*
 
-    ![](images/update_ssh_creds-2.png " ")
+    ![](./../../initialize-environment/images/update_ssh_creds-2.png " ")
 
 7. Click *Test and Save*
 
-    ![](images/update_ssh_creds-3.png " ")
-    ![](images/update_ssh_creds-4.png " ")
+    ![](./../../initialize-environment/images/update_ssh_creds-3.png " ")
+    ![](./../../initialize-environment/images/update_ssh_creds-4.png " ")
 
 8. Setup oracle Named Credentials using Job System. This will set up the user oracle password on the host and update the Named Credentials used in this workshop.
 Navigate to "***Enterprise >> Job >> Library***" and select "SETUP ORACLE CREDENTIALS"; Click Submit.
 
-    ![](images/named_creds_job.jpg " ")
+    ![](./../../initialize-environment/images/named_creds_job.jpg " ")
 
 9. Click Submit again on the Job submission Page
 
-    ![](images/named_creds_job_submit.jpg " ")
+    ![](./../../initialize-environment/images/named_creds_job_submit.jpg " ")
 
 10. The Job will be submitted successfully. Click on SETUP ORACLE CREDENTIALS Job link to view the Job
 
-    ![](images/submitted.jpg " ")
+    ![](./../../initialize-environment/images/submitted.jpg " ")
 
 11. The Job should show Status **Succeeded**
 
-    ![](images/named_creds_job_succeeded.jpg " ")
+    ![](./../../initialize-environment/images/named_creds_job_succeeded.jpg " ")
 
 ## Appendix 1: Managing Startup Services
 
@@ -289,8 +289,8 @@ If for any reason you want to login from a location that is external to your rem
 
     *Note:* You may see an error on the browser while accessing the Web Console - “*Your connection is not private*” as shown below. Ignore and add the exception to proceed.
 
-    ![](images/login-em-external-1.png " ")
-    ![](images/login-em-external-2.png " ")
+    ![](./../../initialize-environment/images/login-em-external-1.png " ")
+    ![](./../../initialize-environment/images/login-em-external-2.png " ")
 
 <!-- ## Appendix 3: External Terminal Access (using SSH Key Based Authentication)
 

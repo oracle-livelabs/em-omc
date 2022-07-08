@@ -10,31 +10,31 @@
     {
       "title": "Lab 1: Environment Setup",
       "description": "Verify Setup of compute instance",
-      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
+      "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
     },
     {
       "title": "Lab 2: Initialize Environment",
       "description": "How to initialize and start all the workshop components",
       "publisheddate": "10/14/2020",
-      "filename": "../../initialize-environment/initialize-environment-mwb.md"
+      "filename": "./../../em-migration-workbench/initialize-environment/initialize-environment.md"
     },
     {
-      "title": "Lab 3: Migrate 12c Database to 19c Pluggable Database",
-      "description": "This lab provides an overview of Migration Workbench features in. It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
+      "title": "Lab 3: Migrate and upgrade 12c database to 19c PDB",
+      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-pdb.md"
+      "filename": "./../../em-migration-workbench/migrate-to-pdb/migrate-to-pdb.md"
     },
     {
-      "title": "Lab 4: Migrate 12c Database to 19c Database in New Destination",
-      "description": "This lab provides an overview of Migration Workbench features in. It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
+      "title": "Lab 4: Migrate and upgrade 12c database to 19c in new destination",
+      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-noncdb.md"
+      "filename": "./../../em-migration-workbench/migrate-to-noncdb/migrate-to-noncdb.md"
     },
     {
-      "title": "Lab 5: (Optional) Migrate 12c Database to Autonomous Database in Oracle Cloud",
-      "description": "This lab provides an overview of Migration Workbench features in. It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
+      "title": "Lab 5 (Optional): Migrate and upgrade 12c database to 19c ADB",
+      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-adb.md"
+      "filename": "./../../em-migration-workbench/migrate-to-adb/migrate-to-adb.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
@@ -45,7 +45,7 @@
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://raw.githubusercontent.com/oracle/learning-library/master/common/labs/need-help/need-help-livelabs.md"
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }
