@@ -259,7 +259,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Initialization Parameters under Instance Information configuration item
     - Click Save
 
-  ![](images/Compare_And_Drift_Demo_Image_8.png " ")
+  ![](images/Compare_And_Drift_Demo_Image_8-1.png " ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
