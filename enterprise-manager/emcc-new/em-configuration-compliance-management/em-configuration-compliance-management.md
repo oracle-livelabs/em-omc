@@ -312,7 +312,8 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 17. Select **finance.subnet.vcn.oraclevcn.com** as the target.
 
-  ![](images/Compare_And_Drift_Demo_Image_196.25.57 PM" ")
+  ![](images/Compare_And_Drift_Demo_image_19.png)
+
 
 18. Click **Select**. You will see one target selected to be associated with drift definition.
 
