@@ -453,7 +453,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete.
 
-  ![](images/CIS_Db_Compliance_Success_Target_Image_18-1.png " ")
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_18-1.png " ")
 
   Click **Cancel** button.
 
