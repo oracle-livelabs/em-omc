@@ -439,13 +439,13 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Add_Target_Image_14-1.png " ")
 
-13. Click OK and a pop-up shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
+13. Click OK and a pop-up window shows to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-1.png " ") 
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-1.png " ")
 
-  Click **OK**.
+  Pop-up window shows process status, Click **OK**.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_30.png " ")
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_16-0.png " ")
 
 14. To check if the compliance check is complete, click the target number in ‘Association Count’ column.
 
