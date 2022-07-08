@@ -449,9 +449,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 14. To check if the compliance check is complete, click the target number in ‘Association Count’ column.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_16.png " ")
-
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_17.png " ")
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_17-1.png " ")
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete.
 
