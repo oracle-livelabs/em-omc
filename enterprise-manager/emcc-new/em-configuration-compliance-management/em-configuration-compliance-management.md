@@ -574,9 +574,9 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Validate_Submit_Image_13-1.png " ")
 
-  15. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete. Click **cancel** button.
+  14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete. Click **Cancel** button.
 
-  ![](images/HIPAA_Associate_Target_Success_Image_14.png " ")
+  ![](images/HIPAA_Associate_Target_Success_Image_14-1.png " ")
 
   16. Go to **Compliance Dashboard** page to check the compliance posture
 
