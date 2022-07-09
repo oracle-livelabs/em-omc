@@ -578,9 +578,9 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Associate_Target_Success_Image_14-1.png " ")
 
-  16. Go to **Compliance Dashboard** page to check the compliance posture
+  15. Go to **Compliance Dashboard** page to check the compliance posture
 
-  ![](images/HIPAA_Associate_Target_Success_Image_15.png " ")
+  ![](images/HIPAA_Associate_Target_Success_Image_15-1.png " ")
 
   Compliance Dashboard populates.
 
