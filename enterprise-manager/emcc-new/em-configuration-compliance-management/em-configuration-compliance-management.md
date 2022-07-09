@@ -466,29 +466,25 @@ Click **Cancel** button.
     - For any given standard, if there are Critical, Warning or Minor Warnings
     - click on the violation number to see more details of the violationS by clicking numbers below each column names
 
-17. By Clicking on Critical column number, you will see details like each violation, last evaluation date
+17. By Clicking on Critical column number, you will see details like each violation, last evaluation date.
 
   ![](images/CIS_Db_Compliance_Dashb_Image_22-1.png " ")
 
- By clicking under Target Name,
+ By clicking under Target Name.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_23-1.png " ")
 
-  Each rule name violated and rationale for the violation can be explored below,
+18. Each rule name violated and rationale for the violation can be explored below,
+And also by clicking on Report,
+  ![](images/CIS_Db_Compliance_Dashboard_Image_24-1.png " ")
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_24.png " ")
+  Compliance Evaluation Report will be populated in separate page can be used for further analysis of each rule passed or failed.
 
-18.  And also by clicking on Report,
+  ![](images/CIS_Db_Compliance_Report_Image_25-0.png " ")
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_28.png " ")
+ Under Result Details, by clicking at arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules
 
-  ![](images/CIS_Db_Compliance_Report_Image_25.png " ")
-
-19. Under Result Details, arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules
-
-  ![](images/CIS_Db_Compliance_Report_Image_30.png " ")
-
-  ![](images/CIS_Db_Compliance_Report_Image_26.png " ")
+  ![](images/CIS_Db_Compliance_Report_Image_26-1.png " ")
 
 
 20. Highlight and click on the standard that you created in the previous steps to review the overall compliance score.
