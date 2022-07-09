@@ -562,9 +562,9 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Associate_List_Image_10-1.png " ")
 
-  12. A pop-up window shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
+  11. A pop-up window shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
 
-  ![](images/HIPAA_Confirm_Host_Target_Image_11.png " ")
+  ![](images/HIPAA_Confirm_Host_Target_Image_11-1.png " ")
 
   13. Once, Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
