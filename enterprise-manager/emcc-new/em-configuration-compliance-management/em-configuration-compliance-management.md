@@ -582,62 +582,51 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Associate_Target_Success_Image_15-1.png " ")
 
-  Compliance Dashboard populates.
+  16. Compliance Dashboard populates.
+      - Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance and Average Compliance score too.
+      - For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
 
-  ![](images/HIPAA_Dashboard_Results_Image_16.png " ")
+    Click on the number under **Critical** column. to see details of the host's critical violations.
 
-  17. Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Non-Compliant Targets, Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation.
+    ![](images/HIPAA_Dashboard_Results_Image_17-1.png " ")
 
-    Click on the number under Non-Compliant Targets column to see details of the host that is non-compliant,
+  17. Host's critical violations can be explored by clicking **Target name** column arrow
 
-  ![](images/HIPAA_Dashboard_Results_Image_17.png " ")
+  ![](images/HIPAA_Crtical_Violations_Image_18-1.png " ")
 
-  Click on 'X' to close the pop up window
+   Each critical rule violations status can be seen in this pop up page in detail.
 
-  ![](images/HIPAA_Compliance_Score_Image_18.png " ")
+   Click on  **Report**.
 
-  18. Under Compliance Summary panel at the bottom, explore  Critical, Warning or Minor Warnings, Report and Trends click on the Critical column number to see the violations.
+  ![](images/HIPAA_Crtical_Violations_Image_19-1.png " ")
 
-  ![](images/HIPAA_Crtical_Violations_Image_21.png)
+  18. It takes you to separate page which shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
-    By clicking **Target name** column arrow
+  ![](images/HIPAA_Compliance_Report_Score_Image_20-1.png " ")
 
-  ![](images/HIPAA_Crtical_Violations_Image_22.png " ")
+    And clicking on  **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation details.
 
-   Critical Violations rules can be seen in this pop up page details
+  ![](images/HIPAA_Compliance_Report_Score_Image_21-1.png " ")
 
-  ![](images/HIPAA_Crtical_Violations_Image_23.png " ")
+  19. Individual rules can be further explored with select Enterprise Main Menu, then select Compliance and Results Page  
 
-  19. Click on  **Report**, It takes you to separate page which shows Compliance Evaluation Report to see the reports with Passed Rules, Failed Rules and Compliance score
+  ![](images/HIPAA_Main_Results_Image_22-1.png " ")
 
-  ![](images/HIPAA_Compliance_Report_Score_Image_19.png " ")
+    It takes you to Compliance Results page.  
 
-  And clicking on  **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation Details
+  ![](images/HIPAA_Compliance_Results_Image_23-1.png " ")
 
-  ![](images/HIPAA_Compliance_Report_Score_Image_20.png " ")
+    Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
 
-  20. Individual rules can be further explored with select Enterprise Main Menu, then select Compliance and Results Page  
+   20.  Individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually.
 
-  ![](images/HIPAA_Main_Results_Image_24.png " ")
+  ![](images/HIPAA_Compliance_Results_Image_24-1.png " ")
 
-    It takes you to Compliance Results page,
+    Individual standard rule details status, rationale can be further analyzed.
 
-  ![](images/HIPAA_Compliance_Results_Image_25.png " ")
+  ![](images/HIPAA_Compliance_Results_Image_25-1.png " ")
 
-  21. In Compliance Results page, selecting **Compliance standards** by clicking on **Show Details**
-
-  ![](images/HIPAA_Select_Detail_Results_Image_26.png " ")
-
-   22.  Individual compliance rules success and violations, evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards and host Targets level compliance visually.
-
-  ![](images/HIPAA_Select_Detail_Results_Image_27.png " ")
-
-    By clicking on the violation number to see more details of the Violations can be verified.
-
-  ![](images/HIPAA_Select_Detail_Results_Image_28.png " ")
-
-
-  All these will give you a security posture of host target
+  All these will gives you a security posture of host target.
 
   <!---- With this step, you got a hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess overall security compliance of all
   Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target specific security compliance ---->
