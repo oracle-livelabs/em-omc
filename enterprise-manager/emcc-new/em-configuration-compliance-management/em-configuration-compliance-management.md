@@ -534,17 +534,13 @@ And also by clicking on Report.
 
   ![](images/HIPAA_All_Libraries_Image_3-1.png " ")
 
-  5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard.
+  5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
   ![](images/HIPAA_Standard_Libraries_Image_4-1.png " ")
 
-  6. After Selecting Health Insurance Portability and Accountability Act (HIPAA) OL-7standard by clicking on **Show Details**.
+  6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done** .
 
-  ![](images/HIPAA_Standard_Details_Image_5.png " ")
-
-  7. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click **Done** .
-
-  ![](images/HIPAA_Associate_Target_Image_6.png " ")
+  ![](images/HIPAA_Associate_Target_Image_6-1.png " ")
 
   8. Click on **Associate Targets** to associate a database target for this selected standard.
 
