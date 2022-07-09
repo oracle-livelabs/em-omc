@@ -460,17 +460,19 @@ Click **Cancel** button.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_20-1.png " ")
 
-  Under Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance. For any given standard, if there are Critical, Warning or Minor Warnings, click on the violation number to see more details of the violation by clicking numbers below each column names.
+  Under Compliance Summary panel at the bottom below page,
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_21.png " ")
+    - Explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance
+    - For any given standard, if there are Critical, Warning or Minor Warnings
+    - click on the violation number to see more details of the violationS by clicking numbers below each column names
 
-17. For Clicking on Critical column number, you will see details like each violation, last evaluation date
+17. By Clicking on Critical column number, you will see details like each violation, last evaluation date
 
-  ![](images/CIS_Db_Compliance_Dashb_Image_22.png " ")
+  ![](images/CIS_Db_Compliance_Dashb_Image_22-1.png " ")
 
- By clicking on arrow, under Target Name,
+ By clicking under Target Name,
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_23.png " ")
+  ![](images/CIS_Db_Compliance_Dashboard_Image_23-1.png " ")
 
   Each rule name violated and rationale for the violation can be explored below,
 
