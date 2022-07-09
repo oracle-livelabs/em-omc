@@ -475,25 +475,26 @@ Click **Cancel** button.
   ![](images/CIS_Db_Compliance_Dashboard_Image_23-1.png " ")
 
 18. Each rule name violated and rationale for the violation can be explored below,
-And also by clicking on Report,
+And also by clicking on Report.
+
   ![](images/CIS_Db_Compliance_Dashboard_Image_24-1.png " ")
 
   Compliance Evaluation Report will be populated in separate page can be used for further analysis of each rule passed or failed.
 
   ![](images/CIS_Db_Compliance_Report_Image_25-0.png " ")
 
- Under Result Details, by clicking at arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules
+ Under Result Details, by clicking at arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
   ![](images/CIS_Db_Compliance_Report_Image_26-1.png " ")
 
 
-20. Highlight and click on the standard that you created in the previous steps to review the overall compliance score.
+19. By going back to  **Compliance Dashboard** page,  Click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_31.png " ")
+  ![](images/CIS_Db_Compliance_Dashboard_Image_27.png " ")
 
-By clicking CIS_DEMO, target evaluations and individual violation rules details can be evaluated.
+ Each rule results can undergo in detail analysis as shown in this page.
 
-  ![](images/CIS_Db_Compliance_Results_Image_27.png " ")
+  ![](images/CIS_Db_Compliance_Results_Image_28.png " ")
 
   All these will give you a CIS Compliance security posture of database target.
 
