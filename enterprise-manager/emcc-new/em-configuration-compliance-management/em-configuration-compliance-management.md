@@ -538,13 +538,13 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Standard_Libraries_Image_4-1.png " ")
 
-  6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done** .
+  6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**.
 
   ![](images/HIPAA_Associate_Target_Image_6-1.png " ")
 
   8. Click on **Associate Targets** to associate a database target for this selected standard.
 
-  ![](images/HIPAA_Associate_Target_Image_7.png " ")
+  ![](images/HIPAA_Associate_Target_Image_7-1.png " ")
 
   9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
 
