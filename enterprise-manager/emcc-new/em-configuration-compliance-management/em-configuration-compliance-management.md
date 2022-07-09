@@ -389,7 +389,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 2.  From the Enterprise menu, select **Compliance**, then select **Library**.
 
-  ![](images/CIS_Compliance_Welcome_Image_1-1.png " ")
+  ![](images/CIS_Compliance_Welcome_Image_1-2.png " ")
 
 3.  Compliance Standards tab contains all standards for various supported targets.
 
@@ -524,7 +524,7 @@ And also by clicking on Report.
 
   2.  From the Enterprise menu,select **Compliance**, then select **Library**.
 
-  ![](images/CIS_Compliance_Welcome_Image_1-1.png " ")
+  ![](images/CIS_Compliance_Welcome_Image_1-2.png " ")
 
   3.  Compliance Standards tab contains all standards for various supported targets.
 
