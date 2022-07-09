@@ -536,7 +536,7 @@ And also by clicking on Report.
 
   5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard.
 
-  ![](images/HIPAA_Standard_Libraries_Image_4.png " ")
+  ![](images/HIPAA_Standard_Libraries_Image_4-1.png " ")
 
   6. After Selecting Health Insurance Portability and Accountability Act (HIPAA) OL-7standard by clicking on **Show Details**.
 
