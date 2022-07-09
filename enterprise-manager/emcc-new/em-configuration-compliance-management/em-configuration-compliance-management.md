@@ -588,7 +588,7 @@ And also by clicking on Report.
 
     Click on the number under **Critical** column. to see details of the host's critical violations.
 
-    ![](images/HIPAA_Dashboard_Results_Image_17-1.png " ") 
+    ![](images/HIPAA_Dashboards_Results_Image_17-1.png " ")
 
   17. Host's critical violations can be explored by clicking **Target name** column arrow
 
