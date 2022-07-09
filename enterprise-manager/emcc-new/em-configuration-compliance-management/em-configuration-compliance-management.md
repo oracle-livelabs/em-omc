@@ -556,11 +556,11 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Associate_Host_Target_Image_9-1.png " ")
 
-  11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
+  10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click **OK**.
 
-  ![](images/HIPAA_Associate_List_Image_10.png " ")
+  ![](images/HIPAA_Associate_List_Image_10-1.png " ")
 
   12. A pop-up window shows up to confirm association. Click **Yes** to save the association which initiates compliance check on this host target by executing all the compliance rules associated with HIPAA compliance standard.
 
