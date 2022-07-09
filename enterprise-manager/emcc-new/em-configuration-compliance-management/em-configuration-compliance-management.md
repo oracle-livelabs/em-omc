@@ -570,9 +570,9 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Compliance_Submit_Image_12-1.png " ")
 
-  14. To check if the compliance processing is complete, click the target number in **Association Count** column.
+  13. To check if the compliance processing is complete, click the target number in **Association Count** column.
 
-  ![](images/HIPAA_Validate_Submit_Image_13.png " ")
+  ![](images/HIPAA_Validate_Submit_Image_13-1.png " ")
 
   15. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete. Click **cancel** button.
 
