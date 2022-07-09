@@ -524,7 +524,7 @@ And also by clicking on Report.
 
   2.  From the Enterprise menu,select **Compliance**, then select **Library**.
 
-  ![](images/HIPAA_Compliance_Welcome_Image_1.png " ")
+  ![](images/CIS_Compliance_Welcome_Image_1-1.png " ")
 
   3.  Compliance Standards tab contains all standards for various supported targets.
 
@@ -532,7 +532,7 @@ And also by clicking on Report.
 
   4.  In the Compliance Standards tab, search for Keywords column for word **HIPAA**.
 
-  ![](images/HIPAA_All_Libraries_Image_3.png " ")
+  ![](images/HIPAA_All_Libraries_Image_3-1.png " ")
 
   5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard.
 
