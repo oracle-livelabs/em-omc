@@ -566,9 +566,9 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Confirm_Host_Target_Image_11-1.png " ")
 
-  13. Once, Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
+  12. Once, Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-  ![](images/HIPAA_Compliance_Submit_Image_12.png " ")
+  ![](images/HIPAA_Compliance_Submit_Image_12-1.png " ")
 
   14. To check if the compliance processing is complete, click the target number in **Association Count** column.
 
