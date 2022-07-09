@@ -542,19 +542,19 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Associate_Target_Image_6-1.png " ")
 
-  8. Click on **Associate Targets** to associate a database target for this selected standard.
+  7. Click on **Associate Targets** to associate a database target for this selected standard.
 
   ![](images/HIPAA_Associate_Target_Image_7-1.png " ")
 
-  9. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
+  8. When Associate Target option is chosen, you will be taken to a page to add hosts targets.
 
     Click Add to add target for association with this compliance standard.
 
   ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
 
-  10.  There is one host called **emcc.marketplace.com**, select that target to associate.
+  9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-  ![](images/HIPAA_Associate_Host_Target_Image_9.png " ")
+  ![](images/HIPAA_Associate_Host_Target_Image_9-1.png " ")
 
   11.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
