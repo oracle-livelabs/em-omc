@@ -669,11 +669,11 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
 11. PDB Provisioning perform the following actions:
 
-        a. Create database roles and PDB
+    *  Create database roles and PDB
 
-        b. Create a resource plan based on the workload size
+    *  Create a resource plan based on the workload size
 
-        c. Create and register the database
+    *  Create and register the database
 
 
     The request should take less than 7 minutes to complete. 
