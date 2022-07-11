@@ -190,8 +190,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/b727e1673cfa38c85130ef6e2365055d.jpg " ")
 
-5.  On the Select PDB page in  Pluggable Database section click on the magnifier to choose the PDB(PROV_PDB) you want to unplug. 
+5.  On the Select PDB page in  Pluggable Database section click on the magnifier to choose the PDB you want to unplug. 
 
+    In the pop up search, type `PROV_PDB` and click search. Choose `PROV_PDB` and click Select.
     
     Select Named credentials “ORACLE” in container Database Host Credentials
 
@@ -240,7 +241,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/Task2-step8.jpg " ")
 
-9.  Let us continue to the next steps and plug the same PDB back into the container database. Navigate to the **“Enterprise menu >> Provisioning and Patching >> Database provisioning”**.
+9.  Let us continue to the next steps and plug the same PDB back into the container database. 
+
+    Navigate to the **“Enterprise menu >> Provisioning and Patching >> Database provisioning”**.
 
     ![](images/DB_provisioning-flow-main.jpg " ")
 
