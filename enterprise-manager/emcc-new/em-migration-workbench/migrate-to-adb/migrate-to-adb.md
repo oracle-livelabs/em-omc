@@ -12,11 +12,11 @@ Oracle Enterprise Manager Database Migration Workbench provides an accurate appr
 
 - _Analyze Migration Activities:_ Database Migration Workbench offers robust tools for monitoring and troubleshooting your recently completed migrations. Database Migration Workbench also offers clean-up tools that aid in recovering important disk space from dump files. This lab covers both of these features.
 
-- _Analyze Migrated Database Performance:_ Migrating a database can change the execution plans of SQL statements, resulting in a significant impact on SQL performance, resulting in performance degradation. Database Migration Workbench is integrated with [SQL Performance Analyzer (SPA)] (https://docs.oracle.com/en/database/oracle/oracle-database/19/ratug/sql-performance-analyzer.html) which can help correct these issues. This lab uses SPA to compare the performance of the database before and after the migration.
+- _Analyze Migrated Database Performance:_ Migrating a database can change the execution plans of SQL statements, resulting in a significant impact on SQL performance, resulting in performance degradation. Database Migration Workbench is integrated with [SQL Performance Analyzer (SPA)] (<https://docs.oracle.com/en/database/oracle/oracle-database/19/ratug/sql-performance-analyzer.html>) which can help correct these issues. This lab uses SPA to compare the performance of the database before and after the migration.
 
 - _Security Compliance:_ Since Database Migration Workbench is a component of Oracle Enterprise Manager, your migrated databases are automatically added/updated in Enterprise Manager. You can utilize the [Compliance Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/manage-compliance.html) feature in Enterprise Manager to improve your database fleet security posture. Enterprise Manager Compliance Management leverages industry/regulatory standards for secure configuration such as CIS Benchmark, DISA STIG, and Oracle Security Best Practices.
 
->**Note:** Enterprise Manager Compliance Management is licensed under the Database Lifecycle Management Pack (DBLM).
+>**Note:** Migration Workbench and SQL Performance Analyzer are licensed under Real Application Testing (RAT) Management Pack. Compliance Management is licensed under Database Lifecycle Management Pack (DBLM).
 
 ### Objectives
 
@@ -389,7 +389,7 @@ We'll use the Data Pump migration method in this task.
     - Destination:
         - Database Credential: ADMIN (Named Credential)
         - Agent Host Credential: ORACLE (Named Credential)
-        - Service Name: *database name*_high (TCPS) (Should be selected by default)
+        - Service Name: Choose "*database name*_high (TCPS)" from the drop-down list
     - Action:
         - Migration Method: Data Pump (default)
         - Recompile Invalid Objects After Migration: Unchecked (default)
@@ -432,7 +432,7 @@ We'll use the Data Pump migration method in this task.
         - SQL Tuning Set (STS): Select "Use Existing" then choose "EXP_USER -- SH2STS"
     - Custom Scripts:
 
-        Migration Workbench allows customization of your migration activity by allowing you upload and use Pre and Post migration scripts. For more information on Pre and Post scripts see: [Pre/Post Scripts for Provisioning] (https://docs.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb&id=EMLCM-GUID-CDF550E0-9F86-42BC-909C-F224869F58CC) in Oracle Enterprise Manager Cloud Control Database Lifecycle Management Administrator's Guide and [Pre and Post Request Creation / Deletion Scripts](https://docs.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb&id=EMCLO-GUID-223719D5-21B5-4AC3-A94B-0C7A3DFF0831) in Oracle Enterprise Manager Cloud Administration Guide
+        Migration Workbench allows customization of your migration activity by allowing you upload and use Pre and Post migration scripts. For more information on Pre and Post scripts see: [Pre/Post Scripts for Provisioning] (<https://docs.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb&id=EMLCM-GUID-CDF550E0-9F86-42BC-909C-F224869F58CC>) in Oracle Enterprise Manager Cloud Control Database Lifecycle Management Administrator's Guide and [Pre and Post Request Creation / Deletion Scripts](https://docs.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb&id=EMCLO-GUID-223719D5-21B5-4AC3-A94B-0C7A3DFF0831) in Oracle Enterprise Manager Cloud Administration Guide
     - Transfer Options:
         - Source Database Monitoring Agent (default)
 
@@ -440,7 +440,7 @@ We'll use the Data Pump migration method in this task.
     - Click Review
 7. On the "Review & Submit" screen:
     - Review your entries to make sure everything is correct
-    ![Analyze Source](images/anayze-source.png " ")
+    ![Analyze Source](images/analyze-source.png " ")
     - Click "Analyze Source" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
     - When the analysis is complete review CPAT Results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis
     ![CPAT Results](images/cpat-results.png " ")
@@ -455,7 +455,7 @@ We'll use the Data Pump migration method in this task.
     - Check the "Confirm that you have done source analysis" checkbox
     - Choose Schedule: Start Immediately (default)
 
-        Examine the JSON file. Notice you can copy the generated JSON file to use it with EM CLI migrate_db verb, or with other DevOps tools. For this lab however, we'll complete the migration using the Enterprise Manager console
+        Examine the JSON file. Notice you can copy the generated JSON file to use with DevOps tools and REST APIs. For this lab however, we'll complete the migration using the Enterprise Manager graphical console
     ![Submit Activity](images/submit-activity.png " ")
     - Click Submit
     - You should receive the message: "Migration activity submitted successfully."
@@ -506,6 +506,7 @@ We'll use the Data Pump migration method in this task.
     3. Report Details: Contains detailed execution details for each SQL statement in the STS, including the SQL test, execution frequency, executions statistics, notes, findings, and execution plan before and after the migration
 
         ![Performance Comparison](images/performance-comparison.png " ")
+    - With automated performance optimization option available with Autonomous database, the database ignores existing indexes and dynamically generates new indexes based on workload. To show the performance comparison with no indexes, check the checkbox on the top right of the screen.
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
 16. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
@@ -530,5 +531,5 @@ This completes the Lab!
 ## Acknowledgements
 
 - **Author** - Amine Tarhini, Systems Management Specialist, Oracle Platform Solution Engineering
-- **Contributors** -  Harish Niddagatta, Oracle Enterprise Manager Product Management
+- **Contributors** -  Harish Niddagatta, Enterprise Manager Product Management, Rajendra Patil, Enterprise Manager Product Manager
 - **Last Updated By/Date** - Amine Tarhini, July 2022

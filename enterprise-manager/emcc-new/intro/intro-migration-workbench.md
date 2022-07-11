@@ -21,9 +21,10 @@ Join Oracle's ***Wim Coekaerts***, *senior vice president of software developmen
 
 #### Applicable Enterprise Manager Management Packs
 
-Labs under this workshop are covered by the following Management Pack.
+Labs under this workshop are covered by the following Management Packs:
 
-- Real Application Testing (RAT) Management Pack
+- Migration Workbench and SQL Performance Analyzer are licensed under Real Application Testing (RAT) Management Pack
+- Compliance Management is licensed under the Database Lifecycle Management Pack (DBLM)
 
 ### Content
 
