@@ -558,7 +558,7 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
       Note: There are two service templates pertaining to Pluggable Database
 
-      -  **Provision New Empty Pluggable Database**: This     template enables users to create a new pluggable database in a container database configured by DBA.
+      -  **Provision New Empty Pluggable Database**: This     template enables users to create a new empty pluggable database in a container database configured by DBA.
        -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
 
 
@@ -743,7 +743,11 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
     ![](images/CMP-Task5-point19-latest.jpg " ")
 
-20.  Click **Close** to close the confirmation dialog box. The Instance has been successfully deleted. 
+20.  Click **Close** to close the confirmation dialog box. 
+
+   The Instance has been successfully deleted. 
+
+   Click on the refresh icon on the top right incase the PDB is still seen on the page.
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
