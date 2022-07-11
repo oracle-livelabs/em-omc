@@ -252,7 +252,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
-    Select the following three configuration items only,
+    Select the following three configuration items only:
 
     - Instance Caging Information
     - Instance Information
@@ -284,7 +284,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_12.png " ")
 
-11. In the drift definition details page, provide a unique name for the drift definition.
+11. On the drift definition details page, provide a unique name for the drift definition.
 
   ![](images/Compare_And_Drift_Demo_Image_13.png " ")
 
@@ -295,7 +295,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_14.png " ")
 
-13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**.
+13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
   ![](images/Compare_And_Drift_Demo_Image_15.png " ")
 
@@ -315,19 +315,19 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_19-1.png " ")
 
-18. Click **Select**. You will see one target selected to be associated with drift definition, Click OK.
+18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
   ![](images/Compare_And_Drift_Demo_Image_20-2.png " ")
 
-19.  A pop-up will ask for confirmation to save association. Select **Yes**. This will start the association of this target to drift definition and initiated the configuration comparison and continuous drift monitoring.
+19. A pop-up will ask for confirmation to save the association. Select **Yes**, This will start the association of this target to drift definition and initiate the configuration comparison and continuous drift monitoring.
 
   ![](images/Compare_And_Drift_Demo_Image_21-1.png " ")
 
-20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see the drift monitoring completed. You should see a new or updated donut chart under ‘Drifted Overview’ dashlet.
+20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
   ![](images/Compare_and_Drift_Demo_Image_22.png)
 
-21. Click on Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
+21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
   ![](images/Compare_And_Drift_Demo_Image_23.png " ")
 
@@ -335,15 +335,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_23-1.png " ")
 
- For detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
+ For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![](images/Compare_AND_Drift_Demo_Image_24.png " ")
 
-  Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
+  Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
-    - Equal sign means parameter properties are same across the reference and target compared
+    - Equal sign means parameter properties are the same across the reference and target compared
     - Not equal sign indicates parameter properties are different across the reference and target compared
-    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
+    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
 
@@ -351,15 +351,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_and_Drift_Demo_Image_22-1.png " ")
 
- Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**Optional**)
+ (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
   ![](images/Compare_And_Drift_Demo_Image_25-1.png " ")
 
-24. (**Optional**) Exported results in excel for offline analysis looks like:
+24. (**Optional**) Exported results in excel for offline analysis look like this:
 
   ![](images/Compare_And_Drift_Demo_Report_Image_26-1.png " ")
 
-<!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
+<!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
 
 
@@ -369,29 +369,29 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
 
-<!-- In this lab, you will setup a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
+<!-- In this lab, you will set up a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
 
-Terminology used in this Compliance specific workshop
+The terminology used in this Compliance specific workshop
 
 ### Center of Internet Security compliance(CIS) Standard
 
-The Center of Internet Security compliance(CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provide the baseline configurations to ensure oracle database compliance with CIS standards.  A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+The Center for Internet Security compliance(CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards.  A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
-A compliance standard is mapped to one or more compliance standard rules and is associated to one or more targets which should be evaluated.
+A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated.
 
 ### Compliance Standard Rule
 
-A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards
+A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards.
 
 ### Execution
 
 1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
 
-2.  From the Enterprise menu, select **Compliance**, then select **Library**.
+2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
   ![](images/CIS_Compliance_Welcome_Image_1-2.png " ")
 
-3.  Compliance Standards tab contains all standards for various supported targets.
+3.  The compliance Standards tab contains all standards for various supported targets.
 
   ![](images/CIS_All_Compliance_Libraries_Image_2-2.png " ")
 
@@ -407,19 +407,19 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_19c_Create_Like_Image_5-1.png " ")
 
-  Here, for example **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue
+  Here, for example, **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue,
 
   ![](images/CIS_Db_Compliance_CIS_DEMO_Image_6-1.png " ")
 
-7.  Review the various compliance rules for CIS Security standard grouped based on the configuration area.
+7.  Review the various compliance rules for CIS Security standards grouped based on the configuration area.
 
   ![](images/CIS_Db_Compliance_CIS_DEMO_Standard_Details_Image_7.png " ")
 
-  Click **Save**.
+  Click **Save**
 
   ![](images/CIS_Db_Compliance_Standard_Details_Save_Image_8-1.png " ")
 
-8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of this standards, Click **OK**.
+8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
   ![](images/CIS_Db_Compliance_Standard_Create_Image_9-1.png " ")
 
@@ -431,42 +431,42 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Associate_Target_Image_11-1.png " ")
 
-11. The list of targets chosen will show up in the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
+11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
   ![](images/CIS_Db_Compliance_Select_Target_Image_13-1.png " ")
 
-12. The list of targets chosen will show up in the target association page as shown below.
+12. The list of targets chosen will show up on the target association page as shown below.
 
   ![](images/CIS_Db_Compliance_Add_Target_Image_14-1.png " ")
 
-13. Click OK and a pop-up window shows to confirm association. Click **Yes** to save the association which initiates compliance check on this target by executing all the compliance rules associated with this compliance standard.
+13. Click OK and a pop-up window shows to confirm an association. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-1.png " ")
 
-  Pop-up window shows process status, Click **OK**.
+  The pop-up window shows process status, Click **OK**
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_16-0.png " ")
 
-14. To check if the compliance check is complete, click the target number in ‘Association Count’ column.
+14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_17-1.png " ")
 
-15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means compliance check is complete,
-Click **Cancel** button.
+15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
+Click the **Cancel** button.
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_18-1.png " ")
 
-16. Go to **Compliance Dashboard** page to check the CIS compliance posture.
+16. Go to the **Compliance Dashboard** page to check the CIS compliance posture.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_20-1.png " ")
 
-  Under Compliance Summary panel at the bottom below page,
+  Under the Compliance Summary panel at the bottom below page:
 
-    - Explore various tabs to get an understanding of Frameworks, Standards and Targets level compliance
-    - For any given standard, if there are Critical, Warning or Minor Warnings
-    - click on the violation number to see more details of the violationS by clicking numbers below each column names
+    - Explore various tabs to get an understanding of Frameworks, Standards, and target-level compliance
+    - For any given standard, if there are Critical, Warning, or Minor Warnings
+    - Click on the violation number to see more details of the violationS by clicking the numbers below each column's names
 
-17. By Clicking on Critical column number, you will see details like each violation, last evaluation date.
+17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
   ![](images/CIS_Db_Compliance_Dashb_Image_22-1.png " ")
 
@@ -474,29 +474,28 @@ Click **Cancel** button.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_23-1.png " ")
 
-18. Each rule name violated and rationale for the violation can be explored below,
-And also by clicking on Report.
+18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_24-1.png " ")
 
-  Compliance Evaluation Report will be populated in separate page can be used for further analysis of each rule passed or failed.
+  Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
   ![](images/CIS_Db_Compliance_Report_Image_25-0.png " ")
 
- Under Result Details, by clicking at arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
+ Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
   ![](images/CIS_Db_Compliance_Report_Image_26-1.png " ")
 
 
-19. By going back to  **Compliance Dashboard** page,  Click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
+19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_27.png " ")
 
- Each rule results can undergo in detail analysis as shown in this page.
+ Each rule result can undergo a detailed analysis as shown on this page.
 
   ![](images/CIS_Db_Compliance_Results_Image_28.png " ")
 
-  All these will give you a CIS Compliance security posture of database target.
+  All of these will give you a CIS Compliance security posture of database target.
 
   ## Task 5: Host Security Compliance
 
