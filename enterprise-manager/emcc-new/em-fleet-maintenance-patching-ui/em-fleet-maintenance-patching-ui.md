@@ -24,7 +24,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
 
-![](youtube:JlspEvqebHE)
+[](youtube:JlspEvqebHE)
 
 *Note: Interfaces in this video may look different from the interfaces you will see. For updated information, please see steps below.*
 
