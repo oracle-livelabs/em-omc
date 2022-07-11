@@ -1,6 +1,6 @@
 # Configuration and Compliance Management
 ## Introduction
-The objective of this lab is to highlight Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities related to configuration and security compliance management of managed targets. Each activity focuses on different capabilities for an administrator.
+The objective of this lab is to highlight Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities related to configuration and security compliance management of managed targets. Each activity focuses on the different capabilities of an administrator.
 
 *Estimated Lab Time:* 60 minutes
 
@@ -11,7 +11,7 @@ Watch the video below for a quick walk through of the lab.
 
 Changes to configuration properties of database and host targets invariably happen, typically because of common events like patches and upgrades. At some point a change to one component can affect the overall system in a negative way. Detecting the root cause becomes paramount. With Configuration Management, one can continuously monitor and track configuration drifts of targets against the reference configuration. Enterprise Manger automatically collects a comprehensive set of configuration properties of all managed targets across the datacenter and cloud.
 
-With Compliance Management, one can run automated, continuous security checks based on industry standards and best practices, such as the Center for Internet Security (CIS), Security Technical Implementation Guide (STIG), Payment Card Industry Data Security Standard (PCI DSS), and Health Insurance Portability and Accountability Act (HIPAA). Reinforce industry standards such as STIG and CIS with custom policies to protect against threats, providing a secure databases and hosts for applications. These security checks provide a compliance score to depict the overall compliance of targets against an industry standard benchmark.
+With Compliance Management, one can run automated, continuous security checks based on industry standards and best practices, such as the Center for Internet Security (CIS), Security Technical Implementation Guide (STIG), Payment Card Industry Data Security Standard (PCI DSS), and Health Insurance Portability and Accountability Act (HIPAA). Reinforce industry standards such as STIG and CIS with custom policies to protect against threats, providing secure databases and hosts for applications. These security checks provide a compliance score to depict the overall compliance of targets against an industry-standard benchmark.
 
 ### Objectives
 
@@ -19,11 +19,11 @@ In this lab you will perform the following steps
 
 | Step No.                                      | Feature                                                                 | Approx. Time | Details                                                                                                                                                                                    | Value proposition                                                                                                   |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
-| 1                                                         | Inventory & Usage details                                               | 10 minutes   | IT Manager wants to get an inventory of all existing databases managed by Enterprise Manager including different versions of databases, number of instances deployed over a period of time | Reduce number of different configuration sets and increase standardization across the data center.                  |
-| 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of new database provisioned aligns with IT configuration policy.                          |
-| 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare latest or saved target configuration to one or more targets.                                                                                                                       | Monitor databases in your organization for any configuration drift, remediate to align with reference configuration. |
-| 4                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Databases target.                | Monitor CSI security compliance for database targets from one customized dashboard.                                                      | Monitor security compliance for host targets from one customized dashboard. |
-| 5                                                         | Host Security Compliance                                  | 10 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one reference compliance. |
+| 1                                                         | Inventory & Usage details                                               | 10 minutes   | IT Manager wants to get an inventory of all existing databases managed by Enterprise Manager including different versions of databases, the number of instances deployed over a period of time | Reduce the number of different configuration sets, and increase standardization across the data center                  |
+| 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of the new database provisioned aligns with IT configuration policy                          |
+| 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare the latest or saved target configuration to one or more targets                                                                           | Monitor databases in your organization for any configuration drift and remediate to align with reference configuration |
+| 4                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Databases target.                | Monitor CIS security compliance for database targets from one customized dashboard                                                      | Monitor security compliance for host targets from one customized dashboard |
+| 5                                                         | Host Security Compliance                                  | 10 minutes   | Host target.                                                                                                                       | Monitor security compliance for host targets from one reference compliance |
 
 
 ###  Prerequisites
@@ -33,15 +33,15 @@ In this lab you will perform the following steps
     - Lab: Environment Setup
     - Lab: Initialize Environment
 
-*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository.
+*Note*: This lab environment is set up with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository.
 
 ## Task 1: Inventory & Usage Details
 
 ### Overview
 
-The IT Manager wants to get an inventory of all existing databases managed by Enterprise Manager including different versions of databases, number of instances deployed over a period of time. This is to reduce number of different configuration sets and increase standardization across the data center.
+The IT Manager wants to get an inventory of all existing databases managed by the Enterprise Manager including different versions of databases, and the number of instances deployed over some time. This is to reduce the number of different configuration sets and increase standardization across the data center.
 
-All the items in this step are read-only, primary goal is to learn about inventory usage details within Enterprise Manager for all supported targets
+All the items in this step are read-only, the primary goal is to learn about inventory usage details within Enterprise Manager for all supported targets.
 
 ### Execution
 1. On the browser window on the right preloaded with **Enterprise Manager**, if not already logged in, click on the **Username** field and login with the credentials provided below.
@@ -56,17 +56,17 @@ All the items in this step are read-only, primary goal is to learn about invento
 
   ![](../initialize-environment/images/em-login.png " ")
 
-2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**
+2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
   ![](images/Configuration_Inventoryusages_Image_1.png)
 
-3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager
+3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
   ![](images/Em_Compliance_Config_Alldbs_Image_2.png " ")
 
-4.  Analyze various database versions and number of instances for each version or you can choose PDB 18.3 highlighted above page
+4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
-5.  Explore pie chart to see the break-down of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of given database instance over a period of time.
+5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of a given database instance over a period of time.
 
  ![](images/Em_Config_Compliane_dbtrends_Image_3.png " ")
 
@@ -76,7 +76,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
  Click **Close**.
 
-6.  In the Details excel fie table output below, you will see details as follows
+6.  In the Details excel file table output below, you will see details as follows
 
       - Database instance name Target
       - Host on which this database is located
@@ -90,7 +90,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
   ![](images/Em_Configs_Compliane_db_Trends_Image_5.png " ")
 
- These inventory details can be exported to an excel file for offline analysis or sharing the report to management. With the excel report, you can filter based on the properties you are using to show department or line of business specific assets allocation and usage. (**OPTIONAL**)
+(**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
 
   ![](images/ecm1_inventory_usage_details_report.png " ")
 
@@ -98,7 +98,7 @@ All the items in this step are read-only, primary goal is to learn about invento
 
 ### Overview
 
-In this step, you will compare two database targets to determine configuration differences. One of the databases will act as reference target that aligns with your configuration policy. Your objective is to compare initialization parameters to ensure it is compliant with reference target
+In this step, you will compare two database targets to determine configuration differences. One of the databases will act as a reference target that aligns with your configuration policy. Your objective is to compare initialization parameters to ensure it is compliant with the reference target.
 
 ### Execution
 
@@ -112,7 +112,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/ecm2_One_Time_Db_Comparison_Menu-1.png " ")
 
-4.	Select **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
+4.	Select the **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
   ![](images/Em_One_Create_Comparison_Image_2.png " ")
 
@@ -136,7 +136,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Image_4.png)
 
-9.  Provide a name for Comparison, example name like **ECM002-Compare-Demo - One time Comparison**.
+9.  Provide a name for Comparison, for example, a name like **ECM002-Compare-Demo - One time Comparison**
 
   ![](images/ecm2_one_time_database_comparison_ref_target_Image_7.png)
 
@@ -144,20 +144,20 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Target_Image_5.png " ")
 
-11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with reference target.
+11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
   ![](images/Em_Comp_Conf_Drifts_Mgmt_Image_6.png " ")
 
-  Once the target is chosen, it appears as below
-  Click **Submit**.
+  Once the target is chosen, it appears as below.
+  Click **Submit**
 
   ![](images/Em_one_time_database_comparison_referred_target_Image_8.png " ")
 
-12.  Comparison would take few seconds for selected targets and below are the results.
+12.  The comparison would take a few seconds for selected targets and below are the results.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_9.png " ")
 
-   Click **Clear All** at Configuration Items(Differences)
+   Click **Clear All** at Configuration Items(Differences).
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png " ")
 
@@ -165,34 +165,34 @@ In this step, you will compare two database targets to determine configuration d
 
   You can see the differences in the Initialization Parameters between the two targets.
 
-  Under the target compared column, you will see few icons. The icons that appear in the view are mostly intuitive:
+  Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
-    - Equal sign means parameter properties are same across the reference and target compared
-    - Not equal sign indicates parameter properties are different across the reference and target compared
-    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have property configured to compare
-    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+  - Equal sign means parameter properties are the same across the reference and target compared
+  - Not equal sign indicates parameter properties are different across the reference and target compared
+  - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
+  - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_11.png " ")
 
-14. Now, let us go to Comparison and Drift Management dashboard page for further analysis of results
+14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_12.png " ")
 
-15. In the dashboard page, donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
+15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_13.png " ")
 
-  You should see the comparison definition you created in this page.
+  You should see the comparison definition you created on this page.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png " ")
 
-16. Export the comparison results into an excel report for offline analysis. In the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_15.png " ")
 
   After Exporting, Click **Cancel** to exit
 
-17. Exported results in excel for offline analysis looks like: (**OPTIONAL**)
+17. (**Optional**) Exported results in excel for offline analysis looks like:
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_one_time_comparison_Report_Image_15.png " ")
 
@@ -202,11 +202,11 @@ In this step, you will compare two database targets to determine configuration d
 
 ### Overview
 
-In this workshop, you will learn about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using customized configuration monitoring template
+In this workshop, you will learn about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template.
 
 1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
 
-2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***. Review the different types of comparisons supported.
+2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***, Review the different types of comparisons supported.
 
   ![](images/ecm2_One_Tme_Database_Comparison_Menu.png " ")
 
@@ -228,7 +228,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_3.png " ")
 
-5.  A complete copy of Database Instance template with unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
+5.  A complete copy of the Database Instance template with a unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
 
   ```
    <copy>ECM003-Drift_Demo</copy>
@@ -242,7 +242,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compared_And_Drift_Demo_Image_5.png " ")
 
-6.  Configuration templates page appears below.
+6.  The configuration templates page appears below.
 
   ![](images/Compare_And_Drift_Demo_Image_6.png " ")
 
@@ -252,7 +252,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
-    Select the following three configuration items only
+    Select the following three configuration items only,
 
     - Instance Caging Information
     - Instance Information
@@ -270,7 +270,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_10-1.png " ")
 
-9.  Go to Drift Results tab and create a drift definition.
+9.  Go to the Drift Results tab and create a drift definition.
 
   ![](images/Compare_And_Drift_Demo_Image_10.png " ")
 
@@ -351,11 +351,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_and_Drift_Demo_Image_22-1.png " ")
 
- Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**OPTIONAL**)
+ Export the comparison results into an excel report for offline analysis. In the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export. (**Optional**)
 
   ![](images/Compare_And_Drift_Demo_Image_25-1.png " ")
 
-24. Exported results in excel for offline analysis looks like:(**OPTIONAL**)
+24. (**Optional**) Exported results in excel for offline analysis looks like:
 
   ![](images/Compare_And_Drift_Demo_Report_Image_26-1.png " ")
 
@@ -371,7 +371,7 @@ Compliance Management provides the ability to evaluate the compliance of targets
 
 <!-- In this lab, you will setup a compliance standard for monitoring security compliance of Oracle Database target and analyze the compliance score and violations -->
 
-Terminology Used in this Compliance specific workshop
+Terminology used in this Compliance specific workshop
 
 ### Center of Internet Security compliance(CIS) Standard
 
@@ -608,11 +608,11 @@ And also by clicking on Report.
 
   ![](images/HIPAA_Compliance_Report_Score_Image_21-1.png " ")
 
-  19. Individual rules can be further explored with select Enterprise Main Menu, then select Compliance and Results Page  
+  19. Individual rules can be further explored with select Enterprise Main Menu, then select Compliance and Results Page
 
   ![](images/HIPAA_Main_Results_Image_22-1.png " ")
 
-    It takes you to Compliance Results page.  
+    It takes you to Compliance Results page.
 
   ![](images/HIPAA_Compliance_Results_Image_23-1.png " ")
 
