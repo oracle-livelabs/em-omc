@@ -1,7 +1,7 @@
 # Automated Database Patching at Scale with Fleet Maintenance UI
 
 ## Introduction
-In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet User Interface to automate the patching of multiple Oracle Databases in one flow.
+In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet Maintenance User Interface to automate the patching of multiple Oracle Databases in one flow.
 
 *Estimated Time*: 60 minutes
 
@@ -10,14 +10,14 @@ In this workshop, you will experience the benefits of using the Oracle Enterpris
 
 Database Fleet Maintenance is an end-to-end automated solution for patching and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate patching of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
 
-Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to ease automated patching, update, and upgrade of your database fleet.
+Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to ease automated update(patching), and upgrade of your database fleet.
 
 Benefits of using the EM Fleet Maintenance capability include:
 - Minimizing downtime with use of Out of Place patching
 - Enterprise scalability using the Enterprise Manger Deployment Procedures Framework
 - A single pane of glass for monitoring and managing the entire patching and upgrade operations
 - Ability to schedule/retry/suspend/resume operations.
-- Patch Oracle Databases across different infrastructure including engineered systems like Oracle Exadata
+- Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
 ![](images/new-em-fleet-maintenance-overview-1.png " ")
 
@@ -34,8 +34,8 @@ Watch a preview of database patching using Oracle Enterprise Manager Fleet Maint
 In this lab you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Detect Configuration Pollution                             | 10 minutes  | Analyze the database estate using Software Standardization.                                                                                                                |                   |
-| 2                    | Oracle Database Patching with Fleet Maintenance | 50  minutes  | Patch a Database target using a Gold Image. As part of patching the Container Database, all Oracle Pluggable Databases in that Container Database will automatically get patched. |                   |
+| 1                    | Detect Configuration Pollution                             | 10 minutes  | Analyze the database estate using Software Standardization.                                                                                                                | Provides recommendation to run minimum version of databases to ease your maintenance activities.                  |
+| 2                    | Oracle Database Update(Patching) with Fleet Maintenance | 50  minutes  | Update(Patch) a Database target using a Gold Image. As part of patching the Container Database, all Oracle Pluggable Databases in that Container Database will automatically get patched. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Database.             |
 
 
 ### Prerequisites
@@ -396,7 +396,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     ![](images/HR-listener-complete.png "details of DP")
     We can now see that the migration operation completed successfully.
 
-## Task 8: Update Database – Patch 18.3 to 18.10
+## Task 8: Update(Patching) Database – Patch 18.3 to 18.10
 
 1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6).
     ![](images/uncheck-update-db.png " ")
@@ -417,7 +417,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 ## Task 9:  Rollback Database – Reversed Patch 18.10 to 18.3
 
-Once the database is updated, we will perform a rollback to Oracle Database 18.3. In a future release capability is being planned to perform rollback of an operation using the UI.
+Once the database is updated(patched), we will perform a rollback to Oracle Database 18.3. In a future release capability is being planned to perform rollback of an operation using the UI.
 
 1. Review and execute below command from the terminal to rollback database Target ***hr.subnet.vcn.oraclevcn.com***
 
@@ -454,9 +454,9 @@ below.
 
 1. Clean up Database HR. In a future release capability is being planned to perform cleanup of an operation using the UI.
 
-   In order to have an old empty home previously used by “***hr.subnet.vcn.oraclevcn.com***” at our disposal to demonstrate a cleanup operation, we will now re-update the database by running the commands from Step 8.
+   In order to have an old empty home previously used by “***hr.subnet.vcn.oraclevcn.com***” at our disposal to demonstrate a cleanup operation, we will now re-update(re-patch) the database by running the commands from Step 8.
 
-2. Review and execute below command to update database target ***hr.subnet.vcn.oraclevcn.com*** again to 18.10 version
+2. Review and execute below command to update(patch) database target ***hr.subnet.vcn.oraclevcn.com*** again to 18.10 version
 
     ```
     <copy>emcli db_software_maintenance -performOperation -name="Update DB" -purpose=UPDATE_DB -target_type=oracle_database -target_list=hr.subnet.vcn.oraclevcn.com -normal_credential=ORACLE:SYSMAN -privilege_credential=ROOT:SYSMAN -database_credential=sales_SYS:SYSMAN</copy>
@@ -588,8 +588,6 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
   - **Authors**
-    - Shefali Bhargava, Oracle Enterprise Manager Product Management
-    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
     - Romit Acharya, Oracle Enterprise Manager Product Management
-  - **Contributors** -
+    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
   - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2022

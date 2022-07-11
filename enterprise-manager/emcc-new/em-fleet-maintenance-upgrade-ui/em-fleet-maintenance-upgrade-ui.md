@@ -1,7 +1,7 @@
 # Automated Database Upgrade at Scale with Fleet Maintenance UI
 
 ## Introduction
-In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet User Interface to automate the upgrade of multiple Oracle Databases in one flow.
+In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet Maintenance User Interface to automate the upgrade of multiple Oracle Databases in one flow.
 
 *Estimated Time:* 60 minutes
 
@@ -12,14 +12,14 @@ Watch the video below for a quick walk through of the lab.
 
 Database Fleet Maintenance is an end-to-end automated solution for patching and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate patching of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
 
-Starting with Enterprise Manager 13.5 RU1, EM offers a new interface to ease automated patching, update, and upgrade of your database fleet.
+Starting with Enterprise Manager 13.5 RU1, EM offers a new interface to ease automated (update)patching, and upgrade of your database fleet.
 
 Benefits of using the EM Fleet Maintenance capability include:
 - Minimizing downtime with use of Out of Place patching
 - Enterprise scalability using the Enterprise Manger Deployment Procedures Framework
 - A single pane of glass for monitoring and managing the entire patching and upgrade operations
 - Ability to schedule/retry/suspend/resume operations.
-- Patch Oracle Databases across different infrastructure including engineered systems like Oracle Exadata
+- Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
   ![](images/new-em-fleet-maintenance-overview-1.png " ")
 
@@ -30,8 +30,8 @@ In this lab you will perform the following steps:
 
 | Step No. | Feature                                                   | Approx. Time | Details                                                                                                              | Value Proposition |
 |----------------------|-----------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Detect Configuration Pollution                            | 10 minutes  | Analyze the database estate using Software Standardization.                                                          |                   |
-| 2                    | Oracle Database Upgrade with Fleet Maintenance | 50 minutes   | Upgrade your Oracle Database Software at scale with minimal downtime using Oracle Enterprise Manager 13c Fleet Maintenance. |                   |
+| 1                    | Detect Configuration Pollution                            | 10 minutes  | Analyze the database estate using Software Standardization.                                                          | Provides recommendation to run minimum version of databases to ease your maintenance activities.                  |
+| 2                    | Oracle Database Upgrade with Fleet Maintenance | 50 minutes   | Upgrade your Oracle Database Software at scale with minimal downtime using Oracle Enterprise Manager 13c Fleet Maintenance. | Demonstrate key capabilities and features of Fleet Maintenance to upgrade Oracle Database.                  |
 
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
@@ -277,7 +277,7 @@ This step verifies if the image can be used to patch a specified database target
 
     ![](images/17322b2523052b40c7d105c51b6a2967.png " ")
 
-### **Update Database** – Patch to 18.10 - [JUST FOR REFERENCE – This step has already been implemented]
+### **Update(Patch) Database** – Patch to 18.10 - [JUST FOR REFERENCE – This step has already been implemented]
 
 9. Review emcli command encapsulated in shell script
 
@@ -597,8 +597,6 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
   - **Authors**
-    - Shefali Bhargava, Oracle Enterprise Manager Product Management
-    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
     - Romit Acharya, Oracle Enterprise Manager Product Management
-  - **Contributors** -
+    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
   - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2022
