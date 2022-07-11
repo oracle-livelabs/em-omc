@@ -4,18 +4,18 @@ The objective of this lab is to highlight Oracle Enterprise Manager Cloud Contro
 
 *Estimated Lab Time:* 60 minutes
 
-Watch the video below for a quick walk through of the lab.
+Watch the video below for a quick walk-through of the lab.
 [](youtube:xEKClAvB-Yg)
 
 ### About Configuration and Compliance Management
 
-Changes to configuration properties of database and host targets invariably happen, typically because of common events like patches and upgrades. At some point a change to one component can affect the overall system in a negative way. Detecting the root cause becomes paramount. With Configuration Management, one can continuously monitor and track configuration drifts of targets against the reference configuration. Enterprise Manger automatically collects a comprehensive set of configuration properties of all managed targets across the datacenter and cloud.
+Changes to configuration properties of database and host targets invariably happen, typically because of common events like patches and upgrades. At some point, a change to one component can negatively affect the overall system. Detecting the root cause becomes paramount. With Configuration Management, one can continuously monitor and track configuration drifts of targets against the reference configuration. Enterprise Manager automatically collects a comprehensive set of configuration properties of all managed targets across the data center and cloud.
 
 With Compliance Management, one can run automated, continuous security checks based on industry standards and best practices, such as the Center for Internet Security (CIS), Security Technical Implementation Guide (STIG), Payment Card Industry Data Security Standard (PCI DSS), and Health Insurance Portability and Accountability Act (HIPAA). Reinforce industry standards such as STIG and CIS with custom policies to protect against threats, providing secure databases and hosts for applications. These security checks provide a compliance score to depict the overall compliance of targets against an industry-standard benchmark.
 
 ### Objectives
 
-In this lab you will perform the following steps
+In this lab, you will perform the following steps
 
 | Step No.                                      | Feature                                                                 | Approx. Time | Details                                                                                                                                                                                    | Value proposition                                                                                                   |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|
@@ -27,7 +27,7 @@ In this lab you will perform the following steps
 
 
 ###  Prerequisites
-- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- A Free Tier, Paid, or LiveLabs Oracle Cloud account
 - You have completed:
     - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
     - Lab: Environment Setup
@@ -66,7 +66,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
-5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose **Trend** radio button to see the growth of a given database instance over a period of time.
+5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the**Trend** radio button to see the growth of a given database instance over a period of time.
 
  ![](images/Em_Config_Compliane_dbtrends_Image_3.png " ")
 
@@ -84,7 +84,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
       - Database version number
       - OS specific details like OS version, platform, etc.
       - Most importantly, LOB/Department information
-        Details table gives more information of each Database instance for you to get a good understanding of number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business or Department, then you will be able to determine the number of targets deployed for a given business unit.Explore these features to get a good handle on Inventory and Usage details.
+        The Details table gives more information about each Database instance for you to get a good understanding of the number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business, or Department, then you will be able to determine the number of targets deployed for a given business unit. Explore these features to get a good handle on Inventory and Usage details.
 
 7. Export inventory details to excel for reports.
 
@@ -94,7 +94,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
   ![](images/ecm1_inventory_usage_details_report.png " ")
 
-## Task 2: One Time Database Comparison
+## Task 2: One-Time Database Comparison
 
 ### Overview
 
@@ -128,7 +128,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/ecm2_one_time_database_comparison_ref_Target_Image_5.png " ")
 
-7.  Select **emrep.us.oracle.com** as reference target.
+7.  Select **emrep.us.oracle.com** as the reference target.
 
   ![](images/ecm2_one_time_database_comparison_ref_target_Image_6.png " ")
 
@@ -161,7 +161,7 @@ In this step, you will compare two database targets to determine configuration d
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png " ")
 
-13. Filter configurations items to review only Initialization Parameters.
+13. Filter configuration items to review only Initialization Parameters.
 
   You can see the differences in the Initialization Parameters between the two targets.
 
@@ -192,7 +192,7 @@ In this step, you will compare two database targets to determine configuration d
 
   After Exporting, Click **Cancel** to exit
 
-17. (**Optional**) Exported results in excel for offline analysis looks like:
+17. (**Optional**) Exported results in excel for offline analysis look like this:
 
   ![](images/Em_Comp_Conf_Drift_Mgmt_one_time_comparison_Report_Image_15.png " ")
 
@@ -216,7 +216,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/ecm2_One_Time_Db_Comparison_Menu-1.png " ")
 
-3.  Go to Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
+3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
   ![](images/Compare_Drift_Template_Image_1.png " ")
 
@@ -266,7 +266,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/Compare_And_Drift_Demo_Image_9-1.png " ")
 
-  **Search** with Template name **ECM003-Drift_Demo** shows with Confirmation page
+  **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
   ![](images/Compare_And_Drift_Demo_Image_10-1.png " ")
 
@@ -427,7 +427,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Associate_Target_Image_10-1.png " ")
 
-10. When Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
+10. When the Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
   ![](images/CIS_Db_Compliance_Associate_Target_Image_11-1.png " ")
 
@@ -443,7 +443,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-1.png " ")
 
-  The pop-up window shows process status, Click **OK**
+  The pop-up window shows the process status, Click **OK**
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_16-0.png " ")
 
@@ -545,7 +545,7 @@ Click the **Cancel** button.
 
   ![](images/HIPAA_Associate_Target_Image_7-1.png " ")
 
-  8. When the Associate Target option is chosen, you will be taken to a page to add hosts targets.
+  8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
     Click Add to add a target for association with this compliance standard.
 
@@ -561,7 +561,7 @@ Click the **Cancel** button.
 
   ![](images/HIPAA_Associate_List_Image_10-1.png " ")
 
-  11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standard.
+  11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
   ![](images/HIPAA_Confirm_Host_Target_Image_11-1.png " ")
 
