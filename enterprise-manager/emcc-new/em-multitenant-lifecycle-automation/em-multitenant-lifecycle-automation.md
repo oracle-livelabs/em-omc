@@ -350,7 +350,11 @@ Click **Next**
 
 5.  Under the PDB creation options, select **Clone an Existing PDB** . 
 
-    Select **Full Clone** and  select a source PDB(PROV_PDB) from which you want to clone the PDB. 
+    Select **Full Clone**.
+
+    Click on the magnifier next to source PDB to choose the source database for clone.
+
+    In the pop up search, type `PROV_PDB` and click search. Choose `PROV_PDB` and click Select.
 
     Leave the Database Link blank.
 
@@ -362,9 +366,11 @@ Click **Next**
 
     ![](images/Task3-step5.jpg " ")
 
-6.  Enter new PDB name (full_clonepdb).
+6.  On the Indentification page , enter new PDB name (full_clonepdb).
 
-    The PDB Administrator user will inherit the user credentials from the source PDB, hence this section does not need any inputs.
+    You also have an option to create multiple clones by selecting the check box in the PDB Name section. For this lab, we will leave the option unchecked. 
+
+    In the PDB Administrator section, credentials will be inherited from the source PDB, hence this section does not need any inputs.
 
     Optionally, an additional PDB Administrator user can also be created in case needed. 
 
@@ -372,9 +378,12 @@ Click **Next**
 
       ![](images/Task2-step6.jpg " ")
 
-7.  Select **Use Common Location for PDB Datafiles** in the Storage page of the Create Pluggable Database Wizard. 
+7.  On the Storage Page , select **Use Common Location for PDB Datafiles**. 
 
-    Enter **/tmp** in temporary working directory.
+    Storage type - Filesystem is autoselected.
+    Location - Autofilled with PDB name suffix
+
+    Enter **/tmp** in temporary working directory incase the field is not autofilled. 
 
 
     Optionally, you can select the postscript as we did in the creation flow. 
@@ -385,7 +394,7 @@ Click **Next**
 
     ![](images/ff556eb15570c55dfd477361c20051d6.jpg " ")
 
-8.  In the Schedule page, choose to start  **immediately**.
+8.  On the Schedule page, choose to start  **immediately**.
 
     Click **Next**.
 
@@ -397,6 +406,10 @@ Click **Next**
 
       ![](images/Task3-step9.jpg " ")
       ![](images/Task3-step9a.jpg " ")
+    
+     On Procedure Activity page , select specific execution step from the procedure step tree to see detail procedure execution log. 
+
+     Setup View Data to be refreshed with specific time interval to refresh page. 
 
       ![](images/Task3-step10.jpg " ")
 
