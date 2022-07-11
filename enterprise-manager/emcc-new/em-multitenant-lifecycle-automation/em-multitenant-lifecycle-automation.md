@@ -434,22 +434,24 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Compliance Management for Pluggable Database
 
-Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry or regulatory standard benchmarks or custom policies. In this lab, we will use High Security Configuration for Oracle Pluggable Database compliance standard to secure configuration of provisioned database
+Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use *High Security Configuration for Oracle Pluggable Database* compliance standard to secure configuration of provisioned database.
 
 
 1. Navigate to ***Enterprise >> Compliance >> Library*** to get started
 
     ![](images/dblmcompliancelibrary.jpg " ")
 
-2. Click the **Compliance Standards** tab, Click on the Dropdown next to **Search**,
-Key in "High Security" as the key word and hit search.
+2. Click the **Compliance Standards** tab. 
 
-    Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+    Click on the Dropdown next to **Search**.
+    In the Compliance Standard section type  "High Security" as the key word and hit search.
+
+     Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
 
       ![](images/Task4-Compliance-Standard-name.jpg " ")
 
-3.  Click Add and choose the row with your PDB you wish to associate (DWH_TEST), click **Select**.
+3.  Click Add and choose the row with your PDB you wish to associate (PROV_PDB), click **Select**.
 
     Verify the PDB name is added and Click **OK**
 
