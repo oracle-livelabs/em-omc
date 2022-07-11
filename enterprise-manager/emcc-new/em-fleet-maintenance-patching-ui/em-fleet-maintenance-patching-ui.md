@@ -1,21 +1,21 @@
-# Automated Database Patching at Scale with Fleet Maintenance UI
+# Automated Database Update(Patching) at Scale with Fleet Maintenance UI
 
 ## Introduction
-In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet Maintenance User Interface to automate the patching of multiple Oracle Databases in one flow.
+In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet Maintenance User Interface to automate the update(patching) of multiple Oracle Databases in one flow.
 
 *Estimated Time*: 60 minutes
 
 
 ### About the Database Fleet Maintenance UI capability in Oracle Enterprise Manager
 
-Database Fleet Maintenance is an end-to-end automated solution for patching and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate patching of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
+Database Fleet Maintenance is an end-to-end automated solution for update(patching) and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate update(patching) of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
 
 Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to ease automated update(patching), and upgrade of your database fleet.
 
 Benefits of using the EM Fleet Maintenance capability include:
 - Minimizing downtime with use of Out of Place patching
 - Enterprise scalability using the Enterprise Manger Deployment Procedures Framework
-- A single pane of glass for monitoring and managing the entire patching and upgrade operations
+- A single pane of glass for monitoring and managing the entire update(patching) and upgrade operations
 - Ability to schedule/retry/suspend/resume operations
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
@@ -141,7 +141,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     - Patch database “hr.subnet.vcn.oraclevcn.com” from 18.3 to 18.10 -->
 
-## Task 3: Database Server patching with Fleet maintenance (Overview)
+## Task 3: Database Server update(patching) with Fleet maintenance (Overview)
 
 ### **Database Fleet Maintenance**
 
@@ -155,7 +155,7 @@ A gold image is the end of state software definition that contains information a
 
 ### **Patching with Fleet Maintenance**
 
-We will go through steps for patching database target ***hr.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 18.3.0.0.0 version. The goal is to patch this target to 18.10.0.0.0. As part of the patching exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
+We will go through steps for update(patching) database target ***hr.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 18.3.0.0.0 version. The goal is to patch this target to 18.10.0.0.0. As part of the update(patching) exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
 
 1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
 
