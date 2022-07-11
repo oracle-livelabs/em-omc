@@ -74,7 +74,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 
 
-5.  In the PDB Operations section, select **Create New Pluggable Databases**, Click Launch
+5.  In the PDB Operations section, select **Create New Pluggable Databases**.
+
+    Click **Launch**
 
     ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
@@ -212,9 +214,10 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/Task2-step6-latest.jpg " ")
 
-7.   Schedule immediately or later .
-    Click **Next**.
-  ![](images/Task2-Step7.jpg " ")
+7.   Schedule **immediately** or choose later .
+    
+     Click **Next**.
+          ![](images/Task2-Step7.jpg " ")
 
 
 
@@ -234,7 +237,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
-8.  Once procedure successfully complete, You can Navigate to **Targets** >> **Databases**.
+8.  Once procedure successfully completes, You can Navigate to **Targets** >> **Databases**.
 
      Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
 
@@ -256,12 +259,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![](images/Select-CDB-main-flow-helper.jpg " ")
       ![](images/Select-CDB-main-flow.jpg " ")
 
-12. In the PDB Operations section, select **Create New Pluggable Databases** , Click **Launch**.
+12. In the PDB Operations section, select **Create New Pluggable Databases** and click **Launch**.
 
     ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
-13. On the Create Pluggable Database Wizard, in the Create Options section, select **Plug an unplugged PDB**. Select Named credentials **“ORACLE”**
-Click **Next**
+13. On the Create Pluggable Database Wizard, in the PDB Creation Options section, select **Plug an unplugged PDB**. 
+
+    Select Named credentials **“ORACLE”**
+
+    Click **Next**
 
 
     ![](images/5427807b6e4c677bd991497cfc5468ce.jpg " ")
@@ -269,7 +275,7 @@ Click **Next**
 
 14. The Identification page has 3 sections. 
 
-    Under the *PDB Name* section provide a name for the PDB(prov_pdb) and select the option *create as clone*, this ensures Oracle generates a unique PDB DBID, GUID, and other identifiers expected for the new PDB.
+    Under the *PDB Name* section provide a name for the PDB (`prov_pdb`) and select the option *create as clone*, this ensures Oracle generates a unique PDB DBID, GUID, and other identifiers expected for the new PDB.
 
 
     In the next section under *PDB Administrator* we will keep the values default and not do any changes as shown below.
@@ -302,14 +308,17 @@ Click **Next**
     ![](images/a6353f812935eeb6148a79693ae0c4fd.jpg " ")
 
 17.  
-    Schedule immediately or later.
+    Schedule **immediately** or choose to start later.
      Click **Next**.
 
     ![](images/Task2-step17.jpg " ")
 
     
 
-18.  In the review page, verify the details and click **Submit**. You can now click on View Execution Details link to see details.
+18. In the review page, verify the details and click
+    **Submit**. 
+
+    You can now click on **View Execution Details** link to see details.
     ![](images/Task2-step18.jpg " ")
     ![](images/View_execution_details.jpg " ")
 
@@ -347,7 +356,8 @@ Click **Next**
   ![](images/Select-CDB-main-flow.jpg " ")
 
 4.  In the PDB Operations section, select **Create New Pluggable Databases**.
-   Click **Launch**
+
+    Click **Launch**
 
     ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
 
@@ -355,7 +365,7 @@ Click **Next**
 
     Select **Full Clone**.
 
-    Click on the magnifier next to source PDB to choose the source database for clone.
+    Click on the magnifier next to source PDB field to choose the source database for clone.
 
     In the pop up search, type `PROV_PDB` and click search. Choose `PROV_PDB` and click Select.
 
