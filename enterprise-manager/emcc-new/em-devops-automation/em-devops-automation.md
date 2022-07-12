@@ -31,6 +31,8 @@ In this lab you will learn:
     - Lab: Initialize Environment
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.12 as Oracle Management Repository.
+dbaas
+
 
 ## Task 1: Install and Configure Ansible
 
