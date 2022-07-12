@@ -30,9 +30,8 @@ In this lab you will learn:
     - Lab: Environment Setup
     - Lab: Initialize Environment
 
-*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.12 as Oracle Management Repository.
-dbaas
-
+*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.12 as Oracle Management Repository. The steps on this Lab won't cover how to perform the DBaaS setup in Enterprise Manager.
+Is highly recommended to execute the **Database Lifecycle Automation** workshop as a prerequisite in order to further understand this DBaaS setup.
 
 ## Task 1: Install and Configure Ansible
 
