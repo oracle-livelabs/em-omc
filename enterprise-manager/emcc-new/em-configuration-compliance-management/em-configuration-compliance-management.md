@@ -425,27 +425,27 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_10-1.png " ")
+  ![](images/CIS_Db_Compliance_Associate_Target_Image_10-2.png " ")
 
 10. When the Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_11-1.png " ")
+  ![](images/CIS_Db_Compliance_Associate_Target_Image_11-2.png " ")
 
 11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![](images/CIS_Db_Compliance_Select_Target_Image_13-1.png " ")
+  ![](images/CIS_Db_Compliance_Select_Target_Image_13-2.png " ")
 
 12. The list of targets chosen will show up on the target association page as shown below.
 
-  ![](images/CIS_Db_Compliance_Add_Target_Image_14-1.png " ")
+  ![](images/CIS_Db_Compliance_Add_Target_Image_14-2.png " ")
 
 13. Click OK and a pop-up window shows to confirm an association. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-1.png " ")
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_15-2.png " ")
 
   The pop-up window shows the process status, Click **OK**
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_16-0.png " ")
+  ![](images/CIS_Db_Compliance_Confirm_Target_Image_16-1.png " ")
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
