@@ -1,0 +1,64 @@
+{
+
+  "workshoptitle": "Monitor WebLogic Server on Kubernetes using Oracle Enterprise Manager",
+
+	"help": "livelabs-help-em_us_grp@oracle.com",
+
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../00-intro/introduction.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Tutorial 1: Verify WebLogic in Kubernetes",
+            "description": "Verify WebLogic in Kubernetes",
+            "filename": "../../01-verify-wls/verify-wls.md"
+        },
+        {
+            "title": "Tutorial 2: Create a private subnet for load balancer services",
+            "description": "Create a private subnet for load balancer services",
+            "filename": "../../02-create-subnet/create-subnet.md"
+        },
+        {
+            "title": "Tutorial 3: Create Kubernetes load balancer services",
+            "description": "Create Kubernetes load balancer services",
+            "filename": "../../03-create-lb/create-lb.md"
+        },
+        {
+            "title": "Tutorial 4: Create a public subnet for EM agent",
+            "description": "Create a public subnet for EM agent",
+            "filename": "../../04-create-subnet2/create-subnet2.md"
+        },
+        {
+            "title": "Tutorial 5: Set up EM Agent",
+            "description": "Set up EM Agent",
+            "filename": "../../05-setup-emagent/setup-emagent.md"
+        },
+        {
+            "title": "Tutorial 6: Discover WebLogic Servers as managed targets",
+            "description": "Discover WebLogic Servers as managed targets",
+            "filename": "../../06-discover-wls/discover-wls.md"
+        },
+        {
+            "title": "Tutorial 7: (Optional) Verify the continuous monitoring at the pod restart",
+            "description": "Verify the continuous monitoring at the pod restart",
+            "filename": "../../07-verify-restart/verify-restart.md"
+        },
+        {
+            "title": "Tutorial 8: (Optional) Enable JVM Diagnostics",
+            "description": "Enable JVM Diagnostics",
+            "filename": "../../08-enable-jvmd/enable-jvmd.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}
