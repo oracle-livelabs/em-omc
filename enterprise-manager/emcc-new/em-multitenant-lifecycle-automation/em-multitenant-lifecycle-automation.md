@@ -23,10 +23,10 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 | **Step No.** | **Feature**                                                                | **Approx. Time** | **Details**                                                                                                                                                                      | **Value proposition**                                                                                                                                                                                                                   |
 |--------|----------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1    | Create a Pluggable Database (PDB)                                      | 10min                     | Create Pluggable database (PDB) within a CDB and run a post-script to lock/unlock accounts.                                                                                  | Create multiple PDBs with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                                           |
-| 2    | Un-plug/Plug an existing Pluggable Database | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed (Create from unplugged)                                                                                                                       | Unplug a PDB when not needed and plug it back as per need hence maximizing resource utilization in your organization. Easily upgrade PDBs with few clicks by moving from one container to another.                                                                                                                  |
-| 3    | Clone an existing Pluggable Database                                 | 5min                      | Create multiple copies (Clones) of a PDB to dev/test purpose                                                                                                                     | Create multiple PDBs clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                      |
-| 4    | Compliance Management for Pluggable Database                                                         | 10min                     | Apply a compliance standard on PDB and use corrective action to fix the violation                                                                                                | Make sure PDBs comply with compliance standards and fix them with a click of a button if there is any anomaly.                                                                                                                         |
-| 5    | Self- service to request a PDB using PDBaaS            | 10min                     | Request PDB pluggable database using Service Catalogue. (Private Cloud) Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
+| 2    | Un-plug/Plug an existing Pluggable Database | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed (Create from unplugged)                                                                                                                       | Unplug a PDB when not needed and plug it back as per need, hence maximizing resource utilization in your organization. Easily upgrade PDBs with few clicks by moving from one container to another.                                                                                                                  |
+| 3    | Clone an existing Pluggable Database                                 | 5min                      | Create multiple copies (Clones) of a PDB for dev/test purpose                                                                                                                     | Create multiple PDBs clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                      |
+| 4    | Compliance Management for Pluggable Database                                                         | 10min                     | Apply a compliance standard on PDB, generate report and validate the results.                                                                                                 | Make sure PDBs comply with compliance standards and explore options to fix in case of any anomalies.                                                                                                                   |
+| 5    | Self- service to request a PDB using PDBaaS            | 10min                     | Request PDB (pluggable database) using Service Catalogue on Private Cloud. Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
 | 6    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10min                     | An overview of the administrative setup involved for PDBaaS (Private Cloud) which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc. | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm and make sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
 
 
@@ -162,13 +162,16 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 13. On Procedure Activity, select specific execution step from the procedure step tree to see details of the execution log.
 
-    setup View Data to be refreshed with specific time interval to refresh page
+    Setup View Data to be refreshed with specific time interval to refresh page. The procedure takes about 2-3 minutes to complete. 
+
+    Wait for **Status: Succeeded** which indicates the procedure ran successfully.
+    
 
     ![](images/3657eb9bb536b26d163c148e40a99332.jpg " ")
 
 
 
-14. Once the procedure is completed (takes about 2-3 mins), you can **Navigate to Targets >> Databases**.
+14. You can **Navigate to Targets >> Databases**.
 
     ![](images/Target-Database-Navigation.jpg " ")
 
@@ -237,14 +240,16 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     On the Procedure Activity page, select specific execution step from the procedure step tree to see detail procedure execution log. 
 
-    Setup View Data to be refreshed with specific time interval to refresh page
+    Setup View Data to be refreshed with specific time interval to refresh page. The procedure takes about 2-3 minutes to complete. 
+
+    Wait for **Status: Succeeded** which indicates the procedure ran successfully.
 
     ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
 
-8.  Once procedure successfully completes, You can Navigate to **Targets** >> **Databases**.
+8.  Navigate to **Targets** >> **Databases**.
 
-     Click on CDB186 and you will see the PDB you unplugged is no longer in the list.
-
+     Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB you unplugged is no longer in the list.
+      
 
     ![](images/Task2-step8.jpg " ")
 
@@ -294,7 +299,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     In case of multiple options, choose the latest image based on timestamp.
     Click **Select**
       ![](images/Task2-step15-latest.jpg " ")
-      
+
       ![](images/Task2-step15.jpg " ")
       
 
@@ -335,15 +340,19 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     The procedure takes 2-3 minutes to complete.
 
+    Wait for **Status: Succeeded** which indicates the procedure ran successfully.
+
     ![](images/Task2-step19.jpg " ")
 
     Optionally,  Click the status link for each step to view the details of the execution of each step. 
 
 
-20. Once the procedure is completed, you can Navigate to ***Targets >> Databases***. Click on CDB186 and you will see the newly created PDB
+20. Navigate to ***Targets >> Databases***. 
+
+    Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB which was recently plugged.
 
 
-    ![](images/Task2-step20.jpg " ")
+    ![](images/Task1-step14.jpg " ")
 
     *Note*: You do not have to wait until the steps complete and move on to the next section.
 
@@ -373,7 +382,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click on the magnifier next to source PDB field to choose the source database for clone.
 
-    In the pop up search, type `PROV_PDB` and click search. Choose `PROV_PDB` and click Select.
+    In the pop up search, type **`PROV_PDB`** and click search. Choose PROV_PDB and click **Select**.
 
     Leave the Database Link blank.
 
@@ -385,7 +394,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/Task3-step5.jpg " ")
 
-6.  On the Identification page , enter new PDB name (full_clonepdb).
+6.  On the Identification page , enter new PDB name (**full_clonepdb**).
 
     You also have an option to create multiple clones by selecting the check box in the PDB Name section. For this lab, we will leave the option unchecked. 
 
@@ -428,13 +437,17 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     
      On Procedure Activity page , select specific execution step from the procedure step tree to see detail procedure execution log. 
 
-     Setup View Data to be refreshed with specific time interval to refresh page. 
+    Setup View Data to be refreshed with specific time interval to refresh page. The procedure takes about 2-3 minutes to complete.  
 
-      ![](images/Task3-step10.jpg " ")
+    Wait for **Status: Succeeded** which indicates the procedure ran successfully.
+
+      ![](images/Task2-step19.jpg " ")
 
 
 
-10.  Once the procedure is complete,  Navigate to ***Targets >> Databases***, then **Click** on CDB186 and you will see the  cloned PDB
+10.  Navigate to ***Targets >> Databases***. 
+
+   Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly cloned PDB
 
   ![](images/Task3-step10a.jpg " ")
 
@@ -457,7 +470,7 @@ Securing a provisioned Oracle Database is critical to protect your data. You nee
 
       ![](images/Task4-Compliance-Standard-name.jpg " ")
 
-3.  Click Add and choose the row with your PDB you wish to associate (PROV_PDB), click **Select**.
+3.  Click Add and choose the row with your PDB you wish to associate. Choose PROV_PDB, click **Select**.
 
     Verify the PDB name is added and Click **OK**
 
@@ -515,8 +528,6 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
 
     B. Each Target with all Compliance standard associated to it.
 
-
-    From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**. 
     
     Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
 
@@ -545,7 +556,7 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
 
 With the Self-Service Portal, cloud users can request a Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. PDBs are created with a predefined expiry time and is automatically deleted.
 
-The PDBs are created using a predefined service template on CDBs which are virtually grouped as a pool.
+The PDBs are created using a precreated service template on CDBs which are virtually grouped as a pool.
 
 1. Login into Enterprise Manager as a Self-Service User.
 
