@@ -13,10 +13,10 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Validate Environment",
+      "title": "Lab 1: initialize Environment",
       "description": "How to validate and start all the workshop components",
       "publisheddate": "10/14/2020",
-      "filename": "./../../em-migration-workbench/validate-environment/validate-environment.md"
+      "filename": "./../../em-migration-workbench/initialize-environment/initialize-environment.md"
     },
     {
       "title": "Lab 2: Migrate and upgrade 12c database to 19c PDB",
