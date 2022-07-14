@@ -1,7 +1,7 @@
 # Multitenant Database Lifecycle Management
 ## Introduction
 
-This workshop will help you understand how one can utilize Enterprise Manager to make the best use of Oracle Database Multitenancy , and Lifecycle Management capabilities. We also have labs which will help you understand how organizations can utilize the Database Private Cloud which allows self-service users to request and manage PDBs with ease. 
+This workshop will help you understand how one can utilize Enterprise Manager to make the best use of Oracle Database Multitenancy , and Lifecycle Management capabilities. We also have labs which will help you understand how organizations can utilize the Database Private Cloud which allows self-service users to request and manage Pluggable Databases (PDBs) with ease. 
 
 *Estimated Lab Time: 60 minutes*
 
@@ -10,7 +10,7 @@ Watch the video below for a quick walk through of the lab.
 
 ### About Multitenant Database Lifecycle Management
 
-Oracle Enterprise Manager Database Lifecycle Management (DBLM) Pack  comes with out-of-box Deployment Procedures to provision, clone, and patch various configurations of the Oracle Database. The Management Pack offers new capabilities that simplify support for the entire lifecycle of pluggable databases, including migration, plugging and unplugging. The Management Pack features include pluggable database (PDB) provisioning and management from the self-service portal, PDB patching and upgrades, and PDB relocation to new platforms.
+Oracle Enterprise Manager's Database Lifecycle Management (DBLM) Pack  comes with out-of-box Deployment Procedures to provision, clone, and patch various configurations of the Oracle Database. The Management Pack offers new capabilities that simplify support for the entire lifecycle of pluggable databases, including migration, plugging and unplugging. The Management Pack features include pluggable database (PDB) provisioning and management from the self-service portal, PDB patching and upgrades, and PDB relocation to new platforms.
 
 Cloud Management Pack (CMP) that resides on top of DBLM, provides  lifecycle management of PDBs in Database Private Cloud. This enables the Self Service Users to Provision, Plug-Unplug , Clone and Migrate PDBs in the Private Cloud.
 
@@ -168,7 +168,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 
 
-14. Once the procedure is completed (takes about 2-3 mins), you can **Navigate to Targets >> Databases, Click on CDB186** and you will see the newly created PDB
+14. Once the procedure is completed (takes about 2-3 mins), you can **Navigate to Targets >> Databases**.
+
+    ![](images/Target-Database-Navigation.jpg " ")
+
+    Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly created PDB
 
     ![](images/Task1-step14.jpg " ")
 
@@ -289,8 +293,10 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Select the Name which you created during Unplug. 
     In case of multiple options, choose the latest image based on timestamp.
     Click **Select**
-      ![](images/Task2-step15.jpg " ")
       ![](images/Task2-step15-latest.jpg " ")
+      
+      ![](images/Task2-step15.jpg " ")
+      
 
     
     Validate all the options and click **Next**
