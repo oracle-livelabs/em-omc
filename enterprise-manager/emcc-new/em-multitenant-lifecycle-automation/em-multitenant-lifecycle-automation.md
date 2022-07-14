@@ -298,7 +298,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![](images/Task2-step16.jpg " ")
 
 
-16. On the Storage Page select **Use Common Location for PDB Datafiles** , the Storage Type and Location fields are autopopulated as showed below.
+16. On the Storage Page select **Use Common Location for PDB Datafiles** , the Storage Type and Location fields are auto populated as showed below.
 
     Type **/tmp** in temporary working directory option.
 
@@ -379,7 +379,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/Task3-step5.jpg " ")
 
-6.  On the Indentification page , enter new PDB name (full_clonepdb).
+6.  On the Identification page , enter new PDB name (full_clonepdb).
 
     You also have an option to create multiple clones by selecting the check box in the PDB Name section. For this lab, we will leave the option unchecked. 
 
@@ -393,10 +393,10 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 7.  On the Storage Page , select **Use Common Location for PDB Datafiles**. 
 
-    Storage type - Filesystem is autoselected.
-    Location - Autofilled with PDB name suffix
+    Storage type - Filesystem is auto selected.
+    Location - Auto filled with PDB name suffix
 
-    Enter **/tmp** in temporary working directory incase the field is not autofilled. 
+    Enter **/tmp** in temporary working directory in case the field is not auto filled. 
 
 
     Optionally, you can select the postscript as we did in the creation flow. 
@@ -482,7 +482,7 @@ Securing a provisioned Oracle Database is critical to protect your data. You nee
 
 
 10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations. 
-    Incase of violations you will dee details like last evaluation date, name of the rule violated and rationale for the violation under the violation tab
+    In case of violations you will dee details like last evaluation date, name of the rule violated and rationale for the violation under the violation tab
     ![](images/Task4-Violations-tab.jpg " ")
 
 
@@ -605,9 +605,9 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
     **Instance Details** 
 
-    **Request Name** :  Autofilled with latest timestamp. Can be mofidied incase needed. 
+    **Request Name** :  Auto filled with latest timestamp. Can be modified in case needed. 
 
-    **Zone** : Autofilled with default option, Sales Infra Zone.
+    **Zone** : Auto filled with default option, Sales Infra Zone.
 
     
     **Properties**  can help user locate an instance more quickly. 
@@ -747,7 +747,7 @@ The PDBs are created using a predefined service template on CDBs which are virtu
 
    The Instance has been successfully deleted. 
 
-   Click on the refresh icon on the top right incase the PDB is still seen on the page.
+   Click on the refresh icon on the top right in case the PDB is still seen on the page.
 
 ## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
 
