@@ -516,7 +516,7 @@ Verify that the update has been completed successfully. Before proceeding with a
 
     ![](images/cleanup-hr.png " ")
 
-7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provising >> Procedure Activity***.
+7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity***.
     ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
     Monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
