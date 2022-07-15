@@ -62,7 +62,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![](images/Em_Compliance_Config_Alldbs_Image_2.png " ")
+  ![](images/em_compliance_config_alldbs_image.png " ") 
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
