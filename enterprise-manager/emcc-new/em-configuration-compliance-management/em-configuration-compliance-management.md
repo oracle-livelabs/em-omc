@@ -456,7 +456,7 @@ Click the **Cancel** button.
 
   ![](images/CIS_Db_Compliance_Confirm_Target_Image_18-1.png " ")
 
-16. Go to the **Compliance Dashboard** page to check the CIS compliance posture.
+16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
   ![](images/CIS_Db_Compliance_Dashboard_Image_20-1.png " ")
 
