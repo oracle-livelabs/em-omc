@@ -41,7 +41,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>sudo yum install -y ansible</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau1step1.png " ")
+    ![](../em-devops-automation/images/install-ansible.png " ")
 
     Then hit the **Enter** key on your keyboard.
 
@@ -58,7 +58,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     emcc.marketplace.com</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau1step2.png " ")
+    ![](../em-devops-automation/images/edit-ansible-config.png " ")
 
     Save the changes by hitting the **Esc** key on your keyboard, type **:wq** then hit **Enter**.
 
@@ -74,7 +74,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     Are you sure you want to continue connecting (yes/no)? yes
     ```
 
-    ![](../em-devops-automation/images/emdevau1step3.png " ")
+    ![](../em-devops-automation/images/test-ansible-connect.png " ")
 
     Verify that you receive the **pong** response from Ansible.
 
@@ -85,7 +85,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     cd /home/oracle/ansible/yml</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-new-dir.png " ")
+    ![](../em-devops-automation/images/create-ansible-dirs.png " ")
 
 
 ## Task 2: Verify DBaaS Setup and Integration with Ansible
@@ -94,13 +94,13 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
 
     **cyrus/welcome1**
 
-    ![](../em-devops-automation/images/emdevau2step1.png " ")
+    ![](../em-devops-automation/images/em-cyrus-login.png " ")
 
 2. Oracle EM will then show the DBaaS Self Service Portal. Click the **Create Instance** button and verify the offerings from the catalog.
 
-    ![](../em-devops-automation/images/emdevau2step2.png " ")
+    ![](../em-devops-automation/images/em-self-service-create-instance.png " ")
 
-    ![](../em-devops-automation/images/emdevau2step3.png " ")
+    ![](../em-devops-automation/images/em-request-new-service.png " ")
 
 3. From the catalog, we can see that we have two offerings to request a Pluggable Database (PDB). We are going to use the first offering **Provision New Empty Pluggable Database** with Ansible.
 
@@ -267,7 +267,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
 
     These 2 elements represent the same service offerings from the Web console.
 
-    ![](../em-devops-automation/images/emdevau2step3.png " ")
+    ![](../em-devops-automation/images/em-request-new-service.png " ")
 
     In order to request an empty Pluggable database (PDB) we need the **uri** of that specific offering. In this case is.
 
@@ -393,7 +393,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/request_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau3step3.png " ")
+    ![](../em-devops-automation/images/ansible-request-pdb.png " ")
 
 
 4. Review the status of the provisioning request. Review the output of the previous request and find the **uri**.
@@ -445,11 +445,11 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau3step4.png " ")
+    ![](../em-devops-automation/images/ansible-get-pdb-status-ready.png " ")
 
 5. Go back to the Oracle Enterprise Manager web console and refresh the screen. Verify that you can see the newly created PDB in the Self Service Portal.
 
-    ![](../em-devops-automation/images/emdevau3step5.png " ")
+    ![](../em-devops-automation/images/em-self-service-pdb-ready.png " ")
 
 
 ## Task 4: PDB Life Cycle Management using DBaaS and Ansible
@@ -504,7 +504,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/resize_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau4step2.png " ")
+    ![](../em-devops-automation/images/ansible-resize-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -512,7 +512,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau4step21.png " ")
+    ![](../em-devops-automation/images/ansible-resize-pdb-completed.png " ")
 
 3. In this step, we are going to shutdown the recently created PDB. Go back to the SSH terminal and create a new YAML (.yml) file.
 
@@ -561,7 +561,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/shutdown_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau4step3.png " ")
+    ![](../em-devops-automation/images/ansible-shutdown-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -569,7 +569,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau4step31.png " ")
+    ![](../em-devops-automation/images/ansible-get-pdb-status-shutdown.png " ")
 
 4. Start the recently created PDB. Go back to the SSH terminal and create a new YAML (.yml) file.
 
@@ -618,7 +618,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/start_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau4step4.png " ")
+    ![](../em-devops-automation/images/ansible-start-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -626,7 +626,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau4step41.png " ")
+    ![](../em-devops-automation/images/ansible-get-pdb-status-start.png " ")
 
 
 ## Task 5: Delete a PDB using DBaaS and Ansible
@@ -673,7 +673,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/delete_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images//emdevau5step1.png " ")
+    ![](../em-devops-automation/images/ansible-delete-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -681,11 +681,11 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/emdevau5step11.png " ")
+    ![](../em-devops-automation/images/ansible-get-pdb-status-delete.png " ")
 
 2. Go back to the Oracle Enterprise Manager web console. Click on Requests (located on the left panel) and verify all the requests submitted through Ansible.
 
-    ![](../em-devops-automation/images/emdevau5step2.png " ")
+    ![](../em-devops-automation/images/em-self-service-requests.png " ")
 
 This completes the Lab!
 
@@ -699,4 +699,4 @@ You may [proceed to the next lab](#next).
 ## Acknowledgements
 - **Author** - Alfredo Krieg, NA Technology, January 2022
 * **Contributors** -  
-* **Last Updated By/Date** -
+* **Last Updated By/Date** - Alfredo Krieg, NA Technology, July 2022
