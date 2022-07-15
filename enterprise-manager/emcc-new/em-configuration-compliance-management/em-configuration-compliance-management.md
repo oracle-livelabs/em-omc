@@ -126,15 +126,15 @@ In this step, you will compare two database targets to determine configuration d
 
   To begin with, filter ‘Target Type’ to Database Instance.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_image5.png " ") 
+  ![](images/ecm2_one_time_database_comparison_ref_target_image5.png " ")
 
 7.  Select **emrep.us.oracle.com** as the reference target.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_Image_6.png " ")
+  ![](images/ecm2_one_time_database_comparison_ref_target_image6.png " ")
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Image_4.png)
+  ![](images/em_comp_conf_drift_mgmt_image4.png) 
 
 9.  Provide a name for Comparison, for example, a name like **ECM002-Compare-Demo - One time Comparison**
 
