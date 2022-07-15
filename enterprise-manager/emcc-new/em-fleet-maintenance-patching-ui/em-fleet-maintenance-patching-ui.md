@@ -207,7 +207,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 6. Use ‘Show’ filter ‘Steps Not Skipped’ ; View:‘Expand All’ for detailed view of all the steps performed to complete an operation.
 
-    ![](images/DP-1-completed.png "DP completed ")
+    ![](images/dp-1-completed.png "DP completed ")
 
 7. List Available Gold Images. Execute the following commands in the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#2 SI DB Linux64*’* in the emcli command output:
 
