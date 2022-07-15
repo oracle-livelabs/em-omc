@@ -289,7 +289,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     In the next section under *PDB Administrator* we will keep the values default and not do any changes as shown below.
 
-      ![](images/2ac79b220d664b868c62e4529791e187.jpg " ")
+      ![](images/Task2-step14.jpg " ")
 
 
 15. On the same Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box.
@@ -481,7 +481,8 @@ Securing a provisioned Oracle Database is critical to protect your data. You nee
 4. In the Save Association dialog box, Click Yes.
 
 
-    ![](images/0ccc894ff6c91bdd0aa1b7e5f78fbe6e.png " ")
+    ![](images/Task4-step4.png " ")
+
 
 5. Click OK on the Information processing prompt. 
 
