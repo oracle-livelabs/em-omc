@@ -58,7 +58,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-  ![](images/configuration_inventoryusages_image_1.png) 
+  ![](images/configuration_inventoryusages_image1.png)
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
