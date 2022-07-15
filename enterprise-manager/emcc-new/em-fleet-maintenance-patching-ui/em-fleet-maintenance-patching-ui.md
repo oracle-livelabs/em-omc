@@ -115,7 +115,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
 
-    ![](images/workshop_instance.png " ")
+    ![](images/workshop-instance.png " ")
 
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 
@@ -195,7 +195,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     <copy>cd ~/fleet
     sh create_image_Tier2_sidb_x64.sh</copy>
     ```
-    ![](images/create_image_Tier2_sidb_x64.png "script to create GI ")
+    ![](images/create-image-Tier2-sidb-x64.png "script to create GI ")
 
 4. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
@@ -260,7 +260,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     - Output of above emcli command is redirected to a file. You may review the output using any standard editor or tool of your choice.
 
-    ![](images/image_applicable.png "image applicable ")
+    ![](images/image-applicable.png "image applicable ")
 
     This command can show one of the following results:
 
