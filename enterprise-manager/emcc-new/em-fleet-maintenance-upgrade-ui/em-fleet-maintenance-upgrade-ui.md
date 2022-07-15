@@ -21,7 +21,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 - Ability to schedule/retry/suspend/resume operations
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
-  ![](images/new-em-fleet-maintenance-overview.png " ")
+  ![](images/new-em-fleet-maintenance-overview.png "overview")
 
 
 ### Objectives
@@ -68,7 +68,7 @@ Software Standardization Advisor enables administrators to understand various da
 
   <!--![](images/em-fleet-maintenance-overview-2.png " ")  -->
 
-  ![](images/new-em-fleet-maintenance-overview-2.png " ")
+  ![](images/new-em-fleet-maintenance-overview-2.png "update")
 
 1.  On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -106,7 +106,7 @@ Software Standardization Advisor enables administrators to understand various da
     ![](images/generate-report-confirmation.png "pollution detection report generation ")
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/current-config.png " ")
+    ![](images/current-config.png "current config")
 
     When you download the report, should a warning on XLS format and file extension mismatch pop up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
@@ -118,7 +118,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
 
-    ![](images/workshop_instance.png " ")
+    ![](images/workshop_instance.png "workshop ip details")
 
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
@@ -155,7 +155,7 @@ A gold image is the end of state software definition that contains information a
 
    <!--![](images/DB_Fleet_Upgrade.png " ") -->
 
-   ![](images/New-DB-Fleet-Patching.png " ")
+   ![](images/new-db-fleet-patching.png "new look and feel")
 ### **Upgrading with Fleet Maintenance**
 
 We will go through steps for upgrading database target ***finance.subnet.vcn.oraclevcn.com***, a Single Instance Database currently at 18.10.0.0.0 version that was previously patched from 18.8.0.0.0 using Fleet Maintenance. The goal is to upgrade this target to 19.7.0.0.0.
@@ -164,7 +164,7 @@ We will go through steps for upgrading database target ***finance.subnet.vcn.ora
 
     ![](images/ec0b6926d4f65b52a771483ace24055c.png " ")
 
-    ![](images/finance-db.png " ")
+    ![](images/finance-db.png "database details")
 
     You will see the *finance.subnet.vcn.oraclevcn.com* database. If the target status is ‘DOWN’, then start the target (using */home/oracle/start\_db\_finance.sh*).
 
@@ -191,12 +191,12 @@ Just for your reference, specific tasks related to patching on the target databa
     ```
     <copy>Orasidb18c_home1_2020_05_13_04_10_9_emcc.marketplace.com_3192</copy>
     ```
-    ![](images/All-Targets.png " ")
+    ![](images/all-targets.png "all targets")
     Search will return the below screen.
-    ![](images/All-Targets-result.png " ")
+    ![](images/all-targets-result.png "details of target")
     Click on the target name to review the details.
     <!--![](images/ea2416958193764cc47426f0ad8a0a67.jpg " ") -->
-    ![](images/target-details.png " ")
+    ![](images/target-details.png "further details")
 
 3. Review “Create New Gold Image” from the terminal on your remote desktop using the following emcli command
 
@@ -296,12 +296,12 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     Just as it was done for the first version of this image, a reference 19.7 Oracle home is needed to create a new version of the image and was setup in advance. [*/u01/app/oracle/product/19/db\_home\_src*]. This reference Oracle home is discovered in Enterprise Manager as shown below and will be used to create and new version of the Gold Image.
 
 2. Navigate to “***Targets >> All Targets***” and type in “*Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953*” in the “*Search Target Name*” box.
-    ![](images/All-Targets-19c.png " ")
+    ![](images/all-targets-19c.png "19c target ")
     Search will return the below screen.
-    ![](images/Task5-19c.png " ")
+    ![](images/task5-19c.png "19c task ")
     Click on the target name to review the details.
 
-    ![](images/task5-home.png " ")
+    ![](images/task5-home.png "home details")
 
 3. Review and execute the following command to create new Image version 19.7 to "*Tier1 SIDB 19c Linux-x64*"
 
@@ -314,15 +314,15 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     <copy>cd ~/fleet ; sh create_image_version197_tier1_sidb_x64.sh</copy>
     ```
 
-    ![](images/submit-create-image.png " ")
+    ![](images/submit-create-image.png "gi creation")
 
 4. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘CreateGoldImage\*’ run
 
-    ![](images/submit-create-image-dp.png " ")
+    ![](images/submit-create-image-dp.png "dp submission")
 
 5. Review the Procedure Activity steps performed.
 
-    ![](images/upg-gi-creation.png " ")
+    ![](images/upg-gi-creation.png "upgrade dp")
 
 
 ## Task 6: Subscribe Database
@@ -335,7 +335,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     <copy>emcli db_software_maintenance -getTargetSubscriptions -target_name=finance.subnet.vcn.oraclevcn.com  -target_type=oracle_database</copy>
     ```
 
-    ![](images/Unsubscribe-finance.png "unsubscribe finance db")
+    ![](images/unsubscribe-finance1.png "unsubscribe finance db")
 
     If the image id is same as the one highlighted above, you may use the below command
     ```
@@ -456,7 +456,7 @@ Here, we see that the DP has successfully installed new Oracle home.
 ## Task 8: Migrate Listener to New Upgraded home
 
 1. In task 7 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
-    ![](images/uncheck-mig-listener.png " ")
+    ![](images/uncheck-mig-listener.png "uncheck migration")
 
     The image below shows the task is in a running state.
 
@@ -471,7 +471,7 @@ Here, we see that the DP has successfully installed new Oracle home.
 After the deploy operation and migrate listener task have completed successfully, we are ready to run the final UPDATE operation which will upgrade the finance database by switching it to the newly deployed home.
 
 1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7).
-    ![](images/uncheck-update-db.png " ")
+    ![](images/uncheck-update-db.png "uncheck dp")
 
     The image below shows the task is in a running state.
 
@@ -499,7 +499,7 @@ After the deploy operation and migrate listener task have completed successfully
     <copy>sh cleanup_finance_report.sh</copy>
     ```
 
-    ![](images/finance-cleanup-report.png " ")
+    ![](images/finance-cleanup-report.png "cleanup report")
 
 2. Review and execute the following command to cleanup *finance.subnet.vcn.oraclevcn.com*  
 
@@ -514,15 +514,15 @@ After the deploy operation and migrate listener task have completed successfully
     sh cleanup_finance.sh</copy>
     ```
 
-    ![](images/finance-cleanup-submitted.png " ")
+    ![](images/finance-cleanup-submitted.png "cleanup submitted")
 
 3. Navigate to the Procedure Activity Page(***Enterprise >> Provisioning and Patching >> Procedure Activity***) and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
-    ![](images/cleanup-dp.png " ")
+    ![](images/cleanup-dp.png "dp details")
 
 4. Review the Procedure Activity steps performed
 
-    ![](images/cleanup.png " ")
+    ![](images/cleanup.png "dp status")
 
     In case the above DP fails, then run the below command in terminal
 
@@ -531,7 +531,7 @@ After the deploy operation and migrate listener task have completed successfully
     ```
     After running the above command, navigate back to the deployment procedure, under show select ***Failed Steps*** from drop down, under steps select ***De-configures/Drops Oracle Database*** and then in the right panel select ***Actions***  and then ***Retry***
 
-    ![](images/cleanup-retry.png " ")
+    ![](images/cleanup-retry.png "retry cleanup")
 
     This will re-run the DP from its point of failure.( It will not run all the steps from the beginning ).Verify the completion of this DP. Once completed perform below tasks.
 
@@ -570,7 +570,7 @@ After the deploy operation and migrate listener task have completed successfully
     <copy>lsnrctl status LISTENER_1525</copy>
     ```
 
-    ![](images/New-status-listener1525.png " ")
+    ![](images/new-status-listener1525.png " ")
 
 
 That completes the Automated Database Upgrade at Scale with Fleet Maintenance UI workshop.
