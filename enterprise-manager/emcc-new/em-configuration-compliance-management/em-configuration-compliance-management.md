@@ -172,7 +172,7 @@ In this step, you will compare two database targets to determine configuration d
   - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
   - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_11.png " ")
+  ![](images/em_comp_conf_drift_mgmt_compared_image11.png " ")
 
 14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
