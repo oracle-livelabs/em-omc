@@ -88,7 +88,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 7. Export inventory details to excel for reports.
 
-  ![](images/em_configs_compliane_db_trends_image5.png " ") 
+  ![](images/em_configs_compliane_db_trends_image5.png " ")
 
 (**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
 
@@ -106,7 +106,7 @@ In this step, you will compare two database targets to determine configuration d
 
 2.  From the Enterprise menu, select **Configuration**, then select **Configuration & Drift Management**
 
-  ![](images/ecm2_One_Tme_Database_Comparison_Menu.png " ")
+  ![](images/ecm2_one_time_database_comparison_menu.png " ") 
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
