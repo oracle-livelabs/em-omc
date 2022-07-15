@@ -134,11 +134,11 @@ In this step, you will compare two database targets to determine configuration d
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/em_comp_conf_drift_mgmt_image4.png) 
+  ![](images/em_comp_conf_drift_mgmt_image4.png)
 
 9.  Provide a name for Comparison, for example, a name like **ECM002-Compare-Demo - One time Comparison**
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_Image_7.png)
+  ![](images/ecm2_one_time_database_comparison_ref_target_image7.png) 
 
 10.  Add targets to be compared.
 
