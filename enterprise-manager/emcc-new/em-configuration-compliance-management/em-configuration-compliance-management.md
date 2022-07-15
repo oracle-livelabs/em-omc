@@ -146,20 +146,20 @@ In this step, you will compare two database targets to determine configuration d
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
-  ![](images/Em_Comp_Conf_Drifts_Mgmt_Image_6.png " ")
+  ![](images/em_comp_conf_drifts_mgmt_image6.png " ")
 
   Once the target is chosen, it appears as below.
   Click **Submit**
 
-  ![](images/Em_one_time_database_comparison_referred_target_Image_8.png " ")
+  ![](images/em_one_time_database_comparison_referred_target_image8.png " ")
 
 12.  The comparison would take a few seconds for selected targets and below are the results.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_9.png " ")
+  ![](images/em_comp_conf_drift_mgmt_compared_image9.png " ")
 
    Click **Clear All** at Configuration Items(Differences).
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Compared_Image_10.png " ")
+  ![](images/em_comp_conf_drift_mgmt_compared_image10.png " ")
 
 13. Filter configuration items to review only Initialization Parameters.
 
