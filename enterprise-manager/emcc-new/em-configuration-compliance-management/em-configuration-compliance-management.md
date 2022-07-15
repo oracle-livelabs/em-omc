@@ -110,11 +110,11 @@ In this step, you will compare two database targets to determine configuration d
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
-  ![](images/ecm2_one_time_db_comparison_menu1.png " ") 
+  ![](images/ecm2_one_time_db_comparison_menu1.png " ")
 
 4.	Select the **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![](images/Em_One_Create_Comparison_Image_2.png " ")
+  ![](images/em_one_create_comparison_image2.png " ") 
 
 5.  Choose the reference target that you want other targets to be compared with.
 
