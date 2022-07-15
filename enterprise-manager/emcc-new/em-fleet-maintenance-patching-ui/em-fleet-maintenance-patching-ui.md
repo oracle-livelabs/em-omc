@@ -151,7 +151,7 @@ A gold image is the end of state software definition that contains information a
 
 
   <!--![](images/DB_Fleet_Patching.png " ")  -->
-  ![](images/New-DB-Fleet-Patching.png " ")
+  ![](images/new-db-fleet-patching.png "new interface")
 
 ### **Patching with Fleet Maintenance**
 
@@ -216,7 +216,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](images/GI1-imageid.png "GI1 image details ")
+    ![](images/gi1-imageid.png "GI1 image details ")
 
     IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
 
@@ -235,7 +235,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     This command lists Gold Image versions with their VERSION ID and STATUS.
 
-    ![](images/GI1-versionid.png "GI1 version id ")
+    ![](images/gi1-versionid.png "GI1 version id ")
 
     When a Gold Image is created for the first time, its first version is created as per the input and marked as current. Whenever we run a DEPLOY operation for a target, Gold Image version marked as CURRENT is used to deploy the new Oracle home.
 
@@ -316,7 +316,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 2. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
 
-    ![](images/HR-patch-screen1.png "selection")
+    ![](images/hr-patch-screen1.png "selection")
 
     Where:
     -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***Tier #2 SI DB Linux64***.
@@ -326,7 +326,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/HR-patch-screen2.png "input values")
+    ![](images/hr-patch-screen2.png "input values")
 
     We can enter following values
     Under Maintenance tasks
@@ -358,7 +358,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 6. ***Submit*** the operation. Here, we can see that we have opted to deploy, migrate and update the database at once. These tasks will be performed independently based on their schedule.
 
-    ![](images/New-Submit.png "submit operation")    
+    ![](images/new-submit.png "submit operation")    
 
     We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
     ```
@@ -378,7 +378,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
    Select DP related to Deploy and click on it. It will show details of the activity performed by the DP.
 
-   ![](images/HR-Deploy-complete.png "review dp for layout OH")
+   ![](images/hr-deploy-complete.png "review dp for layout OH")
 
    Here, we see that the DP has successfully installed new Oracle home.(putty screen shows the new Oracle home layout)
 
@@ -389,11 +389,11 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     The image below shows the task is in a running state.
 
-    ![](images/HR-listener-running.png "DP for migrate listener")
+    ![](images/hr-listener-running.png "DP for migrate listener")
 
     Select the running task to see the various steps performed.
 
-    ![](images/HR-listener-complete.png "details of DP")
+    ![](images/hr-listener-complete.png "details of DP")
     We can now see that the migration operation completed successfully.
 
 ## Task 8: Update(Patching) Database – Patch 18.3 to 18.10
@@ -403,17 +403,17 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     The image below shows the task is in a running state.
 
-    ![](images/HR-update-running.png "DP update")
+    ![](images/hr-update-running.png "DP update")
 
     Select the running task to see the various steps performed.
 
-    ![](images/HR-update-complete.png "DP completed")
+    ![](images/hr-update-complete.png "DP completed")
 
     Update operation has completed successfully.
 
     Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
 
-   ![](images/HR-status-post-patch.png "new version check")
+   ![](images/hr-status-post-patch.png "new version check")
 
 ## Task 9:  Rollback Database – Reversed Patch 18.10 to 18.3
 
@@ -432,23 +432,23 @@ Once the database is updated(patched), we will perform a rollback to Oracle Data
     sh rollback_hr.sh</copy>
     ```
 
-    ![](images/HR-rollback-submit.png " ")
+    ![](images/hr-rollback-submit.png " ")
 
 2. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
     ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
     Monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
 
-    ![](images/Rollback-DP.png " ")
+    ![](images/rollback-dp.png "rollback")
 
 3. Review the Procedure Activity steps performed         
 
-    ![](images/Rollback-DP-complete.png " ")
+    ![](images/rollback-dp-complete.png "rollback complete")
 
 4. Verify the rolled back target by going to ***Targets >> Databases*** as shown
 below.
 
-    ![](images/HR-rollback.png " ")
+    ![](images/hr-rollback.png "hr _ROLLBACK")
 
 ## Task 10:  Cleanup Old homes
 
@@ -480,14 +480,14 @@ below.
     ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
 Verify that the update has been completed successfully. Before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
-    ![](images/Fleet-update.png " ")
+    ![](images/fleet-update.png "fleet status")
 
 4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below.
 
     ![](images/038585c9308635261ae7e4aa956525af.png " ")
 
     Review the version of HR database.
-    ![](images/New-HR-status.png " ")
+    ![](images/new-hr-status.png "new hr version")
 
 5. Review and execute the following command as a dry-run to report on cleanup impact for *hr.subnet.vcn.oraclevcn.com*  
 
@@ -501,7 +501,7 @@ Verify that the update has been completed successfully. Before proceeding with a
     <copy>sh cleanup_hr_report.sh</copy>
     ```
 
-    ![](images/cleanup-report.png " ")
+    ![](images/cleanup-report.png "cleanup report")
 
 6. Review and execute the following command to cleanup *hr.subnet.vcn.oraclevcn.com*   
     ```
@@ -514,18 +514,18 @@ Verify that the update has been completed successfully. Before proceeding with a
     <copy>sh cleanup_hr.sh</copy>
     ```
 
-    ![](images/cleanup-hr.png " ")
+    ![](images/cleanup-hr.png "cleanup report")
 
 7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity***.
     ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
     Monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
-    ![](images/cleanup-dp.png " ")
+    ![](images/cleanup-dp.png "cleanup dp")
 
 8. Review the Procedure Activity steps performed        
 
-    ![](images/cleanup-dp-details.png " ")
+    ![](images/cleanup-dp-details.png "dp details")
 
 9. Verify to confirm the old Oracle home has been removed
 
@@ -533,7 +533,7 @@ Verify that the update has been completed successfully. Before proceeding with a
     <copy>ls -l /u01/app/1806/hr</copy>
     ```
 
-    ![](images/no-18006.png " ")
+    ![](images/no-18006.png "version")
 
 10.  As part of the cleanup operation, LISTENER\_1522 which support “***hr.subnet.oraclevcn.com***” is shutdown. Set your environment by passing “***hr***” to “***oraenv***” when prompted and start the listener back up.
 
