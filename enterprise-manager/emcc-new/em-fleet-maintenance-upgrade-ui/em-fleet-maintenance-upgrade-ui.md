@@ -118,7 +118,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
 
-    ![](images/workshop_instance.png "workshop ip details")
+    ![](images/workshop-instance.png "workshop ip details")
 
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
