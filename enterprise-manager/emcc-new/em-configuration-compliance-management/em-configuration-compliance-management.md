@@ -72,7 +72,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
  Click on Table View, further details explore.
 
- ![](images/Em_Config_Compliane_Dbtrends_Image_4.png)
+ ![](images/em_config_compliane_dbtrends_image4.png) 
 
  Click **Close**.
 
