@@ -149,7 +149,6 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 
 A gold image is the end of state software definition that contains information about the base software version plus the additional patches. Targets, to be patched, subscribe to a relevant Gold Image. Target subscription persists through the lifecycle of the Target or Gold Image unless modified by an administrator.
 
-
   <!--![](images/DB_Fleet_Patching.png " ")  -->
   ![](images/new-db-fleet-patching.png "new interface")
 
