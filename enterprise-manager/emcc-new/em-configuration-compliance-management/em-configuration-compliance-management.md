@@ -118,7 +118,7 @@ In this step, you will compare two database targets to determine configuration d
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/em_comp_confDrift_mgmt_image3.png " ")
+  ![](images/em_comp_confdrift_mgmt_image3.png " ")
 
 6.  Identify the reference target to compare other targets.
 
@@ -142,7 +142,7 @@ In this step, you will compare two database targets to determine configuration d
 
 10.  Add targets to be compared.
 
-  ![](images/Em_comp_conf_drift_mgmt_target_image5.png " ")
+  ![](images/em_comp_conf_drift_mgmt_target_image5.png " ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
@@ -523,11 +523,11 @@ Click the **Cancel** button.
 
   2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![](images/cis_compliance_welcome_image1.png " ") 
+  ![](images/cis_compliance_welcome_image1.png " ")
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
-  ![](images/HIPAA_All_Libraries_Image_2.png " ")
+  ![](images/hipaa_all_libraries_image2.png " ")  
 
   4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
