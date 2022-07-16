@@ -317,27 +317,27 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
-  ![](images/Compare_And_Drift_Demo_Image_20-2.png " ")
+  ![](images/compare_and_drift_demo_image21.png " ")
 
 19. A pop-up will ask for confirmation to save the association. Select **Yes**, This will start the association of this target to drift definition and initiate the configuration comparison and continuous drift monitoring.
 
-  ![](images/Compare_And_Drift_Demo_Image_21-1.png " ")
+  ![](images/compare_and_drift_demo_image22.png " ")
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
-  ![](images/Compare_and_Drift_Demo_Image_22.png)
+  ![](images/compare_and_drift_demo_image23.png)
 
 21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
-  ![](images/Compare_And_Drift_Demo_Image_23.png " ")
+  ![](images/compare_dnd_drift_demo_image24.png " ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-  ![](images/Compare_And_Drift_Demo_Image_23-1.png " ")
+  ![](images/compare_and_drift_demo_image25.png " ")
 
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-  ![](images/Compare_AND_Drift_Demo_Image_24.png " ")
+  ![](images/compare_and_drift_demo_image26.png " ")
 
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
