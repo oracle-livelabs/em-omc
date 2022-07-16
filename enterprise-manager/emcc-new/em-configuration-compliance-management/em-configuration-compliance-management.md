@@ -349,11 +349,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
-  ![](images/Compare_and_Drift_Demo_Image_22-1.png " ")
+  ![](images/compare_and_drift_demo_image27.png " ")
 
  (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
-  ![](images/Compare_And_Drift_Demo_Image_25-1.png " ")
+  ![](images/compare_and_drift_demo_image28.png " ")
 
 24. (**Optional**) Exported results in excel for offline analysis look like this:
 
