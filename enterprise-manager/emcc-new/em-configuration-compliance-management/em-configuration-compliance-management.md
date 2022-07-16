@@ -539,7 +539,7 @@ Click the **Cancel** button.
 
   6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
-  ![](images/HIPAA_Associate_Target_Image_6-1.png " ")
+  ![](images/hipaa_associate_target_image5.png " ")
 
   7. Click on **Associate Targets** to associate a database target for this selected standard.
 
