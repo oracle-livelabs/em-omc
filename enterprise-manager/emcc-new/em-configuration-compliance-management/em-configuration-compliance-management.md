@@ -421,15 +421,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
-  ![](images/CIS_Db_Compliance_Standard_Create_Image_9-1.png " ")
+  ![](images/cis_db_compliance_standard_create_image9.png " ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_10-2.png " ")
+  ![](images/cis_db_compliance_associate_target_image10.png " ")
 
 10. When the Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
-  ![](images/CIS_Db_Compliance_Associate_Target_Image_11-2.png " ")
+  ![](images/cis_db_compliance_associate_target_image11.png " ")
 
 11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
