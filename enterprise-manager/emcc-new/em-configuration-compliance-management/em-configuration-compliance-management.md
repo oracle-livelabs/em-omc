@@ -458,7 +458,7 @@ Click the **Cancel** button.
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
-  ![](images/cis_db_compliance_dashboard_image18.png " ") 
+  ![](images/cis_db_compliance_dashboard_image18.png " ")
 
   Under the Compliance Summary panel at the bottom below page:
 
@@ -468,32 +468,32 @@ Click the **Cancel** button.
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
-  ![](images/CIS_Db_Compliance_Dashb_Image_22-1.png " ")
+  ![](images/cis_db_compliance_dashboard_image19.png " ")
 
  By clicking under Target Name.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_23-1.png " ")
+  ![](images/cis_db_compliance_dashboard_image20.png " ")
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_24-1.png " ")
+  ![](images/cis_db_compliance_dashboard_image21.png " ")
 
   Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
-  ![](images/CIS_Db_Compliance_Report_Image_25-0.png " ")
+  ![](images/cis_db_compliance_report_image22.png " ")
 
  Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
-  ![](images/CIS_Db_Compliance_Report_Image_26-1.png " ")
+  ![](images/cis_db_compliance_report_image23.png " ")
 
 
 19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_27.png " ")
+  ![](images/cis_db_compliance_dashboard_image24.png " ")
 
  Each rule result can undergo a detailed analysis as shown on this page.
 
-  ![](images/CIS_Db_Compliance_Results_Image_28.png " ")
+  ![](images/cis_db_compliance_results_image25.png " ")
 
   All of these will give you a CIS Compliance security posture of database target.
 
@@ -523,7 +523,7 @@ Click the **Cancel** button.
 
   2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![](images/CIS_Compliance_Welcome_Image_1-2.png " ")
+  ![](images/cis_compliance_welcome_image1.png " ") 
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
