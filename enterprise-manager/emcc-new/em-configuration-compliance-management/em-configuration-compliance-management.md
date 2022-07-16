@@ -214,7 +214,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    -  Choose Templates left side of the panel of the Dashboard.
 
-  ![](images/ecm2_One_Time_Db_Comparison_Menu-1.png " ")
+  ![](images/ecm2_one_time_db_comparison_menu1.png " ")
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
