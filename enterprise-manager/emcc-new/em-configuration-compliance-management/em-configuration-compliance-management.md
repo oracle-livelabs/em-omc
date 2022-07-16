@@ -293,27 +293,27 @@ In this workshop, you will learn about continuous configuration drift monitoring
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target
 
-  ![](images/Compare_And_Drift_Demo_Image_14.png " ")
+  ![](images/compare_and_drift_demo_image15.png " ")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
-  ![](images/Compare_And_Drift_Demo_Image_15.png " ")
+  ![](images/compare_and_drift_demo_image16.png " ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
-  ![](images/Compare_And_Drift_Demo_Image_16.png " ")
+  ![](images/compare_and_drift_demo_image17.png " ")
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
-  ![](images/Compare_And_Drift_Demo_Image_17.png " ")
+  ![](images/compare_and_drift_demo_image18.png " ")
 
 16. Click on **Add** to select and associate a target to be monitored for drift.
 
-  ![](images/Compare_And_Drift_Demo_Image_18.png " ")
+  ![](images/compare_and_drift_demo_image19.png " ")
 
 17. Select **finance.subnet.vcn.oraclevcn.com** as the target.
 
-  ![](images/Compare_And_Drift_Demo_Image_19-1.png " ")
+  ![](images/compare_and_drift_demo_image20.png " ")
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
