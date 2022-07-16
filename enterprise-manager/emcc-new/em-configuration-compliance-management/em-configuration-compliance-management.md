@@ -218,15 +218,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
-  ![](images/Compare_Drift_Template_Image_1.png " ")
+  ![](images/compare_drift_template_image1.png " ")
 
 4.  **Sort Name Alphabetically** look for Database Instance Template as shown below.
 
-  ![](images/Compare_And_Drift_Template_Image_2.png " ")
+  ![](images/compare_and_drift_template_image2.png " ")
 
    With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
 
-  ![](images/Compare_And_Drift_Demo_Image_3.png " ")
+  ![](images/compare_and_drift_demo_image3.png " ")
 
 5.  A complete copy of the Database Instance template with a unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
 
@@ -236,19 +236,19 @@ In this workshop, you will learn about continuous configuration drift monitoring
   ```
   And click **Search**.
 
-  ![](images/Compare_And_Drift_Demo_Image_4.png " ")
+  ![](images/compare_and_drift_demo_image4.png " ")
 
    Highlight this new template and click Edit.
 
-  ![](images/Compared_And_Drift_Demo_Image_5.png " ")
+  ![](images/compared_and_drift_demo_image5.png " ")
 
 6.  The configuration templates page appears below.
 
-  ![](images/Compare_And_Drift_Demo_Image_6.png " ")
+  ![](images/compare_and_drift_demo_image6.png " ")
 
   To begin with, uncheck all configuration items.
 
-  ![](images/Compare_And_Drift_Demo_Image_7.png " ")
+  ![](images/compare_and_drift_demo_image7.png " ")
 
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
