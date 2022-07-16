@@ -449,16 +449,16 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_17-1.png " ")
+  ![](images/cis_db_compliance_confirm_target_image16.png " ")
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
 Click the **Cancel** button.
 
-  ![](images/CIS_Db_Compliance_Confirm_Target_Image_18-1.png " ")
+  ![](images/cis_db_compliance_confirm_target_image17.png " ")
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
-  ![](images/CIS_Db_Compliance_Dashboard_Image_20-1.png " ")
+  ![](images/cis_db_compliance_dashboard_image18.png " ") 
 
   Under the Compliance Summary panel at the bottom below page:
 
