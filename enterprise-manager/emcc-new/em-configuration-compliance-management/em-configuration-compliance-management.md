@@ -180,21 +180,21 @@ In this step, you will compare two database targets to determine configuration d
 
 15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_13.png " ")
+  ![](images/em_comp_conf_drift_mgmt_dashboard_image13.png " ")
 
   You should see the comparison definition you created on this page.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_14.png " ")
+  ![](images/em_comp_conf_drift_mgmt_dashboard_image14.png " ")
 
 16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_Dashboard_Image_15.png " ")
+  ![](images/em_comp_conf_drift_mgmt_dashboard_image15.png " ")
 
   After Exporting, Click **Cancel** to exit
 
 17. (**Optional**) Exported results in excel for offline analysis look like this:
 
-  ![](images/Em_Comp_Conf_Drift_Mgmt_one_time_comparison_Report_Image_15.png " ")
+  ![](images/em_comp_conf_drift_mgmt_one_time_comparison_report_image15.png " ")
 
 <!-- In this step, you learned steps to compare two database targets to determine configuration differences. This one-time database (or any Enterprise Manager managed targets) comparison will help you quickly determine specific configuration changes when compared with reference configuration. This is very ideal for troubleshooting any target configuration parameters. -->
 
@@ -208,7 +208,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***, Review the different types of comparisons supported.
 
-  ![](images/ecm2_One_Tme_Database_Comparison_Menu.png " ")
+  ![](images/ecm2_one_time_database_comparison_menu.png " ")
 
    By Clicking on the **i** icon, review the different types of comparisons.
 
