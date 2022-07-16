@@ -535,7 +535,7 @@ Click the **Cancel** button.
 
   5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
-  ![](images/HIPAA_Standard_Libraries_Image_4-1.png " ")
+  ![](images/hipaa_standard_libraries_image4.png " ")
 
   6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
