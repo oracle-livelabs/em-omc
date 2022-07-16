@@ -260,33 +260,33 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Making sure **Instance Information** is highlighted
     - Click Save
 
-  ![](images/Compare_And_Drift_Demo_Image_8-1.png " ")
+  ![](images/compare_and_drift_demo_image8.png " ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
-  ![](images/Compare_And_Drift_Demo_Image_9-1.png " ")
+  ![](images/compare_and_drift_demo_image9.png " ")
 
   **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
-  ![](images/Compare_And_Drift_Demo_Image_10-1.png " ")
+  ![](images/compare_and_drift_demo_image10.png " ")
 
 9.  Go to the Drift Results tab and create a drift definition.
 
-  ![](images/Compare_And_Drift_Demo_Image_10.png " ")
+  ![](images/compare_and_drift_demo_image11.png " ")
 
 10. Click on **Create Definition** under Drift Management.
 
-  ![](images/Compare_And_Drift_Demo_Image_11.png " ")
+  ![](images/compare_and_drift_demo_image12.png " ")
 
     - Choose Database Instance as the Target Type
     - Select the template created in the previous step
     - Click OK
 
-  ![](images/Compare_And_Drift_Demo_Image_12.png " ")
+  ![](images/compare_and_drift_demo_image13.png " ")
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
-  ![](images/Compare_And_Drift_Demo_Image_13.png " ")
+  ![](images/compare_and_drift_demo_image14.png " ")
 
 12. Under Source Configuration, do the following:
 
