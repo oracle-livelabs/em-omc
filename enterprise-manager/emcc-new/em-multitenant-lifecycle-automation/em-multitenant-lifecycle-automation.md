@@ -777,55 +777,55 @@ Previous exercise demonstrated the process of Self-Service User requesting PDBs 
 Login to the EM Console as super administrator **sysman/welcome1**
 
 
-![](images/Task6-sysmanlogin.jpg " ")
+![](images/pdbaas-sysman-login.png " ")
 
 ### **PaaS Infrastructure Zone**
 
 1. On the EM Console, go to **Setup** ->> **Cloud** ->> **Database**.
 
-    ![](images/edfbce40d3abb0f21705992cc042c3ee.jpg " ")
+    ![](images/pdbaas-navigate-main.png " ")
 
 2. Select **Pluggable Database** from the drop-down menu.
 
-  ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ")
+      ![](images/pdbaas-select-dropdown.png " ")
 
 3. Click on **PaaS Infrastructure Zone**. 
 
     Zone is a pool of Hosts where the PDBs can be provisioned. 
       Click on **Sales Infra Zone**
 
-      ![](images/8ed6c692f382172bbc9f6e2b90179f9e.jpg " ")
+      ![](images/pdbaas-navigate-infrazone.png " ")
 
 
 4. You are taken to the Zone Home page; you can see all the details of a Zone such as the host members of this zone. 
 
     You can explore more about the zone on this page.
 
-      ![](images/CMP-Task6-point4.jpg " ")
+      ![](images/pdbaas-zonehome.png " ")
 
 ### **Pluggable Database Pool**
 
 5. On the EM Console, Click on **Setup** --> **Cloud** -->  **Database**. 
 
-      ![](images/edfbce40d3abb0f21705992cc042c3ee.jpg " ")
+      ![](images/pdbaas-navigate-main.png " ")
 
 6. Select **Pluggable Database** from the drop-down menu. 
-  ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ")
+  ![](images/pdbaas-select-dropdown.png " ")
 
    
     Click on **Pluggable Database Pool**. A Pluggable Database Pool consists of a set of Container Databases on which PDBs will be provisioned.
 
     Click on name of the pool **pdbpool** to see more details.
 
-    ![](images/b49f455842d0fb11dd7de44fcaccfe26.jpg " ")
+    ![](images/pdbaas-pdbpool.png " ")
 
 7. You are taken to the Database pool. Explore the Memory allocation and CPU allocation details
 
-    ![](images/CMP-Task6-point6.jpg " ")
+    ![](images/pdbaas-pdbpool1.png " ")
 
    Scroll down to see details of Members and Service Templates.
 
-    ![](images/243ed347412f16a2159b2184c2dacdf7.jpg " ")
+    ![](images/pdbaas-pdbpool2.png " ")
 
 ### **Data Sources**
 
@@ -833,12 +833,12 @@ Login to the EM Console as super administrator **sysman/welcome1**
 
     Select Pluggable Database from the drop-down menu.
 
-    ![](images/cf57fcbd4fe1570c40a1ee7f9b75dcec.jpg " ") 
+    ![](images/pdbaas-select-dropdown.png " ") 
     
     
 9. Click on **Data Sources**. Observe that the profile is based on Schema Export(s). This Data Profile will be used for provisioning a PDB with data.
 
-    ![](images/d834209bf1c6a238679ae419098ee0f3.jpg " ")
+    ![](images/pdbaas-navigate-datasource.png " ")
 
 10. Click on the row with profile to see more details. 
     This will open a Provisioning Profile Dialog box with details of PDB name , tablespaces , and creation details.
@@ -846,7 +846,7 @@ Login to the EM Console as super administrator **sysman/welcome1**
     Once done, close the Provisioning Profile pop up box. 
 
 
-    ![](images/532db10bbaab85fcdd83f245bd317a6b.jpg " ")
+    ![](images/pdbaas-datasource-details.png " ")
 
  
 
@@ -860,7 +860,7 @@ Click on **Service Templates**.
       * **Provision Pluggable Database with Data**: This template enables user to create a new pluggable database with data from a non-container database.
  
 
-    ![](images/47baba2a1e7567bfb0b5f89429a7831d.jpg " ")
+    ![](images/pdbaas-navigate-service-template.png " ")
 
 
 
@@ -869,7 +869,7 @@ Click on **Service Templates**.
     Once done, close the Service template Pop up window.
 
 
-    ![](images/a0efb63a12d01e1254593656765ec52a.jpg " ")
+    ![](images/pdbaas-validate-template.png " ")
 
 
 
