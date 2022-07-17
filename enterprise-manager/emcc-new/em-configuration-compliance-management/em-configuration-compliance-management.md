@@ -543,13 +543,13 @@ Click the **Cancel** button.
 
   7. Click on **Associate Targets** to associate a database target for this selected standard.
 
-  ![](images/HIPAA_Associate_Target_Image_7-1.png " ")
+  ![](images/hipaa_associate_target_image6.png " ")
 
   8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
     Click Add to add a target for association with this compliance standard.
 
-  ![](images/HIPAA_Associate_Host_Target_Image_8.png " ")
+  ![](images/hipaa_associate_target_image7.png " ")
 
   9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
