@@ -70,7 +70,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
  ![](images/em_config_compliane_dbtrends_image3.png " ")
 
- Click on Table View, further details explore.
+ Click on Table View, further details to explore.
 
  ![](images/em_config_compliane_dbtrends_image4.png)  
 
@@ -118,7 +118,7 @@ In this step, you will compare two database targets to determine configuration d
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/em_comp_confdrift_mgmt_image3.png " ")
+  ![](images/em_comp_conf_drift_mgmt_image3.png " ")
 
 6.  Identify the reference target to compare other targets.
 
