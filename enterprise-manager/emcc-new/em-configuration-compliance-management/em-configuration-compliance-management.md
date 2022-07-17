@@ -553,25 +553,25 @@ Click the **Cancel** button.
 
   9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-  ![](images/HIPAA_Associate_Host_Target_Image_9-1.png " ")
+  ![](images/hipaa_associate_target_image8.png " ")
 
   10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click **OK**.
 
-  ![](images/HIPAA_Associate_List_Image_10-1.png " ")
+  ![](images/hipaa_associate_target_image9.png " ")
 
   11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
-  ![](images/HIPAA_Confirm_Host_Target_Image_11-1.png " ")
+  ![](images/hipaa_associate_target_image10.png " ")
 
   12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-  ![](images/HIPAA_Compliance_Submit_Image_12-1.png " ")
+  ![](images/hipaa_associate_target_image11.png " ")
 
   13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
-  ![](images/HIPAA_Validate_Submit_Image_13-1.png " ")
+  ![](images/hipaa_associate_target_image12.png " ")
 
   14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
