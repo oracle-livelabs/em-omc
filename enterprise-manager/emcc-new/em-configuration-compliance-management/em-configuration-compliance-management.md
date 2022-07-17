@@ -142,7 +142,7 @@ In this step, you will compare two database targets to determine configuration d
 
 10.  Add targets to be compared.
 
-  ![](images/em_comp_conf_drift_mgmt_target_image5.png " ")
+  ![](images/em_comp_conf_driftmgmt_target_image5.png " ") 
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
