@@ -575,11 +575,11 @@ Click the **Cancel** button.
 
   14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
-  ![](images/HIPAA_Associate_Target_Success_Image_14-1.png " ")
+  ![](images/hipaa_associate_target_image13.png " ")
 
   15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
-  ![](images/HIPAA_Associate_Target_Success_Image_15-1.png " ")
+  ![](images/hipaa_associate_target_image14.png " ")
 
   16. Compliance Dashboard populates:
 
@@ -588,21 +588,21 @@ Click the **Cancel** button.
 
       Click on the number under the **Critical** column. to see details of the host's critical violations.
 
-  ![](images/HIPAA_Dashboard_Results_Image_17-1.png " ")
+  ![](images/hipaa_associate_target_image15.png " ")
 
   17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
-  ![](images/HIPAA_Crtical_Violations_Image_18-1.png " ")
+  ![](images/hipaa_associate_target_image16.png " ")
 
       Each critical rule violations status can be seen on this pop-up page in detail.
 
       Click on  **Report**
 
-  ![](images/HIPAA_Crtical_Violations_Image_19-1.png " ")
+  ![](images/hipaa_associate_target_image17.png " ")
 
   18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
-  ![](images/HIPAA_Compliance_Report_Score_Image_20-1.png " ")
+  ![](images/hipaa_associate_target_image18.png " ")
 
       And clicking on the **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation details.
 
