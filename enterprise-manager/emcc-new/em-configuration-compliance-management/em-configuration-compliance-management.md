@@ -602,29 +602,29 @@ Click the **Cancel** button.
 
   18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
-  ![](images/hipaa_associate_target_image18.png " ")
+  ![](images/hipaa_compliance_report_image19.png " ")
 
       And clicking on the **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation details.
 
-  ![](images/HIPAA_Compliance_Report_Score_Image_21-1.png " ")
+  ![](images/hipaa_compliance_report_image20.png " ")
 
   19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
 
-  ![](images/HIPAA_Main_Results_Image_22-1.png " ")
+  ![](images/hipaa_main_results_image21.png " ")
 
       It takes you to the Compliance Results page.
 
-  ![](images/HIPAA_Compliance_Results_Image_23-1.png " ")
+  ![](images/hipaa_main_results_image22.png " ")
 
       Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
 
   20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
 
-  ![](images/HIPAA_Compliance_Results_Image_24-1.png " ")
+  ![](images/hipaa_main_results_image23.png " ")
 
       Individual standard rule details status and rationale can be further analyzed.
 
-  ![](images/HIPAA_Compliance_Results_Image_25-1.png " ")
+  ![](images/hipaa_main_results_image24.png " ")
 
       All these would give you a security posture of the host target.
 
