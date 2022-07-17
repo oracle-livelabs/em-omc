@@ -142,7 +142,7 @@ In this step, you will compare two database targets to determine configuration d
 
 10.  Add targets to be compared.
 
-  ![](images/em_comp_conf_driftmgmt_target_image5.png " ") 
+  ![](images/em_comp_conf_driftmgmt_target_image5.png " ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
@@ -389,7 +389,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![](images/cis_compliance_welcome_image1.png " ")
+  ![](images/cis_compliance_welcome_image.png " ")
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
@@ -523,7 +523,7 @@ Click the **Cancel** button.
 
   2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![](images/cis_compliance_welcome_image1.png " ")
+  ![](images/hipaa_compliance_welcome_image.png " ") 
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
