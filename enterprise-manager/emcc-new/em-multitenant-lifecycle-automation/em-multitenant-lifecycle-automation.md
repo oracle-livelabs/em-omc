@@ -57,20 +57,20 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 2.  Navigate to  ***Enterprise >> Provisioning and Patching >>
     Database provisioning***
 
-   ![](images/DB_provisioning-flow-main.jpg " ")
+    ![](images/db-provisioning-flow-main.png " ")
 
 
 
 3.  On the Database Provisioning page, in the *Related Links* section on the left menu pane, click **Provision Pluggable Databases**
 
-    ![](images/PDB_provisioning-flow-main.jpg " ")
+    ![](images/pdb-provisioning-flow-main.png " ")
 
 
 
 4.  On the Provision Pluggable Database Console, in the *Container   Database* section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
 
-    ![](images/Select-CDB-main-flow-helper.jpg " ")
-    ![](images/Select-CDB-main-flow.jpg " ")
+    ![](images/select-cdb-main-flow-helper.png " ")
+    ![](images/select-cdb-main-flow.png " ")
 
 
 
@@ -78,7 +78,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click **Launch**
 
-    ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
+    ![](images/create-new-pdb-operation.png " ")
 
 
 
@@ -89,7 +89,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click **Next**
 
 
-    ![](images/9be6823423a692b7e1f0e240c10567c9.jpg " ")
+    ![](images/create-new-pdb-creation-page.png " ")
 
 
 
@@ -113,7 +113,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     
       Click **Next**
 
-    ![](images/Task1-step8-latest.jpg " ")
+    ![](images/create-new-pdb-id-page.png " ")
 
 
 
@@ -124,22 +124,22 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     The Temporary Working Directory is auto filled as **/tmp**
 
 
-    ![](images/Task1-point9.jpg " ")
+    ![](images/create-new-pdb-storage-page.png " ")
 
 
 
 10. Optionally, you can also select a post-script, which will be executed post PDB creation.
 
     On the same Storage Configuration page under the **Post Creation Scripts**  , click on  “Select from software library” radio button and click on the magnifier to choose the script. 
-  ![](images/Task1-poin10.jpg " ")
+  ![](images/create-new-pdb-sql-script.png " ")
 
   In the dialog box that appears, type “**unlock**” and click on the magnifier. select the script '*Script to unlock account*' and click **select**
 
-  ![](images/Unock-helper.jpg " ")
+  ![](images/unlock-helper.png " ")
 
   Verify all the parameters on the page and click **Next**
 
-  ![](images/7d3fcabc8fe5f6f80fe20e55bb28655d.jpg " ")
+  ![](images/create-new-pdb-storage-validation.png " ")
 
 
 
@@ -148,7 +148,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click **Next**.
 
-    ![](images/Task1-step10.jpg " ")
+    ![](images/create-new-pdb-schedule.png " ")
 
 
 
@@ -156,7 +156,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     You can now click on **View Execution Details** link to see details.
 
-    ![](images/d12c1a1d5e3c3f394248da7d12813b6b.jpg " ")
+    ![](images/create-new-pdb-review.png " ")
 
 
 
@@ -167,37 +167,37 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Wait for **Status: Succeeded** which indicates the procedure ran successfully.
     
 
-    ![](images/3657eb9bb536b26d163c148e40a99332.jpg " ")
+    ![](images/create-new-pdb-procedure.png " ")
 
 
 
 14. You can **Navigate to Targets >> Databases**.
 
-    ![](images/Target-Database-Navigation.jpg " ")
+    ![](images/target-database-navigation.png " ")
 
     Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly created PDB
 
-    ![](images/Task1-step14.jpg " ")
+    ![](images/create-pdb-validation.png " ")
 
 ## Task 2: Unplug/Plug an existing Pluggable Database (PDB)
 
 1. Navigate to the ***Enterprise menu >> Provisioning and Patching >> Database provisioning***.
 
-    ![](images/DB_provisioning-flow-main.jpg " ")
+    ![](images/db-provisioning-flow-main.png " ")
 
 2. In the Database Provisioning page, in the Related Links section of the left menu pane, click “**Provision Pluggable Databases**”
 
-    ![](images/PDB_provisioning-flow-main.jpg " ")
+    ![](images/pdb-provisioning-flow-main.png " ")
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to Unplug PDBs.
-    ![](images/Select-CDB-main-flow-helper.jpg " ")
-    ![](images/Select-CDB-main-flow.jpg " ")
+    ![](images/select-cdb-main-flow-helper.png " ")
+    ![](images/select-cdb-main-flow.png " ")
 
 4.  In the PDB Operations section, select **Unplug Pluggable Databases**, then Click **Launch**
 
 
 
-    ![](images/b727e1673cfa38c85130ef6e2365055d.jpg " ")
+    ![](images/unplug-pdb-main.png " ")
 
 5.  On the Select PDB page in  Pluggable Database section click on the magnifier to choose the PDB you want to unplug. 
 
@@ -207,7 +207,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click **Next**
 
-    ![](images/39102476b5e5915a1491e28525af88f5.jpg " ")
+    ![](images/unplug-pdb-operation.png " ")
 
 6.  On the Destination page, Click on the **Software Library**  radio button to define the location of PDB template. 
 
@@ -219,23 +219,23 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     
     click **Next**
 
-    ![](images/Task2-step6-latest.jpg " ")
+    ![](images/unplug-pdb-destination.png " ")
 
 7.   Schedule **immediately** or choose later .
     
      Click **Next**.
-          ![](images/Task2-Step7.jpg " ")
+          ![](images/unplug-pdb-schedule.png " ")
 
 
 
 8. In the Review page, verify the details and  click **Submit** .
 
-    ![](images/Task2-step7a.jpg " ")
+    ![](images/unplug-pdb-review.png " ")
 
     Click **View Execution Details**
 
 
-    ![](images/View_execution_details.jpg " ")
+    ![](images/view-execution-details.png " ")
 
 
     On the Procedure Activity page, select specific execution step from the procedure step tree to see detail procedure execution log. 
@@ -244,33 +244,33 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Wait for **Status: Succeeded** which indicates the procedure ran successfully.
 
-    ![](images/bdbafe949b2bc880e2a09b82f9edaf8a.jpg " ")
+    ![](images/unplug-pdb-procedure.png " ")
 
 8.  Navigate to **Targets** >> **Databases**.
 
      Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB you unplugged is no longer in the list.
       
 
-    ![](images/Task2-step8.jpg " ")
+    ![](images/unplug-pdb-validation.png " ")
 
 9.  Let us continue to the next steps and plug the same PDB back into the container database. 
 
     Navigate to the **“Enterprise menu >> Provisioning and Patching >> Database provisioning”**.
 
-    ![](images/DB_provisioning-flow-main.jpg " ")
+    ![](images/db-provisioning-flow-main.png " ")
 
 10. In the Database Provisioning page, in the Related Links section of the left menu pane, click **Provision Pluggable Databases**
 
-    ![](images/PDB_provisioning-flow-main.jpg " ")
+    ![](images/pdb-provisioning-flow-main.png " ")
 
 11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**cdb186.subnet.vcn.oraclevcn.com186**) within which you want to Plug the PDBs.
 
-    ![](images/Select-CDB-main-flow-helper.jpg " ")
-      ![](images/Select-CDB-main-flow.jpg " ")
+    ![](images/select-cdb-main-flow-helper.png " ")
+      ![](images/select-cdb-main-flow.png " ")
 
 12. In the PDB Operations section, select **Create New Pluggable Databases** and click **Launch**.
 
-    ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
+    ![](images/create-new-pdb-operation.png " ")
 
 13. On the Create Pluggable Database Wizard, in the PDB Creation Options section, select **Plug an unplugged PDB**. 
 
@@ -279,7 +279,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click **Next**
 
 
-    ![](images/5427807b6e4c677bd991497cfc5468ce.jpg " ")
+    ![](images/plug-pdb-creation.png " ")
 
 
 14. The Identification page has 3 sections. 
@@ -289,7 +289,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     In the next section under *PDB Administrator* we will keep the values default and not do any changes as shown below.
 
-      ![](images/Task2-step14.jpg " ")
+      ![](images/plug-pdb-identification.png " ")
 
 
 15. On the same Identification page, in the PDB Template Location section: Select **Software Library** radio button. Click on the magnifier icon placed on Location text box.
@@ -298,15 +298,15 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Select the Name which you created during Unplug. 
     In case of multiple options, choose the latest image based on timestamp.
     Click **Select**
-      ![](images/Task2-step15-latest.jpg " ")
+      ![](images/plug-pdb-library.png " ")
 
-      ![](images/Task2-step15.jpg " ")
+      ![](images/plug-pdb-selection.png " ")
       
 
     
     Validate all the options and click **Next**
 
-    ![](images/Task2-step16.jpg " ")
+    ![](images/plug-pdb-id-validation.png " ")
 
 
 16. On the Storage Page select **Use Common Location for PDB Datafiles** , the Storage Type and Location fields are auto populated as showed below.
@@ -316,13 +316,13 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click **Next**
 
 
-    ![](images/a6353f812935eeb6148a79693ae0c4fd.jpg " ")
+    ![](images/plug-pdb-storage.png " ")
 
 17.  
     Schedule **immediately** or choose to start later.
      Click **Next**.
 
-    ![](images/Task2-step17.jpg " ")
+    ![](images/plug-pdb-schedule.png " ")
 
     
 
@@ -330,8 +330,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     **Submit**. 
 
     You can now click on **View Execution Details** link to see details.
-    ![](images/Task2-step18.jpg " ")
-    ![](images/View_execution_details.jpg " ")
+    ![](images/plug-pdb-review.png " ")
+    ![](images/view-execution-details.png " ")
 
 
 19. On the Procedure Activity page, select specific execution step from the procedure step tree to see detail procedure execution log.
@@ -342,7 +342,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Wait for **Status: Succeeded** which indicates the procedure ran successfully.
 
-    ![](images/Task2-step19.jpg " ")
+    ![](images/procedure-validation.png " ")
 
     Optionally,  Click the status link for each step to view the details of the execution of each step. 
 
@@ -352,7 +352,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB which was recently plugged.
 
 
-    ![](images/Task1-step14.jpg " ")
+    ![](images/create-pdb-validation.png " ")
 
     *Note*: You do not have to wait until the steps complete and move on to the next section.
 
@@ -360,21 +360,21 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 1.  Navigate to the “***Enterprise menu >> Provisioning and Patching >> Database provisioning***”.
 
-  ![](images/DB_provisioning-flow-main.jpg " ")
+    ![](images/db-provisioning-flow-main.png " ")
 
 2.  In the Database Provisioning page, in the Related Links section of the left menu pane, click Provision Pluggable Databases
 
-  ![](images/PDB_provisioning-flow-main.jpg " ")
+      ![](images/pdb-provisioning-flow-main.png " ")
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to clone new PDBs.
-  ![](images/Select-CDB-main-flow-helper.jpg " ")
-  ![](images/Select-CDB-main-flow.jpg " ")
+  ![](images/select-cdb-main-flow-helper.png " ")
+  ![](images/select-cdb-main-flow.png " ")
 
 4.  In the PDB Operations section, select **Create New Pluggable Databases**.
 
     Click **Launch**
 
-    ![](images/2248640eabc0efa2fb32293ec07fb389.jpg " ")
+    ![](images/create-new-pdb-operation.png " ")
 
 5.  Under the PDB creation options, select **Clone an Existing PDB** . 
 
@@ -441,7 +441,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Wait for **Status: Succeeded** which indicates the procedure ran successfully.
 
-      ![](images/Task2-step19.jpg " ")
+      ![](images/procedure-validation.png " ")
 
 
 
