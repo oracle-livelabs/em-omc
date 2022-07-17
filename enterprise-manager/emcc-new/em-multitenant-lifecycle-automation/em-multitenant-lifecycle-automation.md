@@ -390,9 +390,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click **Next**
 
-    ![](images/472126037592bdeca5eaa6027ebb57a3.jpg " ")
+    ![](images/clone-create-pdb.png " ")
 
-    ![](images/Task3-step5.jpg " ")
+    ![](images/clone-choose-pdb.png " ")
 
 6.  On the Identification page , enter new PDB name (**full_clonepdb**).
 
@@ -404,7 +404,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click **Next**
 
-      ![](images/Task2-step6.jpg " ")
+      ![](images/clone-pdb-id-page.png " ")
 
 7.  On the Storage Page , select **Use Common Location for PDB Datafiles**. 
 
@@ -420,7 +420,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click **Next** .
 
 
-    ![](images/ff556eb15570c55dfd477361c20051d6.jpg " ")
+    ![](images/clone-pdb-storage.png " ")
 
 8.  On the Schedule page, choose to start  **immediately**.
 
@@ -432,8 +432,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click on View Execution Details link to see details and of the Procedure.
 
-      ![](images/Task3-step9.jpg " ")
-      ![](images/Task3-step9a.jpg " ")
+      ![](images/clone-pdb-review.png " ")
+      ![](images/clone-pdb-view-execution.png " ")
     
      On Procedure Activity page , select specific execution step from the procedure step tree to see detail procedure execution log. 
 
@@ -449,7 +449,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
    Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly cloned PDB
 
-  ![](images/Task3-step10a.jpg " ")
+  ![](images/clone-pdb-validation.png " ")
 
 ## Task 4: Compliance Management for Pluggable Database
 
@@ -468,42 +468,42 @@ Securing a provisioned Oracle Database is critical to protect your data. You nee
      Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
 
-      ![](images/Task4-Compliance-Standard-name.jpg " ")
+      ![](images/compliance-associate-target.png " ")
 
 3.  Click Add and choose the row with your PDB you wish to associate. Choose PROV_PDB, click **Select**.
 
     Verify the PDB name is added and Click **OK**
 
 
-    ![](images/Task4-Step3.jpg " ")
-    ![](images/Task4-step3aa.jpg " ")
+    ![](images/compliance-choose-pdb.png " ")
+    ![](images/compliance-add-pdb.png " ")
 
 4. In the Save Association dialog box, Click Yes.
 
 
-    ![](images/Task4-step4.png " ")
+    ![](images/compliance-save-association.png " ")
 
 
 5. Click OK on the Information processing prompt. 
 
 
-    ![](images/a01dffb956af685a866f02e68eff72b1.png " ")
+    ![](images/compliance-pdb-processing.png " ")
 
 
 7. Now Navigate to ***Enterprise >> Compliance >> Results***
 
-    ![](images/1317deb228d80211d9e6a2edf2cbba9e.jpg " ")
+    ![](images/compliance-navigate.png " ")
 
 8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards.
 
 
-    ![](images/Task4-Navigate_to_Compliance-Result-1.jpg " ")
+    ![](images/compliance-navigate-result.png " ")
 
 
 
 10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations. 
     In case of violations you will dee details like last evaluation date, name of the rule violated and rationale for the violation under the violation tab
-    ![](images/Task4-Violations-tab.jpg " ")
+    ![](images/compliance-results.png " ")
 
 
 12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. 
@@ -513,14 +513,14 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
     From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**
 
 
-    ![](images/Task4-Navigate-to-Dashboard-latest.jpg " ")
+    ![](images/compliance-navigate-dashboard.png " ")
 
     
 
       **Dashboard View**
 
 
-    ![](images/Task4-Compliance-Dashboard-latest.jpg " ")
+    ![](images/compliance-dashboard-result.png " ")
 
 
 13. You can also generate a comprehensive compliance report for
@@ -532,17 +532,17 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
     
     Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
 
-    ![](images/Task4-13a.jpg " ")
+    ![](images/compliance-result-pdb.png " ")
 
 
-    ![](images/Task4-13b.jpg " ")
+    ![](images/compliance-result-standard.png " ")
 
     **Sample report**
 
-    ![](images/Task4-Compliancereport1.jpg " ")
-    ![](images/Task4-Compliancereport2.jpg " ")
-    ![](images/Task4-Compliancereport3.jpg " ")
-    ![](images/Task4-Compliancereport4.jpg " ")
+    ![](images/compliancereport1.png " ")
+    ![](images/compliancereport2.png " ")
+    ![](images/compliancereport3.png " ")
+    ![](images/compliancereport4.png " ")
 
 
 
@@ -551,7 +551,7 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
 
  Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
 
-  ![](images/logout_as_sysman.jpg " ")
+  ![](images/logout-as-sysman.png " ")
 
 ## Task 5: Self-Service to Request PDB Using PDBaaS
 
@@ -563,13 +563,13 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
     Credentials : **cyrus/welcome1**
 
-![](images/login_as_cyrus.jpg " ")
+    ![](images/login-as-cyrus.png " ")
 
 2. By default, you will see the Database Cloud Self Service Portal landing page as shown below.
 
     Click on  **Create Instance** button.
 
-    ![](images/CMP-HomePage.jpg " ")
+    ![](images/cmp-homepage.png " ")
 
 3.   
     Select **Provision New Empty Pluggable Database**.
@@ -580,7 +580,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
        -  **Provision Pluggable Database with Data**: This template enables users to create a new pluggable database with data from non-container database.
 
 
-    ![](images/ee694403e4c718e224a01ae91dbc88fd.jpg " ")
+    ![](images/cmp-create-new-pdb.png " ")
 
 
 4. In the **Pluggable Database Configuration** section,
@@ -654,7 +654,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
 
 
-    ![](images/Task5-Consolidated.jpg " ")
+    ![](images/cmp-consolidated.png " ")
 
   What do these options represent? In most cases the PDBaaS options are self-explanatory.
   The self-service user should be able to provision a PDB by entering minimal information. 
@@ -682,7 +682,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
     Click on the **hourglass** icon under status column for the Create Pluggable Database step. You will see details of request.
 
-    ![](images/CMP-Task5-point9.jpg " ")
+    ![](images/cmp-pdb-creation.png " ")
 
 
 11. PDB Provisioning perform the following actions:
@@ -702,15 +702,15 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
     Click on Close button when the procedure is complete. 
 
-    ![](images/CMP-PDB_creation-success.jpg " ")
+    ![](images/cmp-pdb-creation-success.png " ")
 
 12.  The screen indicated the PDB creation is successful.
 
-      ![](images/CMP-Task5-point12.jpg " ")
+      ![](images/cmp-pdb-creation-validation.png " ")
 
 13. Click on the Home Icon. You will see new PDB instance. Click on the PDB recently created. 
 
-  ![](images/CMP-Task5-point13.jpg " ")
+    ![](images/cmp-pdb-creation-new.png " ")
 
   *Note*: Following widgets are shown on the Database Cloud Services landing Page
 
@@ -724,11 +724,11 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
     Click on **Resize** button to resize a PDB instance.
 
-    ![](images/9ca31e90c86263e6cddde14da1c6954f.jpg " ")
+    ![](images/cmp-pdb-resize.png " ")
 
 15. Select **large** and click **resize**
 
-    ![](images/20537907e3a274a9df16e7c54f73713f.jpg " ")
+    ![](images/cmp-pdb-resize-options.png " ")
 
     * Resize allows you to resize your instance to other available resource sizes.
     * We have 2 resource sizes available for Service Template. Small and Large.
@@ -741,7 +741,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
     This shows now new resource usage limits.
 
 
-      ![](images/64a8954df11d2e688a930fd92ae38cd8.jpg " ")
+      ![](images/cmp-pdb-resize-validation.png " ")
 
 17.  Next delete the database Instance: 
 
@@ -752,14 +752,14 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
 18. Click on the action menu for new PDB and delete this instance.
 
-    ![](images/CMP-Task5-point18-latest.jpg " ")
+    ![](images/cmp-delete-pdb.png " ")
 
 19. While deleting instance you can preserve a backup and create a new instance in case required. 
   Select check-box: **Preserve a backup of this instance**
   
     Click **Ok**
 
-    ![](images/CMP-Task5-point19-latest.jpg " ")
+    ![](images/cmp-pdb-delete-backup.png " ")
 
 20.  Click **Close** to close the confirmation dialog box. 
 
