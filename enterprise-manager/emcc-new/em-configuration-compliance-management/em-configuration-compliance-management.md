@@ -240,7 +240,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    Highlight this new template and click Edit.
 
-  ![](images/compared_and_drift_demo_image5.png " ")
+  ![](images/edit-created-comparison-database-template.png " edit-created-comparison-database-template ")
 
 6.  The configuration templates page appears below.
 
