@@ -58,15 +58,15 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-  ![](images/configuration_inventoryusages_image1.png)
+  ![](images/configuration-inventoryusages-image.png "configuration inventory usages")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![](images/em_compliance_config_alldbs_image.png " ")
+  ![](images/em-compliance-config-alldbs-image.png "all database instances")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
-5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the**Trend** radio button to see the growth of a given database instance over a period of time.
+5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
  ![](images/em_config_compliane_dbtrends_image3.png " ")
 
@@ -523,7 +523,7 @@ Click the **Cancel** button.
 
   2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![](images/hipaa_compliance_welcome_image.png " ") 
+  ![](images/hipaa_compliance_welcome_image.png " ")
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
