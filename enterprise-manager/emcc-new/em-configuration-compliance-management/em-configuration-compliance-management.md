@@ -472,7 +472,7 @@ Click the **Cancel** button.
 
  By clicking under Target Name.
 
-  ![](images/cis_db_compliance_dashboard_image20.png " ")
+  ![compliance-dashboard-critical-violations-page](images/compliance-dashboard-critical-violations.png " compliance-dashboard-critical-violations-page ")
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
