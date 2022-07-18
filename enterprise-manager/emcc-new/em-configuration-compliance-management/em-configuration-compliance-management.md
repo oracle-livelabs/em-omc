@@ -210,13 +210,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/configuration-comparison-drift-management-menu.png " configuration-comparison-drift-management-menu-page ")
 
-    By Clicking on the **i** icon, review the different types of comparisons. Choose Templates left side of the panel of the Dashboard.
+    By Clicking on the **i** icon, review the different types of comparisons.
+
+    Choose Templates left side of the panel of the Dashboard.
 
   ![](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
-  ![](images/compare_drift_template_image1.png " ")
+  ![](images/comparison-templates.png " comparison-templates-page ")
 
 4.  **Sort Name Alphabetically** look for Database Instance Template as shown below.
 
