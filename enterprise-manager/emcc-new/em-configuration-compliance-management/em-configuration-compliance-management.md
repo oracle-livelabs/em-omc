@@ -527,7 +527,7 @@ Click the **Cancel** button.
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
-  ![](images/hipaa_all_libraries_image2.png " ")
+  ![compliance-library-for-host-page](images/compliance-library-for-host.png " compliance-library-for-host-page ") 
 
   4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
