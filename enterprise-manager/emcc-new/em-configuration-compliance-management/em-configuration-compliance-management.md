@@ -92,7 +92,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 (**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
 
-  ![](images/em-ecm-inv-usage-details-excel-file.png   " em-ecm-inv-usage-details-excel-file ")  
+  ![](images/em-ecm-inv-usage-details-excel-file.png " em-ecm-inv-usage-details-excel-file ")  
 
 ## Task 2: One-Time Database Comparison
 
@@ -151,15 +151,15 @@ In this step, you will compare two database targets to determine configuration d
   Once the target is chosen, it appears as below.
   Click **Submit**
 
-  ![](images/em_one_time_database_comparison_referred_target_image8.png " ")
+  ![](images/compared-target-submit.png " compared-target-submit-page")
 
 12.  The comparison would take a few seconds for selected targets and below are the results.
 
-  ![](images/em_comp_conf_drift_mgmt_compared_image9.png " ")
+  ![](images/comparison-results.png " comparison-results-page ")
 
    Click **Clear All** at Configuration Items(Differences).
 
-  ![](images/em_comp_conf_drift_mgmt_compared_image10.png " ")
+  ![](images/clear-all-comparison-results.png " clear-all-comparison-results-page")
 
 13. Filter configuration items to review only Initialization Parameters.
 
@@ -172,7 +172,7 @@ In this step, you will compare two database targets to determine configuration d
   - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
   - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-  ![](images/em_comp_conf_drift_mgmt_compared_image11.png " ")
+  ![](images/initialization-parameters-selection.png " initialization-parameters-selection-page ")
 
 14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
