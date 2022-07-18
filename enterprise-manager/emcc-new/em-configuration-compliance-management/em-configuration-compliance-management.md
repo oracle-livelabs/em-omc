@@ -301,7 +301,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
-  ![](images/compare_and_drift_demo_image17.png " ")
+  ![](images/drift-definition-details-save-targets.png " drift-definition-details-save-targets-page ") 
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
