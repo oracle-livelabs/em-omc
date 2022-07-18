@@ -184,11 +184,11 @@ In this step, you will compare two database targets to determine configuration d
 
   You should see the comparison definition you created on this page.
 
-  ![](images/em_comp_conf_drift_mgmt_dashboard_image14.png " ")
+  ![](images/one-time-comparison-results.png " one-time-comparison-results-page ")
 
 16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
-  ![](images/em_comp_conf_drift_mgmt_dashboard_image15.png " ")
+  ![](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
 
   After Exporting, Click **Cancel** to exit
 
