@@ -218,15 +218,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
-  ![](images/comparison-templates.png " comparison-templates-page ")
+  ![comparison-templates-page](images/comparison-templates.png " comparison-templates-page ")
 
 4.  **Sort Name Alphabetically** look for Database Instance Template as shown below.
 
-  ![](images/sort-database-instance-comparison-template.png " sort-database-instance-comparison-template-page ")
+  ![sort-database-instance-comparison-template-page](images/sort-database-instance-comparison-template.png " sort-database-instance-comparison-template-page ")
 
    With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
 
-  ![](images/create-like-comparison-template.png " create-like-comparison-template-page ")
+  ![create-like-comparison-template-page](images/create-like-comparison-template.png " create-like-comparison-template-page ")
 
 5.  A complete copy of the Database Instance template with a unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
 
@@ -236,19 +236,19 @@ In this workshop, you will learn about continuous configuration drift monitoring
   ```
   And click **Search**.
 
-  ![](images/comparison-drift-management-created-database-instance-template.png " comparison-drift-management-created-database-instance-template-page ")
+  ![comparison-drift-management-created-database-instance-template-page](images/comparison-drift-management-created-database-instance-template.png " comparison-drift-management-created-database-instance-template-page ")
 
    Highlight this new template and click Edit.
 
-  ![](images/comparison-templates-edit.png " comparison-templates-edit-page ")
+  ![comparison-templates-edit-page](images/comparison-templates-edit.png " comparison-templates-edit-page ")
 
 6.  The configuration templates page appears below.
 
-  ![](images/edit-comparison-template-configuration-item.png " edit-comparison-template-configuration-item-page ")
+  ![edit-comparison-template-configuration-item-page](images/edit-comparison-template-configuration-item.png " edit-comparison-template-configuration-item-page ")
 
   To begin with, uncheck all configuration items.
 
-  ![](images/edit-comparison-compare-template.png " edit-comparison-compare-template-page ")
+  ![edit-comparison-compare-template-page](images/edit-comparison-compare-template.png " edit-comparison-compare-template-page ")
 
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
@@ -260,84 +260,84 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Making sure **Instance Information** is highlighted
     - Click Save
 
-  ![](images/comparison-details-instance-information.png " comparison-details-instance-information-page ")
+  ![comparison-details-instance-information-page](images/comparison-details-instance-information.png " comparison-details-instance-information-page ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
-  ![](images/confirmation-comparison-and-drift-management.png " confirmation-comparison-and-drift-management-page ")
+  ![confirmation-comparison-and-drift-management-page](images/confirmation-comparison-and-drift-management.png " confirmation-comparison-and-drift-management-page ")
 
   **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
-  ![](images/search-comparison-and-drift-management.png " search-comparison-and-drift-management-page ")
+  ![search-comparison-and-drift-management-page](images/search-comparison-and-drift-management.png " search-comparison-and-drift-management-page ")
 
 9.  Go to the Drift Results tab and create a drift definition.
 
-  ![](images/comparison-and-drift-management-drift-results.png "comparison-and-drift-management-drift-results-page ")
+  ![comparison-and-drift-management-drift-results-page](images/comparison-and-drift-management-drift-results.png "comparison-and-drift-management-drift-results-page ")
 
 10. Click on **Create Definition** under Drift Management.
 
-  ![](images/create-definition-comparison-drift-management.png " create-definition-comparison-drift-management-page ")
+  ![create-definition-comparison-drift-management-page](images/create-definition-comparison-drift-management.png " create-definition-comparison-drift-management-page ")
 
     - Choose Database Instance as the Target Type
     - Select the template created in the previous step
     - Click OK
 
-  ![](images/create-definition-drift-demo-database-instance.png " create-definition-drift-demo-database-instance-page ")
+  ![create-definition-drift-demo-database-instance-page](images/create-definition-drift-demo-database-instance.png " create-definition-drift-demo-database-instance-page ")
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
-  ![](images/drift-definition-details-name.png " drift- definition-details-page ")
+  ![drift- definition-details-page](images/drift-definition-details-name.png " drift- definition-details-page ")
 
 12. Under Source Configuration, do the following:
 
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target
 
-  ![](images/source-targets-search.png " source-targets-search-page")
+  ![source-targets-search-page](images/source-targets-search.png " source-targets-search-page")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
-  ![](images/select-targets-name.png "select-targets-name-page ")
+  ![select-targets-name-page](images/select-targets-name.png "select-targets-name-page ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
-  ![](images/drift-definition-details-save-targets.png " drift-definition-details-save-targets-page ")
+  ![drift-definition-details-save-targets-page](images/drift-definition-details-save-targets.png " drift-definition-details-save-targets-page ")
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
-  ![](images/drift-definition-target-association.png " drift-definition-target-association-page ")
+  ![drift-definition-target-association-page](images/drift-definition-target-association.png " drift-definition-target-association-page ")
 
 16. Click on **Add** to select and associate a target to be monitored for drift.
 
-  ![](images/select-targets-target-name.png " select-targets-target-name-page ")
+  ![select-targets-target-name-page](images/select-targets-target-name.png " select-targets-target-name-page ")
 
 17. Select **finance.subnet.vcn.oraclevcn.com** as the target.
 
-  ![](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
+  ![select-targets-associate-drift-target-page](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
-  ![](images/drift-definition_target-association-enable.png " drift-definition_target-association-enable-page ")
+  ![drift-definition_target-association-enable-page](images/drift-definition_target-association-enable.png " drift-definition_target-association-enable-page ")
 
 19. A pop-up will ask for confirmation to save the association. Select **Yes**, This will start the association of this target to drift definition and initiate the configuration comparison and continuous drift monitoring.
 
-  ![](images/drift-definition-target-save-association.png " drift-definition-target-save-association-page ")
+  ![drift-definition-target-save-association-page](images/drift-definition-target-save-association.png " drift-definition-target-save-association-page ")
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
-  ![](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
 21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
-  ![](images/drift-results.png " drift-results-page ")
+  ![drift-results-page](images/drift-results.png " drift-results-page ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-  ![](images/created-drift-definition-drift-results.png "created-drift-definition-drift-results-page ")
+  ![created-drift-definition-drift-results-page](images/created-drift-definition-drift-results.png "created-drift-definition-drift-results-page ")
 
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-  ![](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
+  ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
 
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
@@ -349,15 +349,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
-  ![](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
  (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
-  ![](images/export_results-for-created-drift-definition.png "export_results-for-created-drift-definition-page ")
+  ![export_results-for-created-drift-definition-page](images/export_results-for-created-drift-definition.png "export_results-for-created-drift-definition-page ")
 
 24. (**Optional**) Exported results in excel for offline analysis look like this:
 
-  ![](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
+  ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
