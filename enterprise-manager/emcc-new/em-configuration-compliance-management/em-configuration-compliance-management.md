@@ -476,7 +476,7 @@ Click the **Cancel** button.
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
-  ![](images/cis_db_compliance_dashboard_image21.png " ")
+  ![evaluate-compliance-dashboard-critical-violations-page](images/evaluate-compliance-dashboard-critical-violations.png "evaluate-compliance-dashboard-critical-violations-page")
 
   Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
