@@ -531,15 +531,15 @@ Click the **Cancel** button.
 
   4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
-  ![compliance-library-search-hipaa-libraries-page](images/compliance-library-search-hipaa-libraries.png " compliance-library-search-hipaa-libraries-page") 
+  ![compliance-library-search-hipaa-libraries-page](images/compliance-library-search-hipaa-libraries.png " compliance-library-search-hipaa-libraries-page")
 
   5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
-  ![](images/hipaa_standard_libraries_image4.png " ")
+  ![compliance-library-hipaa-show-details-page](images/compliance-library-hipaa-show-details.png " compliance-library-hipaa-show-details ")
 
   6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
-  ![](images/hipaa_associate_target_image5.png " ")
+  ![view-compliance-standard-hipaa-ol-7-page](images/view-compliance-standard-hipaa-ol-7.png " view-compliance-standard-hipaa-ol-7-page ")
 
   7. Click on **Associate Targets** to associate a database target for this selected standard.
 
