@@ -458,7 +458,7 @@ Click the **Cancel** button.
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
-  ![](images/cis_db_compliance_dashboard_image18.png " ")
+  ![compliance-dashboard-page-cis-page](images/compliance-dashboard-page-cis.png " compliance-dashboard-page-cis-page ")
 
   Under the Compliance Summary panel at the bottom below page:
 
@@ -468,7 +468,7 @@ Click the **Cancel** button.
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
-  ![](images/cis_db_compliance_dashboard_image19.png " ")
+  ![compliance-dashboard-targets_evaluated-page](images/compliance-dashboard-targets_evaluated.png "compliance-dashboard-targets_evaluated-page ")
 
  By clicking under Target Name.
 
