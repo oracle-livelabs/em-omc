@@ -210,11 +210,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![](images/configuration-comparison-drift-management-menu.png " configuration-comparison-drift-management-menu-page ")
 
-   By Clicking on the **i** icon, review the different types of comparisons.
+    By Clicking on the **i** icon, review the different types of comparisons. Choose Templates left side of the panel of the Dashboard.
 
-   -  Choose Templates left side of the panel of the Dashboard.
-
-  ![](images/ecm2_one_time_db_comparison_menu1.png " ")
+  ![](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
