@@ -567,7 +567,7 @@ Click the **Cancel** button.
 
   12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-  ![](images/hipaa_associate_target_image11.png " ")
+  ![information-compliance-standard-submit-target-page](images/information-compliance-standard-submit-target.png " information-compliance-standard-submit-target-page")
 
   13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
