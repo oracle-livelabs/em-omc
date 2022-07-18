@@ -286,7 +286,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
-  ![](images/compare_and_drift_demo_image14.png " ")
+  ![](images/drift-definition-details-name.png " drift- definition-details-page ") 
 
 12. Under Source Configuration, do the following:
 
