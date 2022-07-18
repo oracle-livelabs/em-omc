@@ -54,25 +54,25 @@ All the items in this step are read-only, the primary goal is to learn about inv
     Password: <copy>welcome1</copy>
     ```
 
-  ![](../initialize-environment/images/em-login.png " ")
+  ![](../initialize-environment/images/em-login.png " em-login-page ")
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-  ![](images/configuration-inventoryusages-image.png "configuration inventory usages")
+  ![](images/configuration-inventory-usages.png " configuration-inventory-usages-page")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![](images/em-compliance-config-alldbs-image.png "all database instances")
+  ![](images/em-compliance-config-alldbs.png "em-compliance-config-alldbs-page")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
 5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
- ![](images/em-inventory-usage-details-image.png "inventory usage details")
+ ![](images/em-inventory-usage-details.png "em-inventory-usage-details-page")
 
  Click on Table View, further details to explore.
 
- ![](images/em-inventory-usage-details-table-image.png "inventory usage details in table")  
+ ![](images/em-inventory-usage-details-table.png "em-inventory-usage-details-table-page")  
 
  Click **Close**.
 
@@ -88,11 +88,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 7. Export inventory details to excel for reports.
 
-  ![](images/em-inventory-usage-details-export-summary-image.png " inventory details summary export ")
+  ![](images/em-inventory-usage-details-export-summary.png " em-inventory-usage-details-export-summary-page ")
 
 (**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
 
-  ![](images/ecm1_inventory_usage_details_report.png " ")
+  ![](images/em-ecm-inv-usage-details-excel-file.png   " em-ecm-inv-usage-details-excel-file ")  
 
 ## Task 2: One-Time Database Comparison
 
@@ -106,31 +106,31 @@ In this step, you will compare two database targets to determine configuration d
 
 2.  From the Enterprise menu, select **Configuration**, then select **Configuration & Drift Management**
 
-  ![](images/ecm2_one_time_database_comparison_menu.png " ")
+  ![](images/one-time-database-comparison-menu.png " one-time-database-comparison-menu-page ")
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
-  ![](images/ecm2_one_time_db_comparison_menu1.png " ")
+  ![](images/comparison-and-drift-management.png " comparison-and-drift-management-page")
 
 4.	Select the **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![](images/em_one_create_comparison_image2.png " ")
+  ![](images/one-time-create-comparison.png " one-time-create-comparison-page ")
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/em_comp_conf_drift_mgmt_image3.png " ")
+  ![](images/one-time-comparison-reference.png " one-time-comparison-reference-page ")
 
 6.  Identify the reference target to compare other targets.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_image4.png " ")
+  ![](images/select-targets.png " select-targets-page ")
 
   To begin with, filter ‘Target Type’ to Database Instance.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_image5.png " ")
+  ![](images/select-targets-type.png "select-targets-type-page ")
 
 7.  Select **emrep.us.oracle.com** as the reference target.
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_image6.png " ")
+  ![](images/select-reference-type-target.png " select-reference-type-target-page ")
 
 8.  Choose Database Instance Template for Comparison Template.
 
