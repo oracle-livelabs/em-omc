@@ -441,15 +441,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 13. Click OK and a pop-up window shows to confirm an association. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![save-association-compliance-standard-page](images/save-association-compliance-standard.png "save-association-compliance-standard-page ")
+  ![save-association-compliance-standard-page](images/save-association-compliance-standard.png "save-association-compliance-standard-page")
 
   The pop-up window shows the process status, Click **OK**
 
-  ![](images/cis_db_compliance_confirm_target_image15.png " ")
+  ![compliance-standard-submitted-page](images/compliance-standard-submitted.png "compliance-standard-submitted-page ")
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
-  ![](images/cis_db_compliance_confirm_target_image16.png " ")
+  ![compliance-library-association-count-page](images/compliance-library-association-count.png "compliance-library-association-count-page")
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
 Click the **Cancel** button.
