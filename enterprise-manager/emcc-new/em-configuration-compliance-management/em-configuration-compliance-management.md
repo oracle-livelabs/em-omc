@@ -349,15 +349,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
-  ![](images/compare_and_drift_demo_image27.png " ")
+  ![](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
  (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
-  ![](images/compare_and_drift_demo_image28.png " ")
+  ![](images/export_results-for-created-drift-definition.png "export_results-for-created-drift-definition-page ")
 
 24. (**Optional**) Exported results in excel for offline analysis look like this:
 
-  ![](images/compare_and_drift_demo_report_image29.png " ")
+  ![](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
