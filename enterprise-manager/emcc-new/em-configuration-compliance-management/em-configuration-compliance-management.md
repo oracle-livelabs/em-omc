@@ -106,60 +106,60 @@ In this step, you will compare two database targets to determine configuration d
 
 2.  From the Enterprise menu, select **Configuration**, then select **Configuration & Drift Management**
 
-  ![](images/one-time-database-comparison-menu.png " one-time-database-comparison-menu-page ")
+  ![one-time-database-comparison-menu-page](images/one-time-database-comparison-menu.png " one-time-database-comparison-menu-page ")
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
-  ![](images/comparison-and-drift-management.png " comparison-and-drift-management-page")
+  ![comparison-and-drift-management-page](images/comparison-and-drift-management.png " comparison-and-drift-management-page")
 
 4.	Select the **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![](images/one-time-create-comparison.png " one-time-create-comparison-page ")
+  ![one-time-create-comparison-page](images/one-time-create-comparison.png " one-time-create-comparison-page ")
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![](images/one-time-comparison-reference.png " one-time-comparison-reference-page ")
+  ![one-time-comparison-reference-page](images/one-time-comparison-reference.png " one-time-comparison-reference-page ")
 
 6.  Identify the reference target to compare other targets.
 
-  ![](images/select-targets.png " select-targets-page ")
+  ![select-targets-page](images/select-targets.png " select-targets-page ")
 
   To begin with, filter ‘Target Type’ to Database Instance.
 
-  ![](images/select-targets-type.png "select-targets-type-page ")
+  ![select-targets-type-page](images/select-targets-type.png "select-targets-type-page ")
 
 7.  Select **emrep.us.oracle.com** as the reference target.
 
-  ![](images/select-reference-type-target.png " select-reference-type-target-page ")
+  ![select-reference-type-target-page](images/select-reference-type-target.png " select-reference-type-target-page ")
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/one-time-comparison-template.png " one-time-comparison-template-page ")
+  ![one-time-comparison-template-page](images/one-time-comparison-template.png " one-time-comparison-template-page ")
 
 9.  Provide a name for Comparison, for example, a name like **ECM002-Compare-Demo - One time Comparison**
 
-  ![](images/one-time-database-instance-comparison.png " one-time-database-instance-comparison-page ")
+  ![one-time-database-instance-comparison-page](images/one-time-database-instance-comparison.png " one-time-database-instance-comparison-page ")
 
 10.  Add targets to be compared.
 
-  ![](images/add-targets-compared.png " add-targets-compared-page ")
+  ![add-targets-compared-page](images/add-targets-compared.png " add-targets-compared-page ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
-  ![](images/search-database-target-to-compare.png " search-database-target-to-compare-page")
+  ![search-database-target-to-compare-page](images/search-database-target-to-compare.png " search-database-target-to-compare-page")
 
   Once the target is chosen, it appears as below.
   Click **Submit**
 
-  ![](images/compared-target-submit.png " compared-target-submit-page")
+  ![compared-target-submit-page](images/compared-target-submit.png " compared-target-submit-page")
 
 12.  The comparison would take a few seconds for selected targets and below are the results.
 
-  ![](images/comparison-results.png " comparison-results-page ")
+  ![comparison-results-page](images/comparison-results.png " comparison-results-page ")
 
    Click **Clear All** at Configuration Items(Differences).
 
-  ![](images/clear-all-comparison-results.png " clear-all-comparison-results-page")
+  ![clear-all-comparison-results-page](images/clear-all-comparison-results.png " clear-all-comparison-results-page")
 
 13. Filter configuration items to review only Initialization Parameters.
 
@@ -172,29 +172,29 @@ In this step, you will compare two database targets to determine configuration d
   - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
   - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-  ![](images/comparison-results-initialization-parameters.png " comparison-results-initialization-parameters-page ")
+  ![comparison-results-initialization-parameters-page](images/comparison-results-initialization-parameters.png " comparison-results-initialization-parameters-page ")
 
 14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
-  ![](images/configuration-comparison-and-drift-management.png " configuration-comparison-and-drift-management-page ")
+  ![configuration-comparison-and-drift-management-page](images/configuration-comparison-and-drift-management.png " configuration-comparison-and-drift-management-page ")
 
 15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![](images/dashboard-one-time-comparison-result.png " dashboard-one-time-comparison-result-page ")
+  ![dashboard-one-time-comparison-result-page](images/dashboard-one-time-comparison-result.png " dashboard-one-time-comparison-result-page ")
 
   You should see the comparison definition you created on this page.
 
-  ![](images/one-time-comparison-results.png " one-time-comparison-results-page ")
+  ![one-time-comparison-results-page](images/one-time-comparison-results.png " one-time-comparison-results-page ")
 
 16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
-  ![](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
+  ![export-one-time-comparison-results-page](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
 
   After Exporting, Click **Cancel** to exit
 
 17. (**Optional**) Exported results in excel for offline analysis look like this:
 
-  ![](images/compare-demo-one-time-comparison_result-excel.png " compare-demo-one-time-comparison_result-excel ")
+  ![compare-demo-one-time-comparison-result-excel](images/compare-demo-one-time-comparison-result-excel.png " compare-demo-one-time-comparison-result-excel ")
 
 <!-- In this step, you learned steps to compare two database targets to determine configuration differences. This one-time database (or any Enterprise Manager managed targets) comparison will help you quickly determine specific configuration changes when compared with reference configuration. This is very ideal for troubleshooting any target configuration parameters. -->
 
@@ -208,13 +208,13 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***, Review the different types of comparisons supported.
 
-  ![](images/configuration-comparison-drift-management-menu.png " configuration-comparison-drift-management-menu-page ")
+  ![configuration-comparison-drift-management-menu-page](images/configuration-comparison-drift-management-menu.png " configuration-comparison-drift-management-menu-page ")
 
     By Clicking on the **i** icon, review the different types of comparisons.
 
     Choose Templates left side of the panel of the Dashboard.
 
-  ![](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
+  ![comparison-and-drift-management-page](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
