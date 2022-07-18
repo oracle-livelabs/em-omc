@@ -413,19 +413,19 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 7.  Review the various compliance rules for CIS Security standards grouped based on the configuration area.
 
-  ![](images/cis_db_compliance_cis_demo_standard_details_image7.png " ")
+  ![compliance-standard-cis-page](images/compliance-standard-cis.png " compliance-standard-cis-page ")
 
   Click **Save**
 
-  ![](images/cis_db_compliance_standard_details_save_image8.png " ")
+  ![compliance-standard-cis-standard-rules-page](images/compliance-standard-cis-standard-rules.png "compliance-standard-cis-standard-rules-page ")
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
-  ![](images/cis_db_compliance_standard_create_image9.png " ")
+  ![compliance-library-information-page](images/compliance-library-information.png "compliance-library-information-page ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![](images/cis_db_compliance_associate_target_image10.png " ")
+  ![search-compliance-library-associate-target-page](images/search-compliance-library-associate-target.png " search-compliance-library-associate-target-page ")
 
 10. When the Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
