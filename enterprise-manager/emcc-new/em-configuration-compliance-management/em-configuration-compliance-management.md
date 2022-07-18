@@ -286,14 +286,14 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
-  ![](images/drift-definition-details-name.png " drift- definition-details-page ") 
+  ![](images/drift-definition-details-name.png " drift- definition-details-page ")
 
 12. Under Source Configuration, do the following:
 
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target
 
-  ![](images/compare_and_drift_demo_image15.png " ")
+  ![](images/source-targets-search.png " source-targets-search-page")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
