@@ -51,19 +51,19 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Password: <copy>welcome1</copy>
     ```
 
-    ![](../initialize-environment/images/em-login.png " ")
+    ![em -login-page](../initialize-environment/images/em-login.png " em-login-page ")
 
 
 2.  Navigate to  ***Enterprise >> Provisioning and Patching >>
     Database provisioning***
 
-    ![](images/db-provisioning-flow-main.png " ")
+    ![db-provisioning-main-page](images/db-provisioning-flow-main.png " db-provisioning-main-page ")
 
 
 
 3.  On the Database Provisioning page, in the *Related Links* section on the left menu pane, click **Provision Pluggable Databases**
 
-    ![](images/pdb-provisioning-flow-main.png " ")
+    ![pdb-provisioning-main-page](images/pdb-provisioning-flow-main.png "db-provisioning-main-page ")
 
 
 
@@ -183,11 +183,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 1. Navigate to the ***Enterprise menu >> Provisioning and Patching >> Database provisioning***.
 
-    ![](images/db-provisioning-flow-main.png " ")
+    ![db-provisioning-main-page](images/db-provisioning-flow-main.png "db-provisioning-main-page ")
 
 2. In the Database Provisioning page, in the Related Links section of the left menu pane, click “**Provision Pluggable Databases**”
 
-    ![](images/pdb-provisioning-flow-main.png " ")
+    ![pdb-provisioning-main-page](images/pdb-provisioning-flow-main.png "pdb-provisioning-main-page ")
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to Unplug PDBs.
     ![](images/select-cdb-main-flow-helper.png " ")
@@ -257,11 +257,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Navigate to the **“Enterprise menu >> Provisioning and Patching >> Database provisioning”**.
 
-    ![](images/db-provisioning-flow-main.png " ")
+    ![db-provisioning-main-page](images/db-provisioning-flow-main.png " db-provisioning-main-page")
 
 10. In the Database Provisioning page, in the Related Links section of the left menu pane, click **Provision Pluggable Databases**
 
-    ![](images/pdb-provisioning-flow-main.png " ")
+    ![pdb-provisioning-main-page](images/pdb-provisioning-flow-main.png " pdb-provisioning-main-page")
 
 11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**cdb186.subnet.vcn.oraclevcn.com186**) within which you want to Plug the PDBs.
 
@@ -360,11 +360,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 1.  Navigate to the “***Enterprise menu >> Provisioning and Patching >> Database provisioning***”.
 
-    ![](images/db-provisioning-flow-main.png " ")
+    ![](images/db-provisioning-flow-main.png " db-provisioning-main-page ")
 
 2.  In the Database Provisioning page, in the Related Links section of the left menu pane, click Provision Pluggable Databases
 
-      ![](images/pdb-provisioning-flow-main.png " ")
+      ![](images/pdb-provisioning-flow-main.png " pdb-provisioning-main-page")
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to clone new PDBs.
   ![](images/select-cdb-main-flow-helper.png " ")
