@@ -353,7 +353,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
  (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
-  ![export_results-for-created-drift-definition-page](images/export_results-for-created-drift-definition.png "export_results-for-created-drift-definition-page ")
+  ![export-results-for-created-drift-definition-page](images/export-results-for-created-drift-definition.png "export-results-for-created-drift-definition-page ")
 
 24. (**Optional**) Exported results in excel for offline analysis look like this:
 
