@@ -68,11 +68,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
- ![](images/em_config_compliane_dbtrends_image3.png " ")
+ ![](images/em-inventory-usage-details-image.png "inventory usage details")
 
  Click on Table View, further details to explore.
 
- ![](images/em_config_compliane_dbtrends_image4.png)  
+ ![](images/em-inventory-usage-details-table-image.png "inventory usage details in table")  
 
  Click **Close**.
 
@@ -88,7 +88,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 7. Export inventory details to excel for reports.
 
-  ![](images/em_configs_compliane_db_trends_image5.png " ")
+  ![](images/em-inventory-usage-details-export-summary-image.png " inventory details summary export ")
 
 (**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
 
