@@ -63,14 +63,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 3.  On the Database Provisioning page, in the *Related Links* section on the left menu pane, click **Provision Pluggable Databases**
 
-    ![pdb-provisioning-main-page](images/pdb-provisioning-flow-main.png "db-provisioning-main-page ")
+    ![pdb-provisioning-main-page](images/pdb-provisioning-flow-main.png "pdb-provisioning-main-page ")
 
 
 
 4.  On the Provision Pluggable Database Console, in the *Container   Database* section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
 
-    ![](images/select-cdb-main-flow-helper.png " ")
-    ![](images/select-cdb-main-flow.png " ")
+    ![](images/select-cdb-main-flow-helper.png " select cdb page")
+    ![](images/select-cdb-main-flow.png " choose cdb page  ")
 
 
 
@@ -78,7 +78,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click **Launch**
 
-    ![](images/create-new-pdb-operation.png " ")
+    ![](images/create-new-pdb-operation.png "create new pdb ")
 
 
 
@@ -89,7 +89,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click **Next**
 
 
-    ![](images/create-new-pdb-creation-page.png " ")
+    ![](images/create-new-pdb-creation-page.png " pdb creation ")
 
 
 
@@ -113,7 +113,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     
       Click **Next**
 
-    ![](images/create-new-pdb-id-page.png " ")
+    ![](images/create-new-pdb-id-page.png " create new pdb identification page")
 
 
 
