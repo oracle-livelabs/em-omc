@@ -180,7 +180,7 @@ In this step, you will compare two database targets to determine configuration d
 
 15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![](images/em_comp_conf_drift_mgmt_dashboard_image13.png " ")
+  ![](images/dashboard-one-time-comparison-result.png " dashboard-one-time-comparison-result-page ")
 
   You should see the comparison definition you created on this page.
 
