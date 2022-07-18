@@ -240,11 +240,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
    Highlight this new template and click Edit.
 
-  ![](images/edit-comparison-template-compare.png " edit-created-comparison-database-template -page ")
+  ![](images/comparison-templates-edit.png " comparison-templates-edit-page ")
 
 6.  The configuration templates page appears below.
 
-  ![](images/edit-comparison-template-compare.png " edit-comparison-template-compare-page ")
+  ![](images/edit-comparison-template-configuration-item.png " edit-comparison-template-configuration-item-page ")
 
   To begin with, uncheck all configuration items.
 
