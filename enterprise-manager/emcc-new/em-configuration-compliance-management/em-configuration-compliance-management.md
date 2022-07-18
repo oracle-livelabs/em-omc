@@ -236,7 +236,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
   ```
   And click **Search**.
 
-  ![](images/compare_and_drift_demo_image4.png " ")
+  ![](images/comparison-drift-management-creation-database-instance-template.png " comparison-drift-management-creation-database-instance-template")
 
    Highlight this new template and click Edit.
 
