@@ -433,15 +433,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![select-targets-compliance-target-name](images/select-targets-compliance-target-name.png "select-targets-compliance-target-name ")
+  ![select-targets-compliance-target-name-page](images/select-targets-compliance-target-name.png "select-targets-compliance-target-name-page ")
 
 12. The list of targets chosen will show up on the target association page as shown below.
 
-  ![](images/cis_db_compliance_add_target_image13.png " ")
+  ![compliance-standard-target-association-add-page](images/compliance-standard-target-association-add.png " compliance-standard-target-association-add-page")
 
 13. Click OK and a pop-up window shows to confirm an association. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![](images/cis_db_compliance_confirm_target_image14.png " ")
+  ![save-association-compliance-standard-page](images/save-association-compliance-standard.png "save-association-compliance-standard-page ")
 
   The pop-up window shows the process status, Click **OK**
 
