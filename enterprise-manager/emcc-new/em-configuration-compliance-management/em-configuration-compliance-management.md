@@ -614,17 +614,17 @@ Click the **Cancel** button.
 
       It takes you to the Compliance Results page.
 
-  ![](images/hipaa_main_results_image22.png " ")
+  ![compliance_evaluation-results-hipaa-ol7-standards-page](images/compliance_evaluation-results-hipaa-ol7-standards.png "compliance_evaluation-results-hipaa-ol7-standards-page ")
 
       Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
 
   20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
 
-  ![](images/hipaa_main_results_image23.png " ")
+  ![compliance-hipaa-ol-7-host-results-rules-validation-page](images/compliance-hipaa-ol-7-host-results-rules-validation.png "compliance-hipaa-ol-7-host-results-rules-validation-page ")
 
       Individual standard rule details status and rationale can be further analyzed.
 
-  ![](images/hipaa_main_results_image24.png " ")
+  ![hipaa-ol-7-individual-rule-detail-evaluations-page](images/hipaa-ol-7-individual-rule-detail-evaluations.png "hipaa-ol-7-individual-rule-detail-evaluations-page ")
 
       All these would give you a security posture of the host target.
 
