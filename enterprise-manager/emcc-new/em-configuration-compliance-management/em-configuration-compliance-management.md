@@ -134,19 +134,19 @@ In this step, you will compare two database targets to determine configuration d
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![](images/em_comp_conf_drift_mgmt_image4.png)
+  ![](images/one-time-comparison-template.png " one-time-comparison-template-page ")
 
 9.  Provide a name for Comparison, for example, a name like **ECM002-Compare-Demo - One time Comparison**
 
-  ![](images/ecm2_one_time_database_comparison_ref_target_image7.png)
+  ![](images/one-time-database-instance-comparison.png " one-time-database-instance-comparison-page ")
 
 10.  Add targets to be compared.
 
-  ![](images/em_comp_conf_driftmgmt_target_image5.png " ")
+  ![](images/add-targets-compared.png " add-targets-compared-page ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
-  ![](images/em_comp_conf_drifts_mgmt_image6.png " ")
+  ![](images/search-database-target-to-compare.png " search-database-target-to-compare-page")
 
   Once the target is chosen, it appears as below.
   Click **Submit**
