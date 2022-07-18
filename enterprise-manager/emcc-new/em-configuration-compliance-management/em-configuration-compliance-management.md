@@ -54,25 +54,25 @@ All the items in this step are read-only, the primary goal is to learn about inv
     Password: <copy>welcome1</copy>
     ```
 
-  ![](../initialize-environment/images/em-login.png " em-login-page ")
+  ![em-login-page](../initialize-environment/images/em-login.png " em-login-page ")
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-  ![](images/configuration-inventory-usages.png " configuration-inventory-usages-page")
+  ![configuration-inventory-usages-page](images/configuration-inventory-usages.png " configuration-inventory-usages-page ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![](images/em-compliance-config-alldbs.png "em-compliance-config-alldbs-page")
+  ![em-compliance-config-alldbs-page](images/em-compliance-config-alldbs.png "em-compliance-config-alldbs-page")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
 5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
- ![](images/em-inventory-usage-details.png "em-inventory-usage-details-page")
+ ![em-inventory-usage-details-page](images/em-inventory-usage-details.png "em-inventory-usage-details-page")
 
  Click on Table View, further details to explore.
 
- ![](images/em-inventory-usage-details-table.png "em-inventory-usage-details-table-page")  
+ ![em-inventory-usage-details-table-page](images/em-inventory-usage-details-table.png "em-inventory-usage-details-table-page")  
 
  Click **Close**.
 
@@ -88,11 +88,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 7. Export inventory details to excel for reports.
 
-  ![](images/em-inventory-usage-details-export-summary.png " em-inventory-usage-details-export-summary-page ")
+  ![em-inventory-usage-details-export-summary-page](images/em-inventory-usage-details-export-summary.png " em-inventory-usage-details-export-summary-page ")
 
 (**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
 
-  ![](images/em-ecm-inv-usage-details-excel-file.png " em-ecm-inv-usage-details-excel-file ")  
+  ![em-ecm-inv-usage-details-excel-file](images/em-ecm-inv-usage-details-excel-file.png " em-ecm-inv-usage-details-excel-file ")  
 
 ## Task 2: One-Time Database Comparison
 
