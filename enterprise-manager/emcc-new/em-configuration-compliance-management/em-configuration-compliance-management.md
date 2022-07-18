@@ -571,15 +571,15 @@ Click the **Cancel** button.
 
   13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
-  ![](images/hipaa_associate_target_image12.png " ")
+  ![association-count-compliance-library-page](images/association-count-compliance-library.png " association-count-compliance-library-page ")
 
   14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
-  ![](images/hipaa_associate_target_image13.png " ")
+  ![target-association-enabled-for-hipaa-page](images/target-association-enabled-for-hipaa.png "target-association-enabled-for-hipaa-page ")
 
   15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
-  ![](images/hipaa_associate_target_image14.png " ")
+  ![compliance-dashboard-for-hipaa-page](images/compliance-dashboard-for-hipaa.png " compliance-dashboard-for-hipaa-page ")
 
   16. Compliance Dashboard populates:
 
