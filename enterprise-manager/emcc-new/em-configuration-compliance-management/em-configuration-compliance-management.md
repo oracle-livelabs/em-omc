@@ -527,11 +527,11 @@ Click the **Cancel** button.
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
-  ![compliance-library-for-host-page](images/compliance-library-for-host.png " compliance-library-for-host-page ") 
+  ![compliance-library-for-host-page](images/compliance-library-for-host.png " compliance-library-for-host-page ")
 
   4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
-  ![](images/hipaa_all_libraries_image3.png " ")
+  ![compliance-library-search-hipaa-libraries-page](images/compliance-library-search-hipaa-libraries.png " compliance-library-search-hipaa-libraries-page") 
 
   5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
