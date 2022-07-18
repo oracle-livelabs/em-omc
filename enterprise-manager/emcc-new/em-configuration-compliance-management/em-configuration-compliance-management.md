@@ -282,7 +282,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Select the template created in the previous step
     - Click OK
 
-  ![](images/compare_and_drift_demo_image13.png " ")
+  ![](images/create-definition-drift-demo-database-instance.png " create-definition-drift-demo-database-instance-page ")
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
