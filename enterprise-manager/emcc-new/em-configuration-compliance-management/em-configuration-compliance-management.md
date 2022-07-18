@@ -468,7 +468,7 @@ Click the **Cancel** button.
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
-  ![compliance-dashboard-targets_evaluated-page](images/compliance-dashboard-targets_evaluated.png "compliance-dashboard-targets_evaluated-page ")
+  ![compliance-dashboard-targets-evaluated-page](images/compliance-dashboard-targets-evaluated.png " compliance-dashboard-targets-evaluated-page ")
 
  By clicking under Target Name.
 
