@@ -602,15 +602,15 @@ Click the **Cancel** button.
 
   18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
-  ![](images/hipaa_compliance_report_image19.png " ")
+  ![compliance-evaluation-report-hipaa-ol-7-page](images/compliance-evaluation-report-hipaa-ol-7.png "compliance-evaluation-report-hipaa-ol-7-page ")
 
       And clicking on the **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation details.
 
-  ![](images/hipaa_compliance_report_image20.png " ")
+  ![summary-hipaa-evaluation-rule-results-page](images/summary-hipaa-evaluation-rule-results.png " summary-hipaa-evaluation-rule-results-page ")
 
   19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
 
-  ![](images/hipaa_main_results_image21.png " ")
+  ![compliance-results-hipaa-page](images/compliance-results-hipaa.png "compliance-results-hipaa-page ")
 
       It takes you to the Compliance Results page.
 
