@@ -264,7 +264,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
-  ![](images/compare_and_drift_demo_image9.png " ")
+  ![](images/confirmation-comparison-and-drift-management.png " confirmation-comparison-and-drift-management-page ")
 
   **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
