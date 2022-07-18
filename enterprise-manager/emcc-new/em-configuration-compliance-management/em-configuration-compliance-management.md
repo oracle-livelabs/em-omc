@@ -592,13 +592,13 @@ Click the **Cancel** button.
 
   17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
-  ![](images/hipaa_associate_target_image16.png " ")
+  ![critical-violations-hipaa-ol-7-page](images/critical-violations-hipaa-ol-7.png " critical-violations-hipaa-ol-7-page ")
 
       Each critical rule violations status can be seen on this pop-up page in detail.
 
       Click on  **Report**
 
-  ![](images/hipaa_associate_target_image17.png " ")
+  ![report-critical-violations-hipaa-ol-7-access-page](images/report-critical-violations-hipaa-ol-7-access.png "report-critical-violations-hipaa-ol-7-access-page ")
 
   18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
