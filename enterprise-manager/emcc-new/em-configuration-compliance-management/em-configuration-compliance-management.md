@@ -454,7 +454,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
 Click the **Cancel** button.
 
-  ![](images/cis_db_compliance_confirm_target_image17.png " ")
+  ![compliance-standard-target-association-cis-page](images/compliance-standard-target-association-cis.png "compliance-standard-target-association-cis-page ")
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
