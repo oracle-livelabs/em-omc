@@ -543,27 +543,27 @@ Click the **Cancel** button.
 
   7. Click on **Associate Targets** to associate a database target for this selected standard.
 
-  ![](images/hipaa_associate_target_image6.png " ")
+  ![compliance-library-standard-hipaa-associate-target-page](images/compliance-library-standard-hipaa-associate-target.png " compliance-library-standard-hipaa-associate-target-page ")
 
   8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
     Click Add to add a target for association with this compliance standard.
 
-  ![](images/hipaa_associate_target_image7.png " ")
+  ![target-association-compliance-standard-hipaa-page](images/target-association-compliance-standard-hipaa.png "target-association-compliance-standard-hipaa ")
 
   9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-  ![](images/hipaa_associate_target_image8.png " ")
+  ![compliance-standard-association-select-target-page](images/compliance-standard-association-select-target.png "compliance-standard-association-select-target-page ")
 
   10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click **OK**.
 
-  ![](images/hipaa_associate_target_image9.png " ")
+  ![compliance-standard-target-enabled-page](images/compliance-standard-target-enabled.png "compliance-standard-target-enabled-page ")
 
   11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
-  ![](images/hipaa_associate_target_image10.png " ")
+  ![save-association-hipaa-compliance-standard-page](images/save-association-hipaa-compliance-standard.png "save-association-hipaa-compliance-standard-page ")
 
   12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
