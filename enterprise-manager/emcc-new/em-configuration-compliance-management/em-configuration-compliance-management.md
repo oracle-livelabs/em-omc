@@ -268,7 +268,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
-  ![](images/compare_and_drift_demo_image10.png " ")
+  ![](images/search-comparison-and-drift-management.png " search-comparison-and-drift-management-page ")
 
 9.  Go to the Drift Results tab and create a drift definition.
 
