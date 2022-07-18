@@ -194,7 +194,7 @@ In this step, you will compare two database targets to determine configuration d
 
 17. (**Optional**) Exported results in excel for offline analysis look like this:
 
-  ![](images/em_comp_conf_drift_mgmt_one_time_comparison_report_image15.png " ")
+  ![](images/compare-demo-one-time-comparison_result-excel.png " compare-demo-one-time-comparison_result-excel ")
 
 <!-- In this step, you learned steps to compare two database targets to determine configuration differences. This one-time database (or any Enterprise Manager managed targets) comparison will help you quickly determine specific configuration changes when compared with reference configuration. This is very ideal for troubleshooting any target configuration parameters. -->
 
