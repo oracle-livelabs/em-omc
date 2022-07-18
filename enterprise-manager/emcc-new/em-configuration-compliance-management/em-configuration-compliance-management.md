@@ -588,7 +588,7 @@ Click the **Cancel** button.
 
       Click on the number under the **Critical** column. to see details of the host's critical violations.
 
-  ![](images/hipaa_associate_target_image15.png " ")
+  ![compliance-summary-for-hipaa-ol-7-page](images/compliance-summary-for-hipaa-ol-7.png " compliance-summary-for-hipaa-ol-7-page ")
 
   17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
