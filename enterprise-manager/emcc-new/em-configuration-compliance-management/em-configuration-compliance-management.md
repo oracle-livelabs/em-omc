@@ -480,7 +480,7 @@ Click the **Cancel** button.
 
   Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
-  ![](images/cis_db_compliance_report_image22.png " ")
+  ![compliance-evaluation-report-cis-page](images/compliance-evaluation-report-cis.png "compliance-evaluation-report-cis-page")
 
  Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
