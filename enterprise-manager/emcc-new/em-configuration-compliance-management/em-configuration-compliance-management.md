@@ -476,24 +476,24 @@ Click the **Cancel** button.
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
-  ![evaluate-compliance-dashboard-critical-violations-page](images/evaluate-compliance-dashboard-critical-violations.png "evaluate-compliance-dashboard-critical-violations-page")
+  ![evaluate-compliance-dashboard-critical-violations-page](images/evaluate-compliance-dashboard-critical-violations.png " evaluate-compliance-dashboard-critical-violations-page ")
 
   Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
-  ![compliance-evaluation-report-cis-page](images/compliance-evaluation-report-cis.png "compliance-evaluation-report-cis-page")
+  ![compliance-evaluation-report-cis-page](images/compliance-evaluation-report-cis.png " compliance-evaluation-report-cis-page ")
 
  Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
-  ![](images/cis_db_compliance_report_image23.png " ")
+  ![compliance-evaluation-report-cis-rules-check-page](images/compliance-evaluation-report-cis-rules-check.png "compliance-evaluation-report-cis-rules-check-page ")
 
 
 19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
-  ![](images/cis_db_compliance_dashboard_image24.png " ")
+  ![compliance-dashboard-compliance-summary-cis-page](images/compliance-dashboard-compliance-summary-cis.png "compliance-dashboard-compliance-summary-cis-page ")
 
  Each rule result can undergo a detailed analysis as shown on this page.
 
-  ![](images/cis_db_compliance_results_image25.png " ")
+  ![compliance-results-by-standard-rule-page](images/compliance-results-by-standard-rule.png "compliance-results-by-standard-rule ")
 
   All of these will give you a CIS Compliance security posture of database target.
 
@@ -523,7 +523,7 @@ Click the **Cancel** button.
 
   2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![](images/hipaa_compliance_welcome_image.png " ")
+  ![compliance-welcome-host-library-page](images/compliance-welcome-host-library.png "compliance-welcome-host-library-page")
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
