@@ -62,17 +62,17 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![em-compliance-config-alldbs-page](images/em-compliance-config-alldbs.png "em-compliance-config-alldbs-page")
+  ![em-compliance-config-alldbs-page](images/em-compliance-config-alldbs.png " em-compliance-config-alldbs-page ")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
 5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
- ![em-inventory-usage-details-page](images/em-inventory-usage-details.png "em-inventory-usage-details-page")
+ ![em-inventory-usage-details-page](images/em-inventory-usage-details.png " em-inventory-usage-details-page ")
 
  Click on Table View, further details to explore.
 
- ![em-inventory-usage-details-table-page](images/em-inventory-usage-details-table.png "em-inventory-usage-details-table-page")  
+ ![em-inventory-usage-details-table-page](images/em-inventory-usage-details-table.png " em-inventory-usage-details-table-page ")  
 
  Click **Close**.
 
@@ -110,7 +110,7 @@ In this step, you will compare two database targets to determine configuration d
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
-  ![comparison-and-drift-management-page](images/comparison-and-drift-management.png " comparison-and-drift-management-page")
+  ![comparison-and-drift-management-page](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
 
 4.	Select the **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
@@ -126,7 +126,7 @@ In this step, you will compare two database targets to determine configuration d
 
   To begin with, filter ‘Target Type’ to Database Instance.
 
-  ![select-targets-type-page](images/select-targets-type.png "select-targets-type-page ")
+  ![select-targets-type-page](images/select-targets-type.png " select-targets-type-page ")
 
 7.  Select **emrep.us.oracle.com** as the reference target.
 
@@ -146,12 +146,12 @@ In this step, you will compare two database targets to determine configuration d
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
-  ![search-database-target-to-compare-page](images/search-database-target-to-compare.png " search-database-target-to-compare-page")
+  ![search-database-target-to-compare-page](images/search-database-target-to-compare.png " search-database-target-to-compare-page ")
 
   Once the target is chosen, it appears as below.
   Click **Submit**
 
-  ![compared-target-submit-page](images/compared-target-submit.png " compared-target-submit-page")
+  ![compared-target-submit-page](images/compared-target-submit.png " compared-target-submit-page ")
 
 12.  The comparison would take a few seconds for selected targets and below are the results.
 
@@ -159,7 +159,7 @@ In this step, you will compare two database targets to determine configuration d
 
    Click **Clear All** at Configuration Items(Differences).
 
-  ![clear-all-comparison-results-page](images/clear-all-comparison-results.png " clear-all-comparison-results-page")
+  ![clear-all-comparison-results-page](images/clear-all-comparison-results.png " clear-all-comparison-results-page ")
 
 13. Filter configuration items to review only Initialization Parameters.
 
@@ -272,7 +272,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 9.  Go to the Drift Results tab and create a drift definition.
 
-  ![comparison-and-drift-management-drift-results-page](images/comparison-and-drift-management-drift-results.png "comparison-and-drift-management-drift-results-page ")
+  ![comparison-and-drift-management-drift-results-page](images/comparison-and-drift-management-drift-results.png " comparison-and-drift-management-drift-results-page ")
 
 10. Click on **Create Definition** under Drift Management.
 
@@ -286,7 +286,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
-  ![drift- definition-details-page](images/drift-definition-details-name.png " drift- definition-details-page ")
+  ![drift-definition-details-page](images/drift-definition-details-name.png " drift-definition-details-page ")
 
 12. Under Source Configuration, do the following:
 
@@ -297,7 +297,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
-  ![select-targets-name-page](images/select-targets-name.png "select-targets-name-page ")
+  ![select-targets-name-page](images/select-targets-name.png " select-targets-name-page ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
@@ -333,7 +333,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-  ![created-drift-definition-drift-results-page](images/created-drift-definition-drift-results.png "created-drift-definition-drift-results-page ")
+  ![created-drift-definition-drift-results-page](images/created-drift-definition-drift-results.png " created-drift-definition-drift-results-page ")
 
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
@@ -353,7 +353,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
  (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
-  ![export-results-for-created-drift-definition-page](images/export-results-for-created-drift-definition.png "export-results-for-created-drift-definition-page ")
+  ![export-results-for-created-drift-definition-page](images/export-results-for-created-drift-definition.png " export-results-for-created-drift-definition-page ")
 
 24. (**Optional**) Exported results in excel for offline analysis look like this:
 
@@ -417,11 +417,11 @@ A compliance standard rule is a specific test to determine if a configuration da
 
   Click **Save**
 
-  ![compliance-standard-cis-standard-rules-page](images/compliance-standard-cis-standard-rules.png "compliance-standard-cis-standard-rules-page ")
+  ![compliance-standard-cis-standard-rules-page](images/compliance-standard-cis-standard-rules.png " compliance-standard-cis-standard-rules-page ")
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
-  ![compliance-library-information-page](images/compliance-library-information.png "compliance-library-information-page ")
+  ![compliance-library-information-page](images/compliance-library-information.png " compliance-library-information-page ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
@@ -433,28 +433,28 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![select-targets-compliance-target-name-page](images/select-targets-compliance-target-name.png "select-targets-compliance-target-name-page ")
+  ![select-targets-compliance-target-name-page](images/select-targets-compliance-target-name.png " select-targets-compliance-target-name-page ")
 
 12. The list of targets chosen will show up on the target association page as shown below.
 
-  ![compliance-standard-target-association-add-page](images/compliance-standard-target-association-add.png " compliance-standard-target-association-add-page")
+  ![compliance-standard-target-association-add-page](images/compliance-standard-target-association-add.png " compliance-standard-target-association-add-page ")
 
 13. Click OK and a pop-up window shows to confirm an association. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![save-association-compliance-standard-page](images/save-association-compliance-standard.png "save-association-compliance-standard-page")
+  ![save-association-compliance-standard-page](images/save-association-compliance-standard.png " save-association-compliance-standard-page ")
 
   The pop-up window shows the process status, Click **OK**
 
-  ![compliance-standard-submitted-page](images/compliance-standard-submitted.png "compliance-standard-submitted-page ")
+  ![compliance-standard-submitted-page](images/compliance-standard-submitted.png " compliance-standard-submitted-page ")
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
-  ![compliance-library-association-count-page](images/compliance-library-association-count.png "compliance-library-association-count-page")
+  ![compliance-library-association-count-page](images/compliance-library-association-count.png " compliance-library-association-count-page ")
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
 Click the **Cancel** button.
 
-  ![compliance-standard-target-association-cis-page](images/compliance-standard-target-association-cis.png "compliance-standard-target-association-cis-page ")
+  ![compliance-standard-target-association-cis-page](images/compliance-standard-target-association-cis.png " compliance-standard-target-association-cis-page ")
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
@@ -484,16 +484,16 @@ Click the **Cancel** button.
 
  Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
-  ![compliance-evaluation-report-cis-rules-check-page](images/compliance-evaluation-report-cis-rules-check.png "compliance-evaluation-report-cis-rules-check-page ")
+  ![compliance-evaluation-report-cis-rules-check-page](images/compliance-evaluation-report-cis-rules-check.png " compliance-evaluation-report-cis-rules-check-page ")
 
 
 19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
-  ![compliance-dashboard-compliance-summary-cis-page](images/compliance-dashboard-compliance-summary-cis.png "compliance-dashboard-compliance-summary-cis-page ")
+  ![compliance-dashboard-compliance-summary-cis-page](images/compliance-dashboard-compliance-summary-cis.png " compliance-dashboard-compliance-summary-cis-page ")
 
  Each rule result can undergo a detailed analysis as shown on this page.
 
-  ![compliance-results-by-standard-rule-page](images/compliance-results-by-standard-rule.png "compliance-results-by-standard-rule ")
+  ![compliance-results-by-standard-rule-page](images/compliance-results-by-standard-rule.png " compliance-results-by-standard-rule ")
 
   All of these will give you a CIS Compliance security posture of database target.
 
@@ -523,7 +523,7 @@ Click the **Cancel** button.
 
   2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![compliance-welcome-host-library-page](images/compliance-welcome-host-library.png "compliance-welcome-host-library-page")
+  ![compliance-welcome-host-library-page](images/compliance-welcome-host-library.png " compliance-welcome-host-library-page")
 
   3.  The compliance Standards tab contains all standards for various supported targets.
 
@@ -549,25 +549,25 @@ Click the **Cancel** button.
 
     Click Add to add a target for association with this compliance standard.
 
-  ![target-association-compliance-standard-hipaa-page](images/target-association-compliance-standard-hipaa.png "target-association-compliance-standard-hipaa ")
+  ![target-association-compliance-standard-hipaa-page](images/target-association-compliance-standard-hipaa.png " target-association-compliance-standard-hipaa ")
 
   9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-  ![compliance-standard-association-select-target-page](images/compliance-standard-association-select-target.png "compliance-standard-association-select-target-page ")
+  ![compliance-standard-association-select-target-page](images/compliance-standard-association-select-target.png " compliance-standard-association-select-target-page ")
 
   10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click **OK**.
 
-  ![compliance-standard-target-enabled-page](images/compliance-standard-target-enabled.png "compliance-standard-target-enabled-page ")
+  ![compliance-standard-target-enabled-page](images/compliance-standard-target-enabled.png " compliance-standard-target-enabled-page ")
 
   11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
-  ![save-association-hipaa-compliance-standard-page](images/save-association-hipaa-compliance-standard.png "save-association-hipaa-compliance-standard-page ")
+  ![save-association-hipaa-compliance-standard-page](images/save-association-hipaa-compliance-standard.png " save-association-hipaa-compliance-standard-page ")
 
   12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-  ![information-compliance-standard-submit-target-page](images/information-compliance-standard-submit-target.png " information-compliance-standard-submit-target-page")
+  ![information-compliance-standard-submit-target-page](images/information-compliance-standard-submit-target.png " information-compliance-standard-submit-target-page ")
 
   13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
@@ -575,7 +575,7 @@ Click the **Cancel** button.
 
   14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
-  ![target-association-enabled-for-hipaa-page](images/target-association-enabled-for-hipaa.png "target-association-enabled-for-hipaa-page ")
+  ![target-association-enabled-for-hipaa-page](images/target-association-enabled-for-hipaa.png " target-association-enabled-for-hipaa-page ")
 
   15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
@@ -598,11 +598,11 @@ Click the **Cancel** button.
 
       Click on  **Report**
 
-  ![report-critical-violations-hipaa-ol-7-access-page](images/report-critical-violations-hipaa-ol-7-access.png "report-critical-violations-hipaa-ol-7-access-page ")
+  ![report-critical-violations-hipaa-ol-7-access-page](images/report-critical-violations-hipaa-ol-7-access.png " report-critical-violations-hipaa-ol-7-access-page ")
 
   18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
-  ![compliance-evaluation-report-hipaa-ol-7-page](images/compliance-evaluation-report-hipaa-ol-7.png "compliance-evaluation-report-hipaa-ol-7-page ")
+  ![compliance-evaluation-report-hipaa-ol-7-page](images/compliance-evaluation-report-hipaa-ol-7.png " compliance-evaluation-report-hipaa-ol-7-page ")
 
       And clicking on the **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation details.
 
@@ -610,21 +610,21 @@ Click the **Cancel** button.
 
   19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
 
-  ![compliance-results-hipaa-page](images/compliance-results-hipaa.png "compliance-results-hipaa-page ")
+  ![compliance-results-hipaa-page](images/compliance-results-hipaa.png " compliance-results-hipaa-page ")
 
       It takes you to the Compliance Results page.
 
-  ![compliance_evaluation-results-hipaa-ol7-standards-page](images/compliance_evaluation-results-hipaa-ol7-standards.png "compliance_evaluation-results-hipaa-ol7-standards-page ")
+  ![compliance_evaluation-results-hipaa-ol7-standards-page](images/compliance_evaluation-results-hipaa-ol7-standards.png " compliance_evaluation-results-hipaa-ol7-standards-page ")
 
       Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
 
   20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
 
-  ![compliance-hipaa-ol-7-host-results-rules-validation-page](images/compliance-hipaa-ol-7-host-results-rules-validation.png "compliance-hipaa-ol-7-host-results-rules-validation-page ")
+  ![compliance-hipaa-ol-7-host-results-rules-validation-page](images/compliance-hipaa-ol-7-host-results-rules-validation.png " compliance-hipaa-ol-7-host-results-rules-validation-page ")
 
       Individual standard rule details status and rationale can be further analyzed.
 
-  ![hipaa-ol-7-individual-rule-detail-evaluations-page](images/hipaa-ol-7-individual-rule-detail-evaluations.png "hipaa-ol-7-individual-rule-detail-evaluations-page ")
+  ![hipaa-ol-7-individual-rule-detail-evaluations-page](images/hipaa-ol-7-individual-rule-detail-evaluations.png " hipaa-ol-7-individual-rule-detail-evaluations-page ")
 
       All these would give you a security posture of the host target.
 
