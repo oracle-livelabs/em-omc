@@ -317,7 +317,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
-  ![drift-definition_target-association-enable-page](images/drift-definition_target-association-enable.png " drift-definition_target-association-enable-page ")
+  ![drift-definition-target-association-enable-page](images/drift-definition-target-association-enable.png " drift-definition-target-association-enable-page ")
 
 19. A pop-up will ask for confirmation to save the association. Select **Yes**, This will start the association of this target to drift definition and initiate the configuration comparison and continuous drift monitoring.
 
@@ -614,7 +614,7 @@ Click the **Cancel** button.
 
       It takes you to the Compliance Results page.
 
-  ![compliance_evaluation-results-hipaa-ol7-standards-page](images/compliance_evaluation-results-hipaa-ol7-standards.png " compliance_evaluation-results-hipaa-ol7-standards-page ")
+  ![compliance-evaluation-results-hipaa-ol7-standards-page](images/compliance-evaluation-results-hipaa-ol7-standards.png " compliance-evaluation-results-hipaa-ol7-standards-page ")
 
       Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
 
