@@ -315,7 +315,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![select-targets-associate-drift-target-page](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
 
-18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
+18. Click **Select**, You will see one target selected to be associated with drift definition enabled, Click OK.
 
   ![drift-definition-target-association-enable-page](images/drift-definition-target-association-enable.png " drift-definition-target-association-enable-page ")
 
@@ -497,9 +497,9 @@ Click the **Cancel** button.
 
   All of these will give you a CIS Compliance security posture of database target.
 
-  ## Task 5: Host Security Compliance
+## Task 5: Host Security Compliance
 
-  ### Overview
+### Overview
 
   Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
 
@@ -517,7 +517,7 @@ Click the **Cancel** button.
 
   A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards.
 
-  ### Execution
+### Execution
 
   1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
 
