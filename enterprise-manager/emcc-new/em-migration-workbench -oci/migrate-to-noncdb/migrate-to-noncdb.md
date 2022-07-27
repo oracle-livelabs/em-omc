@@ -1,10 +1,22 @@
-# Migrate and upgrade 12c database to 19c PDB
+# Migrate and upgrade 12c database to 19c in new destination
 
 ## Introduction
 
 You can use Database Migration Workbench to migrate your on-premises databases to new destinations in your data center or Autonomous Database (ADB) in Oracle Cloud Infrastructure (OCI). This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Since the workshop is fully contained in a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
 
 Estimated Time: 30 minutes
+
+### About Migration Workbench
+
+Oracle Enterprise Manager Database Migration Workbench provides an accurate approach to migration and consolidation by eliminating human errors allowing you to easily move your on-premises databases to Oracle Cloud, Multitenant architecture, or upgrade your infrastructure. Advantages of using Database Migration Workbench include: Near-Zero Downtime, Assured Zero Data Loss, seamless on-premises or Cloud migrations, and, MAA and Cloud Security compliant.
+
+- _Analyze Migration Activities:_ Database Migration Workbench offers robust tools for monitoring and troubleshooting your recently completed migrations. Database Migration Workbench also offers clean-up tools that aid in recovering important disk space from dump files. This lab covers both of these features
+
+- _Analyze Migrated Database Performance:_ Migrating a database can change the execution plans of SQL statements, possibly resulting in performance degradation. Database Migration Workbench is integrated with [SQL Performance Analyzer (SPA)] (<https://docs.oracle.com/en/database/oracle/oracle-database/19/ratug/sql-performance-analyzer.html>) which can help you identify and correct performance related issues. This lab uses SPA to compare the performance of the database before and after the migration
+
+- _Security Compliance:_ Since Database Migration Workbench is a component of Oracle Enterprise Manager, your migrated databases are automatically added/updated in Enterprise Manager. You can utilize the [Compliance Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/manage-compliance.html) feature in Enterprise Manager to improve your database fleet security posture. Enterprise Manager Compliance Management leverages industry/regulatory standards for secure configuration such as CIS Benchmark, DISA STIG, and Oracle Security Best Practices
+
+>**Note:** Migration Workbench and SQL Performance Analyzer are licensed under Real Application Testing (RAT) Management Pack. Compliance Management is licensed under Database Lifecycle Management Pack (DBLM).
 
 ### Objectives
 
@@ -13,7 +25,7 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | Review prerequisites completed in advance| 10 minutes | Review prerequisites completed on the source and destination databases, hosts, and in Enterprise Manager |
-| 2 | Migrate and upgrade a 12c non-container database to a PDB in a 19c container database | 20 minutes | Source database: orcl, destination PDB: cdb19c/orclpdb
+| 2 | Migrate and upgrade a 12c non-container database to 19c in a new destination | 20 minutes   | Source database: orcl, destination database: orcl19c |
 
 ### Prerequisites
 
@@ -29,8 +41,8 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 
 In the interest of simplifying the setup and to save time, the following requirements were completed in advance and covered in this lab. Please review accordingly for reference.
 
-1. Source and destination targets are discovered in Enterprise Manager
-    - On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below
+- Source and destination targets are discovered in Enterprise Manager
+    1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below
 
         ```text
         Username: <copy>sysman</copy>
@@ -41,48 +53,55 @@ In the interest of simplifying the setup and to save time, the following require
         ```
 
         ![Login Page](../initialize-environment/images/em-login.png " ")
-    - Click on "Targets"->"Databases"
+    2. Click on "Targets"->"Databases"
     ![Databases](images/databases.png " ")
-        - orcl is our source database
-        - cdb19c is our destination container database
-2. Transportable Tablespace user requirement
+    - orcl is our source database
+    - orcl19 is our destination database
+- Data Pump user requirement
+    - For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
+    - For migrating the database to a new non-container database, an import user (IMP_USER) was created in the target database (orcl19c) with password "welcome1" and the required privileges
+    - To learn more about the the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
 
-    In this task we will migrate the database using the Transportable Tablespace (TTS) migration method. With this method the migration must be done as a user with SYSDBA role. We will use SYS on both source and destination databases so there's no additional user requirements
-3. Named Credential requirement
-    - Database Named Credential "SYS" created in Enterprise Manager with global scope. It can be used with both source and destination databases in this lab
-    - Host Named Credential "ORACLE", with OS user "oracle" created in Enterprise Manager for the lab host
+- Named Credential requirement
+    - Named Credentials "EXP\_USER" and "IMP\_USER" created in Enterprise Manager for users "EXP\_USER" and "IMP\_USER" on databases "orcl" and orcl19c respectively
     - To review the credentials in OEM console, navigate to "Setup"->"Security"->"Named Credentials"
     - To learn more about named credentials review "[Named Credentials](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emsec/security-features.html#GUID-345595B0-3FA4-4F2C-A606-596B1A10A13E)" in the Enterprise Manager documentation
-4. Data Pump directory requirement
+
+- Data Pump directory requirement
 
     Migration workbench requires local directories on the source and target databases with sufficient space to host the data pump dump files. In our workshop both the source and target databases are running on the same host.
     - Created the following directory on the host: /u01/app/oracle/migration_workbench
-    - Created directory object "MWB_DIR" in source database pointing to this directory
-5. Compare performance requirement
+    - Created directory object "MWB_DIR" in both source and target databases pointing to this directory
+    - Granted read and write privileges on the directory object in each database to the corresponding user (EXP\_USER in source database and IMP\_USER in target database)
+
+- Compare performance requirement
 
     SQL Performance Analyzer (SPA) automates the process of assessing the overall effect of a change on the  SQL workload by identifying performance divergence for each SQL statement. A report that shows the net impact on workload performance due to the change is provided. For regressed SQL statements, SQL Performance Analyzer also provides appropriate execution plan details along with tuning recommendations. As a result, you can remedy any negative outcome before the end-users are affected. Furthermore, you can validate -with time and cost savings- that migration will result in net improvement.
 
     An SQL Tuning Set (STS) containing the SQL and relevant execution metadata from the source database is needed to compare performance before and after the migration. Database Migration Workbench can create an STS from AWR during migration, or you can create one in advance and pass it to the migration procedure.
 
     - For this lab, an STS was created in advance (SH2STS) by running a workload against the SH2 schema in the source database and capturing the SQL statements executing during the load test
-6. Upload migration tools
+
+- Upload migration tools
 
     Migration Workbench uses Instant Client and the Cloud Premigration Advisor Tool (CPAT) as part of its migration toolkit. Enterprise Manager automatically downloads the latest version of the tools when set up with either a MOS Proxy or direct internet connection. The tools can also be uploaded manually as described in [Upload Migration Tools] (<https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emlcm/upload-migration-tools.html>) in the Migration Workbench documentation.
 
     - For this lab the migration tools were uploaded in advance. For additional detail on the Cloud Premigration Advisor Tool refer to this MOS document: *Cloud Premigration Advisor Tool (CPAT) Analyzes Databases for Suitability of Cloud Migration (Doc ID 2758371.1)*
 
-## Task 2: Migrate and upgrade a 12c non-container database to a PDB in a 19c container database
+    You have now completed this task.
+
+## Task 2: Migrate and upgrade a 12c non-container database to 19c in a new destination
 
 ### **Overview**
 
-In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a container database. Our source database is "orcl" and our target container database is "cdb19c". We'll name the PDB "orclpdb".
+In this task we'll migrate and upgrade an Oracle 12c database to version 19c in a new destination. This would be the case when refreshing hardware and/or moving the database to a new host in your data center. Our source database is "orcl" and our target database is "orcl19c".
 
-We'll use the Transportable Tablespace (TTS) migration method in this task.
+We'll use the Data Pump migration method in this task.
 
 ### **Execution**
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
-2. From the Enterprise menu:
+2. From the Enterprise menu
     - Navigate to "Migration and Consolidation"->"Database Migration Workbench"
     ![MWB Menu Item](images/mwb-menu-item.png " ")
 3. On the "Database Migration" screen:
@@ -93,72 +112,75 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     - Activity Name:
 
         ```text
-        <copy>Database Migration ORCL to cdb19c/orclpdb</copy>
+        <copy>Database Migration ORCL to ORCL19c</copy>
         ```
 
     - Migrate: Select "Full Database" from the drop-down list
 
         Migration Workbench allows you to migrate full database, schemas, or tablespaces. We'll migrate full database in this lab
         ![Migrate Options](images/migrate-options.png " ")
-    - Select Source Database: Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
-    - Select Destination Database: Click inside the field and select "Create Pluggable Database" from the drop-down list
-    - On the "Create a New Pluggable Database" pop-up window, enter:
-        - Container Database: Select "cdb19c" from the drop-down list
-        - Name:
-
-            ```text
-            <copy>orclpdb</copy>
-            ```
-
-        - Administrator Name:
-
-            ```text
-            <copy>pdbadmin</copy>
-            ```
-
-        - Administrator Password:
+    - Select Source Database:  Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
+    - Select Destination Database:  Click inside the field and select "orcl19c.subnet.vcn.oraclevcn.com" from the drop-down list
+    - Notice the checkmark for "Tools Validation". For this lab, CPAT tool was uploaded to Enterprise Manager in advance
+      ![Create Migration Activity](images/create-migration-activity.png " ")
+    - Click Continue
+5. On the Add Details screen, enter:
+    - Source:
+        - Database Credentials: EXP_USER (Named Credential)
+        - Host Credential: ORACLE (Named Credential)
+    - Destination:
+        - Database Credential: IMP_USER (Named Credential)
+        - Agent Host Credential: ORACLE (Named Credential)
+    - Action:
+        - Migration Method: Data Pump (default)
+        - Recompile Invalid Objects After Migration: Unchecked (default)
+        - Compare Performance After Migration: Checked (default)
+        - Source Data Pump Directory: MWB_DIR
+        - Destination Data Pump Directory: MWB_DIR
+        - Encryption Password:
 
             ```text
             <copy>welcome1</copy>
             ```
 
-          ![Create Migration Activity](images/create-migration-activity.png " ")
-        - Click OK
-    - Click Continue
-5. On the Add Details screen, enter:
-    - Source:
-        - Database Credentials: SYS (Named). Ignore the error message since we will choose Transportable Tablespace for migration method
-        - Host Credential: ORACLE (Named)
-    - Destination:
-        - Database Credential: SYS (Named). Ignore the error message since we will choose Transportable Tablespace for migration method
-        - Agent Host Credential: ORACLE (Named)
-    - Action:
-        - Migration Method: Transportable Tablespace
-        - Compare Performance After Migration: Checked (default)
-        - Keep the next 3 fields at default values
-    ![Add Details](images/add-details.png " ")
+      ![Add Details](images/add-details.png " ")
     - Click Next
 6. On the Customize screen, enter:
-    - Migration Details:
-        - Migration Phase: Select "Complete Migration"
+    - Export Options:
 
-            Migration Workbench allows you to do the migration in phases, where you create an RMAN backup in the first phase, update the backup with incremental backups as needed, then complete the migration in the final phase. This allows you to do the migration with minimal downtime. For this workshop however, we'll do the migration in a single phase
+        Examine the various export options you can configure with Migration Workbench. For the purpose of this lab, we'll go with the defaults shown except for Parallel. The degree of parallelism you choose depends on the number of CPU cores on your source and target databases. We'll use 2 in this lab
+        - Parallel: 2
+    - Import Options:
+
+        Examine the various import options you can configure with Migration Workbench. For the purpose of this lab, we'll go with the defaults shown except for Parallel. The degree of parallelism you choose depends on the number of CPU cores on your source and target databases. We'll use 2 in this lab
+        - Parallel: 2
     - Compare Performance After Migration:
         - SQL Tuning Set (STS): Select "Use Existing" then choose "EXP_USER -- SH2STS"
-    ![Customize](images/customize.png " ")
+    - Custom Scripts:
+
+        Migration Workbench allows customization of your migration activity by allowing you upload and use Pre and Post migration scripts. For more information on Pre and Post scripts see: [Pre/Post Scripts for Provisioning] (<https://docs.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb&id=EMLCM-GUID-CDF550E0-9F86-42BC-909C-F224869F58CC>) in Oracle Enterprise Manager Cloud Control Database Lifecycle Management Administrator's Guide and [Pre and Post Request Creation / Deletion Scripts](https://docs.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb&id=EMCLO-GUID-223719D5-21B5-4AC3-A94B-0C7A3DFF0831) in Oracle Enterprise Manager Cloud Administration Guide
+    - Transfer Options:
+        - Datapump Directory is shared: Checked
+
+        ![Customize](images/customize.png " ")
     - Click Review
 7. On the "Review & Submit" screen:
     - Review your entries to make sure everything is correct
+    ![customize](images/analyze-source.png " ")
+    - Click "Analyze Source" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
+    - When the analysis is complete review CPAT Results. The warnings shown can be ignored for the purpose of this lab. When you run this activity in your environment ensure you address any issues identified on a case by case basis
+    ![CPAT Results](images/cpat-results.png " ")
+    - Click on the previous tab to continue with the migration process
     ![Validate](images/validate.png " ")
     - Click Validate
 8. On the Validation screen:
-    - Validation checks run for a few minutes. The result shows all checks passed and 2 were skipped as they don't apply to this migration. If your results are different check your previous steps, fix the error and revalidate
+    - Validation checks run for a few minutes and all checks should pass. If your results are different check your previous steps, fix the error and revalidate
     ![Validate Activity](images/validate-activity.png " ")
     - Click "Close & Submit"
 9. On the Submit Activity screen:
     - Choose Schedule: Start Immediately (default)
 
-        Examine the JSON file. Notice you can copy the generated JSON file to use it with DevOps tools and REST APIs. For this lab however, we'll complete the migration using the Enterprise Manager graphical console
+        Examine the JSON file. Notice you can copy the generated JSON file to use it with with DevOps tools and REST APIs. For this lab however, we'll complete the migration using the Enterprise Manager graphical console
     ![Submit Activity](images/submit-activity.png " ")
     - Click Submit
     - You should receive the message: "Migration activity submitted successfully."
@@ -168,8 +190,8 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     - The activity status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute
     ![Migration Activities](images/migration-activities.png " ")
     - Click on the "Running" link under Status to go to the Procedure Activity screen
-11. On the Procedure Activity screen:
-    - Choose Show: "Steps Not Skipped". The procedure should take about 10 minutes to complete. You may want to switch to the next lab and complete task 1, then come back here to finish this task
+11. On the Procedure Activity screen::
+    - Click on the "Running" link under Status to go to the procedure activity screen. Choose Show: "Steps Not Skipped". The procedure should take about 5 minutes to complete
     ![Procedure Activity](images/procedure-activity.png " ")
     - When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration
     ![Procedure Activity Completed](images/procedure-activity-completed.png " ")
@@ -177,7 +199,7 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
 12. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
     ![View Analysis](images/view-analysis.png " ")
-    - Click View Analysis
+    - Click on View Analysis
 13. On the View Analysis screen:
 
     Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Analysis, Export, and Import.
@@ -195,7 +217,7 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
 14. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
     ![Compare Performance](images/compare-performance.png " ")
-    - Click Compare Performance
+    - Click on Compare Performance
 15. On the Compare Performance screen:
 
     Examine the Performance Comparison report to analyze the database performance before and after the migration. The report has 3 sections:
@@ -219,10 +241,8 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     - Click Yes
      ![Marked Completed](images/marked-completed.png " ")
     - Activity is marked completed
-17. Finally validate the new PDB has been created:
-    - In EM console, navigate to "Targets"->"Databases", and expand "cdb19c" container database
-    ![PDB Created](images/pdb-created.png " ")
-    - New PDB has been created
+
+    You have now completed this task.
 
 This completes the Lab!
 

@@ -6,6 +6,18 @@ You can use Database Migration Workbench to migrate your on-premises databases t
 
 Estimated Time: 30 minutes
 
+### About Migration Workbench
+
+Oracle Enterprise Manager Database Migration Workbench provides an accurate approach to migration and consolidation by eliminating human errors allowing you to easily move your on-premises databases to Oracle Cloud, Multitenant architecture, or upgrade your infrastructure. Advantages of using Database Migration Workbench include: Near-Zero Downtime, Assured Zero Data Loss, seamless on-premises or Cloud migrations, and, MAA and Cloud Security compliant.
+
+- _Analyze Migration Activities:_ Database Migration Workbench offers robust tools for monitoring and troubleshooting your recently completed migrations. Database Migration Workbench also offers clean-up tools that aid in recovering important disk space from dump files. This lab covers both of these features
+
+- _Analyze Migrated Database Performance:_ Migrating a database can change the execution plans of SQL statements, possibly resulting in performance degradation. Database Migration Workbench is integrated with [SQL Performance Analyzer (SPA)] (<https://docs.oracle.com/en/database/oracle/oracle-database/19/ratug/sql-performance-analyzer.html>) which can help you identify and correct performance related issues. This lab uses SPA to compare the performance of the database before and after the migration
+
+- _Security Compliance:_ Since Database Migration Workbench is a component of Oracle Enterprise Manager, your migrated databases are automatically added/updated in Enterprise Manager. You can utilize the [Compliance Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/manage-compliance.html) feature in Enterprise Manager to improve your database fleet security posture. Enterprise Manager Compliance Management leverages industry/regulatory standards for secure configuration such as CIS Benchmark, DISA STIG, and Oracle Security Best Practices
+
+>**Note:** Migration Workbench and SQL Performance Analyzer are licensed under Real Application Testing (RAT) Management Pack. Compliance Management is licensed under Database Lifecycle Management Pack (DBLM).
+
 ### Objectives
 
 In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
@@ -29,8 +41,8 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 
 In the interest of simplifying the setup and to save time, the following requirements were completed in advance and covered in this lab. Please review accordingly for reference.
 
-1. Source and destination targets are discovered in Enterprise Manager
-    - On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below
+- Source and destination targets are discovered in Enterprise Manager
+    1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below
 
         ```text
         Username: <copy>sysman</copy>
@@ -41,35 +53,37 @@ In the interest of simplifying the setup and to save time, the following require
         ```
 
         ![Login Page](../initialize-environment/images/em-login.png " ")
-    - Click on "Targets"->"Databases"
+    2. Click on "Targets"->"Databases"
     ![Databases](images/databases.png " ")
-        - orcl is our source database
-        - cdb19c is our destination container database
-2. Transportable Tablespace user requirement
+    - orcl is our source database
+    - cdb19c is our destination container database
+- Transportable Tablespace user requirement
 
     In this task we will migrate the database using the Transportable Tablespace (TTS) migration method. With this method the migration must be done as a user with SYSDBA role. We will use SYS on both source and destination databases so there's no additional user requirements
-3. Named Credential requirement
+- Named Credential requirement
     - Database Named Credential "SYS" created in Enterprise Manager with global scope. It can be used with both source and destination databases in this lab
     - Host Named Credential "ORACLE", with OS user "oracle" created in Enterprise Manager for the lab host
     - To review the credentials in OEM console, navigate to "Setup"->"Security"->"Named Credentials"
     - To learn more about named credentials review "[Named Credentials](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emsec/security-features.html#GUID-345595B0-3FA4-4F2C-A606-596B1A10A13E)" in the Enterprise Manager documentation
-4. Data Pump directory requirement
+- Data Pump directory requirement
 
     Migration workbench requires local directories on the source and target databases with sufficient space to host the data pump dump files. In our workshop both the source and target databases are running on the same host.
     - Created the following directory on the host: /u01/app/oracle/migration_workbench
     - Created directory object "MWB_DIR" in source database pointing to this directory
-5. Compare performance requirement
+- Compare performance requirement
 
     SQL Performance Analyzer (SPA) automates the process of assessing the overall effect of a change on the  SQL workload by identifying performance divergence for each SQL statement. A report that shows the net impact on workload performance due to the change is provided. For regressed SQL statements, SQL Performance Analyzer also provides appropriate execution plan details along with tuning recommendations. As a result, you can remedy any negative outcome before the end-users are affected. Furthermore, you can validate -with time and cost savings- that migration will result in net improvement.
 
     An SQL Tuning Set (STS) containing the SQL and relevant execution metadata from the source database is needed to compare performance before and after the migration. Database Migration Workbench can create an STS from AWR during migration, or you can create one in advance and pass it to the migration procedure.
 
     - For this lab, an STS was created in advance (SH2STS) by running a workload against the SH2 schema in the source database and capturing the SQL statements executing during the load test
-6. Upload migration tools
+- Upload migration tools
 
     Migration Workbench uses Instant Client and the Cloud Premigration Advisor Tool (CPAT) as part of its migration toolkit. Enterprise Manager automatically downloads the latest version of the tools when set up with either a MOS Proxy or direct internet connection. The tools can also be uploaded manually as described in [Upload Migration Tools] (<https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emlcm/upload-migration-tools.html>) in the Migration Workbench documentation.
 
     - For this lab the migration tools were uploaded in advance. For additional detail on the Cloud Premigration Advisor Tool refer to this MOS document: *Cloud Premigration Advisor Tool (CPAT) Analyzes Databases for Suitability of Cloud Migration (Doc ID 2758371.1)*
+
+    You have now completed this task.
 
 ## Task 2: Migrate and upgrade a 12c non-container database to a PDB in a 19c container database
 
@@ -223,6 +237,8 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     - In EM console, navigate to "Targets"->"Databases", and expand "cdb19c" container database
     ![PDB Created](images/pdb-created.png " ")
     - New PDB has been created
+
+    You have now completed this task.
 
 This completes the Lab!
 

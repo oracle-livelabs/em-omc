@@ -484,7 +484,7 @@ We'll use the Data Pump migration method in this task.
         - For further details on the errors review the log file using the Procedure Activity page shown earlier. On that page, you can check the checkbox for any step to display the log file on the screen. You can also download the file for offline viewing
         - In your environment, you may need to take actions such as granting specific object privileges to fix the errors. However, for this lab, the errors shown can be ignored
 
-    ![Analysis](images/analysis.png " ")
+        ![Analysis](images/analysis.png " ")
 
     When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
 14. On the Migration Activities screen:
@@ -494,14 +494,14 @@ We'll use the Data Pump migration method in this task.
 15. On the Compare Performance screen:
 
     Examine the Performance Comparison report to analyze the database performance before and after the migration. The report has 3 sections:
-    1. General Information: Contains information about the task, workload, execution, and analysis before and after migration. The  comparison metric used is "Elapsed Time"
-    2. Report Summary: Contains 3 sections:
+    - General Information: Contains information about the task, workload, execution, and analysis before and after migration. The  comparison metric used is "Elapsed Time"
+    - Report Summary: Contains 3 sections:
         - Projected Workload Change Impact: This shows the overall impact of the migration on the SQL workload, the improvement impact, and the regression impact
         - SQL Statement Count: This shows the overall statement count, the number of SQLs that improved, regressed, or were unchanged
         - Top 100 SQL Sorted by Absolute Value of Change Impact on the Workload: This shows the top 100 impacted SQLs with absolute percentage improvement. SQLs highlighted in green have improved performance due to improved execution plans or query costs. Those highlighted in red have regressed due to execution plan change or execution problems (for example query returning no rows or number of rows returned is different in the destination than in source, etc.)
 
             Check regressed SQLs to see execution statistics, before and after migration change analysis. Understand findings provided for each query to see which factors impacted the regressed SQLs. You can then take action based on findings provided in the Report Details section to improve SQL performance
-    3. Report Details: Contains detailed execution details for each SQL statement in the STS, including the SQL test, execution frequency, executions statistics, notes, findings, and execution plan before and after the migration
+    - Report Details: Contains detailed execution details for each SQL statement in the STS, including the SQL test, execution frequency, executions statistics, notes, findings, and execution plan before and after the migration
 
         ![Performance Comparison](images/performance-comparison.png " ")
     - With automated performance optimization option available with Autonomous database, the database ignores existing indexes and dynamically generates new indexes based on workload. To show the performance comparison with no indexes, check the checkbox on the top right of the screen.
