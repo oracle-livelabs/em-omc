@@ -338,15 +338,13 @@ In this workshop, you will learn about continuous configuration drift monitoring
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
-
+  
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
     - Equal sign means parameter properties are the same across the reference and target compared
     - Not equal sign indicates parameter properties are different across the reference and target compared
     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
-
-
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
   ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
@@ -360,8 +358,6 @@ In this workshop, you will learn about continuous configuration drift monitoring
   ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
-
-
 
 ## Task 4: Database Security Compliance using CIS standard
 
@@ -485,7 +481,6 @@ Click the **Cancel** button.
  Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
   ![compliance-evaluation-report-cis-rules-check-page](images/compliance-evaluation-report-cis-rules-check.png " compliance-evaluation-report-cis-rules-check-page ")
-
 
 19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
