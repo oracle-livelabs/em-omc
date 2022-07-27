@@ -226,8 +226,6 @@ We'll use the Data Pump migration method in this task.
 
 This completes the Lab!
 
-You may now **proceed to the next lab**.
-
 ## Learn More
 
 - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)

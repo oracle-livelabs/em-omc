@@ -5,7 +5,7 @@
     {
       "title": "Introduction",
       "description": "Introduction to Database Migration Workbench Workshop",
-      "filename": "./../../intro/intro-migration-workbench.md"
+      "filename": "./../../intro/intro-migration-workbench-oci.md"
     },
     {
       "title": "Lab 1: Environment Setup",
@@ -16,25 +16,25 @@
       "title": "Lab 2: Initialize Environment",
       "description": "How to validate and start all the workshop components",
       "publisheddate": "10/14/2020",
-      "filename": "./../../em-migration-workbench/initialize-environment/initialize-environment.md"
+      "filename": "./../../em-migration-workbench-oci/initialize-environment/initialize-environment.md"
     },
     {
       "title": "Lab 3: Migrate and upgrade 12c database to 19c PDB",
       "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-pdb/migrate-to-pdb.md"
+      "filename": "./../../em-migration-workbench-oci/migrate-to-pdb/migrate-to-pdb.md"
     },
     {
       "title": "Lab 4: Migrate and upgrade 12c database to 19c in new destination",
       "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-noncdb/migrate-to-noncdb.md"
+      "filename": "./../../em-migration-workbench-oci/migrate-to-noncdb/migrate-to-noncdb.md"
     },
     {
       "title": "Lab 5 (Optional): Migrate and upgrade 12c database to 19c ADB",
       "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-adb/migrate-to-adb.md"
+      "filename": "./../../em-migration-workbench-oci/migrate-to-adb/migrate-to-adb.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
