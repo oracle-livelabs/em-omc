@@ -73,13 +73,9 @@ In the interest of simplifying the setup and to save time, the following require
 
 ## Task 2: Migrate and upgrade a 12c non-container database to a PDB in a 19c container database
 
-### **Overview**
-
-In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a container database. Our source database is "orcl" and our target container database is "cdb19c". We'll name the PDB "orclpdb".
+In this task we'll migrate and upgrade an Oracle 12c database to a 19c PDB in a container database. Our source database is "orcl" and our destination container database is "cdb19c". We'll name the new PDB "orclpdb".
 
 We'll use the Transportable Tablespace (TTS) migration method in this task.
-
-### **Execution**
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu:

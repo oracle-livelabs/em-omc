@@ -78,13 +78,9 @@ In the interest of simplifying the setup and to save time, the following require
 
 ## Task 2: Migrate and upgrade a 12c non-container database to 19c in a new destination
 
-### **Overview**
-
-In this task we'll migrate and upgrade an Oracle 12c database to version 19c in a new destination. This would be the case when refreshing hardware and/or moving the database to a new host in your data center. Our source database is "orcl" and our target database is "orcl19c".
+In this task we'll migrate and upgrade an Oracle 12c database to version 19c in a new destination. This would be the case when refreshing hardware and/or moving the database to a new host in your data center. Our source database is "orcl" and our destination database is "orcl19c".
 
 We'll use the Data Pump migration method in this task.
-
-### **Execution**
 
 1. Log into your Enterprise Manager as sysman as indicated in task 1 if not already done
 2. From the Enterprise menu
