@@ -174,11 +174,11 @@ In this step, you will compare two database targets to determine configuration d
 
   ![comparison-results-initialization-parameters-page](images/comparison-results-initialization-parameters.png " comparison-results-initialization-parameters-page ")
 
-14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
+    14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
   ![configuration-comparison-and-drift-management-page](images/configuration-comparison-and-drift-management.png " configuration-comparison-and-drift-management-page ")
 
-15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
+    15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
   ![dashboard-one-time-comparison-result-page](images/dashboard-one-time-comparison-result.png " dashboard-one-time-comparison-result-page ")
 
@@ -186,13 +186,13 @@ In this step, you will compare two database targets to determine configuration d
 
   ![one-time-comparison-results-page](images/one-time-comparison-results.png " one-time-comparison-results-page ")
 
-16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+    16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
 
   ![export-one-time-comparison-results-page](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
 
   After Exporting, Click **Cancel** to exit
 
-17. (**Optional**) Exported results in excel for offline analysis look like this:
+    17. (**Optional**) Exported results in excel for offline analysis look like this:
 
   ![compare-demo-one-time-comparison-result-excel](images/compare-demo-one-time-comparison-result-excel.png " compare-demo-one-time-comparison-result-excel ")
 
@@ -228,7 +228,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![create-like-comparison-template-page](images/create-like-comparison-template.png " create-like-comparison-template-page ")
 
-5.  A complete copy of the Database Instance template with a unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below.
+5.  A complete copy of the Database Instance template with a unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below
 
     ```
     <copy>ECM003-Drift_Demo</copy>
@@ -338,7 +338,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
-  
+
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
     - Equal sign means parameter properties are the same across the reference and target compared
