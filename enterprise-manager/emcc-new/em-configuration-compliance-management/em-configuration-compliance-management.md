@@ -496,87 +496,87 @@ Click the **Cancel** button.
 
 ### Overview
 
-  Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
+Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
 
-  <!-- In this workshop, you will set up a compliance standard for monitoring security compliance of Oracle Linux host target and analyze the compliance score and violations -->
+<!-- In this workshop, you will set up a compliance standard for monitoring security compliance of Oracle Linux host target and analyze the compliance score and violations -->
 
-  Terminology Used in this Compliance specific workshop
+Terminology Used in this Compliance specific workshop
 
 ### Compliance Standard
 
-  A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+ A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
-  A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated.
+ A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated.
 
 ### Compliance Standard Rule
 
-  A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards.
+A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards.
 
-  ### Execution
+### Execution
 
-  1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
+1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
 
-  2.  From the Enterprise menu, select **Compliance**, then select **Library**
+2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
   ![compliance-welcome-host-library-page](images/compliance-welcome-host-library.png " compliance-welcome-host-library-page")
 
-  3.  The compliance Standards tab contains all standards for various supported targets.
+3.  The compliance Standards tab contains all standards for various supported targets.
 
   ![compliance-library-for-host-page](images/compliance-library-for-host.png " compliance-library-for-host-page ")
 
-  4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
+4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
   ![compliance-library-search-hipaa-libraries-page](images/compliance-library-search-hipaa-libraries.png " compliance-library-search-hipaa-libraries-page")
 
-  5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
+5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
   ![compliance-library-hipaa-show-details-page](images/compliance-library-hipaa-show-details.png " compliance-library-hipaa-show-details ")
 
-  6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
+6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
   ![view-compliance-standard-hipaa-ol-7-page](images/view-compliance-standard-hipaa-ol-7.png " view-compliance-standard-hipaa-ol-7-page ")
 
-  7. Click on **Associate Targets** to associate a database target for this selected standard.
+7. Click on **Associate Targets** to associate a database target for this selected standard.
 
   ![compliance-library-standard-hipaa-associate-target-page](images/compliance-library-standard-hipaa-associate-target.png " compliance-library-standard-hipaa-associate-target-page ")
 
-  8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
+8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
     Click Add to add a target for association with this compliance standard.
 
   ![target-association-compliance-standard-hipaa-page](images/target-association-compliance-standard-hipaa.png " target-association-compliance-standard-hipaa ")
 
-  9.  There is one host called **emcc.marketplace.com**, select that target to associate.
+9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
   ![compliance-standard-association-select-target-page](images/compliance-standard-association-select-target.png " compliance-standard-association-select-target-page ")
 
-  10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
+10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click **OK**.
 
   ![compliance-standard-target-enabled-page](images/compliance-standard-target-enabled.png " compliance-standard-target-enabled-page ")
 
-  11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
+11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
   ![save-association-hipaa-compliance-standard-page](images/save-association-hipaa-compliance-standard.png " save-association-hipaa-compliance-standard-page ")
 
-  12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
+12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
   ![information-compliance-standard-submit-target-page](images/information-compliance-standard-submit-target.png " information-compliance-standard-submit-target-page ")
 
-  13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
+13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
   ![association-count-compliance-library-page](images/association-count-compliance-library.png " association-count-compliance-library-page ")
 
-  14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
+14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
   ![target-association-enabled-for-hipaa-page](images/target-association-enabled-for-hipaa.png " target-association-enabled-for-hipaa-page ")
 
-  15. Go to the **Compliance Dashboard** page to check the compliance posture.
+15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
   ![compliance-dashboard-for-hipaa-page](images/compliance-dashboard-for-hipaa.png " compliance-dashboard-for-hipaa-page ")
 
-  16. Compliance Dashboard populates:
+16. Compliance Dashboard populates:
 
     - Under the Compliance Summary panel at the bottom, explore various tabs to get an understanding of Frameworks, Standards, target level compliance, and Average Compliance score too
     - For any given standard, if there are Non-Compliant Targets, Critical, Warning, or Minor Warnings, click on the violation number to see more details of the violation
@@ -585,7 +585,7 @@ Click the **Cancel** button.
 
   ![compliance-summary-for-hipaa-ol-7-page](images/compliance-summary-for-hipaa-ol-7.png " compliance-summary-for-hipaa-ol-7-page ")
 
-  17. Host's critical violations can be explored by clicking the **Target name** column arrow.
+17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
   ![critical-violations-hipaa-ol-7-page](images/critical-violations-hipaa-ol-7.png " critical-violations-hipaa-ol-7-page ")
 
@@ -595,7 +595,7 @@ Click the **Cancel** button.
 
   ![report-critical-violations-hipaa-ol-7-access-page](images/report-critical-violations-hipaa-ol-7-access.png " report-critical-violations-hipaa-ol-7-access-page ")
 
-  18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
+18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
   ![compliance-evaluation-report-hipaa-ol-7-page](images/compliance-evaluation-report-hipaa-ol-7.png " compliance-evaluation-report-hipaa-ol-7-page ")
 
@@ -603,7 +603,7 @@ Click the **Cancel** button.
 
   ![summary-hipaa-evaluation-rule-results-page](images/summary-hipaa-evaluation-rule-results.png " summary-hipaa-evaluation-rule-results-page ")
 
-  19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
+19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
 
   ![compliance-results-hipaa-page](images/compliance-results-hipaa.png " compliance-results-hipaa-page ")
 
@@ -613,7 +613,7 @@ Click the **Cancel** button.
 
       Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
 
-  20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
+20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
 
   ![compliance-hipaa-ol-7-host-results-rules-validation-page](images/compliance-hipaa-ol-7-host-results-rules-validation.png " compliance-hipaa-ol-7-host-results-rules-validation-page ")
 
