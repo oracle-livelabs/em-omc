@@ -315,7 +315,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![select-targets-associate-drift-target-page](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
 
-18. Click **Select**, You will see one target selected to be associated with drift definition enabled, Click OK.
+18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
   ![drift-definition-target-association-enable-page](images/drift-definition-target-association-enable.png " drift-definition-target-association-enable-page ")
 
@@ -338,15 +338,13 @@ In this workshop, you will learn about continuous configuration drift monitoring
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
-
+  
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
     - Equal sign means parameter properties are the same across the reference and target compared
     - Not equal sign indicates parameter properties are different across the reference and target compared
     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
-
-
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
   ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
@@ -360,8 +358,6 @@ In this workshop, you will learn about continuous configuration drift monitoring
   ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
-
-
 
 ## Task 4: Database Security Compliance using CIS standard
 
@@ -486,7 +482,6 @@ Click the **Cancel** button.
 
   ![compliance-evaluation-report-cis-rules-check-page](images/compliance-evaluation-report-cis-rules-check.png " compliance-evaluation-report-cis-rules-check-page ")
 
-
 19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
 
   ![compliance-dashboard-compliance-summary-cis-page](images/compliance-dashboard-compliance-summary-cis.png " compliance-dashboard-compliance-summary-cis-page ")
@@ -517,7 +512,7 @@ Click the **Cancel** button.
 
   A compliance standard rule is a specific test to determine if a configuration data change affects compliance. A compliance standard rule is mapped to one or more compliance standards.
 
-### Execution
+  ### Execution
 
   1.  Log into your Enterprise Manager VM using the IP provided on your cheat sheet.
 
