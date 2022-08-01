@@ -492,9 +492,9 @@ Click the **Cancel** button.
 
   All of these will give you a CIS Compliance security posture of database target.
 
-  ## Task 5: Host Security Compliance
+## Task 5: Host Security Compliance
 
-  ### Overview
+### Overview
 
   Compliance Management provides the ability to evaluate the compliance of targets and systems as they relate to business best practices for configuration, security, and storage.
 
