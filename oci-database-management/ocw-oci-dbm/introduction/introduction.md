@@ -22,9 +22,6 @@ Database Management supports Oracle Database versions 11.2.0.4 and later. Using 
 ### Objectives
 
 In this workshop, you will:
-* Provision a compute instance on the Oracle Cloud to simulate an on-premises Oracle Database.
-* Set up the Management agent for Database Management.
-* Register the on-premises Oracle Database with the External Database service and enable the Database Management service.
 * Monitor the key performance and configuration metrics of your fleet of Oracle Databases.
 * Monitor and administer an on-premises Oracle Database(simulated).
 * Monitor and administer Oracle Cloud Databases.
