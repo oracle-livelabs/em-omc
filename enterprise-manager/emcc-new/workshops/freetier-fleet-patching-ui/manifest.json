@@ -17,7 +17,7 @@
       "description": "How to download your ORM stack and update security rules for an existing VCN",
       "publisheddate": "09/28/2020",
       "filename": "../../prepare-setup/prepare-setup.md",
-      "type": "fleet-patching"
+      "type": "fleet-patching-ui"
     },
     {
       "title": "Lab 2: Environment Setup",
