@@ -31,12 +31,6 @@
       "filename": "./../../em-migration-workbench/migrate-to-noncdb/migrate-to-noncdb.md"
     },
     {
-      "title": "Lab 5 (Optional): Migrate and upgrade 12c database to 19c ADB",
-      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
-      "publisheddate": "7/16/2020",
-      "filename": "./../../em-migration-workbench/migrate-to-adb/migrate-to-adb.md"
-    },
-    {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
       "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
       "publisheddate": "8/12/2020",
