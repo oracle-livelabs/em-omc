@@ -35,7 +35,7 @@
       "title": "Lab 4: Database Configuration and Compliance Management",
       "description": "This lab provides an overview of Configuration and Compliance Management features in . It is intended solely to help you assess the business benefits of upgrading to and to plan your I.T. projects",
       "publisheddate": "7/16/2020",
-      "filename": "https://oracle-livelabs.github.io/em-omc/enterprise-manager/emcc-new/em-configuration-compliance-management/em-configuration-compliance-management.md"
+      "filename": "../../em-configuration-compliance-management/em-configuration-compliance-management.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
