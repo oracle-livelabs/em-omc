@@ -109,6 +109,10 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/d9ea997d07c30f80083e097f6b578200.png " ")
 
+    Alternately, you might see a pop up for import options, while opening the file. Select OK and you should be able to view the contents of the file.
+
+    ![](images/open-office-msg.png "pop-up message")
+
     From the report, you will see the current environment has five different Oracle home software versions.
 
     ![](images/84e0ac92b29e45e91b9d17a8e0b3a2da.jpg " ")
@@ -188,6 +192,15 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     In the results page click on the target name.
 
     ![](images/patch-3192-details.png " ")
+
+    If you encounter session timeout error, copy paste the below command to re-login as sysman and re-establish the session.
+
+    ```
+    <copy>emcli login -u=sysman -p=welcome1</copy>
+    ```
+    ![](images/session-timeout.png "session timeout error ")
+
+    If you encounter session timeout error elsewhere in the lab, you can copy and paste the above command in the terminal and continue.
 
 3. From the terminal on your remote desktop, Create the New Gold Image using the following emcli command
 
