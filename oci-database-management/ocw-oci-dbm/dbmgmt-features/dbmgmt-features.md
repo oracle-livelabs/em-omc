@@ -16,7 +16,7 @@ Performance Diagnostics
 Database Administration
 -   Enable SQL jobs to automate a scheduled database maintenance task across all databases in the fleet.
 
-Estimated Time: 30 minutes
+Estimated Time: 1 hour
 
 ### Objectives
 
@@ -26,7 +26,6 @@ Estimated Time: 30 minutes
 
 This lab assumes you have already completed the following:
 - An Oracle Free Tier, Always Free, Paid or LiveLabs Cloud Account
-- Create a SSH Keys pair
 
 ## Task 1: Getting Started with Database Management
 
