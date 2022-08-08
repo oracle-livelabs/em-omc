@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop there are nine lab exercises. They have been organized to help you become familiar with the setup and use of this service's key capabilities: performing common Database Management tasks using the Oracle Cloud. In this lab, we have simulated an on-premises database so you do not have to setup or use one of your own on-premises databases.
+In this workshop there are 6 tasks. They have been organized to help you become familiar with the use of this service's key capabilities: performing common Database Management tasks using the Oracle Cloud. In this lab, we have simulated a hybrid environment, with both cloud and external pluggable databases, so you do not have to setup or use one of your own databases.
 
 Estimated Workshop Time: 1 hour
 
