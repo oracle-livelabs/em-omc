@@ -150,7 +150,10 @@ In the Create Job dialog:
 
 4.  You can click one of the other options on the left pane under Resources to perform the following tasks:
 
+     - Monitor the alert and attention logs.
+     - Use SQL Tuning Advisor to analyze SQL statements.
      - Monitor the tablespaces and data files.
+     - View the users created in the Oracle Database.
      - View and edit database parameters.
      - Create and manage Jobs and Job executions for the Managed Database.
      - View the Database Groups the Managed Database is a part of, if any.
