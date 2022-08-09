@@ -186,21 +186,13 @@ In this step, you will compare two database targets to determine configuration d
 
   ![one-time-comparison-results-page](images/one-time-comparison-results.png " one-time-comparison-results-page ")
 
-<<<<<<< HEAD
 16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
-=======
-16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
->>>>>>> upstream/main
 
   ![export-one-time-comparison-results-page](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
 
   After Exporting, Click **Cancel** to exit
 
-<<<<<<< HEAD
 17. One-time Database comparison results excel file format as shown here.
-=======
-17. (**Optional**) Exported results in excel for offline analysis look like this:
->>>>>>> upstream/main
 
   ![compare-demo-one-time-comparison-result-excel](images/compare-demo-one-time-comparison-result-excel.png " compare-demo-one-time-comparison-result-excel ")
 
