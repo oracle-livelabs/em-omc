@@ -4,7 +4,7 @@
 
 In this workshop you will get hands-on experience with the database patching capabilities of the Database as A Service offering in Oracle Enterprise Manager 13c with DevOps tools like Ansible.
 
-*Estimated Time:* 130 minutes
+*Estimated Time:* 120 minutes
 
 
 ### Objectives
@@ -15,7 +15,7 @@ In this lab you will learn:
 | **Step No.** | **Feature**                                   | **Approx. Time** | **Details**                                                                                                                                                                                                                    | **Value proposition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1**  | Install and Configure Ansible                               | 10 minutes       | Prepare the Live Labs environment in order to use Ansible as a DevOps automation/orchestration tool.                                                                                         | DevOps tools or toolchains help customers to automate tasks in their datacenter. This Lab makes use of Ansible as an orchestration tool.                                                                                                                                                                                                                                                                      |
-| **2**  |  Setup DBaaS Pools and verify integration with Ansible             | 20 minutes       | EM's DBaaS extends the Oracle Private Cloud Management solution by automating the lifecycle of a database and allowing users to request database services through self-service portal or REST API's.                                                                                             | With this solution, IT Managers no longer have to perform mundane administrative tasks for provisioning databases. Database users can get instantaneous access to new database services through the Self Service Portal or REST API's.                                                                                                                                                                                                                                                                     |
+| **2**  |  Setup DBaaS Pools and verify integration with Ansible             | 10 minutes       | EM's DBaaS extends the Oracle Private Cloud Management solution by automating the lifecycle of a database and allowing users to request database services through self-service portal or REST API's.                                                                                             | With this solution, IT Managers no longer have to perform mundane administrative tasks for provisioning databases. Database users can get instantaneous access to new database services through the Self Service Portal or REST API's.                                                                                                                                                                                                                                                                     |
 | **3**  | Provision a PDB using DBaaS and Ansible             | 10 minutes       | DevOps orchestration tools like Ansible, Chef, Terraform, etc., can easily integrate with EM 13c in order to provision Oracle databases.                                                                                            | EM 13c implements pre-checks, best practices and processes to provision all these configurations in a secure, automated and controlled fashion.                                                                                                                                                                                                                                                      |
 | **4**  | Configure Fleet Maintenance (Gold Image, Container and Pool)        | 80 minutes       | Once provisioned, Oracle databases need to be well maintained and secured. All these database lifecycle activity tasks can be automated by integrating EM 13c with orchestration DevOps tools.                                                | DB lifecycle activities can be easily scheduled using DevOps tools and Oracle Enterprise Manager 13c. There's no need to login directly to the DB as EM provides a secure framework for all these activities.                                                                                                                                                                                                                                                                                                                                                                                          |
 | **5**  | Patch a PDB using DBaaS and Ansible       | 10 minutes       | In this activity you'll see how a pluggable database is terminated and deleted from EM's DBaaS framework using Ansible playbooks.                                                                                                                                        | This last Lab provides information on how to decommission a PDB from EM's DBaaS setup as well as a glance on all the requests submitted to EM through Ansible. |
@@ -369,7 +369,7 @@ In this lab you will learn:
     wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/oRaI83p8c3Iak4hcqzVmCewOi_NmBXfwNkCWD6Mm8aNXlWMMjyEaOnRgWr3rtLfy/n/natdsecurity/b/labs-files/o/19.14ExportGoldImage.zip</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step1.png " ")
+    ![](../em-devops-patching/images/fleet-get-image.png " ")
 
 2. Create a script with all the required parameters to import the downloaded Gold Image.
 
@@ -403,27 +403,27 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -importSoftwareImage -input_file="data:/home/oracle/fleet/sidb19c_tier3.inp"</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step2.png " ")
+    ![](../em-devops-patching/images/fleet-import-image.png " ")
 
 
 3. Go back to the Oracle Enterprise Manager console and logout from the "CYRUS" account.
 
-    ![](../em-devops-patching/images/emdevpatch4step3.png " ")
+    ![](../em-devops-patching/images/em-cyrus-logout.png " ")
 
 
 4. Login using the "SYSMAN" account.
 
-    ![](../em-devops-patching/images/emdevpatch4step4.png " ")
+    ![](../em-devops-patching/images/em-sysman-login-4.png " ")
 
 5. Navigate to Enterprise -> Provisioning and Patching and click on **Procedure Activity**.
 
-    ![](../em-devops-patching/images/emdevpatch4step5.png " ")
+    ![](../em-devops-patching/images/em-procedure-activity.png " ")
 
 6. Click on the **ImportSoftwareImage_SYSMAN** task that was just created and refresh the screen until the task successfully completes.
 
-    ![](../em-devops-patching/images/emdevpatch4step6a.png " ")
+    ![](../em-devops-patching/images/em-procedure-import-image.png " ")
 
-    ![](../em-devops-patching/images/emdevpatch4step6b.png " ")
+    ![](../em-devops-patching/images/em-procedure-import-image-status.png " ")
 
 7. Go back to the SSH terminal and execute below EMCLI command to verify the Gold Image details.
 
@@ -431,7 +431,7 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step7.png " ")
+    ![](../em-devops-patching/images/fleet-get-image-list.png " ")
 
 8. Notice the **IMAGE ID** column. Using the value of this column get the Gold Image version.
 
@@ -439,7 +439,7 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -getVersions -image_id=<paste the image id here></copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step8.png " ")
+    ![](../em-devops-patching/images/fleet-get-version.png " ")
 
 9. Subscribe the recently created **PDB_POOL** in the DBaaS setup with this Gold Image. Use the **IMAGE ID** used in the previous step.
 
@@ -447,7 +447,7 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -subscribeTarget -pool_name=PDB_POOL -pool_type=pdbaas_pool -image_id=<paste the image id here></copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step9.png " ")
+    ![](../em-devops-patching/images/fleet-subscribe-pool.png " ")
 
 10. Verify the subscription for that specific 19c container using the **IMAGE ID** from the previous step.
 
@@ -455,7 +455,7 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -getSubscriptionsForContainer -target_name="PDB_POOL" -target_type=pdbaas_pool -image_id=<paste the image id here></copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step10.png " ")
+    ![](../em-devops-patching/images/fleet-get-subscription.png " ")
 
 11. Deploy a new Oracle Home that will host a new 19c container using the 19.14 Gold Image.
 
@@ -463,13 +463,13 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="DEPLOY_DB_SOFTWARE" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Deploy Patch OH for Pool" -target_type=oracle_home -description="Deploys the Patched Oracle home on target nodes" -input_file="data:/home/oracle/fleet/deploy197_hr.inp"</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step11.png " ")
+    ![](../em-devops-patching/images/fleet-deploy-software.png " ")
 
 12. Go back to the Oracle Enterprise Manager console. Navigate to Enterprise -> Provisioning and Patching and click on **Procedure Activity**. Monitor the deployment procedure.
 
-    ![](../em-devops-patching/images/emdevpatch4step12a.png " ")
+    ![](../em-devops-patching/images/em-procedure-deploy-software.png " ")
 
-    ![](../em-devops-patching/images/emdevpatch4step12b.png " ")
+    ![](../em-devops-patching/images/em-procedure-deploy-software-status.png " ")
 
 13. There's a local listener on the current 19c Oracle Home. This listener needs to be migrated to the 19.14 Oracle Home before we can create the new 19.14 container database.
     Go back to the SSH terminal and execute below EMCLI command.
@@ -478,13 +478,13 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="MIGRATE_LISTENER" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Migrate Listeners" -description="Migrate the listeners to the new Oracle Home, if any"</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step13.png " ")
+    ![](../em-devops-patching/images/fleet-migrate-listener.png " ")
 
 14. Monitor the deployment procedure execution using the Enterprise Manager console.
 
-    ![](../em-devops-patching/images/emdevpatch4step14a.png " ")
+    ![](../em-devops-patching/images/em-procedure-migrate-listener.png " ")
 
-    ![](../em-devops-patching/images/emdevpatch4step14b.png " ")
+    ![](../em-devops-patching/images/em-procedure-migrate-listener-status.png " ")
 
 15. Create a new container database (CDB) using the Oracle Home that was just deployed from the 19.14 Gold Image. Go back to the SSH terminal and execute.
 
@@ -492,13 +492,13 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="DEPLOY_CDB" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Deploy CDB" -target_type=oracle_database -description="Deploy a new CDB on the new OH for every CDB on the Pool using the prefix" -db_prefix="ssa"</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step15.png " ")
+    ![](../em-devops-patching/images/fleet-deploy-cdb.png " ")
 
 16. Monitor the deployment procedure execution using the Enterprise Manager console.
 
-    ![](../em-devops-patching/images/emdevpatch4step16a.png " ")
+    ![](../em-devops-patching/images/em-procedure-deploy-cdb.png " ")
 
-    ![](../em-devops-patching/images/emdevpatch4step16b.png " ")
+    ![](../em-devops-patching/images/em-procedure-deploy-cdb-status.png " ")
 
 17. Activate the newly created container database (CDB). This means that the PDB_POOL now knows that a new version of the CDB exists and is ready for use.
 
@@ -506,7 +506,7 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="ACTIVATE_CDB" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Activate the CDBs" -target_type=oracle_database -description="Activates the newly created CDBs"</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch4step17.png " ")
+    ![](../em-devops-patching/images/fleet-activate-container.png " ")
 
 
 ## Task 5: Patch a PDB using DBaaS and Ansible
@@ -514,31 +514,7 @@ In this lab you will learn:
 1.  In this step we are going to patch the recently created PDB. Remember that this PDB was created using Ansible and by making use of the existing db19c.subnet.vcn.oraclevcn.com CDB. This CDB is currently running on 19.12 Oracle Home and we want to patch this PDB to 19.14 RU.
     In order to automate this process we are going to use an Ansible YAML file to update the PDB to the CDB deployed by EM running on the 19.14 Oracle Home.
 
-2.  Login to the Enterprise Manager console using SYSMAN.
-
-    ![](../em-devops-patching/images/emdevpatch5step2.png " ")
-
-3.  Navigate to Setup -> Cloud and click on **Database**.
-
-    ![](../em-devops-patching/images/emdevpatch5step3.png " ")
-
-4.  Select the Pluggable Database option and click on **Pluggable Database Pool**.
-
-    ![](../em-devops-patching/images/emdevpatch5step4.png " ")
-
-5.  Select the **PDB_POOL** and then click **Edit**.
-
-    ![](../em-devops-patching/images/emdevpatch5step5.png " ")
-
-6.  Select the **Named Credential** option and choose the credentials as shown on the image below. Then click **Next**.
-
-    ![](../em-devops-patching/images/emdevpatch5step6.png " ")
-
-7.  Click **Submit**.
-
-    ![](../em-devops-patching/images/emdevpatch5step7.png " ")
-
-8.  Execute below.
+2.  Execute below.
 
     ```
     <copy>cd ~/ansible/yml/
@@ -587,32 +563,32 @@ In this lab you will learn:
     <copy>ansible-playbook /home/oracle/ansible/yml/update_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-patching/images/emdevpatch5step8.png " ")
+    ![](../em-devops-patching/images/ansible-update-pdb.png " ")
 
 
 9.  Go back to the Oracle Enterprise Manager web console. Navigate to Enterprise -> Provisioning and Patching -> **Procedure Activity**.
 
-    ![](../em-devops-patching/images/emdevpatch5step9.png " ")
+    ![](../em-devops-patching/images/em-provisioning-activity.png " ")
 
 10. Monitor the **UPDATE** procedure.
 
-    ![](../em-devops-patching/images/emdevpatch5step10a.png " ")
+    ![](../em-devops-patching/images/em-procedure-update-pdb.png " ")
 
-    ![](../em-devops-patching/images/emdevpatch5step10b.png " ")
+    ![](../em-devops-patching/images/em-procedure-update-pdb-status.png " ")
 
 11. Logout from the SYSMAN account and login with CYRUS user.
 
-    ![](../em-devops-patching/images/emdevpatch5step11a.png " ")
+    ![](../em-devops-patching/images/em-sysman-logout.png " ")
 
-    ![](../em-devops-patching/images/emdevpatch5step11b.png " ")
+    ![](../em-devops-patching/images/em-login-cyrus.png " ")
 
 12. Click on the SSAPDB_PDB1 database.
 
-    ![](../em-devops-patching/images/emdevpatch5step12.png " ")
+    ![](../em-devops-patching/images/em-cyrus-pdb1-select.png " ")
 
 13. Confirm the version is now 19.14 RU for the PDB.
 
-    ![](../em-devops-patching/images/emdevpatch5step13.png " ")
+    ![](../em-devops-patching/images/em-cyrus-pdb1-version.png " ")
 
     From this point any new PDB request using the PDB_POOL will be serviced by the recently activated 19.14 CDB.
 
