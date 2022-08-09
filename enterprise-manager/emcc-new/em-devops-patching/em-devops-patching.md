@@ -40,7 +40,7 @@ In this lab you will learn:
     <copy>sudo yum install -y ansible</copy>
     ```
 
-    ![](../em-devops-patching/images/install-ansible.png " ")
+    ![](../em-devops-patching/images/emdevpatch1step1.png " ")
 
     Then hit the **Enter** key on your keyboard.
 
@@ -57,7 +57,7 @@ In this lab you will learn:
     emcc.marketplace.com</copy>
     ```
 
-    ![](../em-devops-patching/images/edit-ansible-config.png " ")
+    ![](../em-devops-patching/images/emdevpatch1step2.png " ")
 
     Save the changes by hitting the **Esc** key on your keyboard, type **:wq** then hit **Enter**.
 
@@ -73,7 +73,7 @@ In this lab you will learn:
     Are you sure you want to continue connecting (yes/no)? yes
     ```
 
-    ![](../em-devops-patching/images/test-ansible-connect.png " ")
+    ![](../em-devops-patching/images/emdevpatch1step3.png " ")
 
     Verify that you receive the **pong** response from Ansible.
 
@@ -84,7 +84,7 @@ In this lab you will learn:
     cd /home/oracle/ansible/yml</copy>
     ```
 
-    ![](../em-devops-patching/images/create-ansible-dirs.png " ")
+    ![](../em-devops-patching/images/emdevpatch1step4.png " ")
 
 
 ## Task 2: Setup DBaaS Pools and verify integration with Ansible
@@ -95,53 +95,100 @@ In this lab you will learn:
     <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
     ```
 
+
 2. Open the Oracle Enterprise Manager console window and login as "SYSMAN".
 
-    ![](../em-devops-patching/images/em-sysman-login.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step2.png " ")
 
-3. Startup the "db19c.subnet.vcn.oraclevcn.com" database. Go to **Targets** -> **Databases**.
 
-    ![](../em-devops-patching/images/em-targets-databases.png " ")
+3. Navigate to Setup -> Security and click on **Preferred Credentials**.
 
-4. Click on the "db19c.subnet.vcn.oraclevcn.com" database.
+    ![](../em-devops-patching/images/emdevpatch2step3.png " ")    
 
-    ![](../em-devops-patching/images/em-select-db19c.png " ")
+4. In the Preferred Credentials window you will find a table containing information about Target Types. Select **Database Instance** and then click on **Manage Preferred Credentials**.
 
-5. Navigate to **Control** and click on **Startup/Shutdown** menu.
+    ![](../em-devops-patching/images/emdevpatch2step4.png " ")
 
-    ![](../em-devops-patching/images/em-db19c-start.png " ")
+5. Under Database Instance Preferred Credentials make sure to select the **My Preferences** tab. Then using the Credentials table select **SYSDBA Database Credentials** and click the **Set** button. Choose the **SYS_SALES** named credential.
+   Do the same for the **Database Host Credentials** and select the **ORACLE** named credential from the list.
 
-6. Select both **Preferred** credentials for "Host" and "Database" and click **Ok**.
+    ![](../em-devops-patching/images/emdevpatch2step5a.png " ")
 
-    ![](../em-devops-patching/images/em-start-db19c-creds.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step5b.png " ")
 
-7. On the "Startup/Shutdown: Confirmation" page click **Yes**. Wait until the database is up and running.
+6. Go back to the Preferred Credentials page.
 
-    ![](../em-devops-patching/images/em-db19c-start-confirm.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step6.png " ")
 
-    ![](../em-devops-patching/images/em-db19c-start-progress.png " ")
+7. Select the **Host** Target Type from the table and click on the **Manage Preferred Credentials** button.
 
-8. Setup a new Pluggable Database (PDB) Pool in the DBaaS setup. Navigate to Setup -> Cloud and click on **Database**.
+    ![](../em-devops-patching/images/emdevpatch2step7.png " ")
 
-    ![](../em-devops-patching/images/em-cloud-database.png " ")
+8. Under Host Preferred Credentials make sure to select the **My Preferences** tab. Then using the Credentials table select **Normal Host Credentials** and click the **Set** button. Choose the **ORACLE** named credential.
+   Do the same for the **Privileged Host Credentials** and select the **ROOT** named credential from the list.   
 
-9. Select the **Pluggable Database** option from the "Getting Started" page.
+    ![](../em-devops-patching/images/emdevpatch2step8a.png " ")
 
-    ![](../em-devops-patching/images/em-cloud-pdb.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step8b.png " ")
 
-10. Click on **Pluggable Database Pool** menu and then click on the **Create** button.
+9. Go back to the Preferred Credentials page.
 
-    ![](../em-devops-patching/images/em-cloud-pdbpool-create.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step9.png " ")
 
-11. On the "Setup" page type the following entries:
+10. Select the **Oracle Home** Target Type from the table and click on the **Manage Preferred Credentials** button.
+
+    ![](../em-devops-patching/images/emdevpatch2step10.png " ")
+
+11. Under Oracle Home Preferred Credentials make sure to select the **My Preferences** tab. Then using the Credentials table select **Normal Host Credentials** and click the **Set** button. Choose the **ORACLE** named credential.
+    Do the same for the **Privileged Host Credentials** and select the **ROOT** named credential from the list.
+
+    ![](../em-devops-patching/images/emdevpatch2step11a.png " ")
+
+    ![](../em-devops-patching/images/emdevpatch2step11b.png " ")
+
+12. Startup the "db19c.subnet.vcn.oraclevcn.com" database. Go to **Targets** -> **Databases**.
+
+    ![](../em-devops-patching/images/emdevpatch2step12.png " ")
+
+13. Click on the "db19c.subnet.vcn.oraclevcn.com" database.
+
+    ![](../em-devops-patching/images/emdevpatch2step13.png " ")
+
+14. Navigate to **Control** and click on **Startup/Shutdown** menu.
+
+    ![](../em-devops-patching/images/emdevpatch2step14.png " ")
+
+15. Select both **Preferred** credentials for "Host" and "Database" and click **Ok**.
+
+    ![](../em-devops-patching/images/emdevpatch2step15.png " ")
+
+16. On the "Startup/Shutdown: Confirmation" page click **Yes**. Wait until the database is up and running.
+
+    ![](../em-devops-patching/images/emdevpatch2step16a.png " ")
+
+    ![](../em-devops-patching/images/emdevpatch2step16b.png " ")
+
+17. Setup a new Pluggable Database (PDB) Pool in the DBaaS setup. Navigate to Setup -> Cloud and click on **Database**.
+
+    ![](../em-devops-patching/images/emdevpatch2step17.png " ")
+
+18. Select the **Pluggable Database** option from the "Getting Started" page.
+
+    ![](../em-devops-patching/images/emdevpatch2step18.png " ")
+
+19. Click on **Pluggable Database Pool** menu and then click on the **Create** button.
+
+    ![](../em-devops-patching/images/emdevpatch2step19.png " ")
+
+20. On the "Setup" page type the following entries:
 
     Pool Details:
       - Name: **PDB_POOL**
 
     Credentials:
-      - Database Named Credential: **Named** -> **ORACLE(SYSMAN)**
-      - Root Credentials: **Named** -> **ROOT(SYSMAN)**
-      - Database: **Named** -> **SYS_SALES(SYSMAN)**
+      - Database Named Credential: **Preferred**
+      - Root Credentials: **Preferred**
+      - Database: **Preferred**
 
       **Note**: Leave the Grid Infrastructure Home Credentials empty (Default)
 
@@ -155,42 +202,42 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/emdevpatch2step20.png " ")
 
-12. Click on the **Add** button.
+21. Click on the **Add** button.
 
     ![](../em-devops-patching/images/emdevpatch2step21.png " ")
 
-13. Select the "db19c.subnet.vcn.oracle.com" and click **Select**.
+22. Select the "db19c.subnet.vcn.oracle.com" and click **Select**.
 
     ![](../em-devops-patching/images/emdevpatch2step22a.png " ")
 
-14. Click on the **Next** button.
+23. Click on the **Next** button.
 
     ![](../em-devops-patching/images/emdevpatch2step23.png " ")
 
-15. Leave the defaults and click on **Submit**. Wait until the new "PDB_POOL" is created.
+24. Leave the defaults and click on **Submit**. Wait until the new "PDB_POOL" is created.
 
-    ![](../em-devops-patching/images/em-cloud-pdbpool-submit.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step24.png " ")
 
-16. Click on **Service Templates** menu and select the "Provision New Empty Pluggable Database" offering. Then click on **Edit**.
+25. Click on **Service Templates** menu and select the "Provision New Empty Pluggable Database" offering. Then click on **Edit**.
 
-    ![](../em-devops-patching/images/em-cloud-template-edit.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step25.png " ")
 
-17. Notice that the "Sales Infra Zone" is currently assigned to the "pdbpool" that already existed. We want to assign the newly created "PDB_POOL". Click on **Assign Pool** button.
+26. Notice that the "Sales Infra Zone" is currently assigned to the "pdbpool" that already existed. We want to assign the newly created "PDB_POOL". Click on **Assign Pool** button.
 
-    ![](../em-devops-patching/images/em-cloud-template-assign-pool.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step26.png " ")
 
-18. Select the "PDB_POOL" and then click the **Select** button.
+27. Select the "PDB_POOL" and then click the **Select** button.
 
-    ![](../em-devops-patching/images/em-cloud-template-pdbpool.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step27.png " ")
 
-19. Click **Next**.
+28. Click **Next**.
 
-    ![](../em-devops-patching/images/em-cloud-template-review.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step28.png " ")
 
-20. On the next set of pages **don't** modify anything. Just click **Next** until you are in the final "Review" page.
+29. On the next set of pages **don't** modify anything. Just click **Next** until you are in the final "Review" page.
     In the "Review" page click **Edit**.
 
-    ![](../em-devops-patching/images/em-cloud-template-submit.png " ")
+    ![](../em-devops-patching/images/emdevpatch2step29.png " ")
 
 ## Task 3: Provision a PDB using DBaaS and Ansible
 
@@ -291,7 +338,7 @@ In this lab you will learn:
     <copy>ansible-playbook /home/oracle/ansible/yml/request_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-patching/images/ansible-request-pdb.png " ")
+    ![](../em-devops-patching/images/emdevpatch3step3.png " ")
 
 
 4. Review the status of the provisioning request. Review the output of the previous request and find the **uri**.
@@ -343,7 +390,7 @@ In this lab you will learn:
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-patching/images/ansible-get-request-status.png " ")
+    ![](../em-devops-patching/images/emdevpatch3step4.png " ")
 
 5. Go back to the Oracle Enterprise Manager web console and logout from the "SYSMAN" account. After this login using "CYRUS".
     Cyrus is a user that has access and all the required privileges to use the DBaaS "Self Service Portal".
@@ -352,13 +399,13 @@ In this lab you will learn:
     CYRUS/welcome1
     ```
 
-    ![](../em-devops-patching/images/em-sysman-logout.png " ")
+    ![](../em-devops-patching/images/emdevpatch3step5a.png " ")
 
-    ![](../em-devops-patching/images/em-login-cyrus.png " ")
+    ![](../em-devops-patching/images/emdevpatch3step5b.png " ")
 
 6. Verify that the new PDB shows up in the portal.
 
-    ![](../em-devops-patching/images/em-verify-pdb.png " ")
+    ![](../em-devops-patching/images/emdevpatch3step6.png " ")
 
 ## Task 4: Configure Fleet Maintenance (Gold Image, Container and Pool)
 
