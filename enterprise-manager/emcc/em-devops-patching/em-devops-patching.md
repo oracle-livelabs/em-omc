@@ -606,6 +606,6 @@ You may [proceed to the next lab](#next).
   - [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
 
 ## Acknowledgements
-- **Author** - Alfredo Krieg, NA Technology, June 2022
+- **Author** - Alfredo Krieg, NA Technology, August 2022
 * **Contributors** - Andrew Hong, NA Technology
 * **Last Updated By/Date** -
