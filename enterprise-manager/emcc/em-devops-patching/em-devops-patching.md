@@ -95,6 +95,8 @@ In this lab you will learn:
     <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
     ```
 
+    ![](../em-devops-patching/images/emcli-root-global-cred.png " ")
+
 2. Open the Oracle Enterprise Manager console window and login as "SYSMAN".
 
     ![](../em-devops-patching/images/em-sysman-login.png " ")
@@ -349,7 +351,7 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/ansible-get-request-status.png " ")
 
-    Re-execute the "get_pdb_status" YAML until you see that the PDB was successfully created. STATUS should be set as RUNNING.
+    Re-execute the get_pdb_status.yml command until you see that the PDB was successfully created. STATUS should be set as RUNNING.
 
 5. Go back to the Oracle Enterprise Manager web console and logout from the "SYSMAN" account. After this, login using "CYRUS" user.
     Cyrus is a user that has access and all the required privileges to use the DBaaS "Self Service Portal".
@@ -366,7 +368,7 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/em-verify-pdb.png " ")
 
-7. Click on the new PDB name and verify the current PDB software version is 19.12.
+7. Click on the new SSAPDB_API1 name and verify the current PDB software version is 19.12 RU.
 
     ![](../em-devops-patching/images/em-verify-pdb-version.png " ")
 
@@ -584,7 +586,7 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/em-login-cyrus.png " ")
 
-12. Click on the SSAPDB_PDB1 database.
+12. Click on the SSAPDB_API1 database.
 
     ![](../em-devops-patching/images/em-cyrus-pdb1-select.png " ")
 
