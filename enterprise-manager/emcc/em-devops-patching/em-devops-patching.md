@@ -61,13 +61,13 @@ In this lab you will learn:
 
     Save the changes by hitting the **Esc** key on your keyboard, type **:wq** then hit **Enter**.
 
-3. Verify that Ansible can properly ping the configured **emserver**.
+3. Verify that Ansible can properly ping the configured **emserver**. Execute below command:
 
     ```
     <copy>ansible emserver -m ping -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    Type **yes** and hit **Enter** on your keyboard.
+    Once prompted, type **yes** and hit **Enter** on your keyboard.
 
     ```
     Are you sure you want to continue connecting (yes/no)? yes
@@ -99,7 +99,7 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/em-sysman-login.png " ")
 
-3. Startup the "db19c.subnet.vcn.oraclevcn.com" database. Go to **Targets** -> **Databases**.
+3. Startup the "db19c.subnet.vcn.oraclevcn.com" database. In the Enterprise Manager console navigate to **Targets** -> **Databases**.
 
     ![](../em-devops-patching/images/em-targets-databases.png " ")
 
@@ -107,11 +107,15 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/em-select-db19c.png " ")
 
-5. Navigate to **Control** and click on **Startup/Shutdown** menu.
+5. Navigate to **Oracle Database** then **Control** and click on **Startup/Shutdown** menu.
 
     ![](../em-devops-patching/images/em-db19c-start.png " ")
 
-6. Select both **Preferred** credentials for "Host" and "Database" and click **Ok**.
+6. Select both **Named** credentials for "Host" and "Database" and click **Ok**.
+
+   Host credential: **ORACLE**
+
+   Database credential: **OEM_SYS**
 
     ![](../em-devops-patching/images/em-start-db19c-creds.png " ")
 
@@ -153,19 +157,19 @@ In this lab you will learn:
 
     Validate and compare these inputs with the image below.
 
-    ![](../em-devops-patching/images/emdevpatch2step20.png " ")
+    ![](../em-devops-patching/images/em-cloud-pool-setup-details.png " ")
 
 12. Click on the **Add** button.
 
-    ![](../em-devops-patching/images/emdevpatch2step21.png " ")
+    ![](../em-devops-patching/images/em-cloud-pool-add-database.png " ")
 
 13. Select the "db19c.subnet.vcn.oracle.com" and click **Select**.
 
-    ![](../em-devops-patching/images/emdevpatch2step22a.png " ")
+    ![](../em-devops-patching/images/em-cloud-pool-select-db19c.png " ")
 
 14. Click on the **Next** button.
 
-    ![](../em-devops-patching/images/emdevpatch2step23.png " ")
+    ![](../em-devops-patching/images/em-cloud-pool-next.png " ")
 
 15. Leave the defaults and click on **Submit**. Wait until the new "PDB_POOL" is created.
 
@@ -194,7 +198,7 @@ In this lab you will learn:
 
 ## Task 3: Provision a PDB using DBaaS and Ansible
 
-1. In this step, we are going to make use of both **uri** parameters below. These **uri** parameters are part of the "Service Template" configuration. You can get these parameters by executing the get PaaS Zone REST API.
+1. In this step, we are going to make use of both **uri** parameters below. These **uri** parameters are part of the "Service Template" configuration. You can get these parameters by executing the get PaaS Zone REST API. This step won't cover how to get those parameter. We are just going to review them and make use of them in the next steps.
 
     ```
     zone:
@@ -345,7 +349,9 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/ansible-get-request-status.png " ")
 
-5. Go back to the Oracle Enterprise Manager web console and logout from the "SYSMAN" account. After this login using "CYRUS".
+    Re-execute the "get_pdb_status" YAML until you see that the PDB was successfully created. STATUS should be set as RUNNING.
+
+5. Go back to the Oracle Enterprise Manager web console and logout from the "SYSMAN" account. After this, login using "CYRUS" user.
     Cyrus is a user that has access and all the required privileges to use the DBaaS "Self Service Portal".
 
     ```
@@ -359,6 +365,10 @@ In this lab you will learn:
 6. Verify that the new PDB shows up in the portal.
 
     ![](../em-devops-patching/images/em-verify-pdb.png " ")
+
+7. Click on the new PDB name and verify the current PDB software version is 19.12.
+
+    ![](../em-devops-patching/images/em-verify-pdb-version.png " ")
 
 ## Task 4: Configure Fleet Maintenance (Gold Image, Container and Pool)
 
@@ -449,15 +459,7 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/fleet-subscribe-pool.png " ")
 
-10. Verify the subscription for that specific 19c container using the **IMAGE ID** from the previous step.
-
-    ```
-    <copy>emcli db_software_maintenance -getSubscriptionsForContainer -target_name="PDB_POOL" -target_type=pdbaas_pool -image_id=<paste the image id here></copy>
-    ```
-
-    ![](../em-devops-patching/images/fleet-get-subscription.png " ")
-
-11. Deploy a new Oracle Home that will host a new 19c container using the 19.14 Gold Image.
+10. Deploy a new Oracle Home that will host a new 19c container using the 19.14 Gold Image.
 
     ```
     <copy>emcli db_cloud_maintenance -performOperation -purpose="DEPLOY_DB_SOFTWARE" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Deploy Patch OH for Pool" -target_type=oracle_home -description="Deploys the Patched Oracle home on target nodes" -input_file="data:/home/oracle/fleet/deploy197_hr.inp"</copy>
@@ -465,13 +467,13 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/fleet-deploy-software.png " ")
 
-12. Go back to the Oracle Enterprise Manager console. Navigate to Enterprise -> Provisioning and Patching and click on **Procedure Activity**. Monitor the deployment procedure.
+11. Go back to the Oracle Enterprise Manager console. Navigate to Enterprise -> Provisioning and Patching and click on **Procedure Activity**. Monitor the deployment procedure.
 
     ![](../em-devops-patching/images/em-procedure-deploy-software.png " ")
 
     ![](../em-devops-patching/images/em-procedure-deploy-software-status.png " ")
 
-13. There's a local listener on the current 19c Oracle Home. This listener needs to be migrated to the 19.14 Oracle Home before we can create the new 19.14 container database.
+12. There's a local listener on the current 19c Oracle Home. This listener needs to be migrated to the 19.14 Oracle Home before we can create the new 19.14 container database.
     Go back to the SSH terminal and execute below EMCLI command.
 
     ```
@@ -480,13 +482,13 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/fleet-migrate-listener.png " ")
 
-14. Monitor the deployment procedure execution using the Enterprise Manager console.
+13. Monitor the deployment procedure execution using the Enterprise Manager console.
 
     ![](../em-devops-patching/images/em-procedure-migrate-listener.png " ")
 
     ![](../em-devops-patching/images/em-procedure-migrate-listener-status.png " ")
 
-15. Create a new container database (CDB) using the Oracle Home that was just deployed from the 19.14 Gold Image. Go back to the SSH terminal and execute.
+14. Create a new container database (CDB) using the Oracle Home that was just deployed from the 19.14 Gold Image. Go back to the SSH terminal and execute.
 
     ```
     <copy>emcli db_cloud_maintenance -performOperation -purpose="DEPLOY_CDB" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Deploy CDB" -target_type=oracle_database -description="Deploy a new CDB on the new OH for every CDB on the Pool using the prefix" -db_prefix="ssa"</copy>
@@ -494,13 +496,13 @@ In this lab you will learn:
 
     ![](../em-devops-patching/images/fleet-deploy-cdb.png " ")
 
-16. Monitor the deployment procedure execution using the Enterprise Manager console.
+15. Monitor the deployment procedure execution using the Enterprise Manager console.
 
     ![](../em-devops-patching/images/em-procedure-deploy-cdb.png " ")
 
     ![](../em-devops-patching/images/em-procedure-deploy-cdb-status.png " ")
 
-17. Activate the newly created container database (CDB). This means that the PDB_POOL now knows that a new version of the CDB exists and is ready for use.
+16. Activate the newly created container database (CDB). This means that the PDB_POOL now knows that a new version of the CDB exists and is ready for use.
 
     ```
     <copy>emcli db_cloud_maintenance -performOperation -purpose="ACTIVATE_CDB" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Activate the CDBs" -target_type=oracle_database -description="Activates the newly created CDBs"</copy>
