@@ -86,11 +86,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
       - Most importantly, LOB/Department information
         The Details table gives more information about each Database instance for you to get a good understanding of the number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business, or Department, then you will be able to determine the number of targets deployed for a given business unit. Explore these features to get a good handle on Inventory and Usage details.
 
-7. Export inventory details to excel for reports.
+7.  Inventory usage and Details can be exported for offline further reviews and analysis.
 
   ![em-inventory-usage-details-export-summary-page](images/em-inventory-usage-details-export-summary.png " em-inventory-usage-details-export-summary-page ")
 
-(**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
+  These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
 
   ![em-ecm-inv-usage-details-excel-file](images/em-ecm-inv-usage-details-excel-file.png " em-ecm-inv-usage-details-excel-file ")  
 
@@ -186,13 +186,13 @@ In this step, you will compare two database targets to determine configuration d
 
   ![one-time-comparison-results-page](images/one-time-comparison-results.png " one-time-comparison-results-page ")
 
-16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
   ![export-one-time-comparison-results-page](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
 
   After Exporting, Click **Cancel** to exit
 
-17. (**Optional**) Exported results in excel for offline analysis look like this:
+17. One-time Database comparison results excel file format as shown here.
 
   ![compare-demo-one-time-comparison-result-excel](images/compare-demo-one-time-comparison-result-excel.png " compare-demo-one-time-comparison-result-excel ")
 
@@ -349,11 +349,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
- (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
+ Export the drift management results into an excel file for further reviews and offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
   ![export-results-for-created-drift-definition-page](images/export-results-for-created-drift-definition.png " export-results-for-created-drift-definition-page ")
 
-24. (**Optional**) Exported results in excel for offline analysis look like this:
+24. Drift management results, excel file format as shown here:
 
   ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 
