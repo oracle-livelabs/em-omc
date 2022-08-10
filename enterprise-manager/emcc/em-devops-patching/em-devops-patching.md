@@ -370,7 +370,7 @@ In this lab you will learn:
 
 7. Click on the new SSAPDB_API1 name and verify the current PDB software version is 19.12 RU.
 
-    ![](../em-devops-patching/images/em-verify-pdb.png " ")
+    ![](../em-devops-patching/images/em-verify-pdb-version.png " ")
 
 ## Task 4: Configure Fleet Maintenance (Gold Image, Container and Pool)
 
