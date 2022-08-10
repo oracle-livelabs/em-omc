@@ -1,4 +1,4 @@
-# Patch Oracle Databases With Ansible and Enterprise Manager
+# Patch Oracle databases with Ansible and Enterprise Manager
 
 ## Introduction
 
