@@ -10,17 +10,20 @@ Fleet Monitoring and Management
 -   Automate database fleet management for enhanced operational efficiency.
 
 Performance Diagnostics
--   Diagnose database performance issues quickly.
--   Explore database performance statistics for advanced diagnostics.
+-   Diagnose database performance issues quickly with Performance Hub.
+-   Explore database performance statistics for advanced diagnostics with ADDM reports.
+-   Use AWR Explorer to view customizable performance metrics from multiple sources of data in table form.
 
 Database Administration
 -   Enable SQL jobs to automate a scheduled database maintenance task across all databases in the fleet.
+-   View, create, and perform basic administration tasks for tablespaces and their datafiles.
+-   Perform SQL Tuning Advisor runs and implement recommendations for improvement.
 
 Estimated Time: 1 hour
 
 ### Objectives
 
--   Use Oracle Cloud Infrastructure Database Management to manage fleet of Oracle Databases.
+-   Use Oracle Cloud Infrastructure Database Management to manage a fleet of Oracle Databases and drill down to a single database for additional investigation.
 
 ### Prerequisites
 
@@ -39,7 +42,7 @@ This lab assumes you have already completed the following:
 
 ## Task 2: Monitoring a Fleet of Databases
 
-1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt-demo compartment is selected by default in the Compartment field.
+1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt compartment is selected by default in the Compartment field.
 
      ![](./images/fleet-summary.png " ")
 
@@ -52,7 +55,7 @@ This lab assumes you have already completed the following:
 
 3.  On **Fleet Summary** page under **Members** tab, by default, you will see only PDBs and non-CDBs in the database fleet.
 
-4.  On **Fleet Summary** page under **Members** tab, select the **Show CDBs Only** check box to view the CDBs in the database fleet.
+4.  On **Fleet Summary** page under **Databases** tile, select **CDB** option for **View by** to view the CDBs in the database fleet.
 
      ![](./images/showcdbs.png " ")
 
@@ -64,77 +67,70 @@ This lab assumes you have already completed the following:
 
 5.  On **Fleet Summary** page, click the **Performance** tab. The Performance view displays a tree map of the performance of your Oracle Databases against various database metrics as seen in the **Members** tab. This view is more useful when you have a large number of databases in the fleet. The databases are displayed as a collection of rectangles in different sizes and colors, in which the size of a rectangle indicates the value of the selected metric and the color indicates the change percentage for the selected metric over the selected time period.
 
+     ![](./images/perf.png " ")
+
 ## Task 3: Working with Database Groups
 
 1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**. Under **Database Management**, click **Database Groups**.
 
-2.  Click **Create Database Group**. In the **Create Database Group** dialog, enter the name you want to assign to the new Database Group ex. dbmgmt\_pdbs\_group, optionally add a description, and click **Create Group**.
+     ![](./images/database-group.png " ")
 
-     ![](./images/databasegroup.png " ")
+2.  Click **dbmgmt\_pdbs\_group** under the list of Database Groups.
 
-3.  On the **Database Groups** page, click the group named **dbmgmt\_pdbs\_group**. On the **Database Group Details** page of the **dbmgmt\_pdbs\_group** group, click **Add Managed Database**.
+     ![](./images/dbmgmt-pdbs-group.png " ")
 
-     ![](./images/addmanageddatabase.png " ")
+3.  On **Database group details** page, **Managed Databases** section has the list of all Managed Databases that are part of the group. You can also:
 
-4.  In the **Add Managed Database** dialog, select the **FINANCE** and **HRSTAGE** databases, and click **Add**.
+    - Click **Fleet Summary** to monitor all the Managed Databases in the Database Group on the Fleet Summary page.
+    - Click **Edit Description** to add or edit the description of the Database Group.
+    - Click **Move Resource** to move the Database Group to another compartment.
+    - Click **Jobs** on the left pane under Resources to create a job for the Database Group and monitor job runs and executions.
 
-     ![](./images/addmanagedpdbs.png " ")
+4.  On the **Database Group Details** page, under **Resources** on the left pane, click **Jobs** to list jobs associated with the database group.
 
-5.  On the **Database Groups Details** page, click **Fleet Summary**.
+     ![](./images/jobs.png " ")
 
-     ![](./images/databasegroupfleetsummary.png " ")
+    - **Runs**: On this tab, you can monitor job runs and executions.
+    - **Definitions**: On this tab, you can create a job and view the jobs that are in the Active state and were created within the time period selected in the **Time Period** field.
 
-6.  On the **Fleet Summary** page you will see the summary of databases added to **dbmgmt\_pdbs\_group** Group.
+5.  Under **Runs** tab click on a particular job to view job executions.
 
-     ![](./images/databasegroupfleetsummary1.png " ")
+     ![](./images/jobs-runs.png " ")
 
-## Task 4: Creating and Monitoring Jobs
+6.  Click on a particular Job Execution to view the **Job execution details** page, which contains the execution details of the job and **Job execution output**.
 
-1.  On the **Database Group Details** page, under **Resources** on the left pane, click **Jobs**. Under **Jobs** click on the **Definitions** tab and then click **Create Job**.
+     ![](./images/job-exec-output.png " ")
 
-     ![](./images/createjob.png " ")
+7.  On **Database group details** page, click **Definitions** tab under **Jobs** to view the list of jobs.
 
-2.  You can create a SQL job to perform administrative operations on a single Managed Database or a Database Group.
-In the Create Job dialog:
+     ![](./images/job-definition.png " ")
 
-    **Job Name:** Enter a unique name for the job, let us name it as **dbmgmt\_demo\_job**.
+8.  Click a particular Job under **Job Name** to view Job details.
 
-    **Job Description:** Optionally, enter a description for the job. Let us add “Query the inventory” as the description.
+     ![](./images/job-details.png " ")
 
-    **SQL Type:** Select **Query**
+## Task 4: Monitoring Alert Log
 
-    **Compartment:** Let us select the dbmgmt-demo compartment to create the job resource.
+1.  On the left pane, click **Fleet Summary** to navigate to the Fleet Summary page. Scroll down to the **Members** tab on the Fleet Summary page. Click **MFG** under **Members** tab to go to **Managed database details** page.
 
-    **Timeout:** Select the default value.
+2.  On the left pane, under **Resources** click **Alert logs** to view alert and attention logs generated for the Managed Database in a selected time period. 
 
-    **Provide Schedule Details:** Select the default value.
+     ![](./images/mfg-alert-log.png " ")
 
-    **Specify credentials for the connection:** We have to use the same user account (common credential) for all the databases in the group. Let us enter the **dbsnmp** user name and password and select **Normal** in the Role drop-down list.
+    You can use the drop-down lists, fields, and links on this tab to reduce the number of log entries displayed, or search for specific log entries:
 
-    **Oracle Object Storage for Job Results:** Select the Oracle Object Storage bucket in which the job results will be stored.
-
-    **SQL Command:** Enter a sql statement to execute on both databases.
-
-    Click **Create Job**.
-
-     ![](./images/createjob1.png " ")
-     ![](./images/createjob2.png " ")
-
-3.  Our job is now created and displayed in the Jobs section of the Database Group. The status of the job is Active as it is being executed; we can also see Inactive jobs, which were already executed in the past. Click on the job name to go to **Job Details** page.
-
-     ![](./images/jobruns.png " ")
-
-4.  Click on job runs to get to the **Job Execution Details** page and view the query results.
+    - Use the **Filter by Level** and **Filter by Type** drop-down lists to filter the entries by level or type.
+    - Enter a specific message in the Search field and click Search to search for the alert log entry that contains the message. If you select the Regular Expression check box, then you can enter a regular expression such as ^Errors in the Search field and search for the alert log entry whose message entirely or partially contains the regular expression.
 
 ## Task 5: Monitoring and Managing Individual Databases
 
 1.  On the left pane, click **Fleet Summary** to navigate to the Fleet Summary page. Scroll down to the **Members** tab on the Fleet Summary page.
 
-     ![](./images/members.png " ")
+     ![](./images/fleet-summary.png " ")
 
-2.  Click the **HRSTAGE** database in the **Members** tab. In the **Managed Database Details** page Scroll down to the **Summary** section.
+2.  Click the **MFG** database in the **Members** tab. In the **Managed Database Details** page Scroll down to the **Summary** section.
 
-     ![](./images/summary.png " ")
+     ![](./images/op-stats.png " ")
 
 3.  We can monitor database performance attributes in the **Summary** section, for the time period selected in the **Time Period** menu on the top of this page. Last 60 min is the default time period, and the visual representations or charts provide a quick insight into the health of the database during the selected time period.
 
@@ -155,18 +151,31 @@ In the Create Job dialog:
      - Monitor the tablespaces and data files.
      - View the users created in the Oracle Database.
      - View and edit database parameters.
+     - Monitor the optimizer statistics for a Managed Database.
      - Create and manage Jobs and Job executions for the Managed Database.
      - View the Database Groups the Managed Database is a part of, if any.
 
+5.  On **Managed database details** page, click **Tablespaces** from the left pane to monitor the tablespaces and datafiles stored in each tablespace in the Managed Database.
+
+     ![](./images/tablespace.png " ")
+
+6.  On **Managed database details** page, click **Users** from the left pane to view the users created in the Oracle Database.
+
+     ![](./images/users.png " ")
+
+7.  On **Managed database details** page, click **Database Parameters** from the left pane to view and edit the database parameters for the Managed Database.
+
+     ![](./images/db-parameters.png " ")
+
 ## Task 6: Performing Database Performance Diagnostics
 
-1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **HRSTAGE** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
-     ![](./images/perfhub.png " ")
+     ![](./images/perf-hub.png " ")
 
 2.  This will launch the **Performance Hub** page. Performance Hub provides a single view of the database’s performance and enables you to perform the rapid diagnosis of its issues.
 
-     ![](./images/perfhub1.png " ")
+     ![](./images/perf-hub1.png " ")
 
      Performance Hub provides holistic performance management capabilities providing a single view of the database performance using a varied set of features, such as Active Session History Analytics, Real-time SQL Monitoring, Automatic Database Diagnostics Monitoring (ADDM), Blocking sessions, and so on.
 
@@ -174,7 +183,7 @@ In the Create Job dialog:
 
 3.  Stay in **Performance Hub**, scroll down and click the **SQL Monitoring** tab.
 
-     ![](./images/sqlmonitoring.png " ")
+     ![](./images/sql-monitoring.png " ")
 
      With Real-Time SQL Monitoring, you can perform complex run-time application SQL analysis, identity, and guide optimization of application calls in the data tier.
 
@@ -187,9 +196,14 @@ In the Create Job dialog:
      - Visualize query plans interactively
      - Perform real-time and historical analysis
 
-4.  Stay in **Performance Hub**, scroll down and click the **ADDM** tab.
+4.  Click on the SQL ID to view **Real-time SQL Monitoring for SQL**
 
-     ![](./images/addm.png " ")
+     ![](./images/sql-monitoring1.png " ")
+
+5.  Stay in **Performance Hub**, select the **Last 8 Hours** in the time select. Select the most recent snapshot interval to view the automatic report. Click on the **Top SQL Statements** link in the **Findings** section of the **ADDM** tab to view the recommendations
+
+     ![](./images/addm1.png " ")
+     ![](./images/addm2.png " ")
 
      The statistical data needed for the accurate diagnosis of a problem is saved in the Automatic Workload Repository (AWR) of the Oracle Database. The Automatic Database Diagnostic Monitor (ADDM) analyzes the AWR data regularly, locates the root causes of the performance problems, provides recommendations for correcting any problems, and identifies non-problem areas of the system. You can use ADDM to analyze performance issues after the event, often saving the time and resources needed to reproduce a problem.
 
@@ -201,12 +215,12 @@ In the Create Job dialog:
 
 5.  Stay in **Performance Hub**, scroll down and click the **Blocking Sessions** tab.
 
-     ![](./images/blockingsessions.png " ")
+     ![](./images/blocking-session.png " ")
 
      The **Blocking Sessions** tab displays the current blocking and waiting sessions in a hierarchical display. You can view detailed information about each blocking session and view the sessions blocked by each blocking session. You can also use the tab to inspect or perform deeper analysis of the SQL involved to determine the cause of the blocking. You can perform several operations in the tab, including stopping one or more of the listed sessions to resolve a waiting session problem.
 
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda
+- **Contributors** - Vivek Verma, Sriram Vrinda, Murtaza Husein and Derik Harlow
 - **Last Updated By/Date** - Vivek Verma, July 2022
