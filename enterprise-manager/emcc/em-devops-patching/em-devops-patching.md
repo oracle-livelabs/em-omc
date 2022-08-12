@@ -40,7 +40,7 @@ In this lab you will learn:
     <copy>sudo yum install -y ansible</copy>
     ```
 
-    ![](../em-devops-patching/images/install-ansible.png "install Ansible")
+    ![Install Ansible](../em-devops-patching/images/install-ansible.png " ")
 
     Then hit the **Enter** key on your keyboard.
 
@@ -57,7 +57,7 @@ In this lab you will learn:
     emcc.marketplace.com</copy>
     ```
 
-    ![](../em-devops-patching/images/edit-ansible-config.png "edit Ansible configuration")
+    ![Edit Ansible Configuration](../em-devops-patching/images/edit-ansible-config.png " ")
 
     Save the changes by hitting the **Esc** key on your keyboard, type **:wq** then hit **Enter**.
 
@@ -73,7 +73,7 @@ In this lab you will learn:
     Are you sure you want to continue connecting (yes/no)? yes
     ```
 
-    ![](../em-devops-patching/images/test-ansible-connect.png "test Ansible connectivity")
+    ![Test Ansible Connectivity](../em-devops-patching/images/test-ansible-connect.png " ")
 
     Verify that you receive the **pong** response from Ansible.
 
@@ -84,7 +84,7 @@ In this lab you will learn:
     cd /home/oracle/ansible/yml</copy>
     ```
 
-    ![](../em-devops-patching/images/create-ansible-dirs.png "create Ansible directories")
+    ![Create Ansible Directories](../em-devops-patching/images/create-ansible-dirs.png " ")
 
 
 ## Task 2: Setup DBaaS Pools and verify integration with Ansible
@@ -95,23 +95,23 @@ In this lab you will learn:
     <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
     ```
 
-    ![](../em-devops-patching/images/emcli-root-global-cred.png "EMCLI command to make ROOT global")
+    ![EMCLI Command To Make ROOT Global](../em-devops-patching/images/emcli-root-global-cred.png " ")
 
 2. Open the Oracle Enterprise Manager console window and login as "SYSMAN".
 
-    ![](../em-devops-patching/images/em-sysman-login.png " ")
+    ![EM SYSMAN Login](../em-devops-patching/images/em-sysman-login.png " ")
 
 3. Startup the "db19c.subnet.vcn.oraclevcn.com" database. In the Enterprise Manager console navigate to **Targets** -> **Databases**.
 
-    ![](../em-devops-patching/images/em-targets-databases.png "EM navigation")
+    ![EM Navigation](../em-devops-patching/images/em-targets-databases.png " ")
 
 4. Click on the "db19c.subnet.vcn.oraclevcn.com" database.
 
-    ![](../em-devops-patching/images/em-select-db19c.png "db19c select")
+    ![db19c Select](../em-devops-patching/images/em-select-db19c.png " ")
 
 5. Navigate to **Oracle Database** then **Control** and click on **Startup/Shutdown** menu.
 
-    ![](../em-devops-patching/images/em-db19c-start.png " ")
+    ![EM db19c Start DB](../em-devops-patching/images/em-db19c-start.png " ")
 
 6. Select both **Named** credentials for "Host" and "Database" and click **Ok**.
 
@@ -119,25 +119,25 @@ In this lab you will learn:
 
    Database credential: **OEM_SYS**
 
-    ![](../em-devops-patching/images/em-start-db19c-creds.png "db19c credentials")
+    ![EM db19c Set Credentials](../em-devops-patching/images/em-start-db19c-creds.png " ")
 
 7. On the "Startup/Shutdown: Confirmation" page click **Yes**. Wait until the database is up and running.
 
-    ![](../em-devops-patching/images/em-db19c-start-confirm.png "db19c start")
+    ![EM db19c Start DB](../em-devops-patching/images/em-db19c-start-confirm.png " ")
 
-    ![](../em-devops-patching/images/em-db19c-start-progress.png "db19c start progress")
+    ![EM db19c Start Progress](../em-devops-patching/images/em-db19c-start-progress.png " ")
 
 8. Setup a new Pluggable Database (PDB) Pool in the DBaaS setup. Navigate to Setup -> Cloud and click on **Database**.
 
-    ![](../em-devops-patching/images/em-cloud-database.png "EM navigation")
+    ![EM Navigation](../em-devops-patching/images/em-cloud-database.png " ")
 
 9. Select the **Pluggable Database** option from the "Getting Started" page.
 
-    ![](../em-devops-patching/images/em-cloud-pdb.png "EM Cloud dashboard")
+    ![EM Cloud Dashboard](../em-devops-patching/images/em-cloud-pdb.png " ")
 
 10. Click on **Pluggable Database Pool** menu and then click on the **Create** button.
 
-    ![](../em-devops-patching/images/em-cloud-pdbpool-create.png "EM create pool")
+    ![EM Create Pool](../em-devops-patching/images/em-cloud-pdbpool-create.png " ")
 
 11. On the "Setup" page type the following entries:
 
@@ -159,44 +159,44 @@ In this lab you will learn:
 
     Validate and compare these inputs with the image below.
 
-    ![](../em-devops-patching/images/em-cloud-pool-setup-details.png "EM setup details")
+    ![EM Setup Details](../em-devops-patching/images/em-cloud-pool-setup-details.png " ")
 
 12. Click on the **Add** button.
 
-    ![](../em-devops-patching/images/em-cloud-pool-add-database.png "EM add database")
+    ![EM Add Database](../em-devops-patching/images/em-cloud-pool-add-database.png " ")
 
 13. Select the "db19c.subnet.vcn.oracle.com" and click **Select**.
 
-    ![](../em-devops-patching/images/em-cloud-pool-select-db19c.png "EM select db19c")
+    ![EM Select db19c](../em-devops-patching/images/em-cloud-pool-select-db19c.png " ")
 
 14. Click on the **Next** button.
 
-    ![](../em-devops-patching/images/em-cloud-pool-next.png "EM next button")
+    ![EM Next Button](../em-devops-patching/images/em-cloud-pool-next.png " ")
 
 15. Leave the defaults and click on **Submit**. Wait until the new "PDB_POOL" is created.
 
-    ![](../em-devops-patching/images/em-cloud-pdbpool-submit.png "EM submit button")
+    ![EM Submit Button](../em-devops-patching/images/em-cloud-pdbpool-submit.png " ")
 
 16. Click on **Service Templates** menu and select the "Provision New Empty Pluggable Database" offering. Then click on **Edit**.
 
-    ![](../em-devops-patching/images/em-cloud-template-edit.png "EM Cloud templates")
+    ![EM Cloud Templates](../em-devops-patching/images/em-cloud-template-edit.png " ")
 
 17. Notice that the "Sales Infra Zone" is currently assigned to the "pdbpool" that already existed. We want to assign the newly created "PDB_POOL". Click on **Assign Pool** button.
 
-    ![](../em-devops-patching/images/em-cloud-template-assign-pool.png "EM assign pool")
+    ![EM Assign Pool](../em-devops-patching/images/em-cloud-template-assign-pool.png " ")
 
 18. Select the "PDB_POOL" and then click the **Select** button.
 
-    ![](../em-devops-patching/images/em-cloud-template-pdbpool.png "EM PDBPOOL")
+    ![EM PDBPOOL](../em-devops-patching/images/em-cloud-template-pdbpool.png " ")
 
 19. Click **Next**.
 
-    ![](../em-devops-patching/images/em-cloud-template-review.png "EM template review")
+    ![EM Template Review](../em-devops-patching/images/em-cloud-template-review.png " ")
 
 20. On the next set of pages **don't** modify anything. Just click **Next** until you are in the final "Review" page.
     In the "Review" page click **Edit**.
 
-    ![](../em-devops-patching/images/em-cloud-template-submit.png "EM submit")
+    ![EM Submit Button](../em-devops-patching/images/em-cloud-template-submit.png " ")
 
 ## Task 3: Provision a PDB using DBaaS and Ansible
 
@@ -297,7 +297,7 @@ In this lab you will learn:
     <copy>ansible-playbook /home/oracle/ansible/yml/request_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-patching/images/ansible-request-pdb.png "Ansible request PDB")
+    ![Ansible Request PDB](../em-devops-patching/images/ansible-request-pdb.png " ")
 
 
 4. Review the status of the provisioning request. Review the output of the previous request and find the **uri**.
@@ -349,7 +349,7 @@ In this lab you will learn:
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-patching/images/ansible-get-request-status.png "Ansible get status")
+    ![Ansible Get Status](../em-devops-patching/images/ansible-get-request-status.png " ")
 
     Re-execute the get_pdb_status.yml command until you see that the PDB was successfully created. STATUS should be set as RUNNING.
 
@@ -360,17 +360,17 @@ In this lab you will learn:
     CYRUS/welcome1
     ```
 
-    ![](../em-devops-patching/images/em-sysman-logout.png "EM SYSMAN logout")
+    ![EM SYSMAN Logout](../em-devops-patching/images/em-sysman-logout.png " ")
 
-    ![](../em-devops-patching/images/em-login-cyrus.png "EM login CYRUS")
+    ![EM Login CYRUS](../em-devops-patching/images/em-login-cyrus.png " ")
 
 6. Verify that the new PDB shows up in the portal.
 
-    ![](../em-devops-patching/images/em-verify-pdb.png "EM verify")
+    ![EM Verify PDB Status](../em-devops-patching/images/em-verify-pdb.png " ")
 
 7. Click on the new SSAPDB_API1 name and verify the current PDB software version is 19.12 RU.
 
-    ![](../em-devops-patching/images/em-verify-pdb-version.png "EM db version")
+    ![EM Verify DB Version](../em-devops-patching/images/em-verify-pdb-version.png " ")
 
 ## Task 4: Configure Fleet Maintenance (Gold Image, Container and Pool)
 
@@ -381,7 +381,7 @@ In this lab you will learn:
     wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/oRaI83p8c3Iak4hcqzVmCewOi_NmBXfwNkCWD6Mm8aNXlWMMjyEaOnRgWr3rtLfy/n/natdsecurity/b/labs-files/o/19.14ExportGoldImage.zip</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-get-image.png "Fleet get image")
+    ![Fleet Get Image](../em-devops-patching/images/fleet-get-image.png " ")
 
 2. Create a script with all the required parameters to import the downloaded Gold Image.
 
@@ -415,27 +415,27 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -importSoftwareImage -input_file="data:/home/oracle/fleet/sidb19c_tier3.inp"</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-import-image.png "Fleet import image")
+    ![Fleet Import Image](../em-devops-patching/images/fleet-import-image.png " ")
 
 
 3. Go back to the Oracle Enterprise Manager console and logout from the "CYRUS" account.
 
-    ![](../em-devops-patching/images/em-cyrus-logout.png "EM CYRUS logout")
+    ![EM CYRUS Logout](../em-devops-patching/images/em-cyrus-logout.png " ")
 
 
 4. Login using the "SYSMAN" account.
 
-    ![](../em-devops-patching/images/em-sysman-login-4.png "EM SYSMAN logout")
+    ![EM SYSMAN Logout](../em-devops-patching/images/em-sysman-login-4.png " ")
 
 5. Navigate to Enterprise -> Provisioning and Patching and click on **Procedure Activity**.
 
-    ![](../em-devops-patching/images/em-procedure-activity.png "EM procedure activity")
+    ![EM Procedure Activity](../em-devops-patching/images/em-procedure-activity.png " ")
 
 6. Click on the **ImportSoftwareImage_SYSMAN** task that was just created and refresh the screen until the task successfully completes.
 
-    ![](../em-devops-patching/images/em-procedure-import-image.png "EM procedure import image")
+    ![EM Procedure Import Image](../em-devops-patching/images/em-procedure-import-image.png " ")
 
-    ![](../em-devops-patching/images/em-procedure-import-image-status.png "EM procedure import image status")
+    ![EM Procedure Import Image Status](../em-devops-patching/images/em-procedure-import-image-status.png " ")
 
 7. Go back to the SSH terminal and execute below EMCLI command to verify the Gold Image details.
 
@@ -443,7 +443,7 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-get-image-list.png "Fleet get image")
+    ![Fleet Get Image](../em-devops-patching/images/fleet-get-image-list.png " ")
 
 8. Notice the **IMAGE ID** column. Using the value of this column get the Gold Image version.
 
@@ -451,7 +451,7 @@ In this lab you will learn:
     <copy>emcli db_software_maintenance -getVersions -image_id=<paste the image id here></copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-get-version.png "Fleet get version")
+    ![Fleet Get Version](../em-devops-patching/images/fleet-get-version.png " ")
 
 9. Subscribe the recently created **PDB_POOL** in the DBaaS setup with this Gold Image. Use the **IMAGE ID** used in the previous step.
 
@@ -459,7 +459,7 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -subscribeTarget -pool_name=PDB_POOL -pool_type=pdbaas_pool -image_id=<paste the image id here></copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-subscribe-pool.png "Fleet subscribe pool")
+    ![Fleet Subscribe Pool](../em-devops-patching/images/fleet-subscribe-pool.png " ")
 
 10. Deploy a new Oracle Home that will host a new 19c container using the 19.14 Gold Image.
 
@@ -467,13 +467,13 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="DEPLOY_DB_SOFTWARE" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Deploy Patch OH for Pool" -target_type=oracle_home -description="Deploys the Patched Oracle home on target nodes" -input_file="data:/home/oracle/fleet/deploy197_hr.inp"</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-deploy-software.png "Fleet deploy software")
+    ![Fleet Deploy Software](../em-devops-patching/images/fleet-deploy-software.png " ")
 
 11. Go back to the Oracle Enterprise Manager console. Navigate to Enterprise -> Provisioning and Patching and click on **Procedure Activity**. Monitor the deployment procedure.
 
-    ![](../em-devops-patching/images/em-procedure-deploy-software.png "EM procedure deploy software")
+    ![EM Procedure Deploy Software](../em-devops-patching/images/em-procedure-deploy-software.png " ")
 
-    ![](../em-devops-patching/images/em-procedure-deploy-software-status.png "EM procedure deploy software status")
+    ![EM Procedure Deploy Software Status](../em-devops-patching/images/em-procedure-deploy-software-status.png " ")
 
 12. There's a local listener on the current 19c Oracle Home. This listener needs to be migrated to the 19.14 Oracle Home before we can create the new 19.14 container database.
     Go back to the SSH terminal and execute below EMCLI command.
@@ -482,13 +482,13 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="MIGRATE_LISTENER" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Migrate Listeners" -description="Migrate the listeners to the new Oracle Home, if any"</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-migrate-listener.png "Fleet migrate listener")
+    ![Fleet Migrate Listener](../em-devops-patching/images/fleet-migrate-listener.png " ")
 
 13. Monitor the deployment procedure execution using the Enterprise Manager console.
 
-    ![](../em-devops-patching/images/em-procedure-migrate-listener.png "EM procedure migrate listener")
+    ![EM Procedure Migrate Listener](../em-devops-patching/images/em-procedure-migrate-listener.png " ")
 
-    ![](../em-devops-patching/images/em-procedure-migrate-listener-status.png "EM procedure migrate listener status")
+    ![EM Procedure Migrate Listener Status](../em-devops-patching/images/em-procedure-migrate-listener-status.png " ")
 
 14. Create a new container database (CDB) using the Oracle Home that was just deployed from the 19.14 Gold Image. Go back to the SSH terminal and execute.
 
@@ -496,13 +496,13 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="DEPLOY_CDB" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Deploy CDB" -target_type=oracle_database -description="Deploy a new CDB on the new OH for every CDB on the Pool using the prefix" -db_prefix="ssa"</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-deploy-cdb.png "Fleet deploy CDB")
+    ![Fleet Deploy CDB](../em-devops-patching/images/fleet-deploy-cdb.png " ")
 
 15. Monitor the deployment procedure execution using the Enterprise Manager console.
 
-    ![](../em-devops-patching/images/em-procedure-deploy-cdb.png "EM procedure deploy CDB")
+    ![EM Procedure Deploy CDB](../em-devops-patching/images/em-procedure-deploy-cdb.png " ")
 
-    ![](../em-devops-patching/images/em-procedure-deploy-cdb-status.png "EM procedure deploy CDB status")
+    ![EM Procedure Deploy CDB Status](../em-devops-patching/images/em-procedure-deploy-cdb-status.png " ")
 
 16. Activate the newly created container database (CDB). This means that the PDB_POOL now knows that a new version of the CDB exists and is ready for use.
 
@@ -510,7 +510,7 @@ In this lab you will learn:
     <copy>emcli db_cloud_maintenance -performOperation -purpose="ACTIVATE_CDB" -pool_name="PDB_POOL" -pool_type="pdbaas_pool" -name="Activate the CDBs" -target_type=oracle_database -description="Activates the newly created CDBs"</copy>
     ```
 
-    ![](../em-devops-patching/images/fleet-activate-container.png "Fleet activate container")
+    ![Fleet Activate Container](../em-devops-patching/images/fleet-activate-container.png " ")
 
 
 ## Task 5: Patch a PDB using DBaaS and Ansible
@@ -567,32 +567,32 @@ In this lab you will learn:
     <copy>ansible-playbook /home/oracle/ansible/yml/update_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-patching/images/ansible-update-pdb.png "Ansible update PDB")
+    ![Ansible Update PDB](../em-devops-patching/images/ansible-update-pdb.png " ")
 
 
 9.  Go back to the Oracle Enterprise Manager web console. Navigate to Enterprise -> Provisioning and Patching -> **Procedure Activity**.
 
-    ![](../em-devops-patching/images/em-provisioning-activity.png "EM provisioning activity")
+    ![EM Provisioning Activity](../em-devops-patching/images/em-provisioning-activity.png " ")
 
 10. Monitor the **UPDATE** procedure.
 
-    ![](../em-devops-patching/images/em-procedure-update-pdb.png "EM procedure update PDB")
+    ![EM Procedure Update PDB](../em-devops-patching/images/em-procedure-update-pdb.png " ")
 
-    ![](../em-devops-patching/images/em-procedure-update-pdb-status.png "EM procedure update PDB status")
+    ![EM Procedure Update PDB Status](../em-devops-patching/images/em-procedure-update-pdb-status.png " ")
 
 11. Logout from the SYSMAN account and login with CYRUS user.
 
-    ![](../em-devops-patching/images/em-sysman-logout.png "EM SYSMAN logout")
+    ![EM SYSMAN Logout](../em-devops-patching/images/em-sysman-logout.png " ")
 
-    ![](../em-devops-patching/images/em-login-cyrus.png "EM CYRUS login")
+    ![EM CYRUS Login](../em-devops-patching/images/em-login-cyrus.png " ")
 
 12. Click on the SSAPDB_API1 database.
 
-    ![](../em-devops-patching/images/em-cyrus-pdb1-select.png "EM select PDB")
+    ![EM Select PDB](../em-devops-patching/images/em-cyrus-pdb1-select.png " ")
 
 13. Confirm the version is now 19.14 RU for the PDB.
 
-    ![](../em-devops-patching/images/em-cyrus-pdb1-version.png "EM PDB version")
+    ![EM PDB Version](../em-devops-patching/images/em-cyrus-pdb1-version.png " ")
 
     At this stage any new PDB request using the PDB_POOL will be serviced by the recently activated 19.14 CDB.
 
