@@ -29,16 +29,16 @@ This lab assumes you have following details handy that were displayed upon the s
 
 ## Task 1: Launching Cloud Shell
 
-1. Click the **Cloud Shell**  ![Image alt text](images/cloud_shell_button.png)  button. 
+1. Click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
 
-	![Image alt text](images/cloud_shell.png)
+	![Image alt text](images/cloud-shell.png)
 
 	> **Note:** Use this format for notes, hints, tips. Only use one "Note" at a time in a step.
 
 
 2. A Cloud Shell Instance will be created and text area will be displayed as below. 
 
-  ![Image alt text](images/cloud_shell_textarea.png)
+  ![Image alt text](images/cloud-shell-textarea.png)
 
 
 ## Task 2: Setting Up Kube Config In Cloud Shell
@@ -91,10 +91,10 @@ This lab assumes you have following details handy that were displayed upon the s
     </copy>
     ```  
 3. The content will be downloaded.
-    ![Image alt text](images/git_clone_command.png)
+    ![Image alt text](images/git-clone-command.png)
 
 4. Check the `oci-kubernetes-monitoring` is cloned and validate it has logan directory by running the command **cd oci-kubernetes-monitoring/ && ls**.
-     ![Image alt text](images/oke_monitoring_dir.png)
+     ![Image alt text](images/oke-monitoring-dir.png)
 
 ## Task 5: Create Custom values yaml file
 1. In the **oke-livelab** directory created in the above task, create a directory external-values , using command **mkdir external-values**.
@@ -139,16 +139,114 @@ This lab assumes you have following details handy that were displayed upon the s
       ```
   > **Note:** Provide the release-name-of-choice and keep it handy.
 
+2. To verify the pods are created in the OKE, execute the following command and check the output. Keep the pod names handy for next steps.
+
+    ```
+      <copy>
+      kubectl get pods --namespace=kube-system |grep fluentd
+      </copy>
+    ```
+    ![Image alt text](images/get-fluentd-pods.png)
+   > **Note:** Provide the correct kubernetes namespace. 
+
+
 ## Task 8: Verify All Resources Are Created
-(To Be Updated)
-1. Define deployment and add screenshot (for K8S Object Collection)
-2. Define deamonset and add screenshot (for K8S Logs Collection)
-3. Define configMap and add screenshot (for K8S Object and Logs)
-4. Add path to output plugin logs and attach screenshot.
+  As part of this deployment following resources are created - 
+  - daemonset
+  - deployment
+  - configMap
+  
+1. Daemonset
+    - A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. In this case we are running logs collection daemon on each node. 
+    - We have used Daemonset to collect the Kubernetes System Logs.  
+    - To validate the fluentd daemonset is running, execute the command - 
+      ```
+        <copy>
+          kubectl get daemonset oci-la-fluentd-daemonset --namespace=kube-system
+        </copy>
+      ```  
+    - Output will be in-line with the below snapshot.    
+    ![Image alt text](images/daemonset.png)
+  
+
+2. Deployment 
+    - A Kubernetes deployment is a resource object in Kubernetes that provides declarative updates to applications.
+    - We have used deployment to collect the Kubernetes Object Logs
+    - To validate the fluentd deployment is running, execute the command -
+      ```
+        <copy>
+          kubectl get deployments oci-la-fluentd-deployment --namespace=kube-system
+        </copy>
+      ```  
+    - Output will be in-line with the below snapshot.  
+    ![Image alt text](images/deployment.png)
+
+3. ConfigMap
+    - A ConfigMap is an API object used to store non-confidential data in key-value pairs.
+    - To check the config map of fluentd daemonset, execute the command -
+      ```
+        <copy>
+          kubectl describe configmaps oci-la-fluentd-logs-configmap --namespace=kube-system
+        </copy>
+      ```  
+    - To check the config map of fluentd daemonset, execute the command -
+      ```
+        <copy>
+         kubectl describe configmaps oci-la-fluentd-objects-configmap --namespace=kube-system
+        </copy>
+      ```  
+
+4. To view the logs of the fluent plugin
+    - For Kubernetes System 
+     ```
+     <copy>
+     kubectl logs --tail=100 <fluentd-daemonset-pod-name-from-task-7.2> --namespace=kube-system
+     </copy>
+     ```
+     - For Kubernetes Objects
+     ```
+     <copy>
+     kubectl logs --tail=100 <fluentd-deployment-pod-name-from-task-7.2> --namespace=kube-system
+     </copy>
+     ```
+  5. Verify logs are sent to Logging Analytics 
+     - To verify logs are sent to the Logging Analytics execute the following command. 
+    ```
+    <copy>
+    command to be updated once the feature is ready
+    </copy>
+    ```
+     - Check for the below message in the logs
+     ```
+     I, [2022-08-16T12:31:32.234958 #11]  INFO -- : Generating payload with 95  records for oci_la_log_group_id: <LA Log Group Id Generated Upon Clicking Green Button>
+     I, [2022-08-16T12:31:32.402328 #11]  INFO -- : The payload has been successfully uploaded to logAnalytics -
+                         oci_la_log_group_id: <LA Log Group Id Generated Upon Clicking Green Button>,
+                         ConsumedRecords: 95,
+                         Date: Tue, 16 Aug 2022 12:31:32 GMT,
+                         Time: 2022-08-16T12:31:32.000Z,
+                         opc-request-id: D61380FCECC84BD8A84349A766CF59FE/DD09F19E0CDBCDFCC5A4741CB178C3DF/897B96A83E503277C0B2287E2D4B2221,
+                         opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
+     ```
+   
 ## Task 9: Validate in the Log Explorer
-(To Be Updated)
-1. Once the logs are collected, you can head over to Log Explorer to validate the data.
-    ![Image alt text](images/log_explorer.png)
+
+1. Log In to the console with the user. (Would we be providing link directly to Log Explorer ??)
+
+2. From the Logging Analytics Home Page, select Log Explorer from the drop down menu.
+   ![Image alt text](images/select-log-explorer.png) 
+
+3. By default, the Log Explorer will show the Pie-Chart view of all the logs received from the OKE. 
+    ![Image alt text](images/log-explorer-pie-chart-view.png)
+
+4. Drill Down to any log source for e.g Kubernetes Kubelet Logs
+    ![Image alt text](images/drill-down.png) 
+
+5. The view would be like below.
+    ![Image alt text](images/kubelet-logsource-logs.png) 
+
+6. Click on the expand field button, all the captured fields are displayed.
+    ![Image alt text](images/expand-fields.png)    
+
 ## Learn More
 
 *(optional - include links to docs, white papers, blogs, etc)*
