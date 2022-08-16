@@ -1,11 +1,11 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Job System Automation",
+  "workshoptitle": "Oracle Enterprise Manager - Database Migration Workbench",
   "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "Introduction to Job System Automation Workshop",
-      "filename": "./../../intro/intro-job-system-automation.md"
+      "description": "Introduction to Database Migration Workbench Workshop",
+      "filename": "./../../intro/intro-migration-workbench-adb.md"
     },
     {
       "title": "Lab 1: Environment Setup",
@@ -14,14 +14,15 @@
     },
     {
       "title": "Lab 2: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
+      "description": "How to validate and start all the workshop components",
       "publisheddate": "10/14/2020",
-      "filename": "../../initialize-environment/initialize-environment.md"
+      "filename": "./../../em-migration-workbench-adb/initialize-environment/initialize-environment.md"
     },
     {
-      "title": "Lab 3: Job System Automation",
-      "description": "This lab provides an overview of the Enterprise Manager Job System and how to use it to automate routine administrative tasks such as backup, SQL scripts, OS jobs etc.",
-      "filename": "./../../em-job-system-automation/em-job-system-automation.md"
+      "title": "Lab 3: Migrate and upgrade 12c database to 19c ADB",
+      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
+      "publisheddate": "7/16/2020",
+      "filename": "./../../em-migration-workbench-adb/migrate-to-adb/migrate-to-adb.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",

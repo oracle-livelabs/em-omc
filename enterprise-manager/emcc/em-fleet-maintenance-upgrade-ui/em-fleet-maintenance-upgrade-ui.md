@@ -112,6 +112,10 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/d9ea997d07c30f80083e097f6b578200.png " ")
 
+    Alternately, you might see a pop up for import options, while opening the file. Select OK and you should be able to view the contents of the file.
+
+    ![](images/open-office-msg.png "pop-up message")
+
     From the report, you will see the current environment has five different Oracle home software versions.
 
     ![](images/84e0ac92b29e45e91b9d17a8e0b3a2da.jpg " ")
@@ -316,6 +320,16 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
     ![](images/submit-create-image.png "gi creation")
 
+    If you encounter session timeout error, copy paste the below command to re-login as sysman and re-establish the session.
+
+        ```
+        <copy>emcli login -u=sysman -p=welcome1</copy>
+        ```
+
+    ![](images/session-timeout.png "session timeout error ")
+
+    If you encounter session timeout error elsewhere in the lab, you can copy and paste the above command in the terminal and continue.
+    
 4. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘CreateGoldImage\*’ run
 
     ![](images/submit-create-image-dp.png "dp submission")
