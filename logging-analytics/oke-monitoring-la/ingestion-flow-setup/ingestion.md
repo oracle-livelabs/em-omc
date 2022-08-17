@@ -69,7 +69,13 @@ This lab assumes you have following details handy that were displayed upon the s
     ```
 
 ## Task 3: Accessing OKE Cluster In Cloud Shell
-1. To verify whether the kubeconfig is correctly set up and you are able to access the OKE Cluster run the command **kubectl get nodes**.
+1. To verify whether the kubeconfig is correctly set up and you are able to access the OKE Cluster run the following command.
+
+     ```
+       <copy>
+          kubectl get nodes
+       </copy>
+     ```
    
      ```
       logan_test@cloudshell:~ (us-phoenix-1)$ kubectl get nodes
@@ -87,7 +93,7 @@ This lab assumes you have following details handy that were displayed upon the s
 2. Download the helm chart configuration from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring) using the following command.
     ```
     <copy>
-    git clone https://github.com/oracle-quickstart/oci-kubernetes-monitoring.git
+       git clone https://github.com/oracle-quickstart/oci-kubernetes-monitoring.git
     </copy>
     ```  
 3. The content will be downloaded.
@@ -97,10 +103,20 @@ This lab assumes you have following details handy that were displayed upon the s
      ![Image alt text](images/oke-monitoring-dir.png)
 
 ## Task 5: Create Custom values yaml file
-1. In the **oke-livelab** directory created in the above task, create a directory external-values , using command **mkdir external-values**.
+1. In the **oke-livelab** directory created in the above task, create a directory external-values , using following command.
+      ```
+        <copy>
+          mkdir external-values
+        </copy>
+      ```
 
-2. Create a file values.yaml in the external-values directory using command **touch values.yaml**
 
+2. Create a file values.yaml in the external-values directory using following command.
+      ```
+        <copy>
+          touch values.yaml
+        </copy>
+      ```
 3. In the values.yaml file created above, paste the following content and update the values of the respective fields.
       ```
       <copy>
@@ -143,7 +159,7 @@ This lab assumes you have following details handy that were displayed upon the s
 
     ```
       <copy>
-      kubectl get pods --namespace=kube-system |grep fluentd
+      kubectl get pods --namespace=Live-Lab-Generated-Kubernetes-Namespace |grep fluentd
       </copy>
     ```
     ![Image alt text](images/get-fluentd-pods.png)
@@ -162,7 +178,7 @@ This lab assumes you have following details handy that were displayed upon the s
     - To validate the fluentd daemonset is running, execute the command - 
       ```
         <copy>
-          kubectl get daemonset oci-la-fluentd-daemonset --namespace=kube-system
+          kubectl get daemonset oci-la-fluentd-daemonset --namespace=Live-Lab-Generated-Kubernetes-Namespace
         </copy>
       ```  
     - Output will be in-line with the below snapshot.    
@@ -175,41 +191,62 @@ This lab assumes you have following details handy that were displayed upon the s
     - To validate the fluentd deployment is running, execute the command -
       ```
         <copy>
-          kubectl get deployments oci-la-fluentd-deployment --namespace=kube-system
+          kubectl get deployments oci-la-fluentd-deployment --namespace=Live-Lab-Generated-Kubernetes-Namespace
         </copy>
       ```  
     - Output will be in-line with the below snapshot.  
     ![Image alt text](images/deployment.png)
 
-3. ConfigMap
+3. Service Account, Cluster Role and Cluster Role Binding
+    - **Service Account** gives identity to the pods which can be used to authenticate Pods with API server and fetch the metadata details.    
+        ```
+          <copy>
+            kubectl describe serviceaccount/oci-la-fluentd-serviceaccount --namespace=Live-Lab-Generated-Kubernetes-Namespace
+          </copy>
+         ```  
+    - **Cluster Role** defines the permission to the user on cluster-scoped resources.
+        ```
+          <copy>
+            kubectl describe clusterrole/oci-la-fluentd-logs-clusterrole
+          </copy>
+         ```  
+    - **Cluster Role Binding** grants the permission defined in the Cluster Role to the user.
+         ```
+          <copy>
+            kubectl describe clusterrolebinding/oci-la-fluentd-logs-clusterrolebinding
+          </copy>
+         ```  
+   
+4. ConfigMap
     - A ConfigMap is an API object used to store non-confidential data in key-value pairs.
     - To check the config map of fluentd daemonset, execute the command -
       ```
         <copy>
-          kubectl describe configmaps oci-la-fluentd-logs-configmap --namespace=kube-system
+          kubectl describe configmaps oci-la-fluentd-logs-configmap --namespace=Live-Lab-Generated-Kubernetes-Namespace
         </copy>
       ```  
     - To check the config map of fluentd daemonset, execute the command -
       ```
         <copy>
-         kubectl describe configmaps oci-la-fluentd-objects-configmap --namespace=kube-system
+         kubectl describe configmaps oci-la-fluentd-objects-configmap --namespace=Live-Lab-Generated-Kubernetes-Namespace
         </copy>
       ```  
+ 
 
-4. To view the logs of the fluent plugin
+5. To view the logs of the fluent plugin
     - For Kubernetes System 
      ```
      <copy>
-     kubectl logs --tail=100 <fluentd-daemonset-pod-name-from-task-7.2> --namespace=kube-system
+     kubectl logs --tail=100 <fluentd-daemonset-pod-name-from-task-7.2> --namespace=Live-Lab-Generated-Kubernetes-Namespace
      </copy>
      ```
      - For Kubernetes Objects
      ```
      <copy>
-     kubectl logs --tail=100 <fluentd-deployment-pod-name-from-task-7.2> --namespace=kube-system
+     kubectl logs --tail=100 <fluentd-deployment-pod-name-from-task-7.2> --namespace=Live-Lab-Generated-Kubernetes-Namespace
      </copy>
      ```
-  5. Verify logs are sent to Logging Analytics 
+6. Verify logs are sent to Logging Analytics 
      - To verify logs are sent to the Logging Analytics execute the following command. 
     ```
     <copy>

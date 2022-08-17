@@ -1,27 +1,27 @@
 # Introduction
 
 ## About this Workshop
+Kubernetes provides a highly robust and extremely customizable platform for managing automatically deploying and scaling containerized workloads. Building a monitoring and troubleshooting system for this entire environment is a very challenging task. Oracle Cloud Infrastructure (OCI) Logging Analytics bridges this monitoring gap by providing a one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications.
 
-This live lab will cover the OCI Logging Analytics' end-to-end solution to monitor Oracle Container Engine for Kubernetes (OKE) through Logging Analytics.
+This live lab will cover setting up this end-to-end Kubernetes Monitoring Solution and perform the Analytics.
 
 Estimated Workshop Time: 01 hours 30 minutes
 
 ### Objectives
 
 In this workshop, you will learn how to:
-* Create a setup to monitor OKE System and Service Logs
-* Create a setup to monitor logs of Custom Applications/Services deployed on OKE
+* Setup OCI Logging Analytics solution to monitor OKE System and Service Logs.
+* Create a setup to monitor logs of Custom Applications/Services deployed on OKE.
 
 
-### Prerequisites (Optional)
-
+### Prerequisites
 
 
 This lab assumes you have:
-* An Oracle account
-* Basic understanding of Kubernetes
+* An Oracle account.
+* Basic understanding of Kubernetes.
 
-In general, the Introduction does not have Steps.
+
 
 ## Learn More
 
