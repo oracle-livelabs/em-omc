@@ -200,11 +200,7 @@ In this lab you will learn:
 
 ## Task 3: Provision a PDB using DBaaS and Ansible
 
-<<<<<<< HEAD
 1. In this step, we are going to make use of both **uri** parameters below. These **uri** parameters are part of the "Service Template" configuration. You can get these parameters by executing the get PaaS Zone REST API. This step won't cover how to get those parameters. We are just going to review them and make use of them in the next steps.
-=======
-1. In this step, we are going to make use of both **uri** parameters below. These **uri** parameters are part of the "Service Template" configuration. You can get these parameters by executing the get PaaS Zone REST API. This step won't cover how to get those parameter. We are just going to review them and make use of them in the next steps.
->>>>>>> 7c3f6d79b0ed89c276479659bb6a1d29382ab5c0
 
     ```
     zone:
