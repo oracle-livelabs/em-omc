@@ -5,7 +5,7 @@
     {
       "title": "Introduction",
       "description": "Introduction to Patch Oracle Databases with Ansible and Enterprise Manager Workshop",
-      "filename": "./../../intro/intro-devops-workshop.md"
+      "filename": "./../../intro/intro-devops-patching-workshop.md"
     },
     {
       "title": "Lab 1: Environment Setup",
