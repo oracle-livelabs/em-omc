@@ -286,14 +286,11 @@ This lab assumes you have following details handy that were displayed upon the s
 
 ## Learn More
 
-*(optional - include links to docs, white papers, blogs, etc)*
-
-* [URL text 1](http://docs.oracle.com)
-* [URL text 2](http://docs.oracle.com)
+* [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 
 ## Acknowledgements
-* **Author** - Vikram Reddy , Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , Logging Analytics
+* **Author** - Vikram Reddy , OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
 * **Last Updated By/Date** - Vikram Reddy, Aug, 2022
 
 
