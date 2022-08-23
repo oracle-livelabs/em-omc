@@ -366,7 +366,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![export-results-for-created-drift-definitions-page](images/export-results-for-created-drift-definitions.png " export-results-for-created-drift-definitions-page ")
 
-25. You can choose the specific results to export. Export Results has been in different formats, Click **OK**.
+25. You can choose the specific results to export. Click **OK**.
 
   ![different-sets-of-results-export-page](images/different-sets-of-results-export.png " different-sets-of-results-export-page ")
 
