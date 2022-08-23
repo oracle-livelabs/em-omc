@@ -333,7 +333,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
-  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
 21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
