@@ -4,7 +4,7 @@
 
 In this Lab, you will learn to monitor the health, performance, uptime and availability of the E-Business Suite application and related infrastructure for a large enterprise application.
 
-Estimated Lab Time: 10 minutes
+Estimated Lab Time: 5 minutes
 
 ### Objectives
 In this lab, our goal is to answer the following questions:
@@ -22,7 +22,7 @@ Note: If at any point you want to come to the initial screen - you can use your 
 
 1. Click on the field "Entity Type" in the Fields Panel in Log Explorer to bring up a faceted view of all the monitored entities.
 
-   ![](images/Entity-facet.png "UIdescription")
+   ![](images/entity-facet.png "UIdescription")
 
 2. Click on "Show Trend Chart" in Facet view to visualize the logs trend of these entity types.
 
@@ -53,7 +53,7 @@ Note: If at any point you want to come to the initial screen - you can use your 
 
 7. Click "Apply"
 
-   ![](images/EBS-filtered.png "UIdescription")
+   ![](images/ebs-filtered.png "UIdescription")
 
   You can also visualize the topology of the this EBS deployment by clicking on the "Topology" icon in the scope filter. Topology view can be used to filter logs from a specific Entity.
 

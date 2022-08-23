@@ -27,7 +27,7 @@ Here is the analysis view that you'll be using from scratch.
 
   Default view for reference
 
-  ![](images/default-landing-LE.png "UIdescription")
+  ![](images/default-landing-le.png "UIdescription")
 
   Next, you'll open a **Saved Search** by clicking Actions and then Open.  
 
