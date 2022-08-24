@@ -1,25 +1,25 @@
-# Automated Database Patching at Scale with Fleet Maintenance UI
+# Automated Database Update(Patching) at Scale with Fleet Maintenance UI
 
 ## Introduction
-In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet User Interface to automate the patching of multiple Oracle Databases in one flow.
+In this workshop, you will experience the benefits of using the Oracle Enterprise Manager Fleet Maintenance User Interface to automate the update(patching) of multiple Oracle Databases in one flow.
 
 *Estimated Time*: 60 minutes
 
 
 ### About the Database Fleet Maintenance UI capability in Oracle Enterprise Manager
 
-Database Fleet Maintenance is an end-to-end automated solution for patching and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate patching of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
+Database Fleet Maintenance is an end-to-end automated solution for update(patching) and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate update(patching) of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
 
-Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to ease automated patching, update, and upgrade of your database fleet.
+Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to ease automated update(patching), and upgrade of your database fleet.
 
 Benefits of using the EM Fleet Maintenance capability include:
 - Minimizing downtime with use of Out of Place patching
 - Enterprise scalability using the Enterprise Manger Deployment Procedures Framework
-- A single pane of glass for monitoring and managing the entire patching and upgrade operations
-- Ability to schedule/retry/suspend/resume operations.
-- Patch Oracle Databases across different infrastructure including engineered systems like Oracle Exadata
+- A single pane of glass for monitoring and managing the entire update(patching) and upgrade operations
+- Ability to schedule/retry/suspend/resume operations
+- Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
-![](images/em-fleet-maintenance-overview-1.png " ")
+![](images/new-em-fleet-maintenance-overview.png " ")
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
@@ -34,8 +34,8 @@ Watch a preview of database patching using Oracle Enterprise Manager Fleet Maint
 In this lab you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Detect Configuration Pollution                             | 10 minutes  | Analyze the database estate using Software Standardization.                                                                                                                |                   |
-| 2                    | Oracle Database Patching with Fleet Maintenance | 50  minutes  | Patch a Database target using a Gold Image. As part of patching the Container Database, all Oracle Pluggable Databases in that Container Database will automatically get patched. |                   |
+| 1                    | Detect Configuration Pollution                             | 10 minutes  | Analyze the database estate using Software Standardization.                                                                                                                | Provides recommendation to run minimum version of databases to ease your maintenance activities.                  |
+| 2                    | Oracle Database Update(Patching) with Fleet Maintenance | 50  minutes  | Update(Patch) a Database target using a Gold Image. As part of patching the Container Database, all Oracle Pluggable Databases in that Container Database will automatically get patched. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Database.                  |
 
 
 ### Prerequisites
@@ -60,8 +60,10 @@ To ensure smooth execution of the use cases, we have pre-hosted the scripts to b
 In this lab activity, you will analyze the database estate to identify any configuration drift (pollution) using the Software Standardization Advisor.
 
 Software Standardization Advisor enables administrators to understand various database configurations prevailing in their environment. Each deployment with a unique platform, release and patch level is identified as a distinct configuration. This provides the administrators a view of the configuration pollution in their estate. It also analyzes and provides a recommendation to standardize the environment and reduce the number of configurations required for managing the database estate.
-
+<!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
+-->
+  ![](images/new-em-fleet-maintenance-overview-2.png " ")
 
 1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -81,11 +83,11 @@ Software Standardization Advisor enables administrators to understand various da
 
 3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select Software ***Standardization Advisor***
 
-    ![](images/software-std-advisor.jpg " ")
+    ![](images/new-software-std-advisor.png "additional items in drop down ")
 
 4.  Software Standardization Advisor shows two graphs depicting current configuration and recommended configuration.
 
-    ![](images/em-pollution-detection-1.png " ")
+    ![](images/generate-report.png "pollution detection report generation ")
 
     Graphs may look different from the ones represented in the workbook.
     A Software Configuration is identified by the database release, platform, and the patches installed on the target.
@@ -95,25 +97,39 @@ Software Standardization Advisor enables administrators to understand various da
     Next, we will review the report generated.
 
 
-5.  On the same page, click on **Generate Report**.
+5.  On the same page, click on **Generate Report**. Select yes when it prompts to generate the report.
+    ![](images/generate-report-confirmation.png "pollution detection report generation ")
+
 
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/em-pollution-detection-2.png " ")
+    ![](images/current-config.png " ")
 
     When you download the report, should a warning on XLS format and file extension mismatch pop up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
     ![](images/d9ea997d07c30f80083e097f6b578200.png " ")
 
+    Alternately, you might see a pop up for import options, while opening the file. Select OK and you should be able to view the contents of the file.
+
+    ![](images/open-office-msg.png "pop-up message")
+
     From the report, you will see the current environment has five different Oracle home software versions.
 
     ![](images/84e0ac92b29e45e91b9d17a8e0b3a2da.jpg " ")
 
+    Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
+
+    ![](images/workshop-instance.png " ")
+
+    Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
+
 7.  Next, click on **Recommended Configurations** to open the Excel Report.
 
-    ![](images/em-pollution-detection-3.png " ")
+    ![](images/recommend-config.png "recommended changes ")
 
-    The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration.
+    <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
+
+    The reports recommendation is to consolidate the configuration drift (pollution) from the current five database to two (18c and 19c). This recommendation would reduce the number of configurations and standardize the environment for easier management.
 
     ![](images/06ff90fdba8aa5abebd066086e33f700.jpg " ")
 
@@ -129,7 +145,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     - Patch database “hr.subnet.vcn.oraclevcn.com” from 18.3 to 18.10 -->
 
-## Task 3: Database Server patching with Fleet maintenance (Overview)
+## Task 3: Database Server update(patching) with Fleet maintenance (Overview)
 
 ### **Database Fleet Maintenance**
 
@@ -137,12 +153,12 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 
 A gold image is the end of state software definition that contains information about the base software version plus the additional patches. Targets, to be patched, subscribe to a relevant Gold Image. Target subscription persists through the lifecycle of the Target or Gold Image unless modified by an administrator.
 
-
-  ![](images/DB_Fleet_Patching.png " ")
+  <!--![](images/DB_Fleet_Patching.png " ")  -->
+  ![](images/new-db-fleet-patching.png "new interface")
 
 ### **Patching with Fleet Maintenance**
 
-We will go through steps for patching database target ***hr.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 18.3.0.0.0 version. The goal is to patch this target to 18.10.0.0.0. As part of the patching exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
+We will go through steps for update(patching) database target ***hr.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 18.3.0.0.0 version. The goal is to patch this target to 18.10.0.0.0. As part of the update(patching) exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
 
 1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
 
@@ -150,7 +166,7 @@ We will go through steps for patching database target ***hr.subnet.vcn.oraclevcn
     ![](images/ec0b6926d4f65b52a771483ace24055c.png " ")
 
 You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a pluggable database ‘HRPDB’. Both the container database and pluggable database targets have status ‘UP’ and version 18.3.0.0.0. If the target status is ‘DOWN’, then start the target (using */home/oracle/start\_db\_hr.sh*).
-    ![](images/c064eebf1a17dfd14d9c5921a88f93cb.jpg " ")
+    ![](images/target-hr-status.png "hr db status ")
 
 
 
@@ -166,13 +182,16 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***All Targets.***
 
-    Then on the All Targets page, in the upper left search field, type or copy “*Orasidb18c\_home1\_2020\_05\_13\_04\_10\_9\_emcc.marketplace.com\_3192*” in the “Search Target Name” box. Click on Search icon and in the results page click on the target name.
+    Then on the All Targets page, in the upper left search field, type or copy “*Orasidb18c\_home1\_2020\_05\_13\_04\_10\_9\_emcc.marketplace.com\_3192*” in the “Search Target Name” box. Click on Search icon.
+
 
     ```
     <copy>Orasidb18c_home1_2020_05_13_04_10_9_emcc.marketplace.com_3192</copy>
     ```
+    ![](images/patch-3192.png " ")
+    In the results page click on the target name.
 
-    ![](images/ea2416958193764cc47426f0ad8a0a67.jpg " ")
+    ![](images/patch-3192-details.png " ")
 
 3. From the terminal on your remote desktop, Create the New Gold Image using the following emcli command
 
@@ -180,7 +199,17 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     <copy>cd ~/fleet
     sh create_image_Tier2_sidb_x64.sh</copy>
     ```
-    ![](images/1791b5df10396b908e81340d2c6abed4.png " ")
+    ![](images/create-image-Tier2-sidb-x64.png "script to create GI ")
+
+    If you encounter session timeout error, copy paste the below command to re-login as sysman and re-establish the session.
+
+        ```
+        <copy>emcli login -u=sysman -p=welcome1</copy>
+        ```
+
+    ![](images/session-timeout.png "session timeout error ")
+
+    If you encounter session timeout error elsewhere in the lab, you can copy and paste the above command in the terminal and continue.
 
 4. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
@@ -188,19 +217,19 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 5. Click on ‘CreateGoldImageProfile\_...’ run and review the steps performed.  
 
-    ![](images/f30e3920a7a7e18e4bdfffa328e9d483.png " ")
+    ![](images/dp-create-image-1.png "dp for gold image ")
 
 6. Use ‘Show’ filter ‘Steps Not Skipped’ ; View:‘Expand All’ for detailed view of all the steps performed to complete an operation.
 
-    ![](images/c3d174049d514ac6c22ce65167d55776.png " ")
+    ![](images/dp-1-completed.png "DP completed ")
 
 7. List Available Gold Images. Execute the following commands in the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#2 SI DB Linux64*’* in the emcli command output:
 
-    ```
+    ```DP completed
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](images/979c7a2ab44a65b0a6faf911cac1b64a.png " ")
+    ![](images/gi1-imageid.png "GI1 image details ")
 
     IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
 
@@ -208,7 +237,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     If the image id is same as the one highlighted above, you may use the below command
     ```
-    <copy>emcli db_software_maintenance -getVersions -image_id=A79586CA133F1E27E0532A00000A5633</copy>
+    <copy>emcli db_software_maintenance -getVersions -image_id=E27275341BC25561E053AD00000A3CBD</copy>
     ```   
 
     else make changes in the below command and execute it.
@@ -219,7 +248,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     This command lists Gold Image versions with their VERSION ID and STATUS.
 
-    ![](images/a9b1233fb416f91b34518744dc0d7e9a.png " ")
+    ![](images/gi1-versionid.png "GI1 version id ")
 
     When a Gold Image is created for the first time, its first version is created as per the input and marked as current. Whenever we run a DEPLOY operation for a target, Gold Image version marked as CURRENT is used to deploy the new Oracle home.
 
@@ -230,7 +259,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     - Review and execute below emcli command. If the image id is same as the one highlighted above, you may use the below command:  
 
     ```
-    <copy>emcli db_software_maintenance -checkApplicability -image_id=A79586CA133F1E27E0532A00000A5633 -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
+    <copy>emcli db_software_maintenance -checkApplicability -image_id=E27275341BC25561E053AD00000A3CBD -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
     ```
 
     else
@@ -245,13 +274,13 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     - Output of above emcli command is redirected to a file. You may review the output using any standard editor or tool of your choice.
 
-    ![](images/5f050173735f58aabd279987996192ea.png " ")
+    ![](images/image-applicable.png "image applicable ")
 
     This command can show one of the following results:
 
-    - Applicable: The image and database target contain the same set of bug fixes. The image can be applied on the specified target.
-    - Applicable and Image has more bug fixes: The image contains more bug fixes than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
-    - Not Applicable: The database contains more bug fixes than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
+    - **Applicable**: The image and database target contain the same set of bug fixes(part of a patch). The image can be applied on the specified target.
+    - **Applicable and Image has more bug fixes**: The image contains more bug fixes(part of a patch) than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
+    - **Not Applicable**: The database contains more bug fixes(part of a patch) than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
 
 ## Task 5: Subscribe Database
 
@@ -263,7 +292,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     If the image id is same as the one highlighted above (Task 4, step 7), you may use the below command:
     ```
-    <copy>emcli db_software_maintenance -subscribeTarget -target_name=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id=A79586CA133F1E27E0532A00000A5633</copy>
+    <copy>emcli db_software_maintenance -subscribeTarget -target_name=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id=E27275341BC25561E053AD00000A3CBD</copy>
     ```
 
     else
@@ -277,7 +306,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
    -  target\_type – type of target to be patched. This should be oracle\_database in this case
    -  image\_id – ID of the Gold Image to which the target should be patched
 
-    ![](images/ca94c4b76f9c24eee24f4d06b35c6764.png " ")
+    ![](images/hr_subscribe.png "hr subscribe ")
 
 ## Task 6: Deploy Image
 
@@ -291,7 +320,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
 
-    ![](images/targets-databases.png "navigation")
+    ![](images/ec0b6926d4f65b52a771483ace24055c.png "navigation")
 
     and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
 
@@ -300,7 +329,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 2. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
 
-    ![](images/db-selection.png "selection")
+    ![](images/hr-patch-screen1.png "selection")
 
     Where:
     -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***Tier #2 SI DB Linux64***.
@@ -310,7 +339,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/input-values.png "input values")
+    ![](images/hr-patch-screen2.png "input values")
 
     We can enter following values
     Under Maintenance tasks
@@ -321,13 +350,14 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     Check both Migrate Listener and Update Database options
     Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
-        Normal Host Credentials as ***ORACLE***
-        Privileged Host Credentials as ***ROOT***
-        SYSDBA Database Credentials as ***SYS_SALES***
+    -  Normal Host Credentials as ***ORACLE***
+    -  Privileged Host Credentials as ***ROOT***
+    -  SYSDBA Database Credentials as ***SYS_SALES***
+    -  Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
 
     Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
 
-    Once deployment of new Oracle home is complete, we can change the schedule of the Deployment Procedure for migrate listener and update database to execute these tasks immediately.  
+    Once deployment of new Oracle home is complete, the Deployment Procedures for migrate listener and update database will execute immediately ( if we have selected start as Immediately/Auto ).  
 
 4. We can validate our entries (new Oracle home, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation mode
 
@@ -341,7 +371,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 6. ***Submit*** the operation. Here, we can see that we have opted to deploy, migrate and update the database at once. These tasks will be performed independently based on their schedule.
 
-    ![](images/submit.png "submit operation")    
+    ![](images/new-submit.png "submit operation")    
 
     We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
     ```
@@ -357,56 +387,50 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
 7. Review the Deployment Procedures (DP).
 
-   ![](images/review-dp.png "review")
+   ![](images/new-deploy-1.png "review")
 
    Select DP related to Deploy and click on it. It will show details of the activity performed by the DP.
 
-   ![](images/dp-layout.png "review dp for layout OH")
+   ![](images/hr-deploy-complete.png "review dp for layout OH")
 
    Here, we see that the DP has successfully installed new Oracle home.(putty screen shows the new Oracle home layout)
 
 ## Task 7: Migrate Listener
 
-1. In task 6 (above), we submitted a migration of the listener. If it needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6). We see that this task has a scheduled state. In the interest of time and to complete this workshop, we can change it to run immediately. To do so, navigate to  ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select migrate DP.
-  Click on reschedule.
+1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
+    ![](images/uncheck-mig-listener.png " ")
 
-  ![](images/mig-listener-rsch.png "DP for migrate listener")
+    The image below shows the task is in a running state.
 
-  In the new page, select immediately for start and reschedule.
+    ![](images/hr-listener-running.png "DP for migrate listener")
 
-  ![](images/listener-rsch.png "reschedule migrate dp")
+    Select the running task to see the various steps performed.
 
-  We can now see that migrate operation is running. We can select it and see the various steps performed by it.
+    ![](images/hr-listener-complete.png "details of DP")
+    We can now see that the migration operation completed successfully.
 
-  ![](images/select-listener.png "select DP")
+## Task 8: Update(Patching) Database – Patch 18.3 to 18.10
 
-  ![](images/listener-details.png "details of DP")
+1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6).
+    ![](images/uncheck-update-db.png " ")
 
-## Task 8: Update Database – Patch 18.3 to 18.10
+    The image below shows the task is in a running state.
 
-1. Similar to listener migration, that submitted for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6). We see that this task is at scheduled state. In the interest of time and to complete this Live Lab workshop, we can change its schedule to run immediately. Navigate to  ***Enterprise >> Provisioning and Patching >> Procedure Activity*** and select update DP.
+    ![](images/hr-update-running.png "DP update")
 
-   Click on reschedule.
+    Select the running task to see the various steps performed.
 
-   ![](images/db-update.png "DP update")
+    ![](images/hr-update-complete.png "DP completed")
 
-   In the new page, select immediately for start and reschedule.
-   ![](images/31-reschedule.png "Update DP reschedule")   
+    Update operation has completed successfully.
 
-   We have selected update operation and see the various steps performed by it. In the terminal, we can see that ***hr*** database is down for Oracle home switch over. After startup, ***hr*** database will run from new Oracle home.
+    Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
 
-   ![](images/hr-new-home.png "layout of new oracle home")
-
-   Update operation has completed successfully.
-
-   ![](images/hr-new-home-completed.png "DP completed")
-
-   Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
-   ![](images/post_patch_db_version.png "new version check")
+   ![](images/hr-status-post-patch.png "new version check")
 
 ## Task 9:  Rollback Database – Reversed Patch 18.10 to 18.3
 
-Once the database is updated, we will perform a rollback to Oracle Database 18.3. In a future release capability is being planned to perform rollback of an operation using the UI.
+Once the database is updated(patched), we will perform a rollback to Oracle Database 18.3. In a future release capability is being planned to perform rollback of an operation using the UI.
 
 1. Review and execute below command from the terminal to rollback database Target ***hr.subnet.vcn.oraclevcn.com***
 
@@ -421,28 +445,31 @@ Once the database is updated, we will perform a rollback to Oracle Database 18.3
     sh rollback_hr.sh</copy>
     ```
 
-    ![](images/acb8ad0f4fb9ad39503081f5cdfb9e79.png " ")
+    ![](images/hr-rollback-submit.png " ")
 
-2. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
+2. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
+    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
-    ![](images/6999f44a0845085f3660f365bb24d7d3.png " ")
+    Monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
+
+    ![](images/rollback-dp.png "rollback")
 
 3. Review the Procedure Activity steps performed         
 
-    ![](images/6a12674bdf0e9535535b90cf043a1605.png " ")
+    ![](images/rollback-dp-complete.png "rollback complete")
 
 4. Verify the rolled back target by going to ***Targets >> Databases*** as shown
 below.
 
-    ![](images/7afa56b6cb5fee053c57b141a5c08245.png " ")
+    ![](images/hr-rollback.png "hr _ROLLBACK")
 
 ## Task 10:  Cleanup Old homes
 
 1. Clean up Database HR. In a future release capability is being planned to perform cleanup of an operation using the UI.
 
-   In order to have an old empty home previously used by “***hr.subnet.vcn.oraclevcn.com***” at our disposal to demonstrate a cleanup operation, we will now re-update the database by running the commands from Step 8.
+   In order to have an old empty home previously used by “***hr.subnet.vcn.oraclevcn.com***” at our disposal to demonstrate a cleanup operation, we will now re-update(re-patch) the database by running the commands from Step 8.
 
-2. Review and execute below command to update database target ***hr.subnet.vcn.oraclevcn.com*** again to 18.10 version
+2. Review and execute below command to update(patch) database target ***hr.subnet.vcn.oraclevcn.com*** again to 18.10 version
 
     ```
     <copy>emcli db_software_maintenance -performOperation -name="Update DB" -purpose=UPDATE_DB -target_type=oracle_database -target_list=hr.subnet.vcn.oraclevcn.com -normal_credential=ORACLE:SYSMAN -privilege_credential=ROOT:SYSMAN -database_credential=sales_SYS:SYSMAN</copy>
@@ -454,19 +481,26 @@ below.
     <copy>sh update_hr.sh</copy>
     ```
 
-    ![](images/05dc434c461c068b157f9dd7cd6b10ce.png " ")
+    ![](images/new-update-hr.png " ")
 
     Where:
-      -  Name – Name of the operation. This is a logical name and should be kept unique Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
+    -  Name – Name of the operation. This is a logical name and should be kept unique.
+    -  Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
 
 
-3. Verify that the update has been completed successfully before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
+3. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
-    ![](images/444749cbf21602a501446fe9c14b1949.png " ")
+    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
-4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below
+Verify that the update has been completed successfully. Before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
+    ![](images/fleet-update.png "fleet status")
 
-    ![](images/05d8c8153c8c990ac80810fef434baa3.png " ")
+4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below.
+
+    ![](images/038585c9308635261ae7e4aa956525af.png " ")
+
+    Review the version of HR database.
+    ![](images/new-hr-status.png "new hr version")
 
 5. Review and execute the following command as a dry-run to report on cleanup impact for *hr.subnet.vcn.oraclevcn.com*  
 
@@ -480,7 +514,7 @@ below.
     <copy>sh cleanup_hr_report.sh</copy>
     ```
 
-    ![](images/9b5d405577571043afe9ead1fc723392.png " ")
+    ![](images/cleanup-report.png "cleanup report")
 
 6. Review and execute the following command to cleanup *hr.subnet.vcn.oraclevcn.com*   
     ```
@@ -493,15 +527,18 @@ below.
     <copy>sh cleanup_hr.sh</copy>
     ```
 
-    ![](images/f0443cb23cec56d4d3c3818720c73c80.png " ")
+    ![](images/cleanup-hr.png "cleanup report")
 
-7. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
+7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity***.
+    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
 
-    ![](images/1ffb1bc964b9ca980d6f6034d4882156.png " ")
+    Monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
+
+    ![](images/cleanup-dp.png "cleanup dp")
 
 8. Review the Procedure Activity steps performed        
 
-    ![](images/c2062c09719c5c4b41ceff3138b3d44e.png " ")
+    ![](images/cleanup-dp-details.png "dp details")
 
 9. Verify to confirm the old Oracle home has been removed
 
@@ -509,7 +546,7 @@ below.
     <copy>ls -l /u01/app/1806/hr</copy>
     ```
 
-    ![](images/31324fdd072b03be848fa9362de9ae7b.png " ")
+    ![](images/no-18006.png "version")
 
 10.  As part of the cleanup operation, LISTENER\_1522 which support “***hr.subnet.oraclevcn.com***” is shutdown. Set your environment by passing “***hr***” to “***oraenv***” when prompted and start the listener back up.
 
@@ -523,7 +560,7 @@ below.
       <copy>lsnrctl start LISTENER_1522</copy>
       ```
 
-  ![](images/465b2cea9ae4e176c314eff253ef4b68.png " ")
+  ![](images/oraenv.png " ")
 
 12. Force Listener registration and confirm that it is now servicing “***hr.subnet.vcn.oraclevcn.com***”
 
@@ -540,7 +577,7 @@ below.
     <copy>lsnrctl status LISTENER_1522</copy>
     ```
 
-    ![](images/b95a982c86b233dfa1af34d29c03aa6e.png " ")
+    ![](images/listener-register.png " ")
 
 <!-- This completes Step 2. In this section, you learned how to perform the following:
 -   Create Oracle Database Software Gold Image
@@ -564,8 +601,6 @@ You may now proceed to the next lab.
 
 ## Acknowledgements
   - **Authors**
-    - Shefali Bhargava, Oracle Enterprise Manager Product Management
-    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
     - Romit Acharya, Oracle Enterprise Manager Product Management
-  - **Contributors** -
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, January 2022
+    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2022

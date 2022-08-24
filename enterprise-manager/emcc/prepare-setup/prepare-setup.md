@@ -43,12 +43,15 @@ This lab assumes you have:
 <if type="rat-overview">
     - [emcc-mkplc-rat-overview.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/SKVYcQm9QiL9ifHuVDbgdJ51s57zUy9VnF3YwXUPRaellpLxuU-IbtHmAZIEYtL8/n/natdsecurity/b/stack/o/emcc-mkplc-rat-overview.zip)
 </if>
+<if type="migration-workbench">
+    - [emcc-mkplc-mig-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jyHA4nclWcTaekNIdpKPq3u2gsLb00v_1mmRKDIuOEsp--D6GJWS_tMrqGmb85R2/n/c4u04/b/livelabsfiles/o/labfiles/emcc-mkplc-mig-workbench.zip)
+</if>
 
 2.  Save in your downloads folder.
 
 We strongly recommend using this stack to create a self-contained/dedicated VCN with your instance(s). Skip to *Task 3* to follow our recommendations. If you would rather use an exiting VCN then proceed to the next step as indicated below to update your existing VCN with the required Egress rules.
 
-## Task 2: Adding Security Rules to an Existing VCN   
+## Task 2: Adding Security Rules to an Existing VCN
 This workshop requires a certain number of ports to be available, a requirement that can be met by using the default ORM stack execution that creates a dedicated VCN. In order to use an existing VCN the following ports should be added to Egress rules
 
 | Port           |Description                            |
@@ -63,17 +66,17 @@ This workshop requires a certain number of ports to be available, a requirement 
 3.  Under Resources, select Security Lists
 4.  Click on Default Security Lists under the Create Security List button
 5.  Click Add Ingress Rule button
-6.  Enter the following:  
+6.  Enter the following:
     - Source CIDR: 0.0.0.0/0
     - Destination Port Range: *Refer to above table*
 7.  Click the Add Ingress Rules button
 
-## Task 3: Setup Compute   
+## Task 3: Setup Compute
 Using the details from the two steps above, proceed to the lab *Environment Setup* to setup your workshop environment using Oracle Resource Manager (ORM) and one of the following options:
 -  Create Stack:  *Compute + Networking*
 -  Create Stack:  *Compute only* with an existing VCN where security lists have been updated as per *Task 2* above
 
 ## Acknowledgements
   - **Author** - Rene Fontcha, LiveLabs Platform Lead, NA Technology
-  - **Contributors** -  
+  - **Contributors** -
   - **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022
