@@ -370,7 +370,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
   ![different-sets-of-results-export-page](images/different-sets-of-results-export.png " different-sets-of-results-export-page ")
 
-26. Exported the drift management results into zip file **CM003-Drift_Demo - Drift_comparisonresult.zip**, excel file is available for further reviews and offline analysis. Drift management results excel file format as shown here.
+26. Exported the drift management results into zipping file **ECM003-Drift_Demo - Drift_comparisonresult.zip** accessible in your Downloads folder, excel file is available for further reviews and offline analysis. Drift management results excel file format is as shown here.
 
   ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 
