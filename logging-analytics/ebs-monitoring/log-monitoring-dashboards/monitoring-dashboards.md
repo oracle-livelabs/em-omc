@@ -34,4 +34,4 @@ In this lab, you will:
 ## Acknowledgements
 * **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
 * **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 12 2022
+* **Last Updated By/Date** - Aug 24 2022

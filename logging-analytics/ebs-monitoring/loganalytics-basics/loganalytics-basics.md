@@ -1,4 +1,4 @@
-# OCI Logging Analytics Basics
+# Logging Analytics Basics
 
 ## Introduction
 
@@ -104,4 +104,4 @@ Note: If at any point you want to come to the initial screen - you can use your 
 ## Acknowledgements
 * **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
 * **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 12 2022
+* **Last Updated By/Date** - Aug 24 2022

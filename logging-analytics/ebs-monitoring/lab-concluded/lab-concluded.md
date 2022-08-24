@@ -4,7 +4,7 @@ We built a solid foundation for efficiently monitoring complex IT systems using 
 
 ### Next Steps
 
-In last 90 minutes we covered on a handful of Logging Analytics features with the goals of ensuring that participants can explore and use the product on their own with confidence. We suggest the following as next steps:
+In last 30 minutes we covered on a handful of Logging Analytics features with the goals of ensuring that participants can explore and use the product on their own with confidence. We suggest the following as next steps:
 
 * Create scheduled search alert to notify your team when an issue is identified
 * Create an Enterprise level dashboard to monitor top KPIs for your entire IT environment in a single pane of glass

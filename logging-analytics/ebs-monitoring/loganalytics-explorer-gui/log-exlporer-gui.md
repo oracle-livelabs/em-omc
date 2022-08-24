@@ -1,4 +1,4 @@
-# Getting Familiar with the Log Explorer GUI
+# Getting Familiar with Logging Analytics Explorer GUI
 
 ## Introduction
 
@@ -41,4 +41,4 @@ You'll learn log analytics basics and how to use Log Explorer GUI in the next se
 ## Acknowledgements
 * **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
 * **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 12 2022
+* **Last Updated By/Date** - Aug 24 2022
