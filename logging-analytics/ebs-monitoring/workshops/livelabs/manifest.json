@@ -13,7 +13,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
         },
         {
-            "title": "Lab 1: Getting Familiar with the Log Explorer GUI",
+            "title": "Lab 1: Getting Familiar with Logging Analytics Explorer GUI",
             "description": "Getting Familiar with OCI Logging Analytics Explorer GUI",
             "filename": "../../loganalytics-explorer-gui/log-exlporer-gui.md"
         },
