@@ -708,7 +708,9 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
       ![](images/cmp-pdb-creation-validation.png " ")
 
-13. Click on the Home Icon. You will see new PDB instance. Click on the PDB recently created. 
+13. Click on the Home Icon. You will see new PDB instance.
+(Incase the newly created PDB is not reflecting, hit refresh on the top right corner of the page ).
+ Click on the PDB recently created. 
 
     ![](images/cmp-pdb-creation-new.png " ")
 
@@ -739,6 +741,8 @@ The PDBs are created using a precreated service template on CDBs which are virtu
     In few minutes instance resize is completed. Expand **Resource Usage** section on PDB Home page. 
 
     This shows now new resource usage limits.
+
+    EM compares the actual workload against the predefined configuration in the service template, also, notifies the user with a warning message to modify the thresholds accordingly.
 
 
       ![](images/cmp-pdb-resize-validation.png " ")
