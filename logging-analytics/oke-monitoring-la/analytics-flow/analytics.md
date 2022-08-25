@@ -1,5 +1,5 @@
-# Troubleshooting & Analytics 
-
+# Troubleshooting & Analytics
+- WIP
 ## Introduction
 
  This lab walks you through the capability of OCI Logging Analytics for Trouble Shooting and Analytics.
