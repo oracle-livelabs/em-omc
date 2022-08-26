@@ -58,25 +58,33 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-  ![configuration-inventory-usages-page](images/configuration-inventory-usages.png " configuration-inventory-usages-page ")
+  ![configuration-inventories-usage-page](images/configuration-inventories-usage-page.png " configuration-inventories-usage-page ")
+
+  Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
+
+  ![inventory-and-usage-details-page](images/inventory-and-usage-details-page.png " inventory-and-usage-details-page ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![em-compliance-config-alldbs-page](images/em-compliance-config-alldbs.png " em-compliance-config-alldbs-page ")
+  ![em-compliance-config-alldbs-page](images/em-compliance-configs-alldbs.png " em-compliance-configs-alldbs-page ")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
 
-5.  Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
+5.  **Table View** can be visible by selecting and adjusting the grid line on the page as shown below.
+
+  ![table-view-grid-line-select-page](images/table-view-grid-line-select.png " table-view-grid-line-select-page ")
+
+    Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
  ![em-inventory-usage-details-page](images/em-inventory-usage-details.png " em-inventory-usage-details-page ")
 
- Click on Table View, further details to explore.
+6. Click on Table View, further details to explore.
 
  ![em-inventory-usage-details-table-page](images/em-inventory-usage-details-table.png " em-inventory-usage-details-table-page ")  
 
  Click **Close**.
 
-6.  In the Details excel file table output below, you will see details as follows
+7.  In the Details excel file table output below, you will see details as follows
 
       - Database instance name Target
       - Host on which this database is located
@@ -86,11 +94,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
       - Most importantly, LOB/Department information
         The Details table gives more information about each Database instance for you to get a good understanding of the number of database targets deployed on a given host with OS version. If your organization uses properties like Lifecycle, Line of Business, or Department, then you will be able to determine the number of targets deployed for a given business unit. Explore these features to get a good handle on Inventory and Usage details.
 
-7. Export inventory details to excel for reports.
+8.  Inventory usage and Details can be exported for offline further reviews and analysis.
 
   ![em-inventory-usage-details-export-summary-page](images/em-inventory-usage-details-export-summary.png " em-inventory-usage-details-export-summary-page ")
 
-(**Optional**) These inventory details can be exported to an excel file for offline analysis or sharing the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage.
+  These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
 
   ![em-ecm-inv-usage-details-excel-file](images/em-ecm-inv-usage-details-excel-file.png " em-ecm-inv-usage-details-excel-file ")  
 
@@ -167,18 +175,18 @@ In this step, you will compare two database targets to determine configuration d
 
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
-  - Equal sign means parameter properties are the same across the reference and target compared
-  - Not equal sign indicates parameter properties are different across the reference and target compared
-  - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
-  - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+    - Equal sign means parameter properties are the same across the reference and target compared
+    - Not equal sign indicates parameter properties are different across the reference and target compared
+    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
+    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
   ![comparison-results-initialization-parameters-page](images/comparison-results-initialization-parameters.png " comparison-results-initialization-parameters-page ")
 
-    14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
+14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
   ![configuration-comparison-and-drift-management-page](images/configuration-comparison-and-drift-management.png " configuration-comparison-and-drift-management-page ")
 
-    15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
+15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
   ![dashboard-one-time-comparison-result-page](images/dashboard-one-time-comparison-result.png " dashboard-one-time-comparison-result-page ")
 
@@ -186,13 +194,13 @@ In this step, you will compare two database targets to determine configuration d
 
   ![one-time-comparison-results-page](images/one-time-comparison-results.png " one-time-comparison-results-page ")
 
-    16. (**Optional**) Export the comparison results into an excel report for offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results. You can choose the specific results to export.
+16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
   ![export-one-time-comparison-results-page](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
 
-  After Exporting, Click **Cancel** to exit
+  After Exporting, Click **Cancel** to exit. The zip file will be created, downloadable, and available to open in excel format on your system to do offline verification.
 
-    17. (**Optional**) Exported results in excel for offline analysis look like this:
+17. One-time Database comparison results excel file format as shown here.
 
   ![compare-demo-one-time-comparison-result-excel](images/compare-demo-one-time-comparison-result-excel.png " compare-demo-one-time-comparison-result-excel ")
 
@@ -325,7 +333,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
-  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
 21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
@@ -338,22 +346,31 @@ In this workshop, you will learn about continuous configuration drift monitoring
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
   ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
-  
+
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
     - Equal sign means parameter properties are the same across the reference and target compared
     - Not equal sign indicates parameter properties are different across the reference and target compared
     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
-  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
- (**Optional**) Export the comparison results into an excel report for offline analysis. On the Drift Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
+24. Click on **Click to refresh**  as shown here:
 
-  ![export-results-for-created-drift-definition-page](images/export-results-for-created-drift-definition.png " export-results-for-created-drift-definition-page ")
+  ![clicktorefresh-drift-results-page](images/clicktorefresh-drift-results.png " clicktorefresh-drift-results-page ")
 
-24. (**Optional**) Exported results in excel for offline analysis look like this:
+  On the Drift Results page, highlight the definition and choose **Export Results**.
+
+  ![export-results-for-created-drift-definitions-page](images/export-results-for-created-drift-definitions.png " export-results-for-created-drift-definitions-page ")
+
+25. You can choose the specific results to export. Click **OK**.
+
+  ![different-sets-of-results-export-page](images/different-sets-of-results-export.png " different-sets-of-results-export-page ")
+
+26. Exported the drift management results into zipping file **ECM003-Drift_Demo - Drift_comparisonresult.zip** accessible in your Downloads folder, excel file is available for further reviews and offline analysis. Drift management results excel file format is as shown here.
 
   ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
 

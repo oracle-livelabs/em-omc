@@ -108,7 +108,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/current-config.png "current config")
 
-    When you download the report, a warning on XLS format and file extension mismatch pops up (like below). Simply click on “Yes” to ignore the warning and open the file.
+    When you download the report, should a warning on XLS format and file extension mismatch pop up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
     ![](images/d9ea997d07c30f80083e097f6b578200.png " ")
 
@@ -329,7 +329,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     ![](images/session-timeout.png "session timeout error ")
 
     If you encounter session timeout error elsewhere in the lab, you can copy and paste the above command in the terminal and continue.
-
+    
 4. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘CreateGoldImage\*’ run
 
     ![](images/submit-create-image-dp.png "dp submission")

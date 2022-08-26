@@ -1,10 +1,10 @@
 {
-  "workshoptitle": "Deploy and Manage Oracle Databases with Ansible and Enterprise Manager",
+  "workshoptitle": "Oracle Enterprise Manager - Job System Automation",
   "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "Introduction to Automation with Enterprise Manager Job System",
+      "description": "Introduction to Job System Automation Workshop",
       "filename": "./../../intro/intro-job-system-automation.md"
     },
     {
@@ -19,8 +19,8 @@
       "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
-      "title": "Lab 3: Automation with Enterprise Manager Job System",
-      "description": "The objective is to become familiar with Automation with Enterprise Manager Job System",
+      "title": "Lab 3: Job System Automation",
+      "description": "This lab provides an overview of the Enterprise Manager Job System and how to use it to automate routine administrative tasks such as backup, SQL scripts, OS jobs etc.",
       "filename": "./../../em-job-system-automation/em-job-system-automation.md"
     },
     {
