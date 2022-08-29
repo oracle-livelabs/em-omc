@@ -200,7 +200,7 @@ In this lab you will learn:
 
 ## Task 3: Provision a PDB using DBaaS and Ansible
 
-1. In this step, we are going to make use of both **uri** parameters below. These **uri** parameters are part of the "Service Template" configuration. You can get these parameters by executing the get PaaS Zone REST API. This step won't cover how to get those parameter. We are just going to review them and make use of them in the next steps.
+1. In this step, we are going to make use of both **uri** parameters below. These **uri** parameters are part of the "Service Template" configuration. You can get these parameters by executing the get PaaS Zone REST API. This step won't cover how to get those parameters. We are just going to review them and make use of them in the next steps.
 
     ```
     zone:
@@ -374,7 +374,7 @@ In this lab you will learn:
 
 ## Task 4: Configure Fleet Maintenance (Gold Image, Container and Pool)
 
-1. Download a new Enterprise Manager Fleet Maintenance Gold Image version. This Gold Image will be imported into the our Fleet Maintenance setup.
+1. Download a new Enterprise Manager Fleet Maintenance Gold Image version. This Gold Image will be imported into Fleet Maintenance.
 
     ```
     <copy>cd ~
