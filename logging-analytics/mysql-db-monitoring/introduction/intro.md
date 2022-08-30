@@ -21,4 +21,4 @@ Estimated Lab Time: 40 minutes
 
 * **Author** - Tanishq Patil, Logging Analytics Development Team
 * **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 25, 2022
+* **Last Updated By/Date** - Aug 30, 2022
