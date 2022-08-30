@@ -510,9 +510,10 @@ This completes the Lab!
 
 ## Learn More
 
-- [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
-- [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-- [Database Migration Workbench Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/index.html)
+- Documentation: [Database Migration Workbench Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/index.html)
+- Blog(s): [Migrate Oracle Databases with a safety net using Migration Workbench](https://blogs.oracle.com/observability/post/migrate-oracle-database-with-a-safety-net-using-migration-workbench)
+- Video(s): [Migrate Databases to Cloud and On Premises](https://www.oracle.com/explore/exadata-virtual-events/migrate-databases-to-cloud?lx=W4Fgb9&topic=Oracle%20Exadata%20Master%20Class)
+- Enterprise Manager on Oracle.com: [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
 
 ## Acknowledgements
 
