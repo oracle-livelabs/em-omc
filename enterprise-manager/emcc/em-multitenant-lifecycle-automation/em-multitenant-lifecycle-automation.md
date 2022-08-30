@@ -706,11 +706,13 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
 12.  The screen indicated the PDB creation is successful.
 
-      ![](images/cmp-pdb-creation-validation.png " ")
+      ![pdb cretion using cmp](images/cmp-pdb-creation-validation.png "pdb creation using cmp ")
 
-13. Click on the Home Icon. You will see new PDB instance. Click on the PDB recently created. 
+13. Click on the Home Icon. You will see new PDB instance.
+(Incase the newly created PDB is not reflecting, hit refresh on the top right corner of the page ).
+ Click on the PDB recently created. 
 
-    ![](images/cmp-pdb-creation-new.png " ")
+    ![pdb creation in cmp with update](images/cmp-pdb-creation-new.png "pdb creation in cmp with update ")
 
   *Note*: Following widgets are shown on the Database Cloud Services landing Page
 
@@ -740,8 +742,10 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
     This shows now new resource usage limits.
 
+    EM compares the actual workload against the predefined configuration in the service template, also, notifies the user with a warning message to modify the thresholds accordingly.
 
-      ![](images/cmp-pdb-resize-validation.png " ")
+
+      ![pdb resize validation](images/cmp-pdb-resize-validation.png "  pdb resize validation")
 
 17.  Next delete the database Instance: 
 
