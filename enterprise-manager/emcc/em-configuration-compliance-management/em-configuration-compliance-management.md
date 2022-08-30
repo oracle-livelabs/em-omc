@@ -652,8 +652,14 @@ A compliance standard rule is a specific test to determine if a configuration da
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
   - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
   - [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
+  - [Database Lifecycle Management Webinar](https://www.youtube.com/watch?v=QjdwUfBn6FI)
+  - [Compliance Standards](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emdbc/pluggable-database-compliance-standards.html#GUID-364EC867-C012-4710-B695-2D1BF53E2F86)
+  - [Enterprise Manager CIS Benchmark Blog](https://blogs.oracle.com/database/post/enterprise-manager-cis-benchmark-certification-eases-adoption-of-secure-database-best-practices)
+  - [HIPAA Compliance with Enterprise Manager](https://blogs.oracle.com/observability/post/secure-linux-configuration-for-hipaa-compliance-with-enterprise-manager)
+  - [SCAP Support Blog](https://blogs.oracle.com/observability/post/scap-support-secure-linux-configuration-with-enterprise-manager)
+  - [SCAP Standards](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emdbc/scap-supported-standards.html)
 
 ## Acknowledgements
   - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
-  - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, June 2022
+  - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, August 29th,2022.
