@@ -184,7 +184,7 @@ We'll use the Data Pump migration method in this task.
     - Click on View Analysis
 13. On the View Analysis screen:
 
-    Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Analysis, Export, and Import.
+    Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Validation, Export, and Import.
     - On the summary dashboard, review information and statistics for the validation activity, export phase, and import phase
     - In the details section:
         - Click the Validation tab to review validation checks that passed, failed, or skipped
@@ -228,9 +228,9 @@ This completes the Lab!
 
 ## Learn More
 
-- [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
-- [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
 - [Database Migration Workbench Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/index.html)
+- [Migrate Oracle Databases with a safety net using Migration Workbench (Blog)](https://blogs.oracle.com/observability/post/migrate-oracle-database-with-a-safety-net-using-migration-workbench)
+- [Migrate Databases to Cloud and On Premises (Video)](https://www.oracle.com/explore/exadata-virtual-events/migrate-databases-to-cloud?lx=W4Fgb9&topic=Oracle%20Exadata%20Master%20Class)
 
 ## Acknowledgements
 
