@@ -892,6 +892,11 @@ Thank You!
 
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
   - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
+  - [SQL Performance Analyzer (UI)](https://docs.oracle.com/en/database/oracle/oracle-database/21/ratug/sql-performance-analyzer.html#GUID-8CE976A3-FB73-45FF-9B18-A6AB3F158A95)
+  - [Database Replay Workload Capture (UI)](https://docs.oracle.com/en/database/oracle/oracle-database/21/ratug/capturing-a-database-workload.html#GUID-E774C161-98C0-43EF-8B78-DD74E2A2A219)
+  - [Database Replay Workload Replay (UI)](https://docs.oracle.com/en/database/oracle/oracle-database/21/ratug/replaying-a-database-workload.html#GUID-1F638D8F-7168-492D-BAD6-39F4F36EAD9B)
+  - [Database Replay Workload Replay (API)](https://docs.oracle.com/en/database/oracle/oracle-database/21/ratug/replaying-a-database-workload.html#GUID-0F8D20F3-A4A1-4A89-852A-449C2E7C9602)
+  - [Database Replay Consolidated Replay (UI)](https://docs.oracle.com/en/database/oracle/oracle-database/21/ratug/using-consolidated-database-replay.html#GUID-62AAF505-1DD4-414A-9F1D-4386B59B7138)
   - [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
 
 ## Acknowledgements
