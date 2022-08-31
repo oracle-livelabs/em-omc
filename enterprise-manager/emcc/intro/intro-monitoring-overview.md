@@ -3,7 +3,7 @@
 ## About this Workshop
 This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Workshop Time*: 70 minutes
+*Estimated Workshop Time*: 110 minutes
 
 ### About Oracle Enterprise Manager
 Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
@@ -16,6 +16,7 @@ Join Oracle's ***Wim Coekaerts***, *senior vice president of software developmen
 In this workshop, you will learn how to use:
 - Enterprise Summary
 - Incident Manager
+- Dynamic Runbooks
 - Metric and Collection Settings
 - Corrective Actions
 - Metric Extensions
@@ -36,6 +37,8 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Metric Extensions to monitor conditions specific to your environment
 
+- Dynamic Runbooks to triage and resolve your incidents
+
 #### Applicable Enterprise Manager Management Packs
 Labs under this workshop do not need any additional Management Pack and are a core functionality of the Enterprise Manager.
 
@@ -43,6 +46,7 @@ Labs under this workshop do not need any additional Management Pack and are a co
 The following are covered in this workshop:
 - Explore Enterprise Summary page and drill down to see a list of down targets
 - Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
+- Start a Dynamic Runbook session against an incident from Incident Manager then modify and publish a Runbook draft
 - Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
 - Create a new Corrective Action and associate it with a metric
 - Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
@@ -122,5 +126,5 @@ Drive Your Autonomous Future with Oracle Enterprise Manager
 
 ## Acknowledgements
 - **Author** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Contributors** - Dave Le Roy, Björn Bolltoft - Enterprise Manager Product Management
+- **Contributors** - Dave Le Roy, Björn Bolltoft, Desiree Abrokwa - Enterprise Manager Product Management
 - **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022
