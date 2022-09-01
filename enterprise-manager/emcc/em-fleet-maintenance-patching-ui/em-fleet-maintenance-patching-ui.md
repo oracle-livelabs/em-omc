@@ -105,7 +105,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/current-config.png " ")
 
-    When you download the report, should a warning on XLS format and file extension mismatch pop up (like below). Simply click on “Yes” to ignore the warning and open the file.
+    When you download the report, a warning on XLS format and file extension mismatch pops up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
     ![](images/d9ea997d07c30f80083e097f6b578200.png " ")
 

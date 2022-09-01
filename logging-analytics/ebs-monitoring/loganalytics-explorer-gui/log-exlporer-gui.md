@@ -12,9 +12,9 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
-* Familiarise user interfaces used in Log Explorer GUI
+* Familiarize user interfaces used in Log Explorer GUI
 
-## **Task 1:**  Familiarise user interface used in Logging Analytics
+## **Task 1:**  Familiarize user interface used in Logging Analytics
 
 Here are the main parts of the user interface that will be used throughout this lab.
 
