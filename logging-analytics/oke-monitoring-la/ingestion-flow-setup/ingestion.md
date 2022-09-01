@@ -25,14 +25,8 @@ In this lab, you will:
 
 
 ## Task 1: Generating the Prerequisite Values
-1. On the home page of this Live Lab, click on the **View Login Info** link
-  
-  ![Image alt text](images/view-login-info.png)
 
-2. Reservation Information will be displayed.
-![Image alt text](images/reservation-information.png)
-
-3. Keep the below fields handy.
+1. Keep the below fields handy.
   - Kubernetes Cluster Id
   - Kubernetes Cluster Name
   - Kubernetes Namespace
