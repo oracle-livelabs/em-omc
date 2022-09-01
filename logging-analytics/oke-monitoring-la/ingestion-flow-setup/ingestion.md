@@ -42,29 +42,15 @@ In this lab, you will:
   - ociLALogGroupID.
 
 ## Task 2: Launching Cloud Shell
-1. Click on the Launch OCI button  
-  ![Image alt text](images/launch-oci.png)  
-
-2. A Single Sign On Page will be displayed.
-  ![Image alt text](images/sso-page.png)
-
-
-3. Key In the password copied in the step 2 and click on Sign In button.
-
-
-4. Change Password Page will be displayed. Fill in the required details and click on Save New Password.
-  ![Image alt text](images/change-password.png)
-
-
-5. Oracle Cloud Home Page will be displayed.   
-
-6. Click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
+  
+1. On Oracle Cloud Home Page click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
 
   ![Image alt text](images/cloud-shell.png)
 
-7. A Cloud Shell Instance will be created and text area will be displayed as below. 
-
+2. A Cloud Shell Instance will be created and text area will be displayed as below. 
   ![Image alt text](images/cloud-shell-textarea.png)
+
+ 
 
 ## Task 3: Setting Up Kube Config In Cloud Shell
 
@@ -105,9 +91,9 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
      ```
        $ kubectl get nodes
        NAME          STATUS   ROLES   AGE   VERSION
-       10.0.10.116   Ready    node    91d   v1.21.5
-       10.0.10.136   Ready    node    77d   v1.21.5
-       10.0.10.146   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    91d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
      ```
   > **Note:** Node ip's will differ for every cluster.
 
