@@ -8,7 +8,8 @@ Estimated Time: 5 min
 
 ### Objectives
 
-In this Lab, we will take you through the types of logs that will be collected as part of MySQL Database Monitoring and Troubleshooting.
+In this lab, you will:
+* Get familiar with types of logs collected as part of MySQL Database Monitoring and Troubleshooting
 
 ## **Task 1:** Get familiarized with the different Log Sources used in this Lab
 

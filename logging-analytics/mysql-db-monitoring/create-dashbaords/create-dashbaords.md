@@ -10,7 +10,7 @@ Estimated Lab Time: 5 minutes
 ### Objectives
 
 In this lab, you will:
-* Continuous Monitoring using Management Dashboards
+* Learn to use Management Dashboards to continuously monitor the information from collected logs
 
 ## **Task 1:**  Continuous Monitoring using Management Dashboards
 
