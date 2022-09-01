@@ -48,8 +48,9 @@ In this lab, you will:
   ![Image alt text](images/cloud-shell.png)
 
 2. A Cloud Shell Instance will be created and text area will be displayed as below. 
-
   ![Image alt text](images/cloud-shell-textarea.png)
+
+ 
 
 ## Task 3: Setting Up Kube Config In Cloud Shell
 
