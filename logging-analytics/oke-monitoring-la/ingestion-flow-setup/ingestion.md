@@ -2,15 +2,15 @@
 
 ## Introduction
 
-This lab will walk you through the steps to configure open source log collector fluentd to collect OKE System and Service log using package manager Helm.
+This lab will walk you through the steps to configure an open source log collector fluentd to collect OKE System and Service log using package manager Helm.
 
 Estimated Time: 40 minutes
 
 ### About <Product/Technology> 
-In this lab we will be using following tools:
+In this lab we will be using the following tools:
 * fluentd - open source data collector
 * helm - package manager for Kubernetes
-* kubectl - kubernetes command line tool
+* kubectl - Kubernetes command line tool
 
 ### Objectives
 
@@ -23,50 +23,30 @@ In this lab, you will:
 
 * Basic Understanding of Kubernetes
 
-## Task 1: Launching Cloud Shell
 
-1. On the home page of this Live Lab, click on the **View Login Info** link
-  
-  ![Image alt text](images/view-login-info.png)
+## Task 1: Generating the Prerequisite Values
 
-2. Reservation Information will be displayed. Keep the below fields handy.
+1. Keep the below fields handy.
   - Kubernetes Cluster Id
   - Kubernetes Cluster Name
   - Kubernetes Namespace
   - imagePullSecrets
   - url
   - ociLANamespace
-  - ociLALogGroupID
+  - ociLALogGroupID.
 
-  ![Image alt text](images/reservation-information.png)
+## Task 2: Launching Cloud Shell
+  
+1. On Oracle Cloud Home Page click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
 
+  ![Image alt text](images/cloud-shell.png)
 
-3. Click on the Launch OCI button ![Image alt text](images/launch-oci.png)  
-
-
-4. A Single Sign On Page will be displayed.
-  ![Image alt text](images/sso-page.png)
-
-
-5. Key In the password copied in the step 2 and click on Sign In button.
-
-
-6. Change Password Page will be displayed. Fill in the required details and click on Save New Password.
-  ![Image alt text](images/change-password.png)
-
-
-7. Oracle Cloud Home Page will be displayed.   
-
-8. Click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
-
-	![Image alt text](images/cloud-shell.png)
-
-9. A Cloud Shell Instance will be created and text area will be displayed as below. 
-
+2. A Cloud Shell Instance will be created and text area will be displayed as below. 
   ![Image alt text](images/cloud-shell-textarea.png)
 
+ 
 
-## Task 2: Setting Up Kube Config In Cloud Shell
+## Task 3: Setting Up Kube Config In Cloud Shell
 
 1. To Set up kubeconfig for the OKE Cluster replace the Cluster ID value in the below command.
     ```
@@ -85,7 +65,7 @@ In this lab, you will:
 
      ```
 
-3. Copy the modified command in the step II and paste it in the Cloud Shell and hit Enter. A new config file will be created.
+3. Copy the modified command in step II and paste it into the Cloud Shell and hit Enter. A new config file will be created.
 
     ```
      oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.oc1.phx.abcxyzxxxxxxxxxxxxx --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
@@ -93,7 +73,7 @@ In this lab, you will:
 New config written to the Kubeconfig file /home/livelab/.kube/config
     ```
 
-## Task 3: Accessing OKE Cluster In Cloud Shell
+## Task 4: Accessing OKE Cluster In Cloud Shell
 1. Run the following command to verify if the kubeconfig is configured properly and you can access the OKE Cluster.
 
      ```
@@ -105,13 +85,13 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
      ```
        $ kubectl get nodes
        NAME          STATUS   ROLES   AGE   VERSION
-       10.0.10.116   Ready    node    91d   v1.21.5
-       10.0.10.136   Ready    node    77d   v1.21.5
-       10.0.10.146   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    91d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
      ```
   > **Note:** Node ip's will differ for every cluster.
 
-## Task 4: Download Helm Charts from GitHub
+## Task 5: Download Helm Charts from GitHub
 1. In the present working directory create the directory oke-livelab and navigate into it. 
   > **Note:** You can use the command - `mkdir oke-livelab && cd $_`
 
@@ -130,11 +110,11 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
           tar zxvf helm-chart-v1.0.3.tgz
         </copy>
     ```
- 5. Validate helm-chart directory and its contents are extracted.   
+ 5. Validate the helm-chart directory and its contents are extracted.   
     ![Image alt text](images/helm-chart-extraction.png)
 
-## Task 5: Create Custom values yaml file
-1. In the **oke-livelab** directory created in the above task, create a directory external-values , using following command.
+## Task 6: Create Custom values yaml file
+1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
       ```
         <copy>
           mkdir external-values
@@ -142,7 +122,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
       ```
 
 
-2. Create a file values.yaml in the external-values directory using following command.
+2. Create a file values.yaml in the external-values directory using the following command.
       ```
         <copy>
           touch values.yaml
@@ -167,18 +147,18 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
       </copy>
       ```
-## Task 6: Verifying Helm Configuration
-1. Once the values.yaml is updated, it is important to perform the dry-run to validate the configuration is correct. To perform this check, 
+## Task 7: Verifying Helm Configuration
+1. Once the values.yaml is updated, it is important to perform the dry run to validate the configuration is correct. To perform this check, 
   run the following command.
       ```
         <copy>
           helm template --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/
         </copy>
       ```
- 2. Validate the above command return  no errors or failures.     
+ 2. Validate that the above command return no errors or failures.     
  
-## Task 7: Install Helm Chart
-1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log-collection.
+## Task 8: Install Helm Chart
+1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
          helm install <release-name-of-choice> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/
@@ -197,7 +177,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
    > **Note:** Provide the correct kubernetes namespace. 
 
 
-## Task 8: Verify All Resources Are Created
+## Task 9: Verify All Resources Are Created
   As part of this deployment following resources are created - 
   - daemonset
   - deployment
@@ -250,7 +230,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
         kubectl logs <fluentd-deployment-pod-name-from-task-7.2> --namespace=Kubernetes-Namespace-In-Reservation-Information |grep 'fluentd worker'
      </copy>
      ```
-     - Output will be same as above.
+     - Output will be the same as above.
      
 5. Verify logs are sent to Logging Analytics 
      - To verify logs are sent to the Logging Analytics execute the following command. 
@@ -271,11 +251,11 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
                          opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
      ```
    
-## Task 9: Validate in the Log Explorer
+## Task 10: Validate in the Log Explorer
 
 1. From Navigation Menu ![Image alt text](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Home**
 
-2. From the Logging Analytics Home Page, select Log Explorer from the drop down menu.
+2. From the Logging Analytics Home Page, select Log Explorer from the drop-down menu.
    ![Image alt text](images/select-log-explorer.png) 
 
 3. By default, the Log Explorer will show the Pie-Chart view of all the logs received from the OKE. 
@@ -290,13 +270,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 6. Click on the expand field button, all the captured fields are displayed.
     ![Image alt text](images/expand-fields.png)    
 
-## Learn More
-
-* [Kubernetes Documentation](https://kubernetes.io/docs/home/)
-
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, Aug, 2022
-
-
+* **Last Updated By/Date** - Vikram Reddy, Sep, 2022
