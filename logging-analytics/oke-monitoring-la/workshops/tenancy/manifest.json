@@ -18,11 +18,6 @@
             "filename": "../../ingestion-flow-setup/ingestion.md"
         },
         {
-            "title": "Lab 2: Analytics Flow",
-            "description": "This live lab outlines the Analytics Flow to visualize the data",
-            "filename": "../../analytics-flow/analytics.md"
-        },
-        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
