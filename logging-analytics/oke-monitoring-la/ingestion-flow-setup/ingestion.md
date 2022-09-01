@@ -105,9 +105,9 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
      ```
        $ kubectl get nodes
        NAME          STATUS   ROLES   AGE   VERSION
-       10.0.10.116   Ready    node    91d   v1.21.5
-       10.0.10.136   Ready    node    77d   v1.21.5
-       10.0.10.146   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    91d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
      ```
   > **Note:** Node ip's will differ for every cluster.
 
