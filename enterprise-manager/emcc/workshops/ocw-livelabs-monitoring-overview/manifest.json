@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Enterprise Monitoring Quick Tour",
+  "workshoptitle": "Oracle Enterprise Manager Fundamentals: Monitoring Quick Tour",
   "help": "livelabs-help-em_us_grp@oracle.com",
   "tutorials": [
     {
@@ -30,9 +30,9 @@
       "publisheddate": "8/12/2020",
       "filename": "./../../faq/faq.md"
     },
-    {  
-      "title": "Oracle CloudWorld 2022 - Get Help",             
-      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"         
-    } 
+    {
+      "title": "Oracle CloudWorld 2022 - Get Help",
+      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+    }
   ]
 }
