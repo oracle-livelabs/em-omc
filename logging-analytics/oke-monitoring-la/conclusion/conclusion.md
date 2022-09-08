@@ -2,16 +2,7 @@
 
 In these two labs we have taken our first steps towards setting up end-to-end Kubernetes Monitoring Solution, performing the Analytics and Visualising the data from different perspectives.
 
-### Next Steps
-
-In last 30 minutes we covered on a handful of Logging Analytics features with the goals of ensuring that participants can explore and use the product on their own with confidence. We suggest the following as next steps:
-
-* Create scheduled search alert to notify your team when an issue is identified
-* Create an Enterprise level dashboard to monitor top KPIs for your entire IT environment in a single pane of glass
-
-Below are a few resources to get you started.
-
-### Learn More
+### References
 
 [Latest Features](https://docs.oracle.com/en-us/iaas/releasenotes/services/logging-analytics/)
 
