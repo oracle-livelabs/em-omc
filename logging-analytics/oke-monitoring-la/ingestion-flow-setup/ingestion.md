@@ -63,7 +63,7 @@ In this lab, you will:
 1. To Set up kubeconfig for the OKE Cluster replace the Cluster ID value in the below command.
     ```
      <copy>
-       oci ce cluster create-kubeconfig --cluster-id <CLUSTER_ID> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+       oci ce cluster create-kubeconfig --cluster-id <Kubernetes_Cluster_Id> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
      </copy>
 
     ```
@@ -105,7 +105,11 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
 ## Task 5: Download Helm Charts from GitHub
 1. In the present working directory create the directory oke-livelab and navigate into it. 
-  > **Note:** You can use the command - `mkdir oke-livelab && cd $_`
+    ```
+      <copy>
+          mkdir oke-livelab && cd $_
+      </copy>
+    ```
 
 2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/tag/v.2.0.0) using the following command.
     ```
@@ -158,12 +162,12 @@ ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Va
 ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
 kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
 kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
-createServiceAccount: false
+createServiceAccount:  false
 serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
 fluentd:
    baseDir: /var/log/<Value of namespace specified above>
    tailPlugin:
-      readFromHead: false
+      readFromHead:  false
       </copy>
       ```
  4. The above **values.yaml** contains the basic values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
@@ -237,7 +241,8 @@ fluentd:
     ![Image alt text](images/deployment.png)
 
 3. ConfigMap
-    - A ConfigMap is an API object used to store non-confidential data in key-value pairs.
+    - A ConfigMap contains the fluentd configuration for Kubernetes System Logs and Kubernetes Objects Logs
+
 
 
 4. To verify fluentd is up and running
@@ -260,7 +265,7 @@ fluentd:
      ```
      - Output will be the same as above.
      
-5. Verify logs are sent to Logging Analytics 
+5. (Optional) Verify logs are sent to Logging Analytics 
      - To verify logs are sent to the Logging Analytics, first execute the following command. 
     ```
     <copy>
