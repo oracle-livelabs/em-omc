@@ -46,6 +46,7 @@ In this lab, you will:
   
   vii. **Logging\_Analytics\_LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
 
+
 ## Task 2: Launching Cloud Shell
   
 1. On Oracle Cloud Home Page click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
