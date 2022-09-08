@@ -26,14 +26,26 @@ In this lab, you will:
 
 ## Task 1: Generating the Prerequisite Values
 
-1. Keep the below fields handy.
-  - Kubernetes Cluster Id
-  - Kubernetes Cluster Name
-  - Kubernetes Namespace
-  - imagePullSecrets
-  - url
-  - ociLANamespace
-  - ociLALogGroupID.
+1. On the **Kubernetes and OKE Monitoring and Troubleshooting** home page click on the View Login Info link. 
+
+2. A Reservation Information page will be displayed.
+
+3. Keep the below fields handy from the Terraform Values frame of the Reservation Information page.
+
+    i. **Kubernetes\_Cluster\_Id:** The OCID of the Kubernetes Cluster created for this live lab session
+
+   ii. **Kubernetes\_Cluster\_Name:** The name of the Kubernetes Cluster created for this live lab session
+
+  iii. **Kubernetes\_Namespace:** Namespace of Kubernetes in which the helm chart needs to be installed
+
+   iv. **Kubernetes\_Service_Account:** Kubernetes service accounts are Kubernetes resources, created and managed using the Kubernetes API, meant to be used by in-cluster Kubernetes-created entities, such as Pods, to authenticate to the Kubernetes API server or external services.
+
+    v. **Container\_Image_URL:** URL of the docker image which needs to be pulled that contains all the necessary plugins and dependencies for log collection to work seamlessly.
+
+   vi. **Logging\_Analytics\_Namespace:** OCI Tenancy Namespace to which the collected log data to be uploaded
+  
+  vii. **Logging\_Analytics\_LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
+
 
 ## Task 2: Launching Cloud Shell
   
@@ -41,7 +53,7 @@ In this lab, you will:
 
   ![Image alt text](images/cloud-shell.png)
 
-2. A Cloud Shell Instance will be created and text area will be displayed as below. 
+2. A Cloud Shell Instance will be created and the text area will be displayed as below. 
   ![Image alt text](images/cloud-shell-textarea.png)
 
  
@@ -51,7 +63,7 @@ In this lab, you will:
 1. To Set up kubeconfig for the OKE Cluster replace the Cluster ID value in the below command.
     ```
      <copy>
-       oci ce cluster create-kubeconfig --cluster-id <CLUSTER_ID> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+       oci ce cluster create-kubeconfig --cluster-id <Kubernetes_Cluster_Id> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
      </copy>
 
     ```
@@ -72,7 +84,6 @@ In this lab, you will:
     
 New config written to the Kubeconfig file /home/livelab/.kube/config
     ```
-
 ## Task 4: Accessing OKE Cluster In Cloud Shell
 1. Run the following command to verify if the kubeconfig is configured properly and you can access the OKE Cluster.
 
@@ -91,23 +102,34 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
      ```
   > **Note:** Node ip's will differ for every cluster.
 
+
 ## Task 5: Download Helm Charts from GitHub
 1. In the present working directory create the directory oke-livelab and navigate into it. 
-  > **Note:** You can use the command - `mkdir oke-livelab && cd $_`
+    ```
+      <copy>
+          mkdir oke-livelab && cd $_
+      </copy>
+    ```
 
-2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/tag/v1.0.3) using the following command.
+2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/tag/v.2.0.0) using the following command.
     ```
     <copy>
-       wget https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/download/v1.0.3/helm-chart-v1.0.3.tgz 
+       wget https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/download/v.2.0.0/helm-chart-v2.0.0.tgz 
     </copy>
     ```  
-3. The content will be downloaded.
-    ![Image alt text](images/wget-command.png)
+3. The output of the above step would be in line with the below.
+    ```
+    Length: 10750 (10K) [application/octet-stream]
+    Saving to: ‘helm-chart-v2.0.0.tgz’
+    100%[============================================================>] 10,750      --.-K/s   in 0.001s  
+    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart-v2.0.0.tgz’ saved [10750/10750]
+    ```
+   
 
 4. Unpack the tar file by using the below command.
     ```
         <copy>
-          tar zxvf helm-chart-v1.0.3.tgz
+          tar zxvf helm-chart-v2.0.0.tgz
         </copy>
     ```
  5. Validate the helm-chart directory and its contents are extracted.   
@@ -117,7 +139,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
       ```
         <copy>
-          mkdir external-values
+          mkdir external-values && cd $_
         </copy>
       ```
 
@@ -131,22 +153,32 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 3. In the values.yaml file created above, paste the following content and update the values of the respective fields.
       ```
       <copy>
-      namespace: <Kubernetes Namespace Shown In Reservation Information>
-      image:  
-        imagePullSecrets: <image-pull-secret>
-        url: <docker-image-pull-url>
-   
-      # Logging Analytics Namespace
-      ociLANamespace: <LA Namespace Shown In Reservation Information>
-      # Logging Analytics Default Log Group ID
-      ociLALogGroupID: <LA Log Group Id Shown In Reservation Information>
-      # Kubernetes Cluster ID
-      kubernetesClusterID: <Kubernetes Cluster Id Shown In Reservation Information>
-      # Kubernetes Cluster NAME  
-      kubernetesClusterName: <Kubernetes Cluster Name Shown In Reservation Information>
+namespace: <Value of Kubernetes_Namespace obtained from Terraform Values Frame>
+image:
+   url: <Value of Container_Image_URL obtained from Terraform Values Frame>
+   imagePullPolicy: Always
 
+ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Values Frame>
+ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
+kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
+kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
+createServiceAccount:  false
+serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
+fluentd:
+   baseDir: /var/log/<Value of namespace specified above>
+   tailPlugin:
+      readFromHead:  false
       </copy>
       ```
+ 4. The above **values.yaml** contains the basic values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
+
+      ```
+        <copy>
+          cat ~/oke-livelab/helm-chart/values.yaml
+        </copy>
+      ```
+
+
 ## Task 7: Verifying Helm Configuration
 1. Once the values.yaml is updated, it is important to perform the dry run to validate the configuration is correct. To perform this check, 
   run the following command.
@@ -155,22 +187,22 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
           helm template --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/
         </copy>
       ```
- 2. Validate that the above command return no errors or failures.     
+ 2. Validate that the above command returns no errors or failures.     
  
 ## Task 8: Install Helm Chart
 1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
-         helm install <release-name-of-choice> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/
+         helm install <release-name-of-choice> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
         </copy>
       ```
   > **Note:** Provide the release-name-of-choice and keep it handy.
 
-2. To verify the pods are created in the OKE, execute the following command and check the output. Keep the pod names handy for next steps.
+2. To verify the pods are created in the OKE, execute the following command and check the output. Keep the pod names handy for the next steps.
 
     ```
       <copy>
-      kubectl get pods --namespace=Live-Lab-Generated-Kubernetes-Namespace |grep fluentd
+      kubectl get pods -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> |grep fluentd
       </copy>
     ```
     ![Image alt text](images/get-fluentd-pods.png)
@@ -189,7 +221,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - To validate the fluentd daemonset is running, execute the command - 
       ```
         <copy>
-          kubectl get daemonset oci-la-fluentd-daemonset --namespace=Live-Lab-Generated-Kubernetes-Namespace
+          kubectl get daemonset oci-la-fluentd-daemonset -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
         </copy>
       ```  
     - Output will be in-line with the below snapshot.    
@@ -202,21 +234,22 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - To validate the fluentd deployment is running, execute the command -
       ```
         <copy>
-          kubectl get deployments oci-la-fluentd-deployment --namespace=Live-Lab-Generated-Kubernetes-Namespace
+          kubectl get deployments oci-la-fluentd-deployment --n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
         </copy>
       ```  
     - Output will be in-line with the below snapshot.  
     ![Image alt text](images/deployment.png)
 
 3. ConfigMap
-    - A ConfigMap is an API object used to store non-confidential data in key-value pairs.
+    - A ConfigMap contains the fluentd configuration for Kubernetes System Logs and Kubernetes Objects Logs
+
 
 
 4. To verify fluentd is up and running
     - For Kubernetes System 
      ```
      <copy>
-        kubectl logs <fluentd-daemonset-pod-name-from-task-7.2> --namespace=Kubernetes-Namespace-In-Reservation-Information |grep 'fluentd worker'
+        kubectl logs <fluentd-daemonset-pod-name-from-task-7.2> -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> |grep 'fluentd worker'
      </copy>
      ```
      - You should see the below message
@@ -227,19 +260,27 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
      - For Kubernetes Objects
      ```
      <copy>
-        kubectl logs <fluentd-deployment-pod-name-from-task-7.2> --namespace=Kubernetes-Namespace-In-Reservation-Information |grep 'fluentd worker'
+        kubectl logs <fluentd-deployment-pod-name-from-task-7.2> -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> |grep 'fluentd worker'
      </copy>
      ```
      - Output will be the same as above.
      
-5. Verify logs are sent to Logging Analytics 
-     - To verify logs are sent to the Logging Analytics execute the following command. 
+5. (Optional) Verify logs are sent to Logging Analytics 
+     - To verify logs are sent to the Logging Analytics, first execute the following command. 
     ```
     <copy>
-        command to be updated once the feature is ready
+        kubectl exec -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> --stdin --tty <fluentd-daemonset-pod-name-from-task-7.2>   -- /bin/bash
     </copy>
     ```
-     - Check for the below message in the logs
+    
+    - The above command will open a bash shell.
+    
+    - Run the following command to check the output plugin logs.
+      ```
+        tail -f /var/log/oci-logging-analytics.log
+      ``` 
+    
+     - Check for a similar message in the logs
      ```
      I, [2022-08-16T12:31:32.234958 #11]  INFO -- : Generating payload with 95  records for oci_la_log_group_id: ocid1.loganalyticsloggroup.oc1.abc.abcxxxxxxxxyx543xxxxxx
      I, [2022-08-16T12:31:32.402328 #11]  INFO -- : The payload has been successfully uploaded to logAnalytics -
