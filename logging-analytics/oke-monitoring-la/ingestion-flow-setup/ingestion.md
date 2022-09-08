@@ -84,8 +84,26 @@ In this lab, you will:
     
 New config written to the Kubeconfig file /home/livelab/.kube/config
     ```
+## Task 4: Accessing OKE Cluster In Cloud Shell
+1. Run the following command to verify if the kubeconfig is configured properly and you can access the OKE Cluster.
 
-## Task 4: Download Helm Charts from GitHub
+     ```
+       <copy>
+          kubectl get nodes
+       </copy>
+     ```
+   
+     ```
+       $ kubectl get nodes
+       NAME          STATUS   ROLES   AGE   VERSION
+       10.0.10.xxx   Ready    node    91d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
+       10.0.10.xxx   Ready    node    77d   v1.21.5
+     ```
+  > **Note:** Node ip's will differ for every cluster.
+
+
+## Task 5: Download Helm Charts from GitHub
 1. In the present working directory create the directory oke-livelab and navigate into it. 
   > **Note:** You can use the command - `mkdir oke-livelab && cd $_`
 
@@ -113,7 +131,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
  5. Validate the helm-chart directory and its contents are extracted.   
     ![Image alt text](images/helm-chart-extraction.png)
 
-## Task 5: Create Custom values yaml file
+## Task 6: Create Custom values yaml file
 1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
       ```
         <copy>
@@ -157,7 +175,7 @@ fluentd:
       ```
 
 
-## Task 6: Verifying Helm Configuration
+## Task 7: Verifying Helm Configuration
 1. Once the values.yaml is updated, it is important to perform the dry run to validate the configuration is correct. To perform this check, 
   run the following command.
       ```
@@ -167,7 +185,7 @@ fluentd:
       ```
  2. Validate that the above command returns no errors or failures.     
  
-## Task 7: Install Helm Chart
+## Task 8: Install Helm Chart
 1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
@@ -187,7 +205,7 @@ fluentd:
    > **Note:** Provide the correct kubernetes namespace. 
 
 
-## Task 8: Verify All Resources Are Created
+## Task 9: Verify All Resources Are Created
   As part of this deployment following resources are created - 
   - daemonset
   - deployment
@@ -269,7 +287,7 @@ fluentd:
                          opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
      ```
    
-## Task 9: Validate in the Log Explorer
+## Task 10: Validate in the Log Explorer
 
 1. From Navigation Menu ![Image alt text](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Home**
 
