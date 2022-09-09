@@ -167,7 +167,7 @@ serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Val
 fluentd:
    baseDir: /var/log/<Value of namespace specified above>
    tailPlugin:
-      readFromHead:  false
+            readFromHead:  false
       </copy>
       ```
  4. The above **values.yaml** contains the basic values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
