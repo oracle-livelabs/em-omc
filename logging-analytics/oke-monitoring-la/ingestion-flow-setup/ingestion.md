@@ -193,10 +193,10 @@ fluentd:
 1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
-         helm install <release-name-of-choice> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
+         helm install <Value of Kubernetes_Namespace obtained from Terraform Values Frame> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
         </copy>
       ```
-  > **Note:** Provide the release-name-of-choice and keep it handy.
+  > **Note:** Value of Kubernetes_Namespace specified after install is release name. Please keep it handy for subsequent steps.
 
 2. To verify the pods are created in the OKE, execute the following command and check the output. Keep the pod names handy for the next steps.
 
@@ -234,7 +234,7 @@ fluentd:
     - To validate the fluentd deployment is running, execute the command -
       ```
         <copy>
-          kubectl get deployments oci-la-fluentd-deployment --n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
+          kubectl get deployments oci-la-fluentd-deployment -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
         </copy>
       ```  
     - Output will be in-line with the below snapshot.  
