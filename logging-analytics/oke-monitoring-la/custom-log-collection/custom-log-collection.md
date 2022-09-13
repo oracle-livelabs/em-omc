@@ -63,7 +63,8 @@ In this lab, you will:
 ## Task 3: Inserting the mushop application specific configuration in values.yaml.
 
 1. In the next few steps we will update the values.yaml to collect the logs for some of the **mushop application containers**.
-    - Open the **vaules.yaml** file created in the external-values folder and set the paste mode using the below command.
+    - Open the vaules.yaml file created in the external-values folder and enable paste mode, so that vi/vim will not auto-indent any text that you paste
+      
       ```
         <copy>
             :set paste
@@ -107,9 +108,6 @@ In this lab, you will:
          iii. multilineStartRegExp - When the individual log entry in the file spans across multiple lines, multilineStartRegExp is used to uniquely identify  the starting point of the log entry like **mushop-orders** and **mushop-api** in the above configuration . 
 
         
-         
-
-
 2. Apply the above helm chart using the same release name specified in the **Ingestion Flow Setup Lab** using the below command.
 
     ```
