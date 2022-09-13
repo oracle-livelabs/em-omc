@@ -30,7 +30,7 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
        ```
        <copy>
-       https://cloud.oracle.com/loganalytics/explorer?viz=cluster&query=*%20%7C%20cluster&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaapsyvad5tuc2t45jml4bpn3su3xvpxq7pkvhnipqdsxkphdkodgpa%2Ctrue%3Ben%3Aroot%2Ctrue%2Cocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriajwwjuh6nqdannkqw7yh4ol42sq5zq4tz7sksx6yuv3fa%3Brs%3Aroot%2Ctrue&startTime=1653451200000&endTime=1654153250000&region=us-phoenix-1
+       https://cloud.oracle.com/loganalytics/explorer?viz=cluster&query=*%20%7C%20cluster&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue%2Cocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriayzkchiuhdznrq6peshz4pk6gknqk725shpjtyyj2jpta%3Brs%3Aroot%2Ctrue&startTime=1653451200000&endTime=1654153250000&region=us-phoenix-1
        </copy>
        ```
 

@@ -1,4 +1,4 @@
-# Getting Familiar with Logging Analytics Explorer GUI
+# Get Familiar with Logging Analytics Explorer GUI
 
 ## Introduction
 
