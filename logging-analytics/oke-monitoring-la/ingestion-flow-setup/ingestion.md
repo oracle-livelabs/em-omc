@@ -51,12 +51,12 @@ In this lab, you will:
 
 ## Task 2: Launching Cloud Shell
   
-1. On Oracle Cloud Home Page click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
+1. On Oracle Cloud Home Page click the **Cloud Shell**  ![cloud-shell-button](images/cloud-shell-button.png)  button. 
 
-  ![Image alt text](images/cloud-shell.png)
+  ![cloud-shell](images/cloud-shell.png)
 
 2. A Cloud Shell Instance will be created and the text area will be displayed as below. 
-  ![Image alt text](images/cloud-shell-textarea.png)
+  ![cloud-shell-textarea](images/cloud-shell-textarea.png)
 
  
 
@@ -135,7 +135,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
         </copy>
     ```
  Validate the helm-chart directory and its contents are extracted.   
-    ![Image alt text](images/helm-chart-extraction.png)
+    ![helm-chart-extraction](images/helm-chart-extraction.png)
 
 ## Task 6: Create Custom values yaml file
 1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
