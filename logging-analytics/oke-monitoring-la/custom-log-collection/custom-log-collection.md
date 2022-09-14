@@ -20,15 +20,15 @@ In this lab, you will:
 
 ## Task 1: Validate in the Log Explorer
 
-1. From Navigation Menu ![Image alt text](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**
 
 
 2. By default, the Log Explorer will show the Pie-Chart Visualization of all the logs received from the OKE cluster. 
-    ![Image alt text](images/log-explorer-pie-chart-view.png)
+    ![log-explorer](images/log-explorer-pie-chart-view.png)
 
 3. Drill Down to Log Source
     - Click on the Kubernetes Container Generic Logs from the list of Log Source and click Drill Down
-        ![Image alt text](images/drill-down.png) 
+        ![drill-down](images/drill-down.png) 
 
     - The OKE System logs and Objects logs are handled/collected by the respective Log Source(s). 
     - All the remaining (custom) container logs from the cluster are processed using a generic Log Source called **Kubernetes Container Generic Logs**. 
@@ -36,27 +36,27 @@ In this lab, you will:
     
 
 4. This will take to the "Records with Histogram view" in context of **Kubernetes Container Generic Logs** Log Source
-    ![Image alt text](images/kubernetes-container-generic-logs.png) 
+    ![kubernetes-logs](images/kubernetes-container-generic-logs.png) 
 
 5. Click on the **Log Origin** field from the Fields Panel.
-    ![Image alt text](images/log-origin.png) 
+    ![log-origin](images/log-origin.png) 
 
 6. **Filter Log Origin** pop-window will be displayed. Filter the results with the keyword **mushop** and hit enter. All the logs pertaining to the mushop app will be displayed. We have highlighted two log files, whose logs will be rerouted to be processed with existing mushop Log Sources.
-    ![Image alt text](images/mu-shop.png)    
+    ![mushop](images/mu-shop.png)    
 
 
 ## Task 2 (Optional): MuShop Log Sources
 1. Click on the drop-down of top left side of the Log Explorer Page and select **Administration**
-    ![Image alt text](images/administration.png) 
+    ![administration](images/administration.png) 
 
    Administration Overview Page will be displayed.
-    ![Image alt text](images/admin-overview.png) 
+    ![admin-overview](images/admin-overview.png) 
 
 2. Click on Sources from the Resources Section.
-    ![Image alt text](images/sources.png) 
+    ![sources](images/sources.png) 
 
    Sources page will be displayed. Filter the results with the keyword **mushop** and hit enter. The list of all **mushop** sources will be displayed.
-    ![Image alt text](images/all-mushop-sources.png)
+    ![all-mushop-sources](images/all-mushop-sources.png)
 
 
 
@@ -122,13 +122,13 @@ In this lab, you will:
 1. Navigate to the Log Explorer by following the steps provided in Task 1.
 
 2. In the Pie Chart view now you should be able to see the Log Sources pertaining to the mushop applications along with the other OKE System and Objects logs.
-    ![Image alt text](images/mushop-piechart.png)
+    ![mushop-piechart](images/mushop-piechart.png)
 
 3. Drill Down to the Log Source **mushop api logs**
-    ![Image alt text](images/drill-down-mushop-api-logs.png)
+    ![drill-down-mushop-api-logs](images/drill-down-mushop-api-logs.png)
 
 4. Click on the expand field button to view all the extracted fields of a log entry.
-    ![Image alt text](images/mushop-api-logs.png)
+    ![mushop-api-logs](images/mushop-api-logs.png)
 
 
 **Congratulations!**, you have successfully modified the helm configuration to collect custom application container logs. Please, proceed to next lab.
