@@ -12,7 +12,7 @@ In this lab, you will:
 
 Now we will walk through Analyzing large volume of logs using cluster command.
 
-## **Task 1:**  Analyzing large volume of logs using cluster
+## **Task 1:**  Analyzing large volume of logs using **cluster**
 
 1. Click on the 'Cluster' visualization to invoke machine learning
 
@@ -20,13 +20,13 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
   ![](images/click-cluster-1.png "UIdescription")
 
-2. Drill down into different clusters, potential issues, outliers and trends.
+2. Drill down into cluster tab.
 
    Logging Analytics uses unsupervised ML to find related clusters in data.  This reduces the approximately 500,000 log records to 500 cluster patterns, in real time.
 
    **Note:** The numbers you see might be slightly different than the ones shown in the tutorial. You can use the START time **May 25, 2022 00:00 AM UTC(+00:00)** and END time **Jun 2, 2022 12:00 PM UTC(+00:00)** in the time picker to replicate these in your lab environment.
 
-   You can also copy-paste the following link to your browser in the Virtual Desktop.
+   You can also copy-paste the following link to your browser for cluster visualization.
 
        ```
        <copy>
@@ -36,35 +36,40 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
    ![](images/cluster-start-2.png "image10")
 
-3. Click on the **Potential Issues** tab.
+## **Task 2:**  Analyzing logs using **Potential Issues**
+In this task you will learn to analyzing logs using cluster potential issues.
 
-   In this screenshot, we see that out of the 500 clusters, 37 were automatically identified as Potential Issues. Note: The actual numbers on your screen may be different because you are using live log data.
+   Click on the **Potential Issues** tab.
+
+   In this screenshot, we see that out of the 289 clusters, 37 were automatically identified as Potential Issues. Note: The actual numbers on your screen may be different because you are using live log data.
 
    **Potential Issues** are a subset of total clusters that have potential issues based on log records containing words such as error, fatal, exception, and so on.
 
    ![](images/potential-issues-2.png "image11")
 
-4. Click on **Outliers** tab.
+## **Task 3:**  Analyzing logs using **Outliers**
 
-   These issues occurred only once, and indicate an anomaly in the system.
+   Click on **Outliers** tab.
+
+   You will these issues occurred only once, and indicate an anomaly in the system.
 
    **Outliers:** Number of clusters that have occurred only once during a given time period
 
    ![](images/outliers-2.png "image12")
 
-5. Correlate logs based on **Trends** tab.
+## **Task 4:**  Correlate logs based on **Trends** tab
 
    **Trend**: Number of unique trends during the time period. Many clusters may have the same trend. These are log cluster patterns that are correlated in time.
 
-   Click on the 'Trends' tab in the Cluster visualization,
+   1. Click on the 'Trends' tab in the Cluster visualization,
 
    ![](images/trends-2.png "image13")
 
-   Scroll down to find the cluster shown in the screenshot below.
+   2. Scroll down to find the cluster shown in the screenshot below.
 
    ![](images/trend-example-2.png "image13")
 
-   Next, click on "3 similar trends" to see a set of related logs from the
+   3. Next, click on "3 similar trends" to see a set of related logs from the
    EBS Concurrent Manager and Linux OS. Note that the exact number of displayed trends may vary based on the selected time window.
 
    ![](images/similar-trend-eg-2.png "image13")
