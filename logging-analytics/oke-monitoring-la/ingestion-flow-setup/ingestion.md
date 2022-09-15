@@ -14,12 +14,12 @@ In this lab we will be using the following tools:
 
 And, below are the ingestion methods that would be implemented 
 * fluentd - an open source data collector
-* management-agent - Pending with Agent Team
+* management-agent - Oracle provided data collector and Prometheus scraper
 ### Objectives
 
 In this lab, you will:
 * Set up fluentd to collect OKE System logs and Object logs
-
+* Set up Management Agent Pod that is monitoring the metrics of the Kubernetes Cluster and reporting them to OCI Monitoring
 
 ### Prerequisites
 
@@ -47,6 +47,12 @@ In this lab, you will:
    vi. **Logging\_Analytics\_Namespace:** OCI Tenancy Namespace to which the collected log data to be uploaded
   
   vii. **Logging\_Analytics\_LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
+  
+  viii. **compartmentId:** Compartment OCID where the metrics will be sent.
+  
+  ix. **kubernetesClusterName:** Value will be displayed to the user
+  
+  x. **namespace:** Application Namespace generated for the customer
 
 
 ## Task 2: Launching Cloud Shell
@@ -167,6 +173,9 @@ kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Val
 kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
 createServiceAccount:  false
 serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
+mgmtagent: installKey: <Value of Mgmtagent_Install_Key obtained from Terraform Values Frame>
+mgmtagent: imageUrl: <Value of Mgmtagent_Container_Image_URL obtained from Terraform Values Frame>
+ociCompartmentID: <Value of ociCompartmentID obtained from Terraform Values Frame>
 fluentd:
    baseDir: /var/log/<Value of namespace specified above>
    tailPlugin:
@@ -225,7 +234,32 @@ fluentd:
       ```
     > **Note:** Keep the pod names handy and in subsequent steps replace <daemonset-pod-name\> value with any one of the pod-name above.
 
-   ii. **Deployment** 
+   ii. **Statefullset**
+   
+    - Ensure that the statefulset for Management Agent is created
+    - Run the below command to check if statefulset for management agent is created
+      ```
+      <copy>
+        kubectl get statefulset -n <namespace>
+      </copy>
+      ```
+      ```
+      NAME                  READY   AGE
+      mgmtagent-bv          1/1     13d
+      ```     
+    - Ensure mgmtagent-0 pod is listed in the output of kubectl    
+    - Run the below command to check if management agent pod is listed in kubectl
+      ```
+      <copy>
+        kubectl get pods -l app=mgmtagent-bv -n <namespace>
+      </copy>
+      ```
+      ```
+      NAME             READY   STATUS    RESTARTS   AGE
+      mgmtagent-bv-0   1/1     Running   0          7d4h
+      ```   
+   
+   iii. **Deployment** 
 
     - A Kubernetes deployment is a resource object in Kubernetes that provides declarative updates to applications.
     - We have used deployment to collect the Kubernetes Object Logs.
@@ -242,7 +276,7 @@ fluentd:
 
     > **Note:** Keep the pod names handy and in subsequent steps replace <deployment-pod-name\> value with the above pod-name.
 
-   iii. **Config Map** 
+   iv. **Config Map** 
     - A config map contains the necessary fluentd configuration to collect all the telemetry information on the OKE Cluster.
     - Run the following command to view Kubernetes System log config map.
       ```
