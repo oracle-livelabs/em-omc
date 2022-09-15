@@ -299,6 +299,7 @@ fluentd:
      - Output will be the same as above.
      
 2. (Optional) Verify logs are sent to Logging Analytics 
+
      - To verify logs are sent to the Logging Analytics, execute the following command. 
      
     ```
