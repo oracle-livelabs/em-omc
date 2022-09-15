@@ -34,19 +34,19 @@ In this lab, you will:
 
 3. Keep the below fields handy from the Terraform Values frame of the Reservation Information page.
 
-    i. **Kubernetes\_Cluster\_Id:** The OCID of the Kubernetes Cluster created for this live lab session
+    i. **Kubernetes Cluster Id:** The OCID of the Kubernetes Cluster created for this live lab session
 
-   ii. **Kubernetes\_Cluster\_Name:** The name of the Kubernetes Cluster created for this live lab session
+   ii. **Kubernetes Cluster Name:** The name of the Kubernetes Cluster created for this live lab session
 
-  iii. **Kubernetes\_Namespace:** Namespace of Kubernetes in which the helm chart needs to be installed
+  iii. **Kubernetes Namespace:** Namespace of Kubernetes in which the helm chart needs to be installed
 
-   iv. **Kubernetes\_Service_Account:** Kubernetes service accounts are Kubernetes resources, created and managed using the Kubernetes API, meant to be used by in-cluster Kubernetes-created entities, such as Pods, to authenticate to the Kubernetes API server or external services.
+   iv. **Kubernetes Service Account:** Kubernetes service accounts are Kubernetes resources, created and managed using the Kubernetes API, meant to be used by in-cluster Kubernetes-created entities, such as Pods, to authenticate to the Kubernetes API server or external services.
 
-    v. **Container\_Image_URL:** URL of the docker image which needs to be pulled that contains all the necessary plugins and dependencies for log collection to work seamlessly.
+    v. **Container Image URL:** URL of the docker image which needs to be pulled that contains all the necessary plugins and dependencies for log collection to work seamlessly.
 
-   vi. **Logging\_Analytics\_Namespace:** OCI Tenancy Namespace to which the collected log data to be uploaded
+   vi. **Logging Analytics Namespace:** OCI Tenancy Namespace to which the collected log data to be uploaded
   
-  vii. **Logging\_Analytics\_LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
+  vii. **Logging Analytics LogGroup Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
 
 
 ## Task 2: Launching Cloud Shell
@@ -65,7 +65,7 @@ In this lab, you will:
 1. To Set up kubeconfig for the OKE Cluster replace the Cluster ID value in the below command.
     ```
      <copy>
-       oci ce cluster create-kubeconfig --cluster-id <Kubernetes_Cluster_Id> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+       oci ce cluster create-kubeconfig --cluster-id <Kubernetes Cluster Id> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
      </copy>
 
     ```
@@ -156,17 +156,17 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
       ```
       <copy>
-namespace: <Value of Kubernetes_Namespace obtained from Terraform Values Frame>
+namespace: <Value of Kubernetes Namespace obtained from Terraform Values Frame>
 image:
-   url: <Value of Container_Image_URL obtained from Terraform Values Frame>
+   url: <Value of Container Image URL obtained from Terraform Values Frame>
    imagePullPolicy: Always
 
-ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Values Frame>
-ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
-kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
-kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
+ociLANamespace: <Value of Logging Analytics Namespace obtained from Terraform Values Frame>
+ociLALogGroupID: <Value of Logging Analytics LogGroup Id obtained from Terraform Values Frame>
+kubernetesClusterID: <Value of Kubernetes Cluster Id obtained from Terraform Values Frame>
+kubernetesClusterName:  <Value of Kubernetes Cluster Name obtained from Terraform Values Frame>
 createServiceAccount:  false
-serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
+serviceAccount: <Value of Kubernetes Service Account obtained from Terraform Values Frame>
 fluentd:
    baseDir: /var/log/<Value of namespace specified above>
    tailPlugin:
@@ -299,21 +299,14 @@ fluentd:
      - Output will be the same as above.
      
 2. (Optional) Verify logs are sent to Logging Analytics 
-     - To verify logs are sent to the Logging Analytics, first execute the following command. 
+
+     - To verify logs are sent to the Logging Analytics, execute the following command. 
+     
     ```
     <copy>
-        kubectl exec -n=<namespace> --stdin --tty <daemonset-pod-name>   -- /bin/bash
+        kubectl exec -n=<namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
     </copy>
     ```
-    
-    - The above command will open a bash shell.
-    
-    - Run the following command to check the output plugin logs.
-      ```
-      <copy>
-        tail -f /var/log/oci-logging-analytics.log
-      </copy>  
-      ``` 
     
      - Check for a similar message in the logs
      ```
