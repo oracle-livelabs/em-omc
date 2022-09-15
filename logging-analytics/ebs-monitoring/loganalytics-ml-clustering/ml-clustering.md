@@ -22,7 +22,7 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
 2. Drill down into cluster tab.
 
-   Logging Analytics uses unsupervised ML to find related clusters in data.  This reduces the approximately 500,000 log records to 500 cluster patterns, in real time.
+   Logging Analytics uses unsupervised ML to find related clusters in data.  This reduces the approximately 300,000 log records to 110 cluster patterns, in real time.
 
    **Note:** The numbers you see might be slightly different than the ones shown in the tutorial. You can use the START time **May 25, 2022 00:00 AM UTC(+00:00)** and END time **Jun 2, 2022 12:00 PM UTC(+00:00)** in the time picker to replicate these in your lab environment.
 
@@ -41,7 +41,7 @@ In this task you will learn to analyzing logs using cluster potential issues.
 
    Click on the **Potential Issues** tab.
 
-   In this screenshot, we see that out of the 289 clusters, 37 were automatically identified as Potential Issues. Note: The actual numbers on your screen may be different because you are using live log data.
+   In this screenshot, we see that out of the 110 clusters, 16 were automatically identified as Potential Issues. Note: The actual numbers on your screen may be different because you are using live log data.
 
    **Potential Issues** are a subset of total clusters that have potential issues based on log records containing words such as error, fatal, exception, and so on.
 
@@ -69,7 +69,7 @@ In this task you will learn to analyzing logs using cluster potential issues.
 
    ![](images/trend-example-2.png "image13")
 
-   3. Next, click on "3 similar trends" to see a set of related logs from the
+   3. Next, click on "2 similar trends" to see a set of related logs from the
    EBS Concurrent Manager and Linux OS. Note that the exact number of displayed trends may vary based on the selected time window.
 
    ![](images/similar-trend-eg-2.png "image13")

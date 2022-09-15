@@ -16,7 +16,7 @@ In this lab, you will:
 * Troubleshoot and identify the problematic EBS jobs causing performance degradation
 * Build a query for continuous monitoring
 
-## **Task 1:** Open the saved search **EBS Concurrent Requests Analysis** for Troubleshooting
+## **Task 1:** Analyse **EBS Concurrent Requests** for Troubleshooting
 Here is the analysis view that you'll be using from scratch.
 
   ![](images/link-goal.png "UIdescription")

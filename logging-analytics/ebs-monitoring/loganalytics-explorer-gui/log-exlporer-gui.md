@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Let's do a walk through of Log Explorer, which should be the current view on your virtual desktop on OCI Console.
+Let's do a walk through of Log Explorer, which should be the current view on OCI Console.
 
 Your should see a page similar to the one below showing the distribution of different types of logs currently being collected in this tenancy in the last 60 minutes.
 
@@ -20,6 +20,13 @@ In this lab, you will:
 Open the navigation menu and click **Observability & Management**. Under **Logging Analytics** click **Log Explorer**.
 ![](./images/oci-console-la-explorer.png " ")
 
+You can also copy-paste the following link to your browser to open fresh Log Explorer.
+
+```
+<copy>
+https://cloud.oracle.com/loganalytics/explorer?viz=pie&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue
+</copy>
+```
 
 ## **Task 2:**  Familiarize user interface used in Logging Analytics
 
