@@ -18,14 +18,14 @@
             "filename": "https://oracle-livelabs.github.io/em-omc/logging-analytics/ebs-monitoring/loganalytics-explorer-gui/log-exlporer-gui.md"
         },
         {
-            "title": "Lab 2: Logging Analytics Basics",
-            "description": "OCI Logging Analytics Basics",
-            "filename": "https://oracle-livelabs.github.io/em-omc/logging-analytics/ebs-monitoring/loganalytics-basics/loganalytics-basics.md"
+            "title": "Lab 2: Ingestion Flow Setup",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for OKE System Logs and Object Logs",
+            "filename": "../../ingestion-flow-setup/ingestion.md"
         },
         {
-            "title": "Lab 3: Ingestion Flow Setup",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics",
-            "filename": "../../ingestion-flow-setup/ingestion.md"
+            "title": "Lab 3: Custom Application Log Collection",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
+            "filename": "../../custom-log-collection/custom-log-collection.md"
         },
         {
             "title": "Conclusion",
