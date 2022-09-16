@@ -70,7 +70,7 @@ In this lab, you will:
 
   ![Image alt text](images/AddDimension3.png) 
   
-   Note: choose the cluster name provided to you when you signed up for the LiveLab session.
+  > **Note:** choose the cluster name provided to you when you signed up for the LiveLab session.
 
 5. Add the dimensions for the Source data elements for **nodeMemoryUsage**
    
@@ -102,7 +102,7 @@ In this lab, you will:
      
      namespace
      
-  Note: Pick the value for namespace that was provided to you when you signed up for the LiveLabs session
+  > **Note:**  Pick the value for namespace that was provided to you when you signed up for the LiveLabs session
   
   
 ## Task 4: (Optional) Create a Metric widget for Threads and Processes
@@ -118,7 +118,7 @@ In this lab, you will:
      
      namespace
      
-  Note: Pick the value for namespace that was provided to you when you signed up for the LiveLabs session
+  > **Note:**  Pick the value for namespace that was provided to you when you signed up for the LiveLabs session
 
 
 ## Task 5: Verify the dashboard

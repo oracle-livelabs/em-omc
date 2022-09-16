@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will walk you through the steps to configure an open source log collector fluentd to collect OKE System and Service log using package manager Helm.
+This lab will walk you through the steps to configure an open source log collector fluentd and Oracle Management Agent to collect OKE System and Service log and Kubernetes metrics using package manager Helm.
 
 Estimated Time: 30 minutes
 
