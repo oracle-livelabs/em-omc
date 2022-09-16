@@ -28,6 +28,11 @@
             "filename": "../../custom-log-collection/custom-log-collection.md"
         },
         {
+            "title": "Lab 4: Building dashboards in Logging Analytics with the data ingested by Management Agents",
+            "description": "This live lab outlines the steps to build dashboards in Logging Analytics with the data ingested by Management Agent",
+            "filename": "../../la-dashboard-creation/dashboard.md"
+        },
+        {
             "title": "Conclusion",
             "filename": "../../conclusion/conclusion.md"
         },
