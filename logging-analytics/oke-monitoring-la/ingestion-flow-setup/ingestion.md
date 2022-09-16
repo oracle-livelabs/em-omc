@@ -48,11 +48,12 @@ In this lab, you will:
   
   vii. **Logging\_Analytics\_LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
   
-  viii. **compartmentId:** Compartment OCID where the metrics will be sent.
+  viii. **Mgmtagent\_Install\_Key:** Base64 encoded string representation of input.rsp required for Management Agent registration
   
-  ix. **kubernetesClusterName:** Value will be displayed to the user
+  ix. **Mgmtagent\_Container\_Image\_URL:**  URL of the Management Agent docker image 
   
-  x. **namespace:** Application Namespace generated for the customer
+  x. **compartmentId (Check the name of variable):** Customer's Compartment OCID. 
+  
 
 
 ## Task 2: Launching Cloud Shell
@@ -162,25 +163,26 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
       ```
       <copy>
-namespace: <Value of Kubernetes_Namespace obtained from Terraform Values Frame>
-image:
-   url: <Value of Container_Image_URL obtained from Terraform Values Frame>
-   imagePullPolicy: Always
+        namespace: <Value of Kubernetes_Namespace obtained from Terraform Values Frame>
+        image:
+            url: <Value of Container_Image_URL obtained from Terraform Values Frame>
+            imagePullPolicy: Always
 
-ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Values Frame>
-ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
-kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
-kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
-createServiceAccount:  false
-serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
-mgmtagent: installKey: <Value of Mgmtagent_Install_Key obtained from Terraform Values Frame>
-mgmtagent: imageUrl: <Value of Mgmtagent_Container_Image_URL obtained from Terraform Values Frame>
-ociCompartmentID: <Value of ociCompartmentID obtained from Terraform Values Frame>
-fluentd:
-   baseDir: /var/log/<Value of namespace specified above>
-   tailPlugin:
-            readFromHead:  false
-      </copy>
+        ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Values Frame>
+        ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
+        kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
+        kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
+        createServiceAccount:  false
+        serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
+        mgmtagent: 
+            installKey: <Value of Mgmtagent_Install_Key obtained from Terraform Values Frame>
+            imageUrl: <Value of Mgmtagent_Container_Image_URL obtained from Terraform Values Frame>
+        ociCompartmentID: <Value of ociCompartmentID obtained from Terraform Values Frame>
+        fluentd:
+            baseDir: /var/log/<Value of namespace specified above>
+            tailPlugin:
+                readFromHead:  false
+      </copy>      
       ```
 
   > **Note:** In the subsequent steps, replace <namespace\> with the value of namespace specified in the values.yaml above.
@@ -237,7 +239,7 @@ fluentd:
    ii. **Statefullset**
    
     - Ensure that the statefulset for Management Agent is created
-    - Run the below command to check if statefulset for management agent is created
+    - Run the below command to check if statefulset for Management Agent is created
       ```
       <copy>
         kubectl get statefulset -n <namespace>
@@ -247,8 +249,8 @@ fluentd:
       NAME                  READY   AGE
       mgmtagent-bv          1/1     13d
       ```     
-    - Ensure mgmtagent-0 pod is listed in the output of kubectl    
-    - Run the below command to check if management agent pod is listed in kubectl
+    - Ensure mgmtagent-bv-0 pod is listed in the output of kubectl    
+    - Run the below command to check if Management Agent pod is listed in kubectl
       ```
       <copy>
         kubectl get pods -l app=mgmtagent-bv -n <namespace>
@@ -362,8 +364,8 @@ fluentd:
      ```
 
 
-**Congratulations!**, you have successfully set up fluentd to collect OKE System logs and Object logs. Please, proceed to next lab.
+**Congratulations!**, you have successfully set up fluentd to collect OKE System logs and Object logs. You have also successfully setup Management Agent to ingest Kubernetes metrics. Please, proceed to next lab.
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
 * **Last Updated By/Date** - Vikram Reddy, Sep, 2022
