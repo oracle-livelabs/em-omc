@@ -246,7 +246,8 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
       ```
       NAME                  READY   AGE
       mgmtagent-bv          1/1     13d
-      ```     
+      ```
+
     - Ensure mgmtagent-bv-0 pod is listed in the output of kubectl    
     - Run the below command to check if Management Agent pod is listed in kubectl
       ```
@@ -257,7 +258,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
       ```
       NAME             READY   STATUS    RESTARTS   AGE
       mgmtagent-bv-0   1/1     Running   0          7d4h
-      ```   
+      ```
    
    iii. **Deployment** 
 
