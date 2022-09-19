@@ -174,9 +174,6 @@ fluentd:
             readFromHead:  false
       </copy>
       ```
-
-  > **Note:** In the subsequent steps, replace <namespace\> with the value of namespace specified in the values.yaml above.
-
  4. The above **values.yaml** contains the minimal values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
 
       ```
