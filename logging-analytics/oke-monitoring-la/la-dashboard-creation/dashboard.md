@@ -24,51 +24,51 @@ In this lab, you will:
   
 1. On Oracle Cloud Home Page click the Menu and then browse to **Observability and Management** and then click on **Dashboards** under Logging Analytics section
 
-  ![Image alt text](images/onmmenu1.png)
+  ![navigation-menu](images/onmmenu1.png)
 
 2. Select the compartment and then click on the **Create Dashboard** button. 
 
-  ![Image alt text](images/createdashboardhome1.png)
+  ![create-dashboard-home](images/createdashboardhome1.png)
   
 3. Edit the name of the dashboard by clicking on the pencil icon on the top left corner and then click on the Widgets tab on the right
 
-  ![Image alt text](images/createmetricdashboard11.png)
+  ![create-metrics-dashboard](images/createmetricdashboard11.png)
  
 
 ## Task 2: Create a Metric widget for CPU and Memory Utilization
 
 1. Click on the **Create Metric Widget**
 
-  ![Image alt text](images/createmetricwidget11.png)
+  ![create-metrics-widget-1](images/createmetricwidget11.png)
 
 2. Add the compartment filter which is a default option and then click on the **Save Changes** button
 
-  ![Image alt text](images/createmetricwidget21.png)
+  ![create-metrics-widget-2](images/createmetricwidget21.png)
   
 3. Add Source Data for **nodeCpuUsage** and **nodeMemoryUsage** metrics
    
    Click on the **+** next to **Source data** and then select **mgmtagent_kubernetes_metrics** namespace and **nodeCpuUsage** as indicated in the following screenshot.  Click the **Add** button after you are done.
   
-  ![Image alt text](images/addsourcedata1.png)
+  ![add-source-data-1](images/addsourcedata1.png)
   
    Repeat the same steps to add another Source data for **nodeMemoryUsage**
    After adding both the Source Data elements then the screen should look as follows:
    
-  ![Image alt text](images/addsourcedata21.png)
+  ![add-source-data-2](images/addsourcedata21.png)
   
 4. Add the dimensions for the Source data elements for **nodeCpuUsage**
    
    Click on the 3 dots next to **nodeCpuUsage** and click on **Edit** option.
   
-  ![Image alt text](images/adddimension11.png)
+  ![add-dimension-1](images/adddimension11.png)
   
    Click on the **Add Dimension** button
    
-  ![Image alt text](images/adddimension21.png) 
+  ![add-dimension-2](images/adddimension21.png) 
   
    Add the dimensions for **clusterName** and **nodeName** as shown below
 
-  ![Image alt text](images/adddimension31.png) 
+  ![add-dimension-3](images/adddimension31.png) 
   
   > **Note:** choose the cluster name provided to you when you signed up for the LiveLab session.
 
@@ -82,11 +82,11 @@ In this lab, you will:
    
    Click **Apply** to create the widget
    
-  ![Image alt text](images/finalizewidget1.png) 
+  ![finalize-widget](images/finalizewidget1.png) 
   
 7. Save the dashboard
 
-  ![Image alt text](images/savedashboard1.png) 
+  ![save-dashboard](images/savedashboard1.png) 
   
    
 ## Task 3: Create a Metric widget for Network Transmit and Receive
@@ -125,7 +125,7 @@ In this lab, you will:
 
   After you have saved the dashboard, it should appear as shown here
   
-  ![Image alt text](images/verifydashboard1.png) 
+  ![verify-dashboard](images/verifydashboard1.png) 
   
 
 
