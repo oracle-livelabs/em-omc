@@ -39,11 +39,11 @@ In this lab, you will:
 
 1. Click on the **Create Metric Widget**
 
-  ![create-metrics-widget-1](images/createmetricwidget11.png)
+  ![create-metrics-widget](images/createmetricwidget11.png)
 
 2. Add the compartment filter which is a default option and then click on the **Save Changes** button
 
-  ![create-metrics-widget-2](images/createmetricwidget21.png)
+  ![add-compartment-filter](images/createmetricwidget21.png)
   
 3. Add Source Data for **nodeCpuUsage** and **nodeMemoryUsage** metrics
    
@@ -60,15 +60,15 @@ In this lab, you will:
    
    Click on the 3 dots next to **nodeCpuUsage** and click on **Edit** option.
   
-  ![add-dimension-1](images/adddimension11.png)
+  ![add-dimension-edit](images/adddimension11.png)
   
    Click on the **Add Dimension** button
    
-  ![add-dimension-2](images/adddimension21.png) 
+  ![add-dimension-1](images/adddimension21.png) 
   
    Add the dimensions for **clusterName** and **nodeName** as shown below
 
-  ![add-dimension-3](images/adddimension31.png) 
+  ![add-dimension-2](images/adddimension31.png) 
   
   > **Note:** choose the cluster name provided to you when you signed up for the LiveLab session.
 
