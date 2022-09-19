@@ -113,29 +113,30 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
       </copy>
     ```
 
-2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/tag/v.2.0.0) using the following command.
+2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-livelabs/em-omc/tree/main/logging-analytics/oke-monitoring-la/ingestion-flow-setup/helm/helm-chart.tgz) using the following command.
     ```
       <copy>
-          wget https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/download/v.2.0.0/helm-chart-v2.0.0.tgz 
+          wget https://github.com/oracle-livelabs/em-omc/tree/main/logging-analytics/oke-monitoring-la/ingestion-flow-setup/helm/helm-chart.tgz 
      </copy>
     ```  
  The output of the above step would be in line with the below.
     ```
     Length: 10750 (10K) [application/octet-stream]
-    Saving to: ‘helm-chart-v2.0.0.tgz’
+    Saving to: ‘helm-chart.tgz’
     100%[============================================================>] 10,750      --.-K/s   in 0.001s  
-    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart-v2.0.0.tgz’ saved [10750/10750]
+    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart.tgz’ saved [10750/10750]
     ```
-   
-
-4. Unpack the tar file by using the below command.
+ 
+3. Unpack the tar file by using the below command.
     ```
         <copy>
-          tar zxvf helm-chart-v2.0.0.tgz
+          tar zxvf helm-chart.zip
         </copy>
     ```
  Validate the helm-chart directory and its contents are extracted.   
     ![helm-chart-extraction](images/helm-chart-extraction.png)
+
+ P:S - Details related to Management Agent Configuration Parameters in values.yaml to be added by Management Agent Team. 
 
 ## Task 6: Create Custom values yaml file
 1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
@@ -149,7 +150,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 2. Create a file values.yaml in the external-values directory using the following command.
       ```
         <copy>
-          touch values.yaml
+          touch values.yaml && vi values.yaml
         </copy>
       ```
 3. In the values.yaml file created above, paste the following content and update the values of the respective fields.
@@ -247,7 +248,7 @@ fluentd:
     - Run the following command to view Kubernetes System log config map.
       ```
         <copy>
-            kubectl get configmaps oci-la-fluentd-logs-configmap -n=resr47160
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<namespace>
         </copy>
       ```
 
@@ -258,7 +259,7 @@ fluentd:
     - Run the following command to view Kubernetes Objects log config map.
       ```
         <copy>
-            kubectl get configmaps oci-la-fluentd-logs-configmap -n=resr47160
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<namespace>
         </copy>
       ```  
 
