@@ -200,7 +200,7 @@ fluentd:
 1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
-         helm install <namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<namespace>
+         helm install <Kubernetes Namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
         </copy>
       ```
   > **Note:** Value of namespace specified after install is release name. Please keep it handy for subsequent labs.
@@ -214,7 +214,7 @@ fluentd:
     - Run the below command to check the list of fluentd-daemonset's running
       ```
         <copy>
-          kubectl get pods -n=<namespace> |grep fluentd-daemonset
+          kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-daemonset
         </copy>
       ```
       ```
@@ -232,9 +232,9 @@ fluentd:
     - We have used deployment to collect the Kubernetes Object Logs.
     - Run the below command to check fluentd-deployment.
       ```
-        <copy>
-          kubectl get pods -n=<namespace> |grep fluentd-deployment
-        </copy>
+          <copy>
+            kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-deployment
+          </copy>
       ```
       ```
       NAME                                         READY   STATUS    RESTARTS   AGE
@@ -248,7 +248,7 @@ fluentd:
     - Run the following command to view Kubernetes System log config map.
       ```
         <copy>
-            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<namespace>
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<Kubernetes Namespace>
         </copy>
       ```
 
@@ -259,7 +259,7 @@ fluentd:
     - Run the following command to view Kubernetes Objects log config map.
       ```
         <copy>
-            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<namespace>
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<Kubernetes Namespace>
         </copy>
       ```  
 
@@ -272,7 +272,7 @@ fluentd:
 
       ```
         <copy>
-            kubectl get configmaps <config-map-name> -o yaml -n=<namespace>
+            kubectl get configmaps <config-map-name> -o yaml -n=<Kubernetes Namespace>
         </copy>
       ```  
 
@@ -283,7 +283,7 @@ fluentd:
     - For Kubernetes System, provide any one pod name in the daemonset-pod-name
      ```
      <copy>
-        kubectl logs <daemonset-pod-name> -n=<namespace> |grep 'fluentd worker'
+        kubectl logs <daemonset-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
      </copy>
      ```
      - You should see the below message
@@ -294,7 +294,7 @@ fluentd:
      - For Kubernetes Objects
      ```
      <copy>
-        kubectl logs <deployment-pod-name> -n=<namespace> |grep 'fluentd worker'
+        kubectl logs <deployment-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
      </copy>
      ```
      - Output will be the same as above.
@@ -305,7 +305,7 @@ fluentd:
      
     ```
     <copy>
-        kubectl exec -n=<namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
+        kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
     </copy>
     ```
     
