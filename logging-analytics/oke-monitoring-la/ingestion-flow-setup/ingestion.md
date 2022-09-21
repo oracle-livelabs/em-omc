@@ -219,6 +219,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. In this case we are running logs collection daemon on each and every node. 
     - We have used Daemonset to collect the Kubernetes System Logs.
     - Run the below command to check the list of fluentd-daemonset's running
+
       ```
         <copy>
           kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-daemonset
@@ -263,11 +264,12 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - A Kubernetes deployment is a resource object in Kubernetes that provides declarative updates to applications.
     - We have used deployment to collect the Kubernetes Object Logs.
     - Run the below command to check fluentd-deployment.
-      ```
+       ```
           <copy>
-            kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-deployment
+              kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-deployment
           </copy>
-      ```
+       ```
+      
       ```
       NAME                                         READY   STATUS    RESTARTS   AGE
       oci-la-fluentd-deployment-69bd489c65-2v26s   1/1     Running   0          3h22m
@@ -335,11 +337,11 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
      - To verify logs are sent to the Logging Analytics, execute the following command. 
      
-    ```
-    <copy>
-        kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
-    </copy>
-    ```
+        ```
+        <copy>
+            kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
+        </copy>
+        ```
     
      - Check for a similar message in the logs
      ```
