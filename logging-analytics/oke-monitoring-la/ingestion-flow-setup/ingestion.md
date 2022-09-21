@@ -119,29 +119,30 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
       </copy>
     ```
 
-2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/tag/v.2.0.0) using the following command.
+2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-livelabs/em-omc/tree/main/logging-analytics/oke-monitoring-la/ingestion-flow-setup/helm/helm-chart.tgz) using the following command.
     ```
       <copy>
-          wget https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/download/v.2.0.0/helm-chart-v2.0.0.tgz 
+          wget https://github.com/oracle-livelabs/em-omc/tree/main/logging-analytics/oke-monitoring-la/ingestion-flow-setup/helm/helm-chart.tgz 
      </copy>
     ```  
  The output of the above step would be in line with the below.
     ```
     Length: 10750 (10K) [application/octet-stream]
-    Saving to: ‘helm-chart-v2.0.0.tgz’
+    Saving to: ‘helm-chart.tgz’
     100%[============================================================>] 10,750      --.-K/s   in 0.001s  
-    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart-v2.0.0.tgz’ saved [10750/10750]
+    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart.tgz’ saved [10750/10750]
     ```
-   
-
-4. Unpack the tar file by using the below command.
+ 
+3. Unpack the tar file by using the below command.
     ```
         <copy>
-          tar zxvf helm-chart-v2.0.0.tgz
+          tar zxvf helm-chart.zip
         </copy>
     ```
  Validate the helm-chart directory and its contents are extracted.   
     ![helm-chart-extraction](images/helm-chart-extraction.png)
+
+ P:S - Details related to Management Agent Configuration Parameters in values.yaml to be added by Management Agent Team. 
 
 ## Task 6: Create Custom values yaml file
 1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
@@ -155,7 +156,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 2. Create a file values.yaml in the external-values directory using the following command.
       ```
         <copy>
-          touch values.yaml
+          touch values.yaml && vi values.yaml
         </copy>
       ```
 3. In the values.yaml file created above, paste the following content and update the values of the respective fields.
@@ -183,8 +184,6 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
                 readFromHead:  false
       </copy>
       ```
-  > **Note:** In the subsequent steps, replace <namespace\> with the value of namespace specified in the values.yaml above.
-
  4. The above **values.yaml** contains the minimal values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
 
       ```
@@ -208,7 +207,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
-         helm install <namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<namespace>
+         helm install <Kubernetes Namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
         </copy>
       ```
   > **Note:** Value of namespace specified after install is release name. Please keep it handy for subsequent labs.
@@ -220,9 +219,10 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. In this case we are running logs collection daemon on each and every node. 
     - We have used Daemonset to collect the Kubernetes System Logs.
     - Run the below command to check the list of fluentd-daemonset's running
+
       ```
         <copy>
-          kubectl get pods -n=<namespace> |grep fluentd-daemonset
+          kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-daemonset
         </copy>
       ```
       ```
@@ -264,11 +264,12 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - A Kubernetes deployment is a resource object in Kubernetes that provides declarative updates to applications.
     - We have used deployment to collect the Kubernetes Object Logs.
     - Run the below command to check fluentd-deployment.
-      ```
-        <copy>
-          kubectl get pods -n=<namespace> |grep fluentd-deployment
-        </copy>
-      ```
+       ```
+          <copy>
+              kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-deployment
+          </copy>
+       ```
+      
       ```
       NAME                                         READY   STATUS    RESTARTS   AGE
       oci-la-fluentd-deployment-69bd489c65-2v26s   1/1     Running   0          3h22m
@@ -281,7 +282,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - Run the following command to view Kubernetes System log config map.
       ```
         <copy>
-            kubectl get configmaps oci-la-fluentd-logs-configmap -n=resr47160
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<Kubernetes Namespace>
         </copy>
       ```
 
@@ -292,7 +293,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - Run the following command to view Kubernetes Objects log config map.
       ```
         <copy>
-            kubectl get configmaps oci-la-fluentd-logs-configmap -n=resr47160
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<Kubernetes Namespace>
         </copy>
       ```  
 
@@ -305,7 +306,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
       ```
         <copy>
-            kubectl get configmaps <config-map-name> -o yaml -n=<namespace>
+            kubectl get configmaps <config-map-name> -o yaml -n=<Kubernetes Namespace>
         </copy>
       ```  
 
@@ -316,7 +317,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
     - For Kubernetes System, provide any one pod name in the daemonset-pod-name
      ```
      <copy>
-        kubectl logs <daemonset-pod-name> -n=<namespace> |grep 'fluentd worker'
+        kubectl logs <daemonset-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
      </copy>
      ```
      - You should see the below message
@@ -327,7 +328,7 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
      - For Kubernetes Objects
      ```
      <copy>
-        kubectl logs <deployment-pod-name> -n=<namespace> |grep 'fluentd worker'
+        kubectl logs <deployment-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
      </copy>
      ```
      - Output will be the same as above.
@@ -336,11 +337,11 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 
      - To verify logs are sent to the Logging Analytics, execute the following command. 
      
-    ```
-    <copy>
-        kubectl exec -n=<namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
-    </copy>
-    ```
+        ```
+        <copy>
+            kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
+        </copy>
+        ```
     
      - Check for a similar message in the logs
      ```
