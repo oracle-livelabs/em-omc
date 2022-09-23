@@ -100,44 +100,44 @@ In this lab, you will:
     - After appending the **customLogs** configuration, the final values.yaml file will look like below
       
       ```
-     <copy>
+        <copy>
 
-namespace: <Value of Kubernetes Namespace obtained from Terraform Values Frame>
-image:
-   url: <Value of Container Image URL obtained from Terraform Values Frame>
-   imagePullPolicy: Always
+                namespace: <Kubernetes Namespace>
+                image:
+                url: <Container Image URL>
+                imagePullPolicy: Always
 
-ociLANamespace: <Value of Logging Analytics Namespace obtained from Terraform Values Frame>
-ociLALogGroupID: <Value of Logging Analytics LogGroup Id obtained from Terraform Values Frame>
-kubernetesClusterID: <Value of Kubernetes Cluster Id obtained from Terraform Values Frame>
-kubernetesClusterName:  <Value of Kubernetes Cluster Name obtained from Terraform Values Frame>
-createServiceAccount:  false
-serviceAccount: <Value of Kubernetes Service Account obtained from Terraform Values Frame>
-fluentd:
-   baseDir: /var/log/<Value of namespace specified above>
-   tailPlugin:
-        readFromHead:  false
-    # Custom Configuration for mushop application logs 
-        customLogs:
-           mushop-orders:
-                path: /var/log/containers/mushop-orders-*.log
-                ociLALogSourceName: "mushop-orders-app"
-                multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
-                isContainerLog: true
-           mushop-api:
-                path: /var/log/containers/mushop-api-*.log
-                ociLALogSourceName: "mushop api logs"
-                multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
-                isContainerLog: true
-           mushop-edge:
-                path: /var/log/containers/mushop-edge-*.log
-                ociLALogSourceName: "mushop-edge logs"
-                isContainerLog: true  
-           mushop-catalogue:
-                path: /var/log/containers/mushop-catalogue-*.log
-                ociLALogSourceName: "mushop-catalogue logs"
-                isContainerLog: true
-     </copy>
+                ociLANamespace: <Logging Analytics Namespace>
+                ociLALogGroupID: <Logging Analytics LogGroup Id>
+                kubernetesClusterID: <Kubernetes Cluster Id>
+                kubernetesClusterName:  <Kubernetes Cluster Name>
+                createServiceAccount:  false
+                serviceAccount: <Kubernetes Service Account>
+                fluentd:
+                baseDir: /var/log/<Kubernetes Namespace>
+                tailPlugin:
+                        readFromHead:  false
+                    # Custom Configuration for mushop application logs 
+                        customLogs:
+                                mushop-orders:
+                                        path: /var/log/containers/mushop-orders-*.log
+                                        ociLALogSourceName: "mushop-orders-app"
+                                        multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
+                                        isContainerLog: true
+                                mushop-api:
+                                        path: /var/log/containers/mushop-api-*.log
+                                        ociLALogSourceName: "mushop api logs"
+                                        multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
+                                        isContainerLog: true
+                                mushop-edge:
+                                        path: /var/log/containers/mushop-edge-*.log
+                                        ociLALogSourceName: "mushop-edge logs"
+                                        isContainerLog: true  
+                                mushop-catalogue:
+                                        path: /var/log/containers/mushop-catalogue-*.log
+                                        ociLALogSourceName: "mushop-catalogue logs"
+                                        isContainerLog: true
+        </copy>
      ```   
 
     - We have now added configuration to send logs for four mushop application to be processed by their specific Log Sources.
