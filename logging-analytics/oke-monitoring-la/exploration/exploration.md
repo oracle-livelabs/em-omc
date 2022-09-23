@@ -45,7 +45,7 @@ In this lab, you will:
 8. Key in the **Kubernetes Cluster Name** value obtained from the Terraform Values Frame.
     ![kubernetes-cluster-name](images/kubernetes-cluster-name.png)
 
-9. You should be able to see the all the widgets displaying the values specific to your OKE Cluster.
+9. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
      ![cluster-specific-view](images/cluster-specific-view.png)
 
 ## Task 2: Overview of Widgets
