@@ -14,7 +14,7 @@ Estimated Time: 5 minutes
 - From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 ![](./images/oci-console-la-explorer.png " ")
 
-- You can also copy-paste the following link to your browser to open fresh Log Explorer.
+- You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
     ```
          <copy>
             https://cloud.oracle.com/loganalytics/explorer?region=us-phoenix-1
@@ -41,7 +41,7 @@ Here are the main parts of the user interface that will be used throughout this 
 
 6. **Main panel**, where the visualization outputs appear above the results of the query.
 
->**Note:** The main panel would be empty, before you set up any log ingestion, which you will perform in the next lab.
+>**Note:** The main panel is empty till you set up log ingestion, which will be performed in the next lab.
 
 
 ## Acknowledgements
