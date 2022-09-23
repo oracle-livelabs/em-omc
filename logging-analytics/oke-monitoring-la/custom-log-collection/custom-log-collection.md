@@ -1,10 +1,11 @@
-# Custom Application Log Collection
+# Customizing Application Logs Configuration
 
 ## Introduction
 
 This lab will walk you through the steps to update the helm configuration of **Ingestion Flow Setup Lab** to collect the custom application container logs.
 
-Estimated Time: 15 minutes
+// Come Back Here
+This lab will walk you through the steps required to customize pre-defined fluentd configuration specific to your container/application logs format.  
  
 ### Objectives
 
@@ -15,26 +16,26 @@ In this lab, you will:
 
 ### Prerequisites
 
-* **Ingestion Flow Setup** lab should be completed
+* **Ingestion Flow Setup** lab should have been completed
+
+Estimated Time: 15 minutes
+
+## Task 1: Visualize the logs in Log Explorer
+
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 
 
-## Task 1: Validate in the Log Explorer
-
-1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**
-
-
-2. By default, the Log Explorer will show the Pie-Chart Visualization of all the logs received from the OKE cluster. 
+2. By default, the Log Explorer will show the Pie-Chart Visualization of all the various logs that are being received from the OKE cluster. 
     ![log-explorer](images/log-explorer-pie-chart-view.png)
 
-3. Drill Down to Log Source
+3. Kubernetes Container Generic Logs
+    - The OKE System logs and Objects logs are collected and processed using a set of predefined Logging Analytics Log Sources.
+
+    - All the other container logs in the cluster are processed using a generic Log Source, **Kubernetes Container Generic Logs**.
+
     - Click on the Kubernetes Container Generic Logs from the list of Log Source and click Drill Down
         ![drill-down](images/drill-down.png) 
-
-    - The OKE System logs and Objects logs are handled/collected by the respective Log Source(s). 
-    - All the remaining (custom) container logs from the cluster are processed using a generic Log Source called **Kubernetes Container Generic Logs**. 
-    
-    
-
+   
 4. This will take to the "Records with Histogram view" in context of **Kubernetes Container Generic Logs** Log Source
     ![kubernetes-logs](images/kubernetes-container-generic-logs.png) 
 
