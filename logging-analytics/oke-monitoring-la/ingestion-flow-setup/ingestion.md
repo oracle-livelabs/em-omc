@@ -354,6 +354,7 @@ Gather the following information that will be used in this and subsequent labs.
 
 ## Task 10: Verify Fluentd is Running 
 
+
 1. To verify fluentd is up and running
     - Run the following command and capture one of the pods name from the output.
 
@@ -421,6 +422,7 @@ Gather the following information that will be used in this and subsequent labs.
   
 3. You can view logs of a specific source by drilling down into that Log Source.
         ![drill-down](images/drill-down.png) 
+
 
 **Congratulations!**, you have successfuly set up Fluentd to collect Kubernetes & Linux System logs, application/container logs, Kubernetes Objects logs and Management Agent to ingest Kubernetes metrics. You may proceed to the next lab.
 
