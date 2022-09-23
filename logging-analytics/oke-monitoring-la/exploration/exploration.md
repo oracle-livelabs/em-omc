@@ -33,11 +33,13 @@ In this lab, you will:
 4. **Kubernetes Cluster Overview** page will be displayed.
     ![kubernetes-cluster-overview](images/kubernetes-cluster-overview.png)
 
-5. Click on the Filter Panel button shown as below.
+5. Select the time range as **Last 7 Days** from the Time Range Picker.
+    ![last-7-days](images/last-7-days.png)    
+
+6. Click on the Filter Panel button.
     ![filter-panel](images/filter-panel.png)
 
-6. Select the time range as **Last 7 Days** from the Time Range Picker.
-    ![last-7-days](images/last-7-days.png)
+
 
 7. Key in the **Compartment** value obtained from the Terraform Values Frame in the Log Group Compartment textbox. The compartment value will be in the format **LL-12345** .
     ![log-group-compartment](images/log-group-compartment.png)
@@ -45,7 +47,7 @@ In this lab, you will:
 8. Key in the **Kubernetes Cluster Name** value obtained from the Terraform Values Frame.
     ![kubernetes-cluster-name](images/kubernetes-cluster-name.png)
 
-9. You should be able to see the all the widgets displaying the values specific to your OKE Cluster.
+9. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
      ![cluster-specific-view](images/cluster-specific-view.png)
 
 ## Task 2: Overview of Widgets

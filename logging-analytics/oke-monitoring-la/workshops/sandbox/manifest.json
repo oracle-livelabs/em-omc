@@ -33,7 +33,7 @@
             "filename": "../../exploration/exploration.md"
         },
         {
-            "title": "(Optional) Lab 5: Building dashboards in Logging Analytics with the data ingested by Management Agents",
+            "title": "Lab 5 (Optional): Building dashboards in Logging Analytics with the data ingested by Management Agents",
             "description": "This live lab outlines the steps to build dashboards in Logging Analytics with the data ingested by Management Agent",
             "filename": "../../la-dashboard-creation/dashboard.md"
         },

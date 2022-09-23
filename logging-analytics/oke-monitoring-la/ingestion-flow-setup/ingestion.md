@@ -352,8 +352,7 @@ Gather the following information that will be used in this and subsequent labs.
 
 
 
-## Task 10: Verify Fluentd is running 
-
+## Task 10: Verify Fluentd is Running 
 
 
 1. To verify fluentd is up and running
@@ -405,6 +404,24 @@ Gather the following information that will be used in this and subsequent labs.
                          opc-request-id: D61380FCECC84BD8A84349A766CF59FE/DD09F19E0CDBCDFCC5A4741CB178C3DF/897B96A83E503277C0B2287E2D4B2221,
                          opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
      ```
+
+
+## Task 11: Validate the Logs in Log Explorer
+
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
+
+
+2. By default, the Log Explorer will show the Pie-Chart Visualization of all the various logs that are being collected from the OKE cluster   
+   
+   The Linux System logs, Kubernetes System and Objects logs are collected and processed using a set of predefined Logging Analytics Log Sources.
+
+   All the other container logs in the cluster are processed using a generic Log Source, **Kubernetes Container Generic Logs**. 
+ 
+    ![log-explorer](images/log-explorer-pie-chart-view.png)
+
+  
+3. You can view logs of a specific source by drilling down into that Log Source.
+        ![drill-down](images/drill-down.png) 
 
 
 **Congratulations!**, you have successfuly set up Fluentd to collect Kubernetes & Linux System logs, application/container logs, Kubernetes Objects logs and Management Agent to ingest Kubernetes metrics. You may proceed to the next lab.
