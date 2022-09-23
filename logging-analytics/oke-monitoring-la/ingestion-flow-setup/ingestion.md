@@ -131,7 +131,7 @@ Gather the following information that will be used in this and subsequent labs.
     ``` 
 
    ![helm-chart-extraction](images/helm-chart-extraction.png) 
-   
+
 ## Task 6: Create Custom values.yaml 
 
 1. In the **oke-livelab** directory created in the task #5 , create a directory **external-values**, using the following command.
@@ -316,7 +316,7 @@ Gather the following information that will be used in this and subsequent labs.
       ```
 
 
-## Task 9: Verify fluentd is Running 
+## Task 9: Verify Fluentd is running 
 
 1. To verify fluentd is up and running
     - For logs collection, provide any one pod name from the Task #9 DaemonSet step.
