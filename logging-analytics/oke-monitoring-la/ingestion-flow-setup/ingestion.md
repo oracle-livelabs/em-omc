@@ -112,6 +112,7 @@ Gather the following information that will be used in this and subsequent labs.
       <copy>
           wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/YQy-JQa0RPGxI-pGKmnmA_PJArpo8ZjMdYXCJQM7yXXf6bSCyzI7X_YYmfTDxGbw/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
 
+      </copy>      
     ```  
  
     ```
@@ -122,14 +123,14 @@ Gather the following information that will be used in this and subsequent labs.
     ```
  
 3. Unpack the downloaded tar file by using the below command.
+    
     ```
-        <copy>
-          tar zxvf v2.0.0.alpha.1.tgz
-        </copy>
-    ```
+      <copy>
+        tar zxvf v2.0.0.alpha.1.tgz
+      </copy>
+    ``` 
 
-    ![helm-chart-extraction](images/helm-chart-extraction.png)
-
+   ![helm-chart-extraction](images/helm-chart-extraction.png) 
 
 ## Task 6: Create Custom values.yaml 
 
@@ -210,6 +211,7 @@ Gather the following information that will be used in this and subsequent labs.
         REVISION: 1
         TEST SUITE: None
       ```
+
 
 ## Task 9:(Optional) Verify the Installation
 
@@ -314,7 +316,7 @@ Gather the following information that will be used in this and subsequent labs.
       ```
 
 
-## Task 9: Verify fluentd is Running 
+## Task 9: Verify Fluentd is running 
 
 1. To verify fluentd is up and running
     - For logs collection, provide any one pod name from the Task #9 DaemonSet step.
