@@ -2,22 +2,24 @@
 
 ## Introduction
 
-This lab will walk you through the steps to configure an open source log collector fluentd to collect OKE System and Service log using package manager Helm.
+This lab will walk you through the steps to configure an open source log collector fluentd and Oracle Management Agent to collect OKE System and Service log and Kubernetes metrics using package manager Helm.
 
-Estimated Time: 40 minutes
+Estimated Time: 30 minutes
 
 ### About <Product/Technology> 
 In this lab we will be using the following tools:
-* fluentd - open source data collector
+* oci cli -  tool that enables user to work with Oracle Cloud Infrastructure objects and services at a command line 
 * helm - package manager for Kubernetes
 * kubectl - Kubernetes command line tool
 
+And, below are the ingestion methods that would be implemented 
+* fluentd - an open source data collector
+* management-agent - Oracle provided data collector and Prometheus scraper
 ### Objectives
 
 In this lab, you will:
-* Set up fluentd to collect system/service logs as well custom container logs
-* Visualize the data in the OCI Logging Analytics Log Explorer 
-
+* Set up fluentd to collect OKE System logs and Object logs
+* Set up Management Agent Pod that is monitoring the metrics of the Kubernetes Cluster and reporting them to OCI Monitoring
 
 ### Prerequisites
 
@@ -32,29 +34,35 @@ In this lab, you will:
 
 3. Keep the below fields handy from the Terraform Values frame of the Reservation Information page.
 
-    i. **Kubernetes\_Cluster\_Id:** The OCID of the Kubernetes Cluster created for this live lab session
+    i. **Kubernetes Cluster Id:** The OCID of the Kubernetes Cluster created for this live lab session
 
-   ii. **Kubernetes\_Cluster\_Name:** The name of the Kubernetes Cluster created for this live lab session
+   ii. **Kubernetes Cluster Name:** The name of the Kubernetes Cluster created for this live lab session
 
-  iii. **Kubernetes\_Namespace:** Namespace of Kubernetes in which the helm chart needs to be installed
+  iii. **Kubernetes Namespace:** Namespace of Kubernetes in which the helm chart needs to be installed
 
-   iv. **Kubernetes\_Service_Account:** Kubernetes service accounts are Kubernetes resources, created and managed using the Kubernetes API, meant to be used by in-cluster Kubernetes-created entities, such as Pods, to authenticate to the Kubernetes API server or external services.
+   iv. **Kubernetes Service Account:** Kubernetes service accounts are Kubernetes resources, created and managed using the Kubernetes API, meant to be used by in-cluster Kubernetes-created entities, such as Pods, to authenticate to the Kubernetes API server or external services.
 
-    v. **Container\_Image_URL:** URL of the docker image which needs to be pulled that contains all the necessary plugins and dependencies for log collection to work seamlessly.
+    v. **Container Image URL:** URL of the docker image which needs to be pulled that contains all the necessary plugins and dependencies for log collection to work seamlessly.
 
-   vi. **Logging\_Analytics\_Namespace:** OCI Tenancy Namespace to which the collected log data to be uploaded
+   vi. **Logging Analytics Namespace:** OCI Tenancy Namespace to which the collected log data to be uploaded  
+
+  vii. **Logging Analytics LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
   
-  vii. **Logging\_Analytics\_LogGroup_Id:** The OCID of the Logging Analytics Log Group where the logs must be stored.
+  viii. **Mgmtagent\_Install\_Key:** Base64 encoded string representation of input.rsp required for Management Agent registration
+  
+  ix. **Mgmtagent\_Container\_Image\_URL:**  URL of the Management Agent docker image 
+  
+  x. **compartmentId (Check the name of variable):** Customer's Compartment OCID. 
 
 
 ## Task 2: Launching Cloud Shell
   
-1. On Oracle Cloud Home Page click the **Cloud Shell**  ![Image alt text](images/cloud-shell-button.png)  button. 
+1. On Oracle Cloud Home Page click the **Cloud Shell**  ![cloud-shell-button](images/cloud-shell-button.png)  button. 
 
-  ![Image alt text](images/cloud-shell.png)
+  ![cloud-shell](images/cloud-shell.png)
 
 2. A Cloud Shell Instance will be created and the text area will be displayed as below. 
-  ![Image alt text](images/cloud-shell-textarea.png)
+  ![cloud-shell-textarea](images/cloud-shell-textarea.png)
 
  
 
@@ -63,7 +71,7 @@ In this lab, you will:
 1. To Set up kubeconfig for the OKE Cluster replace the Cluster ID value in the below command.
     ```
      <copy>
-       oci ce cluster create-kubeconfig --cluster-id <Kubernetes_Cluster_Id> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+       oci ce cluster create-kubeconfig --cluster-id <Kubernetes Cluster Id> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
      </copy>
 
     ```
@@ -111,29 +119,30 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
       </copy>
     ```
 
-2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/tag/v.2.0.0) using the following command.
+2. Download the helm chart configuration tar from the [github] (https://github.com/oracle-livelabs/em-omc/tree/main/logging-analytics/oke-monitoring-la/ingestion-flow-setup/helm/helm-chart.tgz) using the following command.
     ```
-    <copy>
-       wget https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases/download/v.2.0.0/helm-chart-v2.0.0.tgz 
-    </copy>
+      <copy>
+          wget https://github.com/oracle-livelabs/em-omc/tree/main/logging-analytics/oke-monitoring-la/ingestion-flow-setup/helm/helm-chart.tgz 
+     </copy>
     ```  
-3. The output of the above step would be in line with the below.
+ The output of the above step would be in line with the below.
     ```
     Length: 10750 (10K) [application/octet-stream]
-    Saving to: ‘helm-chart-v2.0.0.tgz’
+    Saving to: ‘helm-chart.tgz’
     100%[============================================================>] 10,750      --.-K/s   in 0.001s  
-    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart-v2.0.0.tgz’ saved [10750/10750]
+    2022-09-07 10:06:21 (17.0 MB/s) - ‘helm-chart.tgz’ saved [10750/10750]
     ```
-   
-
-4. Unpack the tar file by using the below command.
+ 
+3. Unpack the tar file by using the below command.
     ```
         <copy>
-          tar zxvf helm-chart-v2.0.0.tgz
+          tar zxvf helm-chart.zip
         </copy>
     ```
- 5. Validate the helm-chart directory and its contents are extracted.   
-    ![Image alt text](images/helm-chart-extraction.png)
+ Validate the helm-chart directory and its contents are extracted.   
+    ![helm-chart-extraction](images/helm-chart-extraction.png)
+
+ P:S - Details related to Management Agent Configuration Parameters in values.yaml to be added by Management Agent Team. 
 
 ## Task 6: Create Custom values yaml file
 1. In the **oke-livelab** directory created in the above task, create a directory external-values, using following command.
@@ -147,30 +156,35 @@ New config written to the Kubeconfig file /home/livelab/.kube/config
 2. Create a file values.yaml in the external-values directory using the following command.
       ```
         <copy>
-          touch values.yaml
+          touch values.yaml && vi values.yaml
         </copy>
       ```
 3. In the values.yaml file created above, paste the following content and update the values of the respective fields.
+
       ```
       <copy>
-namespace: <Value of Kubernetes_Namespace obtained from Terraform Values Frame>
-image:
-   url: <Value of Container_Image_URL obtained from Terraform Values Frame>
-   imagePullPolicy: Always
+        namespace: <Value of Kubernetes_Namespace obtained from Terraform Values Frame>
+        image:
+            url: <Value of Container_Image_URL obtained from Terraform Values Frame>
+            imagePullPolicy: Always
 
-ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Values Frame>
-ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
-kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
-kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
-createServiceAccount:  false
-serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
-fluentd:
-   baseDir: /var/log/<Value of namespace specified above>
-   tailPlugin:
-            readFromHead:  false
+        ociLANamespace: <Value of Logging_Analytics_Namespace obtained from Terraform Values Frame>
+        ociLALogGroupID: <Value of Logging_Analytics_LogGroup_Id obtained from Terraform Values Frame>
+        kubernetesClusterID: <Value of Kubernetes_Cluster_Id obtained from Terraform Values Frame>
+        kubernetesClusterName:  <Value of Kubernetes_Cluster_Name obtained from Terraform Values Frame>
+        createServiceAccount:  false
+        serviceAccount: <Value of Kubernetes_Service_Account obtained from Terraform Values Frame>
+        mgmtagent: 
+            installKey: <Value of Mgmtagent_Install_Key obtained from Terraform Values Frame>
+            imageUrl: <Value of Mgmtagent_Container_Image_URL obtained from Terraform Values Frame>
+        ociCompartmentID: <Value of ociCompartmentID obtained from Terraform Values Frame>
+        fluentd:
+            baseDir: /var/log/<Value of namespace specified above>
+            tailPlugin:
+                readFromHead:  false
       </copy>
       ```
- 4. The above **values.yaml** contains the basic values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
+ 4. The above **values.yaml** contains the minimal values that need to be changed for log collection to work. The detailed **values.yaml** could be found using the below command.
 
       ```
         <copy>
@@ -180,7 +194,7 @@ fluentd:
 
 
 ## Task 7: Verifying Helm Configuration
-1. Once the values.yaml is updated, it is important to perform the dry run to validate the configuration is correct. To perform this check, 
+1. (Optional) Once the values.yaml is updated, it is important to perform the dry run to validate the configuration is correct. To perform this check, 
   run the following command.
       ```
         <copy>
@@ -193,63 +207,117 @@ fluentd:
 1. Once the dry-run is completed without any errors. Install the helm-chart to apply the configuration for log collection.
       ```
         <copy>
-         helm install <release-name-of-choice> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
+         helm install <Kubernetes Namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
         </copy>
       ```
-  > **Note:** Provide the release-name-of-choice and keep it handy.
+  > **Note:** Value of namespace specified after install is release name. Please keep it handy for subsequent labs.
 
-2. To verify the pods are created in the OKE, execute the following command and check the output. Keep the pod names handy for the next steps.
+2. Once the helm-install is completed sucessfully, it will create three resources - Daemonset, Deployment and Config Map.
 
-    ```
+   i. **Daemonset**
+
+    - A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. In this case we are running logs collection daemon on each and every node. 
+    - We have used Daemonset to collect the Kubernetes System Logs.
+    - Run the below command to check the list of fluentd-daemonset's running
+
+      ```
+        <copy>
+          kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-daemonset
+        </copy>
+      ```
+      ```
+      NAME                                         READY   STATUS    RESTARTS   AGE
+      oci-la-fluentd-daemonset-dltzv               1/1     Running   0          3h21m
+      oci-la-fluentd-daemonset-r6ntn               1/1     Running   0          3h22m
+      oci-la-fluentd-daemonset-xpv6t               1/1     Running   0          3h21m
+      oci-la-fluentd-daemonset-xqjnp               1/1     Running   0          3h22m
+      ```
+    > **Note:** Keep the pod names handy and in subsequent steps replace <daemonset-pod-name\> value with any one of the pod-name above.
+
+   ii. **Statefullset**
+   
+    - Ensure that the statefulset for Management Agent is created
+    - Run the below command to check if statefulset for Management Agent is created
+      ```
       <copy>
-      kubectl get pods -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> |grep fluentd
+        kubectl get statefulset -n <namespace>
       </copy>
-    ```
-    ![Image alt text](images/get-fluentd-pods.png)
-   > **Note:** Provide the correct kubernetes namespace. 
-
-
-## Task 9: Verify All Resources Are Created
-  As part of this deployment following resources are created - 
-  - daemonset
-  - deployment
-  - configMap
-  
-1. Daemonset
-    - A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. In this case we are running logs collection daemon on each node. 
-    - We have used Daemonset to collect the Kubernetes System Logs.  
-    - To validate the fluentd daemonset is running, execute the command - 
       ```
-        <copy>
-          kubectl get daemonset oci-la-fluentd-daemonset -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
-        </copy>
-      ```  
-    - Output will be in-line with the below snapshot.    
-    ![Image alt text](images/daemonset.png)
-  
+      ```
+        NAME                  READY   AGE
+        mgmtagent-bv          1/1     13d
+      ```
+    - Ensure mgmtagent-bv-0 pod is listed in the output of kubectl    
+    - Run the below command to check if Management Agent pod is listed in kubectl
+      ```
+      <copy>
+        kubectl get pods -l app=mgmtagent-bv -n <namespace>
+      </copy>
+      ```
+      ```
+        NAME             READY   STATUS    RESTARTS   AGE
+        mgmtagent-bv-0   1/1     Running   0          7d4h
+      ```
+   
+   iii. **Deployment** 
 
-2. Deployment 
     - A Kubernetes deployment is a resource object in Kubernetes that provides declarative updates to applications.
-    - We have used deployment to collect the Kubernetes Object Logs
-    - To validate the fluentd deployment is running, execute the command -
+    - We have used deployment to collect the Kubernetes Object Logs.
+    - Run the below command to check fluentd-deployment.
+       ```
+          <copy>
+              kubectl get pods -n=<Kubernetes Namespace> |grep fluentd-deployment
+          </copy>
+       ```
+      
+      ```
+      NAME                                         READY   STATUS    RESTARTS   AGE
+      oci-la-fluentd-deployment-69bd489c65-2v26s   1/1     Running   0          3h22m
+      ```
+
+    > **Note:** Keep the pod names handy and in subsequent steps replace <deployment-pod-name\> value with the above pod-name.
+
+   iv. **Config Map** 
+    - A config map contains the necessary fluentd configuration to collect all the telemetry information on the OKE Cluster.
+    - Run the following command to view Kubernetes System log config map.
       ```
         <copy>
-          kubectl get deployments oci-la-fluentd-deployment --n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame>
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<Kubernetes Namespace>
+        </copy>
+      ```
+
+      ```
+        NAME                            DATA   AGE
+        oci-la-fluentd-logs-configmap   2      6h40m
+      ```
+    - Run the following command to view Kubernetes Objects log config map.
+      ```
+        <copy>
+            kubectl get configmaps oci-la-fluentd-logs-configmap -n=<Kubernetes Namespace>
         </copy>
       ```  
-    - Output will be in-line with the below snapshot.  
-    ![Image alt text](images/deployment.png)
 
-3. ConfigMap
-    - A ConfigMap contains the fluentd configuration for Kubernetes System Logs and Kubernetes Objects Logs
+      ```
+        NAME                              DATA   AGE
+        oci-la-fluentd-objects-configmap   2     6h41m
+      ```
+
+    - (Optional) To view the detailed config map, following command can be used.
+
+      ```
+        <copy>
+            kubectl get configmaps <config-map-name> -o yaml -n=<Kubernetes Namespace>
+        </copy>
+      ```  
 
 
+## Task 9: Verify fluentd is Running 
 
-4. To verify fluentd is up and running
-    - For Kubernetes System 
+1. To verify fluentd is up and running
+    - For Kubernetes System, provide any one pod name in the daemonset-pod-name
      ```
      <copy>
-        kubectl logs <fluentd-daemonset-pod-name-from-task-7.2> -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> |grep 'fluentd worker'
+        kubectl logs <daemonset-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
      </copy>
      ```
      - You should see the below message
@@ -260,25 +328,20 @@ fluentd:
      - For Kubernetes Objects
      ```
      <copy>
-        kubectl logs <fluentd-deployment-pod-name-from-task-7.2> -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> |grep 'fluentd worker'
+        kubectl logs <deployment-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
      </copy>
      ```
      - Output will be the same as above.
      
-5. (Optional) Verify logs are sent to Logging Analytics 
-     - To verify logs are sent to the Logging Analytics, first execute the following command. 
-    ```
-    <copy>
-        kubectl exec -n=<Value of Kubernetes_Namespace  obtained from Terraform Values Frame> --stdin --tty <fluentd-daemonset-pod-name-from-task-7.2>   -- /bin/bash
-    </copy>
-    ```
-    
-    - The above command will open a bash shell.
-    
-    - Run the following command to check the output plugin logs.
-      ```
-        tail -f /var/log/oci-logging-analytics.log
-      ``` 
+2. (Optional) Verify logs are sent to Logging Analytics 
+
+     - To verify logs are sent to the Logging Analytics, execute the following command. 
+     
+        ```
+        <copy>
+            kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
+        </copy>
+        ```
     
      - Check for a similar message in the logs
      ```
@@ -291,27 +354,10 @@ fluentd:
                          opc-request-id: D61380FCECC84BD8A84349A766CF59FE/DD09F19E0CDBCDFCC5A4741CB178C3DF/897B96A83E503277C0B2287E2D4B2221,
                          opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
      ```
-   
-## Task 10: Validate in the Log Explorer
 
-1. From Navigation Menu ![Image alt text](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Home**
 
-2. From the Logging Analytics Home Page, select Log Explorer from the drop-down menu.
-   ![Image alt text](images/select-log-explorer.png) 
-
-3. By default, the Log Explorer will show the Pie-Chart view of all the logs received from the OKE. 
-    ![Image alt text](images/log-explorer-pie-chart-view.png)
-
-4. Drill Down to any log source for e.g Kubernetes Kubelet Logs
-    ![Image alt text](images/drill-down.png) 
-
-5. The view would be like below.
-    ![Image alt text](images/kubelet-logsource-logs.png) 
-
-6. Click on the expand field button, all the captured fields are displayed.
-    ![Image alt text](images/expand-fields.png)    
-
+**Congratulations!**, you have successfully set up fluentd to collect OKE System logs and Object logs. You have also successfully setup Management Agent to ingest Kubernetes metrics. Please, proceed to next lab.
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
 * **Last Updated By/Date** - Vikram Reddy, Sep, 2022

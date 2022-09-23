@@ -12,6 +12,8 @@ In these two labs we have taken our first steps towards setting up end-to-end Ku
 
 [Logging Analytics Documentation](https://docs.cloud.oracle.com/en-us/iaas/logging-analytics/index.html)
 
+[Management Agent Documentation](https://docs.oracle.com/en-us/iaas/management-agents/index.html)
+
 [Reference Architectures - Kubernetes Monitoring](https://docs.oracle.com/en/solutions/kubernetes-oke-logging-analytics/index.html)
 
 [Reference Architecture - EBS Monitoring](https://docs.oracle.com/en/solutions/ebs-logging-analytics-oci/index.html)
