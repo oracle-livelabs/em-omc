@@ -130,6 +130,7 @@ Gather the following information that will be used in this and subsequent labs.
       </copy>
     ``` 
 
+
       ```
         helm-chart/
         helm-chart/Chart.yaml
@@ -153,6 +154,7 @@ Gather the following information that will be used in this and subsequent labs.
         helm-chart/templates/fluentd-deployment.yaml
         helm-chart/templates/mgmtagent-statefulset.yaml
       ``` 
+
 
 ## Task 6: Create Custom values.yaml 
 
@@ -349,7 +351,10 @@ Gather the following information that will be used in this and subsequent labs.
       ```
 
 
+
 ## Task 10: Verify Fluentd is running 
+
+
 
 1. To verify fluentd is up and running
     - Run the following command and capture one of the pods name from the output.
