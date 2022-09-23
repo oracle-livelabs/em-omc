@@ -111,7 +111,7 @@ Gather the following information that will be used in this and subsequent labs.
     ```
       <copy>
           wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/YQy-JQa0RPGxI-pGKmnmA_PJArpo8ZjMdYXCJQM7yXXf6bSCyzI7X_YYmfTDxGbw/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
-
+      </copy>      
     ```  
  
     ```
@@ -121,16 +121,17 @@ Gather the following information that will be used in this and subsequent labs.
     2022-09-22 05:01:55 (121 MB/s) - ‘v2.0.0.alpha.1.tgz’ saved [11505/11505]
     ```
  
+
 3. Unpack the downloaded tar file by using the below command.
+    
     ```
-        <copy>
-          tar zxvf v2.0.0.alpha.1.tgz
-        </copy>
-    ```
+      <copy>
+        tar zxvf v2.0.0.alpha.1.tgz
+      </copy>
+    ``` 
 
-    ![helm-chart-extraction](images/helm-chart-extraction.png)
-
-
+   ![helm-chart-extraction](images/helm-chart-extraction.png) 
+   
 ## Task 6: Create Custom values.yaml 
 
 1. In the **oke-livelab** directory created in the task #5 , create a directory **external-values**, using the following command.

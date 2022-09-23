@@ -101,7 +101,7 @@ In this lab, you will:
       
       ```
         <copy>
-
+             # custom values
                 namespace: <Kubernetes Namespace>
                 image:
                 url: <Container Image URL>
