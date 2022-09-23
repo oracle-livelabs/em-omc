@@ -410,7 +410,7 @@ Gather the following information that will be used in this and subsequent labs.
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 
 
-2. By default, the Log Explorer will show the Pie-Chart Visualization of all the various logs that are being received from the OKE cluster   
+2. By default, the Log Explorer will show the Pie-Chart Visualization of all the various logs that are being collected from the OKE cluster   
    
    The Linux System logs, Kubernetes System and Objects logs are collected and processed using a set of predefined Logging Analytics Log Sources.
 
