@@ -30,7 +30,7 @@ Gather the following information that will be used in this and subsequent labs.
 1. Click on the **View Login Info** link on the top left of this workshop page. 
     ![view-login-info](images/view-login-info.png)
 
-2. Keep the below fields handy obtained from the **Terraform Values** frame of the Reservation Information page in a **notepad**.
+2. Keep the below fields handy obtained from the **Terraform Values** frame of the Reservation Information page into a **notepad**.
 
     - **Kubernetes Cluster OCID:** The OCID of the Kubernetes(OKE) cluster. 
 
@@ -40,15 +40,15 @@ Gather the following information that will be used in this and subsequent labs.
 
     - **Kubernetes Service Account:** The name of the Kubernetes service account to be used for the deployment.
 
-    - **Container Image URL:** URL of the container image that contains Fluentd, Logging Analytics Fluentd output plugin and other plugins for the logs and objects collection.
+    - **Container Image URL:** URL of the container image that contains Fluentd, Logging Analytics Fluentd output plugin and other plugins that will be used for the collection of logs and objects.
 
     - **Logging Analytics Namespace:** OCI Logging Analytics Namespace to which the logs to be ingested. 
 
-    - **Logging Analytics LogGroup OCID:** The OCID of the Logging Analytics Log Group where the logs to be stored.
+    - **Logging Analytics LogGroup OCID:** The OCID of the Logging Analytics Log Group which is used for the access control of the logs.
   
     - **Management Agent Install Key:** Base64 encoded string representation of input.rsp required for Management Agent registration.
   
-    - **Management Agent Container Image URL:**  URL of the Management Agent container image. 
+    - **Management Agent Container Image URL:**  URL of the Management Agent container image used for the collection of the metrics. 
   
     - **Compartment OCID:** The OCID of the Compartment in which the metrics to be ingested. 
 
@@ -59,7 +59,7 @@ Gather the following information that will be used in this and subsequent labs.
 
   ![cloud-shell](images/cloud-shell.png)
 
-2. A Cloud Shell Instance will be launched and displayed. 
+2. A Cloud Shell Instance will be launched. 
   ![cloud-shell-textarea](images/cloud-shell-textarea.png)
 
  
@@ -130,7 +130,29 @@ Gather the following information that will be used in this and subsequent labs.
       </copy>
     ``` 
 
-   ![helm-chart-extraction](images/helm-chart-extraction.png) 
+      ```
+        helm-chart/
+        helm-chart/Chart.yaml
+        helm-chart/values.schema.json
+        helm-chart/templates/
+        helm-chart/values.yaml
+        helm-chart/templates/clusterrole-objects.yaml
+        helm-chart/templates/NOTES.txt
+        helm-chart/templates/clusterrolebinding-logs.yaml
+        helm-chart/templates/configmap-objects.yaml
+        helm-chart/templates/install_key-mgmtagent.yaml
+        helm-chart/templates/clusterrolebinding-objects.yaml
+        helm-chart/templates/configmap-logs.yaml
+        helm-chart/templates/headless-service.yaml
+        helm-chart/templates/clusterrole-logs.yaml
+        helm-chart/templates/serviceAccount.yaml
+        helm-chart/templates/fluentd-daemonset.yaml
+        helm-chart/templates/configmap-mgmtagent.yaml
+        helm-chart/templates/_helpers.tpl
+        helm-chart/templates/oci-config-secrets.yaml
+        helm-chart/templates/fluentd-deployment.yaml
+        helm-chart/templates/mgmtagent-statefulset.yaml
+      ``` 
 
 ## Task 6: Create Custom values.yaml 
 
@@ -148,7 +170,17 @@ Gather the following information that will be used in this and subsequent labs.
              vi values.yaml
         </copy>
       ```
-3.  Paste the following content and update the values of the respective variables by using the information gathered in task #1.
+    For the vi/vim to not auto-indent any text that you paste we will enable paste mode.
+      
+      ```
+        <copy>
+            :set paste
+        </copy>
+      ``` 
+    
+
+
+3. Switch to insert mode and paste the following content to the file and update the values of the respective variables by using the information gathered in Task #1.
     
 
       ```
@@ -196,7 +228,7 @@ Gather the following information that will be used in this and subsequent labs.
       ```    
  
 ## Task 8: Install Helm Chart
-1. Install the helm-chart using the following command.
+1. Install the helm chart using the following command.
       ```
         <copy>
          helm install <Kubernetes Namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
@@ -204,9 +236,9 @@ Gather the following information that will be used in this and subsequent labs.
       ```
       
       ```
-        NAME: resr31821
+        NAME: resrXXXXX
         LAST DEPLOYED: Fri Sep 23 05:18:11 2022
-        NAMESPACE: resr31821
+        NAMESPACE: resrXXXXX
         STATUS: deployed
         REVISION: 1
         TEST SUITE: None
@@ -245,30 +277,8 @@ Gather the following information that will be used in this and subsequent labs.
       oci-la-fluentd-daemonset-wmpf9               1/1     Running   0          4m22s
       oci-la-fluentd-daemonset-zztlx               1/1     Running   0          4m22s
       ```
-   ii. **StatefulSet**
-   
-    - The StatefulSet deployed as part of this installation is responsible for metrics collection.
-      ```
-      <copy>
-        kubectl get statefulset -n <Kubernetes Namespace>
-      </copy>
-      ```
-      ```
-        NAME                  READY   AGE
-        mgmtagent-bv          1/1     13d
-      ```
-
-      ```
-      <copy>
-        kubectl get pods -l app=mgmtagent-bv -n <Kubernetes Namespace>
-      </copy>
-      ```
-      ```
-        NAME             READY   STATUS    RESTARTS   AGE
-        mgmtagent-bv-0   1/1     Running   0          7d4h
-      ```
-   
-   iii. **Deployment** 
+  
+  ii. **Deployment** 
 
 
     - The Deployment created as part of this installation is responsible for objects collection.
@@ -281,7 +291,7 @@ Gather the following information that will be used in this and subsequent labs.
 
        ```
        NAME                        READY   UP-TO-DATE   AVAILABLE   AGE
-       oci-la-fluentd-deployment   1/1     1            1           10m
+       oci-la-fluentd-deployment   1/1     1            1           5m38s
        ```
 
 
@@ -294,9 +304,32 @@ Gather the following information that will be used in this and subsequent labs.
       
       ```
       NAME                                         READY   STATUS    RESTARTS   AGE
-      oci-la-fluentd-deployment-69bd489c65-2v26s   1/1     Running   0          3h22m
+      oci-la-fluentd-deployment-69bd489c65-2v26s   1/1     Running   0          4m28s
       ```
 
+  iii. **StatefulSet**
+   
+    - The StatefulSet deployed as part of this installation is responsible for metrics collection.
+      ```
+      <copy>
+        kubectl get statefulset -n <Kubernetes Namespace>
+      </copy>
+      ```
+      ```
+        NAME                  READY   AGE
+        mgmtagent-bv          1/1     5m40s
+      ```
+
+      ```
+      <copy>
+        kubectl get pods -l app=mgmtagent-bv -n <Kubernetes Namespace>
+      </copy>
+      ```
+      ```
+        NAME             READY   STATUS    RESTARTS   AGE
+        mgmtagent-bv-0   1/1     Running   0          5m35s
+      ```
+   
    iv. **Config Map** 
 
 
@@ -309,38 +342,46 @@ Gather the following information that will be used in this and subsequent labs.
       ```
       ```
         NAME                               DATA   AGE
-        kube-root-ca.crt                   1      49m
-        mgmtagent-monitoring-config        1      13m
-        oci-la-fluentd-logs-configmap      2      13m
-        oci-la-fluentd-objects-configmap   2      13m
+        kube-root-ca.crt                   1      5m
+        mgmtagent-monitoring-config        1      5m
+        oci-la-fluentd-logs-configmap      2      5m
+        oci-la-fluentd-objects-configmap   2      5m
       ```
 
 
-## Task 9: Verify Fluentd is running 
+## Task 10: Verify Fluentd is running 
 
 1. To verify fluentd is up and running
-    - For logs collection, provide any one pod name from the Task #9 DaemonSet step.
-     ```
-     <copy>
-        kubectl logs <daemonset-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
-     </copy>
-     ```
-     - You should see the below message
-     ```
-        2022-08-18 10:34:31 +0000 [info]: #0 starting fluentd worker pid=14 ppid=7 worker=0
-        2022-08-18 10:35:06 +0000 [info]: #0 fluentd worker is now running worker=0
-     ```
-     - For objects collection, provide the pod name from the Task #9 Deployment step.
-     ```
-     <copy>
-        kubectl logs <deployment-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
-     </copy>
-     ```
-     - Output will be the same as above.
-     
-2. (Optional) Verify logs are sent to Logging Analytics. 
+    - Run the following command and capture one of the pods name from the output.
 
-     - To verify logs are sent to the Logging Analytics, execute the following command. 
+        ```
+                <copy>
+                    kubectl get pods -n=<Kubernetes Namespace> | grep daemonset
+                </copy>
+          ```
+     
+          ```
+          NAME                                         READY   STATUS    RESTARTS   AGE
+          oci-la-fluentd-daemonset-c2pfc               1/1     Running   0          4m22s
+          oci-la-fluentd-daemonset-rnq6x               1/1     Running   0          4m22s
+          oci-la-fluentd-daemonset-wmpf9               1/1     Running   0          4m22s
+          oci-la-fluentd-daemonset-zztlx               1/1     Running   0          4m22s
+          ```
+      - Run the following command to get and verify the fluend pod logs.
+          ```
+          <copy>
+              kubectl logs <daemonset-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
+          </copy>
+     ```
+      - If you see the similar messages like below, fluentd is up and running.
+      ```
+          2022-08-18 10:34:31 +0000 [info]: #0 starting fluentd worker pid=14 ppid=7 worker=0
+          2022-08-18 10:35:06 +0000 [info]: #0 fluentd worker is now running worker=0
+      ```
+     
+2. (Optional) Verify that the logs are being sent to Logging Analytics. 
+
+     - Execute the following command. 
      
         ```
         <copy>
@@ -348,7 +389,7 @@ Gather the following information that will be used in this and subsequent labs.
         </copy>
         ```
     
-     - Check for a similar message in the logs
+     - If you see the similar messages like below, logs are being sent to Logging Analytics successfully. 
      ```
      I, [2022-08-16T12:31:32.234958 #11]  INFO -- : Generating payload with 95  records for oci_la_log_group_id: ocid1.loganalyticsloggroup.oc1.abc.abcxxxxxxxxyx543xxxxxx
      I, [2022-08-16T12:31:32.402328 #11]  INFO -- : The payload has been successfully uploaded to logAnalytics -
@@ -361,7 +402,8 @@ Gather the following information that will be used in this and subsequent labs.
      ```
 
 
-**Congratulations!**, you have successfully set up fluentd to collect OKE System logs and Object logs. You have also successfully setup Management Agent to ingest Kubernetes metrics. Please, proceed to next lab.
+**Congratulations!**, you have successfuly set up Fluentd to collect Kubernetes & Linux System logs, application/container logs, Kubernetes Objects logs and Management Agent to ingest Kubernetes metrics. You may proceed to the next lab.
+
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
