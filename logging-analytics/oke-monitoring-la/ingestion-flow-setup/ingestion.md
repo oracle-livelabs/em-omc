@@ -106,16 +106,17 @@ Gather the following information that will be used in this and subsequent labs.
       </copy>
     ```
 
+
 2. Download the helm chart using the following command.
     ```
       <copy>
           wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/YQy-JQa0RPGxI-pGKmnmA_PJArpo8ZjMdYXCJQM7yXXf6bSCyzI7X_YYmfTDxGbw/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
-     </copy>
+
     ```  
  
     ```
     Length: 10750 (10K) [application/octet-stream]
-    Saving to: ‘helm-chart.tgz’
+    Saving to: ‘v2.0.0.alpha.1.tgz’
     100%[============================================================>] 10,750      --.-K/s   in 0.001s  
     2022-09-22 05:01:55 (121 MB/s) - ‘v2.0.0.alpha.1.tgz’ saved [11505/11505]
     ```
@@ -128,6 +129,7 @@ Gather the following information that will be used in this and subsequent labs.
     ```
 
     ![helm-chart-extraction](images/helm-chart-extraction.png)
+
 
 ## Task 6: Create Custom values.yaml 
 
@@ -175,6 +177,7 @@ Gather the following information that will be used in this and subsequent labs.
       ```
  4. (Optional) The above created **values.yaml** contains the minimalistic values that need to be changed for telemetry collection to work. The full **values.yaml** could be found using the below command.
 
+
       ```
         <copy>
           cat ~/oke-livelab/helm-chart/values.yaml
@@ -215,6 +218,7 @@ Gather the following information that will be used in this and subsequent labs.
    i. **DaemonSet**
 
     - The DaemonSet deployed as part of this installation is responsible for logs collection.
+
 
       ```
         <copy>
@@ -264,6 +268,7 @@ Gather the following information that will be used in this and subsequent labs.
    
    iii. **Deployment** 
 
+
     - The Deployment created as part of this installation is responsible for objects collection.
 
       ```
@@ -292,6 +297,7 @@ Gather the following information that will be used in this and subsequent labs.
 
    iv. **Config Map** 
 
+
     - The config maps created as part of this installation contains the fluentd configuration for logs & objects collection and management agent configuration for metrics collection.
 
       ```
@@ -306,6 +312,7 @@ Gather the following information that will be used in this and subsequent labs.
         oci-la-fluentd-logs-configmap      2      13m
         oci-la-fluentd-objects-configmap   2      13m
       ```
+
 
 ## Task 9: Verify fluentd is Running 
 
