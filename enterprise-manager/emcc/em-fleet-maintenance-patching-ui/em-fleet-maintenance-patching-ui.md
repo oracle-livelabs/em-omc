@@ -21,7 +21,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 - Ability to schedule/retry/suspend/resume operations
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
-![](images/new-em-fleet-maintenance-overview.png " ")
+![Video Walk-through](images/new-em-fleet-maintenance-overview.png " ")
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
