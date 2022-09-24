@@ -6,7 +6,7 @@ In this workshop, you will experience the benefits of using the Oracle Enterpris
 *Estimated Time*: 60 minutes
 
 You can watch this video below for a quick walk-through of this lab.
-[](videohub:1_vyyju031)
+[Video Walk-through](videohub:1_vyyju031)
 
 ### About the Database Fleet Maintenance UI capability in Oracle Enterprise Manager
 
@@ -21,7 +21,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 - Ability to schedule/retry/suspend/resume operations
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
-![Video Walk-through](images/new-em-fleet-maintenance-overview.png " ")
+![](images/new-em-fleet-maintenance-overview.png " ")
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
