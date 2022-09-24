@@ -5,6 +5,8 @@ In this workshop, you will experience the benefits of using the Oracle Enterpris
 
 *Estimated Time*: 60 minutes
 
+You can watch this video below for a quick walk-through of this lab.
+[](videohub:1_vyyju031)
 
 ### About the Database Fleet Maintenance UI capability in Oracle Enterprise Manager
 
