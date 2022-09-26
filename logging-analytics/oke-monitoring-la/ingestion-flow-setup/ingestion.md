@@ -60,7 +60,7 @@ Gather the following information that will be used in this and subsequent labs.
   ![cloud-shell](images/cloud-shell.png)
 
 2. A Cloud Shell Instance will be launched. 
-  ![cloud-shell-textarea](images/cloud-shell-textarea.png)
+  ![oci-cloud-shell](images/cloud-shell-textarea.png)
 
  
 
@@ -73,10 +73,9 @@ Gather the following information that will be used in this and subsequent labs.
        oci ce cluster create-kubeconfig --cluster-id <Kubernetes Cluster OCID> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
      </copy>
     ```   
+    ![oci-cloud-shell](images/oci-command.png)
   
-    ```
-    New config written to the Kubeconfig file /home/llxxxxx_us/.kube/config
-    ```
+
 
 
 ## Task 4: Verify OKE Cluster's Access 
@@ -189,21 +188,20 @@ Gather the following information that will be used in this and subsequent labs.
       <copy>
 
       # custom values
-        namespace: <Kubernetes Namespace>
         image:
             url: <Container Image URL>
             imagePullPolicy: Always
-
+        kubernetesClusterName:  <Kubernetes Cluster Name>
+        kubernetesClusterID: <Kubernetes Cluster OCID>
+        namespace: <Kubernetes Namespace>
+        serviceAccount: <Kubernetes Service Account>
         ociLANamespace: <Logging Analytics Namespace>
         ociLALogGroupID: <Logging Analytics LogGroup OCID>
-        kubernetesClusterID: <Kubernetes Cluster OCID>
-        kubernetesClusterName:  <Kubernetes Cluster Name>
-        createServiceAccount:  false
-        serviceAccount: <Kubernetes Service Account>
         mgmtagent: 
-            installKey: <Management Agent Install Key>
             imageUrl: <Management Agent Container Image URL>
-        ociCompartmentID: <Compartment OCID>
+            installKey: <Management Agent Install Key>            
+        ociCompartmentID: <Compartment OCID> 
+        createServiceAccount:  false
         fluentd:
             baseDir: /var/log/<Kubernetes Namespace>
             tailPlugin:
@@ -314,22 +312,22 @@ Gather the following information that will be used in this and subsequent labs.
     - The StatefulSet deployed as part of this installation is responsible for metrics collection.
       ```
       <copy>
-        kubectl get statefulset -n <Kubernetes Namespace>
+        kubectl get statefulset -n=<Kubernetes Namespace>
       </copy>
       ```
       ```
         NAME                  READY   AGE
-        mgmtagent-bv          1/1     5m40s
+        mgmtagent             1/1     5m40s
       ```
 
       ```
       <copy>
-        kubectl get pods -l app=mgmtagent-bv -n <Kubernetes Namespace>
+        kubectl get pods -l app=mgmtagent-bv -n=<Kubernetes Namespace>
       </copy>
       ```
       ```
         NAME             READY   STATUS    RESTARTS   AGE
-        mgmtagent-bv-0   1/1     Running   0          5m35s
+        mgmtagent-0      1/1     Running   0          5m35s
       ```
    
    iv. **Config Map** 

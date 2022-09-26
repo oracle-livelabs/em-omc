@@ -12,7 +12,7 @@ Estimated Time: 5 minutes
 ## **Task 1:**  Navigating to Log Explorer
 
 - From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
-![](./images/oci-console-la-explorer.png " ")
+![](./images/log-explorer-navigation.gif " ")
 
 - You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
     ```
