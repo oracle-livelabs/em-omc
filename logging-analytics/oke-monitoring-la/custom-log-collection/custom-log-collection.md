@@ -17,7 +17,9 @@ In this lab, you will:
 
 * **Ingestion Flow Setup** lab should have been completed
 
+
 Estimated Time: 15 minutes
+
 
 ## Task 1: Determining the Logs for Customization
 
@@ -53,7 +55,9 @@ Estimated Time: 15 minutes
    Sources page will be displayed. Filter the results with the keyword **mushop** and hit enter. The list of all **mushop** sources will be displayed.
     ![all-mushop-sources](images/all-mushop-sources.png)
 
+
 > **Note:** Refer [Learn More](#LearnMore) section that has references for creating your own custom Log Parser and Log Source.
+
 
 
 ## Task 3: Inserting the mushop application specific configuration in values.yaml.
@@ -184,6 +188,7 @@ Estimated Time: 15 minutes
 
 1. Navigate to the Log Explorer.
 
+
 2. Run the following query in the Query Bar.
 
     ```
@@ -191,6 +196,7 @@ Estimated Time: 15 minutes
         'Log Source' in ('mushop api logs', 'mushop-catalogue logs', 'mushop-orders-app', 'mushop-edge logs') | stats count as logrecords by 'Log Source' | sort -logrecords
     </copy>
     ```
+    
 3. In the Pie Chart view now you should be able to see the Log Sources pertaining to the mushop applications along with the other OKE System and Objects logs.
     ![mushop-piechart](images/mushop-piechart.png)
 

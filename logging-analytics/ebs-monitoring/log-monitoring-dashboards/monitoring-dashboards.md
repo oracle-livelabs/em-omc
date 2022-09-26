@@ -14,11 +14,11 @@ In this lab, you will:
 
 ## **Task 1:**  Continuous Monitoring using Management dashboards
 
-1. Select 'Dashboards' from the top navigation dropdown in Log explorer to view the 'Dashboards' listing page and select Compartment as 'ebs-lab-9522' in the 'Dashboards Scope' section on the left. Then click on "BluePrint 4D: VCN Flow Logs" dashboard to see the monitoring dashboard for Virtual Cloud Network Flow Logs analysis.
+1. Select 'Dashboards' from the top navigation dropdown in Log explorer to view the 'Dashboards' listing page and select Compartment as 'ebs-lab-9522' in the 'Dashboards Scope' section on the left. Then click on "E-Business Suite Overview" dashboard to see the monitoring dashboard for Virtual Cloud Network Flow Logs analysis.
 
    ![](images/nav-to-vcndb-2.gif "Ui Desc")
 
-   You can click on any widget to drill down further for analysis. Click on "BluePrint 4D: VCN Flow Logs" dashboard to see the monitoring dashboard for Virtual Cloud Network Flow Logs analysis.
+   You can click on any widget to drill down further for analysis. Click on "E-Business Suite Overview" dashboard to see the monitoring dashboard for Virtual Cloud Network Flow Logs analysis.
 
    ![](images/vcn-db-2.png "UIdescription")
 
