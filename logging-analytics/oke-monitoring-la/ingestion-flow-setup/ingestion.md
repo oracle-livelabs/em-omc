@@ -322,7 +322,7 @@ Gather the following information that will be used in this and subsequent labs.
 
       ```
       <copy>
-        kubectl get pods -l app=mgmtagent-bv -n=<Kubernetes Namespace>
+        kubectl get pods -l app=mgmtagent -n=<Kubernetes Namespace>
       </copy>
       ```
       ```
