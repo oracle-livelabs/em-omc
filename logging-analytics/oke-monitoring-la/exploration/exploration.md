@@ -90,8 +90,8 @@ Estimated Time: 30 minutes
 
     - Switch back to the Dashboard tab and click on the number of **Nodes** link. This would open a new tab with the node details page.
 
-    - Click on the Scope filter icon and select the **Log Group Compartment** as your **Compartment** to view the details. And the click **Apply**.
-      ![nodes-scope-filter](images/nodes-scope-filter.png)
+    - Click on the Scope filter icon and select the **Log Group Compartment** as your **Compartment**, and click **Apply**.
+      ![nodes-scope-filter](images/node-scope-filter.png)
 
     - Node specific details will be displayed.  
       ![node-specific-details](images/node-specific-details.png)
