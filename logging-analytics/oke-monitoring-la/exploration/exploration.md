@@ -150,5 +150,5 @@ Estimated Time: 30 minutes
 **Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboard and Widgets. Kindly proceed  to next lab.
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
+* **Contributors** - Sreeji Das,  Santhosh Kumar Vuda, Vikram Reddy , OCI Logging Analytics
 * **Last Updated By/Date** - Vikram Reddy, Sep, 2022
