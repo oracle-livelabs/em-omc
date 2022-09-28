@@ -55,7 +55,7 @@ Estimated Time: 30 minutes
     - Click on the View Query Icon to view the query used to populate the data in widget.   
       ![view-query-icon](images/view-query-icon.png)  
     - The query used to populate the data will be displayed.
-      ![view-query](images/view-query.png) 
+      ![view-query](images/widget-view-query-1.png) 
     - Click on the **Close** button.  
     - The detailed explaination of this widget is discussed in [Task 3](#Task3:DeepDiveintoLogsWidget). 
 
@@ -81,16 +81,20 @@ Estimated Time: 30 minutes
 
 5. **Cluster Components**
     - This widget displays the summary of components for your Kubernetes cluster. You can click on each link to get details for that component. 
-      ![widget-cluster-components](images/widget-cluster-components.png)  
+      ![widget-cluster-components](images/widget-cluster-component-1.png)  
 
     -  Click on **Cluster** link. This would open a new tab with the cluster details page. On this page you can view the details of your cluster.
       ![cluster-details](images/cluster-details.png)  
 
       >**Note:** The cluster name you see in this page can be different from the one you had in the dashboard page. This is because we are using a single physical cluster in the backend for the purposes of this workshop.
 
-    - Switch back to the Dashboard tab and click on the number of **Nodes** link. This would open a new tab with the node details page..   
-      // Clicking on Node is navigating to Log Explorer
-      // Clicking on Node Pools shows authorization error.
+    - Switch back to the Dashboard tab and click on the number of **Nodes** link. This would open a new tab with the node details page.
+
+    - Click on the Scope filter icon and select the **Log Group Compartment** as your **Compartment** to view the details. And the click **Apply**.
+      ![nodes-scope-filter](images/nodes-scope-filter.png)
+
+    - Node specific details will be displayed.  
+      ![node-specific-details](images/node-specific-details.png)
 
 6. **Events From Pods**
     - This widget displays the events from all the pods of the selected cluster  
