@@ -22,6 +22,7 @@ In this lab, you will:
 Estimated Time: 30 minutes
 
 ## Task 1: Visualization with Dashboards and Widgets
+
 1. Copy-paste the following link in your browser's address bar to navigate to the Dashboard. **Kubernetes Cluster Overview** page will be displayed.
     
       ```
@@ -56,7 +57,6 @@ Estimated Time: 30 minutes
     - The query used to populate the data will be displayed.
       ![view-query](images/view-query.png) 
     - Click on the **Close** button.  
-    
     - The detailed explaination of this widget is discussed in [Task 3](#Task3:DeepDiveintoLogsWidget). 
 
 2. **Namespaces**
@@ -105,6 +105,7 @@ Estimated Time: 30 minutes
 
 ## Task 3: Deep Dive into Logs Widget
 
+
 1.  Click on the Punch Out Icon on the Logs widget.
     ![punch-out-icon](images/punch-out-icon.png)  
 
@@ -142,8 +143,8 @@ Estimated Time: 30 minutes
      ![group-by-pod](images/group-by-pod.png)
 
    The results will be grouped by Node and Pod.
-   // Screenshot To Be Updated once the fix is available.
     ![group-by-node-pod](images/group-by-node-pod-1.png)
+
 
 
 **Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboard and Widgets. Kindly proceed  to next lab.

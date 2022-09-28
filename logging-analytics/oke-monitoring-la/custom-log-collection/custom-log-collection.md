@@ -101,8 +101,6 @@ Estimated Time: 15 minutes
                    path: /var/log/containers/mushop-catalogue-*.log
                    ociLALogSourceName: "mushop-catalogue logs"
                    isContainerLog: true
-
-     
      </copy>
      ```
     
@@ -155,6 +153,7 @@ Estimated Time: 15 minutes
                     isContainerLog: true
 
             </copy>
+
      ```   
 
     - We have now added configuration to send logs for four mushop application to be processed by their specific Log Sources.
