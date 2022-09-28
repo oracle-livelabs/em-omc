@@ -143,7 +143,7 @@ Estimated Time: 30 minutes
 
    The results will be grouped by Node and Pod.
    // Screenshot To Be Updated once the fix is available.
-    ![group-by-node-pod](images/group-by-node-pod.png)
+    ![group-by-node-pod](images/group-by-node-pod-1.png)
 
 
 **Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboard and Widgets. Kindly proceed  to next lab.
