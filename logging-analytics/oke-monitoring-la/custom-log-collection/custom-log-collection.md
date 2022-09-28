@@ -81,27 +81,26 @@ Estimated Time: 15 minutes
      ```
      <copy>
    
-    # Custom Configuration for mushop application logs    
-       customLogs:
-         mushop-orders:
-            path: /var/log/containers/mushop-orders-*.log
-            ociLALogSourceName: "mushop-orders-app"
-            multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
-            isContainerLog: true
-         mushop-api:
-            path: /var/log/containers/mushop-api-*.log
-            ociLALogSourceName: "mushop api logs"
-            multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
-            isContainerLog: true
-         mushop-edge:
-            path: /var/log/containers/mushop-edge-*.log
-            ociLALogSourceName: "mushop-edge logs"
-            isContainerLog: true  
-         mushop-catalogue:
-            path: /var/log/containers/mushop-catalogue-*.log
-            ociLALogSourceName: "mushop-catalogue logs"
-            isContainerLog: true
-     
+            # Custom Configuration for mushop application logs    
+           customLogs:
+               mushop-orders:
+                   path: /var/log/containers/mushop-orders-*.log
+                   ociLALogSourceName: "mushop-orders-app"
+                   multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
+                   isContainerLog: true
+               mushop-api:
+                   path: /var/log/containers/mushop-api-*.log
+                   ociLALogSourceName: "mushop api logs"
+                   multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
+                   isContainerLog: true
+               mushop-edge:
+                   path: /var/log/containers/mushop-edge-*.log
+                   ociLALogSourceName: "mushop-edge logs"
+                   isContainerLog: true  
+               mushop-catalogue:
+                   path: /var/log/containers/mushop-catalogue-*.log
+                   ociLALogSourceName: "mushop-catalogue logs"
+                   isContainerLog: true
      </copy>
      ```
     
@@ -110,48 +109,51 @@ Estimated Time: 15 minutes
       ```
         <copy>
         
-            # custom values
-  image:
-      url: <Container Image URL>
-      imagePullPolicy: Always
-  kubernetesClusterName:  <Kubernetes Cluster Name>
-  kubernetesClusterID: <Kubernetes Cluster OCID>
-  namespace: <Kubernetes Namespace>
-  serviceAccount: <Kubernetes Service Account>
-  ociLANamespace: <Logging Analytics Namespace>
-  ociLALogGroupID: <Logging Analytics LogGroup OCID>
-  mgmtagent: 
-      imageUrl: <Management Agent Container Image URL>   
-      installKey: <Management Agent Install Key>
-      
-  ociCompartmentID: <Compartment OCID> 
-  createServiceAccount:  false
-  fluentd:
-      baseDir: /var/log/<Kubernetes Namespace>
-      tailPlugin:
-                    readFromHead:  false
-# Custom Configuration for mushop application logs    
-  customLogs:
-    mushop-orders:
-       path: /var/log/containers/mushop-orders-*.log
-       ociLALogSourceName: "mushop-orders-app"
-       multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
-       isContainerLog: true
-    mushop-api:
-       path: /var/log/containers/mushop-api-*.log
-       ociLALogSourceName: "mushop api logs"
-       multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
-       isContainerLog: true
-    mushop-edge:
-       path: /var/log/containers/mushop-edge-*.log
-       ociLALogSourceName: "mushop-edge logs"
-       isContainerLog: true  
-    mushop-catalogue:
-       path: /var/log/containers/mushop-catalogue-*.log
-       ociLALogSourceName: "mushop-catalogue logs"
-       isContainerLog: true
+                # custom values
+        image:
+            url: <Container Image URL>
+            imagePullPolicy: Always
+        kubernetesClusterName:  <Kubernetes Cluster Name>
+        kubernetesClusterID: <Kubernetes Cluster OCID>
+        namespace: <Kubernetes Namespace>
+        serviceAccount: <Kubernetes Service Account>
+        ociLANamespace: <Logging Analytics Namespace>
+        ociLALogGroupID: <Logging Analytics LogGroup OCID>
+        mgmtagent: 
+            imageUrl: <Management Agent Container Image URL>   
+            installKey: <Management Agent Install Key>
+            
+        ociCompartmentID: <Compartment OCID> 
+        createServiceAccount:  false
+        fluentd:
+            baseDir: /var/log/<Kubernetes Namespace>
+            tailPlugin:
+                readFromHead:  false
+            genericContainerLogs:
+                encoding: "UTF-8"    
+            # Custom Configuration for mushop application logs    
+            customLogs:
+                mushop-orders:
+                    path: /var/log/containers/mushop-orders-*.log
+                    ociLALogSourceName: "mushop-orders-app"
+                    multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
+                    isContainerLog: true
+                mushop-api:
+                    path: /var/log/containers/mushop-api-*.log
+                    ociLALogSourceName: "mushop api logs"
+                    multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
+                    isContainerLog: true
+                mushop-edge:
+                    path: /var/log/containers/mushop-edge-*.log
+                    ociLALogSourceName: "mushop-edge logs"
+                    isContainerLog: true  
+                mushop-catalogue:
+                    path: /var/log/containers/mushop-catalogue-*.log
+                    ociLALogSourceName: "mushop-catalogue logs"
+                    isContainerLog: true
 
-        </copy>
+            </copy>
+
      ```   
 
     - We have now added configuration to send logs for four mushop application to be processed by their specific Log Sources.
