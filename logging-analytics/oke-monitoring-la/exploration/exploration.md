@@ -17,37 +17,32 @@ In this lab, you will:
 
 ### Prerequisites
 
-* **Ingestion Flow Setup** and **Custom Log Collection** lab should be completed
+* **Ingestion Flow Setup** and **Custom Log Collection** labs should be completed
 
 Estimated Time: 30 minutes
 
 ## Task 1: Visualization with Dashboards and Widgets
-// To Be Replaced with the Direct URL for Kubernetes Cluster Overview.
-
-1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Dashboards**
-
-2. A Dashboard page will be displayed. This page will list the pre-created Dashboards.
-
-3. Click on the **Kubernetes Cluster Overview** Dashboard from the table.
-
-4. **Kubernetes Cluster Overview** page will be displayed.
-    ![kubernetes-cluster-overview](images/kubernetes-cluster-overview.png)
-
-5. Select the time range as **Last 7 Days** from the Time Range Picker.
-    ![last-7-days](images/last-7-days.png)    
-
-6. Click on the Filter Panel button.
-    ![filter-panel](images/filter-panel.png)
-
-
-
-7. Key in the **Compartment** value obtained from the Terraform Values Frame in the Log Group Compartment textbox. The compartment value will be in the format **LL-12345** .
-    ![log-group-compartment](images/log-group-compartment.png)
+1. Copy-paste the following link in your browser's address bar to navigate to the Dashboard. **Kubernetes Cluster Overview** page will be displayed.
     
-8. Key in the **Kubernetes Cluster Name** value obtained from the Terraform Values Frame.
-    ![kubernetes-cluster-name](images/kubernetes-cluster-name.png)
+      ```
+        <copy>
+          https://cloud.oracle.com/loganalytics/dashboards?id=ocid1.managementdashboard.oc1..aaaaaaaaad24nv2zeottsuszcmklnoegmh3kqeelnvja6tp7gso4rmo6ze5a
+        </copy>
+      ```
+  // Screenshot to be updated once finalized.
 
-9. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
+  >**Note:** The logs ingested from your **Kubernetes Cluster** as part of [Lab 2](?lab=ingestion) and [Lab 3](?lab=custom-log-collection) will exists in your **Log Group Compartment**. Thus all the widgets will be empty till we set these fields, which will be performed in the next steps.  
+
+2. Click on the **Scope Filter** panel
+    ![filter-panel](images/filter-panel.png)
+    ![scope-panel](images/scope-panel.png)
+
+3. Key in the **Compartment** value in the **Log Group Compartment** field and **Kubernetes Cluster Name** value in the **Kubernetes Cluster** field.
+    ![compartment-cluster](images/compartment-cluster.png)
+
+   > **Note:** Refer to the **Compartment** field in [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation) for **Log Group Compartment** value.
+    
+4. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
      ![cluster-specific-view](images/cluster-specific-view.png)
 
 ## Task 2: Overview of Widgets
@@ -60,7 +55,9 @@ Estimated Time: 30 minutes
       ![view-query-icon](images/view-query-icon.png)  
     - The query used to populate the data will be displayed.
       ![view-query](images/view-query.png) 
-    - The detailed explaination of this widget is discussed in Task #3.     
+    - Click on the **Close** button.  
+    
+    - The detailed explaination of this widget is discussed in [Task 3](#Task3:DeepDiveintoLogsWidget). 
 
 2. **Namespaces**
     This widget displays total number of namespaces present in the selected OKE Cluster.
@@ -77,21 +74,34 @@ Estimated Time: 30 minutes
 
     - Click on the each legend to view the trends of the corresponding log.
 
-4. **Cluster Components**
-    - This widget displays the different components of the cluster such as Cluster Name, number of Nodes and number of Pods.
+4. **CPU and Memory Utilization**, **Network Transmit and Receive** & **Threads and Processes**
+    - These widgets show the metrics data from OCI Monitoring.
+      ![cpu-network-thread](images/cpu-network-thread.png)
+    - Refer to Lab #5 for the steps about how to build Metric widgets.
+
+5. **Cluster Components**
+    - This widget displays the summary of components for your Kubernetes cluster. You can click on each link to get details for that component. 
       ![widget-cluster-components](images/widget-cluster-components.png)  
 
-5. **Events From Pods**
+    -  Click on **Cluster** link. This would open a new tab with the cluster details page. On this page you can view the details of your cluster.
+      ![cluster-details](images/cluster-details.png)  
+
+      >**Note:** The cluster name you see in this page can be different from the one you had in the dashboard page. This is because we are using a single physical cluster in the backend for the purposes of this workshop.
+
+    - Switch back to the Dashboard tab and click on the number of **Nodes** link. This would open a new tab with the node details page..   
+      // Clicking on Node is navigating to Log Explorer
+      // Clicking on Node Pools shows authorization error.
+
+6. **Events From Pods**
     - This widget displays the events from all the pods of the selected cluster  
       ![widget-events-from-pods](images/widget-events-from-pods.png)  
 
-6. **Connections Trend**  
-    - This widget displays the newtwork connection trends in the selected OKE Cluster.
-    - Hover over any point to view the newtwork connections in the cluster, the chart will be displayed.
+7. **Connections Trend**  
+    - This widget displays the network connection trends in the selected OKE Cluster.
+    - Hover over any point to view the network connections in the cluster, the chart will be displayed.
       ![widget-connections-trends](images/widget-connections-trends.png)  
     - The chart aggregates and groups the connections based on the direction (inbound or outbound), IPs involved and the number of connections.          
-
-  // To Be Updated after the discussion - CPU and Memory Utilization, Network Transmit and Receive and Threads and Processes
+    // direction - outbound only or (inbound or outbound).
 
 ## Task 3: Deep Dive into Logs Widget
 

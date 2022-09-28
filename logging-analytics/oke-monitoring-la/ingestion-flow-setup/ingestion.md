@@ -52,6 +52,7 @@ Gather the following information that will be used in this and subsequent labs.
   
     - **Compartment OCID:** The OCID of the Compartment in which the metrics to be ingested. 
 
+    - **Compartment:** The Name of Compartment in which the metrics to be ingested.
 
 ## Task 2: Launching Cloud Shell
   
@@ -206,6 +207,8 @@ Gather the following information that will be used in this and subsequent labs.
             baseDir: /var/log/<Kubernetes Namespace>
             tailPlugin:
                 readFromHead:  false
+            genericContainerLogs:
+                encoding: "UTF-8"    
       </copy>
       ```
  4. (Optional) The above created **values.yaml** contains the minimalistic values that need to be changed for telemetry collection to work. The full **values.yaml** could be found using the below command.
