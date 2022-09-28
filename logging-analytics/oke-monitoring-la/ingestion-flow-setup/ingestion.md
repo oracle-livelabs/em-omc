@@ -403,8 +403,25 @@ Gather the following information that will be used in this and subsequent labs.
                          opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
      ```
 
+## Task 11: (Optional) Verify Management Agent is Running and Emitting Metrics
 
-## Task 11: Validate the Logs in Log Explorer
+1. To verify Management Agent is running and emitting metrics
+   - Execute the following command.
+     ```
+        <copy>
+            kubectl exec -n=<Kubernetes Namespace> --stdin --tty mgmtagent-0 -- tail -100 /opt/oracle/mgmt_agent/agent_inst/log/mgmt_agent_client.log | grep MetricUploadInvocation | grep rsp
+        </copy>
+     ```
+   - If you see the similar messages like below, Management Agent is running and emitting metrics successfully.
+     ```
+       2022-09-27 17:46:43,437 [SendQueue.1 (SenderManager_sender)-53] INFO  - MetricUploadInvocation <--rsp[M57ATQHS06FBBOEAJ90WC8LY7OV6SI1U/69DD54B2066ADFEE93C1AEE3BAE0CEA7/3B89C3889FED51FE368864923091DA91]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+       2022-09-27 17:47:13,411 [SendQueue.0 (SenderManager_sender)-48] INFO  - MetricUploadInvocation <--rsp[2DJNS5OTBTS9EIQM1VOUWBV9UP5WH9DQ/AAF9B4C68B80E4A99C33225D1D3008ED/DA63A1D36879F64D5E4A64D1400BB149]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+       2022-09-27 17:47:13,414 [SendQueue.2 (SenderManager_sender)-54] INFO  - MetricUploadInvocation <--rsp[D9XXM3T9E3C7UMKAPJFSVOVSAYKQEF2X/BDBCCFDA23C3DA53FBEAD8C211825C15/C2FD7821CD4D23A237B99411165422EA]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+       2022-09-27 17:47:43,490 [SendQueue.1 (SenderManager_sender)-53] INFO  - MetricUploadInvocation <--rsp[PVES5F4AOM4DCB7GL439MUE6MRJORTH3/1102558CAAF3643427CDD258937628CD/DF114CF84D38F9471F4855B4FAE67218]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+     ```
+
+
+## Task 12: Validate the Logs in Log Explorer
 
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 
