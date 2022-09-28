@@ -415,7 +415,7 @@ Gather the following information that will be used in this and subsequent labs.
             kubectl exec -n=<Kubernetes Namespace> --stdin --tty mgmtagent-0 -- tail -100 /opt/oracle/mgmt_agent/agent_inst/log/mgmt_agent_client.log | grep MetricUploadInvocation | grep rsp
         </copy>
      ```
-   - If you see the similar messages like below, Management Agent is running and emitting metrics successfully.
+   - If you see similar messages like below, Management Agent is running and emitting metrics successfully.
      ```
        2022-09-27 17:46:43,437 [SendQueue.1 (SenderManager_sender)-53] INFO  - MetricUploadInvocation <--rsp[M57ATQHS06FBBOEAJ90WC8LY7OV6SI1U/69DD54B2066ADFEE93C1AEE3BAE0CEA7/3B89C3889FED51FE368864923091DA91]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
        2022-09-27 17:47:13,411 [SendQueue.0 (SenderManager_sender)-48] INFO  - MetricUploadInvocation <--rsp[2DJNS5OTBTS9EIQM1VOUWBV9UP5WH9DQ/AAF9B4C68B80E4A99C33225D1D3008ED/DA63A1D36879F64D5E4A64D1400BB149]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
