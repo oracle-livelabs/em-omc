@@ -71,9 +71,10 @@ Gather the following information that will be used in this and subsequent labs.
 
     ```
      <copy>
-       oci ce cluster create-kubeconfig --cluster-id <Kubernetes Cluster OCID> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+       oci ce cluster create-kubeconfig --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT --cluster-id <Kubernetes Cluster OCID>
      </copy>
     ```   
+    
     ![oci-cloud-shell](images/oci-command.png)
   
 
@@ -108,6 +109,9 @@ Gather the following information that will be used in this and subsequent labs.
 
 
 2. Download the helm chart using the following command.
+
+     > **Note**: The following helm chart is recommended only for this workshop. Refer [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases) for all other use cases. 
+
     ```
       <copy>
           wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/YQy-JQa0RPGxI-pGKmnmA_PJArpo8ZjMdYXCJQM7yXXf6bSCyzI7X_YYmfTDxGbw/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
@@ -234,13 +238,13 @@ Gather the following information that will be used in this and subsequent labs.
 1. Install the helm chart using the following command.
       ```
         <copy>
-         helm install <Kubernetes Namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
+         helm install ll-oke-monitoring --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
         </copy>
       ```
       
       ```
-        NAME: resrXXXXX
-        LAST DEPLOYED: Fri Sep 23 05:18:11 2022
+        NAME: ll-oke-monitoring
+        LAST DEPLOYED: Thu Sep 29 10:20:18 2022
         NAMESPACE: resrXXXXX
         STATUS: deployed
         REVISION: 1
@@ -269,7 +273,7 @@ Gather the following information that will be used in this and subsequent labs.
      
       ```
             <copy>
-                kubectl get pods -n=<Kubernetes Namespace> | grep daemonset
+                kubectl get pods -l app=oci-la-fluentd-logs -n=<Kubernetes Namespace>
             </copy>
       ```
      
@@ -301,7 +305,7 @@ Gather the following information that will be used in this and subsequent labs.
 
        ```
           <copy>
-              kubectl get pods -n=<Kubernetes Namespace> |grep deployment
+              kubectl get pods -l app=oci-la-fluentd-objects -n=<Kubernetes Namespace>
           </copy>
        ```
       
@@ -361,7 +365,7 @@ Gather the following information that will be used in this and subsequent labs.
 
         ```
                 <copy>
-                    kubectl get pods -n=<Kubernetes Namespace> | grep daemonset
+                    kubectl get pods -l app=oci-la-fluentd-logs -n=<Kubernetes Namespace>
                 </copy>
           ```
      
@@ -384,27 +388,6 @@ Gather the following information that will be used in this and subsequent labs.
           2022-08-18 10:35:06 +0000 [info]: #0 fluentd worker is now running worker=0
       ```
      
-2. (Optional) Verify that the logs are being sent to Logging Analytics. 
-
-     - Execute the following command. 
-     
-        ```
-        <copy>
-            kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
-        </copy>
-        ```
-    
-     - If you see the similar messages like below, logs are being sent to Logging Analytics successfully. 
-     ```
-     I, [2022-08-16T12:31:32.234958 #11]  INFO -- : Generating payload with 95  records for oci_la_log_group_id: ocid1.loganalyticsloggroup.oc1.abc.abcxxxxxxxxyx543xxxxxx
-     I, [2022-08-16T12:31:32.402328 #11]  INFO -- : The payload has been successfully uploaded to logAnalytics -
-                         oci_la_log_group_id: ocid1.loganalyticsloggroup.oc1.abc.abcxxxxxxxxyx543xxxxxx,
-                         ConsumedRecords: 95,
-                         Date: Tue, 16 Aug 2022 12:31:32 GMT,
-                         Time: 2022-08-16T12:31:32.000Z,
-                         opc-request-id: D61380FCECC84BD8A84349A766CF59FE/DD09F19E0CDBCDFCC5A4741CB178C3DF/897B96A83E503277C0B2287E2D4B2221,
-                         opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
-     ```
 
 ## Task 11: (Optional) Verify Management Agent is Running and Emitting Metrics
 

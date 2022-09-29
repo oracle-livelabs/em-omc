@@ -23,7 +23,7 @@
             "filename": "../../ingestion-flow-setup/ingestion.md"
         },
         {
-            "title": "Lab 3: Custom Application Log Collection",
+            "title": "Lab 3: Customizing Application Logs Configuration",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../custom-log-collection/custom-log-collection.md"
         },
