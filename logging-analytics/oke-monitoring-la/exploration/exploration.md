@@ -116,7 +116,7 @@ Estimated Time: 30 minutes
     ![punch-out-icon](images/logs-punch-out-icon.png)  
 
     This will take you to the "Tile view" of Log Explorer in context of **Kubernetes Cluster Name** .
-    ![log-explorer-tile-view](images/log-explorer-tile-view-1.png)
+    ![log-explorer-tile-view](images/log-explorer-tile-view.png)
 
 2. Select the visualization "Records with Histogram". This will take you to the "Records with Histogram view" in context of **Kubernetes Cluster Name**.
    The bar chart  shows the trends of the logs.
@@ -149,7 +149,7 @@ Estimated Time: 30 minutes
      ![group-by-pod](images/group-by-pod.png)
 
    The results will be grouped by Node and Pod.
-    ![group-by-node-pod](images/group-by-node-pod-1.png)
+    ![group-by-node-pod](images/group-by-node-pod.png)
 
 
 
