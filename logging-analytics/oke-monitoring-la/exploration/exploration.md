@@ -6,8 +6,8 @@ This lab will walk you through the steps to visualize the log from the OKE Clust
 
 ### About
 In this lab we will be exploring
-* Dashboards - 
-* Widgets - 
+* Dashboards: A data visualization tool that gathers real-time data from the various tiers of Kubernetes Cluster.
+* Widgets: A component that displays the real-time data.
 
 
 ### Objectives
@@ -34,7 +34,7 @@ Estimated Time: 30 minutes
 
   >**Note:** The logs ingested from your **Kubernetes Cluster** as part of [Lab 2](?lab=ingestion) and [Lab 3](?lab=custom-log-collection) will exists in your **Log Group Compartment**. Thus all the widgets will be empty till we set these fields, which will be performed in the next steps.  
 
-2. Click on the **Scope Filter** panel
+2. Click on the **Scope Filter** panel.
     ![filter-panel](images/filter-panel.png)
     ![scope-panel](images/scope-panel.png)
 
@@ -60,7 +60,7 @@ Estimated Time: 30 minutes
     - The detailed explaination of this widget is discussed in [Task 3](#Task3:DeepDiveintoLogsWidget). 
 
 2. **Namespaces**
-    This widget displays total number of namespaces present in the selected OKE Cluster.
+    - This widget displays total number of namespaces present in the selected OKE Cluster.
       ![widget-namespace](images/widget-namespace.png)  
 
 3. **Log Types**
@@ -77,7 +77,7 @@ Estimated Time: 30 minutes
 4. **CPU and Memory Utilization**, **Network Transmit and Receive** & **Threads and Processes**
     - These widgets show the metrics data from OCI Monitoring.
       ![cpu-network-thread](images/cpu-network-thread.png)
-    - Refer to Lab #5 for the steps about how to build Metric widgets.
+    - Refer to  [Lab 5](?lab=dashboard) for the steps about how to build Metric widgets.
 
 5. **Cluster Components**
     - This widget displays the summary of components for your Kubernetes cluster. You can click on each link to get details for that component. 
@@ -96,6 +96,9 @@ Estimated Time: 30 minutes
     - Node specific details will be displayed.  
       ![node-specific-details](images/node-specific-details.png)
 
+    - Switch back to the Dashboard tab. 
+
+
 6. **Events From Pods**
     - This widget displays the events from all the pods of the selected cluster  
       ![widget-events-from-pods](images/widget-events-from-pods.png)  
@@ -104,17 +107,16 @@ Estimated Time: 30 minutes
     - This widget displays the network connection trends in the selected OKE Cluster.
     - Hover over any point to view the network connections in the cluster, the chart will be displayed.
       ![widget-connections-trends](images/widget-connections-trends.png)  
-    - The chart aggregates and groups the connections based on the direction (inbound or outbound), IPs involved and the number of connections.          
-    // direction - outbound only or (inbound or outbound).
+    - The chart aggregates and groups the connections initiated by a **Node** or a **Pod**.          
 
 ## Task 3: Deep Dive into Logs Widget
 
 
 1.  Click on the Punch Out Icon on the Logs widget.
-    ![punch-out-icon](images/punch-out-icon.png)  
+    ![punch-out-icon](images/logs-punch-out-icon.png)  
 
     This will take you to the "Tile view" of Log Explorer in context of **Kubernetes Cluster Name** .
-    ![log-explorer-tile-view](images/log-explorer-tile-view.png)
+    ![log-explorer-tile-view](images/log-explorer-tile-view-1.png)
 
 2. Select the visualization "Records with Histogram". This will take you to the "Records with Histogram view" in context of **Kubernetes Cluster Name**.
    The bar chart  shows the trends of the logs.

@@ -171,15 +171,15 @@ Estimated Time: 15 minutes
 
     ```
      <copy>
-        helm upgrade --values ~/oke-livelab/external-values/values.yaml <Kubernetes Namespace> ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
+        helm upgrade --values ~/oke-livelab/external-values/values.yaml ll-oke-monitoring ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
      </copy>
        
      ```
 
      ```
-        Release "resrXXXXX" has been upgraded. Happy Helming!
-        NAME: resrXXXXX
-        LAST DEPLOYED: Mon Sep 26 07:02:10 2022
+        Release "ll-oke-monitoring" has been upgraded. Happy Helming!
+        NAME: ll-oke-monitoring
+        LAST DEPLOYED: Thu Sep 29 10:31:39 2022
         NAMESPACE: resrXXXXX
         STATUS: deployed
         REVISION: 2
