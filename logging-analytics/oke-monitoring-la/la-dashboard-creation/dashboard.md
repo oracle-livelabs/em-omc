@@ -36,7 +36,7 @@ In this lab, you will:
  
 
 ## Task 2: Create a Metric widget for CPU and Memory Utilization
-
+This metric widget will provide user with details about CPU and memory utilization for node name 10.20.10.167 in the Kubernetes cluster 
 1. Click on the **Create Metric Widget**
 
   ![create-metrics-widget](images/createmetricwidget11.png)
@@ -70,7 +70,7 @@ In this lab, you will:
 
   ![add-dimension-2](images/adddimension31.png) 
   
-  > **Note:** choose the cluster name provided to you when you signed up for the LiveLab session.
+  > **Note:** Select the cluster name and node name as indicated in the screenshot.
 
 5. Add the dimensions for the Source data elements for **nodeMemoryUsage**
    
@@ -90,6 +90,7 @@ In this lab, you will:
   
    
 ## Task 3: Create a Metric widget for Network Transmit and Receive
+  This metric widget will provide the user with a count of bytes received and transmitted by containers in the 'mushop' application namespace.
   
   Repeat the same steps as **Task 2**
   
@@ -102,11 +103,12 @@ In this lab, you will:
      
      namespace
      
-  > **Note:**  Pick the value for namespace that was provided to you when you signed up for the LiveLabs session
+  > **Note:**  Pick 'mushop' as the value for the namespace
   
   
 ## Task 4: (Optional) Create a Metric widget for Threads and Processes
- 
+  This metric widget will provide the user with a count of container processes and threads in the 'mushop' application namespace.
+  
   Repeat the same steps as **Task 2**
   
   Use the following Source data elements:
@@ -118,7 +120,7 @@ In this lab, you will:
      
      namespace
      
-  > **Note:**  Pick the value for namespace that was provided to you when you signed up for the LiveLabs session
+  > **Note:**  Pick 'mushop' as the value for the namespace
 
 
 ## Task 5: Verify the dashboard
