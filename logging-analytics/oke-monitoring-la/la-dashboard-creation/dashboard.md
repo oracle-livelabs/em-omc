@@ -1,4 +1,4 @@
-# Building dashboards in Logging Analytics with the data ingested by Management Agents
+# Building dashboards in Logging Analytics with the data ingested by Management Agent
 
 ## Introduction
 
