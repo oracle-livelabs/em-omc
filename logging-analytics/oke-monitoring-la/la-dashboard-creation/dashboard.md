@@ -1,14 +1,10 @@
-# Building dashboards in Logging Analytics with the data ingested by Management Agents
+# Building dashboards in Logging Analytics with the data ingested by Management Agent
 
 ## Introduction
 
 This lab will walk you through the steps to build dashboards in Logging Analytics with the data ingested by Management Agent
 
 Estimated Time: 30 minutes
-
-### About <Product/Technology> 
-In this lab we will be using the following tools:
-* Logging Analytics Dashboards - tool that enables user to work with Metrics ingested by OCI Monitoring through Management Agents. 
 
 ### Objectives
 In this lab, you will:
