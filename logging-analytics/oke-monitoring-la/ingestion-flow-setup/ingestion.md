@@ -75,8 +75,6 @@ Gather the following information that will be used in this and subsequent labs.
     ![kube-config-with-env](images/kube-config-with-env.png)
   
 
-
-
 ## Task 4: Verify OKE Cluster's Access 
 1. Run the following command in the cloud shell to verify that you can access the OKE Cluster.
 
