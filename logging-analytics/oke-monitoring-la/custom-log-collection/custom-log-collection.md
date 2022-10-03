@@ -63,99 +63,90 @@ Estimated Time: 15 minutes
 ## Task 3: Inserting the mushop application specific configuration in values.yaml.
 
 1. In the next few steps we will update the values.yaml to collect the logs for some of the **mushop application containers**.
-    - Open the file values.yaml using **vi**.
-      ```
-        <copy>
-             vi ~/oke-livelab/external-values/values.yaml
-        </copy>
-      ```
-    - For the vi/vim to not auto-indent any text that you paste we will enable paste mode.
-      
-      ```
-        <copy>
-            :set paste
-        </copy>
-      ``` 
 
-    - Switch to the insert mode and append the below **customLogs** configuration at the end of the file in the fluentd section.
-     ```
-     <copy>
-   
-            # Custom Configuration for mushop application logs    
-           customLogs:
-               mushop-orders:
-                   path: /var/log/containers/mushop-orders-*.log
-                   ociLALogSourceName: "mushop-orders-app"
-                   multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
-                   isContainerLog: true
-               mushop-api:
-                   path: /var/log/containers/mushop-api-*.log
-                   ociLALogSourceName: "mushop api logs"
-                   multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
-                   isContainerLog: true
-               mushop-edge:
-                   path: /var/log/containers/mushop-edge-*.log
-                   ociLALogSourceName: "mushop-edge logs"
-                   isContainerLog: true  
-               mushop-catalogue:
-                   path: /var/log/containers/mushop-catalogue-*.log
-                   ociLALogSourceName: "mushop-catalogue logs"
-                   isContainerLog: true
-     </copy>
-     ```
+    - Navigate into the **external-values** folder using following command.
+        ```
+          <copy>
+                cd ~/oke-livelab/external-values/
+          </copy>  
+        ```
+    - Download the custom values.yaml using the command specified in the field **Lab 3 values.yaml** of [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation).
+      
+        >**Note:** Following are the sample command and output.
+
+        ```
+            wget -O values.yaml https://objectstorage.us-phoenix-1.oraclecloud.com/p/pCyp8T00kckPB82XTYdPnONRMOAInVGsSHerryrPEFk8SLVE0RiMx2pHSrfEhJx7/n/aupo86x8x2bk/b/resrXXXXX/o/lab3_values.yaml
+        ```
+
+        ```
+        --2022-10-03 07:09:38--  https://objectstorage.us-phoenix-1.oraclecloud.com/p/pCyp8T00kckPB82XTYdPnONRMOAInVGsSHerryrPEFk8SLVE0RiMx2pHSrfEhJx7/n/aupo86x8x2bk/b/resrXXXXX/o/lab3_values.yaml
+        Resolving objectstorage.us-phoenix-1.oraclecloud.com (objectstorage.us-phoenix-1.oraclecloud.com)... 134.70.8.1, 134.70.16.1, 134.70.12.1
+        Connecting to objectstorage.us-phoenix-1.oraclecloud.com (objectstorage.us-phoenix-1.oraclecloud.com)|134.70.8.1|:443... connected.
+        HTTP request sent, awaiting response... 200 OK
+        Length: 2509 (2.5K) [application/octet-stream]
+        Saving to: ‘values.yaml’
+
+        100%[===========================================>] 2,509       --.-K/s   in 0s      
+
+        2022-10-03 07:09:38 (7.31 MB/s) - ‘values.yaml’ saved [2509/2509]
+        ```
+
+
+    - You can view the downloaded **values.yaml** using the following command.
+        ```
+            <copy>
+              cat ~/oke-livelab/external-values/values.yaml
+            </copy>  
+        ```
+
+        ```
+                ######
+                ##  Note:
+                ##      - The container images referred in this values.yaml ("image:url" and "mgmtagent:imageurl" sections) are recommended only for using with the workshop.
+                ##  - Refer to https://github.com/oracle-quickstart/oci-kubernetes-monitoring#docker-image for all other use cases.
+                ######
+"createServiceAccount": false
+"fluentd":
+  "baseDir": "/var/log/resrXXXXX"
+  "customLogs":
+    "mushop-api":
+      "isContainerLog": true
+      "multilineStartRegExp": "/^::\\w{4}:\\d{2}.\\d{3}.\\d{1}.\\d{1}\\s*-\\s*-\\s*\\[\\d{2}\\/\\w{3}\\/\\d{4}:\\d{2}:\\d{2}:\\d{2}\\s*\\+\\d{4}\\]/"
+      "ociLALogSourceName": "mushop api logs"
+      "path": "/var/log/containers/mushop-api-*.log"
+    "mushop-catalogue":
+      "isContainerLog": true
+      "ociLALogSourceName": "mushop-catalogue logs"
+      "path": "/var/log/containers/mushop-catalogue-*.log"
+    "mushop-edge":
+      "isContainerLog": true
+      "ociLALogSourceName": "mushop-edge logs"
+      "path": "/var/log/containers/mushop-edge-*.log"
+    "mushop-orders":
+      "isContainerLog": true
+      "multilineStartRegExp": "/^\\d{4}-\\d{2}-\\d{2}\\s*\\d{2}:\\d{2}:\\d{2}.\\d{3}/"
+      "ociLALogSourceName": "mushop-orders-app"
+      "path": "/var/log/containers/mushop-orders-*.log"
+  "genericContainerLogs":
+    "encoding": "UTF-8"
+  "tailPlugin":
+    "readFromHead": false
+"image":
+  "imagePullPolicy": "Always"
+  "url": "iad.ocir.io/ax1wgjs6b2vc/oci_la_fluentd:ol8-1.1"
+"kubernetesClusterID": "ocid1.cluster.oc1.phx.aaaaaaaag...."
+"kubernetesClusterName": "resrXXXXX"
+"mgmtagent":
+  "imageUrl": "iad.ocir.io/ax1wgjs6b2vc/mgmtagent_oke_monitoring/mgmt_agent:latest"
+  "installKey": "TWFuYWdlbWVudEFnZW50...PSAzMjY5MF9BZ2VudA=="
+"namespace": "resrXXXXX"
+"ociCompartmentID": "ocid1.compartment.oc1..aaaaaaaak...."
+"ociLALogGroupID": "ocid1.loganalyticsloggroup.oc1.phx.amaaaaaaq...."
+"ociLANamespace": "acxo58f8p2os"
+"serviceAccount": "resrXXXXX"
+ 
+    ```
     
-    - After appending the **customLogs** configuration, the final values.yaml file will look like below
-      
-      ```
-        <copy>
-        
-                # custom values
-        image:
-            url: <Container Image URL>
-            imagePullPolicy: Always
-        kubernetesClusterName:  <Kubernetes Cluster Name>
-        kubernetesClusterID: <Kubernetes Cluster OCID>
-        namespace: <Kubernetes Namespace>
-        serviceAccount: <Kubernetes Service Account>
-        ociLANamespace: <Logging Analytics Namespace>
-        ociLALogGroupID: <Logging Analytics LogGroup OCID>
-        mgmtagent: 
-            imageUrl: <Management Agent Container Image URL>   
-            installKey: <Management Agent Install Key>
-            
-        ociCompartmentID: <Compartment OCID> 
-        createServiceAccount:  false
-        fluentd:
-            baseDir: /var/log/<Kubernetes Namespace>
-            tailPlugin:
-                readFromHead:  false
-            genericContainerLogs:
-                encoding: "UTF-8"    
-            # Custom Configuration for mushop application logs    
-            customLogs:
-                mushop-orders:
-                    path: /var/log/containers/mushop-orders-*.log
-                    ociLALogSourceName: "mushop-orders-app"
-                    multilineStartRegExp: /^\d{4}-\d{2}-\d{2}\s*\d{2}:\d{2}:\d{2}.\d{3}/
-                    isContainerLog: true
-                mushop-api:
-                    path: /var/log/containers/mushop-api-*.log
-                    ociLALogSourceName: "mushop api logs"
-                    multilineStartRegExp: /^::\w{4}:\d{2}.\d{3}.\d{1}.\d{1}\s*-\s*-\s*\[\d{2}\/\w{3}\/\d{4}:\d{2}:\d{2}:\d{2}\s*\+\d{4}\]/
-                    isContainerLog: true
-                mushop-edge:
-                    path: /var/log/containers/mushop-edge-*.log
-                    ociLALogSourceName: "mushop-edge logs"
-                    isContainerLog: true  
-                mushop-catalogue:
-                    path: /var/log/containers/mushop-catalogue-*.log
-                    ociLALogSourceName: "mushop-catalogue logs"
-                    isContainerLog: true
-
-            </copy>
-
-     ```   
-
     - We have now added configuration to send logs for four mushop application to be processed by their specific Log Sources.
     
     - Each configuration has following important information.
@@ -171,7 +162,7 @@ Estimated Time: 15 minutes
 
     ```
      <copy>
-        helm upgrade --values ~/oke-livelab/external-values/values.yaml ll-oke-monitoring ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
+        helm upgrade --values ~/oke-livelab/external-values/values.yaml ll-oke-monitoring ~/oke-livelab/helm-chart/ -n=$ns
      </copy>
        
      ```
