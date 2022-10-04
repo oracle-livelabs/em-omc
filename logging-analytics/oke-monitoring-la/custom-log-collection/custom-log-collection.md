@@ -190,6 +190,8 @@ Estimated Time: 15 minutes
 
 1. Navigate to the Log Explorer.
 
+  >**Note**: Wait for few minutes (_preferably 4-5 minutes_) for the **mushop** logs to be collected before proceeding to next steps.
+
 
 2. Run the following query in the Query Bar.
 
