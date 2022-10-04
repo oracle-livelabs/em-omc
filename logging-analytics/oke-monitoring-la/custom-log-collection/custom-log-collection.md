@@ -81,7 +81,7 @@ Estimated Time: 15 minutes
                 cd ~/oke-livelab/external-values/
           </copy>  
         ```
-    - Download the custom values.yaml using the command specified in the field **Lab 3 values.yaml Command** of [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation).
+    - Download the custom values.yaml using the command specified in the field **Lab 3 values.yaml** of [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation).
       
         >**Note:** Following are the sample command and output.
 
@@ -101,8 +101,6 @@ Estimated Time: 15 minutes
 
         2022-10-03 07:09:38 (7.31 MB/s) - ‘values.yaml’ saved [2509/2509]
         ```
-
-
     - You can view the downloaded **values.yaml** using the following command.
         ```
             <copy>
