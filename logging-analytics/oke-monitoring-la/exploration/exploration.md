@@ -110,9 +110,27 @@ Estimated Time: 30 minutes
       ![network-transmit-receive](images/network-transmit-receive.png)
 
 7. **Container Status**   
-    - This widget displays the status(running, terminated & waiting) of containers in the each node.  
-      ![container-status](images/container-status.png)   
-      // Need details about the values in the drop down    
+ 
+    - This widget displays the overview of all the nodes in your cluster for the selected time period. 
+
+      The x-axis represents Start Time and y-axis represents the Nodes. 
+      
+      The summary of each Node at each time interval is displayed as bubble.
+      ![container-status](images/container-status.png)  
+
+    - Hover on any bubble to get the details. The following image shows at a given **Start Time** on **Node** 10.20.10.226 there are 31 **Containers** with **Status** running.
+      ![hover-over-container-status-bubble](images/hover-over-container-status-bubble.png)  
+      
+    - Click on any one of the status e.g terminated, the results will be filtered with running and waiting state.
+      ![filter-by-running-waiting](images/filter-by-running-waiting.png)  
+
+    - Change the color to **Node** from the dropdown
+      ![select-color-node](images/select-color-node.png) 
+
+    - One unique color will be assigned to each node.
+      ![unique-color-each-node](images/unique-color-each-node.png) 
+          
+       
 
 8. **Programs with Outbound Connections**
     - This widget displays the network connection trends in the selected OKE Cluster.
@@ -121,10 +139,26 @@ Estimated Time: 30 minutes
     - The chart aggregates and groups the connections initiated by a **Node** or a **Pod**.  
 
 9. **Pods Error Analysis**           
-    - This widget displays the error analysis of **pod** and **node**.
-    ![pods-error-analysis](images/pods-error-analysis.png)  
+    - This widget automatically anlyzes all the errors in the cluster logs and summarizes the results.
+      The x-axis represents Node and y-axis represents the Pod.
+      The summary of each Pod at each time interval is displayed as bubble.
+      ![pods-error-analysis](images/pods-error-analysis.png)  
 
-    // Need one lines about the drop down
+    - Hover on any bubble to get the details. 
+
+      The following image shows that on **Node** 10.20.10.226 for **pod** mushop-edge in the **Namespace** mushop there are two **Issues** for the composite key Groups 2 (Pod and Node). 
+
+      And these two issues constitues the 28.57% of the total issues. 
+
+      For every identified issue, we perform natural language processing (NLP) and extract the relevant keywords.
+      ![pods-analysis-hover](images/pods-analysis-hover.png)  
+  
+    - Change the color to **Node** from the dropdown
+      ![select-color-node-pods-error](images/select-color-node-pods-error.png) 
+
+    - One unique color will be assigned to each node.
+      ![unique-color-each-pods](images/unique-color-each-pods.png) 
+         
                
 
 ## Task 3: Deep Dive into Logs Widget
