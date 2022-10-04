@@ -39,15 +39,25 @@ Estimated Time: 15 minutes
     ![log-origin](images/log-origin.png) 
 
 5. **Filter Log Origin** pop-window will be displayed. Filter the results with the keyword **mushop** and hit enter. All the logs pertaining to the mushop app will be displayed. We have highlighted two log files, whose logs will be rerouted to be processed with existing mushop Log Sources.
-    ![mushop](images/mu-shop.png)    
+    ![mushop](images/mu-shop.png) 
+
+6. Click on **Cancel** button.       
 
 
 ## Task 2 (Optional): MuShop Log Sources
 1. Click on the drop-down of top left side of the Log Explorer Page and select **Administration**
     ![administration](images/administration.png) 
+    
+    >**Note**: In the Administration Overview Page you will see **Authorization failed or requested resource not found** error message. It is because your user will not have
+    access to the **root** compartment.
+   
+   Select your **Compartment** 
+   ![compartment-selection-ao](images/compartment-selection-ao.png) 
 
+    >**Note**: Close the error message if it is still being displayed.
+   
    Administration Overview Page will be displayed.
-    ![admin-overview](images/admin-overview.png) 
+    ![admin-overview-1.png](images/admin-overview-1.png) 
 
 2. Click on Sources from the Resources Section.
     ![sources](images/sources.png) 
@@ -55,6 +65,7 @@ Estimated Time: 15 minutes
    Sources page will be displayed. Filter the results with the keyword **mushop** and hit enter. The list of all **mushop** sources will be displayed.
     ![all-mushop-sources](images/all-mushop-sources.png)
 
+   
 
 > **Note:** Refer [Learn More](#LearnMore) section that has references for creating your own custom Log Parser and Log Source.
 
@@ -90,8 +101,6 @@ Estimated Time: 15 minutes
 
         2022-10-03 07:09:38 (7.31 MB/s) - ‘values.yaml’ saved [2509/2509]
         ```
-
-
     - You can view the downloaded **values.yaml** using the following command.
         ```
             <copy>
@@ -180,6 +189,8 @@ Estimated Time: 15 minutes
 ## Task 4: Verification of mushop logs in Log Explorer
 
 1. Navigate to the Log Explorer.
+
+  >**Note**: Wait for few minutes (_preferably 4-5 minutes_) for the **mushop** logs to be collected before proceeding to next steps.
 
 
 2. Run the following query in the Query Bar.

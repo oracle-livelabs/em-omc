@@ -51,16 +51,19 @@ Gather the following information that will be used in this and subsequent labs.
 2. A Cloud Shell Instance will be launched. 
   ![oci-cloud-shell](images/cloud-shell-textarea.png)
 
-3. Set up the environment variables for **Kubernetes Cluster OCID** and **Kubernetes Namespace** using the following command.
+3. Set up the environment variables for **Kubernetes Cluster OCID** and **Kubernetes Namespace** using the following commands.
 
       ```
     <copy>
-    export clusterId = <Kubernetes Cluster OCID>
-    export ns = <Kubernetes Namespace>
+    export clusterId=<Kubernetes Cluster OCID>
     </copy>
       ```    
-
-
+      
+      ```
+    <copy>  
+    export ns=<Kubernetes Namespace>
+    </copy>
+      ```
 
 ## Task 3: Setting up Kube Config in Cloud Shell
 
@@ -415,6 +418,12 @@ Gather the following information that will be used in this and subsequent labs.
 
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 
+2. In the following steps we will select the **Compartment** to view the various logs.
+
+    - Click on the **Scope** filter, select your **Compartment** from **Log Group Compartment** dropdown and click **Apply** button.
+    ![log-group-compartment](images/log-group-compartment.png)
+
+    - Click on **Close** button
 
 2. By default, the Log Explorer will show the Pie-Chart Visualization of all the various logs that are being collected from the OKE cluster   
    
@@ -422,9 +431,9 @@ Gather the following information that will be used in this and subsequent labs.
 
    All the other container logs in the cluster are processed using a generic Log Source, **Kubernetes Container Generic Logs**. 
  
-    ![log-explorer](images/log-explorer-pie-chart-view.png)
+    ![log-explorer](images/log-explorer.png)
+    
 
-  
 3. You can view logs of a specific source by drilling down into that Log Source.
         ![drill-down](images/drill-down.png) 
 

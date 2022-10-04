@@ -41,27 +41,48 @@ Estimated Time: 30 minutes
 3. Key in the **Compartment** value in the **Log Group Compartment** field and **Kubernetes Cluster Name** value in the **Kubernetes Cluster** field.
     ![compartment-cluster](images/compartment-cluster.png)
 
-   > **Note:** Refer to the **Compartment** field in [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation) for **Log Group Compartment** value.
+   > **Note:** Refer to the **Kubernetes Cluster Name** field in [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation) for **Kubernetes Cluster** value.
     
 4. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
+      // Screenshot to be updated once finalized.
      ![cluster-specific-view](images/cluster-specific-view.png)
+    
 
 ## Task 2: Overview of Widgets
 
-1. **Logs**
+1. **OKE Component Inventory**
+
+     - This widget displays the summary of components for your Kubernetes cluster. You can click on each link to get details for that component. 
+      ![oke-component-inventory.png](images/oke-component-inventory.png)  
+
+    -  Click on **Cluster** link. This would open a new tab with the cluster details page. On this page you can view the details of your cluster.
+      ![cluster-details](images/cluster-details.png)  
+
+      >**Note:** The cluster name you see in this page can be different from the one you had in the dashboard page. This is because we are using a single physical cluster in the backend for the purposes of this workshop.
+
+    - Switch back to the Dashboard tab and click on the number of **Nodes** link. This would open a new tab with the node details page.
+
+    - Click on the Scope filter icon and select the **Log Group Compartment** as your **Compartment**, and click **Apply**.
+      ![log-group-compartment-select](images/log-group-compartment-select.png)
+
+     - Click on **Close** button  
+
+    - Node specific details will be displayed.  
+      ![node-specific-details](images/node-specific-details.png)
+
+    - Switch back to the Dashboard tab.
+
+
+2. **Logs**
     - This widget displays all the total number of logs ingested from the selected OKE Cluster in the specified time range.
     - OCI Logging Analytics can collect and manage millions of records.
       ![widget-logs](images/widget-logs.png) 
     - Click on the View Query Icon to view the query used to populate the data in widget.   
       ![view-query-icon](images/view-query-icon.png)  
     - The query used to populate the data will be displayed.
-      ![view-query](images/widget-view-query-1.png) 
+      ![view-query](images/view-query.png) 
     - Click on the **Close** button.  
     - The detailed explaination of this widget is discussed in [Task 3](#Task3:DeepDiveintoLogsWidget). 
-
-2. **Namespaces**
-    - This widget displays total number of namespaces present in the selected OKE Cluster.
-      ![widget-namespace](images/widget-namespace.png)  
 
 3. **Log Types**
 
@@ -72,42 +93,39 @@ Estimated Time: 30 minutes
     - All the tiers of the cluster are shown in the chart legends. 
       ![widget-log-types-legends](images/widget-log-types-legends.png)    
 
-    - Click on the each legend to view the trends of the corresponding log.
-
-4. **CPU and Memory Utilization**, **Network Transmit and Receive** & **Threads and Processes**
-    - These widgets show the metrics data from OCI Monitoring.
-      ![cpu-network-thread](images/cpu-network-thread.png)
-    - Refer to  [Lab 5](?lab=dashboard) for the steps about how to build Metric widgets.
-
-5. **Cluster Components**
-    - This widget displays the summary of components for your Kubernetes cluster. You can click on each link to get details for that component. 
-      ![widget-cluster-components](images/widget-cluster-component-1.png)  
-
-    -  Click on **Cluster** link. This would open a new tab with the cluster details page. On this page you can view the details of your cluster.
-      ![cluster-details](images/cluster-details.png)  
-
-      >**Note:** The cluster name you see in this page can be different from the one you had in the dashboard page. This is because we are using a single physical cluster in the backend for the purposes of this workshop.
-
-    - Switch back to the Dashboard tab and click on the number of **Nodes** link. This would open a new tab with the node details page.
-
-    - Click on the Scope filter icon and select the **Log Group Compartment** as your **Compartment**, and click **Apply**.
-      ![nodes-scope-filter](images/node-scope-filter.png)
-
-    - Node specific details will be displayed.  
-      ![node-specific-details](images/node-specific-details.png)
-
-    - Switch back to the Dashboard tab. 
+    - Click on the each legend to view the trends of the corresponding log. 
 
 
-6. **Events From Pods**
-    - This widget displays the events from all the pods of the selected cluster  
-      ![widget-events-from-pods](images/widget-events-from-pods.png)  
+4. **Events From Pods**
+    - This widget displays the events from all the pods of the selected cluster.  
+      ![widget-events-from-pods](images/widget-events-from-pods-1.png)   
 
-7. **Connections Trend**  
+
+5. **CPU Utilization**
+    - This metric widget displays the details about CPU and memory utilization for each Node in your Kubernetes cluster.  
+      ![cpu-utilization](images/cpu-utilization.png)  
+
+6. **Network Transmit and Receive**
+    - This metric widget displays the details about count of bytes received and transmitted by containers in the **mushop** application namespace.    
+      ![network-transmit-receive](images/network-transmit-receive.png)
+
+7. **Container Status**   
+    - This widget displays the status(running, terminated & waiting) of containers in the each node.  
+      ![container-status](images/container-status.png)   
+      // Need details about the values in the drop down    
+
+8. **Programs with Outbound Connections**
     - This widget displays the network connection trends in the selected OKE Cluster.
     - Hover over any point to view the network connections in the cluster, the chart will be displayed.
-      ![widget-connections-trends](images/widget-connections-trends.png)  
-    - The chart aggregates and groups the connections initiated by a **Node** or a **Pod**.          
+      ![programs-with-outbound-connections](images/programs-with-outbound-connections.png)  
+    - The chart aggregates and groups the connections initiated by a **Node** or a **Pod**.  
+
+9. **Pods Error Analysis**           
+    - This widget displays the error analysis of **pod** and **node**.
+    ![pods-error-analysis](images/pods-error-analysis.png)  
+
+    // Need one lines about the drop down
+               
 
 ## Task 3: Deep Dive into Logs Widget
 
