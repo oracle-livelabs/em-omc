@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will walk you through the steps to visualize the log from the OKE Cluster.
+This lab will walk you through the steps to visualize the logs collected from the OKE Cluster through Dashboards and Widgets.
 
 ### About
 In this lab we will be exploring
@@ -13,7 +13,7 @@ In this lab we will be exploring
 ### Objectives
 
 In this lab, you will:
-* Visualize the data from the OKE Cluster through Dashboards and Widgets.
+* Visualize the logs collected from the OKE Cluster through Dashboards and Widgets.
 
 ### Prerequisites
 
@@ -114,7 +114,7 @@ Estimated Time: 30 minutes
     - This widget displays the overview of all the nodes in your cluster for the selected time period. 
 
       The x-axis represents Start Time and y-axis represents the Nodes. 
-      
+
       The summary of each Node at each time interval is displayed as bubble.
       ![container-status](images/container-status.png)  
 
