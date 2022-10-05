@@ -51,14 +51,16 @@ Gather the following information that will be used in this and subsequent labs.
 2. A Cloud Shell Instance will be launched. 
   ![oci-cloud-shell](images/cloud-shell-textarea.png)
 
-3. Set up the environment variables for **Kubernetes Cluster OCID** and **Kubernetes Namespace** using the following commands.
+3. Set up the environment variables for **Kubernetes Cluster OCID** and **Kubernetes Namespace** using the following commands in the cloud shell.
 
       ```
     <copy>
     export clusterId=<Kubernetes Cluster OCID>
     </copy>
-      ```    
-      
+      ``` 
+
+  ![export-clusterId-env](images/export-clusterId-env.png)    
+     
       ```
     <copy>  
     export ns=<Kubernetes Namespace>
