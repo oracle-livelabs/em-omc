@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This lab will walk you through the steps to visualize the logs collected from the OKE Cluster through Dashboards and Widgets.
+This lab will walk you through the steps to visualize the data collected from the OKE Cluster through Dashboards.
 
 ### About
 In this lab we will be exploring
@@ -13,7 +13,7 @@ In this lab we will be exploring
 ### Objectives
 
 In this lab, you will:
-* Visualize the logs collected from the OKE Cluster through Dashboards and Widgets.
+* Visualize the data collected from the OKE Cluster through Dashboards.
 
 ### Prerequisites
 
@@ -30,7 +30,7 @@ Estimated Time: 30 minutes
           https://cloud.oracle.com/loganalytics/dashboards?id=ocid1.managementdashboard.oc1..aaaaaaaaad24nv2zeottsuszcmklnoegmh3kqeelnvja6tp7gso4rmo6ze5a
         </copy>
       ```
-  // Screenshot to be updated once finalized.
+    ![initial-dashboard](images/initial-dashboard.png)
 
   >**Note:** The logs ingested from your **Kubernetes Cluster** as part of [Lab 2](?lab=ingestion) and [Lab 3](?lab=custom-log-collection) will exists in your **Log Group Compartment**. Thus all the widgets will be empty till we set these fields, which will be performed in the next steps.  
 
@@ -44,8 +44,7 @@ Estimated Time: 30 minutes
    > **Note:** Refer to the **Kubernetes Cluster Name** field in [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation) for **Kubernetes Cluster** value.
     
 4. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
-      // Screenshot to be updated once finalized.
-     ![cluster-specific-view](images/cluster-specific-view.png)
+     ![cloud-oracle-loganalytics-dashboard](images/cloud-oracle-loganalytics-dashboard.png)
     
 
 ## Task 2: Overview of Widgets
@@ -204,8 +203,7 @@ Estimated Time: 30 minutes
     ![group-by-node-pod](images/group-by-node-pod.png)
 
 
-
-**Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboard and Widgets. Kindly proceed  to next lab.
+**Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboards. You may now proceed to the next lab
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** - Sreeji Das,  Santhosh Kumar Vuda, Vikram Reddy , OCI Logging Analytics
