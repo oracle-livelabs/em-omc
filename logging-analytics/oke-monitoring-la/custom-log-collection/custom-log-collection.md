@@ -31,7 +31,7 @@ Estimated Time: 15 minutes
                 'Log Source' = 'Kubernetes Container Generic Logs' | timestats count as logrecords by 'Log Source'
             </copy>
         ``` 
-   
+
 3. The previous step takes you to the "Records with Histogram view" in context of **Kubernetes Container Generic Logs** Log Source
     ![kubernetes-logs](images/kubernetes-container-generic-logs.png) 
 
@@ -73,7 +73,9 @@ Estimated Time: 15 minutes
 
 ## Task 3: Inserting the mushop application specific configuration in values.yaml.
 
+
 1. In the next few steps we will update the values.yaml to collect the logs for some of the **mushop application containers**.
+    - Open the cloud shell.
 
     - Navigate into the **external-values** folder using following command.
         ```
@@ -83,7 +85,7 @@ Estimated Time: 15 minutes
         ```
     - Download the custom values.yaml using the command specified in the field **Lab 3 values.yaml** of [Lab2 Task1](?lab=ingestion#Task1:GatheringRequiredInformation).
       
-        >**Note:** Following are the sample command and output.
+        >**Note:** Following are the sample command and output. **Do Not Copy these.**
 
         ```
             wget -O values.yaml https://objectstorage.us-phoenix-1.oraclecloud.com/p/pCyp8T00kckPB82XTYdPnONRMOAInVGsSHerryrPEFk8SLVE0RiMx2pHSrfEhJx7/n/aupo86x8x2bk/b/resrXXXXX/o/lab3_values.yaml
@@ -211,7 +213,7 @@ Estimated Time: 15 minutes
     ![mushop-api-logs](images/mushop-api-logs.png)
 
 
-**Congratulations!**, you have successfully modified the helm configuration to collect custom application container logs. Please, proceed to next lab.
+**Congratulations!** You have successfully modified the helm configuration to collect custom application container logs. You may now proceed to the next lab.
 
 ## Learn More
 For further reading please refer to the resources.
