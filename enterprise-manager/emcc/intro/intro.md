@@ -80,6 +80,7 @@ In this workshop you will learn about:
 #### 8. Enterprise Monitoring
 - Explore Enterprise Summary page and drill down to see a list of down targets
 - Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
+- Create and use Dynamic Runbooks to triage and resolve your incidents
 - Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
 - Create a new Corrective Action and associate it with a metric
 - Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
