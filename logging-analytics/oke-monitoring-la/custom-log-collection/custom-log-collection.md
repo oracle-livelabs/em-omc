@@ -75,7 +75,8 @@ Estimated Time: 15 minutes
 
 
 1. In the next few steps we will update the values.yaml to collect the logs for some of the **mushop application containers**.
-    - Open the OCI cloud shell.
+    - Open the cloud shell.
+
     - Navigate into the **external-values** folder using following command.
         ```
           <copy>
