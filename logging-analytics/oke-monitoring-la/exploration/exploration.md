@@ -157,8 +157,10 @@ Estimated Time: 30 minutes
 
     - One unique color will be assigned to each node.
       ![unique-color-each-pods](images/unique-color-each-pods.png) 
-         
-               
+
+10. **Threads and Processes**
+    - This metric widget displays the count of container processes and threads in the **mushop** application namespace.         
+      ![threads-and-processes](images/threads-and-processes.png)         
 
 ## Task 3: Deep Dive into Logs Widget
 
