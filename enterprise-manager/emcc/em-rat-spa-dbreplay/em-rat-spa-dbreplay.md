@@ -5,12 +5,10 @@ Oracle Real Application Testing option enables you to perform real-world testing
 ### Objectives
 The objective of this lab is to become familiar with the basic usage of SQL Performance Analyzer and Database Replay.
 
-
 *Estimated Time*: 55 minutes
 
-Watch the video below for a quick walk through of the lab.
-
-[](youtube:4V9kpeF3jJY)
+Watch the video below for a quick walk-through of the lab.
+[Get Started with Real Application Testing](videohub:1_afpg9qzg)
 
 ### Lab Timing (Estimated)
 
