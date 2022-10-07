@@ -449,7 +449,7 @@ Gather the following information that will be used in this and subsequent labs.
 - Set up Management Agent to ingest Kubernetes metrics.
 - Viewed the collected logs in the Logging Analytics Log Explorer.
 
-  You may now proceed to the next lab
+  You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
