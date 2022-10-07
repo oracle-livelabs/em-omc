@@ -43,7 +43,7 @@ Here are the main parts of the user interface that will be used throughout this 
 
 6. **Main panel**, where the visualization output appears above the results of the query.
 
->**Note:** The main panel is empty till you set up log ingestion, which will be performed in the next lab.
+>**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
 
 
 ## Acknowledgements

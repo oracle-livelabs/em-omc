@@ -30,9 +30,9 @@ Estimated Time: 30 minutes
           https://cloud.oracle.com/loganalytics/dashboards?id=ocid1.managementdashboard.oc1..aaaaaaaaad24nv2zeottsuszcmklnoegmh3kqeelnvja6tp7gso4rmo6ze5a
         </copy>
       ```
-    ![initial-dashboard](images/initial-dashboard.png)
+    ![kubernetes-cluster-overview](images/kubernetes-cluster-overview.png)
 
-  >**Note:** The logs ingested from your **Kubernetes Cluster** as part of [Lab 2](?lab=ingestion) and [Lab 3](?lab=custom-log-collection) will exists in your **Log Group Compartment**. Thus all the widgets will be empty till we set these fields, which will be performed in the next steps.  
+  >**Note:** The logs ingested from your **Kubernetes Cluster** as part of [Lab 2](?lab=ingestion) and [Lab 3](?lab=custom-log-collection) will exists in your **Log Group Compartment**. Thus few widgets will be empty till we set these fields, which will be performed in the next steps. 
 
 2. Click on the **Scope Filter** panel.
     ![filter-panel](images/filter-panel.png)
@@ -205,7 +205,7 @@ Estimated Time: 30 minutes
     ![group-by-node-pod](images/group-by-node-pod.png)
 
 
-**Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboards. You may now proceed to the next lab
+**Congratulations!**, you have successfully visualized the data from the OKE Cluster through Dashboards. You may now proceed to the [next lab](#next).
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** - Sreeji Das,  Santhosh Kumar Vuda, Vikram Reddy , OCI Logging Analytics

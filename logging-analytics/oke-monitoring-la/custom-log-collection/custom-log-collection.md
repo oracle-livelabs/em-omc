@@ -213,7 +213,7 @@ Estimated Time: 15 minutes
     ![mushop-api-logs](images/mushop-api-logs.png)
 
 
-**Congratulations!** You have successfully modified the helm configuration to collect custom application container logs. You may now proceed to the next lab.
+**Congratulations!** You have successfully modified the helm configuration to collect custom application container logs. You may now proceed to the [next lab](#next).
 
 ## Learn More
 For further reading please refer to the resources.
