@@ -6,7 +6,7 @@ Your customers are reporting high response times for EBS application which is af
 Let's do a walk through on troubleshoot and identify the problematic EBS jobs causing performance degradation and build a query for continuous monitoring.
 
 
-Estimated Lab Time: 15 minutes
+Estimated Lab Time: 20 minutes
 
 
 ### Objectives
@@ -16,12 +16,12 @@ In this lab, you will:
 * Troubleshoot and identify the problematic EBS jobs causing performance degradation
 * Build a query for continuous monitoring
 
-## **Task 1:** Analyse **EBS Concurrent Requests** for Troubleshooting
-Here is the analysis view that you'll be using from scratch.
+## **Task 1:** Analyse **EBS Concurrent Requests** for Troubleshooting    
 
-  ![](images/link-goal.png "UIdescription")
+  1. Clear Scope Filter for Log Group Compartment and Entity selection.
+  ![](images/la-scope-filter-clear.png "UIdescription")
 
-  1. Click on "Actions" and "Create New" to return to the default Log Explorer view
+  2. Click on "Actions" and "Create New" to return to the default Log Explorer view
 
   ![](images/create-new.png "UIdescription")
 
@@ -33,9 +33,9 @@ Here is the analysis view that you'll be using from scratch.
 
   ![](images/open.png "UIdescription")
 
-  3. Select "ebs-lab-9522" in the "Widget Compartment" drop-down and search for keyword "EBS" and select "EBS Concurrent Requests Analysis" card and click 'Open'
+  3. Search and Select "ebs-lab-9522" in the "Widget Compartment" drop-down and search for keyword "EBS" and select "EBS Concurrent Requests Analysis" card and click 'Open'
 
-  ![](images/ss-ebs-luna1.png "UIdescription")
+  ![](images/ss-ebs-saved-search.png "UIdescription")
 
   ![](images/link-goal.png "UIdescription")
 
