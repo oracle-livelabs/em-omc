@@ -63,7 +63,7 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
    ![](images/la-cluster-outlier-tab.png "image11")
 
-3. You will these issues occurred only once, and indicate an anomaly in the system.
+3. You will see these issues occurred only once, and indicate an anomaly in the system.
 
    ![](images/outliers-2.png "outliers")
 

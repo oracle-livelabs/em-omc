@@ -21,11 +21,11 @@ In this lab, you will:
   1. Clear Scope Filter for Log Group Compartment and Entity selection.
   ![](images/la-scope-filter-clear.png "UIdescription")
 
-  2. Click on "Actions" and "Create New" to return to the default Log Explorer view
+  2. Click on "Actions" -> "Create New" to return to the default Log Explorer view
 
   ![](images/create-new.png "UIdescription")
 
-  Default view for reference
+  The below screenshot shows default view of logging analytics explorer page.
 
   ![](images/default-landing-le.png "UIdescription")
 
@@ -37,15 +37,17 @@ In this lab, you will:
 
   ![](images/ss-ebs-saved-search.png "UIdescription")
 
+  The below screenshot is a saved search for "EBS Concurrent Request Analysis" for analysing the logs.
+
   ![](images/link-goal.png "UIdescription")
 
   4. This visualization shows concurrent request jobs running under different applications such as Receivables, Human Resources and size of the bubbles corresponds to the time-taken by those jobs. Hover on top of any bubble to see more details.
 
   ![](images/link-hover.png "UIdescription")
 
-  Next, we want to slice-and-dice this data based on Application, Time Taken.
+  Next, we want to slice-and-dice this data based on Time Taken, Application.
 
-## **Task 2:** Slice-And-Dice log data based **Time Taken**
+## **Task 2:** Slice-And-Dice log data based on **Time Taken**
 
   1. Click on the **Gear** icon on the top left of the chart and select **Filter Options** which will launch "Filter Options" a pop-up.
 
@@ -55,7 +57,7 @@ In this lab, you will:
 
   ![](images/link-filter-select.png "UIdescription")
 
-  3. Click Close
+  3. Click Close, you will see list of Jobs running for every EBS Applications and time taken by each job to complete.
 
   ![](images/link-with-filter.png "UIdescription")
 
