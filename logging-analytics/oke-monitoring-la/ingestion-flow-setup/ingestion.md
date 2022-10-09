@@ -5,7 +5,7 @@
 This lab will walk you through the steps to configure an open source log collector Fluentd and Oracle Management Agent to collect various logs, objects and metrics from OKE cluster using package manager Helm.
 
 In this lab we will be using the following tools
-* oci cli :  Tool that enables user to work with Oracle Cloud Infrastructure objects and services at a command line 
+* oci cli :  Command line tool that enables a user to manage their OCI resources by invoking service APIs.
 * helm : Package manager for Kubernetes
 * kubectl : Kubernetes command line tool
 
@@ -19,7 +19,7 @@ And below are the ingestion mechanisms that would be used
 In this lab, you will install a helm chart that deploys various Kubernetes manifests and configuration files that in turn will
 
 * Set up Fluentd to collect Kubernetes & Linux System logs, application/container logs and Kubernetes Objects logs.
-* Set up Management Agent to collect Kubernetes metrics and reporting them to OCI Monitoring. 
+* Set up Management Agent to collect Kubernetes metrics and report them to OCI Monitoring. 
 
 Estimated Time: 30 minutes
 
@@ -27,57 +27,56 @@ Estimated Time: 30 minutes
 
 Gather the following information that will be used in this and subsequent labs.
 
-1. Click on the **View Login Info** link on the top left of this workshop page. 
+1. Click on the **View Login Info** link on the top left of this workshop page, for launching the Reservation Information panel. 
     ![view-login-info](images/view-login-info.png)
 
-2. Keep the below fields handy obtained from the **Terraform Values** frame of the Reservation Information page into a **notepad**.
-
-    - **Kubernetes Cluster OCID:** The OCID of the Kubernetes(OKE) cluster. 
+2. From this Reservation Information panel copy the below **Terraform Values** into a **notepad**.
 
     - **Kubernetes Cluster Name:** The name of the Kubernetes(OKE) cluster.
 
+    - **Kubernetes Cluster OCID:** The OCID of the Kubernetes(OKE) cluster. 
+
     - **Kubernetes Namespace:** Kubernetes Namespace in which the Kubernetes manifests and configuration files to be deployed.
 
-    - **Kubernetes Service Account:** The name of the Kubernetes service account to be used for the deployment.
+    - **Lab 2 values.yaml:** The command to generate the **values.yaml** for telemetry collection to work.
 
-    - **Container Image URL:** URL of the container image that contains Fluentd, Logging Analytics Fluentd output plugin and other plugins that will be used for the collection of logs and objects.
-
-    - **Logging Analytics Namespace:** OCI Logging Analytics Namespace to which the logs to be ingested. 
-
-    - **Logging Analytics LogGroup OCID:** The OCID of the Logging Analytics Log Group which is used for the access control of the logs.
-  
-    - **Management Agent Install Key:** Base64 encoded string representation of input.rsp required for Management Agent registration.
-  
-    - **Management Agent Container Image URL:**  URL of the Management Agent container image used for the collection of the metrics. 
-  
-    - **Compartment OCID:** The OCID of the Compartment in which the metrics to be ingested. 
-
+    - **Lab 3 values.yaml:** The command to generate the **values.yaml** to collect the logs for some of the **mushop application containers**.
 
 ## Task 2: Launching Cloud Shell
   
-1. On Oracle Cloud Home Page, click the **Cloud Shell**  ![cloud-shell-button](images/cloud-shell-button.png)  button. 
+1. From OCI console click the **Cloud Shell**  ![cloud-shell-button](images/cloud-shell-button.png)  button. 
 
   ![cloud-shell](images/cloud-shell.png)
 
 2. A Cloud Shell Instance will be launched. 
-  ![cloud-shell-textarea](images/cloud-shell-textarea.png)
+  ![oci-cloud-shell](images/cloud-shell-textarea.png)
 
- 
+3. Set up the environment variables for **Kubernetes Cluster OCID** and **Kubernetes Namespace** using the following command in the cloud shell.
+
+    ```
+    <copy>
+      echo 'export clusterId=<Kubernetes Cluster OCID>' >> ~/.bashrc && echo 'export ns=<Kubernetes Namespace>' >> ~/.bashrc && bash
+    </copy>  
+    ```
+  ![set-env-vars](images/set-env-vars.png)  
+    
 
 ## Task 3: Setting up Kube Config in Cloud Shell
 
-1. To set up kubeconfig for the OKE Cluster execute the following command in the cloud shell after replacing **Kubernetes Cluster OCID**.
+
+
+1. Kubeconfig is a yaml file used to configure access to the Kubernetes cluster when using the kubectl command. This step would create the required configuration. 
+  
+   To set up kubeconfig for the OKE Cluster execute the following command in the cloud shell.
 
     ```
      <copy>
-       oci ce cluster create-kubeconfig --cluster-id <Kubernetes Cluster OCID> --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT
+       oci ce cluster create-kubeconfig --file $HOME/.kube/config --region us-phoenix-1 --token-version 2.0.0  --kube-endpoint PUBLIC_ENDPOINT --cluster-id $clusterId
      </copy>
     ```   
+    
+    ![kube-config-with-env](images/kube-config-with-env.png)
   
-    ```
-    New config written to the Kubeconfig file /home/llxxxxx_us/.kube/config
-    ```
-
 
 ## Task 4: Verify OKE Cluster's Access 
 1. Run the following command in the cloud shell to verify that you can access the OKE Cluster.
@@ -108,6 +107,9 @@ Gather the following information that will be used in this and subsequent labs.
 
 
 2. Download the helm chart using the following command.
+
+     > **Note**: The following helm chart is recommended only for this workshop. Refer [github] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring/releases) for all other use cases. 
+
     ```
       <copy>
           wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/YQy-JQa0RPGxI-pGKmnmA_PJArpo8ZjMdYXCJQM7yXXf6bSCyzI7X_YYmfTDxGbw/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
@@ -165,51 +167,63 @@ Gather the following information that will be used in this and subsequent labs.
         </copy>
       ```
 
-
-2. Open a file named values.yaml using **vi**.
+2. Download the custom values.yaml using the command specified in the field **Lab 2 values.yaml** of [Task 1](#Task1:GatheringRequiredInformation).
+    
+      >**Note:** Following are the sample command and output. **Do Not Copy these.**
+    
+    
       ```
-        <copy>
-             vi values.yaml
-        </copy>
-      ```
-    For the vi/vim to not auto-indent any text that you paste we will enable paste mode.
+         wget -O values.yaml https://objectstorage.us-phoenix-1.oraclecloud.com/p/E5qHCoc2BdKdhIxBrjp49ANUN2ZQaC5iXdsmC5TQ3oEwe4MDQ9kZbagqJ27Ph1Q5/n/aupo86x8x2bk/b/resrXXXXX/o/lab2_values.yaml
+      ```  
       
       ```
-        <copy>
-            :set paste
-        </copy>
-      ``` 
-    
+          --2022-10-03 06:36:20--  https://objectstorage.us-phoenix-1.oraclecloud.com/p/E5qHCoc2BdKdhIxBrjp49ANUN2ZQaC5iXdsmC5TQ3oEwe4MDQ9kZbagqJ27Ph1Q5/n/aupo86x8x2bk/b/resrXXXXX/o/lab2_values.yaml
+          Resolving objectstorage.us-phoenix-1.oraclecloud.com (objectstorage.us-phoenix-1.oraclecloud.com)... 134.70.12.1, 134.70.16.1, 134.70.8.1
+          Connecting to objectstorage.us-phoenix-1.oraclecloud.com (objectstorage.us-phoenix-1.oraclecloud.com)|134.70.12.1|:443... connected.
+          HTTP request sent, awaiting response... 200 OK
+          Length: 1643 (1.6K) [application/octet-stream]
+          Saving to: ‘values.yaml’
 
+          100%[==============================================>] 1,643       --.-K/s   in 0s      
 
-3. Switch to insert mode and paste the following content to the file and update the values of the respective variables by using the information gathered in Task #1.
-    
-
+          2022-10-03 06:36:20 (206 MB/s) - ‘values.yaml’ saved [1643/1643]
       ```
-      <copy>
 
-      # custom values
-        namespace: <Kubernetes Namespace>
-        image:
-            url: <Container Image URL>
-            imagePullPolicy: Always
-
-        ociLANamespace: <Logging Analytics Namespace>
-        ociLALogGroupID: <Logging Analytics LogGroup OCID>
-        kubernetesClusterID: <Kubernetes Cluster OCID>
-        kubernetesClusterName:  <Kubernetes Cluster Name>
-        createServiceAccount:  false
-        serviceAccount: <Kubernetes Service Account>
-        mgmtagent: 
-            installKey: <Management Agent Install Key>
-            imageUrl: <Management Agent Container Image URL>
-        ociCompartmentID: <Compartment OCID>
-        fluentd:
-            baseDir: /var/log/<Kubernetes Namespace>
-            tailPlugin:
-                readFromHead:  false
-      </copy>
+3. You can view the downloaded **values.yaml** using the following command.
       ```
+          <copy>
+              cat ~/oke-livelab/external-values/values.yaml
+          </copy>
+      ```
+      ```
+        ######
+        ##  Note:
+        ##      - The container images referred in this values.yaml ("image:url" and "mgmtagent:imageurl" sections) are recommended only for using with the workshop.
+        ##  - Refer to https://github.com/oracle-quickstart/oci-kubernetes-monitoring#docker-image for all other use cases.
+        ######
+        "createServiceAccount": false
+        "fluentd":
+          "baseDir": "/var/log/resrXXXXX"
+          "genericContainerLogs":
+            "encoding": "UTF-8"
+          "tailPlugin":
+            "readFromHead": false
+        "image":
+          "imagePullPolicy": "Always"
+          "url": "iad.ocir.io/ax1wgjs6b2vc/oci_la_fluentd:ol8-1.1"
+        "kubernetesClusterID": "ocid1.cluster.oc1.phx.aaaaaaaag...."
+        "kubernetesClusterName": "resrXXXXX"
+        "mgmtagent":
+          "imageUrl": "iad.ocir.io/ax1wgjs6b2vc/mgmtagent_oke_monitoring/mgmt_agent:latest"
+          "installKey": "TWFuYWdlbWVudEFnZW50...PSAzMjY5MF9BZ2VudA=="
+        "namespace": "resrXXXXX"
+        "ociCompartmentID": "ocid1.compartment.oc1..aaaaaaaak...."
+        "ociLALogGroupID": "ocid1.loganalyticsloggroup.oc1.phx.amaaaaaaq...."
+        "ociLANamespace": "acxo58f8p2os"
+        "serviceAccount": "resrXXXXX"
+      ```
+    >**Note**: To understand these variables refer to **values.yaml** that comes with the helm-chart (next step).
+
  4. (Optional) The above created **values.yaml** contains the minimalistic values that need to be changed for telemetry collection to work. The full **values.yaml** could be found using the below command.
 
 
@@ -233,13 +247,13 @@ Gather the following information that will be used in this and subsequent labs.
 1. Install the helm chart using the following command.
       ```
         <copy>
-         helm install <Kubernetes Namespace> --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=<Kubernetes Namespace>
+         helm install ll-oke-monitoring --values ~/oke-livelab/external-values/values.yaml ~/oke-livelab/helm-chart/ -n=$ns
         </copy>
       ```
       
       ```
-        NAME: resrXXXXX
-        LAST DEPLOYED: Fri Sep 23 05:18:11 2022
+        NAME: ll-oke-monitoring
+        LAST DEPLOYED: Thu Sep 29 10:20:18 2022
         NAMESPACE: resrXXXXX
         STATUS: deployed
         REVISION: 1
@@ -258,7 +272,7 @@ Gather the following information that will be used in this and subsequent labs.
 
       ```
         <copy>
-          kubectl get daemonset -n=<Kubernetes Namespace>
+          kubectl get daemonset -n=$ns
         </copy>
       ```
       ```
@@ -268,7 +282,7 @@ Gather the following information that will be used in this and subsequent labs.
      
       ```
             <copy>
-                kubectl get pods -n=<Kubernetes Namespace> | grep daemonset
+                kubectl get pods -l app=oci-la-fluentd-logs -n=$ns
             </copy>
       ```
      
@@ -287,7 +301,7 @@ Gather the following information that will be used in this and subsequent labs.
 
       ```
         <copy>
-          kubectl get deployment -n=<Kubernetes Namespace>
+          kubectl get deployment -n=$ns
         </copy>
       ```
 
@@ -300,7 +314,7 @@ Gather the following information that will be used in this and subsequent labs.
 
        ```
           <copy>
-              kubectl get pods -n=<Kubernetes Namespace> |grep deployment
+              kubectl get pods -l app=oci-la-fluentd-objects -n=$ns
           </copy>
        ```
       
@@ -314,22 +328,22 @@ Gather the following information that will be used in this and subsequent labs.
     - The StatefulSet deployed as part of this installation is responsible for metrics collection.
       ```
       <copy>
-        kubectl get statefulset -n <Kubernetes Namespace>
+        kubectl get statefulset -n=$ns
       </copy>
       ```
       ```
         NAME                  READY   AGE
-        mgmtagent-bv          1/1     5m40s
+        mgmtagent             1/1     5m40s
       ```
 
       ```
       <copy>
-        kubectl get pods -l app=mgmtagent-bv -n <Kubernetes Namespace>
+        kubectl get pods -l app=mgmtagent -n=$ns
       </copy>
       ```
       ```
         NAME             READY   STATUS    RESTARTS   AGE
-        mgmtagent-bv-0   1/1     Running   0          5m35s
+        mgmtagent-0      1/1     Running   0          5m35s
       ```
    
    iv. **Config Map** 
@@ -339,7 +353,7 @@ Gather the following information that will be used in this and subsequent labs.
 
       ```
         <copy>
-            kubectl get configmaps -n=<Kubernetes Namespace>
+            kubectl get configmaps -n=$ns
         </copy>
       ```
       ```
@@ -360,7 +374,7 @@ Gather the following information that will be used in this and subsequent labs.
 
         ```
                 <copy>
-                    kubectl get pods -n=<Kubernetes Namespace> | grep daemonset
+                    kubectl get pods -l app=oci-la-fluentd-logs -n=$ns
                 </copy>
           ```
      
@@ -371,10 +385,12 @@ Gather the following information that will be used in this and subsequent labs.
           oci-la-fluentd-daemonset-wmpf9               1/1     Running   0          4m22s
           oci-la-fluentd-daemonset-zztlx               1/1     Running   0          4m22s
           ```
-      - Run the following command to get and verify the fluend pod logs.
+  
+    - Run the following command after replacing the place holder with the pod name captured in the previous step.
+      
           ```
           <copy>
-              kubectl logs <daemonset-pod-name> -n=<Kubernetes Namespace> |grep 'fluentd worker'
+              kubectl logs <daemonset-pod-name> -n=$ns |grep 'fluentd worker'
           </copy>
      ```
       - If you see the similar messages like below, fluentd is up and running.
@@ -383,48 +399,57 @@ Gather the following information that will be used in this and subsequent labs.
           2022-08-18 10:35:06 +0000 [info]: #0 fluentd worker is now running worker=0
       ```
      
-2. (Optional) Verify that the logs are being sent to Logging Analytics. 
 
-     - Execute the following command. 
-     
-        ```
+## Task 11: (Optional) Verify Management Agent is Running and Emitting Metrics
+
+1. To verify Management Agent is running and emitting metrics
+   - Execute the following command.
+     ```
         <copy>
-            kubectl exec -n=<Kubernetes Namespace> --stdin --tty <daemonset-pod-name> -- tail -f /var/log/oci-logging-analytics.log
+            kubectl exec -n=$ns --stdin --tty mgmtagent-0 -- tail -100 /opt/oracle/mgmt_agent/agent_inst/log/mgmt_agent_client.log | grep MetricUploadInvocation | grep rsp
         </copy>
-        ```
+     ```
+   - If you see similar messages like below, Management Agent is running and emitting metrics successfully.
+     ```
+       2022-09-27 17:46:43,437 [SendQueue.1 (SenderManager_sender)-53] INFO  - MetricUploadInvocation <--rsp[M57ATQHS06FBBOEAJ90WC8LY7OV6SI1U/69DD54B2066ADFEE93C1AEE3BAE0CEA7/3B89C3889FED51FE368864923091DA91]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+       2022-09-27 17:47:13,411 [SendQueue.0 (SenderManager_sender)-48] INFO  - MetricUploadInvocation <--rsp[2DJNS5OTBTS9EIQM1VOUWBV9UP5WH9DQ/AAF9B4C68B80E4A99C33225D1D3008ED/DA63A1D36879F64D5E4A64D1400BB149]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+       2022-09-27 17:47:13,414 [SendQueue.2 (SenderManager_sender)-54] INFO  - MetricUploadInvocation <--rsp[D9XXM3T9E3C7UMKAPJFSVOVSAYKQEF2X/BDBCCFDA23C3DA53FBEAD8C211825C15/C2FD7821CD4D23A237B99411165422EA]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+       2022-09-27 17:47:43,490 [SendQueue.1 (SenderManager_sender)-53] INFO  - MetricUploadInvocation <--rsp[PVES5F4AOM4DCB7GL439MUE6MRJORTH3/1102558CAAF3643427CDD258937628CD/DF114CF84D38F9471F4855B4FAE67218]<-- POST https://telemetry-ingestion.us-ashburn-1.oraclecloud.com/20180401/metrics: [200]
+     ```
     
-     - If you see the similar messages like below, logs are being sent to Logging Analytics successfully. 
-     ```
-     I, [2022-08-16T12:31:32.234958 #11]  INFO -- : Generating payload with 95  records for oci_la_log_group_id: ocid1.loganalyticsloggroup.oc1.abc.abcxxxxxxxxyx543xxxxxx
-     I, [2022-08-16T12:31:32.402328 #11]  INFO -- : The payload has been successfully uploaded to logAnalytics -
-                         oci_la_log_group_id: ocid1.loganalyticsloggroup.oc1.abc.abcxxxxxxxxyx543xxxxxx,
-                         ConsumedRecords: 95,
-                         Date: Tue, 16 Aug 2022 12:31:32 GMT,
-                         Time: 2022-08-16T12:31:32.000Z,
-                         opc-request-id: D61380FCECC84BD8A84349A766CF59FE/DD09F19E0CDBCDFCC5A4741CB178C3DF/897B96A83E503277C0B2287E2D4B2221,
-                         opc-object-id: c9959334-65ef-403f-9224-7e7c28e44587
-     ```
+      > **Note**: If there is no output, rerun the command after a minute.
 
-
-## Task 11: Validate the Logs in Log Explorer
-
+## Task 12: Validate the Logs in Log Explorer
+   
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 
+2. In the following steps we will select the **Compartment** to view the various logs.
+    > **Note:** Compartment can be found via **View Login Info > Compartment**.
+
+    - Click on the **Scope** filter, copy-paste your **Compartment** into **Log Group Compartment** dropdown textbox and click **Apply** button.
+    ![log-group-compartment](images/log-group-compartment.png)
+
+    - Click on **Close** button
 
 2. By default, the Log Explorer will show the Pie-Chart Visualization of all the various logs that are being collected from the OKE cluster   
    
-   The Linux System logs, Kubernetes System and Objects logs are collected and processed using a set of predefined Logging Analytics Log Sources.
+   The Linux System logs, Kubernetes System and Objects logs are collected and processed using a set of Oracle-Defined Log Sources.
 
-   All the other container logs in the cluster are processed using a generic Log Source, **Kubernetes Container Generic Logs**. 
+   All the other container logs in the cluster are processed using another Oracle-Defined Log Source, **Kubernetes Container Generic Logs**. 
  
-    ![log-explorer](images/log-explorer-pie-chart-view.png)
+    ![log-explorer](images/log-explorer.png)
+    
 
-  
 3. You can view logs of a specific source by drilling down into that Log Source.
         ![drill-down](images/drill-down.png) 
 
 
-**Congratulations!**, you have successfuly set up Fluentd to collect Kubernetes & Linux System logs, application/container logs, Kubernetes Objects logs and Management Agent to ingest Kubernetes metrics. You may proceed to the next lab.
+**Congratulations!** In this lab, you have successfuly completed the following tasks:
+- Set up Fluentd to collect Kubernetes & Linux System logs, Application/Container logs and Kubernetes Objects logs.
+- Set up Management Agent to ingest Kubernetes metrics.
+- Viewed the collected logs in the Logging Analytics Log Explorer.
+
+  You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
