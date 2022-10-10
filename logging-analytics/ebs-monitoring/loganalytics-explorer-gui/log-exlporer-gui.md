@@ -4,7 +4,7 @@
 
 Let's do a walk through of Log Explorer, which should be the current view on OCI Console.
 
-Your should see a page similar to the one below showing the distribution of different types of logs currently being collected in this tenancy in the last 60 minutes.
+You should see a page similar to the one below showing the distribution of different types of logs currently being collected in this tenancy in the last 60 minutes.
 
 Estimated Lab Time: 10 minutes
 
@@ -17,34 +17,42 @@ In this lab, you will:
 
 ## **Task 1:**  Navigate to Log Explorer GUI
 
-Open the navigation menu and click **Observability & Management**. Under **Logging Analytics** click **Log Explorer**.
-![](./images/oci-console-la-explorer.png " ")
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) click **Observability & Management**. Under **Logging Analytics** click **Log Explorer**.
+![](./images/oci-console-la-explorer.png "Log Explorer Menu")
 
-You can also copy-paste the following link to your browser to open fresh Log Explorer.
+  Note : You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
+    ```
+     <copy>
+        https://cloud.oracle.com/loganalytics/explorer?region=us-phoenix-1
+     </copy>   
+    ```
 
-```
-<copy>
-https://cloud.oracle.com/loganalytics/explorer?viz=pie&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue
-</copy>
-```
+2. Log Explorer page will be displayed as below.
+![](./images/oci-console-la-explorer-default.png "Log Explorer Page")
+
 
 ## **Task 2:**  Familiarize user interface used in Logging Analytics
 
 Here are the main parts of the user interface that will be used throughout this lab.
 
-![](images/la-explorer-side-by-side.png "Virtual Desktop")
 
-1. **Scope Filter** for setting Entity and Log Group Compartment scope for exploration.
+1. **Scope Filter** for setting Log Group Compartment and Entity scope for exploration.
+![](images/la-scope-filter.png "Log Explorer")
 
 2. **Time range** picker, and **Actions** menu where you can find actions such as, *Open*, *Save*, and *Save as*.
+![](images/la-time-range.png "Log Explorer")
 
 3. **Query bar**, with **Clear**, **Search Help** and **Run** buttons at the right end of the bar.
+![](images/la-query-bar.png "Log Explorer")
 
 4. **Fields panel**, where you can select sources and fields to filter your data.
+![](images/la-field-panel.png "Log Explorer")
 
 5. **Visualization panel**, where you can select the way to present search data in a form that helps you.
+![](images/la-visualization.png "Log Explorer")
 
 6. **Main panel**, where the visualization outputs appear above the results of the query.
+![](images/la-main-panel.png "Log Explorer")
 
 Around 800+ different types of logs (Log Sources) are being collected in Logging Analytics ranging from logs from Oracle Database to Linux OS to Packaged Applications to Cloud Services.
 
