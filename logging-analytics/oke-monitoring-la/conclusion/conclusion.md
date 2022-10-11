@@ -1,6 +1,6 @@
 # Lab concluded
 
-In these two labs we have taken our first steps towards setting up end-to-end Kubernetes Monitoring Solution, performing the Analytics and Visualising the data from different perspectives.
+In this workshop we have taken our first steps towards setting up end-to-end Kubernetes Monitoring Solution, performing the Analytics and Visualising the data from different perspectives.
 
 ### References
 

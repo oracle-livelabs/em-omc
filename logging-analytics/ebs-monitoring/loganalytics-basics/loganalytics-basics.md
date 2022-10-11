@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this Lab, you will learn to monitor the health, performance, uptime and availability of the E-Business Suite application and related infrastructure for a large enterprise application.
+In this Lab, you will learn to monitor the health, performance, uptime and availability of the E-Business Suite application and related infrastructure for a large enterprise application for a time ranges from **Sep 1, 2022 12:00:00 AM** to **Sep 30, 2022 12:00:00 PM**.
 
 Estimated Lab Time: 15 minutes
 
@@ -15,23 +15,30 @@ In this lab, our goal is to answer the following questions:
 
 Now we will walk through monitoring of E-Business Suite application and related infrastructure.
 
-Note: If at any point you want to come to the initial screen - you can use your browser back button or "Action" --> "Create New"
-
 ## **Task 1:**  Log trend by Entity Types and Entity
 In this task, you will learn to monitor log trend by entity type and entity.
 
-1. Click on the field "Entity Type" in the Fields Panel in Log Explorer to bring up a faceted view of all the monitored entities.
+1. Click **Custom** under **Time range** pickerSet, then Click on "Start and End Time" and Select START time as **Sep 1, 2022 12:00:00 AM**, END Time as **Sep 30, 2022 12:00:00 PM** and Click Apply.
+   ![](images/la-custom-time-range.png "UIdescription")
 
-   ![](images/entity-facet.png "UIdescription")
+   You should see a page similar to the one below showing the distribution of different types of logs.
+   ![](images/la-custom-time-range-logs.png "UIdescription")
 
-2. Click on "Show Trend Chart" in Facet view to visualize the logs trend of these entity types.
+2. Click on the field "Entity Type" in the Fields Panel in Log Explorer to bring up a faceted view of all the monitored entities.
 
-   ![](images/facet-with-trend-chart.png "UIdescription")
+   ![](images/la-entity-type-facet.png "UIdescription")
 
+3. Click on "Show Trend Chart" in Facet view to visualize the logs trend of these entity types.
 
-3. Repeat steps 1 & 2 to visualize log trends for the field "Entity"
+   ![](images/la-entity-type-facet-trend.png "UIdescription")
 
-   ![](images/entity-trend.png "UIdescription")
+4. Repeat steps 1 & 2 to visualize log trends for the field "Entity". Click on the field "Entity" in the Fields Panel.
+
+   ![](images/la-entity-facet.png "UIdescription")
+
+5. Click on "Show Trend Chart" in Facet view to visualize the logs trend of these entities.
+
+   ![](images/la-entity-facet-trend.png "UIdescription")
 
    At this point you know different types of logs being ingested, Entity types  and specific entities being monitored.
 
@@ -43,25 +50,23 @@ In this task, you will learn monitoring a complex packaged apps with multiple ap
 
    ![](images/filter.png "UIdescription")
 
+2. You can visualize the Scope Filter view as below
+
    ![](images/scope-filter.png "UIdescription")
 
-2. Search for the keyword "ebsvm\_onprem" in the Entity search box. "ebsvm_onprem" is the top level entity of Entity Type E-Business Suite.
+3. Click on the 'Entity' dropdown and search for the keyword "ebsvm\_onprem" in the Entity search box and select ebsvm\_onprem listed under the compartment 'ebs-lab-9522'. "ebsvm_onprem" is the top level entity of Entity Type E-Business Suite.
 
-   ![](images/entity-scope-filter.png "UIdescription")
+   ![](images/la-entity-scope-filter.png "UIdescription")
 
-3. In the Scope Filter, select "ebsvm\_onprem" entity from the drop-down to set the analysis scope to this ebsvm_onprem entity.
-
-   ![](images/entity-scope-filter-enter.png "UIdescription")
-
-4. Click "Apply"
+4. Click 'Apply' to set entity 'ebsvm\_onprem' as scope filter.
 
    ![](images/ebs-filtered.png "UIdescription")
 
-  You can also visualize the topology of the this EBS deployment by clicking on the "Topology" icon in the scope filter. Topology view can be used to filter logs from a specific Entity.
+5. Click on the "Topology" icon in the scope filter to visualize the topology of the this EBS deployment. Topology view can be used to filter logs from a specific Entity.
 
-   ![](images/invoke-topo.gif "UIdescription")
+   ![](images/invoke-topo.png "UIdescription")
 
-5. Here you see the monitoring of EBS systems and its deployment topology
+6. Here you see the monitoring of EBS systems and its deployment topology
    ![](images/ebs-topology.png "UIdescription")
 
   Click "Close" to close the Scope Filter. Next, let's look at the log trends over time.
@@ -71,41 +76,46 @@ In this task, you will learn various Log visualizations of complex EBS apps with
 
 1. Click on the Visualizations dropdown in the Visualization Panel to select **Records with Histogram** visualization.
 
-  ![](images/histogram.png "Dropdown")
+  ![](images/histogram.png "Histogram")
+
+  Here you see the distribution of different logs for time ranges from **Sep 1, 2022 12:00:00 AM** to **Sep 30, 2022 12:00:00 PM**.
 
   ![](images/histogram1.png "Histogram")
 
-  Here you see the distribution of different logs in last 60 minutes. Next we want to see the trend over last 24 hours.
+  Here you see the volume of logs generated by different Log Sources along with the log records. This visualization shows log sources by their log volume. Line charts can give more visibility, Lets change to 'Line Chart' Visualization.
 
-2. Select 'Last 24 Hours' from the Time Range picker
+2. Click on the visualization drop-down and select "Line" visualization for more visibility.
 
-  ![](images/time-picker.png "UIdescription")
+  ![](images/line-chart.png "UIdescription")
 
-  Here you see the volume of logs generated by different Log Sources along with the log records. This visualization shows log sources by their log volume. Line charts can give more visibility. Lets change to 'Line Chart' Visualization and increase the time-range to Last 14 Days
+  Here you see Line chart view of different Log Sources and its trends and volume of logs for time ranges from **Sep 1, 2022 12:00:00 AM** to **Sep 30, 2022 12:00:00 PM**.
 
-3. Click on the visualization drop-down and select "Line" visualization and use the "Time Range" picker to select **Last 14 Days**.
+  ![](images/line-chart-custom-time.png "UIdescription")
 
-  ![](images/line-chart-14-days.png "UIdescription")
-
-   Logging Analytics enriches logs with problem labels and error categories for easy problem identification along their severity. Next, we want to find out problem severities across different Log Sources.
-
-4. Select "Tree Map" visualization from the visualization drop down.
+3. Select "Tree Map" visualization from the visualization drop down, to view various logs generated for E-Business Suite applications.
 
   ![](images/tree-chart-log-source1.png "UIdescription")
 
-  Drag and drop the field "Entity" from the Fields Panel into the "Group by" input box in Visualization Panel and change the order of 'Entity' and 'Log Source' by dragging Entity above Log Source. Click 'Apply'
+  Drag and drop the field "Entity" and "Log Source" from the Fields Panel into the "Group by" input box in Visualization Panel and change the order of 'Entity' and 'Log Source' by dragging Entity above Log Source. Click 'Apply'
 
   ![](images/tree-map-entity-log-source1.png "UIdescription")
 
-5. Next replace the Group-by current inputs with the Field "Label" & "Problem Priority" in that order and select "Word Cloud" visualization.
-
+4. Click on the visualization drop-down and select "Word Cloud" visualization  to identify problems along with their Problem Priority.
   ![](images/prep-for-word-cloud.png "UIdescription")
+
+  Clear the current Group-by inputs.
+  ![](images/prep-for-word-cloud-clear.png "UIdescription")
+
+  Drag and drop the field "Label" and "Problem Priority" from the Fields Panel into the "Group by" and click Apply.
+  ![](images/prep-for-word-cloud-apply.png "UIdescription")
+
+  Logging Analytics enriches logs with problem labels and error categories for easy problem identification along with their Problem Priority.
 
   ![](images/word-cloud.png "UIdescription")
 
   Here you see different actions and problems labels color-coded by their problem priority.
 
-  Let's go back to 'Records with Histogram' visualization in the context of Entity **ebsvm_onprem** and time-range **Last 14 Days**. You are working with millions of log records and next we want to use Machine Learning techniques to analyze these records.
+  Let's go back to 'Records with Histogram' visualization in the context of Entity **ebsvm_onprem**. You are working with millions of log records and next we want to use Machine Learning techniques to analyze these records.
 
   ![](images/cluster-start.png "UIdescription")
 

@@ -16,6 +16,8 @@ In this workshop, you will learn how to:
 * Create a setup to monitor logs of Custom Applications/Services deployed on OKE.
 * Modify configuration to collect and process some MuShop container logs using their specific Log Sources.
 * Verify the log data of those MuShop logs in the Log Explorer.
+* Visualize the data collected from the OKE Cluster through Dashboards like below.
+    ![cloud-oracle-loganalytics-dashboard](images/cloud-oracle-loganalytics-dashboard.png)
 
 
 ### Prerequisites
