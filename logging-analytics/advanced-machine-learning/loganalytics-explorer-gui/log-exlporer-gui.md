@@ -6,8 +6,10 @@ Let's do a walk through of Log Explorer, which should be the current view on you
 
 Your should see a page similar to the one below showing the distribution of different types of logs currently being collected in this tenancy in the last 60 minutes.
 
-Estimated Lab Time: 5 minutes
+Estimated Time: 5 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Getting Familiar with Logging Analytics Explorer GUI](videohub:1_zcxzefmx)
 
 ### Objectives
 
