@@ -13,6 +13,8 @@ And below are the ingestion mechanisms that would be used
 * fluentd : An open source data collector
 * management-agent : Oracle provided data collector and Prometheus scraper.
 
+Watch the video below for a quick walk-through of the lab.
+[Ingestion Flow Setup](videohub:1_oosivrv7)
 
 ### Objectives
 
