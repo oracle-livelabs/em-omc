@@ -6,6 +6,8 @@ Let's do a walk through on continuous monitoring of E-Business Suite application
 
 Estimated Lab Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Continuous Monitoring using Management dashboards](videohub:1_99o2xtxy)
 
 ### Objectives
 

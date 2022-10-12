@@ -4,7 +4,10 @@
 
 In this Lab, you will learn to monitor the health, performance, uptime and availability of the E-Business Suite application and related infrastructure for a large enterprise application for a time ranges from **Sep 1, 2022 12:00:00 AM** to **Sep 30, 2022 12:00:00 PM**.
 
-Estimated Lab Time: 15 minutes
+Estimated Time: 15 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[Logging Analytics Basics](videohub:1_boq0qvhl)
 
 ### Objectives
 In this lab, our goal is to answer the following questions:

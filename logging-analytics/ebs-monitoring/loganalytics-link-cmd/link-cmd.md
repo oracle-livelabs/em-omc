@@ -6,8 +6,10 @@ Your customers are reporting high response times for EBS application which is af
 Let's do a walk through on troubleshoot and identify the problematic EBS jobs causing performance degradation and build a query for continuous monitoring.
 
 
-Estimated Lab Time: 20 minutes
+Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Advanced Troubleshooting using 'link' command](videohub:1_p9tpjdx4)
 
 ### Objectives
 
