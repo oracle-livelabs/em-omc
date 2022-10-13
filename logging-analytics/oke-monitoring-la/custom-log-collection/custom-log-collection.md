@@ -5,7 +5,10 @@
 The prebuilt OKE Cluster being used for this workshop already has MuShop (a cloud-native reference application of several Oracle Cloud services) deployed. Mushop has various services running on different containers generating their own application logs which goes to /var/log/containers. All these Mushop service logs are being processed using the generic source **Kubernetes Container Generic Logs** as explained in the previous lab.
 
 This lab will walk you through the steps required to customize pre-defined fluentd configuration in specific to MuShop container logs.  
- 
+
+Watch the video below for a quick walk-through of the lab.
+[Customizing Application Logs Configuration](videohub:1_ku3x4llu)
+
 ### Objectives
 
 In this lab, you will:

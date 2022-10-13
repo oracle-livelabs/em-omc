@@ -3,7 +3,10 @@
 ## Introduction
 It is easier to visualize large volume of data as related clusters. Logging Analytics - Clustering (Unsupervised ML) uses the log data and the enriched domain expertise to find patterns in the data. Clustering works on text as well as numbers, allowing large volume of data to be reduced to fewer patterns for anomaly detection.
 
-Estimated Lab Time: 20 minutes
+Estimated Time: 20 minutes
+
+Watch the video below for a quick walk-through of the lab.
+[ML Clustering to analyze large volume of logs](videohub:1_vcjsfdk0)
 
 ### Objectives
 
