@@ -15,17 +15,27 @@
         {
             "title": "Lab 1: Getting Familiar with Logging Analytics Explorer GUI",
             "description": "Getting Familiar with OCI Logging Analytics Explorer GUI",
-            "filename": "../../loganalytics-explorer-gui/log-exlporer-gui.md"
+            "filename": "https://oracle-livelabs.github.io/em-omc/logging-analytics/ebs-monitoring/loganalytics-explorer-gui/log-exlporer-gui.md"
         },
         {
-            "title": "Lab 2: ML Clustering to analyze large volume of logs",
+            "title": "Lab 2: Log Analytics Basics",
+            "description": "OCI Logging Analytics Basics",
+            "filename": "../../analytics-basics/index.md"
+        },
+        {
+            "title": "Lab 3: Advanced ML Analytics for large volume of logs",
             "description": "OCI Logging Analytics ML Clustering to analyze large volume of logs",
             "filename": "../../loganalytics-ml-clustering/ml-clustering.md"
         },
         {
-            "title": "Lab 3: Advanced Troubleshooting using 'Link' command",
+            "title": "Lab 4: Advanced Troubleshooting and Correlation",
             "description": "Advanced Troubleshooting using 'Link' command",
             "filename": "../../loganalytics-link-cmd/link-cmd.md"
+        },
+        {
+            "title": "Lab 5: Enterprise Monitoring Dashboards",
+            "description": "Building Custom Monitoring Dashboards",
+            "filename": "../../dbaa/dbaa.md"
         },
         {
             "title": "Oracle CloudWorld 2022 - Get Help",
