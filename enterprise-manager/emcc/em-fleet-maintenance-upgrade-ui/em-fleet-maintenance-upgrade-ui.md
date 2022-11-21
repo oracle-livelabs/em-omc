@@ -5,8 +5,8 @@ In this workshop, you will experience the benefits of using the Oracle Enterpris
 
 *Estimated Time:* 60 minutes
 
-Watch the video below for a quick walk through of the lab.
-[](youtube:SbsS_nNiXHo)
+Watch the video below for a quick walk-through of the lab.
+[Automated Database Upgrade at Scale with Fleet Maintenance UI](videohub:1_61y8xusx)
 
 ### About the Database Fleet Maintenance UI capability in Oracle Enterprise Manager
 

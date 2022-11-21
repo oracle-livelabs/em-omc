@@ -8,9 +8,9 @@ A typical enterprise environment has massive volume of log telemetry. Finding in
 
 OCI Logging Analytics is a cloud solution that aggregates, indexes, and analyzes a variety of log data from on-premises and multi-cloud environments. It enables you to search, explore, and correlate this data, derive operational insights and make informed decisions.
 
-Estimated Workshop Time: 30 minutes
+Estimated Workshop Time: 01 hours 30 minutes
 
-### Objectives
+### Objectives  
 
 In this workshop, you will:
 

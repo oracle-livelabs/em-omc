@@ -5,8 +5,8 @@ This workshop will help you understand how one can utilize Enterprise Manager to
 
 *Estimated Lab Time: 60 minutes*
 
-Watch the video below for a quick walk through of the lab.
-[](youtube:N6840yjGnME)
+Watch the video below for a quick walk-through of the lab.
+[Multitenant Database Lifecycle Management](videohub:1_1yzsbufd)
 
 ### About Multitenant Database Lifecycle Management
 

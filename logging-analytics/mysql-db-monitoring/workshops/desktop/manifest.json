@@ -8,17 +8,17 @@
             "filename": "../../introduction/intro.md"
         },
         {
-              "title": "Getting Started",
-              "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
-              "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+            "title": "Getting Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Getting Familar with Log Explorer",
+            "title": "Lab 1: Getting Familiar with Log Explorer",
             "description": "Getting familiar with OCI Logging Analytics Explorer",
             "filename": "../../getting-familiar-with-log-explorer/getting-familiar-with-log-explorer.md"
         },
         {
-            "title": "Lab 2: Getting Familar with Types of Logs Collected",
+            "title": "Lab 2: Getting Familiar with Types of Logs Collected",
             "description": "Getting familiar with the different types of logs collected and log sources used for this lab",
             "filename": "../../log-collection-types/log-collection-types.md"
         },
@@ -40,7 +40,7 @@
         {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
         }
     ]
 }

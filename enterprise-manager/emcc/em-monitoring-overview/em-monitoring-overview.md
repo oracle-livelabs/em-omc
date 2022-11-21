@@ -12,13 +12,15 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Metric Extensions to monitor conditions specific to your environment
 
-Watch the video below for a quick walk through of the lab.
-[](youtube:Qu0F2wVp3k0)
+- Dynamic Runbooks to triage and resolve your incidents
+
+Watch the video below for a quick walk-through of the lab.
+[Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
 
 ### Objectives
 The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Time*: 55 minutes
+*Estimated Time*: 65 minutes
 
 
 ### Lab Timing (Estimated)
@@ -26,17 +28,19 @@ The objective of this lab is to become familiar with Enterprise Monitoring capab
   | **Step No.** | **Feature**                                   | **Approx. Time** | **Details**                                                                                                                                                                                                                    | **Value proposition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**  | Enterprise Summary                              | 5 minutes       | Explore Enterprise Summary page and drill down to see a list of down targets. View the list of critical incidents created for the down targets. Filter the Status pane to display a list of Database Instance targets.                         | Enterprise Summary enables you to get complete visibility into the overall status and health of your managed environment.                                                                                                                                                                                                                                            |
-  | **2**  | Incident Manager                                | 5 minutes       | Triage unassigned incidents from Incident Manager and acknowledge then assign an incident                                                 | Incident Manager enables IT Staff to manage, track, and resolve actionable incidents in a collaborative way.                                                                                                                                                                                                                                                                                                                                                  |
-  | **3**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
-  | **4**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-  | **5**  | Metric Extensions                          | 5 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-  | **6**  | Monitoring Templates                          | 5 minutes       | Create a Monitoring Template from a Database Instance target. Deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise. | Monitoring Templates enable you to define and implement monitoring standards across all targets in your environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-  | **7**  | Administration Groups and Template Collections                          | 10 minutes       | View the hierarchy of an existing Administrator Group. Update the target property for a new target so it can automatically be added to an Administration Group and inherit monitoring settings from that group. | Administration Groups and Template Collections enable you to enforce monitoring standards and automate monitoring setup in a scalable way.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-  | **8**  | Incident Rules                          | 10 minutes       | Review out-of-the-box incident rules shipped with Enterprise Manager. View an example of an incident compression rule set. Create a simple incident rule set to email DBA when there is a critical DB alert. | Incident Rules enable you to automate common incident management and notification actions such as creation of incidents based on events, sending email to IT Staff, opening tickets, auto-assigning incidents, escalating incidents, etc.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+  | **2**  | Incident Manager                                | 5 minutes       | Triage unassigned incidents from Incident Manager and acknowledge then assign an incident.                                                 | Incident Manager enables IT Staff to manage, track, and resolve actionable incidents in a collaborative way.|                                                                                                                                        
+  | **3A**  | Dynamic Runbooks                               | 5 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
+  | **3B**  | Dynamic Runbooks                               | 7 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
+  | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
+  | **5**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+  | **6**  | Metric Extensions                          | 5 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+  | **7**  | Monitoring Templates                          | 5 minutes       | Create a Monitoring Template from a Database Instance target. Deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise. | Monitoring Templates enable you to define and implement monitoring standards across all targets in your environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+  | **8**  | Administration Groups and Template Collections                          | 10 minutes       | View the hierarchy of an existing Administrator Group. Update the target property for a new target so it can automatically be added to an Administration Group and inherit monitoring settings from that group. | Administration Groups and Template Collections enable you to enforce monitoring standards and automate monitoring setup in a scalable way.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+  | **9**  | Incident Rules                          | 10 minutes       | Review out-of-the-box incident rules shipped with Enterprise Manager. View an example of an incident compression rule set. Create a simple incident rule set to email DBA when there is a critical DB alert. | Incident Rules enable you to automate common incident management and notification actions such as creation of incidents based on events, sending email to IT Staff, opening tickets, auto-assigning incidents, escalating incidents, etc.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## Task 1: Enterprise Summary
 
-1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”. 
 
     ![Enterprise Manager login](images/emmonlab1step1.png " ")
 
@@ -110,11 +114,12 @@ Incident Manager provides in one location the ability to search, view, manage, a
 5. Click on “Open in new tab” link to open the incident on a separate tab. You may need to temporarily allow popups in the browser.
     ![Incident Manager page](images/emmonlab2step5.png " ")
 
-6. The General tab of an incident contains 3 sections.
+6. The General tab of an incident contains 4 sections.
 
       - Incident Details contains information about the incident such as target name, creation date, type, and summary.
       - Tracking provides the priority, status, and ability to manage the incident.
       - Guided Resolution provides the ability to diagnose and take action to resolve the incident.
+      - Runbook Sessions provides options to start, create, or view a runbook session against the incident.
 
      ![Incident Manager page, Incident details](images/emmonlab2step6.png " ")
 
@@ -158,7 +163,316 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
      ![Incident Manager, Incident Dashboard](images/emmonlab2step15.png " ")
 
-## Task 3: Metric and Collection Settings
+## Task 3A: Dynamic Runbooks
+
+Dynamic Runbooks are documented procedures that IT staff follow to resolve an issue. Dynamic Runbooks typically consist of a set of ordered instructions (steps) to resolve the issue. Users can execute these steps inside Enterprise Manager in context of an incident. 
+
+For this lab, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
+
+**Note:** In steps 1 through 15, you will log in as SYSMAN to modify a time range used in the Dynamic Runbook in this task. Completing these initial steps will allow you to view the metric graph for the designated incident you will eventually start a Runbook session on. You are still able complete this task without modifying the time range (in steps 1-15), but please note that this will cause the metric graph for the incident to not display when you run the Runbook in later steps. 
+
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
+
+     ![Enterprise Manager login - SYSMAN](images/sysmanLogin.png " ")
+
+2. Navigate to "Enterprise >> Monitoring >> Runbooks".
+
+     ![Runbooks Navigation - SYSMAN](images/sysmanRunbooksNavigation.png " ")
+
+3. In the Runbooks page that appears, switch to the Published tab view.
+
+     ![Select Published Tab - SYSMAN](images/sysmanSelectPublishedTab.png " ")
+
+4. In this Published tab view, you should see a published Runbook labeled “Fast Recovery Area Triage”. From the Actions menu of this Runbook, select “Create a New Version.”
+
+     ![Create Runbook Draft - SYSMAN](images/sysmanCreateRunbookDraft.png " ")
+
+5. A pop-up will appear to enter an Incident ID. This is needed to pass incident details to the Runbook draft. Enter "8161". Select OK. 
+
+     ![FRA Runbook Draft Popup for Incident ID - SYSMAN](images/sysmanEnterID.png " ")
+
+6. You will be navigated to a page to edit the Runbook. This is a draft of the initial “Fast Recovery Area Triage” Runbook. Select the pencil icon to make edits to Step 2. 
+
+     ![FRA Runbook Draft - Edit Step 2 - SYSMAN](images/sysmanEditStep2.png " ")
+
+7. Select the Time Range field. 
+
+     ![FRA Runbook Draft - Select Time Range for Step 2 - SYSMAN](images/sysmanSelectTimeRange.png " ")
+
+8. A pop-up will appear and show you the option to modify the time range of the metric data that will display in a graph. In the Start Time field, enter "evt\_time – 1d". In the End Time field, enter "evt\_time + 1d". Select Done.
+
+     ![FRA Runbook Draft - Modify Time Range - SYSMAN](images/sysmanModifyTimeRange.png " ")
+
+9. Select Save Step.
+
+     ![FRA Runbook Draft - Save Step - SYSMAN](images/sysmanSaveStepModifiedRange.png " ")
+
+10. At the top of the page click on the “Runbooks” link to go back to the Runbooks page.
+
+     ![FRA Runbook Draft - Go Back to Runbook Page - SYSMAN](images/sysmanLinkBackToRunbookPage.png " ")
+
+11. You will see the “Fast Recovery Area Triage” Runbook listed under the  Drafts tab.
+
+     ![FRA Runbook Draft - Updated Draft Tab view - SYSMAN](images/sysmanDraftRbFraOnRbPage.png " ")
+
+12. From the Actions menu, select Publish.
+
+     ![FRA Runbook Draft - Publish Runbook - SYSMAN](images/sysmanPublishRunbook.png " ")
+
+13. Select OK. 
+
+     ![FRA Runbook Draft - Select OK to Publish Runbook - SYSMAN](images/sysmanPublishRunbookDraftPopup.png " ")
+
+14. This will now replace the previous published “Fast Recovery Area Triage” Runbook with the edits you made.
+
+15. Log out of Enterprise Manager as SYSMAN.
+
+     ![Enterprise Manager logout](images/sysmanLogout.png " ")
+
+16. Log into Enterprise Manager again using the credentials “emadmin/welcome1”.
+
+     ![Enterprise Manager login](images/emmonlab3step1.png " ")
+
+17. Navigate to "Enterprise >> Monitoring >> Incident Manager".
+     
+     ![Navigate to Incident Manager](images/emmonlab3astep2.png " ")
+
+18. In Incident Manager, the “All open incidents” view is displayed by default. In this view, highlight the incident with Summary text “The value of the Fast Recovery Area % Used is 70.11”. The Fast Recovery Area is a unified storage location for all Oracle Database files related to recovery. Details of the incident will be displayed in the bottom pane. 
+
+     ![Highlighted Incident](images/emmonlab3astep3.png " ")
+
+19. In the bottom pane, you should see a section called "Runbook Sessions".
+
+     ![Runbook Sessions section in Incident Manager](images/emmonlab3astep4.png " ")
+
+20. Click on "Start Runbook Session".
+     
+     ![Start Runbook Session](images/emmonlab3astep5.png " ")
+
+21. At the top of this page, the previous incident details are carried over. These details will be passed to the Runbook once you create a session.  Under the incident details, a table displays the published Runbooks that can be used against the incident.
+
+     ![Start Runbook Session Page](images/emmonlab3astep6.png " ")
+
+22. To preview the Runbook steps, click on the Runbook name, "Fast Recovery Area Triage". You can click on the  steps to view more details. **Note:** In this task, there is only one published Runbook available. In cases where there are multiple Runbooks, the preview can help you decide which Runbook to use.
+
+     ![Preview Runbook](images/emmonlab3astep7.png " ")
+
+23. Click Close when you are done previewing the steps.
+
+24. After previewing the steps, select on the play icon under the Start Session column to begin the Runbook session.
+
+     ![Play Runbook Session](images/emmonlab3astep9.png " ")
+
+25. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Also, notice the incident details have been carried over to the session.
+
+     ![FRA Runbook Session Steps for Incident](images/emmonlab3astep10.png " ")
+
+26. The Overview & Prerequisites step describes what the Runbook does and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the Named Credential, **CDB186\_SYS**, for the target database. Access to this Named Credential will allow you to successfully run through all the steps.
+
+     ![Overview & Prerequisites Step](images/emmonlab3astep11.png " ")
+
+27. Select the play icon in Step 2 to review the metric, FRAPercentUsed, that triggered the incident. The red vertical dotted line indicates when the incident happened. Notice the increasing trend of the metric before crossing the threshold. The threshold was crossed at approximately 70%. 
+     
+     **Note:** The metric data was simulated for the purpose of this lab. As a result, your graph may not exactly resemble the image shown below, but it should still show an upwards trend.
+
+     ![Review the Metric - Step 2](images/emmonlab3astep12.png " ") 
+
+28. Next, check the FRA size of the database. Notice for Step 3 the gear icon is displayed instead of the play icon. This indicates that certain credentials are required before running the step.
+
+     ![Gear Icon - Step 3](images/emmonlab3astep13.png " ")
+
+29. Click on the gear icon for Step 3. In the pop-up that appears, enter the credential **CDB186\_SYS** and click Save.
+
+     ![Enter Credentials - Step 3](images/emmonlab3astep14.png " ")
+
+30. After saving, the Runbook session is updated and the gear icon for Step 3 will turn into a play icon. The same credentials are needed to run Step 4 and Step 5, so these steps have also been updated to a play icon instead of a gear icon. 
+
+     ![Credentials Saved - Step 3](images/emmonlab3astep15.png " ")
+
+31. Click on the play icon for Step 3 to check the FRA size. A table appears, displaying the FRA size for the database. It should be approximately 13 Gigabytes. According to the Runbook instructions, the FRA size must be set to at least 50 Gigabytes (50G) to comply with the Database standard. 
+
+     ![Check FRA Size - Step 3](images/emmonlab3astep16.png " ")
+
+32. To change the FRA size to 50G, click the play icon on Step 4. You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRAPercentUsed to decrease.
+
+     ![Change FRA Size - Step 4](images/emmonlab3astep17.png " ")
+
+33. Run Step 5 to view the updated FRA size and to confirm that it has been set to at least 50G. Your new FRA size should be approximately 53687091200 (50G), which meets the minimum threshold for FRA size.
+
+     ![Check FRA Size Again - Step 5](images/emmonlab3astep18.png " ")
+
+34. Step 6 describes the success criteria: once you have performed all the Runbook steps and the FRA size meets the minimum threshold, then this should have resolved the issue. 
+
+     ![Success Criteria - Step 6](images/emmonlab3astep19.png " ")
+
+     **Note:** For the purpose of this lab, the metric incident was simulated and therefore may still remain in Incident Manager after these steps have been run.
+
+35. The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and rerun your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later. 
+
+36. Select Mark as Done to indicate that you have finished all the steps. Once you Mark as Done, you are unable to run the steps and the Runbook session will become read-only.
+
+     ![Mark as Done](images/emmonlab3astep21.png " ")
+
+37. Click OK.
+
+     ![Mark as Done - OK](images/emmonlab3astep22.png " ")
+
+38. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session. 
+
+     ![Actions - Complete Runbook Session](images/emmonlab3astep23.png " ")
+
+## Task 3B: Dynamic Runbooks
+
+Dynamic Runbooks are documented procedures that IT staff follow to resolve an issue. Dynamic Runbooks typically consist of a set of ordered instructions (steps) to resolve the issue. Users can execute these steps inside Enterprise Manager in context of an incident. 
+
+For this lab, a Dynamic Runbook draft has already been created. You will go through the process of modifying the Runbook and later publishing it to be used by others.  
+
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
+
+     ![Enterprise Manager login](images/emmonlab3step1.png " ")
+
+2. Navigate to "Enterprise >> Monitoring >> Runbooks".
+
+     ![Navigate to Runbooks](images/emmonlab3bstep2.png " ")
+
+3. The Runbooks page has Draft Runbooks and Published Runbooks. By default, the Drafts tab is opened. You can create a Runbook through this Runbooks page or directly against an incident in the Incident Manager page. Under the Drafts tab, select the "New Runbook" link. This is the Runbook draft that was created for you and that you will modify.
+     
+     ![Select New Runbook Draft](images/emmonlab3bstep3.png " ")
+
+4. At the top of the page, the previous incident details are carried over. This is the incident that was selected to create a Runbook draft on. You can optionally edit the Runbook name and Description using the pencil icons next to them. 
+
+     ![New Runbook Draft Page](images/emmonlab3bstep4.png " ")
+
+5. There is an Add a Step drop-down menu, where you can select the desired step type you want to define. There are four step types: Note, Metric Data, Repository SQL, and Target SQL. We have already added the steps for you in this Runbook draft.
+
+     ![Add Step - New Runbook](images/emmonlab3bstep5.png " ")
+
+6. To begin modifying the Runbook Draft steps, select the pencil icon to edit Step 1 (Overview and Prerequisites). This is a Note Step: used for any type of text meant to provide information or instruction pertaining to the Runbook. The Note can be plain text but can also accommodate simple formatting via markdown language. 
+
+     ![Step 1 Overview and Prereq - New Runbook](images/emmonlab3bstep6.png " ")  
+
+7. In the text box, add 3 hash signs (###) followed by a space to the beginning of the first sentence, “This runbook can be used to triage and resolve FRA incidents,” to make it header 3. 
+
+     ![Step 1 H3 - New Runbook](images/emmonlab3bstep7.png " ")  
+
+8. Next, place three dashes (---) on their own line under the first sentence to create a horizontal line.
+
+     ![Step 1 Horizontal Line - New Runbook](images/emmonlab3bstep8.png " ")  
+
+9. Put two asterisks (**) on both sides of the “Prior to Beginning” text to make it bold. 
+
+     ![Step 1 Asterisks - New Runbook](images/emmonlab3bstep9.png " ") 
+
+10. Scroll down in the text box until you see the following sentence: “Make sure you have been granted access to the named credential for the target database **[target name]** on which the FRA Incident has occurred”.
+
+     ![Step 1 Scroll to Target Name Placeholder - New Runbook](images/emmonlab3bstep10.png " ") 
+
+11. View the "Oracle Provided Variables" on the right side of the screen. Scroll until you see the field for "Target Name".
+
+     ![Step 1 Oracle Variable for Target Name - New Runbook](images/emmonlab3bstep11.png " ")     
+
+12. Replace the "[target name]" placeholder in the text box with the value displayed in the Variables table for Target Name: **$ora\_target\_name**. This will now replace the original "[target name]" placeholder text with the target name pulled from the context of the incident.
+
+     ![Step 1 Target Name Placeholder Replacement- New Runbook](images/emmonlab3bstep12.png " ") 
+
+13. Select Save Step to view the modifications to the text.
+
+14. Your Overview and Prerequisites step should now look like this:
+     
+     ![New Step 1 - New Runbook](images/emmonlab3bstep14.png " ") 
+
+     The first sentence is now a header 3 with a horizontal line under it. The Prior to Beginning text is bolded. And the original [target name] placeholder text is populated by the name of the target from the incident.
+
+15. Step 2 is a Metric Data step which is used to show the time series chart for the specified metric. Notice the instruction text of the step does not specify the actual metric name to review. Also, the graph does not show the trend from before the metric crossed the threshold, which is indicated by the red vertical dotted line.
+
+     ![Step 2 - New Runbook](images/emmonlab3bstep15.png " ") 
+
+16. Click the pencil icon to make edits to Step 2. 
+
+     ![Edit Step 2 - New Runbook](images/emmonlab3bstep16.png " ") 
+
+17. To specify the metric name, edit the “[metric name]” placeholder to use the value **$ora\_metric\_name**. This will populate the value with the text in the Metric Name field (e.g., FRAPercentUsed).
+
+     ![Step 2 Specify Metric Name - New Runbook](images/emmonlab3bstep17.png " ")
+
+18. Click on the Time Range field to modify the times shown in the graph. Change the Start Time field to "evt\_time – 1d" and the End Time field to "evt\_time + 1d". Select Done. Select the Run button. This should now balance the graph to display the trend of the metric before and after it triggered the incident. 
+
+     **Note:** The metric data was simulated for the purpose of this lab. As a result, your graph may not exactly resemble the image shown below, but it should still show an upwards trend.
+
+     ![Step 2 Change Time Range - New Runbook](images/emmonlab3bstep18a.png " ")
+
+     ![Step 2 Updated Graph - New Runbook](images/emmonlab3bstep18b.png " ")
+
+19. Select Save Step to see results for Step 2. 
+
+20. The metric name value should populate to "FRAPercentUsed", and the graph should now display the red vertical dotted line in the center.
+
+     ![New Step 2 - New Runbook](images/emmonlab3bstep20.png " ")
+
+21. Step 3 is a Target SQL Step. It allows you to execute SQL against any database target in Enterprise Manager. In our example, the current SQL query will need to be updated to properly check for flashback retention usage. 
+
+     ![Step 3 - New Runbook](images/emmonlab3bstep21.png " ")
+
+22. Select the pencil icon to edit Step 3.
+
+     ![Edit Step 3 - New Runbook](images/emmonlab3bstep22.png " ")
+
+23. Under the Variables section, select the Add Variable button.
+
+     ![Add Variable Step 3 - New Runbook](images/emmonlab3bstep23.png " ")
+
+24. You will see a pop-up box labeled Add a Runbook Variable. In the Name field, enter "user\_flash". In the Display Name field enter "Flash like statement". In the Value used in the Draft field, enter "%flash%". And for the Value used in a Runbook Session, you have the options to select the "User who runs the Runbook session specify the value" or select the "Same value used in the draft". Select "Same value used in the draft". 
+
+     ![Add Variable Pop-up Step 3 - New Runbook](images/emmonlab3bstep24.png " ")
+
+25. Select OK to save the variable.
+
+     ![Save Variable Step 3 - New Runbook](images/emmonlab3bstep25.png " ")
+
+26. Once the variable is saved, it should appear in the Variables section under "Author Defined". You will use this variable for the SQL query. 
+
+     ![Variable Defined Step 3 - New Runbook](images/emmonlab3bstep26.png " ")
+
+27. The current SQL query needs to be replaced to check for flashback retention usage. Replace the current SQL query with the following: "select name, value from v$parameter where name LIKE:$user\_flash".
+
+     ![Replace Query Step 3 - New Runbook](images/emmonlab3bstep27.png " ")
+
+28. To test if the SQL query is correct, scroll to the bottom of the page and select the Run button. The Display section should show a table with the flashback retention usage results, which should list 1440 (i.e., the standard value needed).
+
+     ![Test Query Step 3 - New Runbook](images/emmonlab3bstep28.png " ")
+
+29. Select Save Step.
+
+30. Run Step 3 to view the new results from the updated query. The new results show that the flashback retention usage meets the standard value needed, 1440.
+
+     ![New Step 3 - New Runbook](images/emmonlab3bstep30.png " ")
+
+31. You have now finished making edits to the Runbook and can publish it so that it can be used by others. At the top of the Runbook draft page click on the “Runbooks” link to go back to the Runbooks page.
+
+     ![Runbooks Page Link from Step 3 - New Runbook](images/emmonlab3bstep31.png " ")
+
+32. The Runbook draft that you modified will be displayed in the Drafts tab and will have your updates.
+
+     ![Runbooks Page with Updated Draft - New Runbook](images/emmonlab3bstep32.png " ")
+
+33. Select the arrow under the Actions column to publish the Runbook for use.
+
+     ![Publish Runbook Draft - New Runbook](images/emmonlab3bstep33.png " ")
+
+34. Select OK. 
+
+     ![Select Ok to Publish Runbook Draft - New Runbook](images/emmonlab3bstep34.png " ")
+
+35. The "New Runbook" that you made modifications to has now been published and can now be used by other EM users. 
+
+     ![Published Runbook - New Runbook](images/emmonlab3bstep35.png " ")
+
+36. Select the arrow under the Actions column for the "New Runbook". You have the options to create new version from the published Runbook, hide it or delete. 
+
+     ![Actions on Published Runbook - New Runbook](images/emmonlab3bstep36.png " ")
+
+
+## Task 4: Metric and Collection Settings
 
 Metric and Collection Settings page is where we can view and configure thresholds, collection schedules, and Corrective Actions for the metrics being monitored for the target.
 
@@ -219,7 +533,7 @@ As Best Practice:
 
      ![Database target home page, metric and collection settings confirmation message](images/emmonlab3step12.png " ")
 
-13.	Navigate to “Database >> Monitoring >> All Metrics”.
+13.	Navigate to “Oracle Database >> Monitoring >> All Metrics”.
 
      ![Database target home page](images/emmonlab3step13.png " ")
 
@@ -243,7 +557,7 @@ As Best Practice:
 
      ![Database target home page, all metric](images/emmonlab3step18.png " ")
 
-## Task 4: Corrective Actions
+## Task 5: Corrective Actions
 
 Corrective Actions automates response to metric alerts and events. A Corrective Action can start the DB listener when it unexpectedly goes down or it can run shell scripts to collect diagnostic data. You can create a custom Corrective Action once and grant access for other Admins to use. We ship with a long list of pre-defined Corrective Actions to get you started.
 
@@ -307,7 +621,7 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
      ![Database target home page, metric and collection settings with add corrective actions pop-up](images/emmonlab4step15.png " ")
 
-16.	Notice there is now a Corrective Action specified for Warning threshold violations. The Corrective Action will trigger when Tablespace Space Used (%) >= 85%. Also notice the Warning message at the top of the screen indicating that the metric settings for the target are managed by the monitoring templates associated through the Administration Groups.  Administration Groups will be discussed in Task 7 below, but this message indicates that if we want to keep this setting (i.e. associating the corrective action for this metric), you will also need to click on the ‘Template Override’ option at the bottom of the screen. Click Continue.
+16.	Notice there is now a Corrective Action specified for Warning threshold violations. The Corrective Action will trigger when Tablespace Space Used (%) >= 85%. Also notice the Warning message at the top of the screen indicating that the metric settings for the target are managed by the monitoring templates associated through the Administration Groups.  Administration Groups will be discussed in Task 8 below, but this message indicates that if we want to keep this setting (i.e. associating the corrective action for this metric), you will also need to click on the ‘Template Override’ option at the bottom of the screen. Click Continue.
 
      ![Database target home page, metric and collection settings](images/emmonlab4step16.png " ")
 
@@ -327,7 +641,7 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
      ![Database target home page, metric and collection settings](images/emmonlab4step17c.png " ")
 
-## Task 5: Metric Extensions
+## Task 6: Metric Extensions
 
 Metric Extensions expand Oracle's monitoring capabilities to monitor conditions specific to your IT environment. It allows you to create custom metrics on any target type. You can create it once and deploy it to multiple targets at once.
 
@@ -403,7 +717,7 @@ For this lab, a metric extension has already been created and is in Editable sta
 
     ![Enterprise Monitoring, metric extensions page](images/emmonlab5step18.png " ")
 
-## Task 6: Monitoring Templates
+## Task 7: Monitoring Templates
 
 Monitoring templates enable you to deploy standardized monitoring settings across the targets in your data center. Enterprise Manager allows you to define monitoring settings on one target, and deploy the same settings to other targets. This feature is called Monitoring Template. When a change is made to a template, you can reapply the template across affected targets in order to propagate the new changes. The apply operation can be automated using Administration Groups and Template Collections. For any target, you can preserve custom monitoring settings by specifying metric settings that can never be overwritten by a template.
 
@@ -463,7 +777,7 @@ Monitoring templates enable you to deploy standardized monitoring settings acros
 
     ![Enterprise monitoring, monitoring templates page](images/emmonlab6step13.png " ")
 
-## Task 7: Administration Groups and Template Collections
+## Task 8: Administration Groups and Template Collections
 
 Administration Groups are designed to simplify the process of setting up targets for management in Enterprise Manager. Typically, management settings such as monitoring settings and compliance standards are applied to a target manually or by custom scripts defined by the administrator. With Administration Groups, you first define a hierarchy of Administration Groups where targets in each group have the same management settings.  Next for each Administration Group, define and combine management settings (e.g. monitoring settings, compliance standards and cloud policies) into a container (called template collections) and associate them with the appropriate Administration Group. Once that one-time setup is done, all you need to do is add the target to the appropriate Administration Group, and Enterprise Manager will automatically apply the associated management settings to the target as it joins the group.  This greatly simplifies and streamlines the process of target setup. It also enables a datacenter to easily scale as new targets are added to Enterprise Manager for management.
 
@@ -594,7 +908,7 @@ To create this hierarchy, use target properties to define the membership criteri
 
      ![Group homepage](images/emmonlab7step28.png " ")
 
-## Task 8: Incident Rules
+## Task 9: Incident Rules
 
 Incident Rules specify actions to be taken on events.  For example, when a target down event occurs, you might want to create an incident for the event and send email notification on the  incident. A rule set is a collection of these rules and they apply to a common set of targets such as hosts, databases, groups. Enterprise Manager ships with out-of-the-box rule sets to get you started. Out-of-the-box rule sets have a Lock icon next to them because they cannot be modified. We recommend making a copy of the rule set, and modifying the copy to suit your needs. Alternatively, you can create new rule sets from scratch.
 
@@ -656,9 +970,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
      ![incident rules, create rule set page with select type of rule to create pop-up](images/emmonlab8step12.png " ")
 
-13.	Configure the following fields and click Next.\
-Type: Metric Alert, All events of type Metric Alert\
-Severity: In Critical
+13.	Configure the following fields and click Next. Type: Metric Alert, All events of type Metric Alert. Severity: In Critical. 
 
      ![incident rules, create rule set page](images/emmonlab8step13.png " ")
 
@@ -700,11 +1012,11 @@ Severity: In Critical
 
      ![incident rules, create rule set select incidents page](images/emmonlab8step21.png " ")  
 
-22.	Click ‘Add’
+22.	Click ‘Add’.
 
      ![incident rules, create rule set add actions page](images/emmonlab8step22.png " ")
 
-23.	In the ‘Email To” field,  specify DB TARGET USER       Then click Continue.
+23.	In the ‘Email To” field,  specify DB TARGET USER.       Then click Continue.
 
      ![incident rules, create rule set add actions page](images/emmonlab8step23.png " ")
 
@@ -720,7 +1032,7 @@ Severity: In Critical
 
      ![incident rules, create rule set review page](images/emmonlab8step26.png " ")
 
-27.	Click Save
+27.	Click Save.
 
      ![incident rules, create rule set page](images/emmonlab8step27.png " ")
 
@@ -734,10 +1046,12 @@ Severity: In Critical
 
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
   - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-  - [Enterprise Monitoring](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emadm/enterprise-monitoring.html#GUID-7BB979B8-7C87-4FC2-9E17-D2F5246A120F)
+  - [Enterprise Monitoring](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmon/enterprise-monitoring.html)
+  - [Enterprise Manager Monitoring Overview Video](https://www.youtube.com/watch?v=oAnF38qa4EA)
+  - [Strategies for Scalable, Smarter Monitoring using Oracle Enterprise Manager Cloud Control 13c](https://www.oracle.com/a/otn/docs/enterprise-manager/wp_enterprisemanager13c_monitoringstrategies.pdf)
 
 ## Acknowledgements
 - **Author** - Karilyn Loui, Oracle Enterprise Manager Product Management
 - **Contributing Author** - Ana McCollum, Daniel Suherman, Murtaza Husain, Desiree Abrokwa, Oracle Enterprise Manager Product Management
 - **Adapted for Cloud** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** – Desiree Abrokwa - Enterprise Manager Product Management [Dec 2021]
+- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [Sept 2022]
