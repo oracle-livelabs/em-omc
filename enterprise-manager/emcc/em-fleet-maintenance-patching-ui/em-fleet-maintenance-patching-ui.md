@@ -229,7 +229,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     Default window size of terminal will render output in multiple lines. Its is thus recommended to increase the terminal window size by clicking on maximize option.
 
-    ![](images/Maximize_window.png "Maximize window ")
+    ![](images/maximize_window.png "Maximize window ")
 
     Execute the following command to increase the column width.
     ```
@@ -276,7 +276,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     - Review and execute below emcli command. If the image id is same as the one highlighted above, you may use the below command:  
 
     ```
-    <copy>emcli db_software_maintenance -checkApplicability -image_id=E27275341BC25561E053AD00000A3CBD -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
+    <copy>emcli db_software_maintenance -checkApplicability -image_id=EDFCBFF9AE4A2ABFE0536B00000AFFAF -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
     ```
 
     else
