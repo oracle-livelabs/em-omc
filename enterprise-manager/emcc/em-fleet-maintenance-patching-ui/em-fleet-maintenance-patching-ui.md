@@ -229,7 +229,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     Default window size of terminal will render output in multiple lines. Its is thus recommended to increase the terminal window size by clicking on maximize option.
 
-    ![](images/maximize_window.png "Maximize window ")
+    ![](images/window_size.png "Maximize window ")
 
     Execute the following command to increase the column width.
     ```
