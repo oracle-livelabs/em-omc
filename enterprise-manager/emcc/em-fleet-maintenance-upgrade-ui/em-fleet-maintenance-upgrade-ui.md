@@ -329,7 +329,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     ![](images/session-timeout.png "session timeout error ")
 
     If you encounter session timeout error elsewhere in the lab, you can copy and paste the above command in the terminal and continue.
-    
+
 4. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘CreateGoldImage\*’ run
 
     ![](images/submit-create-image-dp.png "dp submission")
@@ -343,13 +343,23 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
 
 1. Before we deploy a new Oracle home, we need to ensure that we unsubscribe finance database from previous associated image. This step is required for UI as we can not have two different versions of Oracle home (in this case 18c and 19c) in the same image id.
 
+    Default window size of terminal will render output in multiple lines. Its is thus recommended to increase the terminal window size by clicking on maximize option.
+
+    ![](images/window_size.png "Maximize window ")
+
+    Execute the following command to increase the column width.
+    ```
+    <copy>emctl set property -name oracle.sysman.dbprov.gis.emcli.verbs.tableLength -value 310 -sysman_pwd "welcome1"</copy>
+    ```
+    ![](images/resize-width.png "resize command")
+
     Review and execute the following command to unsubscribe finance database from ***Tier #1 SI DB Linux64*** image. If finance database is not subscribed to any image, then we can move to next step, where we will subscribe finance database to 19.7 Gold Image.
 
     ```
     <copy>emcli db_software_maintenance -getTargetSubscriptions -target_name=finance.subnet.vcn.oraclevcn.com  -target_type=oracle_database</copy>
     ```
 
-    ![](images/unsubscribe-finance1.png "unsubscribe finance db")
+    ![](images/finance-susbcription.png "finance db_subscribe_details")
 
     If the image id is same as the one highlighted above, you may use the below command
     ```
@@ -360,6 +370,8 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     ```
     <copy>emcli db_software_maintenance -unsubscribeTarget -target_name=finance.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id="{Insert IMAGE ID from above output}"</copy>
     ```
+
+    ![](images/finance-unsubscribe.png "finance db_unsubscribe")
 
     Review and execute the following command to subscribe finance database to 19.7 image which we had created in step 3 of previous task.   
 
@@ -373,7 +385,7 @@ In this section, we will create Gold Image *Tier1-19 SIDB Linux-x64*
     If the image id is same as the one highlighted above, you may use the below command
 
     ```
-    <copy>emcli db_software_maintenance -subscribeTarget -target_name=finance.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id="E27CAAC5D6F67979E053AD00000A8212"</copy>
+    <copy>emcli db_software_maintenance -subscribeTarget -target_name=finance.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id="EE45F416A9653919E0536500000A525B"</copy>
     ```
 
     else make changes in the below command and execute it.
