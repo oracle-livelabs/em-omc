@@ -1,0 +1,3 @@
+Oracle EM redirects to the Database Login page, if not already logged in. Select the *Named* Credential option, if not already selected, and click **Login** to connect to the Oracle Database.  
+
+    > **Note:** The *Named* Credentials option allows you to log in to the database with the *sysdba* administrative user privileges.  
