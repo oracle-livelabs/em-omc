@@ -13,6 +13,8 @@ Watch this video to learn about the core concepts of a multitenant CDB.
 
 [](youtube:MEcyI4XWSRY)
 
+Estimated workshop time: 2 hour 30 minutes
+
 ### Objectives
 
 In this workshop, you will learn how to:
