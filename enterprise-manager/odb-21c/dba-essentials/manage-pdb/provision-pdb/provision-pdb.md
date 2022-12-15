@@ -197,7 +197,7 @@ In this task, you will clone a local PDB using the full clone method to create a
 	[](include:n-db-login-opt)
 	
 1.  On the PDB Creation page, select the option *Clone an Existing PDB*. This option creates a clone of an existing PDB.  
-    The page displays the default option *Full Clone* selected.  
+	Select the *Full Clone* option, if not already selected.
 
     For creating a clone, you need to specify a **Source PDB**. Click on the magnifier icon next to this field to search and select the source PDB. The values may differ depending on the system you are using. 
 
