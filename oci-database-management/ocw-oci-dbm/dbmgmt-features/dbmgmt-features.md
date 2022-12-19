@@ -21,6 +21,9 @@ Database Administration
 
 Estimated Time: 1 hour
 
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Database Management](videohub:1_qpjm77l8)
+
 ### Objectives
 
 -   Use Oracle Cloud Infrastructure Database Management to manage a fleet of Oracle Databases and drill down to a single database for additional investigation.
@@ -71,7 +74,7 @@ This lab assumes you have already completed the following:
 
 ## Task 3: Working with Database Groups
 
-1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**. Under **Database Management**, click **Database Groups**.
+1.  On **Fleet Summary** page, click **Database Groups** under **Database Management**.
 
      ![](./images/database-group.png " ")
 
@@ -111,7 +114,7 @@ This lab assumes you have already completed the following:
 
 ## Task 4: Monitoring Alert Log
 
-1.  On the left pane, click **Fleet Summary** to navigate to the Fleet Summary page. Scroll down to the **Members** tab on the Fleet Summary page. Click **MFG** under **Members** tab to go to **Managed database details** page.
+1.  Go back to **Fleet Summary** page. Scroll down to the **Members** tab on the Fleet Summary page. Click **MFG** under **Members** tab to go to **Managed database details** page.
 
 2.  On the left pane, under **Resources** click **Alert logs** to view alert and attention logs generated for the Managed Database in a selected time period. 
 
@@ -124,7 +127,7 @@ This lab assumes you have already completed the following:
 
 ## Task 5: Monitoring and Managing Individual Databases
 
-1.  On the left pane, click **Fleet Summary** to navigate to the Fleet Summary page. Scroll down to the **Members** tab on the Fleet Summary page.
+1.  Go back to **Fleet Summary** page. Scroll down to the **Members** tab on the Fleet Summary page.
 
      ![](./images/fleet-summary.png " ")
 
@@ -169,7 +172,7 @@ This lab assumes you have already completed the following:
 
 ## Task 6: Performing Database Performance Diagnostics
 
-1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
      ![](./images/perf-hub.png " ")
 

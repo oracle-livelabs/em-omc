@@ -1,4 +1,4 @@
-# Advanced Troubleshooting using 'Link' command
+# Advanced Troubleshooting using 'link' command
 
 ## Introduction
 Your customers are reporting high response times for EBS application which is affecting customer satisfaction metrics, in addition to negatively impacting the business.
@@ -6,58 +6,64 @@ Your customers are reporting high response times for EBS application which is af
 Let's do a walk through on troubleshoot and identify the problematic EBS jobs causing performance degradation and build a query for continuous monitoring.
 
 
-Estimated Lab Time: 5 minutes
+Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Advanced Troubleshooting using 'link' command](videohub:1_p9tpjdx4)
 
 ### Objectives
 
 In this lab, you will:
-* Use Advanced Troubleshooting using 'Link' command
+* Use Advanced Troubleshooting using 'link' command
 * Troubleshoot and identify the problematic EBS jobs causing performance degradation
 * Build a query for continuous monitoring
 
-## **Task 1:**  Troubleshoot and identify the problematic EBS jobs using 'Link' command
-Here is the analysis view that you'll be using from scratch.
+## **Task 1:** Analyse **EBS Concurrent Requests** for Troubleshooting    
 
-  ![](images/link-goal.png "UIdescription")
+  1. Clear Scope Filter for Log Group Compartment and Entity selection.
+  ![](images/la-scope-filter-clear.png "UIdescription")
 
-1. Click on "Actions" and "Create New" to return to the default Log Explorer view
+  2. Click on "Actions" -> "Create New" to return to the default Log Explorer view
 
   ![](images/create-new.png "UIdescription")
 
-  Default view for reference
+  The below screenshot shows default view of logging analytics explorer page.
 
   ![](images/default-landing-le.png "UIdescription")
 
-  Next, you'll open a **Saved Search** by clicking Actions and then Open.  
+  2. Next, you'll open a **Saved Search** by clicking Actions and then Open.  
 
   ![](images/open.png "UIdescription")
 
-  Select "Luna" in the "Widget Compartment" drop-down and search for keyword "EBS" and select "EBS Concurrent Requests Analysis" card and click 'Open'
+  3. Search and Select "ebs-lab-9522" in the "Widget Compartment" drop-down and search for keyword "EBS" and select "EBS Concurrent Requests Analysis" card and click 'Open'
 
-  ![](images/ss-ebs-luna1.png "UIdescription")
+  ![](images/ss-ebs-saved-search.png "UIdescription")
+
+  The below screenshot is a saved search for "EBS Concurrent Request Analysis" for analysing the logs.
 
   ![](images/link-goal.png "UIdescription")
 
-  This visualization shows concurrent request jobs running under different applications such as Receivables, Human Resources and size of the bubbles corresponds to the time-taken by those jobs. Hover on top of any bubble to see more details.
+  4. This visualization shows concurrent request jobs running under different applications such as Receivables, Human Resources and size of the bubbles corresponds to the time-taken by those jobs. Hover on top of any bubble to see more details.
 
   ![](images/link-hover.png "UIdescription")
 
-  Next, we want to slice-and-dice this data based on Application, Time Taken.
+  Next, we want to slice-and-dice this data based on Time Taken, Application.
 
-2. Click on the **Gear** icon on the top left of the chart and select **Filter Options** which will launch "Filter Options" a pop-up.
+## **Task 2:** Slice-And-Dice log data based on **Time Taken**
+
+  1. Click on the **Gear** icon on the top left of the chart and select **Filter Options** which will launch "Filter Options" a pop-up.
 
   ![](images/link-filter-options.png "UIdescription")
 
-  Next, select "Show Search Filters" checkbox in 'Filter Options' pop-up. All other check-boxes should also be in selected state.
+  2. Next, select "Show Search Filters" checkbox in 'Filter Options' pop-up. All other check-boxes should also be in selected state.
 
   ![](images/link-filter-select.png "UIdescription")
 
-  Click Close
+  3. Click Close, you will see list of Jobs running for every EBS Applications and time taken by each job to complete.
 
   ![](images/link-with-filter.png "UIdescription")
 
-3. Click on "3 mins, 48 sec (1)" which is the job with longest run-time to filter that job.
+  4. Click on "3 mins, 48 sec (1)" which is the job with longest run-time to filter that job.
 
   ![](images/3-min-select.png "UIdescription")
 
@@ -65,11 +71,14 @@ Here is the analysis view that you'll be using from scratch.
 
   This job with long run-time belongs to 'human resources' application and we want to know whether all HR jobs taking this long indicating application level problem.
 
-4. Deselect "3 mins, 48 sec (1)" to come to the same view as step #2 and click on 'human resources (19)' under the Application section in the chart.
+## **Task 3:** Slice-And-Dice log data based on **Application**
+In this task you will learn whether all HR jobs taking this long indicating application level problem.
+
+  1. Deselect "3 mins, 48 sec (1)" to come to the same view as step #2 and click on 'human resources (19)' under the Application section in the chart.
 
   ![](images/hr-selected.png "UIdescription")
 
-  This chart now show the time-taken by all the 'human resources' application job. You can hover on top of the two larger bubbles to identify which jobs were taking relatively longer time to complete.
+  2. This chart now show the time-taken by all the 'human resources' application job. You can hover on top of the two larger bubbles to identify which jobs were taking relatively longer time to complete.
 
   ![](images/data-update-process.png "UIdescription")
 
