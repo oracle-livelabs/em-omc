@@ -455,7 +455,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8 , by unplugging and plugging it to Container database cdb186.subnet.vcn.oraclevcn.com.
+1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by unplugging and plugging it to Container database cdb186.subnet.vcn.oraclevcn.com.
 
       ![](images/current-env-details.png "current-configuration")        
 
@@ -476,7 +476,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       ![](images/admin-fm.png "navigation")
 
 
-4.  We have already created the gold image (PDB Image) and subscribed Finance PBD to it.
+4.  We have already created the gold image (named PDB Image) and subscribed Finance PBD to it. This is a mandatory pre-requisite step.
 
 5.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
       ![](images/fm-flow1.png "selection")
@@ -486,7 +486,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       -  Operation = Name of the operation, which can be update (patch) or upgrade. In this example, we will select ***Update***.
       -  Type to filter = Selection criteria to highlight only those targets which qualify the selection, such as database naming.
 
-      We will select check box for PDB - Finance, as we want to patch it to higher version and select next.
+      We will select check box for PDB - Finance, as we want to patch it to higher version and select ***Next***.
 
 6. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
 
