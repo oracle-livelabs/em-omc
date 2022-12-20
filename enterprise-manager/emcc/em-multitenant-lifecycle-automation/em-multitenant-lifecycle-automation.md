@@ -25,7 +25,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 | 1    | Create a Pluggable Database (PDB)                                      | 10min                     | Create Pluggable database (PDB) within a CDB and run a post-script to lock/unlock accounts.                                                                                  | Create multiple PDBs with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                                           |
 | 2    | Un-plug/Plug an existing Pluggable Database | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed (Create from unplugged)                                                                                                                       | Unplug a PDB when not needed and plug it back as per need, hence maximizing resource utilization in your organization. Easily upgrade PDBs with few clicks by moving from one container to another.                                                                                                                  |
 | 3    | Clone an existing Pluggable Database                                 | 5min                      | Create multiple copies (Clones) of a PDB for dev/test purpose                                                                                                                     | Create multiple PDBs clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                      |
-| 4    | Patch(update) an existing Pluggable Database                                 | 5min                      | Patch(Update) a pluggable database by migrating it to higher version of CDB                                                                                                                     | Patch(update) multiple pluggable databases and ensure that they run on the latest available version of database.  PDBs                                                                                       |
+| 4    | Patch (update) an existing Pluggable Database                                 | 5min                      | Patch (Update) a pluggable database by migrating it to higher version of CDB                                                                                                                     | Patch (update) multiple pluggable databases and ensure that they run on the latest available version of database.                                                                                       |
 | 5    | Compliance Management for Pluggable Database                                                         | 10min                     | Apply a compliance standard on PDB, generate report and validate the results.                                                                                                 | Make sure PDBs comply with compliance standards and explore options to fix in case of any anomalies.                                                                                                                   |
 | 6    | Self- service to request a PDB using PDBaaS            | 10min                     | Request PDB (pluggable database) using Service Catalogue on Private Cloud. Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
 | 7    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10min                     | An overview of the administrative setup involved for PDBaaS (Private Cloud) which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc. | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm and make sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
@@ -452,7 +452,102 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/clone-pdb-validation.png " clone pdb check ")
 
-## Task 4: Compliance Management for Pluggable Database
+## Task 4: Patch (Update) an existing Pluggable Database (PDB)
+
+  1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8 , by unplugging and plugging it to Container database cdb186.subnet.vcn.oraclevcn.com.
+
+        ![](images/current-env-details.png "current-configuration")        
+
+  2. In order to complete this task, we need to modify named credential root and set its scope to global. This can be achieved by running the below command in terminal.
+
+        ```
+        <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
+        ```
+
+        ![](images/modify-root-credential.png "emcli to modify root credentials")        
+
+  3. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
+
+        ![](images/navigation.png "navigation")
+    and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
+
+      ![](images/admin-fm.png "navigation")
+
+
+  4.  We have already created the gold image (PDB Image) and subscribed Finance PBD to it.
+
+  5.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
+      ![](images/fm-flow1.png "selection")
+      Where:
+-  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***PDB Image***.
+-  Target Type = Desired target type, which can be Grid, RAC or SIDB. In this example, we will select ***Pluggable Database***.
+-  Operation = Name of the operation, which can be update (patch) or upgrade. In this example, we will select ***Update***.
+-  Type to filter = Selection criteria to highlight only those targets which qualify the selection, such as database naming.
+
+    We will select check box for PDB - Finance, as we want to patch it to higher version and select next.
+
+
+  6. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+
+      ![](images/fm-flow2.png "selection")
+
+      Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
+        -  Normal Host Credentials as ***ORACLE***
+        -  Privileged Host Credentials as ***ROOT***
+        -  SYSDBA Database Credentials as ***SYS_SALES***     
+
+        Select ***Next***.    
+
+  7. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
+
+      ![](images/fm-flow3-validate.png "quick and full valdiation modes")
+
+  8. Review the validation result.
+
+      ![](images/fm-flow3-validate-result.png "result of valdiation")
+
+      Incase of any error, we can fix it and choose revalidate.
+
+  9. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
+        ```
+        <copy>finance_pdb_patching</copy>
+        ```
+      ![](images/fm-flow4-dp-name.png "job name")
+  Here, we can see that we have opted to attach existing CDB and update PDB.
+
+      ![](images/dp-submit.png "submit operation")    
+
+      Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
+
+
+  10. Review the Deployment Procedures (DP).
+
+      ![](images/dp-list.png "Deployment Procedures submitted")
+
+      We can see that one of the DP related to Attach operation has already completed. Lets click on it and find out the steps executed by this DP.
+
+      ![](images/dp1-attach-complete.png "review dp for attach")
+     Lets go back to the Procedure Activity page and review the other DP.
+
+
+  11.  We can see that second DP for update operation is running.
+        ![](images/dp-list2.png "Deployment Procedures submitted")
+
+      Lets click on it and find out the steps executed by this DP.
+
+        ![](images/dp2-update-running.png "review dp for update")
+
+       We can see that attach DP completed successfully.
+         ![](images/dp2-update-complete.png "review dp for update_completed")
+
+  12.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
+
+      ![](images/env-list-final.png "new version check")
+
+    We can see that there Finance pdb is plugged into a new CDB named cdb186.subnet.vcn.oraclevcn.com and there is no reference in its original CDB - sales.subnet.vcn.oraclevcn.com
+
+
+## Task 5: Compliance Management for Pluggable Database
 
 Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use *High Security Configuration for Oracle Pluggable Database* compliance standard to secure configuration of provisioned database.
 
@@ -554,7 +649,7 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
 
   ![](images/logout-as-sysman.png " ")
 
-## Task 5: Self-Service to Request PDB Using PDBaaS
+## Task 6: Self-Service to Request PDB Using PDBaaS
 
 With the Self-Service Portal, cloud users can request a Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. PDBs are created with a predefined expiry time and is automatically deleted.
 
@@ -772,7 +867,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
    Click on the refresh icon on the top right in case the PDB is still seen on the page.
 
-## Task 6:  Setup  PDB-as-a-Service (PDBaaS)
+## Task 7:  Setup  PDB-as-a-Service (PDBaaS)
 
 Previous exercise demonstrated the process of Self-Service User requesting PDBs using available service templates. In this section, we will see the Administrative setup for PDBaaS.
 
