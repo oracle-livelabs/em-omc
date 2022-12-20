@@ -452,99 +452,97 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
   ![](images/clone-pdb-validation.png " clone pdb check ")
 
+
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-  1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8 , by unplugging and plugging it to Container database cdb186.subnet.vcn.oraclevcn.com.
+1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8 , by unplugging and plugging it to Container database cdb186.subnet.vcn.oraclevcn.com.
 
-        ![](images/current-env-details.png "current-configuration")        
+      ![](images/current-env-details.png "current-configuration")        
 
-  2. In order to complete this task, we need to modify named credential root and set its scope to global. This can be achieved by running the below command in terminal.
+2. In order to complete this task, we need to modify named credential root and set its scope to global. This can be achieved by running the below command in terminal.
 
-        ```
-        <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
-        ```
+      ```
+      <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
+      ```
 
-        ![](images/modify-root-credential.png "emcli to modify root credentials")        
+      ![](images/modify-root-credential.png "emcli to modify root credentials")        
 
-  3. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
+3. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
 
-        ![](images/navigation.png "navigation")
-    and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
+      ![](images/navigation.png "navigation")
+
+      and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
 
       ![](images/admin-fm.png "navigation")
 
 
-  4.  We have already created the gold image (PDB Image) and subscribed Finance PBD to it.
+4.  We have already created the gold image (PDB Image) and subscribed Finance PBD to it.
 
-  5.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
+5.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
       ![](images/fm-flow1.png "selection")
       Where:
--  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***PDB Image***.
--  Target Type = Desired target type, which can be Grid, RAC or SIDB. In this example, we will select ***Pluggable Database***.
--  Operation = Name of the operation, which can be update (patch) or upgrade. In this example, we will select ***Update***.
--  Type to filter = Selection criteria to highlight only those targets which qualify the selection, such as database naming.
+      -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***PDB Image***.
+      -  Target Type = Desired target type, which can be Grid, RAC or SIDB. In this example, we will select ***Pluggable Database***.
+      -  Operation = Name of the operation, which can be update (patch) or upgrade. In this example, we will select ***Update***.
+      -  Type to filter = Selection criteria to highlight only those targets which qualify the selection, such as database naming.
 
-    We will select check box for PDB - Finance, as we want to patch it to higher version and select next.
+      We will select check box for PDB - Finance, as we want to patch it to higher version and select next.
 
-
-  6. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+6. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
 
       ![](images/fm-flow2.png "selection")
 
       Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
-        -  Normal Host Credentials as ***ORACLE***
-        -  Privileged Host Credentials as ***ROOT***
-        -  SYSDBA Database Credentials as ***SYS_SALES***     
+      -  Normal Host Credentials as ***ORACLE***
+      -  Privileged Host Credentials as ***ROOT***
+      -  SYSDBA Database Credentials as ***SYS_SALES***     
 
-        Select ***Next***.    
+      Select ***Next***.    
 
-  7. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
+7. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
 
       ![](images/fm-flow3-validate.png "quick and full valdiation modes")
 
-  8. Review the validation result.
+8. Review the validation result.
 
       ![](images/fm-flow3-validate-result.png "result of valdiation")
 
       Incase of any error, we can fix it and choose revalidate.
 
-  9. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
-        ```
-        <copy>finance_pdb_patching</copy>
-        ```
+9. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
+      ```
+      <copy>finance_pdb_patching</copy>
+      ```
       ![](images/fm-flow4-dp-name.png "job name")
-  Here, we can see that we have opted to attach existing CDB and update PDB.
+      Here, we can see that we have opted to attach existing CDB and update PDB.
 
       ![](images/dp-submit.png "submit operation")    
-
       Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
 
-
-  10. Review the Deployment Procedures (DP).
+10. Review the Deployment Procedures (DP).
 
       ![](images/dp-list.png "Deployment Procedures submitted")
 
       We can see that one of the DP related to Attach operation has already completed. Lets click on it and find out the steps executed by this DP.
 
       ![](images/dp1-attach-complete.png "review dp for attach")
-     Lets go back to the Procedure Activity page and review the other DP.
+      Lets go back to the Procedure Activity page and review the other DP.
 
-
-  11.  We can see that second DP for update operation is running.
-        ![](images/dp-list2.png "Deployment Procedures submitted")
+11.  We can see that second DP for update operation is running.
+      ![](images/dp-list2.png "Deployment Procedures submitted")
 
       Lets click on it and find out the steps executed by this DP.
 
-        ![](images/dp2-update-running.png "review dp for update")
+      ![](images/dp2-update-running.png "review dp for update")
 
-       We can see that attach DP completed successfully.
-         ![](images/dp2-update-complete.png "review dp for update_completed")
+      We can see that attach DP completed successfully.
+      ![](images/dp2-update-complete.png "review dp for update_completed")
 
-  12.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
+12.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
 
       ![](images/env-list-final.png "new version check")
 
-    We can see that there Finance pdb is plugged into a new CDB named cdb186.subnet.vcn.oraclevcn.com and there is no reference in its original CDB - sales.subnet.vcn.oraclevcn.com
+      We can see that there Finance pdb is plugged into a new CDB named cdb186.subnet.vcn.oraclevcn.com and there is no reference in its original CDB - sales.subnet.vcn.oraclevcn.com
 
 
 ## Task 5: Compliance Management for Pluggable Database
