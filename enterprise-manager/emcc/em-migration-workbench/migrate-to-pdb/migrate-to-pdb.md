@@ -6,6 +6,9 @@ You can use Database Migration Workbench to migrate databases to multi-tenant ar
 
 Estimated Time: 30 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Migrate and upgrade 12c database to 19c PDB](videohub:1_7al8rgc7)
+
 ### Objectives
 
 In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
