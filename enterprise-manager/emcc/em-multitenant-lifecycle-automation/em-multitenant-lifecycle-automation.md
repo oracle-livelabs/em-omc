@@ -455,19 +455,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by unplugging and plugging it to Container database cdb186.subnet.vcn.oraclevcn.com.
+1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by relocating it to Container database cdb186.subnet.vcn.oraclevcn.com.
 
       ![](images/current-env-details.png "current-configuration")        
 
-2. In order to complete this task, we need to modify named credential root and set its scope to global. This can be achieved by running the below command in terminal.
-
-      ```
-      <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
-      ```
-
-      ![](images/modify-root-credential.png "emcli to modify root credentials")        
-
-3. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
+2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
 
       ![](images/navigation.png "navigation")
 
@@ -476,9 +468,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       ![](images/admin-fm.png "navigation")
 
 
-4.  We have already created the gold image (named PDB Image) and subscribed Finance PBD to it. This is a mandatory pre-requisite step.
+3.  We have already created the gold image (named PDB Image) and subscribed Finance PBD to it. This is a mandatory pre-requisite step.
 
-5.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
+4.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
       ![](images/fm-flow1.png "selection")
       Where:
       -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***PDB Image***.
@@ -488,7 +480,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       We will select check box for PDB - Finance, as we want to patch it to higher version and select ***Next***.
 
-6. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+5. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
 
       ![](images/fm-flow2.png "selection")
 
@@ -499,17 +491,17 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       Select ***Next***.    
 
-7. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
+6. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
 
       ![](images/fm-flow3-validate.png "quick and full valdiation modes")
 
-8. Review the validation result.
+7. Review the validation result.
 
       ![](images/fm-flow3-validate-result.png "result of valdiation")
 
       Incase of any error, we can fix it and choose revalidate.
 
-9. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
+8. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
       ```
       <copy>finance_pdb_patching</copy>
       ```
@@ -519,7 +511,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       ![](images/dp-submit.png "submit operation")    
       Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
 
-10. Review the Deployment Procedures (DP).
+9. Review the Deployment Procedures (DP).
 
       ![](images/dp-list.png "Deployment Procedures submitted")
 
@@ -528,7 +520,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       ![](images/dp1-attach-complete.png "review dp for attach")
       Lets go back to the Procedure Activity page and review the other DP.
 
-11.  We can see that second DP for update operation is running.
+10.  We can see that second DP for update operation is running.
       ![](images/dp-list2.png "Deployment Procedures submitted")
 
       Lets click on it and find out the steps executed by this DP.
@@ -538,12 +530,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       We can see that attach DP completed successfully.
       ![](images/dp2-update-complete.png "review dp for update_completed")
 
-12.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
+11.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
       ![](images/env-list-final.png "new version check")
 
-      We can see that there Finance pdb is plugged into a new CDB named cdb186.subnet.vcn.oraclevcn.com and there is no reference in its original CDB - sales.subnet.vcn.oraclevcn.com
-
+      We can see that Finance pdb is relocated to a new CDB named cdb186.subnet.vcn.oraclevcn.com.
 
 ## Task 5: Compliance Management for Pluggable Database
 
