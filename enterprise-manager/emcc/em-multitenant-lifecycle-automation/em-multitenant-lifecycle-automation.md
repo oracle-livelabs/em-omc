@@ -477,7 +477,6 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
       -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
       -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
-      -  Working Directory = We can use default value /tmp. This is the location where log files will be created.
 
       We will select check box for ***PDB - Finance***, as we want to patch it to higher version and select ***Next***.
 
@@ -490,6 +489,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       -  Privileged Host Credentials as ***ROOT***
       -  SYSDBA Database Credentials as ***SYS_SALES***     
 
+      Under Options, we can use default value /tmp for Working Directory. This is the location where log files will be created.
+      
       Select ***Next***.    
 
 6. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
