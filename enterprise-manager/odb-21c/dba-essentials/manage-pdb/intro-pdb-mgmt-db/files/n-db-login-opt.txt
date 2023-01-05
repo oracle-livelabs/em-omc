@@ -1,0 +1,1 @@
+> **Note:** Optionally, Oracle EM may redirect to the Database Login page, if not already logged in. Select the *Named* Credential option, if not already selected, and click **Login** to connect to the Oracle Database.
