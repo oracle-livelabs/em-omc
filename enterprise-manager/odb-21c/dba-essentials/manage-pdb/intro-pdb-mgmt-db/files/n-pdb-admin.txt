@@ -1,0 +1,1 @@
+> **Note:** The administrative user name and password are mandatory fields. You must specify the credentials for the administrative account to proceed to the next step.
