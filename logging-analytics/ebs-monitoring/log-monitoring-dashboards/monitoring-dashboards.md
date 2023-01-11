@@ -4,8 +4,10 @@
 
 Let's do a walk through on continuous monitoring of E-Business Suite application and related infrastructure for a large enterprise using Management dashboards.
 
-Estimated Lab Time: 15 minutes
+Estimated Lab Time: 20 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Continuous Monitoring using Management dashboards](videohub:1_99o2xtxy)
 
 ### Objectives
 
@@ -14,21 +16,39 @@ In this lab, you will:
 
 ## **Task 1:**  Continuous Monitoring using Management dashboards
 
-1. Select 'Dashboards' from the top navigation dropdown in Log explorer to view the 'Dashboards' listing page and select Compartment as 'ebs-lab-9522' in the 'Dashboards Scope' section on the left. Then click on "E-Business Suite Overview" dashboard to see the monitoring dashboard for Virtual Cloud Network Flow Logs analysis.
+1. Select 'Dashboards' from the top navigation dropdown in Log explorer to view the 'Dashboards'
+   ![](images/la-nav-ebs-dashboard.png "Ui Desc")
 
-   ![](images/nav-to-vcndb-2.gif "Ui Desc")
+2. Select Compartment as 'ebs-lab-9522' in the 'Dashboards Scope' section on the left.
 
-   You can click on any widget to drill down further for analysis. Click on "E-Business Suite Overview" dashboard to see the monitoring dashboard for Virtual Cloud Network Flow Logs analysis.
+   ![](images/la-dash-ebs-compartment.png "Ui Desc")
 
-   ![](images/vcn-db-2.png "UIdescription")
+3. Click on "E-Business Suite Overview" dashboard to see the monitoring dashboard for E-Business Suite and Virtual Cloud Network Flow Logs analysis.
+   ![](images/la-ebs-dashboard.png "Ui Desc")
 
-2. Scroll down to 'Traffic Correlation' widget and click on the punch-out icon of the widget to analyze further.
+4. Click **Custom** under **Time range** pickerSet, then Click on "Start and End Time".
+   ![](images/la-dash-custom-time.png "Ui Desc")
 
-    ![](images/drill-down-to-link-2.gif "UIdescription")
+5. Select START time as **Sep 1, 2022 12:00:00 AM**, END Time as **Sep 30, 2022 12:00:00 PM** and Click Apply.
+   ![](images/la-custom-time-selection.png "Ui Desc")
 
-3. Next, you can filter the data based on different parameters to identify a specific IP, Bandwidth bucket or VNIC. Repeat the steps from previous section to select "Show Search Filters" to drill down to a specific Bandwidth range and a VNIC.
+6. The below widget shows Virtual Cloud Network Flow Logs analysis like 'Max Packets In By Source Port' , 'Total Packets In by Destination Port'
+   ![](images/la-dash-vcn-packets.png "Ui Desc")
 
-    ![](images/link-filter-again-2.gif "UIdescription")
+7. The below widgets shows 'VCN Flow Logs Outbound Traffic', 'Traffic By Source IP' and 'Traffic By Destination IP'
+   ![](images/la-dash-vcn-traffic.png "Ui Desc")
+
+8. Scroll down to 'Functional Issues Overview' to view EBS Functional issues
+   ![](images/la-dash-ebs-functional-overview.png "Ui Desc")
+
+9. Click on the punch-out icon of the widget 'Functional Issues Overview' to analyze further.
+
+   ![](images/la-dash-ebs-functional-issues.png "UIdescription")
+
+10. Next, you can analyze further based EBS Functional Issues.
+
+    ![](images/la-ebs-functional-issue1.png "UIdescription")
+    ![](images/la-ebs-functional-issue2.png "UIdescription")
 
 ## Acknowledgements
 * **Author** - Gurusamy Poosamalai, Logging Analytics Development Team

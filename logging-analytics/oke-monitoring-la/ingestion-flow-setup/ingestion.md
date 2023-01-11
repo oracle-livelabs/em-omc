@@ -13,6 +13,8 @@ And below are the ingestion mechanisms that would be used
 * fluentd : An open source data collector
 * management-agent : Oracle provided data collector and Prometheus scraper.
 
+Watch the video below for a quick walk-through of the lab.
+[Ingestion Flow Setup](videohub:1_oosivrv7)
 
 ### Objectives
 
@@ -112,7 +114,7 @@ Gather the following information that will be used in this and subsequent labs.
 
     ```
       <copy>
-          wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/YQy-JQa0RPGxI-pGKmnmA_PJArpo8ZjMdYXCJQM7yXXf6bSCyzI7X_YYmfTDxGbw/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
+          wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/q-vIs9wVXEUHecoavw6is2rM0munIn-MTDuWBUxygwoC7kQ1moueb6dnasf0rXr7/n/axfo51x8x2ap/b/oci-kubernetes-monitoring/o/helm-chart/v2.0.0.alpha.1.tgz
 
       </copy>      
     ```  

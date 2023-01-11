@@ -9,6 +9,8 @@ In this lab we will be exploring
 * Dashboards: A data visualization tool that gathers real-time data from the various tiers of Kubernetes Cluster.
 * Widgets: A component that displays the real-time data.
 
+Watch the video below for a quick walk-through of the lab.
+[Exploration](videohub:1_q3tq4no0)
 
 ### Objectives
 

@@ -1,0 +1,3 @@
+Optionally, you can schedule the procedure to start at a later date and time with a grace period.   
+The grace period is the time that defines the maximum permissible delay when attempting to run a scheduled procedure. If the procedure does not start within the grace period, then the procedure skips running.   
+For this lab, do not use this option and do not select the grace period.

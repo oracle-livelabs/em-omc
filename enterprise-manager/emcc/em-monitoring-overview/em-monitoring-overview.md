@@ -14,8 +14,8 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Dynamic Runbooks to triage and resolve your incidents
 
-Watch the video below for a quick walk through of the lab.
-[](youtube:Qu0F2wVp3k0)
+Watch the video below for a quick walk-through of the lab.
+[Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
 
 ### Objectives
 The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
