@@ -455,7 +455,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this task, we will patch (update) Finance PDB, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by relocating it to Container database cdb186.subnet.vcn.oraclevcn.com.
+1. In this task, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by relocating it to Container database cdb186.subnet.vcn.oraclevcn.com.
 
       ![](images/current-env-details.png "current-configuration")        
 
@@ -478,7 +478,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
       -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
 
-      We will select check box for ***PDB - Finance***, as we want to patch it to higher version and select ***Next***.
+      We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
 5. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
 
@@ -490,7 +490,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
       -  SYSDBA Database Credentials as ***SYS_SALES***     
 
       Under Options, we can use default value /tmp for Working Directory. This is the location where log files will be created.
-      
+
       Select ***Next***.    
 
 6. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
