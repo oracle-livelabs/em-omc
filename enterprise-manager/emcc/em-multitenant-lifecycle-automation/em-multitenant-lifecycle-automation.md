@@ -359,98 +359,95 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 3: Clone an existing Pluggable Database (PDB)
 
-1.  Navigate to the “***Enterprise menu >> Provisioning and Patching >> Database provisioning***”.
+1.  Navigate to the “***Targets>> Databases***”.
 
-    ![](images/db-provisioning-flow-main.png " db-provisioning-main-page ")
+    ![](images/clone-navigate-to-databases-home.png " clone-navigate-to-databases-home ")
 
-2.  In the Database Provisioning page, in the Related Links section of the left menu pane, click Provision Pluggable Databases
-
-      ![](images/pdb-provisioning-flow-main.png " pdb-provisioning-main-page")
-
-3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to clone new PDBs.
-  ![](images/select-cdb-main-flow-helper.png " choose cdb")
-  ![](images/select-cdb-main-flow.png " select the cdb")
-
-4.  In the PDB Operations section, select **Create New Pluggable Databases**.
-
-    Click **Launch**
-
-    ![](images/create-new-pdb-operation.png " create new pdb ")
-
-5.  Under the PDB creation options, select **Clone an Existing PDB** .
-
-    Select **Full Clone**.
-
-    Click on the magnifier next to source PDB field to choose the source database for clone.
-
-    In the pop up search, type **`PROV_PDB`** and click search. Choose PROV_PDB and click **Select**.
-
-    Leave the Database Link blank.
-
-    Choose the Database Host Named Credential as "Oracle".
-
-    Click **Next**
-
-    ![](images/clone-create-pdb.png " clone pdb ")
-
-    ![](images/clone-choose-pdb.png " choose pdb for clone ")
-
-6.  On the Identification page , enter new PDB name (**full_clonepdb**).
-
-    You also have an option to create multiple clones by selecting the check box in the PDB Name section. For this lab, we will leave the option unchecked.
-
-    In the PDB Administrator section, credentials will be inherited from the source PDB, hence this section does not need any inputs.
-
-    Optionally, an additional PDB Administrator user can also be created in case needed.
-
-    Click **Next**
-
-      ![](images/clone-pdb-id-page.png " clone pdb identification")
-
-7.  On the Storage Page , select **Use Common Location for PDB Datafiles**.
-
-    Storage type - Filesystem is auto selected.
-    Location - Auto filled with PDB name suffix
-
-    Enter **/tmp** in temporary working directory in case the field is not auto filled.
+2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** and 
+**sales.subnet.vcn.orclevcn.com** to view their associated PDBs.
 
 
-    Optionally, you can select the postscript as we did in the creation flow.
+    We will clone the PDB **sales.subnet.oraclevcn.com_HR**  residing in sales.subnet.vcn.orclevcn.com CDB into hr.subnet.vcn.oraclevcn.com CDB
 
 
-    Click **Next** .
+    **Click** on the **sales.subnet.vcn.oraclevcn.com_HR** PDB as highlighted
 
 
-    ![](images/clone-pdb-storage.png " clone pdb storage option ")
+    ![](images/cloning-show-existing-pdb.png " cloning-show-existing-pdb ")
 
-8.  On the Schedule page, choose to start  **immediately**.
+3.  This will open up the PDB Home page
 
-    Click **Next**.
+    ![](images/clone-pdb-home-page.png " HR PDB Home page")
+  
 
-      ![](images/dblmschedulepage.jpg " schedule clone")
+4.  Navigate from **Oracle Database >> Cloning >> Create Full Clone**  
 
-9.  Review the details and  click **Submit**.
-
-    Click on View Execution Details link to see details and of the Procedure.
-
-      ![](images/clone-pdb-review.png " review clone pdb")
-      ![](images/clone-pdb-view-execution.png " clone pdb execution")
-
-     On Procedure Activity page , select specific execution step from the procedure step tree to see detail procedure execution log.
-
-    Setup View Data to be refreshed with specific time interval to refresh page. The procedure takes about 2-3 minutes to complete.  
-
-    Wait for **Status: Succeeded** which indicates the procedure ran successfully.
-
-      ![](images/procedure-validation.png " clone pdb validation")
+    This will open up the PDB Clone Management page. 
 
 
+    ![](images/clone-navigate-to-pdb-clone.png " navigate to pdb clone page ")
 
-10.  Navigate to ***Targets >> Databases***.
+5.  The PDB Clone management page opens up with options as highlighted below. 
 
-   Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly cloned PDB
+    The Pluggable Database Name is prepopulated with a deafult value. 
+    You can refer to the instructions below to update the PDB name. 
 
-  ![](images/clone-pdb-validation.png " clone pdb check ")
+    ![](images/clone-default-pdb-clone-page.png " clone pdb ")
+
+    Please update the values as suggested below.   
+
+    1. Click on the magnifier to update the SYSDBA credentials of the source PDB.
+    
+        Choose **Named Credentials** and select **SALES_SYS** from the dropdown.
+
+    2. 
+        ```
+        Pluggable Database Name : <copy>HR_CLONE</copy> 
+        ```
+    3. 
+        ```
+        Display Name: <copy>HR_CLONE</copy> 
+        ```
+    4. ``` 
+        Username: <copy>PDBADMIN</copy> 
+        ```
+       ``` 
+       Password: <copy>welcome1</copy> 
+       ```
+       
+       Confirm the password.
+    5. Click on the check box to **Clone the Pluggable Database into a different Container Database**
+    6. Click on the magnifier icon to select the destination CDB for cloning. In our case it is **HR CDB**
+    7. Click on the magnifier to update the SYSDBA credentials of the desination PDB. Choose **Named Credentials** and select **OEM_SYS**
+    8. Click on the magnifier to update the HOST credentials of the source PDB. Choose **Named Credentials** and select **ORACLE**
+
+6. Verify all the details as shown below and click **CLONE**
+
+    Optionally, you can choose to click on **Advanced** which will allow users to customise datafile location, run data masking scripts and also schedule the clone activity for a later point in time. 
+
+    ![](images/clone-updated-cloneinfo.png " updated clone info ")
+
+
+7. On Procedure Activity, select specific execution step from the procedure step tree to see details of the execution log.
+
+    Setup View Data to be refreshed with specific time interval to refresh page. 
+
+    The procedure takes about 2 minutes to complete.
+
+    ![](images/clone-procedure-activity.png " clone procedure info ")
+
+8.   Wait for **Status: Succeeded** which indicates the procedure ran successfully. 
+
+     ![](images/clone-procedure-success.png " clone procedure success ")
+
+9. Now let us validate the PDB clone from the database details page. 
+    Navigate to **Targets >> Databases**
+    ![](images/clone-navigate-for-validation.png "navigate-for-validation ")
+
+10. Click on the **HR CDB** dropdown to see the pluggable    databases. 
+
+    We now see the **HR_CLONE** PDB now available under **HR CDB**
+![](images/clone-validation.png "pdb clone validation success ")
 
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
