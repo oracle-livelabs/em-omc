@@ -26,15 +26,15 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
     },
     {
-      "title": "Lab 3: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: Job System Automation",
+      "title": "Lab 3: Job System Automation",
       "description": "This lab provides an overview of the Enterprise Manager Job System and how to use it to automate routine administrative tasks such as backup, SQL scripts, OS jobs etc.",
       "filename": "./../../em-job-system-automation/em-job-system-automation.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
