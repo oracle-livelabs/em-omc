@@ -131,7 +131,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 10. Optionally, you can also select a post-script, which will be executed post PDB creation.
 
-    On the same Storage Configuration page under the **Post Creation Scripts**  , click on  “Select from software library” radio button and click on the magnifier to choose the script.
+    On the same Storage Configuration page under the **Post Creation Scripts**  , click on  “Select from software library” checkbox and click on the magnifier to choose the script.
   ![](images/create-new-pdb-sql-script.png " ")
 
   In the dialog box that appears, type “**unlock**” and click on the magnifier. select the script '*Script to unlock account*' and click **select**
@@ -444,9 +444,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Navigate to **Targets >> Databases**
     ![](images/clone-navigate-for-validation.png "navigate-for-validation ")
 
-10. Click on the **HR CDB** dropdown to see the pluggable    databases. 
+10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases. 
 
-    We now see the **HR_CLONE** PDB now available under **HR CDB**
+    We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com** CDB
 ![](images/clone-validation.png "pdb clone validation success ")
 
 
