@@ -444,9 +444,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Navigate to **Targets >> Databases**
     ![](images/clone-navigate-for-validation.png "navigate-for-validation ")
 
-10. Click on the **hr.subnet.vcn.oraclevcn.com** dropdown to see the pluggable    databases. 
+10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases. 
 
-    We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com**
+    We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com** CDB
 ![](images/clone-validation.png "pdb clone validation success ")
 
 
