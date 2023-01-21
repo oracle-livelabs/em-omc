@@ -169,7 +169,6 @@ Dynamic Runbooks are documented procedures that IT staff follow to resolve an is
 
 For this lab, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
 
-
 1. Log into Enterprise Manager using the credentials “emadmin/welcome1”.
 
      ![Enterprise Manager login](images/emmonlab3step1.png " ")
