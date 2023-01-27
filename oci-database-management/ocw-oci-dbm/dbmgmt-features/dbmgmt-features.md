@@ -21,6 +21,9 @@ Database Administration
 
 Estimated Time: 1 hour
 
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Database Management](videohub:1_qpjm77l8)
+
 ### Objectives
 
 -   Use Oracle Cloud Infrastructure Database Management to manage a fleet of Oracle Databases and drill down to a single database for additional investigation.

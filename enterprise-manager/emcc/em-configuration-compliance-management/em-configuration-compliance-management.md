@@ -5,7 +5,7 @@ The objective of this lab is to highlight Oracle Enterprise Manager Cloud Contro
 *Estimated Lab Time:* 60 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[](youtube:xEKClAvB-Yg)
+[Configuration and Compliance Management](videohub:1_co6s1vy7)
 
 ### About Configuration and Compliance Management
 

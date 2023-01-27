@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Multitenant Database Lifecycle Management",
+  "workshoptitle": "Hybrid Multitenant Database Lifecycle Management",
   "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
@@ -13,16 +13,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 2: Multitenant Database Lifecycle Management",
+      "title": "Lab 1: Multitenant Database Lifecycle Management",
       "description": "The objective of this workshop is to highlight the Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities around Multitenant Database",
       "publisheddate": "7/16/2020",
       "filename": "./../../em-multitenant-lifecycle-automation/em-multitenant-lifecycle-automation.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
@@ -31,11 +31,9 @@
       "filename": "./../../faq/faq.md"
     },
     {
-      "title": "Oracle CloudWorld 2022 - Get Help",
-      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }
-
-
-

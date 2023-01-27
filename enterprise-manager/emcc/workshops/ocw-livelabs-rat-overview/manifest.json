@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Real Application Testing",
+  "workshoptitle": "Real Application Testing : SQL Performance Analyzer and Database Replay",
   "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
@@ -31,8 +31,8 @@
       "filename": "./../../faq/faq.md"
     },
     {
- "title": "Oracle CloudWorld 2022 - Get Help",
-       "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
-   }
+      "title": "Oracle CloudWorld 2022 - Get Help",
+      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+    }
   ]
 }
