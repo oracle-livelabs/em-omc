@@ -29,7 +29,7 @@ This lab assumes you have completed the following labs:
     ```
     <copy>
     cd /home/opc/
-    wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/idtskf8cjzhp/b/installer/o/Linux-x86_64/latest/oracle.mgmt_agent.rpm
+    wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/idtskf8cjzhp/b/agent_images/o/Linux-x86_64/latest/oracle.mgmt_agent.zip
     </copy>
     ```
 
