@@ -14,8 +14,8 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Dynamic Runbooks to triage and resolve your incidents
 
-Watch the video below for a quick walk through of the lab.
-[](youtube:Qu0F2wVp3k0)
+Watch the video below for a quick walk-through of the lab.
+[Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
 
 ### Objectives
 The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
@@ -162,6 +162,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 15.	Incident Dashboard is filtered for incidents with “Fatal” severity.
 
      ![Incident Manager, Incident Dashboard](images/emmonlab2step15.png " ")
+     
 
 ## Task 3A: Dynamic Runbooks
 
@@ -169,7 +170,7 @@ Dynamic Runbooks are documented procedures that IT staff follow to resolve an is
 
 For this lab, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
 
-1. Log into Enterprise Manager using the credentials “emadmin/welcome1”.
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
      ![Enterprise Manager login](images/emmonlab3step1.png " ")
 
@@ -260,6 +261,7 @@ For this lab, a Dynamic Runbook has already been published for you to use. You w
 23. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session. 
 
      ![Actions - Complete Runbook Session](images/emmonlab3astep23.png " ")
+     
 
 ## Task 3B: Dynamic Runbooks
 
