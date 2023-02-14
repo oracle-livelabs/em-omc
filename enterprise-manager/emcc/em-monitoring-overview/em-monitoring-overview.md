@@ -162,6 +162,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 15.	Incident Dashboard is filtered for incidents with “Fatal” severity.
 
      ![Incident Manager, Incident Dashboard](images/emmonlab2step15.png " ")
+     
 
 ## Task 3A: Dynamic Runbooks
 
@@ -169,157 +170,98 @@ Dynamic Runbooks are documented procedures that IT staff follow to resolve an is
 
 For this lab, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
 
-**Note:** In steps 1 through 15, you will log in as SYSMAN to modify a time range used in the Dynamic Runbook in this task. Completing these initial steps will allow you to view the metric graph for the designated incident you will eventually start a Runbook session on. You are still able complete this task without modifying the time range (in steps 1-15), but please note that this will cause the metric graph for the incident to not display when you run the Runbook in later steps. 
-
-1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
-
-     ![Enterprise Manager login - SYSMAN](images/sysmanLogin.png " ")
-
-2. Navigate to "Enterprise >> Monitoring >> Runbooks".
-
-     ![Runbooks Navigation - SYSMAN](images/sysmanRunbooksNavigation.png " ")
-
-3. In the Runbooks page that appears, switch to the Published tab view.
-
-     ![Select Published Tab - SYSMAN](images/sysmanSelectPublishedTab.png " ")
-
-4. In this Published tab view, you should see a published Runbook labeled “Fast Recovery Area Triage”. From the Actions menu of this Runbook, select “Create a New Version.”
-
-     ![Create Runbook Draft - SYSMAN](images/sysmanCreateRunbookDraft.png " ")
-
-5. A pop-up will appear to enter an Incident ID. This is needed to pass incident details to the Runbook draft. Enter "8161". Select OK. 
-
-     ![FRA Runbook Draft Popup for Incident ID - SYSMAN](images/sysmanEnterID.png " ")
-
-6. You will be navigated to a page to edit the Runbook. This is a draft of the initial “Fast Recovery Area Triage” Runbook. Select the pencil icon to make edits to Step 2. 
-
-     ![FRA Runbook Draft - Edit Step 2 - SYSMAN](images/sysmanEditStep2.png " ")
-
-7. Select the Time Range field. 
-
-     ![FRA Runbook Draft - Select Time Range for Step 2 - SYSMAN](images/sysmanSelectTimeRange.png " ")
-
-8. A pop-up will appear and show you the option to modify the time range of the metric data that will display in a graph. In the Start Time field, enter "evt\_time – 1d". In the End Time field, enter "evt\_time + 1d". Select Done.
-
-     ![FRA Runbook Draft - Modify Time Range - SYSMAN](images/sysmanModifyTimeRange.png " ")
-
-9. Select Save Step.
-
-     ![FRA Runbook Draft - Save Step - SYSMAN](images/sysmanSaveStepModifiedRange.png " ")
-
-10. At the top of the page click on the “Runbooks” link to go back to the Runbooks page.
-
-     ![FRA Runbook Draft - Go Back to Runbook Page - SYSMAN](images/sysmanLinkBackToRunbookPage.png " ")
-
-11. You will see the “Fast Recovery Area Triage” Runbook listed under the  Drafts tab.
-
-     ![FRA Runbook Draft - Updated Draft Tab view - SYSMAN](images/sysmanDraftRbFraOnRbPage.png " ")
-
-12. From the Actions menu, select Publish.
-
-     ![FRA Runbook Draft - Publish Runbook - SYSMAN](images/sysmanPublishRunbook.png " ")
-
-13. Select OK. 
-
-     ![FRA Runbook Draft - Select OK to Publish Runbook - SYSMAN](images/sysmanPublishRunbookDraftPopup.png " ")
-
-14. This will now replace the previous published “Fast Recovery Area Triage” Runbook with the edits you made.
-
-15. Log out of Enterprise Manager as SYSMAN.
-
-     ![Enterprise Manager logout](images/sysmanLogout.png " ")
-
-16. Log into Enterprise Manager again using the credentials “emadmin/welcome1”.
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
      ![Enterprise Manager login](images/emmonlab3step1.png " ")
 
-17. Navigate to "Enterprise >> Monitoring >> Incident Manager".
+2. Navigate to "Enterprise >> Monitoring >> Incident Manager".
      
      ![Navigate to Incident Manager](images/emmonlab3astep2.png " ")
 
-18. In Incident Manager, the “All open incidents” view is displayed by default. In this view, highlight the incident with Summary text “The value of the Fast Recovery Area % Used is 70.11”. The Fast Recovery Area is a unified storage location for all Oracle Database files related to recovery. Details of the incident will be displayed in the bottom pane. 
+3. In Incident Manager, the “All open incidents” view is displayed by default. In this view, highlight the incident with Summary text “The value of the Fast Recovery Area % Used is 70.11”. The Fast Recovery Area is a unified storage location for all Oracle Database files related to recovery. Details of the incident will be displayed in the bottom pane. 
 
      ![Highlighted Incident](images/emmonlab3astep3.png " ")
 
-19. In the bottom pane, you should see a section called "Runbook Sessions".
+4. In the bottom pane, you should see a section called "Runbook Sessions".
 
      ![Runbook Sessions section in Incident Manager](images/emmonlab3astep4.png " ")
 
-20. Click on "Start Runbook Session".
+5. Click on "Start Runbook Session".
      
      ![Start Runbook Session](images/emmonlab3astep5.png " ")
 
-21. At the top of this page, the previous incident details are carried over. These details will be passed to the Runbook once you create a session.  Under the incident details, a table displays the published Runbooks that can be used against the incident.
+6. At the top of this page, the previous incident details are carried over. These details will be passed to the Runbook once you create a session.  Under the incident details, a table displays the published Runbooks that can be used against the incident.
 
      ![Start Runbook Session Page](images/emmonlab3astep6.png " ")
 
-22. To preview the Runbook steps, click on the Runbook name, "Fast Recovery Area Triage". You can click on the  steps to view more details. **Note:** In this task, there is only one published Runbook available. In cases where there are multiple Runbooks, the preview can help you decide which Runbook to use.
+7. To preview the Runbook steps, click on the Runbook name, "Fast Recovery Area Triage". You can click on the  steps to view more details. **Note:** In this task, there is only one published Runbook available. In cases where there are multiple Runbooks, the preview can help you decide which Runbook to use.
 
      ![Preview Runbook](images/emmonlab3astep7.png " ")
 
-23. Click Close when you are done previewing the steps.
+8. Click Close when you are done previewing the steps.
 
-24. After previewing the steps, select on the play icon under the Start Session column to begin the Runbook session.
+9. After previewing the steps, select on the play icon under the Start Session column to begin the Runbook session.
 
      ![Play Runbook Session](images/emmonlab3astep9.png " ")
 
-25. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Also, notice the incident details have been carried over to the session.
+10. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Also, notice the incident details have been carried over to the session.
 
      ![FRA Runbook Session Steps for Incident](images/emmonlab3astep10.png " ")
 
-26. The Overview & Prerequisites step describes what the Runbook does and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the Named Credential, **CDB186\_SYS**, for the target database. Access to this Named Credential will allow you to successfully run through all the steps.
+11. The Overview & Prerequisites step describes what the Runbook does and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the Named Credential, **CDB186\_SYS**, for the target database. Access to this Named Credential will allow you to successfully run through all the steps.
 
      ![Overview & Prerequisites Step](images/emmonlab3astep11.png " ")
 
-27. Select the play icon in Step 2 to review the metric, FRAPercentUsed, that triggered the incident. The red vertical dotted line indicates when the incident happened. Notice the increasing trend of the metric before crossing the threshold. The threshold was crossed at approximately 70%. 
+12. Select the play icon in Step 2 to review the metric, FRAPercentUsed, that triggered the incident. The red vertical dotted line indicates when the incident happened. Notice the increasing trend of the metric before crossing the threshold. The threshold was crossed at approximately 70%. 
      
      **Note:** The metric data was simulated for the purpose of this lab. As a result, your graph may not exactly resemble the image shown below, but it should still show an upwards trend.
 
      ![Review the Metric - Step 2](images/emmonlab3astep12.png " ") 
 
-28. Next, check the FRA size of the database. Notice for Step 3 the gear icon is displayed instead of the play icon. This indicates that certain credentials are required before running the step.
+13. Next, check the FRA size of the database. Notice for Step 3 the gear icon is displayed instead of the play icon. This indicates that certain credentials are required before running the step.
 
      ![Gear Icon - Step 3](images/emmonlab3astep13.png " ")
 
-29. Click on the gear icon for Step 3. In the pop-up that appears, enter the credential **CDB186\_SYS** and click Save.
+14. Click on the gear icon for Step 3. In the pop-up that appears, enter the credential **CDB186\_SYS** and click Save.
 
      ![Enter Credentials - Step 3](images/emmonlab3astep14.png " ")
 
-30. After saving, the Runbook session is updated and the gear icon for Step 3 will turn into a play icon. The same credentials are needed to run Step 4 and Step 5, so these steps have also been updated to a play icon instead of a gear icon. 
+15. After saving, the Runbook session is updated and the gear icon for Step 3 will turn into a play icon. The same credentials are needed to run Step 4 and Step 5, so these steps have also been updated to a play icon instead of a gear icon. 
 
      ![Credentials Saved - Step 3](images/emmonlab3astep15.png " ")
 
-31. Click on the play icon for Step 3 to check the FRA size. A table appears, displaying the FRA size for the database. It should be approximately 13 Gigabytes. According to the Runbook instructions, the FRA size must be set to at least 50 Gigabytes (50G) to comply with the Database standard. 
+16. Click on the play icon for Step 3 to check the FRA size. A table appears, displaying the FRA size for the database. It should be approximately 13 Gigabytes. According to the Runbook instructions, the FRA size must be set to at least 50 Gigabytes (50G) to comply with the Database standard. 
 
      ![Check FRA Size - Step 3](images/emmonlab3astep16.png " ")
 
-32. To change the FRA size to 50G, click the play icon on Step 4. You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRAPercentUsed to decrease.
+17. To change the FRA size to 50G, click the play icon on Step 4. You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRAPercentUsed to decrease.
 
      ![Change FRA Size - Step 4](images/emmonlab3astep17.png " ")
 
-33. Run Step 5 to view the updated FRA size and to confirm that it has been set to at least 50G. Your new FRA size should be approximately 53687091200 (50G), which meets the minimum threshold for FRA size.
+18. Run Step 5 to view the updated FRA size and to confirm that it has been set to at least 50G. Your new FRA size should be approximately 53687091200 (50G), which meets the minimum threshold for FRA size.
 
      ![Check FRA Size Again - Step 5](images/emmonlab3astep18.png " ")
 
-34. Step 6 describes the success criteria: once you have performed all the Runbook steps and the FRA size meets the minimum threshold, then this should have resolved the issue. 
+19. Step 6 describes the success criteria: once you have performed all the Runbook steps and the FRA size meets the minimum threshold, then this should have resolved the issue. 
 
      ![Success Criteria - Step 6](images/emmonlab3astep19.png " ")
 
      **Note:** For the purpose of this lab, the metric incident was simulated and therefore may still remain in Incident Manager after these steps have been run.
 
-35. The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and rerun your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later. 
+20. The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and rerun your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later. 
 
-36. Select Mark as Done to indicate that you have finished all the steps. Once you Mark as Done, you are unable to run the steps and the Runbook session will become read-only.
+21. Select Mark as Done to indicate that you have finished all the steps. Once you Mark as Done, you are unable to run the steps and the Runbook session will become read-only.
 
      ![Mark as Done](images/emmonlab3astep21.png " ")
 
-37. Click OK.
+22. Click OK.
 
      ![Mark as Done - OK](images/emmonlab3astep22.png " ")
 
-38. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session. 
+23. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session. 
 
      ![Actions - Complete Runbook Session](images/emmonlab3astep23.png " ")
+     
 
 ## Task 3B: Dynamic Runbooks
 
