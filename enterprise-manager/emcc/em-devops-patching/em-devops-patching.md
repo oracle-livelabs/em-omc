@@ -417,11 +417,9 @@ In this lab you will learn:
 
     ![Fleet Import Image](../em-devops-patching/images/fleet-import-image.png " ")
 
-
 3. Go back to the Oracle Enterprise Manager console and logout from the "CYRUS" account.
 
     ![EM CYRUS Logout](../em-devops-patching/images/em-cyrus-logout.png " ")
-
 
 4. Login using the "SYSMAN" account.
 
@@ -436,6 +434,13 @@ In this lab you will learn:
     ![EM Procedure Import Image](../em-devops-patching/images/em-procedure-import-image.png " ")
 
     ![EM Procedure Import Image Status](../em-devops-patching/images/em-procedure-import-image-status.png " ")
+
+    Then remove the downloaded .zip file used to create the Gold Image:
+
+    ```
+    <copy>cd ~
+    rm 19.14ExportGoldImage.zip</copy>
+    ```
 
 7. Go back to the SSH terminal and execute below EMCLI command to verify the Gold Image details.
 
@@ -607,5 +612,5 @@ You may [proceed to the next lab](#next).
 
 ## Acknowledgements
 - **Author** - Alfredo Krieg, NA Technology, August 2022
-* **Contributors** - Andrew Hong, NA Technology
-* **Last Updated By/Date** -
+* **Contributors** - 
+* **Last Updated By/Date** - March 2023
