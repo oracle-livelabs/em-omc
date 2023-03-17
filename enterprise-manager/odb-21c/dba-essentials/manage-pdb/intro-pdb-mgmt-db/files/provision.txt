@@ -1,0 +1,2 @@
+When you run an administrative task on your database from Oracle EM, such as create, delete, or plug PDB, the job system starts a new job to complete that procedure. You can view the details of the job in Oracle EM from the Provisioning page.   
+To open the Provisioning page, from the **Enterprise** menu, select **Provisioning and Patching** &gt; **Procedure Activity** and click on the specific activity name.

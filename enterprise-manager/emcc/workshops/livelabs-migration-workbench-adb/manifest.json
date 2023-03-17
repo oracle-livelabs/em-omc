@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Database Migration Workbench",
+  "workshoptitle": "Oracle Enterprise Manager - Database Migration Workbench - ADB Destinations",
   "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
@@ -13,16 +13,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
     },
     {
-      "title": "Lab 2: Initialize Environment",
-      "description": "How to validate and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "./../../em-migration-workbench-adb/initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 3: Migrate and upgrade 12c database to 19c ADB",
+      "title": "Lab 2: Migrate and upgrade 12c database to 19c ADB",
       "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
       "filename": "./../../em-migration-workbench-adb/migrate-to-adb/migrate-to-adb.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "./../../em-migration-workbench-adb/initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",

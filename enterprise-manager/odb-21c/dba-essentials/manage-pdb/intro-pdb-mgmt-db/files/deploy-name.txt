@@ -1,0 +1,1 @@
+The instance name you enter helps you identify and track the progress of this procedure on the Procedure Activity page.

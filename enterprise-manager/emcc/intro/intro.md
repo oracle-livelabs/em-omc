@@ -32,7 +32,7 @@ Join Oracle's ***Wim Coekaerts***, *senior vice president of software developmen
 
 In this workshop you will learn about:
 
-#### 1. Database Lifecycle Automation
+#### Database Lifecycle Automation
 -	Create a Pluggable Database (PDB)
 -	Un-plug/Plug an existing Pluggable Database
 -	Clone an existing Pluggable Database
@@ -40,46 +40,47 @@ In this workshop you will learn about:
 -	Self- service to request a PDB using PDBaaS
 -	Administrative Setup for PDBaaS (Private Cloud)- Review only
 
-#### 2. Find, Fix, Validate
+#### Find, Fix, Validate
 - View unified Database Performance via Performance Hub
 - Use Real-time Database Operations Monitoring to view long running database tasks
 - Identify Top SQL in a PDB and tune it using SQL Tuning Advisor
 - Use SQL Performance Analyzer Optimizer to gather statistics for validation
 - Use Database Workload Replay to run real workload against your changes for additional validation
 
-#### 3. Database Fleet Maintenance - Patching
+#### Database Fleet Maintenance - Patching
 * Detect Configuration Pollution
 * Patch a Database target using a Gold Image
     - All Pluggable Databases in that Container Database will automatically get patched
     - Rollback and Cleanup
 
-#### 4. Database Fleet Maintenance - Upgrade
+#### Database Fleet Maintenance - Upgrade
 * Detect Configuration Pollution
 * Upgrade Oracle DB Software at scale with minimal downtime
     - All Pluggable Databases in that Container Database will automatically get upgraded
     - Cleanup
 
-#### 5. Compliance and Drift Management
+#### Compliance and Drift Management
 - Analyze, Increase standardization, reduce number of different configuration sets
 - Execute a one-time comparison to compare the latest reference configuration to one or more targets to determine the configuration differences
 - Continuous drift monitoring of multiple targets against a reference target for initialization parameters using customized configuration monitoring template
 - Run a review aggregated security compliance framework and standard for Oracle Database 12c and Oracle Host targets
 - Host security compliance using custom compliance standard
 
-#### 6. Job System Automation
+#### Job System Automation
 * Understand how to create an OS Command Job
 * Create a SQL command Job
 * Create Database Backup Job using Wizard
 
-#### 7. Real Application Testing
+#### Real Application Testing
 * Run SQL Performance Analyzer to review SQL performance before 19c Upgrade
 * Capture workload of 18c Database
 * Run Database Replay of 18c Database Workload in 19c Database
 * Run Consolidation Replay in 2 separate Pluggable Databases
 
-#### 8. Enterprise Monitoring
+#### Enterprise Monitoring
 - Explore Enterprise Summary page and drill down to see a list of down targets
 - Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
+- Create and use Dynamic Runbooks to triage and resolve your incidents
 - Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
 - Create a new Corrective Action and associate it with a metric
 - Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
@@ -87,7 +88,7 @@ In this workshop you will learn about:
 - View the hierarchy of an existing Administrator Group
 - Review out-of-the-box incident rules shipped with Enterprise Manager
 
-#### 9. Deploy and Manage Oracle Databases with Ansible and Enterprise Manager
+#### Deploy and Manage Oracle Databases with Ansible and Enterprise Manager
 - Install and configure Ansible to work with Oracle Enterprise Manager 13c
 - Review Oracle Enterprise Manager DBaaS setup for Pluggable Databases
 - Provision, resize, shutdown, start and delete a Pluggable Database using Ansible playbooks and EM's DBaaS capabilities

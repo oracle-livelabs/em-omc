@@ -1,0 +1,50 @@
+{
+    "workshoptitle": "Kubernetes Monitoring and Troubleshooting",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to OKE Monitoring through OCI Logging Analytics",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Get Familiar with Logging Analytics Explorer GUI",
+            "description": "Get Familiar with OCI Logging Analytics Explorer GUI",
+            "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
+        },
+        {
+            "title": "Lab 2: Ingestion Flow Setup",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for OKE System Logs and Obejct Logs",
+            "filename": "../../ingestion-flow-setup/ingestion.md"
+        },
+        {
+            "title": "Lab 3: Customizing Application Logs Configuration",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
+            "filename": "../../custom-log-collection/custom-log-collection.md"
+        },
+        {
+            "title": "Lab 4: Exploration",
+            "description": "Log Exploration through Dashboards and Widgets",
+            "filename": "../../exploration/exploration.md"
+        },
+        {
+            "title": "Lab 5 (Optional): Building dashboards in Logging Analytics with the data ingested by Management Agents",
+            "description": "This live lab outlines the steps to build dashboards in Logging Analytics with the data ingested by Management Agent",
+            "filename": "../../la-dashboard-creation/dashboard.md"
+        },
+        {
+            "title": "Conclusion",
+            "filename": "../../conclusion/conclusion.md"
+        },
+        {
+
+            "title": "Oracle CloudWorld 2022 - Get Help",
+            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+        }
+    ]
+}

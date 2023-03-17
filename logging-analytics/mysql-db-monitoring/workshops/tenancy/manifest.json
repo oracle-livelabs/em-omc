@@ -1,0 +1,46 @@
+{
+    "workshoptitle": "Introduction to Logging Analytics",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../introduction/intro.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Getting Familiar with Log Explorer",
+            "description": "Getting familiar with OCI Logging Analytics Explorer",
+            "filename": "../../getting-familiar-with-log-explorer/getting-familiar-with-log-explorer.md"
+        },
+        {
+            "title": "Lab 2: Getting Familiar with Types of Logs Collected",
+            "description": "Getting familiar with the different types of logs collected and log sources used for this lab",
+            "filename": "../../log-collection-types/log-collection-types.md"
+        },
+        {
+            "title": "Lab 3: Explore Logs Using Cluster Visualization",
+            "description": "Analyzing and Troubleshooting the logs using 'Cluster' Visualization in Log Explorer",
+            "filename": "../../explore-logs-using-cluster/explore-logs-using-cluster.md"
+        },
+        {
+            "title": "Lab 4: Explore Logs using Link Visualization",
+            "description": "Analyzing and Troubleshooting the logs using 'Link' Visualization in Log Explorer",
+            "filename": "../../explore-logs-using-link/explore-logs-using-link.md"
+        },
+        {
+            "title": "Lab 5: Create Dashboards",
+            "description": "Create the Dashboards in Logging Analytics to track all your priority activities using widgets in one place",
+            "filename": "../../create-dashbaords/create-dashbaords.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
