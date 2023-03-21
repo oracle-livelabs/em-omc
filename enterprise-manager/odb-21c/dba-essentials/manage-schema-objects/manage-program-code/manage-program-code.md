@@ -21,7 +21,7 @@ This lab assumes you have-
 -   Installed Oracle Database Actions
 -   *HR* schema enabled to access Database Actions
 -   Logged in to Oracle Database Actions in a web browser as *HR*
--   Created a table named *PURCHASE_ORDERS* with *PO_NUMBER*, *PO_DATE*, *PO_VENDOR* and *PO_DATE_RECIEVED* as columns.
+-   Created a table named *`PURCHASE_ORDERS`* with *`PO_NUMBER`*, *`PO_DATE`*, *`PO_VENDOR`* and *`PO_DATE_RECIEVED`* as columns.
 
 ## Task 1: Create a PL/SQL procedure 
 
@@ -31,7 +31,7 @@ You can create a new procedure in your Oracle Database using Database Actions. 
 
    ![HR Schema](./images/procedure-hr.png " ")  
 
-2.  Execute the following script in the PL/SQL editor to create a new procedure named *ADD_PO_HISTORY*. This procedure creates a new procedure named *ADD_PO_HISTORY*. 
+2.  Execute the following script in the PL/SQL editor to create a new procedure named *`ADD_PO_HISTORY`*. This procedure creates a new procedure named *`ADD_PO_HISTORY`*. 
 
     ```
     <copy>
@@ -67,23 +67,23 @@ You can create a new procedure in your Oracle Database using Database Actions. 
 
    ![New procedure](./images/new-procedure.png " ")  
 
-   You will now remove a column from the table *PURCHASE_ORDERS* referenced in the *ADD_PO_HISTORY* procedure.    
+   You will now remove a column from the table *`PURCHASE_ORDERS`* referenced in the *`ADD_PO_HISTORY`* procedure.    
      
 5. From the Navigator tab of the HR schema, select Tables from the Object type drop-down list.   
 
    You can view a list of tables associated with the HR schema.  
 
-6. Select *PURCHASE_ORDERS* table and right-click to select **Edit**.   
+6. Select *`PURCHASE_ORDERS`* table and right-click to select **Edit**.   
 
    ![Edit table](./images/edit-table.png " ")  
 
-   This opens the Table properties dialog box of the *PURCHASE_ORDERS* table.
+   This opens the Table properties dialog box of the *`PURCHASE_ORDERS`* table.
 
 7. Click the Columns pane of the dialog.  
 
    ![Columns pane](./images/columns-pane.png " ")  
 
-8. Click on the *PO_DESCRIPTION* column and click - to remove the column from the table.  
+8. Click on the *`PO_DESCRIPTION`* column and click - to remove the column from the table.  
 
    ![Remove column from table](./images/remove-column.png " ")  
 
@@ -91,15 +91,15 @@ You can create a new procedure in your Oracle Database using Database Actions. 
 
     ![Apply column removal](./images/remove-column-apply.png " ")  
 
-   You will view an alter table message in the Output pane of the dialog box after the PO_DESCRIPTION column is removed. You now have ADD_PO_HISTORY procedure in your database that is invalid.  
+   You will view an alter table message in the Output pane of the dialog box after the PO_DESCRIPTION column is removed. You now have ADD_PO_HISTORY procedure in your database that is invalid.
 
-   You will now check for invalid objects and perform the following steps to validate the invalid procedure *ADD_PO_HISTORY*.  
+   You will now check for invalid objects and perform the following steps to validate the invalid procedure *`ADD_PO_HISTORY`*.  
 
 10. Click the Selector icon to go to the Overview page and then select **Development**.  
 
     ![Development menu](./images/development-menu.png " ")  
 
-11. The Invalid Objects widget displays the *ADD_PO_HISTORY* procedure.  
+11. The Invalid Objects widget displays the *`ADD_PO_HISTORY`* procedure.  
 
     ![Invalid Objects](./images/invalid-objects.png " ")  
 
@@ -111,7 +111,7 @@ You can create a new procedure in your Oracle Database using Database Actions. 
 
     You can view a list of procedures associated with the HR schema.  
 
-14. Click on the *ADD_PO_HISTORY* procedure.   
+14. Click on the *`ADD_PO_HISTORY`* procedure.   
 
     ![ADD_PO_HISTORY procedure](./images/red-cross-procedure.png " ")  
 
@@ -135,15 +135,15 @@ You can create a new procedure in your Oracle Database using Database Actions. 
     component 'PO_DESCRIPTION' must be declared
     ```
 
-    The result clearly means that you need to add the column *PO_DESCRIPTION* back to the *PURCHASE_ORDERS* table to validate the *ADD_PO_HISTORY* procedure.  
+    The result clearly means that you need to add the column *`PO_DESCRIPTION`* back to the *`PURCHASE_ORDERS`* table to validate the *`ADD_PO_HISTORY`* procedure.  
 
 18. From the Navigator tab of the HR schema, select Tables from the Object type drop-down list.  
 
-19. Select *PURCHASE_ORDERS* table and right-click to select **Edit**.
+19. Select *`PURCHASE_ORDERS`* table and right-click to select **Edit**.
 
     ![Edit table](./images/edit-table-again.png " ")  
 
-    This opens the Table properties dialog box of the PURCHASE\_ORDERS table.  
+    This opens the Table properties dialog box of the *`PURCHASE_ORDERS`* table.  
 
 20. Click the Columns pane of the dialog.  
 
