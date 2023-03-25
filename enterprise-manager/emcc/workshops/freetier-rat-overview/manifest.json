@@ -26,16 +26,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
     },
     {
-      "title": "Lab 3: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: Get Started with Real Application Testing",
+      "title": "Lab 3: Get Started with Real Application Testing",
       "description": "The objective of this lab is to become familiar with Real Application Testing capabilities using Oracle Enterprise Manager Cloud Control 13c.",
       "publisheddate": "6/16/2021",
       "filename": "./../../em-rat-spa-dbreplay/em-rat-spa-dbreplay.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
