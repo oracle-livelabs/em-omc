@@ -2,18 +2,18 @@
 
 ## Introduction
 
-You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to DBCS (ExaCC, ExaCS, BM, or VM), and autonomous, using TTS and data pump migration methods in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **autonomous** migration.
+You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to Base Database Service (BM or VM) or Exadata Database Service (ExaCC, ExaCS), and autonomous, using TTS and data pump migration methods in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **autonomous** migration.
 
 Estimated Time: 60 minutes
 
 ### Objectives
 
-In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create an autonomous database in Oracle Cloud. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
+In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will review the autonomous database creation completed in advance for this lab. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | Review prerequisites completed in advance | 10 minutes | Review prerequisites completed on the source database, host, and in Enterprise Manager |
-| 2 | Create destination autonomous database and storage bucket in OCI | 10 minutes   | Create the autonomous database and download the client wallet. Create a storage bucket to store migration files |
+| 1 | Launch Enterprise Manager console and review prerequisites completed in advance | 10 minutes | Review prerequisites completed on the source database and in Enterprise Manager |
+| 2 | Launch OCI console and review prerequisites completed in advance | 10 minutes   | Review autonomous database and storage bucket created in OCI in advance |
 | 3 | Perform target autonomous database pre-requisites | 20 minutes   | Discover the autonomous database in Enterprise Manager. Create required credentials |
 | 4 | Migrate and upgrade a 12c non-container database to 19c autonomous database in Oracle Cloud | 20 minutes   | Source database: orcl, destination database: ATP-ORCL |
 
@@ -29,13 +29,17 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 
 ## Task 1: Launch Enterprise Manager console and review prerequisites completed in advance
 
-Once your workshop is provisioned, click on "View Login Info" on the top right of the browser page. This opens the "Reservation Information" screen, click on "Launch Enterprise Manager":
+Once your workshop is provisioned, click on "View Login Info" on the top right of the browser page. This opens the "Reservation Information" screen:
 
-![Launch EM](images/launch-em.png " ")
+![Launch EM](images/launch-reservation.png " ")
 
-> **Note:** You may see an error on the browser while accessing the Web Console - “Your connection is not private” as shown below. Ignore and add the exception to proceed.
+For this workshop you will not use the remote desktop, so do not click the "Launch Remote Desktop" button, but rather copy the IP address of you instance. Open a new browser tab and enter the Enterprise Manager console URL for your instance as follows:
+
+https://*The IP address you just copied*:7803/em
 
 ![Security warning](../../initialize-environment/images/login-em-external-1.png " ")
+
+> **Note:** You may see an error on the browser while accessing the Web Console - “Your connection is not private” as shown below. Ignore and add the exception to proceed.
 
 click on the *Username* field and login with the credentials provided below.
 
@@ -97,7 +101,11 @@ Sign in using the password provided in the "Reservation Information" screen:
 
 ![OCI Login](images/login-oci.png " ")
 
-On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password". This takes you to the OCI console:
+On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password": 
+
+![Change OCI Password](images/oci-change-password.png " ")
+
+This takes you to the OCI console:
 
 ![OCI Console](images/oci-console.png " ")
 
@@ -105,7 +113,7 @@ On the "Change Password" screen, choose a new password that meets the requiremen
 
 ![ADB Menu](images/adb-menu.png " ")
 
-The "Autonomous Databases" screen opens in the root compartment at first, which you don't have permission to. Click on the "Compartment" drop-down list and select your compartment as provided in the "Reservation Information" screen:
+The "Autonomous Databases" screen opens in the root compartment at first, which you don't have permission to. Click on the "Compartment" drop-down list and select your compartment as provided in the "Reservation Information" screen. Note your compartment name will start with your username:
 
 ![ADB Page 1](images/adb-page-1.png " ")
 
