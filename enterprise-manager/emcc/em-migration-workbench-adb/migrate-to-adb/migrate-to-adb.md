@@ -33,7 +33,7 @@ Once your workshop is provisioned, click on "View Login Info" on the top right o
 
 ![Launch EM](images/launch-reservation.png " ")
 
-For this workshop you will not use the remote desktop, so do not click the "Launch Remote Desktop" button, but rather copy the IP address of you instance. Open a new browser tab and enter the Enterprise Manager console URL for your instance as follows:
+For this workshop you will not use the remote desktop, so do not click the "Launch Remote Desktop" button, but rather copy the IP address of your instance. Open a new browser tab and enter the Enterprise Manager console URL for your instance as follows:
 
 https://*The IP address you just copied*:7803/em
 
