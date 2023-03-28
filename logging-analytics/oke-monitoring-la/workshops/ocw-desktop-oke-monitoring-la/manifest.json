@@ -13,9 +13,9 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Getting Familiar with Logging Analytics Explorer GUI",
-            "description": "Getting Familiar with OCI Logging Analytics Explorer GUI",
-            "filename": "https://oracle-livelabs.github.io/em-omc/logging-analytics/ebs-monitoring/loganalytics-explorer-gui/log-exlporer-gui.md"
+            "title": "Lab 1: Get Familiar with Logging Analytics Explorer GUI",
+            "description": "Get Familiar with OCI Logging Analytics Explorer GUI",
+            "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
         },
         {
             "title": "Lab 2: Ingestion Flow Setup",
@@ -23,12 +23,17 @@
             "filename": "../../ingestion-flow-setup/ingestion.md"
         },
         {
-            "title": "Lab 3: Custom Application Log Collection",
+            "title": "Lab 3: Customizing Application Logs Configuration",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../custom-log-collection/custom-log-collection.md"
         },
         {
-            "title": "Lab 4: Building dashboards in Logging Analytics with the data ingested by Management Agents",
+            "title": "Lab 4: Exploration",
+            "description": "Log Exploration through Dashboards and Widgets",
+            "filename": "../../exploration/exploration.md"
+        },
+        {
+            "title": "Lab 5 (Optional): Building dashboards in Logging Analytics with the data ingested by Management Agents",
             "description": "This live lab outlines the steps to build dashboards in Logging Analytics with the data ingested by Management Agent",
             "filename": "../../la-dashboard-creation/dashboard.md"
         },

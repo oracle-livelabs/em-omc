@@ -1,0 +1,1 @@
+> **Note:** The host credentials belong to the user that owns Oracle home where the target CDB resides. If you do not select this option, then Oracle EM may return an error indicating invalid host credentials.

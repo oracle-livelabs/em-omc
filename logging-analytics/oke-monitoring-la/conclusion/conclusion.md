@@ -1,8 +1,17 @@
-# Lab concluded
+# Workshop Achievements
 
-In these two labs we have taken our first steps towards setting up end-to-end Kubernetes Monitoring Solution, performing the Analytics and Visualising the data from different perspectives.
+In this workshop, we have 
 
-### References
+- Set up Fluentd and collected various different logs 
+    - Kubernetes & Linux System logs, 
+    - Application/Container logs,
+    - Kubernetes Objects logs,
+    - Custom Applications/Services logs (MuShop container logs).
+- Verified the collected logs through Log Explorer.
+- Set up Management Agent and collected Kubernetes metrics
+- Visualized the data collected (logs and metrics) through dashboards using various widgets. 
+
+## References
 
 [Latest Features](https://docs.oracle.com/en-us/iaas/releasenotes/services/logging-analytics/)
 
@@ -16,4 +25,4 @@ In these two labs we have taken our first steps towards setting up end-to-end Ku
 
 [Reference Architectures - Kubernetes Monitoring](https://docs.oracle.com/en/solutions/kubernetes-oke-logging-analytics/index.html)
 
-[Reference Architecture - EBS Monitoring](https://docs.oracle.com/en/solutions/ebs-logging-analytics-oci/index.html)
+[OCI Kubernetes Monitoring] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring)

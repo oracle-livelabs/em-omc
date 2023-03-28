@@ -5,6 +5,8 @@ In this workshop, you will experience the benefits of using the Oracle Enterpris
 
 *Estimated Time*: 60 minutes
 
+You can watch this video below for a quick walk-through of this lab.
+[Video Walk-through](videohub:1_vyyju031)
 
 ### About the Database Fleet Maintenance UI capability in Oracle Enterprise Manager
 
@@ -223,9 +225,21 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     ![](images/dp-1-completed.png "DP completed ")
 
-7. List Available Gold Images. Execute the following commands in the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#2 SI DB Linux64*’* in the emcli command output:
+7. List Available Gold Images.
 
-    ```DP completed
+    Default window size of terminal will render output in multiple lines. Its is thus recommended to increase the terminal window size by clicking on maximize option.
+
+    ![](images/window_size.png "Maximize window ")
+
+    Execute the following command to increase the column width.
+    ```
+    <copy>emctl set property -name oracle.sysman.dbprov.gis.emcli.verbs.tableLength -value 210 -sysman_pwd "welcome1"</copy>
+    ```
+    ![](images/resize-width.png "resize command")
+
+    Now, we can execute the getimages command and it will return output in single line. Execute the following commands in the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#2 SI DB Linux64*’* in the emcli command output:
+
+    ```
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
@@ -235,9 +249,12 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
 
     After retrieving a list of the available images, one can view a list of versions available for a specific image with the following command:
 
-    If the image id is same as the one highlighted above, you may use the below command
+    If the image id is same as the one highlighted above, you may use the below command. First, we will again resize the column width.
     ```
-    <copy>emcli db_software_maintenance -getVersions -image_id=E27275341BC25561E053AD00000A3CBD</copy>
+    <copy>emctl set property -name oracle.sysman.dbprov.gis.emcli.verbs.tableLength -value 240 -sysman_pwd "welcome1"</copy>
+    ```
+    ```
+    <copy>emcli db_software_maintenance -getVersions -image_id=EDFCBFF9AE4A2ABFE0536B00000AFFAF</copy>
     ```   
 
     else make changes in the below command and execute it.
@@ -259,7 +276,7 @@ You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a plug
     - Review and execute below emcli command. If the image id is same as the one highlighted above, you may use the below command:  
 
     ```
-    <copy>emcli db_software_maintenance -checkApplicability -image_id=E27275341BC25561E053AD00000A3CBD -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
+    <copy>emcli db_software_maintenance -checkApplicability -image_id=EDFCBFF9AE4A2ABFE0536B00000AFFAF -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
     ```
 
     else

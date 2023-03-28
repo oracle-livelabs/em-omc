@@ -13,16 +13,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
     },
     {
-      "title": "Lab 2: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 3: Automated Database Patching at Scale with Fleet Maintenance",
+      "title": "Lab 2: Automated Database Patching at Scale with Fleet Maintenance",
       "description": "This lab walks you through the steps needed with Fleet Maintenance to automate patching of wide range of DB Configurations including Oracle RAC environments with Data Guard Standby",
       "publisheddate": "7/16/2020",
       "filename": "./../../em-fleet-maintenance-patching/em-fleet-maintenance-patching.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",

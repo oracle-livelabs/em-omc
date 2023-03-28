@@ -1,0 +1,2 @@
+> **Note:** If the PDB name already exists, then Oracle EM returns a validation error. You cannot create PDBs in the same container with duplicate names.    
+	The PDB name must have at least one character with a maximum of 30 characters, start with an alphabet, and include only alphanumeric characters or an underscore (`_`).  
