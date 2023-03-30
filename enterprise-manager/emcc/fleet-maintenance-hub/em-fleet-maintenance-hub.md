@@ -24,10 +24,28 @@ Benefits of using the EM Fleet Maintenance Hub include:
 - Ability to schedule/retry/suspend/resume operations
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 - And make sure your targets are always compliant with your patch policies
-- Support for FPP (DBLM license required)
 
+![](images/introduction.png " introduction")
 
-![](images/introduction.png " ")
+Lets review various components of the Fleet Maintenance hub.
+![](images/Intro-tile1.png " introduction for tile1")
+
+Fleet Maintenance works on Subscription based model, i.e. to patch a database or grid infrastructure, it should be subscribed to a gold image. Any database/grid, which is not subscribed to any image can not be patched and thus remains susceptible for any data breach. Its recommended that the databases should be patched with latest patch recommendations from Oracle. You can learn more about these recommendations by following Oracle's Security Alerts and Bulletins.
+
+The first tile, Targets Not Subscribed gives you an insight about your weakest database and grid entities as the tile shows the unsubscribed databases and grids. The numbers 13 for database and 12 for grid implies that these assets are not part of any gold image. As a DBA, its paramount that these assets are subscribed to relevant gold image.
+
+In the middle section, we see two graphs. These represents no of database and grid infrastructure based on versions. Eg, the highlighted blue bar for database shows 7 databases running under 19c.
+
+The below grid lists out the databases and grid that are not subscribed to any image. You may choose filters to identify any particular database. Subscribe button allows you to subscribe the database or grid to an image. We will cover the subscription part when we update a database in this lab.
+
+![](images/Intro-tile2.png " introduction for tile2")
+
+Tile 2, Patch Recommendation for Images, lists out the health status of your images with respect to Oracle provided patch recommendations. Lets review the patch recommendation column and understand the actions required by an administrator.
+
+- If you see a green check mark - ✔, it suggests that the gold image has all recommended patches. The image can be used for patching and any databases/grid subscribed to this image will have all the recommended patches post successful completion of update operation.
+- If you see a yellow exclamation  mark - !, it suggests that a new version in the image has all the recommended patches but it is not marked current. Hence, the updated version can't be used for update operation. Immediate next steps for DBA is to mark the latest version as current.
+- If you see a red exclamation  mark - !, it suggests that current version of the image lacks recommended patches. The number of patches is displayed (in this case 6). If you click on the number, a new slideout will show you the details of the Oracle recommended patches. Immediate next steps for DBA is to create a new version and include all the recommended patches and mark this new version as current.
+
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
