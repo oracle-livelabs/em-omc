@@ -32,9 +32,9 @@ This lab assumes you have already completed the following:
 
 1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
 
-     ![](../external-database/images/dbmgmt1.png " ")
+     ![Database Management](../external-database/images/dbmgmt1.png "Database Management")
 
-     ![](../external-database/images/dbmgmt2.png " ")
+     ![Database Management](../external-database/images/dbmgmt2.png "Database Management")
 
 2.  The **Databases** tile (on the **Overview** page) displays the total number of Oracle Databases in the compartment and the number of Oracle Databases for which Database Management is enabled.
 
@@ -42,7 +42,7 @@ This lab assumes you have already completed the following:
 
 1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt-demo compartment is selected by default in the Compartment field.
 
-     ![](./images/fleet-summary.png " ")
+     ![Fleet Summary](./images/fleet-summary.png "Fleet Summary")
 
 2.  The following tiles are available on the **Fleet Summary** page:
 
@@ -55,7 +55,7 @@ This lab assumes you have already completed the following:
 
 4.  On **Fleet Summary** page under **Members** tab, select the **Show CDBs Only** check box to view the CDBs in the database fleet.
 
-     ![](./images/showcdbs.png " ")
+     ![Show CDBs Only](./images/showcdbs.png "Show CDBs Only")
 
     For each database including the CDB, the following metrics are displayed along with the change percentage that denotes the comparison of database metrics between the selected period and the comparison time period:
     - Avg. Active Sessions: Displays the average active sessions broken down by CPU, User I/O, and Others, which includes different categories within wait time such as System I/O and Commit.
@@ -71,29 +71,29 @@ This lab assumes you have already completed the following:
 
 2.  Click **Create Database Group**. In the **Create Database Group** dialog, enter the name you want to assign to the new Database Group ex. dbmgmt\_pdbs\_group, optionally add a description, and click **Create Group**.
 
-     ![](./images/databasegroup.png " ")
+     ![Create Group](./images/databasegroup.png "Create Group")
 
 3.  On the **Database Groups** page, click the group named **dbmgmt\_pdbs\_group**. On the **Database Group Details** page of the **dbmgmt\_pdbs\_group** group, click **Add Managed Database**.
 
-     ![](./images/addmanageddatabase.png " ")
+     ![Add Managed Database](./images/addmanageddatabase.png "Add Managed Database")
 
 4.  In the **Add Managed Database** dialog, select the **FINANCE** and **HRSTAGE** databases, and click **Add**.
 
-     ![](./images/addmanagedpdbs.png " ")
+     ![Add Managed Database](./images/addmanagedpdbs.png "Add Managed Database")
 
 5.  On the **Database Groups Details** page, click **Fleet Summary**.
 
-     ![](./images/databasegroupfleetsummary.png " ")
+     ![Fleet Summary](./images/databasegroupfleetsummary.png "Fleet Summary")
 
 6.  On the **Fleet Summary** page you will see the summary of databases added to **dbmgmt\_pdbs\_group** Group.
 
-     ![](./images/databasegroupfleetsummary1.png " ")
+     ![Fleet Summary](./images/databasegroupfleetsummary1.png "Fleet Summary")
 
 ## Task 4: Creating and Monitoring Jobs
 
 1.  On the **Database Group Details** page, under **Resources** on the left pane, click **Jobs**. Under **Jobs** click on the **Definitions** tab and then click **Create Job**.
 
-     ![](./images/createjob.png " ")
+     ![Create Job](./images/createjob.png "Create Job")
 
 2.  You can create a SQL job to perform administrative operations on a single Managed Database or a Database Group.
 In the Create Job dialog:
@@ -118,12 +118,12 @@ In the Create Job dialog:
 
     Click **Create Job**.
 
-     ![](./images/createjob1.png " ")
-     ![](./images/createjob2.png " ")
+     ![Create Job](./images/createjob1.png "Create Job")
+     ![Create Job](./images/createjob2.png "Create Job")
 
 3.  Our job is now created and displayed in the Jobs section of the Database Group. The status of the job is Active as it is being executed; we can also see Inactive jobs, which were already executed in the past. Click on the job name to go to **Job Details** page.
 
-     ![](./images/jobruns.png " ")
+     ![Job Details](./images/jobruns.png "Job Details")
 
 4.  Click on job runs to get to the **Job Execution Details** page and view the query results.
 
@@ -131,11 +131,11 @@ In the Create Job dialog:
 
 1.  On the left pane, click **Fleet Summary** to navigate to the Fleet Summary page. Scroll down to the **Members** tab on the Fleet Summary page.
 
-     ![](./images/members.png " ")
+     ![Members](./images/members.png "Members")
 
 2.  Click the **HRSTAGE** database in the **Members** tab. In the **Managed Database Details** page Scroll down to the **Summary** section.
 
-     ![](./images/summary.png " ")
+     ![Summary](./images/summary.png "Summary")
 
 3.  We can monitor database performance attributes in the **Summary** section, for the time period selected in the **Time Period** menu on the top of this page. Last 60 min is the default time period, and the visual representations or charts provide a quick insight into the health of the database during the selected time period.
 
@@ -160,11 +160,11 @@ In the Create Job dialog:
 
 1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **HRSTAGE** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
-     ![](./images/perfhub.png " ")
+     ![Performance Hub](./images/perfhub.png "Performance Hub")
 
 2.  This will launch the **Performance Hub** page. Performance Hub provides a single view of the database’s performance and enables you to perform the rapid diagnosis of its issues.
 
-     ![](./images/perfhub1.png " ")
+     ![Performance Hub](./images/perfhub1.png "Performance Hub")
 
      Performance Hub provides holistic performance management capabilities providing a single view of the database performance using a varied set of features, such as Active Session History Analytics, Real-time SQL Monitoring, Automatic Database Diagnostics Monitoring (ADDM), Blocking sessions, and so on.
 
@@ -172,7 +172,7 @@ In the Create Job dialog:
 
 3.  Stay in **Performance Hub**, scroll down and click the **SQL Monitoring** tab.
 
-     ![](./images/sqlmonitoring.png " ")
+     ![SQL Monitoring](./images/sqlmonitoring.png "SQL Monitoring")
 
      With Real-Time SQL Monitoring, you can perform complex run-time application SQL analysis, identity, and guide optimization of application calls in the data tier.
 
@@ -187,7 +187,7 @@ In the Create Job dialog:
 
 4.  Stay in **Performance Hub**, scroll down and click the **ADDM** tab.
 
-     ![](./images/addm.png " ")
+     ![ADDM](./images/addm.png "ADDM")
 
      The statistical data needed for the accurate diagnosis of a problem is saved in the Automatic Workload Repository (AWR) of the Oracle Database. The Automatic Database Diagnostic Monitor (ADDM) analyzes the AWR data regularly, locates the root causes of the performance problems, provides recommendations for correcting any problems, and identifies non-problem areas of the system. You can use ADDM to analyze performance issues after the event, often saving the time and resources needed to reproduce a problem.
 
@@ -199,7 +199,7 @@ In the Create Job dialog:
 
 5.  Stay in **Performance Hub**, scroll down and click the **Blocking Sessions** tab.
 
-     ![](./images/blockingsessions.png " ")
+     ![Blocking Sessions](./images/blockingsessions.png "Blocking Sessions")
 
      The **Blocking Sessions** tab displays the current blocking and waiting sessions in a hierarchical display. You can view detailed information about each blocking session and view the sessions blocked by each blocking session. You can also use the tab to inspect or perform deeper analysis of the SQL involved to determine the cause of the blocking. You can perform several operations in the tab, including stopping one or more of the listed sessions to resolve a waiting session problem.
 

@@ -23,11 +23,11 @@ Estimated time: 20 minutes
 
 1.  From OCI console, navigate to **Identity & Security** and under **Identity**, click **Compartments** and then click on the blue **Create Compartment** button to create a sub-compartment.
 
-      ![Create a compartment](./images/compartments.png " ")
+      ![Create a compartment](./images/compartments.png "Create a compartment")
 
 2.  Name the compartment **dbmgmt-demo** and provide a short description. Be sure your root compartment is shown as the parent compartment. Press the blue **Create Compartment** button when ready.
 
-   ![Create compartment](./images/createcompartment.png " ")
+   ![Create compartment](./images/createcompartment.png "Create a compartment")
 
 ## Task 2: Create a Dynamic Group
 
@@ -37,13 +37,13 @@ In this step, a dynamic group is created using the Identity and Access Managemen
 
 1. To access the Identity and Access Management service, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Identity & Security**, go to **Identity** and click **Dynamic Groups**.
 
-      ![Create a dynamic group](./images/dynamicgroups.png " ")
+      ![Create a dynamic group](./images/dynamicgroups.png "Create a dynamic group")
 
 2. Click **Create Dynamic Group**
 
 3. In the Create Dynamic Group dialog box, name the dynamic group _dbmgmt\_dynamic\_group_, a description and the matching rules, and then click **Create Dynamic Group**.
 
-      ![Create a dynamic group](./images/createdynamicgroup.png " ")
+      ![Create a dynamic group](./images/createdynamicgroup.png "Create a dynamic group")
 
       ```
       <copy>
@@ -63,9 +63,9 @@ Where resource.type='managementagent' is the managementagent resource type defin
    - **Description:** Enter a description (for example, "New group for OCI Database Management").
    - Click **Create**.
 
-      ![](./images/creategroup.png " ")
+      ![Create Group](./images/creategroup.png "Create Group")
 
-      ![](./images/newgroup.png " ")
+      ![Create Group](./images/newgroup.png "Create Group")
 
 ## Task 4: Managing Users, Groups
 
@@ -79,13 +79,13 @@ Where resource.type='managementagent' is the managementagent resource type defin
 
    c) After you have selected the **root** compartment, click **Create Policy**.
 
-      ![Create Policy](./images/policies.png " ")
+      ![Create Policy](./images/policies.png "Create Policy")
 
    d) Enter a unique **Name** for your policy (For example, "Policy-for-dbmgmt-group"). Note that the name cannot contain spaces.
 
    e) Enter a **Description** (for example, "Policy for OCI DB Management").
 
-      ![Create](./images/createpolicy.png " ")
+      ![Create](./images/createpolicy.png "Create Policy")
 
    f) Select **Show manual editor**   
 
@@ -117,7 +117,7 @@ Where resource.type='managementagent' is the managementagent resource type defin
       - **Name:** Enter a unique name or email address for the new user. For example "dbmgmt_user". This value is the user's login name for the Console and it must be unique across all other users in your tenancy.
       - **Description:** Enter a description. For example, "New OCI Database Management User".
 
-      ![New user form](./images/createuser.png " ")
+      ![New user form](./images/createuser.png "New user form")
 
    d) Click **Create**.
 
@@ -127,15 +127,15 @@ Where resource.type='managementagent' is the managementagent resource type defin
 
    b) Click **Create/Reset Password**.  
 
-      ![Reset password](./images/userdetails.png " ")
+      ![Reset password](./images/userdetails.png "Reset Password")
 
    c) In the dialog, click **Create/Reset Password**.
 
-      ![Reset password](./images/resetuserpassword.png " ")
+      ![Reset password](./images/resetuserpassword.png "Reset Password")
 
    d) The new one-time password is displayed.
 
-      ![Enter a password](./images/newuserpassword.png " ")
+      ![Enter a password](./images/newuserpassword.png "New User Password")
 
    e) Click the **Copy** link and then click **Close**. Make sure to copy this password to your notepad.
 
@@ -152,17 +152,17 @@ Where resource.type='managementagent' is the managementagent resource type defin
       e) From the **GROUPS** drop-down list, select the **dbmgmt-group** that you created.
 
       f) Click **Add**.
-      ![Press the Add button](./images/addusertogroup.png " ")
+      ![Press the Add button](./images/addusertogroup.png "Add user to group")
 
       g) On the top right corner of Oracle Cloud Console, click on **Profile** and then click **Sign Out** to sign out of the Oracle Cloud website.
 
-      ![Sign Out](./images/signout.png " ")
+      ![Sign Out](./images/signout.png "Sign Out")
 
 5. Verify user permissions when a user belongs to a specific group
 
       a) Login to Oracle Cloud Console with the local "dbmgmt_user" account you created. Enter the password that was copied earlier.
 
-      ![Sign Out](./images/userlogin.png " ")
+      ![Sign Out](./images/userlogin.png "Sign Out")
 
       b) On first login user is prompted to reset the password. Enter current password and new password for user.
 
@@ -170,7 +170,7 @@ Where resource.type='managementagent' is the managementagent resource type defin
 
       c) Select compartment **dbmgmt-demo** from the list of compartments on the left.
 
-      ![Select ***dbmgmt-demo***](./images/databasemanagement.png " ")
+      ![Select ***dbmgmt-demo***](./images/databasemanagement.png "Select compartment")
 
       d) There is no message related to permissions and you are allowed to create new instances
 
