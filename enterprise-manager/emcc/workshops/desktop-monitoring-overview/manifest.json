@@ -1,6 +1,6 @@
 {
-  "workshoptitle": "Enterprise Manager Fundamentals: Monitoring Quick Tour",
-  "help": "livelabs-help-em_us_grp@oracle.com",
+  "workshoptitle": "Oracle Enterprise Manager - Enterprise Monitoring Quick Tour",
+  "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
