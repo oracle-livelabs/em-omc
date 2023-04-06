@@ -8,7 +8,7 @@ In this workshop, you will experience the benefits of using the new Oracle Enter
 You can watch this video below for a quick walk-through of this lab.
 [Video Walk-through](videohub:1_vyyju031)
 
-### About the Fleet Maintenance Hub capability in Oracle Enterprise Manager
+### About key features of Fleet Maintenance Hub in Oracle Enterprise Manager
 
 Fleet Maintenance Hub is a
 - Powerful one-stop place for customers to get insight into vulnerabilities for database assets and apply patches to affected targets, and secure each of those
@@ -43,9 +43,12 @@ The below grid lists out the databases and grid that are not subscribed to any i
 Tile 2, Patch Recommendation for Images, lists out the health status of your images with respect to Oracle provided patch recommendations. Lets review the patch recommendation column and understand the actions required by an administrator.
 
 - If you see a green check mark - ✔, it suggests that the gold image has all recommended patches. The image can be used for patching and any databases/grid subscribed to this image will have all the recommended patches post successful completion of update operation.
-- If you see a yellow exclamation  mark - ![](images/yellow.png "exclamation-yellow "), it suggests that a new version in the image has all the recommended patches but it is not marked current. Hence, the updated version can't be used for update operation. Immediate next steps for DBA is to mark the latest version as current.
-- If you see a red exclamation  mark - ![](images/red.png "exclamation-red "), it suggests that current version of the image lacks recommended patches. The number of patches is displayed (in this case 6). If you click on the number, a new slideout will show you the details of the Oracle recommended patches. Immediate next steps for DBA is to create a new version and include all the recommended patches and mark this new version as current.
+- If you see a yellow exclamation  mark - ![](images/yellow.png "exclamation-yellow "), it suggests that a new version in the image has all the recommended patches but it is not marked current. Hence, the updated version can't be used for update operation. Immediate next step for DBA is to mark the latest version as current.
+- If you see a red exclamation  mark - ![](images/red.png "exclamation-red "), it suggests that current version of the image lacks recommended patches. The number of patches is displayed (in this case 6). If you click on the number, a new slideout will show you the details of the Oracle recommended patches. Immediate next step for DBA is to create a new version and include all the recommended patches and mark this new version as current.
 
+![](images/Intro-tile3.png " introduction for tile3")
+
+Tile 3, Patch Compliance for Targets, list out the databases or grids that are subscribed to a gold image.
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
@@ -62,7 +65,7 @@ In this lab you will perform the following steps:
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | 1                    | Detect targets which are not subscribed to any image                             | 5 minutes  | Analyze the database estate using Fleet Maintenance Hub                                                                                                                | Provides recommendation to subscribed databases and grid to gold image.                  |
 | 2                    | Review Patch recommendations | 10  minutes  | Refresh Gold image with patch recommendations | Demonstrate with ease to determine which recommended patches are applicable to gold image.                  |
-| 3                    | Oracle Database Update(Patching) with Fleet Maintenance | 45  minutes  | Update(Patch) a Database target using a Gold Image. As part of patching the Container Database, all Oracle Pluggable Databases in that Container Database will automatically get patched. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Database.  
+| 3                    | Patch a Pluggable Database with Fleet Maintenance | 45  minutes  | Update(Patch) a PDB using a Gold Image. As part of patching the Pluggable Database, unplug Oracle Pluggable Database in that Container Database and plug it to higher version Container Database. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Pluggable Database.  
 
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
@@ -77,99 +80,21 @@ In this lab you will perform the following steps:
 
 To save time, the following steps were already completed.
 
-1. An Oracle home was created and pre-patched with an Oracle Database 18.10 release that will be used to create the gold image *[/u01/app/oracle/product/18/db\_home\_src, Orasidb18c\_home1\_2020\_05\_13\_04\_10\_9\_emcc.marketplace.com\_3192]*
+1. An 19c Oracle home was created and was patched with 19.16DBRU, 19.17DBRU and 19.18DBRU with one-off patch. This Oracle home was used to create gold images and multiple versions in that gold image. Location and Target name for this Oracle home is  *[/u01/app/oracle/product/19/db\_home\_src, Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953]*
 
 To ensure smooth execution of the use cases, we have pre-hosted the scripts to be used later at */home/oracle/fleet*
 
-## Task 2: Detect Configuration Pollution with Software Standardization Advisor
+We will see details of gold images that we have created at a later point in this lab.
 
-In this lab activity, you will analyze the database estate to identify any configuration drift (pollution) using the Software Standardization Advisor.
+## Task 2: Review the target to be updated
 
-Software Standardization Advisor enables administrators to understand various database configurations prevailing in their environment. Each deployment with a unique platform, release and patch level is identified as a distinct configuration. This provides the administrators a view of the configuration pollution in their estate. It also analyzes and provides a recommendation to standardize the environment and reduce the number of configurations required for managing the database estate.
+In this lab activity, you will update one of the PDBs of ***sales.subnet.vcn.oraclevcn.com***. During the update process, Fleet maintenance will unplug the selected PDB and plug it to higher version CDB.
+We will patch PDB - ***PSALES*** of CDB ***sales.subnet.vcn.oraclevcn.com*** and during this process we will plug it to CDB ***db19c.subnet.vcn.oraclevcn.com***.
+
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
 -->
-  ![](images/new-em-fleet-maintenance-overview-2.png " ")
-
-1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
-
-    ```
-    Username: <copy>sysman</copy>
-    ```
-
-    ```
-    Password: <copy>welcome1</copy>
-    ```
-
-    ![](images/patch.png " ")
-
-2.  After successful login, in the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
-
-    ![](images/038585c9308635261ae7e4aa956525af.png " ")
-
-3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select Software ***Standardization Advisor***
-
-    ![](images/new-software-std-advisor.png "additional items in drop down ")
-
-4.  Software Standardization Advisor shows two graphs depicting current configuration and recommended configuration.
-
-    ![](images/generate-report.png "pollution detection report generation ")
-
-    Graphs may look different from the ones represented in the workbook.
-    A Software Configuration is identified by the database release, platform, and the patches installed on the target.
-
-    In the analysis performed by the Software Configuration Advisor, it has identified that there are 5 unique software configurations in the environment (pie chart labeled “Current Unique Software Configurations”). The recommendation displayed is for only 2 Software Configurations ( pie chart labeled “Recommended Software Configurations”).
-
-    Next, we will review the report generated.
-
-
-5.  On the same page, click on **Generate Report**. Select yes when it prompts to generate the report.
-    ![](images/generate-report-confirmation.png "pollution detection report generation ")
-
-
-6.  On the same page, click on **Current Configurations** to open the Excel report.
-
-    ![](images/current-config.png " ")
-
-    When you download the report, a warning on XLS format and file extension mismatch pops up (like below). Simply click on “Yes” to ignore the warning and open the file.
-
-    ![](images/d9ea997d07c30f80083e097f6b578200.png " ")
-
-    Alternately, you might see a pop up for import options, while opening the file. Select OK and you should be able to view the contents of the file.
-
-    ![](images/open-office-msg.png "pop-up message")
-
-    From the report, you will see the current environment has five different Oracle home software versions.
-
-    ![](images/84e0ac92b29e45e91b9d17a8e0b3a2da.jpg " ")
-
-    Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
-
-    ![](images/workshop-instance.png " ")
-
-    Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
-
-7.  Next, click on **Recommended Configurations** to open the Excel Report.
-
-    ![](images/recommend-config.png "recommended changes ")
-
-    <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
-
-    The reports recommendation is to consolidate the configuration drift (pollution) from the current five database to two (18c and 19c). This recommendation would reduce the number of configurations and standardize the environment for easier management.
-
-    ![](images/06ff90fdba8aa5abebd066086e33f700.jpg " ")
-
-    The recommendation is based on a union of bugs included in the patches in all Oracle homes and based on the configuration type.
-
-  <!-- This completes Step 1. In this section, you learned how to perform the following:
-
-    - Access the Database Software Standardization Advisor
-    - View Configuration summary
-    - Generate and download current and recommended configuration reports
-
-  In the next section we will follow these recommendations to perform the following using Enterprise Manager 13c Fleet Maintenance.
-
-    - Patch database “hr.subnet.vcn.oraclevcn.com” from 18.3 to 18.10 -->
+  ![](images/intro-env-list.png "original db list with versions ")
 
 ## Task 3: Database Server update(patching) with Fleet maintenance (Overview)
 
@@ -182,42 +107,28 @@ A gold image is the end of state software definition that contains information a
   <!--![](images/DB_Fleet_Patching.png " ")  -->
   ![](images/new-db-fleet-patching.png "new interface")
 
-### **Patching with Fleet Maintenance**
-
-We will go through steps for update(patching) database target ***hr.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 18.3.0.0.0 version. The goal is to patch this target to 18.10.0.0.0. As part of the update(patching) exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
-
-1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
-
-
-    ![](images/ec0b6926d4f65b52a771483ace24055c.png " ")
-
-You will see the ***hr.subnet.vcn.oraclevcn.com*** container database has a pluggable database ‘HRPDB’. Both the container database and pluggable database targets have status ‘UP’ and version 18.3.0.0.0. If the target status is ‘DOWN’, then start the target (using */home/oracle/start\_db\_hr.sh*).
-    ![](images/target-hr-status.png "hr db status ")
-
-
-
 ## Task 4: Create Gold Image
 
 1. Now look over the reference home setup *[Which has already been implemented]*
 
     Gold Image represents a software end state. An Enterprise Manager Software Library Gold Image is a software archive created from a patched oracle home uploaded to EM Software Library.
 
-    To create a Gold Image of the ‘recommended patch configuration’, you manually create an Oracle home as a pre-requisite step. The goal is to patch Oracle Database 18.3 targets with Oracle Database 18.10 RU, a reference Oracle home fully patched to 18.10 *[/u01/app/oracle/product/18/db\_home\_src]* was created and used to create the initial version of the Gold Image as further described in the next steps.
+    To create a Gold Image of the ‘recommended patch configuration’, you manually create an Oracle home as a pre-requisite step. The goal is to patch PDB at 19.17 version to 19.18 by unplug and plug method. A reference Oracle home fully patched to 19.18 *[/u01/app/oracle/product/19/db\_home\_src]* was created and used to create the initial version of the Gold Image as further described in the next steps.
 
     This patched reference Oracle home is discovered in Enterprise Manager as shown below and will be used for Gold Image Creation.
 
 2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***All Targets.***
 
-    Then on the All Targets page, in the upper left search field, type or copy “*Orasidb18c\_home1\_2020\_05\_13\_04\_10\_9\_emcc.marketplace.com\_3192*” in the “Search Target Name” box. Click on Search icon.
+    Then on the All Targets page, in the upper left search field, type or copy “*Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953*” in the “Search Target Name” box. Click on Search icon.
 
 
     ```
-    <copy>Orasidb18c_home1_2020_05_13_04_10_9_emcc.marketplace.com_3192</copy>
+    <copy>Orasidb19c_home1_2020_05_13_04_24_10_emcc.marketplace.com_2953</copy>
     ```
-    ![](images/patch-3192.png " ")
+    ![](images/OH-2953.png " Oracle Home")
     In the results page click on the target name.
 
-    ![](images/patch-3192-details.png " ")
+    ![](images/OH-Patchdetails-2953.png " OH Patch details ")
 
 3. From the terminal on your remote desktop, Create the New Gold Image using the following emcli command
 
@@ -639,6 +550,7 @@ You may now proceed to the next lab.
   - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
   - [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/lifecycle.html)
   - [Database Cloud Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/cloud.html)
+  - [Oracle Critical Patch Updates, Security Alerts and Bulletins](https://www.oracle.com/in/security-alerts/)
 
 ## Acknowledgements
   - **Authors**
