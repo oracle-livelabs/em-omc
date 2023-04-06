@@ -169,7 +169,9 @@ A gold image is the end of state software definition that contains information a
 1. Lets move to tile 3, which is ***Patch Compliance for Targets***. From the bar chart we can see that the sales CDB is not complaint. In order to proceed with patching, from the actions column, lets select ***Update Pluggable Database***
 ![](images/update-pdb.png "update pdb")
 
-2. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
+## Task 8: Update PDB
+
+1. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
       ![](images/fm-flow1.png "selection")
       Where:
       -  Image = We will select ***PDB Image***. Desired version of Oracle home, which our target database should run after successful completion of operation.
@@ -179,7 +181,7 @@ A gold image is the end of state software definition that contains information a
 
       We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
-3. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+2. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
 
       ![](images/fm-flow2.png "selection")
 
@@ -192,17 +194,17 @@ A gold image is the end of state software definition that contains information a
 
       Select ***Next***.    
 
-4. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
+3. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
 
       ![](images/fm-flow3-validate.png "quick and full valdiation modes")
 
-5. Review the validation result.
+4. Review the validation result.
 
       ![](images/fm-flow3-validate-result.png "result of valdiation")
 
       Incase of any error, we can fix it and choose revalidate. Select ***Close***.
 
-6. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
+5. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
       ```
       <copy>finance_pdb_patching</copy>
       ```
@@ -212,7 +214,7 @@ A gold image is the end of state software definition that contains information a
       ![](images/dp-submit.png "submit operation")    
       Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
 
-7. Review the Deployment Procedures (DP).
+6. Review the Deployment Procedures (DP).
 
       ![](images/dp-list.png "Deployment Procedures submitted")
 
@@ -221,7 +223,7 @@ A gold image is the end of state software definition that contains information a
       ![](images/dp1-attach-complete.png "review dp for attach")
       Lets go back to the Procedure Activity page and review the other DP.
 
-8.  We can see that second DP for update operation is running.
+7.  We can see that second DP for update operation is running.
       ![](images/dp-list2.png "Deployment Procedures submitted")
 
       Lets click on it and find out the steps executed by this DP.
@@ -231,7 +233,7 @@ A gold image is the end of state software definition that contains information a
       We can see that attach DP completed successfully.
       ![](images/dp2-update-complete.png "review dp for update_completed")
 
-9.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
+8.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
       ![](images/env-list-final.png "new version check")
 
@@ -239,7 +241,7 @@ A gold image is the end of state software definition that contains information a
 
 
 
-That completes the Automated Database Patching at Scale with Fleet Maintenance UI workshop.
+That completes the Automated Database Patching at Scale with Fleet Maintenance HUB.
 
 You may now proceed to the next lab.
 
