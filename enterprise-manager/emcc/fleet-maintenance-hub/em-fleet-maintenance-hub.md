@@ -107,9 +107,9 @@ A gold image is the end of state software definition that contains information a
   <!--![](images/DB_Fleet_Patching.png " ")  -->
   ![](images/new-db-fleet-patching.png "new interface")
 
-## Task 4: Create Gold Image
+## Task 4: Create Gold Image *[Which has already been implemented]*
 
-1. Now look over the reference home setup *[Which has already been implemented]*
+1. Now look over the reference home setup
 
     Gold Image represents a software end state. An Enterprise Manager Software Library Gold Image is a software archive created from a patched oracle home uploaded to EM Software Library.
 
@@ -130,415 +130,114 @@ A gold image is the end of state software definition that contains information a
 
     ![](images/OH-Patchdetails-2953.png " OH Patch details ")
 
-3. From the terminal on your remote desktop, Create the New Gold Image using the following emcli command
-
-    ```
-    <copy>cd ~/fleet
-    sh create_image_Tier2_sidb_x64.sh</copy>
-    ```
-    ![](images/create-image-Tier2-sidb-x64.png "script to create GI ")
-
-    If you encounter session timeout error, copy paste the below command to re-login as sysman and re-establish the session.
-
-        ```
-        <copy>emcli login -u=sysman -p=welcome1</copy>
-        ```
-
-    ![](images/session-timeout.png "session timeout error ")
-
-    If you encounter session timeout error elsewhere in the lab, you can copy and paste the above command in the terminal and continue.
-
-4. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
-
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
-
-5. Click on ‘CreateGoldImageProfile\_...’ run and review the steps performed.  
-
-    ![](images/dp-create-image-1.png "dp for gold image ")
-
-6. Use ‘Show’ filter ‘Steps Not Skipped’ ; View:‘Expand All’ for detailed view of all the steps performed to complete an operation.
-
-    ![](images/dp-1-completed.png "DP completed ")
-
-7. List Available Gold Images.
-
-    Default window size of terminal will render output in multiple lines. Its is thus recommended to increase the terminal window size by clicking on maximize option.
-
-    ![](images/window_size.png "Maximize window ")
-
-    Execute the following command to increase the column width.
-    ```
-    <copy>emctl set property -name oracle.sysman.dbprov.gis.emcli.verbs.tableLength -value 210 -sysman_pwd "welcome1"</copy>
-    ```
-    ![](images/resize-width.png "resize command")
-
-    Now, we can execute the getimages command and it will return output in single line. Execute the following commands in the terminal to see the list of Gold Images available for deployment, locate ‘Tier \#2 SI DB Linux64*’* in the emcli command output:
-
-    ```
-    <copy>emcli db_software_maintenance -getImages</copy>
-    ```
-
-    ![](images/gi1-imageid.png "GI1 image details ")
-
-    IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
-
-    After retrieving a list of the available images, one can view a list of versions available for a specific image with the following command:
-
-    If the image id is same as the one highlighted above, you may use the below command. First, we will again resize the column width.
-    ```
-    <copy>emctl set property -name oracle.sysman.dbprov.gis.emcli.verbs.tableLength -value 240 -sysman_pwd "welcome1"</copy>
-    ```
-    ```
-    <copy>emcli db_software_maintenance -getVersions -image_id=EDFCBFF9AE4A2ABFE0536B00000AFFAF</copy>
-    ```   
-
-    else make changes in the below command and execute it.
-
-    ```
-    <copy>emcli db_software_maintenance -getVersions -image_id={Insert IMAGE ID from List available gold images}</copy>
-    ```   
-
-    This command lists Gold Image versions with their VERSION ID and STATUS.
-
-    ![](images/gi1-versionid.png "GI1 version id ")
-
-    When a Gold Image is created for the first time, its first version is created as per the input and marked as current. Whenever we run a DEPLOY operation for a target, Gold Image version marked as CURRENT is used to deploy the new Oracle home.
-
-8.  Verify if Gold Image is Applicable
-
-    This step verifies if the image can be used to patch a specified database target. This is done by comparing the bug fixes available in the current Oracle home of the database target and the image. In effect this check is run to identify patch conflicts.
-
-    - Review and execute below emcli command. If the image id is same as the one highlighted above, you may use the below command:  
-
-    ```
-    <copy>emcli db_software_maintenance -checkApplicability -image_id=EDFCBFF9AE4A2ABFE0536B00000AFFAF -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
-    ```
-
-    else
-
-    ```
-    <copy>emcli db_software_maintenance -checkApplicability -image_id={Insert IMAGE ID from List available gold images} -target_list=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database > /home/oracle/applicability.out</copy>
-    ```
-
-    ```
-    <copy>cat /home/oracle/applicability.out | more</copy>
-    ```
-
-    - Output of above emcli command is redirected to a file. You may review the output using any standard editor or tool of your choice.
-
-    ![](images/image-applicable.png "image applicable ")
-
-    This command can show one of the following results:
-
-    - **Applicable**: The image and database target contain the same set of bug fixes(part of a patch). The image can be applied on the specified target.
-    - **Applicable and Image has more bug fixes**: The image contains more bug fixes(part of a patch) than those applied on the database. The list of extra bugs is displayed. The image can be applied on the specified target.
-    - **Not Applicable**: The database contains more bug fixes(part of a patch) than those included in the image. The list of missing bugs is displayed. The administrator has to create a new version of the image that includes the missing bugs before the database can uptake the same.
 
 ## Task 5: Subscribe Database
 
-1.  Below illustration describes the flow of subscribing Targets to the Selected Gold Image
+1.  Lets review tile 1 and find out details of databases which are not subscribed to any of the gold images.
 
-    ![](images/1168b19325ea9b9c0624cf404d0cb689.jpg " ")
+    ![](images/Subscribe-homepage.png "Subscribe home page")
 
-2. Execute below command to subscribe the target hr.subnet.vcn.oraclevcn.com to Gold Image
+    We see that the CDB ***sales.subnet.vcn.oraclevcn.com*** is not subscribed to any gold image. As we want to update one of its PDB to 19.18 version, lets subscribe the CDB to Gold image of 19.18 version. Currently, subscription at pluggable level is not supported.
 
-    If the image id is same as the one highlighted above (Task 4, step 7), you may use the below command:
-    ```
-    <copy>emcli db_software_maintenance -subscribeTarget -target_name=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id=E27275341BC25561E053AD00000A3CBD</copy>
-    ```
 
-    else
+2. Subscribe the CDB.
 
-    ```
-    <copy>emcli db_software_maintenance -subscribeTarget -target_name=hr.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id={Insert IMAGE ID from List available gold images}</copy>
-    ```
+    Lets click on the Subscribe button at the top left section of the grid. Once done a new slide out appears.
+    ![](images/Subscribe-slideout.png "Subscribe home page")
 
-    Where:
-   -  target\_name – Name of the Database target which needs to be patched
-   -  target\_type – type of target to be patched. This should be oracle\_database in this case
-   -  image\_id – ID of the Gold Image to which the target should be patched
+    In the slideout, lets ensure that we have selected proper filtering criteria and from the image selection drop down, we select 19.18 gold image.
 
-    ![](images/hr_subscribe.png "hr subscribe ")
+    Under Targets, lets select the CDB ***sales.subnet.vcn.oraclevcn.com***. Click on subscribe.
 
-## Task 6: Deploy Image
+    ![](images/Subscribe-complete.png "Subscribe complete")
 
-1. In order to complete the deployment of new image, we need to modify named credential root and set its scope to global. This can be achieved by running the below command in terminal.
+    Subscription of CDB completed successfully, and we can close the slideout. We can now see that the initial count of unsubscribe databases has reduced.
+    ![](images/less-count-subscribe.png "Subscribe lesscount")
 
-    ```
-    <copy>emcli modify_named_credential -cred_name=root -cred_scope=global</copy>
-    ```
+## Task 6: Review Image recommendations
 
-    ![](images/modify-root-credential.png "emcli to modify root credentials")
+1. In order to complete the deployment of new image, lets review if the gold image we selected in previous step has all the recommended patches. Lets click on tile 2, which is ***Patch recommendation for images***.
 
-    From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
+    ![](images/Patch-recommendations-image.png "Subscribe lesscount")
 
-    ![](images/ec0b6926d4f65b52a771483ace24055c.png "navigation")
+    If we examine the row which is related to the 19.18 gold image we selected, we see that patch recommendation for the image has a green checkmark, suggesting all recommended Oracle patches are part of the current version of the image.
 
-    and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
+    However, under patch compliance column, we see that the cigar bar has some red portion. This is due to the fact that we have subscribed the CDB which is not patched to the same version of this gold image. The bar suggests that there is a pending action to update the database.
 
-    ![](images/admin-fm.png "navigation")
+## Task 7: Review Patch Compliance
 
+1. Lets move to tile 3, which is ***Patch Compliance for Targets***. From the bar chart we can see that the sales CDB is not complaint. In order to proceed with patching, from the actions column, lets select ***Update Pluggable Database***
+![](images/update-pdb.png "update pdb")
 
 2. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
+      ![](images/fm-flow1.png "selection")
+      Where:
+      -  Image = We will select ***PDB Image***. Desired version of Oracle home, which our target database should run after successful completion of operation.
+      -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
+      -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
+      -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
 
-    ![](images/hr-patch-screen1.png "selection")
+      We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
-    Where:
-    -  Image = Desired version of Oracle home, which our target database should run after successful completion of operation. In this example, we will select ***Tier #2 SI DB Linux64***.
-    -  Target Type = Desired target type, which can be Grid, RAC or SIDB. In this example, we will select ***Database Instance***.
-    -  Operation = Name of the operation, which can be update (patch) or upgrade. In this example, we will select ***Update***.
-    -  Type to filter = Selection criteria to highlight only those targets which qualify the selection, such as database naming.
+3. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
 
-3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
+      ![](images/fm-flow2.png "selection")
 
-    ![](images/hr-patch-screen2.png "input values")
+      Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
+      -  Normal Host Credentials as ***ORACLE***
+      -  Privileged Host Credentials as ***ROOT***
+      -  SYSDBA Database Credentials as ***SYS_SALES***     
 
-    We can enter following values
-    Under Maintenance tasks
-        Destination Oracle Home as
-        ```
-        <copy>/u01/app/1810/hr</copy>
-        ```
+      Under Options, we can use default value /tmp for Working Directory. This is the location where log files will be created.
 
-    Check both Migrate Listener and Update Database options
-    Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
-    -  Normal Host Credentials as ***ORACLE***
-    -  Privileged Host Credentials as ***ROOT***
-    -  SYSDBA Database Credentials as ***SYS_SALES***
-    -  Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
+      Select ***Next***.    
 
-    Deployment of new Oracle home does not impact existing Oracle home and hence it is scheduled to run immediately. We can schedule it to run at a different time by selecting later in start schedule and providing new time to run this operation.
+4. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
 
-    Once deployment of new Oracle home is complete, the Deployment Procedures for migrate listener and update database will execute immediately ( if we have selected start as Immediately/Auto ).  
-
-4. We can validate our entries (new Oracle home, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation mode
-
-    ![](images/validation-mode.png "quick and full valdiation modes")
+      ![](images/fm-flow3-validate.png "quick and full valdiation modes")
 
 5. Review the validation result.
 
-    ![](images/review-validation.png "result of valdiation")
+      ![](images/fm-flow3-validate-result.png "result of valdiation")
 
-    Incase of any error, we can fix it and choose revalidate.
+      Incase of any error, we can fix it and choose revalidate. Select ***Close***.
 
-6. ***Submit*** the operation. Here, we can see that we have opted to deploy, migrate and update the database at once. These tasks will be performed independently based on their schedule.
+6. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
+      ```
+      <copy>finance_pdb_patching</copy>
+      ```
+      ![](images/fm-flow4-dp-name.png "job name")
+      Here, we can see that we have opted to attach existing CDB and update PDB.
 
-    ![](images/new-submit.png "submit operation")    
-
-    We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
-    ```
-    <copy>HR_DB_Patching</copy>
-    ```
-
-    ![](images/submit-name.png "job name")
-
-    Click on submit.
-    ![](images/final-submit.png "monitor")
-
-    Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***
+      ![](images/dp-submit.png "submit operation")    
+      Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
 
 7. Review the Deployment Procedures (DP).
 
-   ![](images/new-deploy-1.png "review")
+      ![](images/dp-list.png "Deployment Procedures submitted")
 
-   Select DP related to Deploy and click on it. It will show details of the activity performed by the DP.
+      We can see that one of the DP related to Attach operation has already completed. Lets click on it and find out the steps executed by this DP.
 
-   ![](images/hr-deploy-complete.png "review dp for layout OH")
+      ![](images/dp1-attach-complete.png "review dp for attach")
+      Lets go back to the Procedure Activity page and review the other DP.
 
-   Here, we see that the DP has successfully installed new Oracle home.(putty screen shows the new Oracle home layout)
+8.  We can see that second DP for update operation is running.
+      ![](images/dp-list2.png "Deployment Procedures submitted")
 
-## Task 7: Migrate Listener
+      Lets click on it and find out the steps executed by this DP.
 
-1. In task 6 (above), we submitted a task to migrate the listener. If this task needs to be submitted separately, then you need to uncheck migrate listener task (review step 3 of task 6).
-    ![](images/uncheck-mig-listener.png " ")
+      ![](images/dp2-update-running.png "review dp for update")
 
-    The image below shows the task is in a running state.
+      We can see that attach DP completed successfully.
+      ![](images/dp2-update-complete.png "review dp for update_completed")
 
-    ![](images/hr-listener-running.png "DP for migrate listener")
+9.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
-    Select the running task to see the various steps performed.
+      ![](images/env-list-final.png "new version check")
 
-    ![](images/hr-listener-complete.png "details of DP")
-    We can now see that the migration operation completed successfully.
+      We can see that Finance pdb is relocated to a new CDB - cdb186.subnet.vcn.oraclevcn.com.
 
-## Task 8: Update(Patching) Database – Patch 18.3 to 18.10
 
-1. Similar to listener migration, we also submitted operation for Update Database in task 6. If it needs to be submitted separately, then you need to uncheck the update database task (review step 3 of task 6).
-    ![](images/uncheck-update-db.png " ")
-
-    The image below shows the task is in a running state.
-
-    ![](images/hr-update-running.png "DP update")
-
-    Select the running task to see the various steps performed.
-
-    ![](images/hr-update-complete.png "DP completed")
-
-    Update operation has completed successfully.
-
-    Lets validate the version of ***hr*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***hr*** database.
-
-   ![](images/hr-status-post-patch.png "new version check")
-
-## Task 9:  Rollback Database – Reversed Patch 18.10 to 18.3
-
-Once the database is updated(patched), we will perform a rollback to Oracle Database 18.3. In a future release capability is being planned to perform rollback of an operation using the UI.
-
-1. Review and execute below command from the terminal to rollback database Target ***hr.subnet.vcn.oraclevcn.com***
-
-    ```
-    <copy>curl -i -X POST https://emcc.marketplace.com:7803/em/websvcs/restful/emws/db/fleetmaintenance/performOperation/rollback -H "Content-Type:application/json" -u sysman:welcome1 --data-binary "@/home/oracle/fleet/rollback_hr_payload.json" --insecure</copy>
-    ```
-
-    **OR**
-
-    ```
-    <copy>cd ~/fleet
-    sh rollback_hr.sh</copy>
-    ```
-
-    ![](images/hr-rollback-submit.png " ")
-
-2. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
-
-    Monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
-
-    ![](images/rollback-dp.png "rollback")
-
-3. Review the Procedure Activity steps performed         
-
-    ![](images/rollback-dp-complete.png "rollback complete")
-
-4. Verify the rolled back target by going to ***Targets >> Databases*** as shown
-below.
-
-    ![](images/hr-rollback.png "hr _ROLLBACK")
-
-## Task 10:  Cleanup Old homes
-
-1. Clean up Database HR. In a future release capability is being planned to perform cleanup of an operation using the UI.
-
-   In order to have an old empty home previously used by “***hr.subnet.vcn.oraclevcn.com***” at our disposal to demonstrate a cleanup operation, we will now re-update(re-patch) the database by running the commands from Step 8.
-
-2. Review and execute below command to update(patch) database target ***hr.subnet.vcn.oraclevcn.com*** again to 18.10 version
-
-    ```
-    <copy>emcli db_software_maintenance -performOperation -name="Update DB" -purpose=UPDATE_DB -target_type=oracle_database -target_list=hr.subnet.vcn.oraclevcn.com -normal_credential=ORACLE:SYSMAN -privilege_credential=ROOT:SYSMAN -database_credential=sales_SYS:SYSMAN</copy>
-    ```
-
-    **OR**
-
-    ```
-    <copy>sh update_hr.sh</copy>
-    ```
-
-    ![](images/new-update-hr.png " ")
-
-    Where:
-    -  Name – Name of the operation. This is a logical name and should be kept unique.
-    -  Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
-
-
-3. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
-
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
-
-Verify that the update has been completed successfully. Before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
-    ![](images/fleet-update.png "fleet status")
-
-4. Verify and confirm that the target has been re-patched to Oracle Database 18.10 by going to Targets Databases as shown below.
-
-    ![](images/038585c9308635261ae7e4aa956525af.png " ")
-
-    Review the version of HR database.
-    ![](images/new-hr-status.png "new hr version")
-
-5. Review and execute the following command as a dry-run to report on cleanup impact for *hr.subnet.vcn.oraclevcn.com*  
-
-    ```
-    <copy>emcli db_software_maintenance -performOperation -name="Cleanup old oracle homes" -purpose=CLEANUP_SOFTWARE -target_type=oracle_database -normal_credential=ORACLE:SYSMAN -privilege_credential=ROOT:SYSMAN -target_list=hr.subnet.vcn.oraclevcn.com -workDir=/tmp -reportOnly=true</copy>
-    ```
-
-    **OR**
-
-    ```
-    <copy>sh cleanup_hr_report.sh</copy>
-    ```
-
-    ![](images/cleanup-report.png "cleanup report")
-
-6. Review and execute the following command to cleanup *hr.subnet.vcn.oraclevcn.com*   
-    ```
-    <copy>emcli db_software_maintenance -performOperation -name="Cleanup old oracle homes" -purpose=CLEANUP_SOFTWARE -target_type=oracle_database -normal_credential=ORACLE:SYSMAN -privilege_credential=ROOT:SYSMAN -target_list=hr.subnet.vcn.oraclevcn.com -workDir=/tmp</copy>
-    ```
-
-    **OR**
-
-    ```
-    <copy>sh cleanup_hr.sh</copy>
-    ```
-
-    ![](images/cleanup-hr.png "cleanup report")
-
-7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity***.
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
-
-    Monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
-
-    ![](images/cleanup-dp.png "cleanup dp")
-
-8. Review the Procedure Activity steps performed        
-
-    ![](images/cleanup-dp-details.png "dp details")
-
-9. Verify to confirm the old Oracle home has been removed
-
-    ```
-    <copy>ls -l /u01/app/1806/hr</copy>
-    ```
-
-    ![](images/no-18006.png "version")
-
-10.  As part of the cleanup operation, LISTENER\_1522 which support “***hr.subnet.oraclevcn.com***” is shutdown. Set your environment by passing “***hr***” to “***oraenv***” when prompted and start the listener back up.
-
-    ```
-    <copy>. oraenv </copy>
-    ```
-
-11. Start LISTENER\_1522 back up
-
-      ```
-      <copy>lsnrctl start LISTENER_1522</copy>
-      ```
-
-  ![](images/oraenv.png " ")
-
-12. Force Listener registration and confirm that it is now servicing “***hr.subnet.vcn.oraclevcn.com***”
-
-    ```
-    <copy>sqlplus '/as sysdba'<<EOF
-    alter system register;
-    EOF
-    </copy>
-    ```
-
-13. Check status of LISTENER\_1522
-
-    ```
-    <copy>lsnrctl status LISTENER_1522</copy>
-    ```
-
-    ![](images/listener-register.png " ")
-
-<!-- This completes Step 2. In this section, you learned how to perform the following:
--   Create Oracle Database Software Gold Image
--   Subscribe Database to Gold Image
--   Deploy Gold Image to Database Host
--   Migrate Oracle Database Listener from old Oracle home to newly Deployed Oracle home
--   Update (Patch) Database from 18.3 to 18.10
--   Rollback (Un-patch) Database from 18.10 to 18.3
--   Clean up old Oracle homes -->
 
 That completes the Automated Database Patching at Scale with Fleet Maintenance UI workshop.
 
