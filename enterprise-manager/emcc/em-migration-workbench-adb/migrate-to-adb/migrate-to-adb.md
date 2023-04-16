@@ -21,9 +21,9 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
-    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-    - Lab: Environment Setup
-    - Lab: Initialize Environment
+  - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+  - Lab: Environment Setup
+  - Lab: Initialize Environment
 
 >**Note:** This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU7, and database 19.12 as Oracle Management Repository.
 
@@ -35,7 +35,7 @@ Once your workshop is provisioned, click on "View Login Info" on the top right o
 
 For this workshop you will not use the remote desktop, so do not click the "Launch Remote Desktop" button, but rather copy the IP address of your instance. Open a new browser tab and enter the Enterprise Manager console URL for your instance as follows:
 
-https://*The IP address you just copied*:7803/em
+<https://*The-IP-address-you-just-copied*:7803/em>
 
 ![Security warning](../../initialize-environment/images/login-em-external-1.png " ")
 
@@ -56,7 +56,6 @@ Password: <copy>welcome1</copy>
 Once logged in you will be in the "Enterprise Summary" page:
 
 ![Enterprise Summary](images/enterprise-summary.png " ")
-
 
 In the interest of simplifying the setup and to save time, the following requirements for the source database were completed in advance for this lab. Please review accordingly for reference.
 
@@ -93,6 +92,7 @@ In the interest of simplifying the setup and to save time, the following require
     You have now completed this task.
 
 ## Task 2: Launch OCI console and review prerequisites completed in advance
+
 Navigate back to the workshop page in your browser. Click on "View Login Info" on the top right of the page to show the "Reservation Information" screen. Click "Launch OCI":
 
 ![Launch OCI](images/launch-oci.png " ")
@@ -101,7 +101,7 @@ Sign in using the password provided in the "Reservation Information" screen:
 
 ![OCI Login](images/login-oci.png " ")
 
-On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password": 
+On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password":
 
 ![Change OCI Password](images/oci-change-password.png " ")
 
@@ -189,6 +189,7 @@ You have now completed this task.
         ```text
         <copy>ADMIN</copy>
         ```
+
     - Monitoring Password: Copy the "ADB Admin Password" from the "Reservation Information" screen:
     ![Reservation Info](images/reservation-info.png " ")
     - Click "Test Connection" (it may take a couple of minutes to get the result back):
