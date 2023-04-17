@@ -1,6 +1,6 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Enterprise Monitoring Quick Tour",
-  "help": "livelabs-help-mgmt_us@oracle.com",
+  "workshoptitle": "Enterprise Manager Fundamentals: Monitoring Quick Tour",
+  "help": "livelabs-help-em_us_grp@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
@@ -51,7 +51,7 @@
     {
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }
