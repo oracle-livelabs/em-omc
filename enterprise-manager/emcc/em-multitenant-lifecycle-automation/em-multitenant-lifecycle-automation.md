@@ -52,7 +52,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Password: <copy>welcome1</copy>
     ```
 
-    ![em -login-page](../initialize-environment/images/em-login.png " em-login-page ")
+    ![em -login-page](images/pdbaas-sysman-login.png " em-login-page ")
 
 
 2.  Navigate to  ***Enterprise >> Provisioning and Patching >>

@@ -1,0 +1,719 @@
+# Hybrid Pluggable Database as a Service
+## Introduction
+
+Competitive businesses rely on Pluggable Database as a Service (PDBaaS) to provide the agility needed to meet fast changing market requirements and respond to demands for additional services. In this session, learn how customers can establish database services on top of any infrastructure to achieve higher consolidation, and reduce cost of administrative tasks. 
+Leverage database service to make database management organized, quickly deploy standardized secure database configurations on demand to meet application requirements.
+
+Gain technical insights to build DevOps environment for application owners to deploy databases on-demand via self-service interface while achieving maximum resource utilization and standardization. 
+
+*Estimated Lab Time: 60 minutes*
+
+
+### About Cloud Management Pack
+
+Cloud Management Pack (CMP) that resides on top of DBLM, provides  lifecycle management of PDBs in Database Private Cloud. This enables the Self Service Users to Provision, Plug-Unplug , Clone and Migrate PDBs in the Private Cloud.
+
+
+### Objectives
+
+The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lifecycle Management capabilities for multitenant databases.
+
+| **Step No.** | **Feature**                                                                | **Approx. Time** | **Details**                                                                                                                                                                      | **Value proposition**                                                                                                                                                                                                                   |
+|--------|----------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1    | Overview of SSA User and associated role                                      | 10min                     | Overview of SSA User and SSA Admin User.                                                                                  | ####To be Filled .                                                                                                           |
+| 2    | Creation of PDBaaS Infra | 10min                     | Creation of PDBaaS Infrastucture     | ## To be Filled                                                                               |
+| 3    | Self- service to request a PDB using PDBaaS         | 5min                      | Request PDB (pluggable database) using Service Catalogue on Private Cloud. Resize the PDB and then Delete the PDB while preserving the contents. | Review self-service option to provision PDB, which only requires minimal inputs.                                                                 |
+| 4    | Restore the PDB using Service Template                                | 5min                      | Restore the PDB using profile created in Task 3                                                                              | ###To be filled     |
+| 5    | Self Service to patch a PDB | 10min    |  ##To be filled | Perform Pre-patching tasks as SSA Admin. Patch a PDB as a Self Service user. |
+
+
+
+### Prerequisites
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- You have completed:
+    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+    - Lab: Environment Setup
+    - Lab: Initialize Environment
+
+*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository. Workshop activities included in this lab will be executed both locally on the instance using Enterprise Manager Command Line Interface (EMCLI) or Rest APIs, and the Enterprise Manager console (browser)
+
+## Task 1: Overview of SSA User and SSA Admin User
+
+1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below.
+
+    ```
+    Username: <copy>sysman</copy>
+    ```
+
+    ```
+    Password: <copy>welcome1</copy>
+    ```
+
+    ![em -login-page](images/pdbaas-sysman-login.png " em-login-page ")
+
+
+2.  On the right, click on the 'Setup' menu and choose 'Security' and then 'Roles'.  
+
+    ![Navigate to Security](images/Navigate-to-security.png " Navigate to Security ")
+
+    The "Developer" role you see has been pre-created. This is the role which will be attached to the SSA USER( CYRUS) which will be used in this Demo. 
+    Click on the "Developer" role to view more details. 
+    
+    View the target and resource privileges associated with this role.  You will also see a user 'Cyrus' is already associated to this role. 
+    ![SSA-Role](images/SSA-Role.png " SSA Role ") 
+
+    Click 'OK'
+
+3. Now, let us view the users which has this roles attached. 
+
+    Click on "Setup"  and choose 'Security' and then 'Administrators'. 
+
+    ![Navigate-to-security](images/Navigate-to-security.png " Navigate-to-security ")  
+    
+    Click 'CYRUS'
+    ![Choose-Cyrus-User.png](images/Choose-Cyrus-User.png " Choose-Cyrus-User.png ") 
+
+    You can see here the "DEVELOPER" role which we reviewed earlier is also attached to the "Cyrus" user. You can also view the Target privileges and resource privileges.
+    ![cyrus-user-details](images/cyrus-user-details.png " cyrus-user-detail ") 
+
+    Click OK. 
+
+    Click on the Oracle Home Icon on the top left to take you back to the EM Home Page.
+
+## Task 2: Creation of PDBaaS Infrastructure
+
+In this task we will build all the necessary componets required in setting up PDBaaS Infrastructure.
+
+1. **Creation of PaaS Infrastructure Zone**: 
+    
+    Navigate from Setup >> Cloud >> Database
+
+    ![Navigate-to-Cloud](images/Navigate-to-Cloud.png "Navigate-to-Cloud") 
+
+2. Choose pluggable database from the dropdown. 
+    ![Choose-PDB-Dropdown](images/Choose-PDB-Dropdown.png "Choose-PDB-Dropdown")
+
+3. Click on 'PaaS Infrastucture Zone' on the left menu bar and then click 'Create'. 
+
+    ![Creating-PaaS-Zone](images/Creating-PaaS-Zone.png "Creating-PaaS-Zone")
+
+4. Provide a Target Name and Description as suggested below. 
+
+    Click Next
+
+    ![PaaSzoneDetails](images/PaaSzoneDetails.png "PaaSzoneDetails")
+
+5. In the Members page  click on "Add" . 
+    From the pop-up dialog box Choose 'emcc.marketplace' and click on "select". 
+
+    ![Paas-memebers](images/Paas-memebers.png "Paas-memebers")
+
+    Click Next
+
+6. On the Credentials page , Click on "Named" radio button and choose 
+    "Oracle" from the dropdown. 
+
+    Click Next
+
+    ![Paas-zone](images/Paas-zone-credentails.png "PaaS Zone")
+
+7. No changes on the "Placement Constraints" page,  let us continue with the
+    default value as seen below. 
+
+    Click "Next"
+
+    ![Paas-zone](images/Paas-placement.png "PaaS Zone")
+
+8. No changes on the "Characteristics" page. Optionally you can choose to 
+   add tags as shown below. You can select a value from the dropdown. 
+
+    Click "Next"
+
+    ![Paas-zone](images/Paas-tags.png "PaaS Zone")
+
+9. On the Roles page, click  "Add". Choose the "Developer" role and 
+    click  "Select"
+    
+    Click Next
+
+    ![Paas-zone](images/Paas-add-role.png "PaaS Zone")
+
+10. Review the details and click "Submit"
+    ![Paas-zone](images/Paas-review.png "PaaS Zone")
+
+
+    The PaaS infra zone has been created successfully. 
+    
+    ![Paas-zone](images/Paas-create-confirm.png "PaaS Zone")
+
+11. **Creation of Pluggable Database Pool**
+
+    Click on 'Pluggable Database Pool' on the left menubar. 
+    
+    Click Create. 
+
+    ![pdb-pool](images/pdbpool-create.png "pdb-pool")
+
+12. In the **setup** page section,
+
+
+      **Step 1 Pool Details**
+
+      ```
+        Name: SalesDemoPool
+      ```
+      ```
+      Description : Sales Demo Pool
+      ```
+
+      **Step 2 Credentails**
+
+      Click on 'Named' radio button  for all the credentials. Click on the dropdown to choose each of the value
+
+      ```
+      Database Home Credentials : ORACLE(SYSMAN)
+      ```
+      ```
+      Root Credentails : ORACLE(SYSMAN)
+      ```
+      ```
+      Grid Infrastructure : ORACLE(SYSMAN)
+      ```
+      ```
+      Database : OEM_SYS(SYSMAN)
+      ```
+      **Step 3 Container Database**
+
+      Click on the dropdown to choose each of the value
+
+      ```
+      PaaS Infrastructure Zone : Sales Demo
+      ```
+      ```
+      Platform: Linux x86_64
+      ```
+      ```
+      Target Type : Database Instance
+      ```
+      ```
+      Version : 19.0.0.0
+      ```
+    
+    ![Paas-zone](images/Pdbpool-details1.png "PaaS Zone")
+
+    Next step would be to add the container databases of our choice to the pool.
+
+
+    Click on **Add** to choose the databases.  
+    On the pop up dialog box we will chose both the databases *cdb19c*  and *sales* and 
+    
+    click **Select**
+
+    ![Paas-zone](images/Pdbpool-details2.png "PaaS Zone")
+
+    Validate all the details, and click Next. 
+
+    ![Paas-zone](images/Pdbpool-creation1.png "PaaS Zone")
+
+13. In the policies page we can choose to reduce the maximum number of pdbs 
+   and adjust the workloads. We will proceed with the default values. 
+
+    ![Paas-zone](images/Pdbpool-creation2.png "PaaS Zone")
+
+    Review all the details and click **Submit**
+
+14. The Pluggable database pool has been sucessfuly created. 
+
+
+    ![Paas-zone](images/pdbpool-creation-confirmation.png "PaaS Zone")
+
+15. **Review Quotas and Data Source**
+
+    Click on "Quotas" from the left pane.  For the "Developer" role a quota has been pre-created as seen below. 
+    Optionally, you can choose to edit to adjust the values. 
+
+    ![Paas-zone](images/quota-review.png "PaaS Zone")
+
+16. Click on "Data Sources" from the left pane. 
+
+    A sample data profile has been created which could be used for creating a new database. 
+
+    ![Paas-zone](images/datasource-review.png "PaaS Zone")
+
+17. **Create Service Templates**
+    We will attempt to create 2 service templates. 
+
+        1. Template to create an empty pluggable database. 
+        2. Template to create a Pluggable database using profile
+
+    
+    Click on "Service Templates" from the left pane. 
+
+    Click on "Create".
+    ![service-template1](images/service-template1.png "service-template")
+     **Step 1 General Details**
+
+      ```
+      Name: NewEmptyPDB
+      ```
+      ```
+      Description : Template to create a new pluggable database
+      ```
+    Click on 'Create Empty Pluggable Database' radio button.    
+
+
+
+    In the "Pools and Zones"  section
+	Click "Add".  Choose the zone 'Sales Demo' from the pop-up and click 'Select'. 
+    ![service-template1](images/service-template2.png "service-template")
+	
+    
+    Click 'Sales Demo' and later Click on "Assign Pool" ,  choose "SalesDemo Pool"  from the pop-up and click 'Select'
+     ![service-template1](images/service-template3.png "service-template")
+	
+    Click on the magnifier icon in 'Reference container database' section,  choose "sales" database from the pop-up and click 'Select'. 
+   Click Next
+     ![service-template1](images/service-template4.png "service-template")
+
+     In the Configuration page, click "Create" under workloads. 
+            ```
+            Name: Small
+            ```
+            ```
+            Description: Small
+            ```
+            ```
+            CPU: 0.2
+            ```
+            ```
+            Memory: 0.2
+            ```
+            ```
+            Sessions: 10
+            ```
+            ```
+            Storage : 5
+            ```
+	    Click Create
+     ![service-template1](images/servicetemplate-5.png "service-template")
+    
+    Let us attempt to create another workload. 
+    
+    Click "Create" under workloads
+        ```
+		Name: Large
+        ```
+        ```
+		Description: Large
+        ```
+        ```
+		CPU: 0.2
+        ```
+        ```
+		Memory: 0.2
+        ```
+        ```
+		Sessions: 20
+        ```
+        ```
+		Storage : 5
+        ```
+		Click Create
+
+    Under the Pluggable Database Administrators Privileges, 
+    Click on the radio button "Allow SSA user to create a Data Profile" 
+    ```
+    Payload Location: /u01/app/oracle
+    ```
+    ```
+    Temporary Working Directory: /tmp
+    ```
+    Click "Next"
+   ![service-template1](images/servicetemplatessa.png "service-template")
+
+    In the Intitialization Parameters Page, you can choose to edit or add new parameters. We will choose to go with default options.
+    Click "Next"
+     ![service-template1](images/servicetemplate6.png "service-template")
+    
+    Optionally , in the Customisation page , you can choose to add pre and post script . 
+    Click Next
+
+    ![service-template1](images/servicetemplate7.png "service-template")
+
+    On the Roles Page, Click "Add". Choose "Developer" from the pop-up and click "Select"
+    Click Next.
+
+    ![service-template1](images/servicetemplate8.png "service-template")
+
+    Review the details and click on "Create". 
+    ![service-template1](images/servicetemplate9.png "service-template")
+    
+    The First Service Template has been created successfully. 
+
+
+
+18. Now, let us create the second service template to provision a pluggable database using data profile. 
+
+    Click on "Service Templates" from the left pane. 
+    Click on "Create".
+
+    ![service-template1](images/servicetemplate10.png "service-template")
+
+     General Details
+
+      ```
+      Name: NewEmptyPDB using Profile
+      ```
+      ```
+      Description : Template to create a new pluggable database using PDB Profile
+      ```
+    Click on radio button *Create Pluggable database using Data Profile selected by SSA user at request time.*     
+
+
+
+    In the "Pools and Zones"  section
+	Click "Add".  Choose the zone 'Sales Demo' from the pop-up and click 'Select'. 
+    ![service-template1](images/servicetemplate11.png "service-template")
+	
+    
+    Click 'Sales Demo' and later Click on "Assign Pool" ,  choose "SalesDemo Pool"  from the pop-up and click 'Select'
+     ![service-template1](images/servicetemplate12.png "service-template")
+	
+    Click on the magnifier icon in 'Reference container database' section,  choose "sales" database from the pop-up and click 'Select'. 
+   Click Next
+     ![service-template1](images/servicetemplate13.png "service-template")
+
+     In the Configuration page, click "Create" under workloads. 
+            ```
+            Name: Small
+            ```
+            ```
+            Description: Small
+            ```
+            ```
+            CPU: 0.2
+            ```
+            ```
+            Memory: 0.2
+            ```
+            ```
+            Sessions: 10
+            ```
+            ```
+            Storage : 5
+            ```
+	    Click Create
+     ![service-template1](images/servicetemplate-5.png "service-template")
+    
+    Let us attempt to create another workload. 
+    
+    Click "Create" under workloads
+        ```
+		Name: Large
+        ```
+        ```
+		Description: Large
+        ```
+        ```
+		CPU: 0.2
+        ```
+        ```
+		Memory: 0.2
+        ```
+        ```
+		Sessions: 20
+        ```
+        ```
+		Storage : 5
+        ```
+		Click Create
+
+    Under the Pluggable Database Administrators Privileges, 
+    Click on the radio button "Allow SSA user to create a Data Profile" 
+    ```
+    Payload Location: /u01/app/oracle
+    ```
+    ```
+    Temporary Working Directory: /tmp
+    ```
+    Click "Next"
+   ![service-template1](images/servicetemplatessa.png "service-template")
+
+    In the Intitialization Parameters Page, you can choose to edit or add new parameters. We will choose to go with default options.
+    Click "Next"
+     ![service-template1](images/servicetemplate6.png "service-template")
+    
+    Optionally , in the Customisation page , you can choose to add pre and post script . 
+    Click Next
+
+    ![service-template1](images/servicetemplate7.png "service-template")
+
+    On the Roles Page, Click "Add". Choose "Developer" from the pop-up and click "Select"
+    Click Next.
+
+    ![service-template1](images/servicetemplate8.png "service-template")
+
+    Review the details and click on "Create". 
+    ![service-template1](images/servicetemplate14.png "service-template")
+
+Both the service templates has been created successfully. 
+
+
+## Task 3 : Create PDB as Self Service User
+
+1. Logout as sysman and login as cyrus user. 
+
+![deploypdb](images/sysman-logout.png "deploypdb")
+                ```
+                Username: cyrus
+                ```
+                ```
+                Password: welcome1
+                ```
+![deploypdb](images/cyrus-login.png "deploypdb")
+
+The PDBs are created using our service template on CDBs which we have virtually grouped as a pool.
+
+
+2. By default, you will see the Database Cloud Self Service Portal landing page as shown below. 
+   Click on Create Instance button.
+   ![deploypdb](images/deploypdb1.png "deploypdb")
+
+3. Select " New Empty PDB" 
+
+   ![deploypdb](images/deploypdb2.png "deploypdb")
+   
+   Note: There are two service templates pertaining to Pluggable Database
+   
+   New Empty PDB: This template enables users to create a new empty pluggable database in a container database configured by DBA. 
+   New PDB using Data Profile: This template enables users to create a new pluggable database using a data profile created earlier by an SSA user
+   
+4. In the Pluggable Database Configuration section,
+
+		**Step 1**
+		
+		Enter PDB Name , Service and Size details:
+        ```
+		PDB Name: DemoSales
+        ```
+        ```
+		Database Service Name : Service_DemoSales
+        ```
+        ```
+		Workload Size: Small
+        ```
+		
+		**Step 2**
+		
+		Enter the credentials as suggested below.
+		```
+		Administrator Name: PDBADMIN
+        ```
+        ```
+		Password : welcome1
+        ```
+        ```
+        Confirm Password : welcome1
+        ```
+		
+		Tablespace name is auto populated.
+        ```
+		Tablespace name : pdb_tbs1
+        ```
+		
+		
+		**Step 3**
+		
+		Instance Details
+		
+		Request Name : Auto filled with latest timestamp. Can be modified in case needed.
+		
+		Zone : Auto filled with default option, 'Sales Demo' .
+		
+		Properties can help user locate an instance more quickly. Click on the dropdown to update.
+
+        ```
+		Lifecycle Status: <copy>Test</copy>
+        ```
+        ```
+		Contact: <copy>CYRUS</copy>
+        ```
+
+		**Step 4**
+		
+		Instance Duration - Start: Immediately 
+						   Duration : Indefinitely 
+						
+		
+		**Step 5**
+		
+		Validate all the details and Click on Submit button
+       ![deploypdb](images/deploypdb3.png "deploypdb")
+
+
+
+        5. Once you submit a request, you will be redirected back to the “Database Cloud Services” Page.
+
+		Under “Requests” region, you should see 1 requests for  “Create”  running.
+		Click on the hourglass icon under status column for the Create Pluggable Database step. You will see details of request.
+      ![deploypdb](images/deploypdb4.png "deploypdb")
+	
+	The request should take less than 3-4  minutes to complete.
+	Click on refresh icon or as an alternative set Refresh to 30 seconds.
+
+      ![deploypdb](images/deploypdb5.png "deploypdb")
+		The success status indicates that PDB database was successfully created.
+		Click on Close button when the procedure is complete.
+      ![deploypdb](images/deploypdb6.png "deploypdb")
+      The screen indicated the PDB creation is successful.
+ 
+   
+7. Click on the Home Icon. You will see new PDB instance. (Incase the newly created PDB is not reflecting, hit refresh on the top right corner of the page ). 
+   
+   Click on the PDB recently created.
+
+    ![deploypdb](images/deploypdb7.png "deploypdb") 
+   
+8. On the PDB details page you can use the connection details to connect to the PDB using SQL tools.
+
+    Click on Resize button to resize a PDB instance.
+
+    ![deploypdb](images/deploypdb8.png "deploypdb") 
+
+	
+9. Select large and click resize
+   
+     Resize allows you to resize your instance to other available resource sizes.
+    We have 2 resource sizes available for Service Template. Small and Large.
+             Current size of PDB instance is Small, you can now resize it to large.
+
+    ![deploypdb](images/deploypdb9.png "deploypdb") 
+	  
+10. Once you click on Resize, a job will be submitted to resize instance.
+    
+    In few minutes instance resize is completed. Expand Resource Usage section on PDB Home page.
+    
+    This shows now new resource usage limits.
+
+	  
+11. Next delete the database Instance:
+
+    Go to the Database Cloud Services Home page by clicking on "Database Cloud Service Portal" link
+
+    ![deploypdb](images/deploypdb10.png "deploypdb") 
+
+
+12. Click on the action menu for new PDB and delete this instance.
+    ![deploypdb](images/deploypdb11.png "deploypdb") 
+    
+13. While deleting instance you can preserve a backup and create a new instance in case required. 
+    
+    Select check-box: Preserve a backup of this instance. This will create a profile of this PDB which we can use to restore. 
+
+	Click Ok
+
+    ![deploypdb](images/deploypdb12.png "deploypdb") 
+
+    Click "Close"
+    ![deploypdb](images/deploypdb13.png "deploypdb") 
+    The delete pdb will be completed in about a minute. Optionally under the requests region you can view the staus of the delete job.
+	
+14. Now we will try to restore the PDB using the profile which we created during the delete PDB operation.
+
+    Click on "Create Instance"
+
+    Select "New PDB using Data Profile"
+
+    ![deploypdb](images/deploypdb14.png "deploypdb") 
+
+    In the Pluggable Database Configuration section,
+
+	**Step 1**
+		
+	Choose Profile, PDB Name , Service and Size details:
+    On the configuration page, click on the magnifier icon to choose the Data profile. Select the profile name and click Select.
+
+    ![deploypdb](images/deploypdb15.png "deploypdb") 
+
+    ```
+	PDB Name: NewDemoSales
+    ```
+    ```
+	Database Service Name : Service_NewDemoSales
+    ```
+    ```
+	Workload Size: Small
+    ```
+		
+	**Step 2**
+		
+	Enter the credentials as suggested below.
+	```
+	Administrator Name: PDBADMIN
+    ```
+    ```
+	Password : welcome1
+    ```
+    ```
+    Confirm Password : welcome1
+    ```
+		
+	Tablespace name is auto populated.
+    ```
+	Tablespace name : pdb_tbs1
+    ```
+		
+		
+	**Step 3**
+		
+	Instance Details
+		
+	Request Name : Auto filled with latest timestamp. Can be modified in case needed.
+		
+	Zone : Auto filled with default option, 'Sales Demo' .
+		
+	Properties can help user locate an instance more quickly. Click on the dropdown to update.
+
+    ```
+	Lifecycle Status: <copy>Test</copy>
+    ```
+    ```
+	Contact: <copy>CYRUS</copy>
+    ```
+
+	**Step 4**
+		
+	Instance Duration - Start: Immediately 
+						   Duration : Indefinitely 
+						
+		
+	**Step 5**
+		
+	Validate all the details and Click on Submit. 
+
+    ![deploypdb](images/deploypdb16.png "deploypdb")
+
+    Once you submit a request, you will be redirected back to the “Database Cloud Services” Page.
+
+	Under “Requests” region, you should see 1 requests for  “Create”  running.
+	Click on the hourglass icon under status column for the Create Pluggable Database step. 
+    You will see details of request.
+    ![deploypdb](images/deploypdb17.png "deploypdb")
+	
+	The request should take less than 3-4  minutes to complete.
+	Click on refresh icon or as an alternative set Refresh to 15 seconds.
+	The success status indicates that PDB database was successfully created.
+	Click on Close button when the procedure is complete.
+
+    ![deploypdb](images/deploypdb18.png "deploypdb")
+		
+
+    The screen indicated the PDB creation is successful. Click on the Home icon. 
+
+   ![deploypdb](images/deploypdb20.png "deploypdb")
+
+
+
+
+
+    
