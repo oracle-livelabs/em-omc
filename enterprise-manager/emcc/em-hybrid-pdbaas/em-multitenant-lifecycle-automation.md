@@ -617,8 +617,10 @@ The PDBs are created using our service template on CDBs which we have virtually 
     Click "Close"
     ![deploypdb](images/deploypdb13.png "deploypdb") 
     The delete pdb will be completed in about a minute. Optionally under the requests region you can view the staus of the delete job.
+
+## Task 4 : Restore a PDB as Self Service User
 	
-14. Now we will try to restore the PDB using the profile which we created during the delete PDB operation.
+1. Now we will try to restore the PDB using the profile which we created during the delete PDB operation.
 
     Click on "Create Instance"
 
@@ -710,8 +712,101 @@ The PDBs are created using our service template on CDBs which we have virtually 
 
     The screen indicated the PDB creation is successful. Click on the Home icon. 
 
-   ![deploypdb](images/deploypdb20.png "deploypdb")
+   ![deploypdb](images/pdbdeploy20.png "deploypdb")
 
+## Task 5 : Patch a PDB as a Self Service User
+
+In this task we will patch the "sales_newdemosales" PDB currently associated with "sales" CDB running on version 19.3. Our goal is to patch it to 19.12 by relocating it to container database "cdb19c.subnet.vcn.oraclevcn.com". 
+
+   ![deploypdb](images/ssapatching1.png "deploypdb")
+
+Now minimize the EM browser tab and double click on the terminal to launch it.  
+   ![deploypdb](images/ssaptching2.png "deploypdb")
+
+As a prerequisite we have already created a gold image for 19.12. 
+
+1. The first step is to verify the gold image and identify the image_id.  
+   Execute the below CLI in the terminal window. 
+
+    ```
+    emcli db_software_maintenance -getImages
+    ```
+    The highlighted row has the Image name and Image ID. 
+
+    ![deploypdb](images/ssapatching3.png "deploypdb")
+
+    "Latest19cimage" is the image which we have created and "F77B5DBB9EC34E78E053BB00000A577E" is our image id
+
+
+2. The next step is to subscribe the current PDB pool to the gold image. 
+    Execute the below CLI in the terminal. 
+
+    ```
+     emcli db_cloud_maintenance -subscribeTarget -pool_name=SalesDemoPool -pool_type=pdbaas_pool -image_id=F77B5DBB9EC34E78E053BB00000A577E
+    ```
+    The emcli verb should show successful status like this.
+      ![deploypdb](images/ssapatching4.png "deploypdb")
+
+
+3. Once we subscribe we attach the PDB Pool to the image created. 
+
+    ```
+    emcli db_cloud_maintenance -performOperation -purpose="ATTACH_CDB" -pool_name="SalesDemoPool" -pool_type="pdbaas_pool" -name="Attach an existing CDB" -target_type=oracle_database -description="Attach an existing CDB as the successor" -destinationCDB="cdb19c.subnet.vcn.oraclevcn.com" 
+    ```
+      ![deploypdb](images/ssapatching5.png "deploypdb")
+    
+    The Attach operation creates a procedure activity. This procedure takes about 30 seconds to execute. 
+
+4.  After subscribe and attach, the next step would be to activate it. 
+    Once you activate the newly attached CDB, any operations done in the exiting pool on sales CDB will be pointed to cdb19c.subnet.vcn.oraclevcn.com. 
+    
+    ```
+    emcli db_cloud_maintenance -performOperation -purpose="ACTIVATE_CDB" -pool_name="SalesDemoPool" -pool_type="pdbaas_pool" -name="Activate the CDBs"  -target_type=oracle_database -description="Activates the newly created CDBs"   -target_list="sales"
+    ```
+      ![deploypdb](images/ssapatching6.png "deploypdb")
+
+5. The above steps can be automated and can be performed by the Database   
+  administrator without having any dependency of the application users, because there is not downtime involved here.  The SSA user can update their database at thier convinient time with a click of a button. 
+
+    Log back to the EM console where you have logged in as cyrus user and click on the PDB as seen below. 
+
+    ![deploypdb](images/ssapatching7.png "deploypdb")
+
+6. Click on "Update Database" and choose to run immediately. 
+    Click on "Update". 
+
+    ![deploypdb](images/ssapatching8.png "deploypdb")
+
+7. Click on "Database Cloud Self Service Portal" 
+
+    ![deploypdb](images/ssapatching9.png "deploypdb")
+
+8. Logout as cyrus and login as sysman. 
+   ```
+   Username: sysman
+   ```
+   ```
+   Password: welcome1
+   ```
+
+9. Navigate from *Enterprise >> Provisioning and Patching >> Procedure  
+    Activity*
+
+    ![deploypdb](images/ssapatching11.png "deploypdb")
+
+    Click on the Update procedure to view more details about the precedure log. 
+
+
+10.  Click on the "Oracle" Home icon on the top left. Navigate from *Targets>> Databases*.
+    ![deploypdb](images/ssapatching13.png "deploypdb")
+    We will now see the PDB has been relocated and updated to 19.12
+    ![deploypdb](images/ssapatching14.png "deploypdb")
+
+This concludes the lab. 
+
+
+
+    
 
 
 
