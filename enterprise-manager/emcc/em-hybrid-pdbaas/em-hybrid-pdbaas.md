@@ -68,7 +68,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click on "Setup"  and choose 'Security' and then 'Administrators'. 
 
-    ![Navigate-to-security](images/Navigate-to-security.png " Navigate-to-security ")  
+    ![Navigate-to-security](images/demo-admin-user.png " Navigate-to-security ")  
     
     Click 'CYRUS'
     ![Choose-Cyrus-User.png](images/Choose-Cyrus-User.png " Choose-Cyrus-User.png ") 
@@ -154,10 +154,10 @@ In this task we will build all the necessary componets required in setting up PD
 
     ![pdb-pool](images/pdbpool-create.png "pdb-pool")
 
-12. In the **setup** page section,
+12. In the **Setup** page section,
 
 
-      **Step 1 Pool Details**
+    **Step 1 Pool Details**
 
       ```
         Name: SalesDemoPool
@@ -166,9 +166,9 @@ In this task we will build all the necessary componets required in setting up PD
       Description : Sales Demo Pool
       ```
 
-      **Step 2 Credentails**
+    **Step 2 Credentails**
 
-      Click on 'Named' radio button  for all the credentials. Click on the dropdown to choose each of the value
+    Click on 'Named' radio button  for all the credentials. Click on the dropdown to choose each of the value
 
       ```
       Database Home Credentials : ORACLE(SYSMAN)
@@ -182,7 +182,7 @@ In this task we will build all the necessary componets required in setting up PD
       ```
       Database : OEM_SYS(SYSMAN)
       ```
-      **Step 3 Container Database**
+    **Step 3 Container Database**
 
       Click on the dropdown to choose each of the value
 
