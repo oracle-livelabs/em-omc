@@ -199,7 +199,7 @@ In this task we will build all the necessary componets required in setting up PD
       Version : 19.0.0.0
       ```
     
-    ![Paas-zone](images/pdbpool-details1.png "PaaS Zone")
+    ![Paas-zone](images/Pdbpool-details1.png "PaaS Zone")
 
     Next step would be to add the container databases of our choice to the pool.
 
