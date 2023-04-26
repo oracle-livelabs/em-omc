@@ -265,8 +265,8 @@ In this task we will build all the necessary componets required in setting up PD
 
     In the "Pools and Zones"  section
 	Click "Add".  Choose the zone 'Sales Demo' from the pop-up and click 'Select'. 
-    
-    ![service-template1](images/service-template2.png "service-template")
+
+     ![service-template1](images/service-template2.png "service-template")
 	
     
     Click 'Sales Demo' and later Click on "Assign Pool" ,  choose "SalesDemo Pool"  from the pop-up and click 'Select'
