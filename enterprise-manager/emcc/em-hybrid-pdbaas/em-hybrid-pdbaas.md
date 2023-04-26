@@ -235,7 +235,7 @@ In this task we will build all the necessary componets required in setting up PD
     ![Paas-zone](images/quota-review.png "PaaS Zone")
 
 16. Click on "Data Sources" from the left pane. 
-    
+
     A sample data profile has been created which could be used for creating a new database. 
 
     ![Paas-zone](images/datasource-review.png "PaaS Zone")
@@ -269,10 +269,13 @@ In this task we will build all the necessary componets required in setting up PD
 	
     
     Click 'Sales Demo' and later Click on "Assign Pool" ,  choose "SalesDemo Pool"  from the pop-up and click 'Select'
+
      ![service-template1](images/service-template3.png "service-template")
 	
     Click on the magnifier icon in 'Reference container database' section,  choose "sales" database from the pop-up and click 'Select'. 
-   Click Next
+
+    Click Next
+    
      ![service-template1](images/service-template4.png "service-template")
 
      In the Configuration page, click "Create" under workloads. 
