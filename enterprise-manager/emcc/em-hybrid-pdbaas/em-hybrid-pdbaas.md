@@ -265,6 +265,7 @@ In this task we will build all the necessary componets required in setting up PD
 
     In the "Pools and Zones"  section
 	Click "Add".  Choose the zone 'Sales Demo' from the pop-up and click 'Select'. 
+    
     ![service-template1](images/service-template2.png "service-template")
 	
     
@@ -275,7 +276,7 @@ In this task we will build all the necessary componets required in setting up PD
     Click on the magnifier icon in 'Reference container database' section,  choose "sales" database from the pop-up and click 'Select'. 
 
     Click Next
-    
+
      ![service-template1](images/service-template4.png "service-template")
 
      In the Configuration page, click "Create" under workloads. 
