@@ -209,11 +209,11 @@ In this task we will build all the necessary componets required in setting up PD
     
     click **Select**
 
-    ![Paas-zone](images/Pdbpool-details2.png "PaaS Zone")
+![Paas-zone](images/Pdbpool-details2.png "PaaS Zone")
 
-    Validate all the details, and click Next. 
+Validate all the details, and click Next. 
 
-    ![Paas-zone](images/Pdbpool-creation1.png "PaaS Zone")
+![Paas-zone](images/Pdbpool-creation1.png "PaaS Zone")
 
 13. In the policies page we can choose to reduce the maximum number of pdbs 
    and adjust the workloads. We will proceed with the default values. 
