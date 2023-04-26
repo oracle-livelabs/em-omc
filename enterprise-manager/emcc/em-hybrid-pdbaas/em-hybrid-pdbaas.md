@@ -250,7 +250,8 @@ In this task we will build all the necessary componets required in setting up PD
     Click on "Service Templates" from the left pane. 
 
     Click on "Create".
-    ![service-template1](images/service-template1.png "service-template")
+
+     ![service-template1](images/service-template1.png "service-template")
      **Step 1 General Details**
 
       ```
