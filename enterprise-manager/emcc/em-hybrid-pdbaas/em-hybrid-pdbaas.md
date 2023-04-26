@@ -235,10 +235,7 @@ In this task we will build all the necessary componets required in setting up PD
     ![Paas-zone](images/quota-review.png "PaaS Zone")
 
 16. Click on "Data Sources" from the left pane. 
-
-        
-        
-
+    
     A sample data profile has been created which could be used for creating a new database. 
 
     ![Paas-zone](images/datasource-review.png "PaaS Zone")
