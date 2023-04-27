@@ -5,7 +5,7 @@
         {
             "title": "Introduction",
             "description": "Introduction",
-            "filename": "../../introduction/introduction.md"
+            "filename": "../../introduction/introduction-ocw.md"
         },
         {
             "title": "Get Started",
@@ -15,12 +15,12 @@
         {
             "title": "Lab 1: Enable Demo Mode for Operations Insights",
             "description": "Enable Demo Mode for Operations Insights.",
-            "filename": "../../enable-demo-mode/enable-demo-mode.md"
+            "filename": "../../enable-demo-mode/enable-demo-mode-ocw.md"
         },
         {
             "title": "Lab 2: Capacity Planning of Oracle Databases",
             "description": "Capacity Planning of Oracle Databases",
-            "filename": "../../capacity-planning-adb/capacity-planning-adb.md"
+            "filename": "../../capacity-planning-adb/capacity-planning-adb-ocw.md"
         },
         {
             "title": "Lab 3: Capacity Planning of Oracle Exadata",
