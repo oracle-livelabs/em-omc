@@ -38,6 +38,11 @@
             "filename": "../../awr-hub/awr-hub.md"
         },
         {
+            "title": "Lab 6: ADDM Spotlight",
+            "description": "ADDM Spotlight",
+            "filename": "../../addm-spotlight/addm-spotlight.md"
+        },
+        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/need-help/need-help-livelabs.md"
