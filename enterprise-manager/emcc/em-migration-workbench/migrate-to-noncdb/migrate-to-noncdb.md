@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to DBCS (ExaCC, ExaCS, BM, or VM), and autonomous, using TTS and data pump migration methods. This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Since the workshop is fully contained in a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
+You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to Base Database (ExaCC, ExaCS, BM, or VM), and autonomous, using TTS and data pump migration methods. This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Since the workshop is fully contained in a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
 
 Estimated Time: 30 minutes
 
@@ -11,7 +11,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
+In this lab, you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -33,7 +33,7 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 In the interest of simplifying the setup and to save time, the following requirements were completed in advance and covered in this lab. Please review accordingly for reference.
 
 1. Source and destination targets are discovered in Enterprise Manager
-    - On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below
+    - On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and log in with the credentials provided below
 
         ```text
         Username: <copy>sysman</copy>
@@ -49,13 +49,13 @@ In the interest of simplifying the setup and to save time, the following require
         - orcl is our source database
         - orcl19 is our destination database
 2. Data Pump user requirement
-    - For the source database (orcl), an export user (EXP_USER) was created with password "welcome1" and the required privileges
-    - For migrating the database to a new non-container database, an import user (IMP_USER) was created in the target database (orcl19c) with password "welcome1" and the required privileges
-    - To learn more about the the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
+    - For the source database (orcl), an export user (EXP_USER) was created with the password "welcome1" and the required privileges
+    - For migrating the database to a new non-container database, an import user (IMP_USER) was created in the target database (orcl19c) with the password "welcome1" and the required privileges
+    - To learn more about the required privileges review "[Database Migration Prerequisites](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmwb/database-migration-workbench.html#GUID-3FB0F7B7-F221-43BE-8D29-E36A18EF45C0)" in the Enterprise Manager documentation
 
 3. Named Credential requirement
-    - Named Credentials "EXP\_USER" and "IMP\_USER" created in Enterprise Manager for users "EXP\_USER" and "IMP\_USER" on databases "orcl" and orcl19c respectively
-    - To review the credentials in OEM console, navigate to "Setup"->"Security"->"Named Credentials"
+    - Named Credentials "EXP\_USER" and "IMPUSER" were created in Enterprise Manager for users "EXP\_USER" and "IMP\_USER" on databases "orcl" and orcl19c respectively
+    - To review the credentials in the OEM console, navigate to "Setup"->"Security"->"Named Credentials"
     - To learn more about named credentials review "[Named Credentials](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emsec/security-features.html#GUID-345595B0-3FA4-4F2C-A606-596B1A10A13E)" in the Enterprise Manager documentation
 
 4. Data Pump directory requirement
