@@ -37,10 +37,6 @@ Estimated time: 10 minutes
 
       ![Left Pane](./images/opsi-left-pane-new.png " ")
 
-6.  When viewing resources there will also be options to filter the displayed resources or adjust the time range at which the forecasting algorithms are computing against.
-
-      ![Filter](./images/opsi-filter.png " ")
-
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
