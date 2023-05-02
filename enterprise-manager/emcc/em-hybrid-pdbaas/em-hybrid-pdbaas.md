@@ -78,11 +78,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click OK. 
 
-    Click on the Oracle Home Icon on the top left to take you back to the EM Home Page.
+    Click on the Oracle logo on the top left as shown in the image above to take you back to the EM Home Page.
 
 ## Task 2: Creation of PDBaaS Infrastructure
 
-In this task we will build all the necessary componets required in setting up PDBaaS Infrastructure.
+    
+In  this task we will build all the necessary componets required in setting up PDBaaS Infrastructure. We will continue to do the PDBaaS setup as sysman user. 
+
+  Optionally, you can could also create an SSA_ADMIN role and allocate the relevant privileges to create the required infrastructure.    
 
 1. **Creation of PaaS Infrastructure Zone**: 
     
@@ -495,9 +498,9 @@ The PDBs are created using our service template on CDBs which we have virtually 
    
 4. In the Pluggable Database Configuration section,
 
-		**Step 1**
+	**Step 1**
 		
-		Enter PDB Name , Service and Size details:
+	Enter PDB Name , Service and Size details:
         ```
 		PDB Name: DemoSales
         ```
@@ -508,9 +511,9 @@ The PDBs are created using our service template on CDBs which we have virtually 
 		Workload Size: Small
         ```
 		
-		**Step 2**
+	**Step 2**
 		
-		Enter the credentials as suggested below.
+	Enter the credentials as suggested below.
 		```
 		Administrator Name: PDBADMIN
         ```
@@ -521,20 +524,18 @@ The PDBs are created using our service template on CDBs which we have virtually 
         Confirm Password : welcome1
         ```
 		
-		Tablespace name is auto populated.
+	    Tablespace name is auto populated.
+
         ```
 		Tablespace name : pdb_tbs1
         ```
-		
-		
-		**Step 3**
-		
-		Instance Details
-		
+			
+    **Step 3**
+
+	Instance Details
+
 		Request Name : Auto filled with latest timestamp. Can be modified in case needed.
-		
 		Zone : Auto filled with default option, 'Sales Demo' .
-		
 		Properties can help user locate an instance more quickly. Click on the dropdown to update.
 
         ```
@@ -544,23 +545,24 @@ The PDBs are created using our service template on CDBs which we have virtually 
 		Contact: <copy>CYRUS</copy>
         ```
 
-		**Step 4**
+	**Step 4**
 		
-		Instance Duration - Start: Immediately 
-						   Duration : Indefinitely 
+	Instance Duration - Start: Immediately 
+	Duration : Indefinitely 
 						
 		
-		**Step 5**
+	**Step 5**
 		
-		Validate all the details and Click on Submit button
-       ![deploypdb](images/deploypdb3.png "deploypdb")
+	Validate all the details and Click on Submit button
+
+![deploypdb](images/deploypdb3.png "deploypdb")
 
 
 
-        5. Once you submit a request, you will be redirected back to the “Database Cloud Services” Page.
+5. Once you submit a request, you will be redirected back to the “Database Cloud Services” Page.
 
-		Under “Requests” region, you should see 1 requests for  “Create”  running.
-		Click on the hourglass icon under status column for the Create Pluggable Database step. You will see details of request.
+	Under “Requests” region, you should see 1 requests for  “Create”  running.
+	Click on the hourglass icon under status column for the Create Pluggable Database step. You will see details of request.
       ![deploypdb](images/deploypdb4.png "deploypdb")
 	
 	The request should take less than 3-4  minutes to complete.
