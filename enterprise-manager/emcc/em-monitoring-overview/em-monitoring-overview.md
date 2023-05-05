@@ -1,4 +1,4 @@
-# EM Enterprise Monitoring Quick Tour
+# Enterprise Manager Fundamentals: Monitoring Quick Tour
 ## Introduction
 Oracle Enterprise Manager enables you to get complete monitoring visibility into your IT infrastructure, applications stack and applications that are critical to running your business.
 
@@ -12,13 +12,19 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Metric Extensions to monitor conditions specific to your environment
 
-- Dynamic Runbooks to triage and resolve your incidents
+- Dynamic Runbooks to triage and resolve your incidents  
 
 Watch the video below for a quick walk-through of the lab.
 [Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
 
 ### Objectives
 The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
+
+### Prerequistes
+This lab assumes you have:
+
+- A Free Tier, Paid or LiveLabs Oracle Cloud account
+- All previous labs successfully completed
 
 *Estimated Time*: 65 minutes
 
@@ -42,54 +48,54 @@ The objective of this lab is to become familiar with Enterprise Monitoring capab
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”. 
 
-    ![Enterprise Manager login](images/emmonlab1step1.png " ")
+    ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to “Enterprise >> Summary”.
 
-    ![Enterprise Manager welcome page](images/emmonlab1step2.png " ")
+    ![Enterprise Manager welcome page](images/enterprise-manager-welcome.png " ")
 
 3. Enterprise Summary presents a single pane of glass view of the health of your Enterprise assets.
 The Overview pane shows the Target Status of your IT estate. The Status section shows aggregated target availability so you can get a sense of what percentage is UP vs DOWN at a quick glance. The Green slice of the pie are your targets that are up. The Red slice of the pie are the targets that are down. Targets in red may be down due to unscheduled outages. Let’s drill down and take a look at them.
 
-    ![Enterprise Manager summary page](images/emmonlab1step3.png " ")
+    ![Enterprise Manager summary page](images/enterprise-manager-summary.png " ")
 
 4. Click on the Red slice of the pie in the “Status” section. **Note:** You can ignore any differences between the count of targets in the screenshots vs. what you see in your lab environment. The number of targets may vary based on your lab environment.
 
-    ![Enterprise Manager summary page, status section](images/emmonlab1step4.png " ")  
+    ![Enterprise Manager summary page, status section](images/enterprise-manager-summary-status.png " ")  
 
    If a dialog pops up, click on ‘Down’ again.
 
-    ![Enterprise Manager summary page, status section](images/emmonlab1step4b.png " ")   
+    ![Enterprise Manager summary page, status section](images/enterprise-manager-summary-status-down.png " ")   
 
 5. In Enterprise Manager we have an “All Targets” page, which shows all of the targets being monitored by EM. When we clicked on the Red slice of the pie, we essentially placed a filter on the All Targets page to display only Down targets. From here, you can click on the individual target to go to the Target Home Page and take necessary actions such as starting up a Database Instance.
 
-    ![Enterprise Manager All targets page](images/emmonlab1step5.png " ")
+    ![Enterprise Manager All targets page](images/enterprise-manager-all-targets.png " ")
 
 6. Click on “Enterprise >> Summary” to go back to the Enterprise Summary page.
 
-    ![Step to navigate back to Enterprise Manager summary page](images/emmonlab1step6.png " ")
+    ![Step to navigate back to Enterprise Manager summary page](images/enterprise-manager-summary-2.png " ")
 
-7. Any Incidents, Problems, and Jobs requiring attention is displayed on the Enterprise Summary page with the ability to drill down into them. Click on the incidents link ![](images/noentry.svg " ") for Availability.
+7. Any Incidents, Problems, and Jobs requiring attention is displayed on the Enterprise Summary page with the ability to drill down into them. Click on the incidents link ![Availability symbol](images/noentry.svg " ") for Availability.
 
-    ![Enterprise Manager summary page, status section with Availability incidents selected](images/emmonlab1step7.png " ")
+    ![Enterprise Manager summary page, status section with Availability incidents selected](images/enterprise-manager-summary-availability.png " ")
 
 8. A list of critical incidents is displayed in Incident Manager. You can manage the incidents by acknowledging, assigning ownership, changing the priority or status, and more.
 
-    ![A list of critical incidents is displayed in Incident Manager](images/emmonlab1step8.png " ")
+    ![A list of critical incidents is displayed in Incident Manager](images/enterprise-manager-incident-manager.png " ")
 
 9. Click on “Enterprise >> Summary” to go back to the Enterprise Summary page.
 
 10. You can also filter the view based on the target type. Click on the View dropdown in the “Overview” pane and select “Database Instance” to look at the database status.
 
-    ![Enteprise Manager summary page, status section with filter for target type](images/emmonlab1step10.png " ")
+    ![Enteprise Manager summary page, status section with filter for target type](images/enterprise-manager-summary-database-instance.png " ")
 
 11.	The Status pane is filtered for Database Instance targets and displays a breakdown of the database statuses.
 
-    ![Enterprise Manager summary page, status section](images/emmonlab1step11.png " ")
+    ![Enterprise Manager summary page, status section](images/enterprise-manager-summary-database-status-filter.png " ")
 
 12.	The right hand pane of the Enterprise Summary page also has Inventory and Usage, Compliance Summary, and Patch Recommendations sections. Inventory and Usage shows a breakdown of database inventory by release. Compliance Summary shows the compliance score for the selected targets as well as security recommendations. Patch Recommendations links to MOS and shows the recommended patches for your targets.
 
-     ![ Enterprise manager summary page, Compliance Summary, and Patch Recommendations sections](images/emmonlab1step12.png " ")
+     ![ Enterprise manager summary page, Compliance Summary, and Patch Recommendations sections](images/enterprise-manager-summary-inventory.png " ")
 
 ## Task 2: Incident Manager
 
@@ -97,22 +103,22 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-    ![Enterprise Manager login](images/emmonlab2step1.png " ")
+    ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to “Enterprise >> Monitoring >> Incident Manager”.
 
-    ![Enterprise Manager welcome page](images/emmonlab2step2.png " ")
+    ![Enterprise Manager welcome page](images/enterprise-manager-welcome-to-incident-manager.png " ")
 
 3. In Incident Manager, the Views section contains out-of-box views that comes shipped with Enterprise Manager. You can create your own views and share with others as well. By default, “All open incidents” view is displayed.
 
-    ![Incident Manager page](images/emmonlab2step3.png " ")
+    ![Incident Manager page](images/incident-manager-all-open-incidents.png " ")
 
 4. We will triage unassigned incidents and then acknowledge and assign an incident to an owner. Click on the incident with Summary text “Target is down; 1 member is down; db19c.subnet.vcn.oraclevcn.com”. Details of the incident will be displayed in the bottom pane.
 
-    ![Incident Manager page](images/emmonlab2step4.png " ")
+    ![Incident Manager page](images/incident-manager-target-down-selected.png " ")
 
 5. Click on “Open in new tab” link to open the incident on a separate tab. You may need to temporarily allow popups in the browser.
-    ![Incident Manager page](images/emmonlab2step5.png " ")
+    ![Incident Manager page](images/incident-manager-open-in-new-tab.png " ")
 
 6. The General tab of an incident contains 4 sections.
 
@@ -121,31 +127,31 @@ Incident Manager provides in one location the ability to search, view, manage, a
       - Guided Resolution provides the ability to diagnose and take action to resolve the incident.
       - Runbook Sessions provides options to start, create, or view a runbook session against the incident.
 
-     ![Incident Manager page, Incident details](images/emmonlab2step6.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager-incident-details.png " ")
 
 7. Click on “Acknowledge” in the Tracking section to acknowledge the incident. This will automatically assign the incident to the user acknowledging the incident.
 
-     ![Incident Manager page, Incident details](images/emmonlab2step7a.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager-incident-details-acknowledge.png " ")
 
-     ![Incident Manager page, Incident details](images/emmonlab2step7b.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager-incident-details-acknowledge-completed.png " ")
 
 8. Click on “Manage”.
 
-     ![Incident Manager page, Incident details](images/emmonlab2step8.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager-incident-details-manage.png " ")
 
 9. Update the Status, Priority, and Escalation fields. Add a short comment and click OK.
 
-     ![Incident details, manage incident pop-up box](images/emmonlab2step9.png " ")
+     ![Incident details, manage incident pop-up box](images/incident-manager-incident-details-manage-tab.png " ")
 
 10.	A confirmation is displayed with the Tracking section updated.
 
-     ![Incident Manager page, Incident details](images/emmonlab2step10.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager-incident-details-tracking-updated.png " ")
 
 11.	Close the Incident Details tab and go back to the Incident Manager tab.
 
 12.	Click on the Dashboard button next to “Incident Manager: All open incidents”.
 
-     ![Incident Manager page](images/emmonlab2step12.png " ")
+     ![Incident Manager page](images/incident-manager-dashboard-button.png " ")
 
 13.	Incident Dashboard provides a holistic view of your incidents. It contains 3 sections.
 
@@ -153,15 +159,16 @@ Incident Manager provides in one location the ability to search, view, manage, a
        - Charts: Provides an easy-to-understand look at the current incident distribution and management status for each incident. Drill down capability with stackable filters to slice and dice data any way you like. Customize to add/update/remove charts to provide a personalized view in Incident Manager.
        - Incident List: Shows the open incidents listed in reverse chronological order by last updated time stamp. From this list, you can perform requisite incident lifecycle actions such as escalating, prioritizing, acknowledging, assigning owners, and adding comments to the incident. The incident list will reflect any filters applied.
 
-     ![Incident Manager, Incident Dashboard](images/emmonlab2step13.png " ")
+     ![Incident Manager, Incident Dashboard](images/incident-manager-dashboard-view.png " ")
 
 14.	Click on the “Fatal” link to drill down into these incidents.
 
-     ![Incident Manager, Incident Dashboard](images/emmonlab2step14.png " ")
+     ![Incident Manager, Incident Dashboard](images/incident-manager-dashboard-fatal-drilldown.png " ")
 
 15.	Incident Dashboard is filtered for incidents with “Fatal” severity.
 
-     ![Incident Manager, Incident Dashboard](images/emmonlab2step15.png " ")
+     ![Incident Manager, Incident Dashboard](images/incident-manager-dashboard-fatal-drilldown-complete.png " ")
+     
 
 ## Task 3A: Dynamic Runbooks
 
@@ -169,157 +176,98 @@ Dynamic Runbooks are documented procedures that IT staff follow to resolve an is
 
 For this lab, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
 
-**Note:** In steps 1 through 15, you will log in as SYSMAN to modify a time range used in the Dynamic Runbook in this task. Completing these initial steps will allow you to view the metric graph for the designated incident you will eventually start a Runbook session on. You are still able complete this task without modifying the time range (in steps 1-15), but please note that this will cause the metric graph for the incident to not display when you run the Runbook in later steps. 
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
+     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
-     ![Enterprise Manager login - SYSMAN](images/sysmanLogin.png " ")
-
-2. Navigate to "Enterprise >> Monitoring >> Runbooks".
-
-     ![Runbooks Navigation - SYSMAN](images/sysmanRunbooksNavigation.png " ")
-
-3. In the Runbooks page that appears, switch to the Published tab view.
-
-     ![Select Published Tab - SYSMAN](images/sysmanSelectPublishedTab.png " ")
-
-4. In this Published tab view, you should see a published Runbook labeled “Fast Recovery Area Triage”. From the Actions menu of this Runbook, select “Create a New Version.”
-
-     ![Create Runbook Draft - SYSMAN](images/sysmanCreateRunbookDraft.png " ")
-
-5. A pop-up will appear to enter an Incident ID. This is needed to pass incident details to the Runbook draft. Enter "8161". Select OK. 
-
-     ![FRA Runbook Draft Popup for Incident ID - SYSMAN](images/sysmanEnterID.png " ")
-
-6. You will be navigated to a page to edit the Runbook. This is a draft of the initial “Fast Recovery Area Triage” Runbook. Select the pencil icon to make edits to Step 2. 
-
-     ![FRA Runbook Draft - Edit Step 2 - SYSMAN](images/sysmanEditStep2.png " ")
-
-7. Select the Time Range field. 
-
-     ![FRA Runbook Draft - Select Time Range for Step 2 - SYSMAN](images/sysmanSelectTimeRange.png " ")
-
-8. A pop-up will appear and show you the option to modify the time range of the metric data that will display in a graph. In the Start Time field, enter "evt\_time – 1d". In the End Time field, enter "evt\_time + 1d". Select Done.
-
-     ![FRA Runbook Draft - Modify Time Range - SYSMAN](images/sysmanModifyTimeRange.png " ")
-
-9. Select Save Step.
-
-     ![FRA Runbook Draft - Save Step - SYSMAN](images/sysmanSaveStepModifiedRange.png " ")
-
-10. At the top of the page click on the “Runbooks” link to go back to the Runbooks page.
-
-     ![FRA Runbook Draft - Go Back to Runbook Page - SYSMAN](images/sysmanLinkBackToRunbookPage.png " ")
-
-11. You will see the “Fast Recovery Area Triage” Runbook listed under the  Drafts tab.
-
-     ![FRA Runbook Draft - Updated Draft Tab view - SYSMAN](images/sysmanDraftRbFraOnRbPage.png " ")
-
-12. From the Actions menu, select Publish.
-
-     ![FRA Runbook Draft - Publish Runbook - SYSMAN](images/sysmanPublishRunbook.png " ")
-
-13. Select OK. 
-
-     ![FRA Runbook Draft - Select OK to Publish Runbook - SYSMAN](images/sysmanPublishRunbookDraftPopup.png " ")
-
-14. This will now replace the previous published “Fast Recovery Area Triage” Runbook with the edits you made.
-
-15. Log out of Enterprise Manager as SYSMAN.
-
-     ![Enterprise Manager logout](images/sysmanLogout.png " ")
-
-16. Log into Enterprise Manager again using the credentials “emadmin/welcome1”.
-
-     ![Enterprise Manager login](images/emmonlab3step1.png " ")
-
-17. Navigate to "Enterprise >> Monitoring >> Incident Manager".
+2. Navigate to "Enterprise >> Monitoring >> Incident Manager".
      
-     ![Navigate to Incident Manager](images/emmonlab3astep2.png " ")
+     ![Navigate to Incident Manager](images/enterprise-monitoring-incident-manager-3a.png " ")
 
-18. In Incident Manager, the “All open incidents” view is displayed by default. In this view, highlight the incident with Summary text “The value of the Fast Recovery Area % Used is 70.11”. The Fast Recovery Area is a unified storage location for all Oracle Database files related to recovery. Details of the incident will be displayed in the bottom pane. 
+3. In Incident Manager, the “All open incidents” view is displayed by default. In this view, highlight the incident with Summary text “The value of the Fast Recovery Area % Used is 70.11”. The Fast Recovery Area is a unified storage location for all Oracle Database files related to recovery. Details of the incident will be displayed in the bottom pane. 
 
-     ![Highlighted Incident](images/emmonlab3astep3.png " ")
+     ![Highlighted Incident](images/incident-manager-all-open-incidents-fra.png " ")
 
-19. In the bottom pane, you should see a section called "Runbook Sessions".
+4. In the bottom pane, you should see a section called "Runbook Sessions".
 
-     ![Runbook Sessions section in Incident Manager](images/emmonlab3astep4.png " ")
+     ![Runbook Sessions section in Incident Manager](images/incident-manager-all-open-incidents-fra-runbook-sessions.png " ")
 
-20. Click on "Start Runbook Session".
+5. Click on "Start Runbook Session".
      
-     ![Start Runbook Session](images/emmonlab3astep5.png " ")
+     ![Start Runbook Session](images/incident-manager-start-runbook-session.png " ")
 
-21. At the top of this page, the previous incident details are carried over. These details will be passed to the Runbook once you create a session.  Under the incident details, a table displays the published Runbooks that can be used against the incident.
+6. At the top of this page, the previous incident details are carried over. These details will be passed to the Runbook once you create a session.  Under the incident details, a table displays the published Runbooks that can be used against the incident.
 
-     ![Start Runbook Session Page](images/emmonlab3astep6.png " ")
+     ![Start Runbook Session Page](images/runbook-session-page.png " ")
 
-22. To preview the Runbook steps, click on the Runbook name, "Fast Recovery Area Triage". You can click on the  steps to view more details. **Note:** In this task, there is only one published Runbook available. In cases where there are multiple Runbooks, the preview can help you decide which Runbook to use.
+7. To preview the Runbook steps, click on the Runbook name, "Fast Recovery Area Triage". You can click on the  steps to view more details. **Note:** In this task, there is only one published Runbook available. In cases where there are multiple Runbooks, the preview can help you decide which Runbook to use.
 
-     ![Preview Runbook](images/emmonlab3astep7.png " ")
+     ![Preview Runbook](images/runbook-session-page-preview-runbook.png " ")
 
-23. Click Close when you are done previewing the steps.
+8. Click Close when you are done previewing the steps.
 
-24. After previewing the steps, select on the play icon under the Start Session column to begin the Runbook session.
+9. After previewing the steps, select on the play icon under the Start Session column to begin the Runbook session.
 
-     ![Play Runbook Session](images/emmonlab3astep9.png " ")
+     ![Play Runbook Session](images/runbook-session-page-start-runbook.png " ")
 
-25. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Also, notice the incident details have been carried over to the session.
+10. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Also, notice the incident details have been carried over to the session.
 
-     ![FRA Runbook Session Steps for Incident](images/emmonlab3astep10.png " ")
+     ![FRA Runbook Session Steps for Incident](images/runbook-fra.png " ")
 
-26. The Overview & Prerequisites step describes what the Runbook does and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the Named Credential, **CDB186\_SYS**, for the target database. Access to this Named Credential will allow you to successfully run through all the steps.
+11. The Overview & Prerequisites step describes what the Runbook does and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the Named Credential, **CDB186\_SYS**, for the target database. Access to this Named Credential will allow you to successfully run through all the steps.
 
-     ![Overview & Prerequisites Step](images/emmonlab3astep11.png " ")
+     ![Overview & Prerequisites Step](images/runbook-fra-overview-step.png " ")
 
-27. Select the play icon in Step 2 to review the metric, FRAPercentUsed, that triggered the incident. The red vertical dotted line indicates when the incident happened. Notice the increasing trend of the metric before crossing the threshold. The threshold was crossed at approximately 70%. 
+12. Select the play icon in Step 2 to review the metric, FRAPercentUsed, that triggered the incident. The red vertical dotted line indicates when the incident happened. Notice the increasing trend of the metric before crossing the threshold. The threshold was crossed at approximately 70%. 
      
      **Note:** The metric data was simulated for the purpose of this lab. As a result, your graph may not exactly resemble the image shown below, but it should still show an upwards trend.
 
-     ![Review the Metric - Step 2](images/emmonlab3astep12.png " ") 
+     ![Review the Metric - Step 2](images/runbook-fra-metric-step.png " ") 
 
-28. Next, check the FRA size of the database. Notice for Step 3 the gear icon is displayed instead of the play icon. This indicates that certain credentials are required before running the step.
+13. Next, check the FRA size of the database. Notice for Step 3 the gear icon is displayed instead of the play icon. This indicates that certain credentials are required before running the step.
 
-     ![Gear Icon - Step 3](images/emmonlab3astep13.png " ")
+     ![Gear Icon - Step 3](images/runbook-fra-check-fra-size.png " ")
 
-29. Click on the gear icon for Step 3. In the pop-up that appears, enter the credential **CDB186\_SYS** and click Save.
+14. Click on the gear icon for Step 3. In the pop-up that appears, enter the credential **CDB186\_SYS** and click Save.
 
-     ![Enter Credentials - Step 3](images/emmonlab3astep14.png " ")
+     ![Enter Credentials - Step 3](images/runbook-fra-check-fra-size-enter-credentials.png " ")
 
-30. After saving, the Runbook session is updated and the gear icon for Step 3 will turn into a play icon. The same credentials are needed to run Step 4 and Step 5, so these steps have also been updated to a play icon instead of a gear icon. 
+15. After saving, the Runbook session is updated and the gear icon for Step 3 will turn into a play icon. The same credentials are needed to run Step 4 and Step 5, so these steps have also been updated to a play icon instead of a gear icon. 
 
-     ![Credentials Saved - Step 3](images/emmonlab3astep15.png " ")
+     ![Credentials Saved - Step 3](images/runbook-fra-check-fra-size-play.png " ")
 
-31. Click on the play icon for Step 3 to check the FRA size. A table appears, displaying the FRA size for the database. It should be approximately 13 Gigabytes. According to the Runbook instructions, the FRA size must be set to at least 50 Gigabytes (50G) to comply with the Database standard. 
+16. Click on the play icon for Step 3 to check the FRA size. A table appears, displaying the FRA size for the database. It should be approximately 13 Gigabytes. According to the Runbook instructions, the FRA size must be set to at least 50 Gigabytes (50G) to comply with the Database standard. 
 
-     ![Check FRA Size - Step 3](images/emmonlab3astep16.png " ")
+     ![Check FRA Size - Step 3](images/runbook-fra-check-fra-size-table.png " ")
 
-32. To change the FRA size to 50G, click the play icon on Step 4. You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRAPercentUsed to decrease.
+17. To change the FRA size to 50G, click the play icon on Step 4. You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRAPercentUsed to decrease.
 
-     ![Change FRA Size - Step 4](images/emmonlab3astep17.png " ")
+     ![Change FRA Size - Step 4](images/runbook-fra-change-fra-size.png " ")
 
-33. Run Step 5 to view the updated FRA size and to confirm that it has been set to at least 50G. Your new FRA size should be approximately 53687091200 (50G), which meets the minimum threshold for FRA size.
+18. Run Step 5 to view the updated FRA size and to confirm that it has been set to at least 50G. Your new FRA size should be approximately 53687091200 (50G), which meets the minimum threshold for FRA size.
 
-     ![Check FRA Size Again - Step 5](images/emmonlab3astep18.png " ")
+     ![Check FRA Size Again - Step 5](images/runbook-fra-check-fra-size-again.png " ")
 
-34. Step 6 describes the success criteria: once you have performed all the Runbook steps and the FRA size meets the minimum threshold, then this should have resolved the issue. 
+19. Step 6 describes the success criteria: once you have performed all the Runbook steps and the FRA size meets the minimum threshold, then this should have resolved the issue. 
 
-     ![Success Criteria - Step 6](images/emmonlab3astep19.png " ")
+     ![Success Criteria - Step 6](images/runbook-fra-success-criteria.png " ")
 
      **Note:** For the purpose of this lab, the metric incident was simulated and therefore may still remain in Incident Manager after these steps have been run.
 
-35. The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and rerun your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later. 
+20. The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and rerun your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later. 
 
-36. Select Mark as Done to indicate that you have finished all the steps. Once you Mark as Done, you are unable to run the steps and the Runbook session will become read-only.
+21. Select Mark as Done to indicate that you have finished all the steps. Once you Mark as Done, you are unable to run the steps and the Runbook session will become read-only.
 
-     ![Mark as Done](images/emmonlab3astep21.png " ")
+     ![Mark as Done](images/runbook-fra-mark-as-done.png " ")
 
-37. Click OK.
+22. Click OK.
 
-     ![Mark as Done - OK](images/emmonlab3astep22.png " ")
+     ![Mark as Done - OK](images/runbook-fra-mark-as-done-ok.png " ")
 
-38. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session. 
+23. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session. 
 
-     ![Actions - Complete Runbook Session](images/emmonlab3astep23.png " ")
+     ![Actions - Complete Runbook Session](images/runbook-sessions-completed-page-actions-menu.png " ")
+     
 
 ## Task 3B: Dynamic Runbooks
 
@@ -329,127 +277,127 @@ For this lab, a Dynamic Runbook draft has already been created. You will go thro
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/emmonlab3step1.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to "Enterprise >> Monitoring >> Runbooks".
 
-     ![Navigate to Runbooks](images/emmonlab3bstep2.png " ")
+     ![Navigate to Runbooks](images/enterprise-monitoring-runbooks.png " ")
 
 3. The Runbooks page has Draft Runbooks and Published Runbooks. By default, the Drafts tab is opened. You can create a Runbook through this Runbooks page or directly against an incident in the Incident Manager page. Under the Drafts tab, select the "New Runbook" link. This is the Runbook draft that was created for you and that you will modify.
      
-     ![Select New Runbook Draft](images/emmonlab3bstep3.png " ")
+     ![Select New Runbook Draft](images/runbooks-page-new-runbook.png " ")
 
 4. At the top of the page, the previous incident details are carried over. This is the incident that was selected to create a Runbook draft on. You can optionally edit the Runbook name and Description using the pencil icons next to them. 
 
-     ![New Runbook Draft Page](images/emmonlab3bstep4.png " ")
+     ![New Runbook Draft Page](images/runbooks-page-new-runbook-draft-page.png " ")
 
 5. There is an Add a Step drop-down menu, where you can select the desired step type you want to define. There are four step types: Note, Metric Data, Repository SQL, and Target SQL. We have already added the steps for you in this Runbook draft.
 
-     ![Add Step - New Runbook](images/emmonlab3bstep5.png " ")
+     ![Add Step - New Runbook](images/runbooks-page-new-runbook-draft-page-add-step.png " ")
 
 6. To begin modifying the Runbook Draft steps, select the pencil icon to edit Step 1 (Overview and Prerequisites). This is a Note Step: used for any type of text meant to provide information or instruction pertaining to the Runbook. The Note can be plain text but can also accommodate simple formatting via markdown language. 
 
-     ![Step 1 Overview and Prereq - New Runbook](images/emmonlab3bstep6.png " ")  
+     ![Step 1 Overview and Prereq - New Runbook](images/new-runbook-draft-page-edit-overview.png " ")  
 
 7. In the text box, add 3 hash signs (###) followed by a space to the beginning of the first sentence, “This runbook can be used to triage and resolve FRA incidents,” to make it header 3. 
 
-     ![Step 1 H3 - New Runbook](images/emmonlab3bstep7.png " ")  
+     ![Step 1 H3 - New Runbook](images/new-runbook-draft-page-edit-overview-h3.png " ")  
 
 8. Next, place three dashes (---) on their own line under the first sentence to create a horizontal line.
 
-     ![Step 1 Horizontal Line - New Runbook](images/emmonlab3bstep8.png " ")  
+     ![Step 1 Horizontal Line - New Runbook](images/new-runbook-draft-page-edit-overview-line.png " ")  
 
 9. Put two asterisks (**) on both sides of the “Prior to Beginning” text to make it bold. 
 
-     ![Step 1 Asterisks - New Runbook](images/emmonlab3bstep9.png " ") 
+     ![Step 1 Asterisks - New Runbook](images/new-runbook-draft-page-edit-overview-asterisks.png " ") 
 
 10. Scroll down in the text box until you see the following sentence: “Make sure you have been granted access to the named credential for the target database **[target name]** on which the FRA Incident has occurred”.
 
-     ![Step 1 Scroll to Target Name Placeholder - New Runbook](images/emmonlab3bstep10.png " ") 
+     ![Step 1 Scroll to Target Name Placeholder - New Runbook](images/new-runbook-draft-page-edit-overview-target-placeholder.png " ") 
 
 11. View the "Oracle Provided Variables" on the right side of the screen. Scroll until you see the field for "Target Name".
 
-     ![Step 1 Oracle Variable for Target Name - New Runbook](images/emmonlab3bstep11.png " ")     
+     ![Step 1 Oracle Variable for Target Name - New Runbook](images/new-runbook-draft-page-edit-overview-oracle-variable-target-name.png " ")     
 
 12. Replace the "[target name]" placeholder in the text box with the value displayed in the Variables table for Target Name: **$ora\_target\_name**. This will now replace the original "[target name]" placeholder text with the target name pulled from the context of the incident.
 
-     ![Step 1 Target Name Placeholder Replacement- New Runbook](images/emmonlab3bstep12.png " ") 
+     ![Step 1 Target Name Placeholder Replacement- New Runbook](images/new-runbook-draft-page-edit-replace-target-placeholder.png " ") 
 
 13. Select Save Step to view the modifications to the text.
 
 14. Your Overview and Prerequisites step should now look like this:
      
-     ![New Step 1 - New Runbook](images/emmonlab3bstep14.png " ") 
+     ![New Step 1 - New Runbook](images/new-runbook-draft-page-new-overview.png " ") 
 
      The first sentence is now a header 3 with a horizontal line under it. The Prior to Beginning text is bolded. And the original [target name] placeholder text is populated by the name of the target from the incident.
 
 15. Step 2 is a Metric Data step which is used to show the time series chart for the specified metric. Notice the instruction text of the step does not specify the actual metric name to review. Also, the graph does not show the trend from before the metric crossed the threshold, which is indicated by the red vertical dotted line.
 
-     ![Step 2 - New Runbook](images/emmonlab3bstep15.png " ") 
+     ![Step 2 - New Runbook](images/new-runbook-draft-page-metric-step.png " ") 
 
 16. Click the pencil icon to make edits to Step 2. 
 
-     ![Edit Step 2 - New Runbook](images/emmonlab3bstep16.png " ") 
+     ![Edit Step 2 - New Runbook](images/new-runbook-draft-page-edit-metric-step.png " ") 
 
 17. To specify the metric name, edit the “[metric name]” placeholder to use the value **$ora\_metric\_name**. This will populate the value with the text in the Metric Name field (e.g., FRAPercentUsed).
 
-     ![Step 2 Specify Metric Name - New Runbook](images/emmonlab3bstep17.png " ")
+     ![Step 2 Specify Metric Name - New Runbook](images/new-runbook-draft-page-edit-metric-name.png " ")
 
 18. Click on the Time Range field to modify the times shown in the graph. Change the Start Time field to "evt\_time – 1d" and the End Time field to "evt\_time + 1d". Select Done. Select the Run button. This should now balance the graph to display the trend of the metric before and after it triggered the incident. 
 
      **Note:** The metric data was simulated for the purpose of this lab. As a result, your graph may not exactly resemble the image shown below, but it should still show an upwards trend.
 
-     ![Step 2 Change Time Range - New Runbook](images/emmonlab3bstep18a.png " ")
+     ![Step 2 Change Time Range - New Runbook](images/new-runbook-draft-page-edit-metric-time-range.png " ")
 
-     ![Step 2 Updated Graph - New Runbook](images/emmonlab3bstep18b.png " ")
+     ![Step 2 Updated Graph - New Runbook](images/new-runbook-draft-page-edit-metric-new-graph.png " ")
 
 19. Select Save Step to see results for Step 2. 
 
 20. The metric name value should populate to "FRAPercentUsed", and the graph should now display the red vertical dotted line in the center.
 
-     ![New Step 2 - New Runbook](images/emmonlab3bstep20.png " ")
+     ![New Step 2 - New Runbook](images/new-runbook-draft-page-metric-step-new.png " ")
 
 21. Step 3 is a Target SQL Step. It allows you to execute SQL against any database target in Enterprise Manager. In our example, the current SQL query will need to be updated to properly check for flashback retention usage. 
 
-     ![Step 3 - New Runbook](images/emmonlab3bstep21.png " ")
+     ![Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step.png " ")
 
 22. Select the pencil icon to edit Step 3.
 
-     ![Edit Step 3 - New Runbook](images/emmonlab3bstep22.png " ")
+     ![Edit Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit.png " ")
 
 23. Under the Variables section, select the Add Variable button.
 
-     ![Add Variable Step 3 - New Runbook](images/emmonlab3bstep23.png " ")
+     ![Add Variable Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable.png " ")
 
 24. You will see a pop-up box labeled Add a Runbook Variable. In the Name field, enter "user\_flash". In the Display Name field enter "Flash like statement". In the Value used in the Draft field, enter "%flash%". And for the Value used in a Runbook Session, you have the options to select the "User who runs the Runbook session specify the value" or select the "Same value used in the draft". Select "Same value used in the draft". 
 
-     ![Add Variable Pop-up Step 3 - New Runbook](images/emmonlab3bstep24.png " ")
+     ![Add Variable Pop-up Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable-popup.png " ")
 
 25. Select OK to save the variable.
 
-     ![Save Variable Step 3 - New Runbook](images/emmonlab3bstep25.png " ")
+     ![Save Variable Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable-popup-save.png " ")
 
 26. Once the variable is saved, it should appear in the Variables section under "Author Defined". You will use this variable for the SQL query. 
 
-     ![Variable Defined Step 3 - New Runbook](images/emmonlab3bstep26.png " ")
+     ![Variable Defined Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-variable-defined.png " ")
 
 27. The current SQL query needs to be replaced to check for flashback retention usage. Replace the current SQL query with the following: "select name, value from v$parameter where name LIKE:$user\_flash".
 
-     ![Replace Query Step 3 - New Runbook](images/emmonlab3bstep27.png " ")
+     ![Replace Query Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-replace-query.png " ")
 
 28. To test if the SQL query is correct, scroll to the bottom of the page and select the Run button. The Display section should show a table with the flashback retention usage results, which should list 1440 (i.e., the standard value needed).
 
-     ![Test Query Step 3 - New Runbook](images/emmonlab3bstep28.png " ")
+     ![Test Query Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-test-query.png " ")
 
 29. Select Save Step.
 
 30. Run Step 3 to view the new results from the updated query. The new results show that the flashback retention usage meets the standard value needed, 1440.
 
-     ![New Step 3 - New Runbook](images/emmonlab3bstep30.png " ")
+     ![New Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-new.png " ")
 
 31. You have now finished making edits to the Runbook and can publish it so that it can be used by others. At the top of the Runbook draft page click on the “Runbooks” link to go back to the Runbooks page.
 
-     ![Runbooks Page Link from Step 3 - New Runbook](images/emmonlab3bstep31.png " ")
+     ![Runbooks Page Link from Step 3 - New Runbook](images/new-runbook-draft-page-runbooks-page-link.png " ")
 
 32. The Runbook draft that you modified will be displayed in the Drafts tab and will have your updates.
 
@@ -478,7 +426,7 @@ Metric and Collection Settings page is where we can view and configure threshold
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/emmonlab3step1.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to “Targets >> Databases” to see the list of Database targets.
 
@@ -563,7 +511,7 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/emmonlab4step1.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to “Enterprise >> Monitoring >> Corrective Actions”.
 
@@ -648,7 +596,7 @@ Metric Extensions expand Oracle's monitoring capabilities to monitor conditions 
 For this lab, a metric extension has already been created and is in Editable status.  As part of creating a metric extension, you can test it against some targets.  You will go through the process of testing the metric extension against some targets.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
-    ![Enterprise Manager login](images/emmonlab5step1.png " ")
+    ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to “Enterprise >> Monitoring >> Metric Extensions”.
     ![Enterprise manager welcome page](images/emmonlab5step2.png " ")
@@ -723,7 +671,7 @@ Monitoring templates enable you to deploy standardized monitoring settings acros
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-    ![Enterprise manager login](images/emmonlab6step1.png " ")
+    ![Enterprise manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to “Enterprise >> Monitoring >> Monitoring Templates”.
 
@@ -783,7 +731,7 @@ Administration Groups are designed to simplify the process of setting up targets
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-    ![Enterprise manager login](images/emmonlab7step1.png " ")
+    ![Enterprise manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to "Setup >> Add Target >> Administration Groups".
 
@@ -914,7 +862,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![enterprise manager login](images/emmonlab8step1.png " ")
+     ![enterprise manager login](images/enterprise-manager-login.png " ")
 
 2. Navigate to "Setup >> Incidents >> Incident Rules".
 

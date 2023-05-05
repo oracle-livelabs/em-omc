@@ -6,7 +6,7 @@ The Database Migration Workbench workshop is a fully functional Oracle Enterpris
 
 - It is intended to familiarize you with Database Migration Workbench which can be invaluable in your journey to 19c and multitenant
 - The Workshop VM comes preinstalled with Enterprise Manager 13.5 RU7 and Oracle Database targets 12.2 and 19.12
-- It's easy and quick to deploy with everything starting automatically in under 20 minutes
+- It's easy and quick to deploy with everything starting automatically in under 30 minutes
 
 Estimated Time: 60 minutes
 
@@ -18,7 +18,7 @@ In this workshop, you will learn how to:
 
 ### About Migration Workbench
 
-Oracle Enterprise Manager Database Migration Workbench provides an accurate approach to migration and consolidation by eliminating human errors allowing you to easily move your on-premises databases to Oracle Cloud, Multitenant architecture, or upgrade your infrastructure. Advantages of using Database Migration Workbench include: Near-Zero Downtime, Assured Zero Data Loss, seamless on-premises or Cloud migrations, and, MAA and Cloud Security compliant.
+Oracle Enterprise Manager Database Migration Workbench provides an accurate approach to migration and consolidation by eliminating human errors allowing you to easily move your on-premises databases to Oracle Cloud, multitenant architecture, or upgrade your infrastructure. Advantages of using Database Migration Workbench include: Near-Zero Downtime, Assured Zero Data Loss, seamless on-premises or Cloud migrations, and, MAA and Cloud Security compliant.
 
 - _Analyze Migration Activities:_ Database Migration Workbench offers robust tools for monitoring and troubleshooting your recently completed migrations. Database Migration Workbench also offers clean-up tools that aid in recovering important disk space from dump files. This lab covers both of these features
 

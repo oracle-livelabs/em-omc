@@ -1,0 +1,1 @@
+> **Note:** The Databases page allows you to add or remove PDBs in Oracle EM as managed targets. This page does not create new PDBs or delete PDBs from the database instance.

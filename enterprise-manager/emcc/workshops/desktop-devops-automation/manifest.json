@@ -13,16 +13,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 2: Deploy and Manage Oracle Databases with Ansible and Enterprise Manager",
+      "title": "Lab 1: Deploy and Manage Oracle Databases with Ansible and Enterprise Manager",
       "description": "The objective is to become familiar with the extensibility capabilities of Oracle Enterprise Manager and how to integrate them with 3rd party automation/orchestration DevOps tools",
       "publisheddate": "1/16/2022",
       "filename": "./../../em-devops-automation/em-devops-automation.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",

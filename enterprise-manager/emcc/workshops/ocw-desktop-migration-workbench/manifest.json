@@ -13,22 +13,22 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: initialize Environment",
-      "description": "How to validate and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "./../../em-migration-workbench/initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 2: Migrate and upgrade 12c database to 19c PDB",
+      "title": "Lab 1: Migrate and upgrade 12c database to 19c PDB",
       "description": "This lab provides an overview of Database Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
       "filename": "./../../em-migration-workbench/migrate-to-pdb/migrate-to-pdb.md"
     },
     {
-      "title": "Lab 3: Migrate and upgrade 12c database to 19c in new destination",
+      "title": "Lab 2: Migrate and upgrade 12c database to 19c in new destination",
       "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
       "publisheddate": "7/16/2020",
       "filename": "./../../em-migration-workbench/migrate-to-noncdb/migrate-to-noncdb.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
@@ -37,8 +37,9 @@
       "filename": "./../../faq/faq.md"
     },
     {
-      "title": "Oracle CloudWorld 2022 - Get Help",
-      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
-      }
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
   ]
 }

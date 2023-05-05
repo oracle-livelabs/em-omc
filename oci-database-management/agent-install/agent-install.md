@@ -18,20 +18,19 @@ This lab assumes you have completed the following labs:
 * Lab: Setup pluggable databases and workload
 * Lab: Prerequisite: Create a dynamic group and policies for agent communication
 
-## Task 1: Download the Lab Files
+## Task 1: Download the Agent Software
 
-1.  Open up the terminal of your choice and log in to the compute instance you created in the previous lab.
+Perform the following steps to download the agent software:
 
-2.  Copy the following commands into your terminal. These commands download the files needed to run the lab.
+1.  On the Management Agents home page, click the **Downloads and Keys** from the left menu to view the Software Download pane. The Software Download pane is displayed.
 
-    *Note*: If you are running in windows using putty, ensure your Session Timeout is set to greater than 0
+2.  On the Software Download pane, select the operating system that the Management Agent will be installed on from the **Download** column with **Package type** as **RPM**.
 
-    ```
-    <copy>
-    cd /home/opc/
-    wget https://objectstorage.us-ashburn-1.oraclecloud.com/n/idtskf8cjzhp/b/installer/o/Linux-x86_64/latest/oracle.mgmt_agent.rpm
-    </copy>
-    ```
+3.  Click the link specific to your operating system to download the agent software file. For example, click **Agent for LINUX (X86_64)**.
+
+    ![Agent Software](./images/agentdownload.png " ")
+
+4.  Copy the agent software file to the compute instance you created in the previous lab.
 
 ## Task 2: Create an Agent Install Key
 
