@@ -1,4 +1,4 @@
-# Multitenant Database Lifecycle Management
+# Hybrid Multitenant Database Lifecycle Management
 ## Introduction
 
 This workshop will help you understand how one can utilize Enterprise Manager to make the best use of Oracle Database Multitenancy , and Lifecycle Management capabilities. We also have labs which will help you understand how organizations can utilize the Database Private Cloud which allows self-service users to request and manage Pluggable Databases (PDBs) with ease.
@@ -6,9 +6,9 @@ This workshop will help you understand how one can utilize Enterprise Manager to
 *Estimated Lab Time: 60 minutes*
 
 Watch the video below for a quick walk-through of the lab.
-[Multitenant Database Lifecycle Management](videohub:1_1yzsbufd)
+[Hybrid Multitenant Database Lifecycle Management](videohub:1_1yzsbufd)
 
-### About Multitenant Database Lifecycle Management
+### About Hybrid Multitenant Database Lifecycle Management
 
 Oracle Enterprise Manager's Database Lifecycle Management (DBLM) Pack  comes with out-of-box Deployment Procedures to provision, clone, and patch various configurations of the Oracle Database. The Management Pack offers new capabilities that simplify support for the entire lifecycle of pluggable databases, including migration, plugging and unplugging. The Management Pack features include pluggable database (PDB) provisioning and management from the self-service portal, PDB patching and upgrades, and PDB relocation to new platforms.
 
@@ -363,7 +363,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/clone-navigate-to-databases-home.png " clone-navigate-to-databases-home ")
 
-2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** and 
+2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** and
 **sales.subnet.vcn.orclevcn.com** to view their associated PDBs.
 
 
@@ -378,43 +378,43 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 3.  This will open up the PDB Home page
 
     ![](images/clone-pdb-home-page.png " HR PDB Home page")
-  
+
 
 4.  Navigate from **Oracle Database >> Cloning >> Create Full Clone**  
 
-    This will open up the PDB Clone Management page. 
+    This will open up the PDB Clone Management page.
 
 
     ![](images/clone-navigate-to-pdb-clone.png " navigate to pdb clone page ")
 
-5.  The PDB Clone management page opens up with options as highlighted below. 
+5.  The PDB Clone management page opens up with options as highlighted below.
 
-    The Pluggable Database Name is prepopulated with a deafult value. 
-    You can refer to the instructions below to update the PDB name. 
+    The Pluggable Database Name is prepopulated with a deafult value.
+    You can refer to the instructions below to update the PDB name.
 
     ![](images/clone-default-pdb-clone-page.png " clone pdb ")
 
     Please update the values as suggested below.   
 
     1. Click on the magnifier to update the SYSDBA credentials of the source PDB.
-    
+
         Choose **Named Credentials** and select **SALES_SYS** from the dropdown.
 
-    2. 
+    2.
         ```
-        Pluggable Database Name : <copy>HR_CLONE</copy> 
+        Pluggable Database Name : <copy>HR_CLONE</copy>
         ```
-    3. 
+    3.
         ```
-        Display Name: <copy>HR_CLONE</copy> 
+        Display Name: <copy>HR_CLONE</copy>
         ```
-    4. ``` 
-        Username: <copy>PDBADMIN</copy> 
+    4. ```
+        Username: <copy>PDBADMIN</copy>
         ```
-       ``` 
-       Password: <copy>welcome1</copy> 
        ```
-       
+       Password: <copy>welcome1</copy>
+       ```
+
        Confirm the password.
     5. Click on the check box to **Clone the Pluggable Database into a different Container Database**
     6. Click on the magnifier icon to select the destination CDB for cloning. In our case it is **HR CDB**
@@ -423,28 +423,28 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 6. Verify all the details as shown below and click **CLONE**
 
-    Optionally, you can choose to click on **Advanced** which will allow users to customise datafile location, run data masking scripts and also schedule the clone activity for a later point in time. 
+    Optionally, you can choose to click on **Advanced** which will allow users to customise datafile location, run data masking scripts and also schedule the clone activity for a later point in time.
 
     ![](images/clone-updated-cloneinfo.png " updated clone info ")
 
 
 7. On Procedure Activity, select specific execution step from the procedure step tree to see details of the execution log.
 
-    Setup View Data to be refreshed with specific time interval to refresh page. 
+    Setup View Data to be refreshed with specific time interval to refresh page.
 
     The procedure takes about 2 minutes to complete.
 
     ![](images/clone-procedure-activity.png " clone procedure info ")
 
-8.   Wait for **Status: Succeeded** which indicates the procedure ran successfully. 
+8.   Wait for **Status: Succeeded** which indicates the procedure ran successfully.
 
      ![](images/clone-procedure-success.png " clone procedure success ")
 
-9. Now let us validate the PDB clone from the database details page. 
+9. Now let us validate the PDB clone from the database details page.
     Navigate to **Targets >> Databases**
     ![](images/clone-navigate-for-validation.png "navigate-for-validation ")
 
-10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases. 
+10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases.
 
     We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com** CDB
 ![](images/clone-validation.png "pdb clone validation success ")
