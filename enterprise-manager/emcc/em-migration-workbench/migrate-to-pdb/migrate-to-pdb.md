@@ -2,7 +2,7 @@
 
 ## Introduction
 
-You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to DBCS (ExaCC, ExaCS, BM, or VM), and autonomous, using TTS and data pump migration methods. This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Since the workshop is fully contained in a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
+You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to Base Database (ExaCC, ExaCS, BM, or VM), and autonomous, using TTS and data pump migration methods. This lab demonstrates using Migration Workbench for **on-premises** to **on-premises** migrations. Since the workshop is fully contained in a single VM, the source and destination databases are on the same host, but the instructions apply when migrating databases to new hosts.
 
 Estimated Time: 30 minutes
 
@@ -11,7 +11,7 @@ Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
+In this lab, you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

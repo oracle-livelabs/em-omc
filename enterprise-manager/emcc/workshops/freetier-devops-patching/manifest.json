@@ -26,16 +26,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
     },
     {
-      "title": "Lab 3: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: Patch Oracle Databases with Ansible and Enterprise Manager",
+      "title": "Lab 3: Patch Oracle Databases with Ansible and Enterprise Manager",
       "description": "The objective is to become familiar with the extensibility capabilities of Oracle Enterprise Manager and how to integrate them with 3rd party automation/orchestration DevOps tools",
       "publisheddate": "1/16/2022",
       "filename": "./../../em-devops-patching/em-devops-patching.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",

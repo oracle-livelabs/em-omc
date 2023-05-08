@@ -1,6 +1,6 @@
 {
-  "workshoptitle": "Oracle Enterprise Manager - Enterprise Monitoring Quick Tour",
-  "help": "livelabs-help-mgmt_us@oracle.com",
+  "workshoptitle": "Enterprise Manager Fundamentals: Monitoring Quick Tour",
+  "help": "livelabs-help-em_us_grp@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
@@ -13,16 +13,16 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Initialize Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 2: Enterprise Monitoring Quick Tour",
+      "title": "Lab 1: Enterprise Monitoring Quick Tour",
       "description": "The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.",
       "publisheddate": "9/16/2021",
       "filename": "./../../em-monitoring-overview/em-monitoring-overview.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to initialize and start all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "./../../initialize-environment/initialize-environment.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
