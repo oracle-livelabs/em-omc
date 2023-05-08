@@ -1,6 +1,6 @@
 {
   "workshoptitle": "Oracle Enterprise Manager - Job System Automation",
-  "help": "livelabs-help-mgmt_us@oracle.com",
+  "help": "livelabs-help-em_us_grp@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
@@ -41,6 +41,11 @@
       "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
       "publisheddate": "8/12/2020",
       "filename": "./../../faq/faq.md"
+    },
+    {
+      "title": "Environment Cleanup",
+      "description": "Cleanly dispose of all OCI resources created by ORM for the workshop, and delete the stack",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cleanup-stack/cleanup-stack.md"
     },
     {
       "title": "Need  Help?",

@@ -34,7 +34,7 @@ This lab assumes you have completed the following labs:
     unzip labs.zip
     </copy>
     ```
-    ![](./images/copylabs.png " ")
+    ![Copy Lab data](./images/copylabs.png "Copy Lab data")
 
 ## Task 2: Run the Setup Scripts
 1.  Run this command to setup the fleet of databases and workload schema that you will use for this lab.   This script takes about 10 minutes to complete.   It creates pluggable databases and installs the workload data. Make sure you are still logged in as oracle user.
@@ -46,7 +46,7 @@ This lab assumes you have completed the following labs:
     nohup /home/oracle/labs/pdbcreate.sh &> pdbcreate.out&
     </copy>
     ```
-    ![](./images/pdbcreate.png " ")
+    ![Create PDB](./images/pdbcreate.png "Create PDB")
 
 2.  Run this command to install the workload data.
 
@@ -57,7 +57,7 @@ This lab assumes you have completed the following labs:
     nohup /home/oracle/labs/pdbsetup.sh &> pdbsetup.out&
     </copy>
     ```
-    ![](./images/pdbsetup.png " ")
+    ![PDB Setup](./images/pdbsetup.png "PDB Setup")
 
 
 3.  To check the status of the script above run the command below.   You can also use the unix **jobs** command to see if the script is still running.  
@@ -67,14 +67,14 @@ This lab assumes you have completed the following labs:
     tail /home/oracle/pdbcreate.out
     </copy>
     ```
-    ![](./images/pdbcreatelog.png " ")
+    ![PDB creation log](./images/pdbcreatelog.png "PDB creation log")
 
     ```
     <copy>
     tail /home/oracle/pdbsetup.out
     </copy>
     ```
-    ![](./images/pdbsetuplog.png " ")
+    ![PDB Setup log](./images/pdbsetuplog.png "PDB Setup log")
 
 ## Task 3: Start the workload
 
@@ -89,7 +89,7 @@ This lab assumes you have completed the following labs:
     ps -ef |grep lab
     </copy>
     ```
-    ![](./images/workload.png " ")
+    ![Workload](./images/workload.png "Workload")
 
 ## Acknowledgements
 

@@ -2,18 +2,18 @@
 
 ## Introduction
 
-You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to DBCS (ExaCC, ExaCS, BM, or VM), and autonomous, using TTS and data pump migration methods in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **autonomous** migration.
+You can use Database Migration Workbench to migrate databases to multi-tenant architecture on Exadata on-premises, to Base Database Service (BM or VM) or Exadata Database Service (ExaCC, ExaCS), and autonomous, using TTS and data pump migration methods in Oracle Cloud Infrastructure (OCI). This lab demonstrate using Migration Workbench for **on-premises** to **autonomous** migration.
 
 Estimated Time: 60 minutes
 
 ### Objectives
 
-In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will create an autonomous database in Oracle Cloud. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
+In this lab you will perform the tasks below. Task 1 is to review the prerequisites completed in advance for this lab. In task 2 you will review the autonomous database creation completed in advance for this lab. In task 3 you will perform the pre-requisites for the autonomous database before migration. In task 4 you will create a migration activity, add details, and learn about the various configuration options. After the migration is complete, you will analyze the migration activity and compare performance before and after the migration.
 
 | Task No.                                      | Description                                                                 | Approx. Time | Details                                                                                                                                                                                    |
 |-----------------------------------------------------------|-------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1 | Review prerequisites completed in advance | 10 minutes | Review prerequisites completed on the source database, host, and in Enterprise Manager |
-| 2 | Create destination autonomous database and storage bucket in OCI | 10 minutes   | Create the autonomous database and download the client wallet. Create a storage bucket to store migration files |
+| 1 | Launch Enterprise Manager console and review prerequisites completed in advance | 10 minutes | Review prerequisites completed on the source database and in Enterprise Manager |
+| 2 | Launch OCI console and review prerequisites completed in advance | 10 minutes   | Review autonomous database and storage bucket created in OCI in advance |
 | 3 | Perform target autonomous database pre-requisites | 20 minutes   | Discover the autonomous database in Enterprise Manager. Create required credentials |
 | 4 | Migrate and upgrade a 12c non-container database to 19c autonomous database in Oracle Cloud | 20 minutes   | Source database: orcl, destination database: ATP-ORCL |
 
@@ -21,29 +21,46 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
-    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-    - Lab: Environment Setup
-    - Lab: Initialize Environment
+  - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+  - Lab: Environment Setup
+  - Lab: Initialize Environment
 
 >**Note:** This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU7, and database 19.12 as Oracle Management Repository.
 
-## Task 1: Review prerequisites completed in advance
+## Task 1: Launch Enterprise Manager console and review prerequisites completed in advance
+
+Once your workshop is provisioned, click on "View Login Info" on the top right of the browser page. This opens the "Reservation Information" screen:
+
+![Launch EM](images/launch-reservation.png " ")
+
+For this workshop you will not use the remote desktop, so do not click the "Launch Remote Desktop" button, but rather copy the IP address of your instance. Open a new browser tab and enter the Enterprise Manager console URL for your instance as follows:
+
+<https://*The-IP-address-you-just-copied*:7803/em>
+
+![Security warning](../../initialize-environment/images/login-em-external-1.png " ")
+
+> **Note:** You may see an error on the browser while accessing the Web Console - “Your connection is not private” as shown below. Ignore and add the exception to proceed.
+
+click on the *Username* field and login with the credentials provided below.
+
+```text
+Username: <copy>sysman</copy>
+```
+
+```text
+Password: <copy>welcome1</copy>
+```
+
+![EM Login](../../initialize-environment/images/login-em-external-2.png " ")
+
+Once logged in you will be in the "Enterprise Summary" page:
+
+![Enterprise Summary](images/enterprise-summary.png " ")
 
 In the interest of simplifying the setup and to save time, the following requirements for the source database were completed in advance for this lab. Please review accordingly for reference.
 
 - Source database target discovered in Enterprise Manager
-    1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below.
-
-        ```text
-        Username: <copy>sysman</copy>
-        ```
-
-        ```text
-        Password: <copy>welcome1</copy>
-        ```
-
-        ![Login Page](../initialize-environment/images/em-login.png " ")
-    2. Click on "Targets"->"Databases"
+    - In Enterprise Manager console, click on "Targets"->"Databases"
       ![Databases](images/databases.png " ")
     - orcl is our source database
 - Data Pump user requirement
@@ -74,78 +91,69 @@ In the interest of simplifying the setup and to save time, the following require
 
     You have now completed this task.
 
-## Task 2: Create destination autonomous database and storage bucket in OCI
+## Task 2: Launch OCI console and review prerequisites completed in advance
 
-1. Create Autonomous Database
-    - In OCI Console, navigate to Oracle Database->Autonomous Database
-    - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
-    - Click on "Create Autonomous Database"
-    - On the "Create Autonomous Database" screen, enter:
+Navigate back to the workshop page in your browser. Click on "View Login Info" on the top right of the page to show the "Reservation Information" screen. Click "Launch OCI":
 
-        Under "Provide basic information for the Autonomous Database"
-        - Compartment field will be already populated
-        - Display Name:
+![Launch OCI](images/launch-oci.png " ")
 
-            ```text
-            <copy>ATP-ORCL</copy>
-            ```
+Sign in using the password provided in the "Reservation Information" screen:
 
-        - Database Name: (Important) Leave at default value shown so that database names are unique among lab participants
-        - Choose a Workload Type: Transaction Processing
-        - Choose a Deployment Type: Shared Infrastructure
+![OCI Login](images/login-oci.png " ")
 
-        Under "Configure the database"
-        - Leave all fields at default values
+On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password":
 
-        Under "Create administrator credentials"
-        - Enter a password:
+![Change OCI Password](images/oci-change-password.png " ")
 
-            ```text
-            <copy>Welcome12345</copy>
-            ```
+This takes you to the OCI console:
 
-        Under "Choose network access"
-        - Leave all fields at default values
+![OCI Console](images/oci-console.png " ")
 
-        Under "Choose License and Oracle Database Edition"
-        - Select "Bring Your Own License (BYOL)"
-        - Database Edition options will be shown. Keep selected option (EE)
+ Click on the menu in the top left, then click on "Oracle Database" "Autonomous Database":
 
-        ![Create ATP](images/create-atp.png " ")
-    - Click "Create Autonomous Database"
-2. Download the ATP-ORCL client wallet using OCI console
+![ADB Menu](images/adb-menu.png " ")
+
+The "Autonomous Databases" screen opens in the root compartment at first, which you don't have permission to. Click on the "Compartment" drop-down list and select your compartment as provided in the "Reservation Information" screen. Note your compartment name will start with your username:
+
+![ADB Page 1](images/adb-page-1.png " ")
+
+The next screen shows the autonomous database created for your workshop in advance:
+
+![ADB Page 2](images/adb-page-2.png " ")
+
+We will come back to this database in the next task. For now click on the OCI menu again (top left) then click on "Storage"->"Buckets":
+
+![Buckets Page 1](images/buckets-page-1.png " ")
+
+The next screen shows the storage bucket created for your workshop in advance:
+
+![Buckets Page 2](images/buckets-page-2.png " ")
+
+You have now completed this task.
+
+## Task 3: Perform target autonomous database pre-requisites
+
+1. Download the ATP-ORCL client wallet using OCI console
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
-    - Click "Database Actions". The Database Actions page opens in a new browser tab. If the browser blocks creating a new tab, allow pop-ups from the OCI URL:
+    - Click "Database Actions". The Database Actions page opens in a new browser tab. If your browser blocks creating a new tab, allow pop-ups from the OCI URL:
     ![ATP Home](images/atp-home.png " ")
+    - On the database Login screen, enter username "ADMIN" and the Admin password from the "Reservation Information" screen:
+    ![ATP Login](images/atp-login.png " ")
     - On the new tab ("Database Actions|Launchpad"), click on "Download Client Credentials (Wallet)" tile under "Administration" (You may have to scroll down the page):
+    ![Database Actions](images/database-actions.png " ")
     - On the pop-up window, enter password:
 
         ```text
         <copy>welcome1</copy>
         ```
 
-    - Click Download. The wallet zip file will be saved in the local "Downloads" directory
-3. Create Object Storage Bucket in OCI
-    - In OCI Console, navigate to Storage->Buckets
-    - On the left navigation bar, under "List Scope", choose the compartment you were provided for this workshop
-    - Click "Create Bucket"
-    - Bucket Name:
-
-        ```text
-        <copy>bucket-mwb</copy>
-        ```
-
-    - Leave all other fields at default and click Create.
-
-    You have now completed this task.
-
-## Task 3: Perform target autonomous database pre-requisites
-
-1. Discover ATP-ORCL in Enterprise Manager
-    - In Enterprise Manager console on the first tab of the browser, navigate to "Setup"->"Add Target"->"Add Target Manually"
-    - On the "Add Targets Manually" screen, click the "Add Target Manually" button
-    - On the resulting pop-up window:
+    - Click Download. The wallet zip file will be saved in your local "Downloads" directory
+2. Discover ATP-ORCL in Enterprise Manager
+    - In Enterprise Manager console, navigate to "Setup"->"Add Target"->"Add Target Manually"
+    ![Add Targets Manually](images/add-targets-manually.png " ")
+    - On the "Add Targets Manually" screen, click the "Add Target Manually" button. On the resulting pop-up window:
+        ![Add ATP](images/add-atp.png " ")
         - Agent Host:
 
             ```text
@@ -160,7 +168,7 @@ In the interest of simplifying the setup and to save time, the following require
 
         - Hit Enter
         - Select "Autonomous Transaction Processing" and click "Add":
-    ![Add ATP](images/add-atp.png " ")
+
     - On the "Add Autonomous Transaction Processing: Properties" screen, enter:
       - Target Name:
 
@@ -175,26 +183,23 @@ In the interest of simplifying the setup and to save time, the following require
         <copy>welcome1</copy>
         ```
 
-      - Service Name: Choose "*DB Name*_high" from the drop-down list (should be selected by default)
+      - Service Name: keep the default selection for the purpose of this demo
       - Monitoring Username: The default monitoring user "adbsnmp" is initially locked. For this lab we'll just use the ADMIN user for monitoring. Replace "adbsnmp" with "ADMIN" (upper case):
 
         ```text
         <copy>ADMIN</copy>
         ```
-    - Monitoring Password:
 
-        ```text
-        <copy>Welcome12345</copy>
-        ```
-
+    - Monitoring Password: Copy the "ADB Admin Password" from the "Reservation Information" screen:
+    ![Reservation Info](images/reservation-info.png " ")
     - Click "Test Connection" (it may take a couple of minutes to get the result back):
     ![ATP Props](images/atp-props.png " ")
     - Click Next
     - On the Review screen click Submit
     - Click on "Targets"->"Databases". The new autonomous database has been discovered in Enterprise Manager:
     ![ATP Target](images/atp-target.png " ")
-2. Create ATP Credential in OEM
-    - Using the Enterprise Manager console, navigate to "Setup"->"Security"->"Named Credentials"
+3. Create ATP Credential in OEM
+    - In Enterprise Manager console, navigate to "Setup"->"Security"->"Named Credentials"
     - Click "Create"
     - On the "Create Credential" screen, enter:
 
@@ -222,27 +227,29 @@ In the interest of simplifying the setup and to save time, the following require
             <copy>ADMIN</copy>
             ```
 
-        - Password:
-
-            ```text
-            <copy>Welcome12345</copy>
-           ```
+        - Password: Copy the "ADB Admin Password" from the "Reservation Information" screen
 
     - Role: Normal
     ![ATP Credential](images/atp-credential.png " ")
     - Click “Test and Save”. You should get "*Confirmation credential operation successful*". If not, review the previous steps and retry.
-3. Generate RSA key pair in PEM format
+4. Generate RSA key pair in PEM format
 
-    In the top-right corner of the Console, open the Profile menu (User menu icon), then click User Settings to view the details:
+    In the OCI console, open the Profile menu (User menu icon) in the top-right corner, then click User Settings to view the details:
     - In the left navigation bar, under "Resources", click on "API Keys"
     - Under “API Keys” click “Add API Key”.
     - In the pop-up window, keep the default option "Generate API Key Pair" selected
-    - Click "Download Private Key" and save it to the Downloads folder in your NoVNC window (the file name will have an extension of ".pem")
-    - Click "Add"
+    - Click "Download Private Key" and save it to your local Downloads folder. Name the file "private-key.pem":
+
+        ```text
+        <copy>private-key.pem</copy>
+        ```
+
+    - Click "Add" (you do not need to download the public key):
     ![Add API Key](images/add-api-key.png " ")
-    - The text shown under "Fingerprint" is the public key. Make a note of it as it will be used in a subsequent step. To save it to a text file, click on "Applications" on the top left corner of your NoVNC window, then "Accessories"->"Text Editor". Paste the public key and save the file to the desktop
+    - Close the resulting "Configuration File Preview" window
+    - The text shown under "Fingerprint" is the Public Key Fingerprint. Copy and paste it in your notepad as it will be used in a subsequent step:
     ![API Key](images/api-key.png " ")
-4. Create an OCI Auth Token
+5. Create an OCI Auth Token
 
     While on the same screen in the OCI Console from previous step:
     - In the left navigation bar, under "Resources", click on "Auth Tokens"
@@ -256,17 +263,15 @@ In the interest of simplifying the setup and to save time, the following require
       - Click Generate Token
 
     - The new Auth Token is displayed
-    - Copy the auth token and save it to a file to retrieve it later, it won't be shown again in the Console. Open a new tab in the Text Editor you launched in the previous step, paste the token, and save the file to the desktop
-    - Close the Generate Token dialog
+    - Copy the auth token and paste it in your notepad as it will be used in a subsequent step. Close the Generate Token dialog:
     ![Auth Token](images/auth-token.png " ")
-5. Create OCI Credential in Enterprise Manager
+6. Create OCI Credential in Enterprise Manager
     - Make a note of your Tenancy OCID and User OCID:
-        - Open a new tab in the Text Editor you launched in the previous step. You will save your tenancy OCID and User OCID here to use later in this step
-        - On the OCI console, click on the user icon on the top right of the screen
-        - Click on your tenancy link. Under "Tenancy Information" copy the tenancy OCID to the text editor
-        - Click again on the user icon, then click on User Settings
-        - Under "User Information" copy your user OCID to the text editor
-    - Using the Enterprise Manager console, navigate to "Setup"->"Security"->"Named Credentials"
+        - On the OCI console, click on the user icon on the top right of the screen. Click on your tenancy link. Under "Tenancy Information" copy the tenancy OCID and paste it in your notepad:
+        ![Tenancy OCID](images/tenancy-ocid.png " ")
+        - Click again on the user icon, then click on User Settings. Under "User Information" copy your user OCID and paste it in your notepad
+        ![User OCID](images/user-ocid.png " ")
+    - In the Enterprise Manager console, navigate to "Setup"->"Security"->"Named Credentials"
     - Click "Create"
     - On the "Create Credential" screen, enter:
 
@@ -290,22 +295,20 @@ In the interest of simplifying the setup and to save time, the following require
 
       Credential Properties
 
-        - Tenancy OCID: Tenancy OCID you copied earlier in this step
-        - User OCID: User OCID you copied earlier in this step
-        - Public Key Fingerprint: Public Key Fingerprint you saved to your desktop
-        - Private Key: Private Key you saved to the Downloads folder (file with extension of ".pem")
+        - Tenancy OCID: Tenancy OCID you saved earlier in this step
+        - User OCID: User OCID you saved earlier in this step
+        - Public Key Fingerprint: Public Key Fingerprint you saved earlier
+        - Private Key: content of "private-key.pem" file you saved earlier
 
       ![OCI Credential](images/oci-credential.png " ")
     - Click Save. You should get "Confirmation credential operation successful". If not, review the previous steps and retry
-6. Create Authentication Credential in ADB
+7. Create Authentication Credential in ADB
 
-    Create an "Auth Token" based credential in the Autonomous Database and set it as a default credential that will be required for authentication between the Autonomous Database and OCI object storage. This step requires your fully qualified OCI username, not your user OCID used in the previous step.
-    - In OCI console, click on the user icon on the top right of the page, then click on "User Details". Make a note of your fully qualified username at the top of the screen
-      ![OCI Username](images/oci-username.png " ")
+    Create an "Auth Token" based credential in the Autonomous Database and set it as a default credential that will be required for authentication between the Autonomous Database and OCI object storage. This step requires OCI username as shown in the "Reservation Information" screen, as well as the auth token you saved earlier in notepad.
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
     - Click "Database Actions". The Database Actions page opens in a new browser tab
-    - Under "Development" heading, click on "SQL" (first tile)
+    - Under "Development" heading, click on "SQL" (first tile). Ignore the warning about being logged in as "ADMIN" user
     - Execute the following code after filling in the values for username and password as described in the code snippet:
 
         ```text
@@ -313,8 +316,8 @@ In the interest of simplifying the setup and to save time, the following require
         BEGIN
           DBMS_CLOUD.CREATE_CREDENTIAL(
             credential_name => 'OBJ_STORE_CRED',
-            username => '&lt;Your fully qualified OCI username from earlier in this step&gt;',
-            password => '&lt;Value of your Migration Workbench token you saved earlier to the desktop&gt;'
+            username => '&lt;Your OCI username from the "Reservation Information" screen&gt;',
+            password => '&lt;Migration Workbench token saved earlier in notepad&gt;'
           );
         END;
         /
@@ -375,7 +378,7 @@ We'll use the Data Pump migration method in this task.
     - Destination:
         - Database Credential: ADMIN (Named Credential)
         - Agent Host Credential: ORACLE (Named Credential)
-        - Service Name: Choose "*database name*_high (TCPS)" from the drop-down list
+        - Service Name: Choose "*database name*_medium (TCPS)" from the drop-down list
     - Action:
         - Migration Method: Data Pump (default)
         - Recompile Invalid Objects After Migration: Unchecked (default)
@@ -387,18 +390,8 @@ We'll use the Data Pump migration method in this task.
             <copy>welcome1</copy>
             ```
 
-    - Cloud Storage URL:
-
-        ```text
-        <copy>objectstorage.us-ashburn-1.oraclecloud.com</copy>
-        ```
-
-    - Bucket Name:
-
-        ```text
-        <copy>bucket-mwb</copy>
-        ```
-
+    - Cloud Storage URL: "Object Storage URL" from the "Reservation Information" screen
+    - Bucket Name: "Bucket Name" from the "Reservation Information" screen. You can also get this value from the OCI console: Navigate to "Storage"->"Buckets"
     - OCI Credential: OCI
     - Database OCI Auth Credential: ADMIN.MWB_CRED
       ![Add Details](images/add-details.png " ")
