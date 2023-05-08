@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop, there are five lab exercises. They have been organized to help you become familiar with Operations Insights and the use of this service's key capabilities. With the new demo mode for Operations Insights, you can experience the service's value with minimal effort.
+In this workshop, there are six lab exercises. They have been organized to help you become familiar with Operations Insights and the use of this service's key capabilities. With the new demo mode for Operations Insights, you can experience the service's value with minimal effort.
 
 Estimated Workshop Time: 1 hour
 
@@ -57,11 +57,6 @@ In this workshop, you will:
 * Check Capacity Planning of Oracle Autonomous Databases.
 * Capacity Planning of Oracle Exadata.
 * Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance.
-
-### Prerequisites
-
-* An Oracle Cloud Account
-* Please view this workshop's LiveLabs landing page to see which environments are supported.
 
 ## Learn More
 

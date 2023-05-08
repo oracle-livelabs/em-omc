@@ -5,7 +5,7 @@
         {
             "title": "Introduction",
             "description": "Introduction",
-            "filename": "../../introduction/introduction-ocw.md"
+            "filename": "../../introduction/introduction.md"
         },
         {
             "title": "Get Started",
@@ -15,17 +15,17 @@
         {
             "title": "Lab 1: Enable Demo Mode for Operations Insights",
             "description": "Enable Demo Mode for Operations Insights.",
-            "filename": "../../enable-demo-mode/enable-demo-mode-ocw.md"
+            "filename": "../../enable-demo-mode/enable-demo-mode.md"
         },
         {
             "title": "Lab 2: Capacity Planning of Oracle Databases",
             "description": "Capacity Planning of Oracle Databases",
-            "filename": "../../capacity-planning-adb/capacity-planning-adb-ocw.md"
+            "filename": "../../capacity-planning-adb/capacity-planning-adb.md"
         },
         {
             "title": "Lab 3: Capacity Planning of Oracle Exadata",
             "description": "Capacity Planning of Oracle Exadata",
-            "filename": "../../capacity-planning-exa/capacity-planning-exa-ocw.md"
+            "filename": "../../capacity-planning-exa/capacity-planning-exa.md"
         },
         {
             "title": "Lab 4: Analyze SQL Performance at Fleet level",
@@ -36,11 +36,6 @@
             "title": "Lab 5: AWR Hub",
             "description": "AWR Hub",
             "filename": "../../awr-hub/awr-hub.md"
-        },
-        {
-            "title": "Lab 6: ADDM Spotlight",
-            "description": "ADDM Spotlight",
-            "filename": "../../addm-spotlight/addm-spotlight.md"
         },
         {
             "title": "Need Help?",
