@@ -112,7 +112,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/aggregate-database-ocw.png " ")
 
-     The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types.
+     The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types. This also lets you review the problem across fleet of databases. The databases with dark color are critical and are high on utilization. The size of the box displayed on the treemap shows usage in terms of active CPU.
 
 ## Task 3: Capacity Planning - Storage
 
@@ -137,6 +137,22 @@ This lab assumes you have completed the following labs:
 5.  In the **Trend & Forecast** chart View click on **Machine Learning** to project future resource consumption. Machine Learning is a more advanced model that considers seasonality.
 
       ![Left Pane](./images/storage-trend-forecast-ml-ocw.png " ")
+
+6.  From the drop-down on the top select **All** and search for **PAYD** database. Select **PAYD** database.
+
+      ![Left Pane](./images/storage-menu-payd-ocw.png " ")
+
+7.  In the **Trend & Forecast** chart View the storage trend and forecast for the selected database.
+
+      ![Left Pane](./images/storage-trend-payd.png " ")
+
+8.  Select **Max usage** and **Max usage forecast** from the right panel.
+
+      ![Left Pane](./images/storage-trend-max-payd.png " ")
+
+      You can see the average forecasted value v/s Max forecasted value for storage. **Max Usage Forecast** for this database is 0.2 TB, whereas **Allocation** shows that total storage allocated to this database is 4 TB. Since, allocation is more but storage used or forecasted is less, it is ok release some storage for this database and save money on storage.
+
+
 
 ## Acknowledgements
 

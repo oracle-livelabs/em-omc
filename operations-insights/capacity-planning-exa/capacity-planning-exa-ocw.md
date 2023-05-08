@@ -45,39 +45,35 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/metrics-by-database-host-ocw.png " ")
 
-8.  Now choose **Max Allocation (CPU)** under **Size** and **Usage Change (%)** under **Color**.
+8.  Now choose **Allocation (CPU)** under **Size** and **Usage Change (%)** under **Color**.
 
-      ![Left Pane](./images/max-allocation-usage-change.png " ")
+      ![Left Pane](./images/max-allocation-usage-change-ocw.png " ")
 
-9.  Highlight the hosts with maximum CPU utilization and the databases which consume the highest CPU.
+9.  To show the trend & forecast of CPU for Host and Database, click on the hostname and highlight the trend graph.
 
-      ![Left Pane](./images/max-cpu-max-database.png " ")
+      ![Left Pane](./images/trend-host-cpu-ocw.png " ")
 
-10.  To show the trend & forecast of CPU for Host and Database, click on the hostname and highlight the trend graph.
+10.  Select the database and highlight the trend and forecast graph.
 
-      ![Left Pane](./images/trend-host-cpu.png " ")
+      ![Left Pane](./images/trend-host-database-ocw.png " ")
 
-11.  Select the database and highlight the trend and forecast graph.
+11.  Click **Metrics by Host** on the left pane.
 
-      ![Left Pane](./images/trend-host-database.png " ")
+      ![Left Pane](./images/metrics-by-host-ocw.png " ")
 
-12.  Click **Metrics by Host** on the left pane.
+12.  On the **Metrics by Host** page, click on the **CPU** tab, select **All hosts** to see the aggregate trend & forecast. 
 
-      ![Left Pane](./images/metrics-by-host.png " ")
+      ![Left Pane](./images/cpu-all-hosts-ocw.png " ")
 
-13.  On the **Metrics by Host** page, click on the **CPU** tab, select **All hosts** to see the aggregate trend & forecast. 
+13.  Click the **Exadata Storage Server** option on the left pane.
 
-      ![Left Pane](./images/cpu-all-hosts.png " ")
+      ![Left Pane](./images/exadata-storage-server-ocw.png " ")
 
-14.  Click the **Exadata Storage Server** option on the left pane.
+14. Select **Individual data series** on the top right pane to show the individual storage utilization.
 
-      ![Left Pane](./images/exadata-storage-server.png " ")
+      ![Left Pane](./images/exadata-storage-server1-ocw.png " ")
 
-15. Select **Individual data series** on the top right pane to show the individual storage utilization.
-
-      ![Left Pane](./images/exadata-storage-server1.png " ")
-
-16. Select **Aggregate data series and forecast** on the top right pane to show total individual storage utilization.
+15. Select **Aggregate data series and forecast** on the top right pane to show total individual storage utilization.
 
       ![Left Pane](./images/exadata-storage-server2.png " ")
 
