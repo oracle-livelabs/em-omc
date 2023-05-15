@@ -30,7 +30,7 @@
         {
             "title": "Lab 4: Analyze SQL Performance at Fleet level",
             "description": "Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance",
-            "filename": "../../sql-performance/sql-performance.md"
+            "filename": "../../sql-performance/sql-performance-ocw.md"
         },
         {
             "title": "Lab 5: AWR Hub",
