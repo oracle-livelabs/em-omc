@@ -36,6 +36,10 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/time-range-ocw.png " ")
 
+      You can filter based on **Time range**, **Database type** or **Tags**. This let’s you customize the fleet of database of your choice by using combination of one of these.
+
+      ![Left Pane](./images/filter-ocw.png " ")
+
 4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Operations Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and UsageTrend) by these database targets.
 
       ![Left Pane](./images/inventory-ocw.png " ")
@@ -43,6 +47,8 @@ This lab assumes you have completed the following labs:
 5.  **CPU Insights** - Database utilization percentage for the 90th percentile value of the daily average CPU Usage over the selected time period. These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of CPU.
 
       ![Left Pane](./images/cpu-insights-ocw.png " ")
+
+      You can select from different options in the drop-down list in the middle widget **Top CPU consumers** - **Usage (avg. active CPU)**, **Usage change (%)** or **Utilization (%)**
 
 6.  **Storage Insights** - Database utilization percentage for the 90th percentile value of the daily average Storage Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of storage.
 
@@ -58,11 +64,11 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/database-cpu-ocw.png " ")
 
-2.  **Database CPU** page has a master-detail design with three primary components:
+2.  **Database CPU** page has a parent-child design with three primary components:
 
-    * Insights – table of databases flagged for CPU utilization insights
-    * Aggregate – treemap of CPU utilization over all databases in the compartment
-    * Trend & Forecast – time series charts of CPU usage trends and forecasts for individual or groups of databases
+    * Insights tab – a parent table of databases from which one database can be selected for trending and forecast
+    * Aggregate tab – a parent treemap showing the entire database fleet that can be used to trend and forecast the entire fleet or sub-groups within the fleet
+    * Trend & Forecast – the child component of time series charts showing maximum and average CPU usage and machine-learning forecasts of future demand
 
       ![Left Pane](./images/database-cpu1-ocw.png " ")
 
@@ -76,7 +82,7 @@ This lab assumes you have completed the following labs:
 
 5.  Check the **Utilization (%)** and **Usage Change (%)** for database **CRM-ST**.
     
-    * Utilization (%) -  Utilization percentage for the 90th percentile value of the daily average storage usage over the selected time period
+    * Utilization (%) -  Utilization percentage for the 90th percentile value of the daily average CPU usage over the selected time period
     * Usage Change (%): Percentage change in the linear trend of storage usage over the selected time
 
 6.  The **Trend and Forecast** chart displays historical time series plots related to CPU allocation and usage for the selected database **CRM-ST**.
@@ -99,7 +105,9 @@ This lab assumes you have completed the following labs:
 
 12.  The value **77.07** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Max usage of CPU.
 
-    You can see the difference in average forecasted value v/s Max forecasted value. If the workload is critical and cannot tolerate any performance issues then the database must be allocated the max forecasted value. If the workload is not so critical and can tolerate deviations in performance then it is ok to allocate CPU based on average forecasted value and save money.
+    **Key Insight**: Traditionally, capacity is allocated to accommodate the maximum demand and represents your spend for the resource. Average usage represents the real value obtained from resource. The difference between the maximum and average can be considered the cost of having to over-allocate resources to meet peak demand. We call this the opportunity cost of workload variability.
+
+    **Autonomous Database Auto-scale** option is designed specifically to help mitigate over-spending for highly variable workloads.
 
 13.  The trending and forecast chart facilitates:
 

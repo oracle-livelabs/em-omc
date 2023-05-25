@@ -53,6 +53,8 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/trend-host-cpu-ocw.png " ")
 
+      We see the aggregate CPU demand of the 3 databases is very stable at the host-level. At the database-level, 2 have growing demand and one is shrinking.
+
 10.  Select the database and highlight the trend and forecast graph.
 
       ![Left Pane](./images/trend-host-database-ocw.png " ")
