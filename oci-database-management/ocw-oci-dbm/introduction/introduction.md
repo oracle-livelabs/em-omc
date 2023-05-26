@@ -44,5 +44,5 @@ In this workshop, you will:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Murtaza Husain and Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, Aug 2022
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow
+- **Last Updated By/Date** - Vivek Verma, May 2023
