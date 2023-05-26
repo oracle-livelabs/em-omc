@@ -54,9 +54,15 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/storage-insights-ocw.png " ")
 
+      The drop-down list in the middle widget works similarly as compared to the CPU section.
+
 7.  **Memory Insights** - Database utilization percentage for the 90th percentile value of the daily average Memory Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of memory.
 
       ![Left Pane](./images/memory-insights-ocw.png " ")
+
+      The drop-down list in the middle widget works similarly as compared to the CPU section.
+
+* **Note**: the hyperlinks in the insights tiles on the left for CPU, Storage and Memory drill down to the details page for those specific resources.
 
 ## Task 2: Capacity Planning - CPU
 
@@ -165,5 +171,5 @@ This lab assumes you have completed the following labs:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, May 2022
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
+- **Last Updated By/Date** - Vivek Verma, May 2023
