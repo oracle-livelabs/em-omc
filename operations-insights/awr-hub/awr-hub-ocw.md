@@ -19,22 +19,7 @@ Estimated Time: 10 minutes
 This lab assumes you have completed the following labs:
 * Lab: Enable Demo Mode
 
-## Task 1: Configuring AWR Hub
-
-1.  Before using the AWR Hub feature, you must first configure Operations Insights to work with your existing database environment.
-
-      ![Left Pane](./images/awr-config-steps.png " ")
-
-2.  To configure AWR Hub, you must:
-
-      *  [Create the Warehouse and AWR Hub](https://docs.oracle.com/en-us/iaas/operations-insights/doc/analyze-automatic-workload-repository-awr-performance-data.html#GUID-2CE174B9-0A9E-4D37-91D6-12E363FB4183)
-      *  [Configure Database Sources](https://docs.oracle.com/en-us/iaas/operations-insights/doc/analyze-automatic-workload-repository-awr-performance-data.html#GUID-7F811D14-0ED7-4CEE-A0AA-F5D7A0891422)
-      *  [Access the Operations Insights Warehouse](https://docs.oracle.com/en-us/iaas/operations-insights/doc/analyze-automatic-workload-repository-awr-performance-data.html#GUID-B53B91EC-AEC2-465E-AE94-BF35A08F506B)
-      *  [Create an Operations Insights Warehouse Database User](https://docs.oracle.com/en-us/iaas/operations-insights/doc/analyze-automatic-workload-repository-awr-performance-data.html#GUID-71EE360E-708A-4C83-B30F-A5EB03190D97)
-
-      Refer the [documentation](https://docs.oracle.com/en-us/iaas/operations-insights/doc/analyze-automatic-workload-repository-awr-performance-data.html) for details.       
-
-## Task 2: AWR Hub
+## Task 1: AWR Hub
 
 1.  On the **Operations Insights Overview** page, from the left pane click **AWR-Hub**.
 
@@ -56,7 +41,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/awr-hub4.png " ")
 
-## Task 3: AWR Explorer
+## Task 2: AWR Explorer
 
 1.  On the **Operations Insights Overview** page, from the left pane click **AWR-Hub**.
 
