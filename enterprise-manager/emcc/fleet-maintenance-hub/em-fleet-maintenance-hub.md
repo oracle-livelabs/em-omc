@@ -32,15 +32,15 @@ Lets review various components of the Fleet Maintenance hub.
 
 Fleet Maintenance works on Subscription based model, i.e. to patch a database or grid infrastructure, it should be subscribed to a gold image. Any database/grid, which is not subscribed to any image can not be patched and thus remains susceptible for any data breach. Its recommended that the databases should be patched with latest patch recommendations from Oracle. You can learn more about these recommendations by following Oracle's Security Alerts and Bulletins.
 
-The first tile, Targets Not Subscribed gives you an insight about your weakest database and grid entities as the tile shows the unsubscribed databases and grids. The numbers 13 for database and 12 for grid implies that these assets are not part of any gold image. As a DBA, its paramount that these assets are subscribed to relevant gold image.
+The first tile, ***Targets Not Subscribed*** gives you an insight about your weakest database and grid entities as the tile shows the unsubscribed databases and grids. The numbers 13 for database and 12 for grid implies that these assets are not part of any gold image. As a DBA, its paramount that these assets are subscribed to relevant gold image.
 
 In the middle section, we see two graphs. These represents no of database and grid infrastructure based on versions. Eg, the highlighted blue bar for database shows 7 databases running under 19c.
 
-The below grid lists out the databases and grid that are not subscribed to any image. You may choose filters to identify any particular database. Subscribe button allows you to subscribe the database or grid to an image. We will cover the subscription part when we update a database in this lab.
+The Table below the graphs lists out the databases and grid that are not subscribed to any image. You may choose filters to identify any particular database. Subscribe button allows you to subscribe the database or grid to an image. We will cover the subscription part when we update a database in this lab.
 
 ![](images/Intro-tile2.png " introduction for tile2")
 
-Tile 2, Patch Recommendation for Images, lists out the health status of your images with respect to Oracle provided patch recommendations. Lets review the patch recommendation column and understand the actions required by an administrator.
+Tile 2, ***Patch Recommendations for Images***, lists out the health status of your images with respect to Oracle provided patch recommendations. Lets review the patch recommendation column and understand the actions required by an administrator.
 
 - If you see a green check mark - ✔, it suggests that the gold image has all recommended patches. The image can be used for patching and any databases/grid subscribed to this image will have all the recommended patches post successful completion of update operation.
 - If you see a yellow exclamation  mark - ![](images/yellow.png "exclamation-yellow "), it suggests that a new version in the image has all the recommended patches but it is not marked current. Hence, the updated version can't be used for update operation. Immediate next step for DBA is to mark the latest version as current.
@@ -48,7 +48,11 @@ Tile 2, Patch Recommendation for Images, lists out the health status of your ima
 
 ![](images/Intro-tile3.png " introduction for tile3")
 
-Tile 3, Patch Compliance for Targets, list out the databases or grids that are subscribed to a gold image.
+Tile 3, ***Patch Compliance for Targets***, list out the databases or grids that are subscribed to a gold image. If the image is not up-to-date,  a warning icon will be shown. Patch level will show following information.
+- If the target is on current version,  show "Current"
+- If the target is drifted, show 'Drifter'
+- Otherwise,  you will see the image version that the target is on
+
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
@@ -80,7 +84,10 @@ In this lab you will perform the following steps:
 
 To save time, the following steps were already completed.
 
-1. An 19c Oracle home was created and was patched with 19.16DBRU, 19.17DBRU and 19.18DBRU with one-off patch. This Oracle home was used to create gold images and multiple versions in that gold image. Location and Target name for this Oracle home is  *[/u01/app/oracle/product/19/db\_home\_src, Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953]*
+1. A 19c Oracle home was created in test lab and its has been exported here. You can review the documentation on how to export and import Gold Images across various Enterprise Manager setups. We have created two images.
+
+***19cDB-Linux-x64-ERP*** - with Versions  - v19.17DBRU (Current)
+***19cDB-Linux-x64-Apps*** - with Versions , v19.17DBRU, v19.18DBRU (current) ,  v19.19DBRU
 
 To ensure smooth execution of the use cases, we have pre-hosted the scripts to be used later at */home/oracle/fleet*
 
@@ -89,7 +96,7 @@ We will see details of gold images that we have created at a later point in this
 ## Task 2: Review the target to be updated
 
 In this lab activity, you will update one of the PDBs of ***sales.subnet.vcn.oraclevcn.com***. During the update process, Fleet maintenance will unplug the selected PDB and plug it to higher version CDB.
-We will patch PDB - ***PSALES*** of CDB ***sales.subnet.vcn.oraclevcn.com*** and during this process we will plug it to CDB ***db19c.subnet.vcn.oraclevcn.com***.
+We will patch PDB - ***PSALES*** of CDB ***sales.subnet.vcn.oraclevcn.com*** from 19.17 to 19.18 (the PDB will be migrated to CDB ***hr.subnet.vcn.oraclevcn.com***)
 
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
@@ -109,15 +116,14 @@ A gold image is the end of state software definition that contains information a
 
 ## Task 4: Create Gold Image *[Which has already been implemented]*
 
-1. Now look over the reference home setup
+1. Imported Gold Image
 
     Gold Image represents a software end state. An Enterprise Manager Software Library Gold Image is a software archive created from a patched oracle home uploaded to EM Software Library.
 
-    To create a Gold Image of the ‘recommended patch configuration’, you manually create an Oracle home as a pre-requisite step. The goal is to patch PDB at 19.17 version to 19.18 by unplug and plug method. A reference Oracle home fully patched to 19.18 *[/u01/app/oracle/product/19/db\_home\_src]* was created and used to create the initial version of the Gold Image as further described in the next steps.
+    To create a Gold Image of the ‘recommended patch configuration’, you manually create an Oracle home as a pre-requisite step. The goal is to patch PDB at 19.17 version to 19.18. A reference Oracle home was created in a similar setup and fully patched to 19.18. This Oracle home was exported and imported in this setup. The imported file was used to create the two Oracle Homes we mentioned earlier. Once the gold Image was created, we had their respective image ids. To import other versions into the same gold image, we used the respective image ids.
 
-    This patched reference Oracle home is discovered in Enterprise Manager as shown below and will be used for Gold Image Creation.
 
-2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***All Targets.***
+2. We also have a 19c patched Oracle home. This patched reference Oracle home is discovered in Enterprise Manager. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***All Targets.***
 
     Then on the All Targets page, in the upper left search field, type or copy “*Orasidb19c\_home1\_2020\_05\_13\_04\_24\_10\_emcc.marketplace.com\_2953*” in the “Search Target Name” box. Click on Search icon.
 
@@ -130,10 +136,14 @@ A gold image is the end of state software definition that contains information a
 
     ![](images/OH-Patchdetails-2953.png " OH Patch details ")
 
+    However, we have not used this Oracle Home to create the gold images. This is just for reference. Instead of export-import, you can patch this Oracle Home to required patch sets and use emcli to create gold images.
 
 ## Task 5: Subscribe Database
 
-1.  Lets review tile 1 and find out details of databases which are not subscribed to any of the gold images.
+1.  Before we start the update process, lets execute some scripts to ensure that the lab is fir to execute the required steps.
+    Script 1 will be to unsubscribe	sales.subnet.vcn.oraclevcn.com database
+
+Lets review tile 1 and find out details of databases which are not subscribed to any of the gold images.
 
     ![](images/Subscribe-homepage.png "Subscribe home page")
 
