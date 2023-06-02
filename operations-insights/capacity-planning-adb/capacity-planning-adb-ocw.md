@@ -76,7 +76,7 @@ This lab assumes you have completed the following labs:
     * Aggregate tab – a parent treemap showing the entire database fleet that can be used to trend and forecast the entire fleet or sub-groups within the fleet
     * Trend & Forecast – the child component of time series charts showing maximum and average CPU usage and machine-learning forecasts of future demand
 
-      ![Left Pane](./images/database-cpu1-ocw.png " ")
+      ![Left Pane](./images/database-cpu2-ocw.png " ")
 
 3.  On the **Database CPU** page, under **Insights** tab, select **30 Day High Utilization Forecast** against **Databases**, to view database CPU utilization forecast for next 30 days.
 
@@ -122,7 +122,28 @@ This lab assumes you have completed the following labs:
      * Compare maximum to average usage and trends to assess demand volatility
      * Forecast difference between the maximum and average daily CPU usage to estimate potential savings from workload smoothing
 
-14.  Click **Aggregate** on the top and from **Grouping** select **Database Type**.
+14.  The following models can be selected for display on the upper right of the Trend and Forecast chart:
+
+     * **Linear regression**: The linear regression model assumes a linear relationship across variables to predict the future resource usage.
+
+      ![Left Pane](./images/forecast-linear.png " ")
+
+     * **Seasonality aware**: The seasonal option combines a simple model that detects basic seasonality with dynamic, user-selectable data.
+
+      ![Left Pane](./images/forecast-seasonality.png " ")
+
+     * **AutoML forecasting**: The AutoML forecasting option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
+     
+     On the **Database CPU** page, under **Insights** tab, select **All** against **Databases** and search for database **PROLLP**. Within the **Trend & Forecast** chart, click **AutoML forecasting**
+
+      ![Left Pane](./images/prollp-database.png " ")
+
+      A new pop up will appear with the AutoML forecasting charts loaded. It will state the training period and the selected forecast algorithms for maximum usage and average usage. The maximum and average confidence channels are also displayed within the chart. The confidence interval for these are 95%, meaning that 95% of future points are expected to fall within this radius from the forecast.
+
+      ![Left Pane](./images/automl-database.png " ")           
+ 
+
+15.  Click **Aggregate** on the top and from **Grouping** select **Database Type**.
 
       ![Left Pane](./images/aggregate-database-ocw.png " ")
 
