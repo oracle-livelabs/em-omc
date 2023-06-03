@@ -404,7 +404,7 @@ We will go through steps for update(patching) database target ***sales.subnet.vc
 
 Once the database is updated(patched), we will perform a rollback to Oracle Database 19.17. In a future release capability is being planned to perform rollback of an operation using the UI.
 
-1. Review and execute below command from the terminal to rollback database Target ***hr.subnet.vcn.oraclevcn.com***
+1. Review and execute below command from the terminal to rollback database Target ***sales.subnet.vcn.oraclevcn.com***
 
     ```
     <copy>curl -i -X POST https://emcc.marketplace.com:7803/em/websvcs/restful/emws/db/fleetmaintenance/performOperation/rollback -H "Content-Type:application/json" -u sysman:welcome1 --data-binary "@/home/oracle/fleet/rollback_sales_payload.json" --insecure</copy>
