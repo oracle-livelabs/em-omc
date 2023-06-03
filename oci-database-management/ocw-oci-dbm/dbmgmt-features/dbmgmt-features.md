@@ -45,8 +45,10 @@ This lab assumes you have already completed the following:
 
 ## Task 2: Monitoring a Fleet of Databases
 
-1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt compartment is selected by default in the Compartment field.
+1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation -
 
+     ![](./images/compartment-select.png " ")
+     
      ![](./images/fleet-summary-ocw.png " ")
 
 2.  The following tiles are available on the **Fleet Summary** page:
@@ -105,13 +107,15 @@ This lab assumes you have already completed the following:
 
 5.  Under **Runs** tab click on a particular job to view job executions.
 
+     **Note** : Select a longer time period if you do not see data.
+
      ![](./images/jobs-runs-ocw.png " ")
 
 6.  Click on a particular Job Execution to view the **Job execution details** page, which contains the execution details of the job and **Job execution output**.
 
      ![](./images/job-exec-output-ocw.png " ")
 
-7.  On **Database group details** page, click **Definitions** tab under **Jobs** to view the list of jobs.
+7.  Click the **Database group details** link in the breadcrumb or upper side of the screen and go back to the **Database group details** page. On **Database group details** page, click **Definitions** tab under **Jobs** to view the list of jobs.
 
      ![](./images/job-definition-ocw.png " ")
 
@@ -121,7 +125,7 @@ This lab assumes you have already completed the following:
 
 ## Task 4: Monitoring Alert Log
 
-1.  Go back to **Fleet Summary** page. Scroll down to the **Members** tab on the Fleet Summary page. Click **MFG** under **Members** tab to go to **Managed database details** page.
+1.  Click **Database Management** from the top left corner of the screen. On the left pane under **Database Management**, click **Fleet Summary** to go back to **Fleet Summary** page. Scroll down to the **Members** tab on the Fleet Summary page. Click **MFG** under **Members** tab to go to **Managed database details** page.
 
      ![](./images/mfg-db-details.png " ")
 
@@ -132,7 +136,7 @@ This lab assumes you have already completed the following:
     You can use the drop-down lists, fields, and links on this tab to reduce the number of log entries displayed, or search for specific log entries:
 
     - Use the **Filter by Level** and **Filter by Type** drop-down lists to filter the entries by level or type.
-    - Enter a specific message in the **Search field** and click **Search** to search for the alert log entry that contains the message. If you select the **Regular Expression** check box, then you can enter a regular expression such as ^Errors in the Search field and search for the alert log entry whose message entirely or partially contains the regular expression.
+    - Enter a specific message in the **Search field** and click **Search** to search for the alert log entry that contains the message. If you select the **Regular Expression** check box, then you can enter a regular expression such as ^ORA-600 in the Search field and search for the alert log entry whose message entirely or partially contains the regular expression.
 
 ## Task 5: Monitoring and Managing Individual Databases
 
@@ -150,7 +154,7 @@ This lab assumes you have already completed the following:
      
      **Activity Class (Avg. Active Sessions):** Displays the average active sessions in the selected time period, broken down by CPU, User I/O, and Wait. The total CPU count is denoted by a red line and enables you to monitor average active sessions compared to the CPU count.
 
-     **DB Time (Avg. Active Sessions):** Displays a summary of the average active sessions data broken down by CPU, User I/O, and Wait. The total CPU count is denoted by a red line.
+     **Activity**: Displays the percentage of CPU utilization, and DB time.
 
      **I/O:** Displays the I/O Throughput in MBPS and I/O Rate in IOPS broken down by Read and Write operations.
 
@@ -211,11 +215,11 @@ This lab assumes you have already completed the following:
      - Visualize query plans interactively
      - Perform real-time and historical analysis
 
-4.  Click on the SQL ID to view **Real-time SQL Monitoring for SQL**
+4.  Click on one of the SQLs listed under the **SQL ID** column to view **Real-time SQL Monitoring for SQL**
 
      ![](./images/sql-monitoring1-ocw.png " ")
 
-5.  Go back to **Performance Hub**, select the **Last 8 Hours** in the time select. Select the most recent snapshot interval to view the automatic report. Click on the **Top SQL Statements** link in the **Findings** section of the **ADDM** tab to view the recommendations
+5.  Click **Back** on top left of the page to go back to **Performance Hub** and select the **Last 8 Hours** in the time select. Click the **ADDM** tab and select the most recent snapshot interval to view the automatic report. Note the **ADDM Task** section is updated. Click on the **Top SQL Statements** link under the **Name** column in the **Findings** section to view the recommendations
 
      ![](./images/addm1-ocw.png " ")
      ![](./images/addm2-ocw.png " ")
@@ -228,7 +232,7 @@ This lab assumes you have already completed the following:
      - Get recommendations for treating the root causes of problems
      - Identify non-problem areas of the system
 
-5.  Stay in **Performance Hub**, scroll down and click the **Blocking Sessions** tab.
+5.  Click the **<-Back** link at the top left corner to go back to the **Performance Hub** page, scroll down and click the **Blocking Sessions** tab.
 
      ![](./images/blocking-session.png " ")
 
@@ -238,4 +242,4 @@ This lab assumes you have already completed the following:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Murtaza Husain and Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, Aug 2022
+- **Last Updated By/Date** - Vivek Verma, May 2023
