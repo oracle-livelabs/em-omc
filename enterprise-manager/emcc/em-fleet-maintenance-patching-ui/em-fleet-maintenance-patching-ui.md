@@ -516,21 +516,21 @@ Verify that the update has been completed successfully.
 
     ![](images/cleanup-sales-os-layout.png "OS cleanup")
 
-10.  As part of the cleanup operation, LISTENER\_1523 which support “***sales.subnet.oraclevcn.com***” is shutdown. Set your environment by passing “***sales***” to “***oraenv***” when prompted and start the listener back up.
+9.  As part of the cleanup operation, LISTENER\_1523 which support “***sales.subnet.oraclevcn.com***” is shutdown. Set your environment by passing “***sales***” to “***oraenv***” when prompted and start the listener back up.
 
     ```
     <copy>. oraenv </copy>
     ```
 
-11. Start LISTENER\_1523 back up
+10. Start LISTENER\_1523 back up
 
       ```
       <copy>lsnrctl start LISTENER_1523</copy>
       ```
 
-  ![](images/sales-listener.png "sales listener start")
+    ![](images/sales-listener.png "sales listener start")
 
-12. Force Listener registration and confirm that it is now servicing “***sales.subnet.vcn.oraclevcn.com***”
+11. Force Listener registration and confirm that it is now servicing “***sales.subnet.vcn.oraclevcn.com***”
 
     ```
     <copy>sqlplus '/as sysdba'<<EOF
@@ -538,9 +538,10 @@ Verify that the update has been completed successfully.
     EOF
     </copy>
     ```
+
     ![](images/register-sales.png "register listener")
 
-13. Check status of LISTENER\_1523
+12. Check status of LISTENER\_1523
 
     ```
     <copy>lsnrctl status LISTENER_1523</copy>
