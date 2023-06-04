@@ -53,7 +53,7 @@ In this lab you will perform the following steps:
 
 To save time, the following steps were already completed.
 
-1. Gold Image of Oracle Home were exported and imported in the setup. Imported file was then used to create Gold Images, which will be used in the lab.
+1. Gold Image of Oracle Home was exported and imported in the setup. Imported file was then used to create Gold Images, which will be used in the lab.
 
 To ensure smooth execution of the use cases, we have pre-hosted the scripts to be used later at */home/oracle/fleet*
 
@@ -167,7 +167,7 @@ We will go through steps for update(patching) database target ***sales.subnet.vc
 
     ![](images/sales-db-status.png "sales-db-version")
 
-## Task 4: Create Gold Image
+## Task 4: Create Gold Image [Step Already Performed, Read-Only Step]
 
 1. For this lab exercise, we have already created the gold image. To create a gold image, we exported the gold image from another environment and imported it in the setup. You can find further details on export-import of gold images in the Fleet Documentation.
 
@@ -179,11 +179,11 @@ We will go through steps for update(patching) database target ***sales.subnet.vc
 
     ![](images/dp-navigation-gi.png "DP Navigation")
 
-    Here, you will see we have highlighted details of the parameters which were passed during the import process. For more details, please refer to the documentation.
+    Lets do a filter using keyword ***Import***. This will result in only DPs which were executed to import the Gold Image. Click on the highlighted DP name.
+
     ![](images/click-dp-name.png "GI import DPs")
 
-    In the results page click on the target name.
-
+    Here, you will see we have highlighted details of the parameters which were passed during the import process. For more details, please refer to the documentation.
     ![](images/gi-dp-creation-success.png "DP Details")
 
 3. From the terminal on your remote desktop, review the Gold Images using the following emcli command
