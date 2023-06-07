@@ -413,6 +413,8 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
        ```
 
        Confirm the password.
+       Optionally you can also clone the PDB into a different CDB by clicking on 'Clone the Pluggable Database into a different Container Database' 
+       
     5. Click on the magnifier to update the DATABASE HOST credentials of the source PDB. Choose **Named Credentials** and select **ORACLE**
 
 6. Verify all the details as shown below and click **CLONE**
