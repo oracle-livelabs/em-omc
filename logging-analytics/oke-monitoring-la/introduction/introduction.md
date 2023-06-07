@@ -17,7 +17,18 @@ In this workshop, you will learn how to:
 * Modify configuration to collect and process some MuShop container logs using their specific Log Sources.
 * Verify the log data of those MuShop logs in the Log Explorer.
 * Visualize the data collected from the OKE Cluster through Dashboards like below.
-    ![cloud-oracle-loganalytics-dashboard](images/cloud-oracle-loganalytics-dashboard.png)
+     - ### Kubernetes Cluster Summary
+
+        ![kubernetes-cluster-summary](images/kubernetes-cluster-summary.png)
+     - ### Kubernetes Nodes
+
+        ![kubernetes-nodes](images/kubernetes-nodes.png)
+     - ### Kubernetes Pods
+
+        ![kubernetes-pods](images/kubernetes-pods.png)
+     - ### Kubernetes Workloads
+     
+        ![kubernetes-workloads](images/kubernetes-workloads.png)      
 
 
 ### Prerequisites
