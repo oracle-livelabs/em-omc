@@ -363,14 +363,13 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/clone-navigate-to-databases-home.png " clone-navigate-to-databases-home ")
 
-2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** and
-**sales.subnet.vcn.orclevcn.com** to view their associated PDBs.
+2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** to view their associated PDBs.
 
 
-    We will clone the PDB **sales.subnet.oraclevcn.com_HR**  residing in sales.subnet.vcn.orclevcn.com CDB into hr.subnet.vcn.oraclevcn.com CDB
+    We will clone the PDB **hr.subnet.vcn.oraclevcn.com_HRPDB**  residing in hr.subnet.vcn.orclevcn.com CDB into the same CDB.
 
 
-    **Click** on the **sales.subnet.vcn.oraclevcn.com_HR** PDB as highlighted
+    **Click** on the **hr.subnet.vcn.oraclevcn.com_HRPDB** PDB as highlighted
 
 
     ![](images/cloning-show-existing-pdb.png " cloning-show-existing-pdb ")
@@ -392,20 +391,18 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     The Pluggable Database Name is prepopulated with a deafult value.
     You can refer to the instructions below to update the PDB name.
 
-    ![](images/clone-default-pdb-clone-page.png " clone pdb ")
+    ![](images/clone-default-pdb-clone.png " clone pdb ")
 
     Please update the values as suggested below.   
 
     1. Click on the magnifier to update the SYSDBA credentials of the source PDB.
 
-        Choose **Named Credentials** and select **SALES_SYS** from the dropdown.
+        Choose **Named Credentials** and select **OEM_SYS** from the dropdown.
 
-    2.
-        ```
+    2.  ```
         Pluggable Database Name : <copy>HR_CLONE</copy>
         ```
-    3.
-        ```
+    3.  ```
         Display Name: <copy>HR_CLONE</copy>
         ```
     4. ```
@@ -416,10 +413,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
        ```
 
        Confirm the password.
-    5. Click on the check box to **Clone the Pluggable Database into a different Container Database**
-    6. Click on the magnifier icon to select the destination CDB for cloning. In our case it is **HR CDB**
-    7. Click on the magnifier to update the SYSDBA credentials of the desination PDB. Choose **Named Credentials** and select **OEM_SYS**
-    8. Click on the magnifier to update the HOST credentials of the source PDB. Choose **Named Credentials** and select **ORACLE**
+    5. Click on the magnifier to update the DATABASE HOST credentials of the source PDB. Choose **Named Credentials** and select **ORACLE**
 
 6. Verify all the details as shown below and click **CLONE**
 
@@ -452,7 +446,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this task, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by relocating it to Container database cdb186.subnet.vcn.oraclevcn.com.
+1. In this task, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
 
       ![](images/current-env-details.png "current-configuration")        
 
@@ -477,7 +471,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
-5. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+5. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is hr.subnet.vcn.oraclevcn.com.
 
       ![](images/fm-flow2.png "selection")
 
@@ -533,7 +527,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       ![](images/env-list-final.png "new version check")
 
-      We can see that Finance pdb is relocated to a new CDB - cdb186.subnet.vcn.oraclevcn.com.
+      We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
 ## Task 5: Compliance Management for Pluggable Database
 
@@ -778,7 +772,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
     *  Create and register the database
 
 
-    The request should take less than 7 minutes to complete.
+    The request should take less than 5 minutes to complete.
 
     Click on refresh icon or as an alternative set Refresh to 30 seconds.
 
@@ -833,10 +827,10 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
 17.  Next delete the database Instance:
 
-      Go to the Database Cloud Services Home page by clicking on **Database Cloud Service Portal link**
+      Go to the Database Cloud Services Home page by clicking on **Database Cloud Self Service Portal** link
 
 
-      ![](images/a24b112c579e1df59bb4919a0bbe2b67.jpg " ")
+      ![](images/cmp-initiate-delete.png " ")
 
 18. Click on the action menu for new PDB and delete this instance.
 
