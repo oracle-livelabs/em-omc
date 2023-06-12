@@ -246,7 +246,7 @@ We will go through steps for update(patching) database target ***sales.subnet.vc
 
 1.  Below illustration describes the flow of subscribing Targets to the Selected Gold Image
 
-    ![](images/1168b19325ea9b9c0624cf404d0cb689.jpg " ")
+    ![](images/subscribe-flow.png "Subscribe flow")
 
 2. Execute below command to subscribe the target sales.subnet.vcn.oraclevcn.com to Gold Image
 
