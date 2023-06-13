@@ -16,11 +16,11 @@ Watch the video below for a quick walk-through of the lab.
 ```
 
 
-Estimated Time: 30 minutes
+Estimated Time: 15 minutes
 
 ## Task 1: Navigate to Marketplace
 
-To navigate to Marketplace, follow one of the below two methods.
+To navigate to Marketplace, follow one of the following two methods.
 
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Marketplace** > **All Applications**.
 ![marketplace-navigation](./images/marketplace-navigation.gif " ")
@@ -34,7 +34,7 @@ To navigate to Marketplace, follow one of the below two methods.
 
 ## Task 2: Open Kubernetes Monitoring and Management application
     
-1. In the search bar, search **Kubernetes Monitoring and Management**.
+1. In the search bar, enter the text **Kubernetes Monitoring and Management**.
 ![k8s-app-search](./images/k8s-app-search.png " ")
 
 2. Click on the **Kubernetes Monitoring and Management** application to land on the application page.
