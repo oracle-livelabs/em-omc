@@ -19,8 +19,8 @@
         },
         {
             "title": "Lab 2 : Management Agent Overview",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for OKE System Logs and Object Logs",
-            "filename": "../../management-agent-overview/mgmt-agent-overview.md"
+            "description": "This live lab outlines the overview of the Management Agent",
+            "filename": "../../management-agent-overview/management-agent-overview.md"
         },
         {
             "title": "Lab 3: Kubernetes Solution Installation",
