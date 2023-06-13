@@ -605,15 +605,13 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
 12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations , corrective actions and compliance standard score.
 
-  From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
+    From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
-  ![](images/compliance-navigation-to-dashboard-pdb.png " ")
-
-
+    ![](images/compliance-navigation-to-dashboard-pdb.png " ")
 
   **Dashboard View**
 
-  ![](images/compliance-dashboard-pdb.png " ")
+    ![](images/compliance-dashboard-pdb.png " ")
 
 13. You can also generate a comprehensive compliance report for
 
