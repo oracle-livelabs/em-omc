@@ -613,7 +613,6 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![](images/compliance-dashboard-pdb.png " ")
 
-
 13. You can also generate a comprehensive compliance report for
 
     A. Each compliance standard and all its associated targets.
@@ -708,7 +707,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
     **Instance Details**
 
-    **Request Name** :  Auto filled with latest timestamp. Can be modified in case needed.
+    **Request Name** :  Auto filled with latest timestamp. Can be modified in case as needed.
 
     **Zone** : Auto filled with default option, Sales Infra Zone.
 
