@@ -603,7 +603,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![](images/compliance-rule-details-pdb.png " ")
 
-12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations , corrective actions and compliance standard score.
+12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
 
     From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
