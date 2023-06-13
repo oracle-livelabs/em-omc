@@ -607,11 +607,11 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
   From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
-      ![](images/compliance-navigation-to-dashboard-pdb.png " ")
+    ![](images/compliance-navigation-to-dashboard-pdb.png " ")
 
   **Dashboard View**
 
-      ![](images/compliance-dashboard-pdb.png " ")
+    ![](images/compliance-dashboard-pdb.png " ")
 
 
 13. You can also generate a comprehensive compliance report for
