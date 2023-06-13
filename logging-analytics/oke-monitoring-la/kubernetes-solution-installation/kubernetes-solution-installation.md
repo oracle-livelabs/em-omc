@@ -2,9 +2,7 @@
 
 ## Introduction
 
-```
-  TO BE UPDATED
-```
+This lab will walk you through the steps to deploy the Kubernetes Monitoring solution which offers collection of various logs of a Kubernetes cluster into OCI Logging Analytics using open source log collector Fluentd and Management Agent, Kubernetes Dashboards and provides rich analytics on top of the collected logs. 
 
 Watch the video below for a quick walk-through of the lab.
 

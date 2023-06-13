@@ -17,21 +17,35 @@ Watch the video below for a quick walk-through of the lab.
 
 Estimated Time: 30 minutes
 
-## Task 1: TO BE UPDATED
+## Task 1: Visualize access logs on geo-map, review Threat IPs 
 
 
 
-## Task 2: TO BE UPDATED
+## Task 2: Find the pods for Orders App service
     
     
 
-## Task 3: TO BE UPDATED
+## Task 3: Find the OCI load-balancer for Orders Apps Service
 
   
 
-## Task 4: TO BE UPDATED
+## Task 4: View a service object and use compare to find diff side-by-side
 
 
+
+## Task 5: Open dashboard created in previous lab
+
+
+
+## Task 6: Organizing widgets. Size, Move, Widget Labels
+
+
+
+## Task 7: Create a widget for two of LB metrics (non query based widget)
+
+
+
+## Task 8: Create a widget for pod resource usage metrics (query based widget)
 
 
 
