@@ -612,7 +612,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
   **Dashboard View**
 
     ![](images/compliance-dashboard-pdb.png " ")
-
+    
 13. You can also generate a comprehensive compliance report for
 
     A. Each compliance standard and all its associated targets.
