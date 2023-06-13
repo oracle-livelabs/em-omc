@@ -609,7 +609,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![](images/compliance-navigation-to-dashboard-pdb.png " ")
 
-  **Dashboard View**
+    **Dashboard View**
 
     ![](images/compliance-dashboard-pdb.png " ")
 
