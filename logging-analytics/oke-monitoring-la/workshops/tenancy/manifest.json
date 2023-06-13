@@ -18,22 +18,47 @@
             "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
         },
         {
-            "title": "Lab 2: Ingestion Flow Setup",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for OKE System Logs and Obejct Logs",
+            "title": "Lab 2 : Management Agent Overview",
+            "description": "This live lab outlines the overview of the Management Agent",
+            "filename": "../../management-agent-overview/management-agent-overview.md"
+        },
+        {
+            "title": "Lab 3: Kubernetes Solution Installation",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
+            "filename": "../../kubernetes-solution-installation/kubernetes-solution-installation.md"
+        },
+        {
+            "title": "Lab 4: Analyzing Logs",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
+            "filename": "../../analyzing-logs/analyzing-logs.md"
+        },
+        {
+            "title": "Lab 5: Designing Dashboards",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
+            "filename": "../../designing-dashboards/designing-dashboards.md"
+        },
+        {
+            "title": "Lab 6: Advanced Dashboard",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
+            "filename": "../../advanced-dashboard/advanced-dashboard.md"
+        },
+        {
+            "title": "Lab 7 (Optional): Ingestion Flow Setup",
+            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for OKE System Logs and Object Logs",
             "filename": "../../ingestion-flow-setup/ingestion.md"
         },
         {
-            "title": "Lab 3: Customizing Application Logs Configuration",
+            "title": "Lab 8 (Optional): Customizing Application Logs Configuration",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../custom-log-collection/custom-log-collection.md"
         },
         {
-            "title": "Lab 4: Exploration",
+            "title": "Lab 9: Exploration",
             "description": "Log Exploration through Dashboards and Widgets",
             "filename": "../../exploration/exploration.md"
         },
         {
-            "title": "Lab 5 (Optional): Building dashboards in Logging Analytics with the data ingested by Management Agents",
+            "title": "Lab 10 (Optional): Building dashboards in Logging Analytics with the data ingested by Management Agents",
             "description": "This live lab outlines the steps to build dashboards in Logging Analytics with the data ingested by Management Agent",
             "filename": "../../la-dashboard-creation/dashboard.md"
         },
