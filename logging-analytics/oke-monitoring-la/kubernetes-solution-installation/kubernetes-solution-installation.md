@@ -86,12 +86,14 @@ After the stack creation is successful, you can click on the **View Dashboards**
 ![view-dashboards](./images/view-dashboards.png " ")
 
 
+
+
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
 - Installed Kubernetes solution using the Resource manager.
 
   You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Vikram Reddy , OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
-* **Last Updated By/Date** - Vikram Reddy, Sep, 2022
+* **Author** - Samarthya Sahu , OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
+* **Last Updated By/Date** - Samarthya Sahu, Jun, 2023
