@@ -43,8 +43,6 @@ To navigate to Marketplace, follow one of the following two methods.
 
 ## Task 3: Configure Stack
 
-> **Note:** Screenshots to be changed after the stack is ready for livelab.
-
 1. On **Create Stack** page, you will see the **Stack information**. You can modify the name of the stack. 
 
   Click on **Next** button to proceed to the Configure variables section.
@@ -59,19 +57,14 @@ To navigate to Marketplace, follow one of the following two methods.
 
     - **OCI Logging Analytics Compartment:** Select the compartment from the dropdown where you want to create Dashboards, Log Groups and other Monitoring service resources.
 
-    - **OCI Logging Analytics Log Group:** For log group, follow one of the following two methods.
-        - Click the **OCI Logging Analytics Log Group** dropdown and select a log group from the list.
-
-        - If you want to create a new log group, click the checkbox **Check if you want to create a new Log Group** and enter the name of the new log group in the **OCI Logging Analytics Log Group Name** field.
-
-    - **Fluentd Working Directory:** It is the directory on the node used for storing Fluentd related data. By default, it is set to **/var/log/**.
+    - **OCI Logging Analytics Log Group:** Select OCI LA log group from the dropdown.
 
   Click on **Next** button to proceed to the Review section.
   ![configure-varaibles](./images/configure-varaibles.png " ")
 
 3. In **Review** section, you can verify the stack configurations which you have selected in the previous 2 sections.
 
-  If you want to make changes, you can click on **Previous** button to go back and edit the stack configurations.
+  If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
 
   Click the checkbox **Run apply**.
 
@@ -80,10 +73,13 @@ To navigate to Marketplace, follow one of the following two methods.
   
 
 ## Task 4: View Dashboards
-> **Note:** Screenshots to be changed after the stack is ready for livelab.
 
-After the stack creation is successful, you can click on the **View Dashboards** to view cluster dashboards.
-![view-dashboards](./images/view-dashboards.png " ")
+After the stack creation is successful, click on the **Application information** tab to view the application information.
+
+Click on the **View Dashboard** button to view the dashboards.
+
+Click on the **View Instructions** button to go the the Marketplace app.
+![view-dashboards](./images/application-information.png " ")
 
 
 
