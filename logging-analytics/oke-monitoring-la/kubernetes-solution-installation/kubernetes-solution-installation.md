@@ -62,24 +62,24 @@ To navigate to Marketplace, follow one of the following two methods.
   Click on **Next** button to proceed to the Review section.
   ![configure-varaibles](./images/configure-varaibles.png " ")
 
-3. In **Review** section, you can verify the stack configurations which you have selected in the previous 2 sections.
+3. In **Review** section, you can verify the stack configurations which you have selected in the previous two sections.
 
-  If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
+  - If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
 
-  Click the checkbox **Run apply**.
+  - Click the checkbox **Run apply**.
 
-  Click on the **Create** button to create the stack.
-  ![review-stack](./images/review-stack.png " ")
+  - Click on the **Create** button to create the stack.
+    ![review-stack](./images/review-stack.png " ")
   
 
-## Task 4: View Dashboards
+## Task 4: Application Information
 
-After the stack creation is successful, click on the **Application information** tab to view the application information.
+- After the stack creation is successful, click on the **Application information** tab to view the application information.
 
-Click on the **View Dashboard** button to view the dashboards.
+- Click on the **View Dashboard** button to view the dashboards.
 
-Click on the **View Instructions** button to go the the Marketplace app.
-![view-dashboards](./images/application-information.png " ")
+- Click on the **View Instructions** button to go the the Marketplace app.
+  ![view-dashboards](./images/application-information.png " ")
 
 
 
