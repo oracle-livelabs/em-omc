@@ -255,7 +255,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![edit-comparison-template-configuration-items-page](images/edit-comparison-template-configuration-items.png " edit-comparison-template-configuration-items-page ")
 
-  To begin with, uncheck all configuration items.
+    To begin with, uncheck all configuration items.
 
     ![comparison-Uncheck-compare-template-page](images/comparison-Uncheck-compare-template.png " comparison-Uncheck-compare-template-page ")
 
@@ -275,7 +275,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![confirm-comparison-and-drift-management-page](images/confirm-comparison-and-drift-management.png " confirm-comparison-and-drift-management-page ")
 
-  **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
+    **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
     ![search-comparison-drift-management-page](images/search-comparison-drift-management.png " search-comparison-drift-management-page ")
 
