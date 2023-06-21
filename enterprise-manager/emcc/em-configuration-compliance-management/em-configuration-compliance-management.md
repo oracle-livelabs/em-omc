@@ -589,19 +589,19 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
-    ![save-association-hipaa-compliance-standard-page](images/save-association-hipaa-compliance-standard.png " save-association-hipaa-compliance-standard-page ")
+    ![save-target-hipaa-compliance-standard-page](images/save-target-hipaa-compliance-standard.png " save-target-hipaa-compliance-standard-page ")
 
 12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-    ![information-compliance-standard-submit-target-page](images/information-compliance-standard-submit-target.png " information-compliance-standard-submit-target-page ")
+    ![information-hipaa-compliance-standard-confirm-page](images/information-hipaa-compliance-standard-confirm.png " information-hipaa-compliance-standard-confirm-page ")
 
 13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
-    ![association-count-compliance-library-page](images/association-count-compliance-library.png " association-count-compliance-library-page ")
+    ![hipaa-association-count-compliance-library-page](images/hipaa-association-count-compliance-library.png " ahipaa-association-count-compliance-library-page ")
 
 14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
-    ![target-association-enabled-for-hipaa-page](images/target-association-enabled-for-hipaa.png " target-association-enabled-for-hipaa-page ")
+    ![hipaa-add-target-association-enabled-page](images/hipaa-add-target-association-enabled.png " thipaa-add-target-association-enabled-page ")
 
 15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
