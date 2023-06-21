@@ -401,11 +401,11 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![enterprise-compliance-library-page](images/enterprise-compliance-library.png " enterprise-compliance-library-page ")
+  ![em-enterprise-compliance-library-page](images/em-enterprise-compliance-library.png " em-enterprise-compliance-libraryß-page ")
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
-  ![compliance-library-standards-page](images/compliance-library-standards.png " compliance-library-standards-page ")
+  ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
 
 4.  In the Compliance Standards tab, search for Applicate To column **Database Instance** standard.
 
