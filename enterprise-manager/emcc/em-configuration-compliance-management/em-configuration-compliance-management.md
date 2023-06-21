@@ -150,7 +150,7 @@ In this step, you will compare two database targets to determine configuration d
 
 10.  Add targets to be compared.
 
-    ![add-target-compared](images/add-target-compared.png " add-target-compare-page ")
+    ![add-target-compared-page](images/add-target-compared.png " add-target-compare-page ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
@@ -167,7 +167,7 @@ In this step, you will compare two database targets to determine configuration d
 
      Below are the results.
      Click **Clear All** at Configuration Items(Differences).
-     
+
      ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
 
 
