@@ -312,15 +312,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
-    ![drift-definition-target-association-page](images/drift-definition-target-association.png " drift-definition-target-association-page ")
+    ![drift-definitiontarget-association-page](images/drift-definitiontarget-association.png " ddrift-definitiontarget-association-page ")
 
 16. Click on **Add** to select and associate a target to be monitored for drift.
 
-    ![select-targets-target-name-page](images/select-targets-target-name.png " select-targets-target-name-page ")
+    ![select-targets-to-target-name-page](images/select-targets-to-target-name.png " select-targets-to-target-name-page ")
 
 17. Select **finance.subnet.vcn.oraclevcn.com** as the target.
 
-    ![select-targets-associate-drift-target-page](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
+    ![select-target-associate-drift-target-page](images/select-target-associate-drift-target.png " select-target-associate-drift-target-page ")
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
