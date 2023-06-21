@@ -62,7 +62,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
   Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
 
-  ![inventory-and-usage-detail-page](images/inventory-and-usage-detail-page.png " inventory-and-usage-detail-page ")
+    ![inventory-and-usage-detail-page](images/inventory-and-usage-detail-page.png " inventory-and-usage-detail-page ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
