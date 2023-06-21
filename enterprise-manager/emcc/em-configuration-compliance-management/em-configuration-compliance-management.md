@@ -583,7 +583,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
-    Click **OK**.
+      Click **OK**.
 
     ![hipaa-compliance-standard-target-enabled-page](images/hipaa-compliance-standard-target-enabled.png " hipaa-compliance-standard-target-enabled-page ")
 
