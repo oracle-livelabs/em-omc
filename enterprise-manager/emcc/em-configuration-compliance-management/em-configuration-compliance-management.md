@@ -565,27 +565,27 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
-    ![view-compliance-standard-hipaa-ol-7-page](images/view-compliance-standard-hipaa-ol-7.png " view-compliance-standard-hipaa-ol-7-page ")
+    ![compliance-standard-hipaa-ol-7-detail-page](images/compliance-standard-hipaa-ol-7-detail.png " compliance-standard-hipaa-ol-7-detail-page ")
 
 7. Click on **Associate Targets** to associate a database target for this selected standard.
 
-    ![compliance-library-standard-hipaa-associate-target-page](images/compliance-library-standard-hipaa-associate-target.png " compliance-library-standard-hipaa-associate-target-page ")
+    ![hipaa-compliance-library-associate-target-page](images/hipaa-compliance-library-associate-target.png " hipaa-compliance-library-associate-target-page ")
 
 8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
     Click Add to add a target for association with this compliance standard.
 
-    ![target-association-compliance-standard-hipaa-page](images/target-association-compliance-standard-hipaa.png " target-association-compliance-standard-hipaa ")
+    ![hipaa-association-compliance-add-target-page](images/hipaa-association-compliance-add-target.png " hipaa-association-compliance-add-target-page ")
 
 9.  There is one host called **emcc.marketplace.com**, select that target to associate.
 
-    ![compliance-standard-association-select-target-page](images/compliance-standard-association-select-target.png " compliance-standard-association-select-target-page ")
+    ![hipaa-compliance-standard-select-target-page](images/hipaa-compliance-standard-select-target.png " hipaa-compliance-standard-select-target-page ")
 
 10.  Now, you see emcc.marketplace.com host target has been added. Now, let's complete the association workflow".
 
   Click **OK**.
 
-    ![compliance-standard-target-enabled-page](images/compliance-standard-target-enabled.png " compliance-standard-target-enabled-page ")
+    ![hipaa-compliance-standard-target-enabled-page](images/hipaa-compliance-standard-target-enabled.png " hipaa-compliance-standard-target-enabled-page ")
 
 11. A pop-up window shows up to confirm an association. Click **Yes** to save the association which initiates a compliance check on this host target by executing all compliance rules associated with HIPAA compliance standards.
 
