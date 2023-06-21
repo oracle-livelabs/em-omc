@@ -420,7 +420,7 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
     ![create-like-cis-compliance-library-page](images/create-like-cis-compliance-library.png " create-like-cis-compliance-library-page ")
 
-  Here, for example, **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue,
+    Here, for example, **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue,
 
     ![create-compliance-cis-demo-for19c-page](images/create-compliance-cis-demo-for19c.png " reate-compliance-cis-demo-for19c-page ")
 
@@ -428,7 +428,7 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
     ![compliance-standard-cis-main-page](images/compliance-standard-cis-main.png " compliance-standard-cis-main-page ")
 
-  Click **Save**
+    Click **Save**
 
     ![compliance-standard-cis-rules-page](images/compliance-standard-cis-rules.png " compliance-standard-cis-rules-page ")
 
@@ -456,7 +456,7 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
     ![save-association-compliance-target-page](images/save-association-compliance-target.png " save-association-compliance-target-page ")
 
-  The pop-up window shows the process status, Click **OK**
+    The pop-up window shows the process status, Click **OK**
 
     ![compliance-standard-associate-target-submitted-page](images/compliance-standard-associate-target-submitted.png " compliance-standard-associate-target-submitted-page ")
 
@@ -483,7 +483,7 @@ Click the **Cancel** button.
 
     ![compliance-dashboard-evaluation-page](images/compliance-dashboard-evaluation.png " compliance-dashboard-evaluation-page ")
 
- By clicking under Target Name.
+    By clicking under Target Name.
 
     ![cis-compliance-critical-violations-page](images/cis-compliance-critical-violations.png " cis-compliance-critical-violations-page ")
 
@@ -491,11 +491,11 @@ Click the **Cancel** button.
 
     ![evaluate-cis-critical-violations-page](images/evaluate-cis-critical-violations.png " evaluate-cis-critical-violations-page ")
 
-  Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
+    Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
     ![cis-demo-compliance-report1-page](images/cis-demo-compliance-report1.png " cis-demo-compliance-report1-page ")
 
- Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
+    Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
     ![cis-demo-compliance-report2-page](images/cis-demo-compliance-report2.png " cis-demo-compliance-report2-page ")
     ![cis-demo-compliance-report3-page](images/cis-demo-compliance-report3.png " cis-demo-compliance-report3-page ")
@@ -509,15 +509,15 @@ Click the **Cancel** button.
 
     ![compliance-dashboard-cis-compliance-summary-page](images/compliance-dashboard-cis-compliance-summary.png " compliance-dashboard-cis-compliance-summary-page ")
 
- Each rule result can undergo a detailed analysis as shown on this page.
+    Each rule result can undergo a detailed analysis as shown on this page.
 
     ![cis-compliance-results-by-standard-rules-page](images/cis-compliance-results-by-standard-rules.png " cis-compliance-results-by-standard-rules-page ")
 
-  By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
+    By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
 
     ![cis-compliance-results-by-standard-rules1-page](images/cis-compliance-results-by-standard-rules1.png " cis-compliance-results-by-standard-rules1-page ")
 
-  Further, each violations event details, recommendations and remediations could be explored
+    Further, each violations event details, recommendations and remediations could be explored
 
     ![cis-compliance-results-by-standard-rules2-page](images/cis-compliance-results-by-standard-rules2.png " cis-compliance-results-by-standard-rules2-page ")
 
