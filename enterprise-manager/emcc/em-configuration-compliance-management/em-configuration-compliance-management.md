@@ -82,7 +82,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
     ![em-inventory-usage-detail-table_select-page](images/em-inventory-usage-detail-table_select.png " em-inventory-usage-detail-table_select-page ")  
 
- Click **Close**.
+    Click **Close**.
 
 7.  In the Details excel file table output below, you will see details as follows
 
@@ -172,14 +172,14 @@ In this step, you will compare two database targets to determine configuration d
 
 13. Filter configuration items to review only Initialization Parameters.
 
-  You can see the differences in the Initialization Parameters between the two targets.
+    You can see the differences in the Initialization Parameters between the two targets.
 
-  Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
+    Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
-  - Equal sign means parameter properties are the same across the reference and target compared
-  - Not equal sign indicates parameter properties are different across the reference and target compared
-  - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
-  - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+    - Equal sign means parameter properties are the same across the reference and target compared
+    - Not equal sign indicates parameter properties are different across the reference and target compared
+    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
+    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
     ![comparison-result-initialization-parameters-page](images/comparison-result-initialization-parameters.png " omparison-result-initialization-parameters-page ")
 
@@ -191,11 +191,11 @@ In this step, you will compare two database targets to determine configuration d
 
     ![dashboard-one-time-comparison-results-page](images/dashboard-one-time-comparison-results.png " dashboard-one-time-comparison-results-page ")
 
-  You should see the comparison definition you created on this page.
+    You should see the comparison definition you created on this page.
 
     ![one-time-comparison-result-page](images/one-time-comparison-result.png " one-time-comparison-result-page ")
 
-16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
+16. Export the comparison results into an excel report for further reviews and offline analysis. On the     One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
     ![export-one-time-comparison-result-page](images/export-one-time-comparison-result.png " export-one-time-comparison-result-page ")
 
