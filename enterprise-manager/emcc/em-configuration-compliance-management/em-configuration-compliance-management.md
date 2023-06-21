@@ -324,19 +324,19 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
-    ![drift-definition-target-association-enable-page](images/drift-definition-target-association-enable.png " drift-definition-target-association-enable-page ")
+    ![drift-definition-target-association-enabled-page](images/drift-definition-target-association-enabled.png " drift-definition-target-association-enabled-page ")
 
 19. A pop-up will ask for confirmation to save the association. Select **Yes**, This will start the association of this target to drift definition and initiate the configuration comparison and continuous drift monitoring.
 
-    ![drift-definition-target-save-association-page](images/drift-definition-target-save-association.png " drift-definition-target-save-association-page ")
+    ![drift-definition-target-saves-association-page](images/drift-definition-target-saves-association.png " drift-definition-target-saves-association-page ")
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
-    ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+    ![comparison-&-drift-management-dashboard-page](images/comparison-&-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
 
 21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
-    ![drift-results-page](images/drift-results.png " drift-results-page ")
+    ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
