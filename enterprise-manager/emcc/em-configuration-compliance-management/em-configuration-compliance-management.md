@@ -132,7 +132,7 @@ In this step, you will compare two database targets to determine configuration d
 
     ![select-targets-page](images/select-targets.png " select-targets-page ")
 
-  To begin with, filter ‘Target Type’ to Database Instance.
+    To begin with, filter ‘Target Type’ to Database Instance.
 
     ![select-targets-type-page](images/select-targets-type.png " select-targets-type-page ")
 
@@ -156,8 +156,8 @@ In this step, you will compare two database targets to determine configuration d
 
     ![select-database-target-to-compare-page](images/select-database-target-to-compare.png " select-database-target-to-compare-page ")
 
-  Once the target is chosen, it appears as below.
-  Click **Submit**
+    Once the target is chosen, it appears as below.
+    Click **Submit**
 
     ![compared-add-target-submit-page](images/compared-add-target-submit.png " compared-add-target-submit-page ")
 
@@ -167,8 +167,8 @@ In this step, you will compare two database targets to determine configuration d
 
      Below are the results.
      Click **Clear All** at Configuration Items(Differences).
-
-    ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
+     
+     ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
 
 
 13. Filter configuration items to review only Initialization Parameters.
