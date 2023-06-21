@@ -168,7 +168,7 @@ In this step, you will compare two database targets to determine configuration d
      Below are the results.
      Click **Clear All** at Configuration Items(Differences).
 
-     ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
+    ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
 
 
 13. Filter configuration items to review only Initialization Parameters.
