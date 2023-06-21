@@ -13,8 +13,8 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Get Familiar with Logging Analytics Explorer GUI",
-            "description": "Get Familiar with OCI Logging Analytics Explorer GUI",
+            "title": "Lab 1: Logging Analytics Overview",
+            "description": "Logging Analytics Overview",
             "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
         },
         {
