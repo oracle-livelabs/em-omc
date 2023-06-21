@@ -448,17 +448,17 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
   ![select-targets-compliance-target-page](images/select-targets-compliance-target.png " sselect-targets-compliance-target-page ")
 
-12. The list of targets chosen will show up on the target association page as shown below.
+12. The list of targets chosen will show up on the target association page as shown below. Click **OK** and a pop-up window shows to confirm an association.
 
-  ![compliance-standard-target-association-add-page](images/compliance-standard-target-association-add.png " compliance-standard-target-association-add-page ")
+  ![enabled-compliance-standard-target-association-page](images/enabled-compliance-standard-target-association.png " enabled-compliance-standard-target-association-page ")
 
-13. Click OK and a pop-up window shows to confirm an association. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
+13. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![save-association-compliance-standard-page](images/save-association-compliance-standard.png " save-association-compliance-standard-page ")
+  ![save-association-compliance-target-page](images/save-association-compliance-target.png " save-association-compliance-target-page ")
 
   The pop-up window shows the process status, Click **OK**
 
-  ![compliance-standard-submitted-page](images/compliance-standard-submitted.png " compliance-standard-submitted-page ")
+  ![compliance-standard-associate-target-submitted-page](images/compliance-standard-associate-target-submitted.png " compliance-standard-associate-target-submitted-page ")
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
