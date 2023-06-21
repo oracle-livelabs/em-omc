@@ -231,9 +231,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 4.  **Sort Name Alphabetically** look for Database Instance Template as shown below.
 
-    ![sort-database-instance-comparison-templates-page](images/sort-database-instance-comparison-templates.png " ssort-database-instance-comparison-templates-page ")
+    ![sort-database-instance-comparison-templates-page](images/sort-database-instance-comparison-templates.png " sort-database-instance-comparison-templates-page ")
 
-   With Database Instance Template highlighted, choose **Create Like** to create **ECM003-Drift_Demo** a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
+    With Database Instance Template highlighted, choose **Create Like** to create **ECM003-Drift_Demo** a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
 
     ![create-like-comparison-templates-page](images/create-like-comparison-templates.png " create-like-comparison-templates-page ")
 
