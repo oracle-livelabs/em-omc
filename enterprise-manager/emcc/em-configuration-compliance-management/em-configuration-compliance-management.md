@@ -549,7 +549,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![compliance-welcome-host-library-page](images/compliance-welcome-host-library.png " compliance-welcome-host-library-page")
+    ![em-enterprise-compliance-library-page](images/em-enterprise-compliance-library.png " em-enterprise-compliance-libraryß-page ")
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
