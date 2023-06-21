@@ -148,7 +148,7 @@ In this step, you will compare two database targets to determine configuration d
 
     ![onetime-database-instance-comparison-page](images/onetime-database-instance-comparison.png " onetime-database-instance-comparison-page ")
 
-10.  Add targets to be compared.
+10. Add targets to be compared.
 
     ![add-target-compared-page](images/add-target-compared.png " add-target-compared-page ")
 
