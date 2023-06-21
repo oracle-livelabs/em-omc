@@ -342,7 +342,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![comparison-review-ecm003-drift-demo-drift-page](images/comparison-review-ecm003-drift-demo-drift.png " comparison-review-ecm003-drift-demo-drift-page ")
 
- For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
+    For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
     ![comparison-results-ecm003-drift-demodrift-page](images/comparison-results-ecm003-drift-demodrift.png " ccomparison-results-ecm003-drift-demodrift-page ")
 
@@ -361,7 +361,7 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
 
-  On the Drift Results page, highlight the definition and choose **Export Results**.
+    On the Drift Results page, highlight the definition and choose **Export Results**.
 
     ![export-results-for-created-drift-page](images/export-results-for-created-drift.png " export-results-for-created-drift-page ")
 
