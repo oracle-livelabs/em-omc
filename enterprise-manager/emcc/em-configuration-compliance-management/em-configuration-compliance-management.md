@@ -434,19 +434,19 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
-  ![compliance-library-information-page](images/compliance-library-information.png " compliance-library-information-page ")
+  ![compliance-cis-demo-information-page](images/compliance-cis-demo-information.png " compliance-cis-demo-information-page ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![search-compliance-library-associate-target-page](images/search-compliance-library-associate-target.png " search-compliance-library-associate-target-page ")
+  ![cis-compliance-library-associate-target-page](images/cis-compliance-library-associate-target.png " cis-compliance-library-associate-target-page ")
 
 10. When the Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
-  ![compliance-standard-target-association-page](images/compliance-standard-target-association.png " compliance-standard-target-association ")
+  ![add-cis-compliance-standard-target-page](images/add-cis-compliance-standard-target.png " add-cis-compliance-standard-target-page ")
 
 11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![select-targets-compliance-target-name-page](images/select-targets-compliance-target-name.png " select-targets-compliance-target-name-page ")
+  ![select-targets-compliance-target-page](images/select-targets-compliance-target.png " sselect-targets-compliance-target-page ")
 
 12. The list of targets chosen will show up on the target association page as shown below.
 
