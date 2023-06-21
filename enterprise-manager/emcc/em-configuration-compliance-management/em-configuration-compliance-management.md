@@ -340,11 +340,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-    ![created-drift-definition-drift-results-page](images/created-drift-definition-drift-results.png " created-drift-definition-drift-results-page ")
+    ![comparison-review-ecm003-drift-demo-drift-page](images/comparison-review-ecm003-drift-demo-drift.png " comparison-review-ecm003-drift-demo-drift-page ")
 
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-    ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
+    ![comparison-results-ecm003-drift-demodrift-page](images/comparison-results-ecm003-drift-demodrift.png " ccomparison-results-ecm003-drift-demodrift-page ")
 
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
@@ -353,25 +353,25 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
+23. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page, Click on **Drift Results**
 
-    ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+    ![comparison-&-drift-management-dashboard-page](images/comparison-&-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
 
 24. Click on **Click to refresh**  as shown here:
 
-    ![clicktorefresh-drift-results-page](images/clicktorefresh-drift-results.png " clicktorefresh-drift-results-page ")
+    ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
 
   On the Drift Results page, highlight the definition and choose **Export Results**.
 
-    ![export-results-for-created-drift-definitions-page](images/export-results-for-created-drift-definitions.png " export-results-for-created-drift-definitions-page ")
+    ![export-results-for-created-drift-page](images/export-results-for-created-drift.png " export-results-for-created-drift-page ")
 
 25. You can choose the specific results to export. Click **OK**.
 
-    ![different-sets-of-results-export-page](images/different-sets-of-results-export.png " different-sets-of-results-export-page ")
+    ![set-of-export-results-view-page](images/set-of-export-results-view.png " set-of-export-results-view-page ")
 
 26. Exported the drift management results into zipping file **ECM003-Drift_Demo - Drift_comparisonresult.zip** accessible in your Downloads folder, excel file is available for further reviews and offline analysis. Drift management results excel file format is as shown here.
 
-  ![ecm003-drift-demo-drift-comparison-excel](images/ecm003-drift-demo-drift-comparison-excel.png " ecm003-drift-demo-drift-comparison-excel ")
+  ![ecm003-drift-demo-drift-export-excel](images/ecm003-drift-demo-drift-export-excel.png " ecm003-drift-demo-drift-export-excel ")
 
 <!-- In this step, you learned about continuous configuration drift monitoring of database targets against a reference target for initialization parameters using a customized configuration monitoring template. This can be customized to align with your policies. By establishing a configuration drift definition, you can continuously monitor any configuration changes that can be potentially secure risk and remediate the drift immediately. -->
 
