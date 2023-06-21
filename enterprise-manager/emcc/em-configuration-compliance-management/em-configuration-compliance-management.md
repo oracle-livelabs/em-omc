@@ -300,15 +300,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target
 
-    ![source-targets-search-page](images/source-targets-search.png " source-targets-search-page")
+    ![source-target-search-page](images/source-target-search.png " source-target-search-page")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
-    ![select-targets-name-page](images/select-targets-name.png " select-targets-name-page ")
+    ![select-target-name-page](images/select-target-name.png " select-target-name-page ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
-    ![drift-definition-details-save-targets-page](images/drift-definition-details-save-targets.png " drift-definition-details-save-targets-page ")
+    ![drift-definition-details-save-target-page](images/drift-definition-details-save-target.png " ddrift-definition-details-save-target-page ")
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
