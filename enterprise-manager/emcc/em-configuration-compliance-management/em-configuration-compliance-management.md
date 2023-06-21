@@ -401,77 +401,77 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 2.  From the Enterprise menu, select **Compliance**, then select **Library**
 
-  ![em-enterprise-compliance-library-page](images/em-enterprise-compliance-library.png " em-enterprise-compliance-libraryß-page ")
+    ![em-enterprise-compliance-library-page](images/em-enterprise-compliance-library.png " em-enterprise-compliance-libraryß-page ")
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
-  ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
+    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
 
 4.  In the Compliance Standards tab, search for Compliance Standard by entering **CIS**
 and Applicate To drop down column choose **Database Instance** and click on **Search**.
 
-  ![search-compliance-library-database-instance-page](images/search-compliance-library-database-instance.png " search-compliance-library-database-instance-page ")
+    ![search-compliance-library-database-instance-page](images/search-compliance-library-database-instance.png " search-compliance-library-database-instance-page ")
 
 5.  Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
-  ![choose-cis-compliance-library-page](images/choose-cis-compliance-library.png " choose-cis-compliance-library-page ")
+    ![choose-cis-compliance-library-page](images/choose-cis-compliance-library.png " choose-cis-compliance-library-page ")
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard.
 
-  ![create-like-cis-compliance-library-page](images/create-like-cis-compliance-library.png " create-like-cis-compliance-library-page ")
+    ![create-like-cis-compliance-library-page](images/create-like-cis-compliance-library.png " create-like-cis-compliance-library-page ")
 
   Here, for example, **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue,
 
-  ![create-compliance-cis-demo-for19c-page](images/create-compliance-cis-demo-for19c.png " reate-compliance-cis-demo-for19c-page ")
+    ![create-compliance-cis-demo-for19c-page](images/create-compliance-cis-demo-for19c.png " reate-compliance-cis-demo-for19c-page ")
 
 7.  Review the various compliance rules for CIS Security standards grouped based on the configuration area.
 
-  ![compliance-standard-cis-main-page](images/compliance-standard-cis-main.png " compliance-standard-cis-main-page ")
+    ![compliance-standard-cis-main-page](images/compliance-standard-cis-main.png " compliance-standard-cis-main-page ")
 
   Click **Save**
 
-  ![compliance-standard-cis-rules-page](images/compliance-standard-cis-rules.png " compliance-standard-cis-rules-page ")
+    ![compliance-standard-cis-rules-page](images/compliance-standard-cis-rules.png " compliance-standard-cis-rules-page ")
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
-  ![compliance-cis-demo-information-page](images/compliance-cis-demo-information.png " compliance-cis-demo-information-page ")
+    ![compliance-cis-demo-information-page](images/compliance-cis-demo-information.png " compliance-cis-demo-information-page ")
 
 9.  Select the newly created custom database standard. Click on **Associate Targets** to associate a database target for this newly created custom standard.
 
-  ![cis-compliance-library-associate-target-page](images/cis-compliance-library-associate-target.png " cis-compliance-library-associate-target-page ")
+    ![cis-compliance-library-associate-target-page](images/cis-compliance-library-associate-target.png " cis-compliance-library-associate-target-page ")
 
 10. When the Associate Target option is chosen, you will be taken to a page to add database targets, Click Add to add targets for association with this compliance standard.
 
-  ![add-cis-compliance-standard-target-page](images/add-cis-compliance-standard-target.png " add-cis-compliance-standard-target-page ")
+    ![add-cis-compliance-standard-target-page](images/add-cis-compliance-standard-target.png " add-cis-compliance-standard-target-page ")
 
 11. The list of targets chosen will show up on the target association page as shown below, Select **emrep.us.oracle.com** target to check the compliance security posture.
 
-  ![select-targets-compliance-target-page](images/select-targets-compliance-target.png " sselect-targets-compliance-target-page ")
+    ![select-targets-compliance-target-page](images/select-targets-compliance-target.png " sselect-targets-compliance-target-page ")
 
 12. The list of targets chosen will show up on the target association page as shown below. Click **OK** and a pop-up window shows to confirm an association.
 
-  ![enabled-compliance-standard-target-association-page](images/enabled-compliance-standard-target-association.png " enabled-compliance-standard-target-association-page ")
+    ![enabled-compliance-standard-target-association-page](images/enabled-compliance-standard-target-association.png " enabled-compliance-standard-target-association-page ")
 
 13. Click **Yes** to save the association which initiates a compliance check on this target by executing all the compliance rules associated with this compliance standard.
 
-  ![save-association-compliance-target-page](images/save-association-compliance-target.png " save-association-compliance-target-page ")
+    ![save-association-compliance-target-page](images/save-association-compliance-target.png " save-association-compliance-target-page ")
 
   The pop-up window shows the process status, Click **OK**
 
-  ![compliance-standard-associate-target-submitted-page](images/compliance-standard-associate-target-submitted.png " compliance-standard-associate-target-submitted-page ")
+    ![compliance-standard-associate-target-submitted-page](images/compliance-standard-associate-target-submitted.png " compliance-standard-associate-target-submitted-page ")
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
-  ![cis-compliance-library-association-count-page](images/cis-compliance-library-association-count.png " cis-compliance-library-association-count-page ")
+    ![cis-compliance-library-association-count-page](images/cis-compliance-library-association-count.png " cis-compliance-library-association-count-page ")
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
 Click the **Cancel** button.
 
-  ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
+    ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
-  ![ccompliance-dashboard-page](images/compliance-dashboard.png " compliance-dashboard-page ")
+    ![ccompliance-dashboard-page](images/compliance-dashboard.png " compliance-dashboard-page ")
 
   Under the Compliance Summary panel at the bottom below page:
 
@@ -481,31 +481,45 @@ Click the **Cancel** button.
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
-  ![compliance-dashboard-evaluation-page](images/compliance-dashboard-evaluation.png " compliance-dashboard-evaluation-page ")
+    ![compliance-dashboard-evaluation-page](images/compliance-dashboard-evaluation.png " compliance-dashboard-evaluation-page ")
 
  By clicking under Target Name.
 
-  ![cis-compliance-critical-violations-page](images/cis-compliance-critical-violations.png " cis-compliance-critical-violations-page ")
+    ![cis-compliance-critical-violations-page](images/cis-compliance-critical-violations.png " cis-compliance-critical-violations-page ")
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
-  ![evaluate-compliance-dashboard-critical-violations-page](images/evaluate-compliance-dashboard-critical-violations.png " evaluate-compliance-dashboard-critical-violations-page ")
+    ![evaluate-cis-critical-violations-page](images/evaluate-cis-critical-violations.png " evaluate-cis-critical-violations-page ")
 
   Compliance Evaluation Report will be populated on a separate page that can be used for further analysis of each rule passed or failed.
 
-  ![compliance-evaluation-report-cis-page](images/compliance-evaluation-report-cis.png " compliance-evaluation-report-cis-page ")
+    ![cis-demo-compliance-report1-page](images/cis-demo-compliance-report1.png " cis-demo-compliance-report1-page ")
 
  Under Result Details, clicking on the arrow mark at **emrep.us.oracle.com: CIS_DEMO** gives more information on individual rules.
 
-  ![compliance-evaluation-report-cis-rules-check-page](images/compliance-evaluation-report-cis-rules-check.png " compliance-evaluation-report-cis-rules-check-page ")
+    ![cis-demo-compliance-report2-page](images/cis-demo-compliance-report2.png " cis-demo-compliance-report2-page ")
+    ![cis-demo-compliance-report3-page](images/cis-demo-compliance-report3.png " cis-demo-compliance-report3-page ")
+    ![cis-demo-compliance-report4-page](images/cis-demo-compliance-report4.png " cis-demo-compliance-report4-page ")
 
-19. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
+19. Click **X** to close Critical Violations window
 
-  ![compliance-dashboard-compliance-summary-cis-page](images/compliance-dashboard-compliance-summary-cis.png " compliance-dashboard-compliance-summary-cis-page ")
+    ![close-evaluate-cis-critical-violations-page](images/close-evaluate-cis-critical-violations.png " close-evaluate-cis-critical-violations-page ")  
+
+20. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
+
+    ![compliance-dashboard-cis-compliance-summary-page](images/compliance-dashboard-cis-compliance-summary.png " compliance-dashboard-cis-compliance-summary-page ")
 
  Each rule result can undergo a detailed analysis as shown on this page.
 
-  ![compliance-results-by-standard-rule-page](images/compliance-results-by-standard-rule.png " compliance-results-by-standard-rule ")
+    ![cis-compliance-results-by-standard-rules-page](images/cis-compliance-results-by-standard-rules.png " cis-compliance-results-by-standard-rules-page ")
+
+  By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
+
+    ![cis-compliance-results-by-standard-rules1-page](images/cis-compliance-results-by-standard-rules1.png " cis-compliance-results-by-standard-rules1-page ")
+
+  Further, each violations event details, recommendations and remediations could be explored
+
+    ![cis-compliance-results-by-standard-rules2-page](images/cis-compliance-results-by-standard-rules2.png " cis-compliance-results-by-standard-rules2-page ")
 
   All of these will give you a CIS Compliance security posture of database target.
 
