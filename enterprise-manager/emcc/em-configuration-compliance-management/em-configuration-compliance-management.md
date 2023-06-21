@@ -418,19 +418,19 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard.
 
-  ![create-like-compliance-library-page](images/create-like-compliance-library.png " create-like-compliance-library-page ")
+  ![create-like-cis-compliance-library-page](images/create-like-cis-compliance-library.png " create-like-cis-compliance-library-page ")
 
   Here, for example, **CIS_DEMO** you are creating to imply this is a new database standard. Also if you can change the name per your preference and Continue,
 
-  ![create-compliance-standard-like-oracle-19c-page](images/create-compliance-standard-like-oracle-19c.png " create-compliance-standard-like-oracle-19c-page ")
+  ![create-compliance-cis-demo-for19c-page](images/create-compliance-cis-demo-for19c.png " reate-compliance-cis-demo-for19c-page ")
 
 7.  Review the various compliance rules for CIS Security standards grouped based on the configuration area.
 
-  ![compliance-standard-cis-page](images/compliance-standard-cis.png " compliance-standard-cis-page ")
+  ![compliance-standard-cis-main-page](images/compliance-standard-cis-main.png " compliance-standard-cis-main-page ")
 
   Click **Save**
 
-  ![compliance-standard-cis-standard-rules-page](images/compliance-standard-cis-standard-rules.png " compliance-standard-cis-standard-rules-page ")
+  ![compliance-standard-cis-rules-page](images/compliance-standard-cis-rules.png " compliance-standard-cis-rules-page ")
 
 8.  A new custom database CIS standard is created. Pop-up confirms the successful creation of these standards, Click **OK**
 
