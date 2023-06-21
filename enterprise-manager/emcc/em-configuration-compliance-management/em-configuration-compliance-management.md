@@ -54,33 +54,33 @@ All the items in this step are read-only, the primary goal is to learn about inv
     Password: <copy>welcome1</copy>
     ```
 
-  ![em-login-page](../initialize-environment/images/em-login.png " em-login-page ")
+    ![em-login-page](../initialize-environment/images/em-login.png " em-login-page ")
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-  ![configuration-inventories-usage-page](images/configuration-inventories-usage-page.png " configuration-inventories-usage-page ")
+    ![configuration-inventories-usage-page](images/configuration-inventories-usage-page.png " configuration-inventories-usage-page ")
 
   Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
 
-  ![inventory-and-usage-details-page](images/inventory-and-usage-details-page.png " inventory-and-usage-details-page ")
+    ![inventory-and-usage-detail-page](images/inventory-and-usage-detail-page.png " inventory-and-usage-detail-page  ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-  ![em-compliance-config-alldbs-page](images/em-compliance-configs-alldbs.png " em-compliance-configs-alldbs-page ")
+    ![em-compliance-configs-alldb-page](images/em-compliance-configs-alldb.png " em-compliance-configs-alldb-page ")
 
-4.  Analyze various database versions and the number of instances for each version or you can choose PDB 18.3 highlighted above page.
+4.  Analyze various database versions and the number of instances for each version or you can choose PDBs 19c highlighted above page.
 
 5.  **Table View** can be visible by selecting and adjusting the grid line on the page as shown below.
 
-  ![table-view-grid-line-select-page](images/table-view-grid-line-select.png " table-view-grid-line-select-page ")
+    ![table-view-grid-line-selects-page](images/table-view-grid-line-selects.png " table-view-grid-line-selects-page ")
 
     Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
- ![em-inventory-usage-details-page](images/em-inventory-usage-details.png " em-inventory-usage-details-page ")
+    ![em-inventory-usage-detail-page](images/em-inventory-usage-detail.png " em-inventory-usage-detail-page ")
 
 6. Click on Table View, further details to explore.
 
- ![em-inventory-usage-details-table-page](images/em-inventory-usage-details-table.png " em-inventory-usage-details-table-page ")  
+  ![em-inventory-usage-detail-table_select-page](images/em-inventory-usage-detail-table_select.png " em-inventory-usage-detail-table_select-page ")  
 
  Click **Close**.
 
@@ -96,11 +96,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 8.  Inventory usage and Details can be exported for offline further reviews and analysis.
 
-  ![em-inventory-usage-details-export-summary-page](images/em-inventory-usage-details-export-summary.png " em-inventory-usage-details-export-summary-page ")
+    ![em-inventory-usage-detail-export-summary-page](images/em-inventory-usage-detail-export-summary.png " em-inventory-usage-detail-export-summary-page ")
 
   These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
 
-  ![em-ecm-inv-usage-details-excel-file](images/em-ecm-inv-usage-details-excel-file.png " em-ecm-inv-usage-details-excel-file ")  
+    ![em-ecm-inv-usage-detail-excel-file](images/em-ecm-inv-usage-detail-excel-file.png " em-ecm-inv-usage-detail-excel-file ")  
 
 ## Task 2: One-Time Database Comparison
 
@@ -114,60 +114,62 @@ In this step, you will compare two database targets to determine configuration d
 
 2.  From the Enterprise menu, select **Configuration**, then select **Configuration & Drift Management**
 
-  ![one-time-database-comparison-menu-page](images/one-time-database-comparison-menu.png " one-time-database-comparison-menu-page ")
+    ![em-login-welcome-page](images/em-login-welcome.png " em-login-welcome-page ")
 
 3.  Review the different types of comparisons supported by Clicking on the **i** icon.
 
-  ![comparison-and-drift-management-page](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
+    ![comparison-and-driftmanagement-page](images/comparison-and-driftmanagement.png " comparison-and-driftmanagement-page ")
 
 4.	Select the **One-Time Comparison Results** tab on the left side of the dashboard page. Click **Create Comparison**
 
-  ![one-time-create-comparison-page](images/one-time-create-comparison.png " one-time-create-comparison-page ")
+    ![onetime-create-comparison-page](images/onetime-create-comparison.png " onetime-create-comparison-page ")
 
 5.  Choose the reference target that you want other targets to be compared with.
 
-  ![one-time-comparison-reference-page](images/one-time-comparison-reference.png " one-time-comparison-reference-page ")
+    ![onetime-comparison-reference-page](images/onetime-comparison-reference.png " onetime-comparison-reference-page ")
 
 6.  Identify the reference target to compare other targets.
 
-  ![select-targets-page](images/select-targets.png " select-targets-page ")
+    ![select-targets-page](images/select-targets.png " select-targets-page ")
 
   To begin with, filter ‘Target Type’ to Database Instance.
 
-  ![select-targets-type-page](images/select-targets-type.png " select-targets-type-page ")
+    ![select-targets-type-page](images/select-targets-type.png " select-targets-type-page ")
 
 7.  Select **emrep.us.oracle.com** as the reference target.
 
-  ![select-reference-type-target-page](images/select-reference-type-target.png " select-reference-type-target-page ")
+    ![select-reference-type-target-page](images/select-referencetype-target.png " select-referencetype-target-page ")
 
 8.  Choose Database Instance Template for Comparison Template.
 
-  ![one-time-comparison-template-page](images/one-time-comparison-template.png " one-time-comparison-template-page ")
+    ![oneime-comparison-template-page](images/oneime-comparison-template.png " oneime-comparison-template-page ")
 
 9.  Provide a name for Comparison, for example, a name like **ECM002-Compare-Demo - One time Comparison**
 
-  ![one-time-database-instance-comparison-page](images/one-time-database-instance-comparison.png " one-time-database-instance-comparison-page ")
+    ![onetime-database-instance-comparison-page](images/onetime-database-instance-comparison.png " onetime-database-instance-comparison-page ")
 
 10.  Add targets to be compared.
 
-  ![add-targets-compared-page](images/add-targets-compared.png " add-targets-compared-page ")
+    ![add-target-compared](images/add-target-compared.png " add-target-compare-page ")
 
 11. Choose **finance.subnet.vcn.oraclevcn.com** target to compare with the reference target.
 
-  ![search-database-target-to-compare-page](images/search-database-target-to-compare.png " search-database-target-to-compare-page ")
+    ![select-database-target-to-compare-page](images/select-database-target-to-compare.png " select-database-target-to-compare-page ")
 
   Once the target is chosen, it appears as below.
   Click **Submit**
 
-  ![compared-target-submit-page](images/compared-target-submit.png " compared-target-submit-page ")
+    ![compared-add-target-submit-page](images/compared-add-target-submit.png " compared-add-target-submit-page ")
 
-12.  The comparison would take a few seconds for selected targets and below are the results.
+12.  The comparison would take a few seconds to a minute for selected targets.
 
-  ![comparison-results-page](images/comparison-results.png " comparison-results-page ")
+    ![comparison-progress-page](images/comparison-progress.png " comparison-progress-page ")
 
-   Click **Clear All** at Configuration Items(Differences).
+     Below are the results.
+     Click **Clear All** at Configuration Items(Differences).
 
-  ![clear-all-comparison-results-page](images/clear-all-comparison-results.png " clear-all-comparison-results-page ")
+    ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
+
 
 13. Filter configuration items to review only Initialization Parameters.
 
@@ -175,34 +177,34 @@ In this step, you will compare two database targets to determine configuration d
 
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
-    - Equal sign means parameter properties are the same across the reference and target compared
-    - Not equal sign indicates parameter properties are different across the reference and target compared
-    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
-    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+  - Equal sign means parameter properties are the same across the reference and target compared
+  - Not equal sign indicates parameter properties are different across the reference and target compared
+  - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
+  - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-  ![comparison-results-initialization-parameters-page](images/comparison-results-initialization-parameters.png " comparison-results-initialization-parameters-page ")
+    ![comparison-result-initialization-parameters-page](images/comparison-result-initialization-parameters.png " omparison-result-initialization-parameters-page ")
 
 14. Now, let us go to the Comparison and Drift Management dashboard page for further analysis of the results.
 
-  ![configuration-comparison-and-drift-management-page](images/configuration-comparison-and-drift-management.png " configuration-comparison-and-drift-management-page ")
+    ![configuration-comparison-drift-management-page](images/configuration-comparison-drift-management.png " cconfiguration-comparison-drift-management-page ")
 
 15. On the dashboard page, the donut chart for Comparison Overview gives you the summary result. Click on the **donut chart** to analyze one-time comparison result details.
 
-  ![dashboard-one-time-comparison-result-page](images/dashboard-one-time-comparison-result.png " dashboard-one-time-comparison-result-page ")
+    ![dashboard-one-time-comparison-results-page](images/dashboard-one-time-comparison-results.png " dashboard-one-time-comparison-results-page ")
 
   You should see the comparison definition you created on this page.
 
-  ![one-time-comparison-results-page](images/one-time-comparison-results.png " one-time-comparison-results-page ")
+    ![one-time-comparison-result-page](images/one-time-comparison-result.png " one-time-comparison-result-page ")
 
 16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
-  ![export-one-time-comparison-results-page](images/export-one-time-comparison-results.png " export-one-time-comparison-results-page ")
+    ![export-one-time-comparison-result-page](images/export-one-time-comparison-result.png " export-one-time-comparison-result-page ")
 
   After Exporting, Click **Cancel** to exit. The zip file will be created, downloadable, and available to open in excel format on your system to do offline verification.
 
 17. One-time Database comparison results excel file format as shown here.
 
-  ![compare-demo-one-time-comparison-result-excel](images/compare-demo-one-time-comparison-result-excel.png " compare-demo-one-time-comparison-result-excel ")
+    ![compare-demo-one-time-comparison-excel](images/compare-demo-one-time-comparison-excel.png " compare-demo-one-time-comparison-excel ")
 
 <!-- In this step, you learned steps to compare two database targets to determine configuration differences. This one-time database (or any Enterprise Manager managed targets) comparison will help you quickly determine specific configuration changes when compared with reference configuration. This is very ideal for troubleshooting any target configuration parameters. -->
 
@@ -216,47 +218,47 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 2.  Navigate to ***Enterprise >> Configuration >> Comparison & Drift Management***, Review the different types of comparisons supported.
 
-  ![configuration-comparison-drift-management-menu-page](images/configuration-comparison-drift-management-menu.png " configuration-comparison-drift-management-menu-page ")
+    ![em-login-welcome-page](images/em-login-welcome.png " em-login-welcome-page ")
 
     By Clicking on the **i** icon, review the different types of comparisons.
 
     Choose Templates left side of the panel of the Dashboard.
 
-  ![comparison-and-drift-management-page](images/comparison-and-drift-management.png " comparison-and-drift-management-page ")
+    ![comparison-and-driftmanagement-page](images/comparison-and-driftmanagement.png " comparison-and-driftmanagement-page ")
 
 3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
 
-  ![comparison-templates-page](images/comparison-templates.png " comparison-templates-page ")
+    ![comparison-template-page](images/comparison-template.png " comparison-template-page ")
 
 4.  **Sort Name Alphabetically** look for Database Instance Template as shown below.
 
-  ![sort-database-instance-comparison-template-page](images/sort-database-instance-comparison-template.png " sort-database-instance-comparison-template-page ")
+    ![sort-database-instance-comparison-templates-page](images/sort-database-instance-comparison-templates.png " ssort-database-instance-comparison-templates-page ")
 
-   With Database Instance Template highlighted, choose **Create Like** to create a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
+   With Database Instance Template highlighted, choose **Create Like** to create **ECM003-Drift_Demo** a copy of this template for further customization. Provide a unique name to the new template and click **OK**.
 
-  ![create-like-comparison-template-page](images/create-like-comparison-template.png " create-like-comparison-template-page ")
+    ![create-like-comparison-templates-page](images/create-like-comparison-templates.png " create-like-comparison-templates-page ")
 
 5.  A complete copy of the Database Instance template with a unique name is created with all configuration items enabled, click on the **Template Name** field and copy with the name provided below
 
     ```
-    <copy>ECM003-Drift_Demo</copy>
+      <copy>ECM003-Drift_Demo</copy>
 
     ```
     And click **Search**.
 
-  ![comparison-drift-management-created-database-instance-template-page](images/comparison-drift-management-created-database-instance-template.png " comparison-drift-management-created-database-instance-template-page ")
+    ![comparison-drift-management-database-instance-page](images/comparison-drift-management-database-instance.png " comparison-drift-management-database-instance-page ")
 
     Highlight this new template and click Edit.
 
-  ![comparison-templates-edit-page](images/comparison-templates-edit.png " comparison-templates-edit-page ")
+    ![comparison-template-edit-page](images/comparison-template-edit.png " comparison-template-edit-page ")
 
 6.  The configuration templates page appears below.
 
-  ![edit-comparison-template-configuration-item-page](images/edit-comparison-template-configuration-item.png " edit-comparison-template-configuration-item-page ")
+    ![edit-comparison-template-configuration-items-page](images/edit-comparison-template-configuration-items.png " edit-comparison-template-configuration-items-page ")
 
   To begin with, uncheck all configuration items.
 
-  ![edit-comparison-compare-template-page](images/edit-comparison-compare-template.png " edit-comparison-compare-template-page ")
+    ![comparison-Uncheck-compare-template-page](images/comparison-Uncheck-compare-template.png " comparison-Uncheck-compare-template-page ")
 
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
@@ -268,84 +270,82 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - Making sure **Instance Information** is highlighted
     - Click Save
 
-  ![comparison-details-instance-information-page](images/comparison-details-instance-information.png " comparison-details-instance-information-page ")
+    ![comparison-detailinstance-information-page](images/comparison-detailinstance-information.png " comparison-detailinstance-information-page ")
 
 8.  A new customized configuration drift monitoring template is created. This template can be used for drift monitoring.
 
-  ![confirmation-comparison-and-drift-management-page](images/confirmation-comparison-and-drift-management.png " confirmation-comparison-and-drift-management-page ")
+    ![confirm-comparison-and-drift-management-page](images/confirm-comparison-and-drift-management.png " confirm-comparison-and-drift-management-page ")
 
   **Search** with Template name **ECM003-Drift_Demo** shows with a Confirmation page
 
-  ![search-comparison-and-drift-management-page](images/search-comparison-and-drift-management.png " search-comparison-and-drift-management-page ")
+    ![search-comparison-drift-management-page](images/search-comparison-drift-management.png " search-comparison-drift-management-page ")
 
 9.  Go to the Drift Results tab and create a drift definition.
 
-  ![comparison-and-drift-management-drift-results-page](images/comparison-and-drift-management-drift-results.png " comparison-and-drift-management-drift-results-page ")
+    ![comparison-drift-management-results-page](images/comparison-drift-management-results.png " comparison-drift-management-results-page ")
 
 10. Click on **Create Definition** under Drift Management.
-
-  ![create-definition-comparison-drift-management-page](images/create-definition-comparison-drift-management.png " create-definition-comparison-drift-management-page ")
 
     - Choose Database Instance as the Target Type
     - Select the template created in the previous step
     - Click OK
 
-  ![create-definition-drift-demo-database-instance-page](images/create-definition-drift-demo-database-instance.png " create-definition-drift-demo-database-instance-page ")
+    ![create-definition-driftdemo-database-instance-page](images/create-definition-driftdemo-database-instance.png " create-definition-driftdemo-database-instance-page ")
 
 11. On the drift definition details page, provide a unique name for the drift definition.
 
-  ![drift-definition-details-page](images/drift-definition-details-name.png " drift-definition-details-page ")
+    ![drift-definition-detail-name-page](images/drift-definition-detail-name.png " drift-definition-detail-name-page ")
 
 12. Under Source Configuration, do the following:
 
     -  Select ‘Latest Configuration’
     -  Click search to choose Source Target
 
-  ![source-targets-search-page](images/source-targets-search.png " source-targets-search-page")
+    ![source-targets-search-page](images/source-targets-search.png " source-targets-search-page")
 
 13. Choose **emrep.us.oracle.com** as your source target. Click on **Select**
 
-  ![select-targets-name-page](images/select-targets-name.png " select-targets-name-page ")
+    ![select-targets-name-page](images/select-targets-name.png " select-targets-name-page ")
 
 14. You will see Source Target (***emrep.us.oracle.com***) is selected that acts as your reference target.
 
-  ![drift-definition-details-save-targets-page](images/drift-definition-details-save-targets.png " drift-definition-details-save-targets-page ")
+    ![drift-definition-details-save-targets-page](images/drift-definition-details-save-targets.png " drift-definition-details-save-targets-page ")
 
 15. Select **Save and Associate Targets** to select targets to be monitored.
 
-  ![drift-definition-target-association-page](images/drift-definition-target-association.png " drift-definition-target-association-page ")
+    ![drift-definition-target-association-page](images/drift-definition-target-association.png " drift-definition-target-association-page ")
 
 16. Click on **Add** to select and associate a target to be monitored for drift.
 
-  ![select-targets-target-name-page](images/select-targets-target-name.png " select-targets-target-name-page ")
+    ![select-targets-target-name-page](images/select-targets-target-name.png " select-targets-target-name-page ")
 
 17. Select **finance.subnet.vcn.oraclevcn.com** as the target.
 
-  ![select-targets-associate-drift-target-page](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
+    ![select-targets-associate-drift-target-page](images/select-targets-associate-drift-target.png " select-targets-associate-drift-target-page ")
 
 18. Click **Select**, You will see one target selected to be associated with drift definition, Click OK.
 
-  ![drift-definition-target-association-enable-page](images/drift-definition-target-association-enable.png " drift-definition-target-association-enable-page ")
+    ![drift-definition-target-association-enable-page](images/drift-definition-target-association-enable.png " drift-definition-target-association-enable-page ")
 
 19. A pop-up will ask for confirmation to save the association. Select **Yes**, This will start the association of this target to drift definition and initiate the configuration comparison and continuous drift monitoring.
 
-  ![drift-definition-target-save-association-page](images/drift-definition-target-save-association.png " drift-definition-target-save-association-page ")
+    ![drift-definition-target-save-association-page](images/drift-definition-target-save-association.png " drift-definition-target-save-association-page ")
 
 20. Once you select Yes in the previous step, drift monitoring is in progress. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page. After a minute, refresh the page to see if the drift monitoring is completed. You should see a new or updated donut chart under the ‘Drifted Overview’ dashlet.
 
-  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+    ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
 21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
-  ![drift-results-page](images/drift-results.png " drift-results-page ")
+    ![drift-results-page](images/drift-results.png " drift-results-page ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-  ![created-drift-definition-drift-results-page](images/created-drift-definition-drift-results.png " created-drift-definition-drift-results-page ")
+    ![created-drift-definition-drift-results-page](images/created-drift-definition-drift-results.png " created-drift-definition-drift-results-page ")
 
  For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
-  ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
+    ![comparison-results-ecm003-drift-demo-drift-page](images/comparison-results-ecm003-drift-demo-drift.png " comparison-results-ecm003-drift-demo-drift-page ")
 
   Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
 
@@ -356,19 +356,19 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
 23. Go to Enterprise --> Configuration --> Comparison & Drift Management Dashboard page, Click on **Drift Results**
 
-  ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
+    ![comparison-and-drift-management-dashboard-page](images/comparison-and-drifts-management-dashboard.png " comparison-and-drift-management-dashboard-page ")
 
 24. Click on **Click to refresh**  as shown here:
 
-  ![clicktorefresh-drift-results-page](images/clicktorefresh-drift-results.png " clicktorefresh-drift-results-page ")
+    ![clicktorefresh-drift-results-page](images/clicktorefresh-drift-results.png " clicktorefresh-drift-results-page ")
 
   On the Drift Results page, highlight the definition and choose **Export Results**.
 
-  ![export-results-for-created-drift-definitions-page](images/export-results-for-created-drift-definitions.png " export-results-for-created-drift-definitions-page ")
+    ![export-results-for-created-drift-definitions-page](images/export-results-for-created-drift-definitions.png " export-results-for-created-drift-definitions-page ")
 
 25. You can choose the specific results to export. Click **OK**.
 
-  ![different-sets-of-results-export-page](images/different-sets-of-results-export.png " different-sets-of-results-export-page ")
+    ![different-sets-of-results-export-page](images/different-sets-of-results-export.png " different-sets-of-results-export-page ")
 
 26. Exported the drift management results into zipping file **ECM003-Drift_Demo - Drift_comparisonresult.zip** accessible in your Downloads folder, excel file is available for further reviews and offline analysis. Drift management results excel file format is as shown here.
 
