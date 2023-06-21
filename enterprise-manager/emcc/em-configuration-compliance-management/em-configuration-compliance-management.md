@@ -58,7 +58,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 2.  From the Enterprise menu, select **Configuration**, then select **Inventory and  Usage Details**.
 
-    ![configuration-inventories-usage-page](images/configuration-inventories-usage-page.png " configuration-inventories-usage-page ")
+    ![configuration-inventories-usage-page](images/configuration-inventories-usage.png " configuration-inventories-usage-page ")
 
   Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
 
