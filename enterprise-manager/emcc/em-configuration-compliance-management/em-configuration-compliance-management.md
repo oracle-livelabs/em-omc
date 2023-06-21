@@ -61,7 +61,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
     ![configuration-inventories-usage-page](images/configuration-inventories-usage.png " configuration-inventories-usage-page ")
 
     Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
-    
+
     ![inventory-and-usage-detail-page](images/inventory-and-usage-detail-page.png " inventory-and-usage-detail-page ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
@@ -80,7 +80,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 6. Click on Table View, further details to explore.
 
-  ![em-inventory-usage-detail-table_select-page](images/em-inventory-usage-detail-table_select.png " em-inventory-usage-detail-table_select-page ")  
+    ![em-inventory-usage-detail-table_select-page](images/em-inventory-usage-detail-table_select.png " em-inventory-usage-detail-table_select-page ")  
 
  Click **Close**.
 
@@ -98,7 +98,7 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
     ![em-inventory-usage-detail-export-summary-page](images/em-inventory-usage-detail-export-summary.png " em-inventory-usage-detail-export-summary-page ")
 
-  These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
+    These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
 
     ![em-ecm-inv-usage-detail-excel-file](images/em-ecm-inv-usage-detail-excel-file.png " em-ecm-inv-usage-detail-excel-file ")  
 
