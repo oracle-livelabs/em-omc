@@ -161,15 +161,14 @@ In this step, you will compare two database targets to determine configuration d
 
     ![compared-add-target-submit-page](images/compared-add-target-submit.png " compared-add-target-submit-page ")
 
-12.  The comparison would take a few seconds to a minute for selected targets.
+12. The comparison would take a few seconds to a minute for selected targets.
 
     ![comparison-progress-page](images/comparison-progress.png " comparison-progress-page ")
 
-     Below are the results.
-     Click **Clear All** at Configuration Items(Differences).
+    Below are the results.
+    Click **Clear All** at Configuration Items(Differences).
 
     ![results-clear-all-comparisons-page](images/results-clear-all-comparisons.png " results-clear-all-comparisons-page ")
-
 
 13. Filter configuration items to review only Initialization Parameters.
 
