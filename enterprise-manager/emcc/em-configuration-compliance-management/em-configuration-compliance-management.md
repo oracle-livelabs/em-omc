@@ -462,16 +462,16 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
 14. To check if the compliance check is complete, click the target number in the ‘Association Count’ column.
 
-  ![compliance-library-association-count-page](images/compliance-library-association-count.png " compliance-library-association-count-page ")
+  ![cis-compliance-library-association-count-page](images/cis-compliance-library-association-count.png " cis-compliance-library-association-count-page ")
 
 15. If the Evaluation status indicates **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete,
 Click the **Cancel** button.
 
-  ![compliance-standard-target-association-cis-page](images/compliance-standard-target-association-cis.png " compliance-standard-target-association-cis-page ")
+  ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
 
 16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
 
-  ![compliance-dashboard-page-cis-page](images/compliance-dashboard-page-cis.png " compliance-dashboard-page-cis-page ")
+  ![ccompliance-dashboard-page](images/compliance-dashboard.png " compliance-dashboard-page ")
 
   Under the Compliance Summary panel at the bottom below page:
 
@@ -481,11 +481,11 @@ Click the **Cancel** button.
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
-  ![compliance-dashboard-targets-evaluated-page](images/compliance-dashboard-targets-evaluated.png " compliance-dashboard-targets-evaluated-page ")
+  ![compliance-dashboard-evaluation-page](images/compliance-dashboard-evaluation.png " compliance-dashboard-evaluation-page ")
 
  By clicking under Target Name.
 
-  ![compliance-dashboard-critical-violations-page](images/compliance-dashboard-critical-violations.png " compliance-dashboard-critical-violations-page ")
+  ![cis-compliance-critical-violations-page](images/cis-compliance-critical-violations.png " cis-compliance-critical-violations-page ")
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
