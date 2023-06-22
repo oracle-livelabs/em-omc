@@ -657,7 +657,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![hipaa-compliance-ol-7-individual-rule-detail-page](images/hipaa-compliance-ol-7-violation-rule-detail.png " hipaa-compliance-ol-7-individual-rule-detail-page ")
 
-    All these would give you a security posture of the host target.
+  All these would give you a security posture of the host target.
 
   <!---- With this step, you got hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess the overall security compliance of all
   Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target-specific security compliance. ---->
