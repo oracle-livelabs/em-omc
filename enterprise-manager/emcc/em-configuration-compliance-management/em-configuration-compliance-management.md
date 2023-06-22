@@ -647,11 +647,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
 
-    ![compliance-hipaa-ol-7-host-results-rules-validation-page](images/compliance-hipaa-ol-7-host-results-rules-validation.png " compliance-hipaa-ol-7-host-results-rules-validation-page ")
+    ![hipaa-compliance-ol-7-host-rule-results-page](images/hipaa-compliance-ol-7-host-rule-results.png " hipaa-compliance-ol-7-host-rule-results-page ")
 
       Individual standard rule details status and rationale can be further analyzed.
 
-      ![hipaa-ol-7-individual-rule-detail-evaluations-page](images/hipaa-ol-7-individual-rule-detail-evaluations.png " hipaa-ol-7-individual-rule-detail-evaluations-page ")
+      ![hipaa-compliance-ol-7-individual-rule-detail-page](images/hipaa-compliance-ol-7-individual-rule-detail.png " hipaa-compliance-ol-7-individual-rule-detail-page ")
+
+21. Violations events can be further explored in detail.
+
+      ![hipaa-compliance-ol-7-individual-rule-detail-page](images/hipaa-compliance-ol-7-violation-rule-detail.png " hipaa-compliance-ol-7-individual-rule-detail-page ")
 
       All these would give you a security posture of the host target.
 
