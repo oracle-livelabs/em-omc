@@ -1043,7 +1043,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![navigate to incident manager console](images/event-compression/monitoring-to-incident-manager.png " ")
 
-3. Let’s take a look at an example of Event Compression. Select the incident with the summary text: “There are 5 target_availability events on members of db19c.subnet.vcn.oraclevcn.com_sys”.
+3. Let’s take a look at an example of Event Compression. Select the incident with the summary text: “There are 5 target\_availability events on members of db19c.subnet.vcn.oraclevcn.com\_sys”.
 
      ![select compressed incident in incident manager](images/event-compression/incident-manager-compressed-incident-highlighted.png " ")
 
