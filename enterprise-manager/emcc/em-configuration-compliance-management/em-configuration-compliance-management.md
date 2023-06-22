@@ -605,7 +605,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
-    ![compliance-dashboard-for-hipaa-page](images/compliance-dashboard-for-hipaa.png " compliance-dashboard-for-hipaa-page ")
+    ![hipaa-compliance-dashboard-page](images/hipaa-compliance-dashboard.png " hipaa-compliance-dashboard-page ")
 
 16. Compliance Dashboard populates:
 
@@ -614,17 +614,17 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     Click on the number under the **Critical** column. to see details of the host's critical violations.
 
-    ![compliance-summary-for-hipaa-ol-7-page](images/compliance-summary-for-hipaa-ol-7.png " compliance-summary-for-hipaa-ol-7-page ")
+    ![compliance-dashboard-summary-hipaa-ol-7-page](images/compliance-dashboard-summary-hipaa-ol-7.png " compliance-dashboard-summary-hipaa-ol-7-page ")
 
 17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
-    ![critical-violations-hipaa-ol-7-page](images/critical-violations-hipaa-ol-7.png " critical-violations-hipaa-ol-7-page ")
+    ![critical-violations-hipaa-compliance-ol-7-page](images/critical-violations-hipaa-compliance-ol-7.png " critical-violations-hipaa-compliance-ol-7-page ")
 
     Each critical rule violations status can be seen on this pop-up page in detail.
 
     Click on  **Report**
 
-    ![report-critical-violations-hipaa-ol-7-access-page](images/report-critical-violations-hipaa-ol-7-access.png " report-critical-violations-hipaa-ol-7-access-page ")
+    ![critical-violations-hipaa-compliance-rules-ol-7-page](images/critical-violations-hipaa-compliance-rules-ol-7.png " critical-violations-hipaa-compliance-rules-ol-7-page ")
 
 18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
