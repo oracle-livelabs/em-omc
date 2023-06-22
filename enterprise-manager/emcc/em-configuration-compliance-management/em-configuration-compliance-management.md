@@ -665,7 +665,7 @@ A compliance standard rule is a specific test to determine if a configuration da
     This completes the Lab!
 
     You may now [proceed to the next lab](#next).
-
+    
 ## Learn More
 
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
