@@ -628,11 +628,12 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 18. It takes you to a separate page that shows Compliance Evaluation Report to see the reports with passed and failed rules.
 
-    ![compliance-evaluation-report-hipaa-ol-7-page](images/compliance-evaluation-report-hipaa-ol-7.png " compliance-evaluation-report-hipaa-ol-7-page ")
+    ![compliance-evaluation-report1-hipaa-ol-7-page](images/compliance-evaluation-report1-hipaa-ol-7.png " compliance-evaluation-report1-hipaa-ol-7-page ")
 
     And clicking on the **Result Details arrow emcc.marketplace.com: Health Insurance Portability and Accountability Act (HIPAA) OL-7** to see drill down evaluation details.
 
-    ![summary-hipaa-evaluation-rule-results-page](images/summary-hipaa-evaluation-rule-results.png " summary-hipaa-evaluation-rule-results-page ")
+    ![compliance-evaluation-report2-hipaa-ol-7-page](images/compliance-evaluation-report2-hipaa-ol-7.png " compliance-evaluation-report2-hipaa-ol-7-page ")
+    ![compliance-evaluation-report3-hipaa-ol-7-page](images/compliance-evaluation-report3-hipaa-ol-7.png " compliance-evaluation-report3-hipaa-ol-7-page ")
 
 19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
 
