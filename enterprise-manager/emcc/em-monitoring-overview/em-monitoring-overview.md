@@ -1075,7 +1075,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![event compression policies page](images/event-compression/event-compression-policies-page.png " ")
 
-11. Let’s now take a look at the policy that created the compressed events we previously viewed. Click the policy with the name “Target down events for a database system and its members”. **Note:** this is not one of the seven out-of-box policies. It is a user-defined policy. You can differentiate between a user-defined policy and an out-of-box policy from the ‘Created By’ column.
+11. Let’s now take a look at the policy that created the compressed events we previously viewed. Click the policy with the name “Target down events for a database system and its members”. **Note:** This is not one of the seven out-of-box policies. It is a user-defined policy. You can differentiate between a user-defined policy and an out-of-box policy from the ‘Created By’ column.
 
      ![target down policy for database system and its members](images/event-compression/target-down-db-policy-highlighted.png " ")
 
@@ -1218,7 +1218,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
 19. Click the actions icon under your policy. Select Publish. 
 
-     **Note**: There are other actions you can complete on this policy such as:
+     There are other actions you can complete on this policy such as:
      - Edit the current policy when it is in draft state and disabled.
      - Create like which essentially clones the policy and allows you to modify the clone as a separate policy.
      - Reorder your policy in the list so it has higher priority when being evaluated by an event rule. For user-defined event compression policies, they will always appear at the bottom of the policy list when created. However, you may change their order in the execution list. They can be placed anywhere above or below the out-of-box policies but cannot be placed in between the out-of-box policies.
