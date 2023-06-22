@@ -662,10 +662,10 @@ A compliance standard rule is a specific test to determine if a configuration da
   <!---- With this step, you got hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess the overall security compliance of all
   Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target-specific security compliance. ---->
 
-    This completes the Lab!
+  This completes the Lab!
 
-    You may now [proceed to the next lab](#next).
-    
+  You may now [proceed to the next lab](#next).
+
 ## Learn More
 
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
