@@ -637,13 +637,13 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 19. Individual rules can be further explored with select Enterprise Main Menu, then selecting Compliance and Results Page.
 
-    ![compliance-results-hipaa-page](images/compliance-results-hipaa.png " compliance-results-hipaa-page ")
+    ![compliance-results-for-page](images/compliance-results-for-hipaa.png " compliance-results-for-page ")
 
     It takes you to the Compliance Results page.
 
-    ![compliance-evaluation-results-hipaa-ol7-standards-page](images/compliance-evaluation-results-hipaa-ol7-standards.png " compliance-evaluation-results-hipaa-ol7-standards-page ")
-
     Click on **Health Insurance Portability and Accountability Act (HIPAA) OL-7**
+
+    ![hipaa-compliance-evaluation-results-ol7-page](images/hipaa-compliance-evaluation-results-ol7.png " hipaa-hipaa-compliance-evaluation-results-ol7-page ")
 
 20. Individual compliance rules success and violations, and evaluations can be explored. Navigate to Results by target, Results by compliance standard Rules tab,  to get an understanding of Frameworks, Standards, and host Targets level compliance visually.
 
