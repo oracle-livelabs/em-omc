@@ -22,7 +22,7 @@ In this lab, you will perform the following steps
 | 1                                                         | Inventory & Usage details                                               | 10 minutes   | IT Manager wants to get an inventory of all existing databases managed by Enterprise Manager including different versions of databases, the number of instances deployed over a period of time | Reduce the number of different configuration sets, and increase standardization across the data center                  |
 | 2                                                         | One-time database comparison                                            | 10 minutes   | Compare latest reference configuration to one or more targets to determine the configuration differences                                                                                   | Validate the configuration of the new database provisioned aligns with IT configuration policy                          |
 | 3                                                         | Database Configuration drift management                                 | 20 minutes   | Compare the latest or saved target configuration to one or more targets                                                                           | Detect unauthorized changes in the databases that deviate from security best practices and ensure that configuration changes have been done properly|
-| 4                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Databases target                | Enhance the security posture of your database environments by securing the configuration of each target and aligning with industry-standard CIS Benchmark                                                       | Monitor security compliance for host targets from one customized dashboard |
+| 4                                                         |  CIS standard Database security Compliance Standard | 10 minutes                    | Apply a industry Standard for Oracle 19c using Traditional Auditing for Oracle Database target, generate report and validate the results.                | Implementing stringent security measures and achieving regulatory compliance by aligning with CIS benchmarks, enhances and operational efficiencies of database management through centralized auditing and monitoring, fostering and enhancing Oracle databases integrity and operational efficiencies.                                                       | Monitor security compliance for host targets from one customized dashboard |
 | 5                                                         | Host Security Compliance                                  | 10 minutes   | Host target                                                                                                                       | Monitor security compliance for host targets from one reference compliance and implement innovative security compliance measures that meet or exceed applicable security regulations and standards |
 
 
@@ -662,9 +662,9 @@ A compliance standard rule is a specific test to determine if a configuration da
   <!---- With this step, you got hands-on experience in creating a custom framework to monitor the security compliance of heterogeneous targets (Database and Host, this example). This will help you assess the overall security compliance of all
   Enterprise Manager managed targets from one aggregated view. And if required, you can drill down into each standard to assess details of target-specific security compliance. ---->
 
-  This completes the Lab!
+    This completes the Lab!
 
-  You may now [proceed to the next lab](#next).
+    You may now [proceed to the next lab](#next).
 
 ## Learn More
 
@@ -681,4 +681,4 @@ A compliance standard rule is a specific test to determine if a configuration da
 ## Acknowledgements
   - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
-  - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, August 29th,2022.
+  - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, June 21st,2023.
