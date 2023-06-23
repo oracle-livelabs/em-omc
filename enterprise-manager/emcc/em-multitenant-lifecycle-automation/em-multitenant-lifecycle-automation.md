@@ -20,7 +20,7 @@ Cloud Management Pack (CMP) that resides on top of DBLM, provides  lifecycle man
 
 The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lifecycle Management capabilities for multitenant databases.
 
-| **Lab No** | **Approx. Time**                                                                | **Functionality** | **Description**                                                                                                                                                                      | **Benefits**                                                                                                                                                                                                                   |
+| **Task No** | **Approx. Time**                                                                | **Functionality** | **Description**                                                                                                                                                                      | **Benefits**                                                                                                                                                                                                                   |
 |--------|----------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1    | 10min  | Create a Pluggable Database (PDB)    | Create a Pluggable database (PDB) within a CDB and run a post-script to lock/unlock accounts | By creating a PDB, you can isolate sensitive data from the rest of the database and simply the management of your database. Run pre and post hardening scripts as part of provisioning automation which otherwise would be a time consuming task                                                                                                          |
 | 2    | 10min  | Un-plug/Plug an existing Pluggable Database   | Explore the option to Un-plug a PDB and later use the 'Plug' option to plug it back in the same or a different CDB as and when needed.  | Unplug and Plug provides you the flexibility to move your PDBs across same or different CDBs. Helps in resource optimisation and easy maintenance of your databases. Isolate the data in a given PDB as and when needed.        |
@@ -40,7 +40,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository. Workshop activities included in this lab will be executed both locally on the instance using Enterprise Manager Command Line Interface (EMCLI) or Rest APIs, and the Enterprise Manager console (browser)
 
-## Lab 1: Create Pluggable Database (PDB)
+## Task 1: Create Pluggable Database (PDB)
 
 1. On the browser window on the right preloaded with *Enterprise Manager*, if not already logged in, click on the *Username* field and login with the credentials provided below.
 
@@ -180,7 +180,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/create-pdb-validation.png " new pdb validation")
 
-## Lab 2: Unplug/Plug an existing Pluggable Database (PDB)
+## Task 2: Unplug/Plug an existing Pluggable Database (PDB)
 
 1. Navigate to the ***Enterprise menu >> Provisioning and Patching >> Database provisioning***.
 
@@ -357,7 +357,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     *Note*: You do not have to wait until the steps complete and move on to the next section.
 
-## Lab 3: Clone an existing Pluggable Database (PDB)
+## Task 3: Clone an existing Pluggable Database (PDB)
 
 1.  Navigate to the “***Targets>> Databases***”.
 
@@ -446,7 +446,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 ![](images/clone-validation.png "pdb clone validation success ")
 
 
-## Lab 4: Patch (Update) an existing Pluggable Database (PDB)
+## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
 1. In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
 
@@ -531,7 +531,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
-## Lab 5: Compliance Management for Pluggable Database
+## Task 5: Compliance Management for Pluggable Database
 
 Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use *High Security Configuration for Oracle Pluggable Database* compliance standard to secure configuration of provisioned database.
 
@@ -633,7 +633,7 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
 
   ![](images/logout-as-sysman.png " ")
 
-## Lab 6: Self-Service to Request PDB Using PDBaaS
+## Task 6: Self-Service to Request PDB Using PDBaaS
 
 With the Self-Service Portal, cloud users can request a Pluggable Database through a simple process, monitor resource consumptions, and manage the pluggable database through an intuitive graphical user interface. PDBs are created with a predefined expiry time and is automatically deleted.
 
@@ -851,7 +851,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
    Click on the refresh icon on the top right in case the PDB is still seen on the page.
 
-## Lab 7:  Setup  PDB-as-a-Service (PDBaaS)
+## Task 7:  Setup  PDB-as-a-Service (PDBaaS)
 
 Previous exercise demonstrated the process of Self-Service User requesting PDBs using available service templates. In this section, we will see the Administrative setup for PDBaaS.
 
