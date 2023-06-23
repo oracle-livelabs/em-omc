@@ -39,6 +39,17 @@ AWR Hub
 * Understand past and present workload (SQL) performance over two years or above.
 * Build custom dashboards to plot SQL performance statistics, database waits, CPU usage history, connections established, etc.
 
+AWR Explorer
+
+* View and analyze AWR data across different database systems.
+* Easily identify performance trends without needing to toggle between hourly AWR reports.
+* Visualize different aspects of Oracle Database performance data which can be helpful in detecting performance issues.
+
+SQL Explorer
+
+* Interactively explore and visualize detailed performance statistics stored in Operations Insights SQL Warehouse.
+* Explore performance statistics via a SQL query to extract the data with which to create an intuitive visualization.
+
 ### Objectives
 
 In this workshop, you will:
@@ -61,5 +72,5 @@ In this workshop, you will:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, May 2022
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
+- **Last Updated By/Date** - Vivek Verma, May 2023

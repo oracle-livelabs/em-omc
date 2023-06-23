@@ -21,9 +21,9 @@ In this lab you will perform the tasks below. Task 1 is to review the prerequisi
 
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
-    - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
-    - Lab: Environment Setup
-    - Lab: Initialize Environment
+  - Lab: Prepare Setup (*Free-tier* and *Paid Tenants* only)
+  - Lab: Environment Setup
+  - Lab: Initialize Environment
 
 >**Note:** This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 RU7, and database 19.12 as Oracle Management Repository.
 
@@ -35,7 +35,7 @@ Once your workshop is provisioned, click on "View Login Info" on the top right o
 
 For this workshop you will not use the remote desktop, so do not click the "Launch Remote Desktop" button, but rather copy the IP address of your instance. Open a new browser tab and enter the Enterprise Manager console URL for your instance as follows:
 
-https://*The IP address you just copied*:7803/em
+<https://*The-IP-address-you-just-copied*:7803/em>
 
 ![Security warning](../../initialize-environment/images/login-em-external-1.png " ")
 
@@ -56,7 +56,6 @@ Password: <copy>welcome1</copy>
 Once logged in you will be in the "Enterprise Summary" page:
 
 ![Enterprise Summary](images/enterprise-summary.png " ")
-
 
 In the interest of simplifying the setup and to save time, the following requirements for the source database were completed in advance for this lab. Please review accordingly for reference.
 
@@ -93,6 +92,7 @@ In the interest of simplifying the setup and to save time, the following require
     You have now completed this task.
 
 ## Task 2: Launch OCI console and review prerequisites completed in advance
+
 Navigate back to the workshop page in your browser. Click on "View Login Info" on the top right of the page to show the "Reservation Information" screen. Click "Launch OCI":
 
 ![Launch OCI](images/launch-oci.png " ")
@@ -101,7 +101,7 @@ Sign in using the password provided in the "Reservation Information" screen:
 
 ![OCI Login](images/login-oci.png " ")
 
-On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password": 
+On the "Change Password" screen, choose a new password that meets the requirements provided, and click "Save New Password":
 
 ![Change OCI Password](images/oci-change-password.png " ")
 
@@ -138,6 +138,8 @@ You have now completed this task.
     - Click on the "ATP-ORCL" database to display the database homepage
     - Click "Database Actions". The Database Actions page opens in a new browser tab. If your browser blocks creating a new tab, allow pop-ups from the OCI URL:
     ![ATP Home](images/atp-home.png " ")
+    - On the database Login screen, enter username "ADMIN" and the Admin password from the "Reservation Information" screen:
+    ![ATP Login](images/atp-login.png " ")
     - On the new tab ("Database Actions|Launchpad"), click on "Download Client Credentials (Wallet)" tile under "Administration" (You may have to scroll down the page):
     ![Database Actions](images/database-actions.png " ")
     - On the pop-up window, enter password:
@@ -181,12 +183,13 @@ You have now completed this task.
         <copy>welcome1</copy>
         ```
 
-      - Service Name: Choose "*DB Name*_high" from the drop-down list (should be selected by default)
+      - Service Name: keep the default selection for the purpose of this demo
       - Monitoring Username: The default monitoring user "adbsnmp" is initially locked. For this lab we'll just use the ADMIN user for monitoring. Replace "adbsnmp" with "ADMIN" (upper case):
 
         ```text
         <copy>ADMIN</copy>
         ```
+
     - Monitoring Password: Copy the "ADB Admin Password" from the "Reservation Information" screen:
     ![Reservation Info](images/reservation-info.png " ")
     - Click "Test Connection" (it may take a couple of minutes to get the result back):
@@ -236,9 +239,15 @@ You have now completed this task.
     - Under “API Keys” click “Add API Key”.
     - In the pop-up window, keep the default option "Generate API Key Pair" selected
     - Click "Download Private Key" and save it to your local Downloads folder. Name the file "private-key.pem":
-    - Click "Add", then close the resulting "Configuration File Preview" window:
+
+        ```text
+        <copy>private-key.pem</copy>
+        ```
+
+    - Click "Add" (you do not need to download the public key):
     ![Add API Key](images/add-api-key.png " ")
-    - The text shown under "Fingerprint" is the public key. Copy and paste it in your notepad as it will be used in a subsequent step:
+    - Close the resulting "Configuration File Preview" window
+    - The text shown under "Fingerprint" is the Public Key Fingerprint. Copy and paste it in your notepad as it will be used in a subsequent step:
     ![API Key](images/api-key.png " ")
 5. Create an OCI Auth Token
 
@@ -286,10 +295,10 @@ You have now completed this task.
 
       Credential Properties
 
-        - Tenancy OCID: Tenancy OCID you copied earlier in this step
-        - User OCID: User OCID you copied earlier in this step
-        - Public Key Fingerprint: Public Key Fingerprint you saved to your desktop
-        - Private Key: Private Key you saved to the Downloads folder (file with extension of ".pem")
+        - Tenancy OCID: Tenancy OCID you saved earlier in this step
+        - User OCID: User OCID you saved earlier in this step
+        - Public Key Fingerprint: Public Key Fingerprint you saved earlier
+        - Private Key: content of "private-key.pem" file you saved earlier
 
       ![OCI Credential](images/oci-credential.png " ")
     - Click Save. You should get "Confirmation credential operation successful". If not, review the previous steps and retry
@@ -299,7 +308,7 @@ You have now completed this task.
     - In OCI Console, navigate to Oracle Database->Autonomous Database
     - Click on the "ATP-ORCL" database to display the database homepage
     - Click "Database Actions". The Database Actions page opens in a new browser tab
-    - Under "Development" heading, click on "SQL" (first tile)
+    - Under "Development" heading, click on "SQL" (first tile). Ignore the warning about being logged in as "ADMIN" user
     - Execute the following code after filling in the values for username and password as described in the code snippet:
 
         ```text
@@ -308,7 +317,7 @@ You have now completed this task.
           DBMS_CLOUD.CREATE_CREDENTIAL(
             credential_name => 'OBJ_STORE_CRED',
             username => '&lt;Your OCI username from the "Reservation Information" screen&gt;',
-            password => '&lt;Value of your Migration Workbench token saved earlier in notepad&gt;'
+            password => '&lt;Migration Workbench token saved earlier in notepad&gt;'
           );
         END;
         /
@@ -369,7 +378,7 @@ We'll use the Data Pump migration method in this task.
     - Destination:
         - Database Credential: ADMIN (Named Credential)
         - Agent Host Credential: ORACLE (Named Credential)
-        - Service Name: Choose "*database name*_high (TCPS)" from the drop-down list
+        - Service Name: Choose "*database name*_medium (TCPS)" from the drop-down list
     - Action:
         - Migration Method: Data Pump (default)
         - Recompile Invalid Objects After Migration: Unchecked (default)

@@ -16,6 +16,7 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Event Compression Policies to reduce your volume of incidents
 
+
 Watch the video below for a quick walk-through of the lab.
 [Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
 
@@ -27,6 +28,7 @@ This lab assumes you have:
 
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - All previous labs successfully completed
+
 
 *Estimated Time*: 85 minutes
 
@@ -102,6 +104,7 @@ The Overview pane shows the Target Status of your IT estate. The Status section 
 
      ![ Enterprise manager summary page, Compliance Summary, and Patch Recommendations sections](images/enterprise-summary/enterprise-summary-inventory-compliance.png " ")
 
+
 ## Task 2: Incident Manager
 
 Incident Manager provides in one location the ability to search, view, manage, and resolve events, incidents and problems impacting your environment.
@@ -124,6 +127,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
 5. Click on “Open in new tab” link to open the incident on a separate tab. You may need to temporarily allow popups in the browser.
     ![Incident Manager page](images/incident-manager/open-in-new-tab.png " ")
+
 
 6. The General tab of this incident contains 5 sections.
 
@@ -174,8 +178,8 @@ Incident Manager provides in one location the ability to search, view, manage, a
 15.	Incident Dashboard is filtered for incidents with “Fatal” severity.
 
      ![Incident Manager, Incident Dashboard](images/incident-manager/incident-fatal-filtered.png " ")
-     
 
+     
 ## Task 3A: Dynamic Runbooks
 
 Runbooks are documented best practice procedures that IT staff follow to resolve an issue. In Enterprise Manager, you can create Dynamic Runbooks to encapsulate your best practice procedures in the form of steps that your ITOps teams can execute inside Enterprise Manager in context of an incident. To use Dynamic Runbooks, you start a Runbook Session against an incident, choose a Dynamic Runbook, and then follow the steps in the runbook.
@@ -399,8 +403,8 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
      - In the Value used in the Draft field, enter "%flash%" without the quotes. 
      - And for the Value used in a Runbook Session field, you have the options to select the "User who runs the Runbook Session specify the value" or "Same value used in the draft". Select "Same value used in the draft".
 
-
      ![Add Variable Pop-up Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable-popup.png " ")
+
 
 25. Click OK to save the variable.
 
