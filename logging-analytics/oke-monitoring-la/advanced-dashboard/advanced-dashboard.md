@@ -37,18 +37,20 @@ Click on **Actions** > **Create New** to reset the view.
 
 1. Click on the **Log Group** field.
 
-2. Select **kubernetes_logs** log group.
+2. Select **kubernetes_logs** log group checkbox..
 
 3. Click on **Apply**.
 ![log-group](./images/log-group.png " ")
 
 ## Task 4: Select the Kubernetes Cluster Name
 
-1. Click on the **Other** button in Fields.
+1. In the Search Fields searchbar, enter **Kubernetes Cluster Name** and click on Search.
 
-2. Click on the **Kubernetes Cluster Name** field.
+2. In the **other** region, you will find the **Kubernetes Cluster Name** field, click on the field.
 
-3. Select the cluster **oke-cw22-ll**.
+3. Select the **oke-cw22-ll** cluster checkbox.
+
+4. Click on **Apply**.
 ![cluster-name](./images/cluster-name.png " ")
 
 ## Task 5: Switch to the Link Visualization
@@ -58,9 +60,9 @@ Under Visualizations, Click on the dropdown and select **Link** under Analysis s
 
 ## Task 6: Link by the required fields
 
-1. Drag and drop **Namespace**, **Node**, **Pod** and **Service** fields to the Group By region.
+1. Remove the **Log Source** field from the Group By region.
 
-2. Remove the **Log Source** field from the Group By region.
+2. In the Search Fields searchbar, search **Namespace**, **Node**, **Pod** and **Service** fields and drag and drop these fields into the **Group By** region.
 
 3. Click on **Apply** button.
 ![group-by](./images/group-by.png " ")
