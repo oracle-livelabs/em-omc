@@ -541,7 +541,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
 1. From the Enterprise menu, select **Compliance, then select Library**  to get started
 
-    ![](images/compliance-library.png "Navigate to Library ")
+    ![Navigate to Library](images/compliance-library.png " ")
 
 
 2. Click the **Compliance Standards** tab.
@@ -549,65 +549,65 @@ A compliance standard is mapped to one or more compliance standard rules and is 
     In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
     Applicable To section Drop down select **Pluggable Database** hit search.
 
-    ![](images/compliance-search-pluggable.png " Search CIS ")
+    ![Search CIS](images/compliance-search-pluggable.png "  ")
 
     Select the row **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-    ![](images/associate-cis-targets.png " Target associate ")
+    ![Target associate](images/associate-cis-targets.png " ")
 
 3.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
 
-    ![](images/compliance-add-pluggable-pdb.png "Add PDB ")
+    ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
 
     Verify the PDB name is added and Click **OK**
 
-    ![](images/compliance-enable-status-pdb.png "Enable CIS ")
+    ![Enable CIS](images/compliance-enable-status-pdb.png " ")
 
 4. In the Save Association dialog box, Click Yes.
 
-    ![](images/compliance-save-association-pdb.png "Confirm Association ")
+    ![Confirm Association ](images/compliance-save-association-pdb.png "")
 
 5. Click OK on the Information processing prompt.
 
-    ![](images/complinace_submitted-process-pdb.png " Confirm Association ")
+    ![Confirm Association ](images/complinace_submitted-process-pdb.png " ")
 
 6. Now Navigate to ***Enterprise >> Compliance >> Results***
 
-    ![](images/compliance-navigate-results.png " Navigate to result ")
+    ![Navigate to result](images/compliance-navigate-results.png "  ")
 
 7. Click on **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
 
-    ![](images/compliance-cis-results.png "Click on results ")
+    ![Click on results](images/compliance-cis-results.png " ")
 
 8.  The compliance result shows the target is with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
 
-    ![](images/compliance-results-cis-scorecard-pdb.png " Overview scorecard ")
+    ![Overview scorecard ](images/compliance-results-cis-scorecard-pdb.png " ")
 
     Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab
 
-    ![](images/compliance-all-cis-violations-pdb.png "Validate CIS ")
+    ![Validate CIS ](images/compliance-all-cis-violations-pdb.png " ")
 
 9.  You can see failed CIS standard recommendations rules for each main category of CIS Standards  
 
-    ![](images/compliance-cis-recommendation-violations-pdb.png " Validations")
+    ![Validations](images/compliance-cis-recommendation-violations-pdb.png " ")
 
 10. Each recommendations violations rules can be further explored by clicking on each recommendation with violation events, status In case of each violations you will see details like violation details, name of the rule violated under the violation Events tab
 
-    ![](images/compliance-cis-compliance-individual-violation-pdb.png "Check for violations ")
+    ![Check for violations](images/compliance-cis-compliance-individual-violation-pdb.png " ")
 
 11. In case of each violations you will see details like rule type, severity, compliance rule state, description and rationale for the violation under the Rule details tab
 
-    ![](images/compliance-rule-details-pdb.png "Rule Details ")
+    ![Rule Details](images/compliance-rule-details-pdb.png " ")
 
 12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
 
     From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
-    ![](images/compliance-navigation-to-dashboard-pdb.png " Result Dashboard ")
+    ![Result Dashboard ](images/compliance-navigation-to-dashboard-pdb.png " ")
 
     **Dashboard View**
 
-    ![](images/compliance-dashboard-pdb.png " ")
+    ![Result Dashboard-1](images/compliance-dashboard-pdb.png " ")
 
 13. You can also generate a comprehensive compliance report for
 
@@ -617,23 +617,23 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
 
-    ![](images/compliance-standard-summary-target-pdb.png " Complaince Summary  ")
+    ![Complaince Summary  ](images/compliance-standard-summary-target-pdb.png " ")
 
-    ![](images/compliance-standards-summary-pdb.png " Complaince Standard")
+    ![Complaince Standard](images/compliance-standards-summary-pdb.png " ")
 
     **Sample report**
 
-    ![](images/compliance-cis-standard-report1.png "Final Report 1 ")
+    ![Final Report 1 "](images/compliance-cis-standard-report1.png ")
 
-    ![](images/compliance-cis-standard-report2.png " FInal Report 2 ")
+    ![FInal Report 2 ](images/compliance-cis-standard-report2.png " ")
 
-    ![](images/compliance-cis-standard-report3.png "Final Report 3 ")
+    ![Final Report 3 ](images/compliance-cis-standard-report3.png " ")
 
 
 
  Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
 
-  ![](images/logout-as-sysman.png "Logout ")
+  ![Logout ](images/logout-as-sysman.png " ")
 
 ## Task 6: Self-Service to Request PDB Using PDBaaS
 
