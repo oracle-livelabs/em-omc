@@ -20,15 +20,15 @@ Cloud Management Pack (CMP) that resides on top of DBLM, provides  lifecycle man
 
 The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lifecycle Management capabilities for multitenant databases.
 
-| **Step No.** | **Feature**                                                                | **Approx. Time** | **Details**                                                                                                                                                                      | **Value proposition**                                                                                                                                                                                                                   |
+| **Task No** | **Approx. Time**                                                                | **Functionality** | **Description**                                                                                                                                                                      | **Benefits**                                                                                                                                                                                                                   |
 |--------|----------------------------------------------------------------------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1    | Create a Pluggable Database (PDB)                                      | 10min                     | Create Pluggable database (PDB) within a CDB and run a post-script to lock/unlock accounts.                                                                                  | Create multiple PDBs with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                                           |
-| 2    | Un-plug/Plug an existing Pluggable Database | 10min                     | Un-plug a PDB and later Plug it back in a CDB when needed (Create from unplugged)                                                                                                                       | Unplug a PDB when not needed and plug it back as per need, hence maximizing resource utilization in your organization. Easily upgrade PDBs with few clicks by moving from one container to another.                                                                                                                  |
-| 3    | Clone an existing Pluggable Database                                 | 5min                      | Create multiple copies (Clones) of a PDB for dev/test purpose                                                                                                                     | Create multiple PDBs clones for Dev/test with few clicks while making sure they follow organization’s standards by using automated post-scripts.                                                                                      |
-| 4    | Patch (update) an existing Pluggable Database                                 | 5min                      | Patch (Update) a pluggable database by migrating it to higher version of CDB                                                                                                                     | Patch (update) multiple pluggable databases and ensure that they run on the latest available version of database.                                                                                       |
-| 5    | Compliance Management for Pluggable Database                                                         | 10min                     | Apply a compliance standard on PDB, generate report and validate the results.                                                                                                 | Make sure PDBs comply with compliance standards and explore options to fix in case of any anomalies.                                                                                                                   |
-| 6    | Self- service to request a PDB using PDBaaS            | 10min                     | Request PDB (pluggable database) using Service Catalogue on Private Cloud. Resize the PDB and then Delete the PDB while preserving the contents.                                                      | Review self-service option to provision PDB, which only requires minimal inputs.                                                                                                                                                        |
-| 7    | Administrative Setup for PDBaaS (Private Cloud)- Review only               | 10min                     | An overview of the administrative setup involved for PDBaaS (Private Cloud) which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc. | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm and make sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
+| 1    | 10min  | Create a Pluggable Database (PDB)    | Create a Pluggable database (PDB) within a CDB and run a post-script to lock/unlock accounts | By creating a PDB, you can isolate sensitive data from the rest of the database and simply the management of your database. Run pre and post hardening scripts as part of provisioning automation which otherwise would be a time consuming task                                                                                                          |
+| 2    | 10min  | Un-plug/Plug an existing Pluggable Database   | Explore the option to Un-plug a PDB and later use the 'Plug' option to plug it back in the same or a different CDB as and when needed.  | Unplug and Plug provides you the flexibility to move your PDBs across same or different CDBs. Helps in resource optimisation and easy maintenance of your databases. Isolate the data in a given PDB as and when needed.        |
+| 3    | 5min  |Clone an existing Pluggable Database  | Create a clone of your PDB for dev/test purpose.  | Explore the clone functionality to increase your development and testing speed. A quick clone of your PDB for dev/test purposes can help you to develop   and test new features more quickly and easily. |
+| 4    | 5min   | Patch (update) an existing Pluggable Database  | Patch (Update) a pluggable database by updating it to higher version of CDB     | Update Gold image with the latest security patch recommendations and use this image to patch databases, which will ensure you comply with the security policy and follow industry defined best practice to keep databases secure.                       |
+| 5    |10min | Compliance Management for Pluggable Database      | Apply a industry Standard for Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on PDB, generate report and validate the results.  | Implementing stringent security measures and achieving regulatory compliance by aligning with CIS benchmarks, enhances and operational efficiencies of database management through centralized auditing and monitoring, fostering and enhancing multitenant pluggable databases integrity and operational efficiencies.                |
+| 6    | 10min  | Create a PDB using Self Service Portal - PDBaaS   | Create a PDB using Self-Service Portal and explore PDBaaS. Request a PDB using service catalogue and resize the PDB to explore scaling functionality.                                                       | Self Service portal enables developers and application users to provision their own databases without compromising on security, and, also adhering to organisational policies and compliances.                              |
+| 7    | 10min       | Review Administrative Setup for PDBaaS (Private Cloud)                     | An overview of the administrative setup involved for PDBaaS (Private Cloud) which includes setting up a PaaS Infrastructure Zone, Pluggable Database Pool, Data Sources, Service Template, etc. | Setup private cloud using Enterprise Manager where admin can define resources and EM’s placement algorithm and make sure that resources are utilized to their best. It is complimented by metering, and show back/chargeback capabilities. |
 
 
 ### Prerequisites
@@ -52,7 +52,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Password: <copy>welcome1</copy>
     ```
 
-    ![em -login-page](../initialize-environment/images/em-login.png " em-login-page ")
+    ![em -login-page](images/pdbaas-sysman-login.png " em-login-page ")
 
 
 2.  Navigate to  ***Enterprise >> Provisioning and Patching >>
@@ -363,14 +363,13 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![](images/clone-navigate-to-databases-home.png " clone-navigate-to-databases-home ")
 
-2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** and 
-**sales.subnet.vcn.orclevcn.com** to view their associated PDBs.
+2.  On the page where we see all  list of databases, click on the dropdown arrow next to  **hr.subnet.vcn.oraclevcn.com** to view their associated PDBs.
 
 
-    We will clone the PDB **sales.subnet.oraclevcn.com_HR**  residing in sales.subnet.vcn.orclevcn.com CDB into hr.subnet.vcn.oraclevcn.com CDB
+    We will clone the PDB **hr.subnet.vcn.oraclevcn.com_HRPDB**  residing in hr.subnet.vcn.orclevcn.com CDB into the same CDB.
 
 
-    **Click** on the **sales.subnet.vcn.oraclevcn.com_HR** PDB as highlighted
+    **Click** on the **hr.subnet.vcn.oraclevcn.com_HRPDB** PDB as highlighted
 
 
     ![](images/cloning-show-existing-pdb.png " cloning-show-existing-pdb ")
@@ -378,73 +377,70 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 3.  This will open up the PDB Home page
 
     ![](images/clone-pdb-home-page.png " HR PDB Home page")
-  
+
 
 4.  Navigate from **Oracle Database >> Cloning >> Create Full Clone**  
 
-    This will open up the PDB Clone Management page. 
+    This will open up the PDB Clone Management page.
 
 
     ![](images/clone-navigate-to-pdb-clone.png " navigate to pdb clone page ")
 
-5.  The PDB Clone management page opens up with options as highlighted below. 
+5.  The PDB Clone management page opens up with options as highlighted below.
 
-    The Pluggable Database Name is prepopulated with a deafult value. 
-    You can refer to the instructions below to update the PDB name. 
+    The Pluggable Database Name is prepopulated with a deafult value.
+    You can refer to the instructions below to update the PDB name.
 
-    ![](images/clone-default-pdb-clone-page.png " clone pdb ")
+    ![](images/clone-default-pdb-clone.png " clone pdb ")
 
     Please update the values as suggested below.   
 
     1. Click on the magnifier to update the SYSDBA credentials of the source PDB.
-    
-        Choose **Named Credentials** and select **SALES_SYS** from the dropdown.
 
-    2. 
+        Choose **Named Credentials** and select **OEM_SYS** from the dropdown.
+
+    2.  ```
+        Pluggable Database Name : <copy>HR_CLONE</copy>
         ```
-        Pluggable Database Name : <copy>HR_CLONE</copy> 
+    3.  ```
+        Display Name: <copy>HR_CLONE</copy>
         ```
-    3. 
+    4. ```
+        Username: <copy>PDBADMIN</copy>
         ```
-        Display Name: <copy>HR_CLONE</copy> 
-        ```
-    4. ``` 
-        Username: <copy>PDBADMIN</copy> 
-        ```
-       ``` 
-       Password: <copy>welcome1</copy> 
        ```
-       
+       Password: <copy>welcome1</copy>
+       ```
+
        Confirm the password.
-    5. Click on the check box to **Clone the Pluggable Database into a different Container Database**
-    6. Click on the magnifier icon to select the destination CDB for cloning. In our case it is **HR CDB**
-    7. Click on the magnifier to update the SYSDBA credentials of the desination PDB. Choose **Named Credentials** and select **OEM_SYS**
-    8. Click on the magnifier to update the HOST credentials of the source PDB. Choose **Named Credentials** and select **ORACLE**
+       Optionally you can also clone the PDB into a different CDB by clicking on 'Clone the Pluggable Database into a different Container Database' 
+       
+    5. Click on the magnifier to update the DATABASE HOST credentials of the source PDB. Choose **Named Credentials** and select **ORACLE**
 
 6. Verify all the details as shown below and click **CLONE**
 
-    Optionally, you can choose to click on **Advanced** which will allow users to customise datafile location, run data masking scripts and also schedule the clone activity for a later point in time. 
+    Optionally, you can choose to click on **Advanced** which will allow users to customise datafile location, run data masking scripts and also schedule the clone activity for a later point in time.
 
     ![](images/clone-updated-cloneinfo.png " updated clone info ")
 
 
 7. On Procedure Activity, select specific execution step from the procedure step tree to see details of the execution log.
 
-    Setup View Data to be refreshed with specific time interval to refresh page. 
+    Setup View Data to be refreshed with specific time interval to refresh page.
 
     The procedure takes about 2 minutes to complete.
 
     ![](images/clone-procedure-activity.png " clone procedure info ")
 
-8.   Wait for **Status: Succeeded** which indicates the procedure ran successfully. 
+8.   Wait for **Status: Succeeded** which indicates the procedure ran successfully.
 
      ![](images/clone-procedure-success.png " clone procedure success ")
 
-9. Now let us validate the PDB clone from the database details page. 
+9. Now let us validate the PDB clone from the database details page.
     Navigate to **Targets >> Databases**
     ![](images/clone-navigate-for-validation.png "navigate-for-validation ")
 
-10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases. 
+10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases.
 
     We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com** CDB
 ![](images/clone-validation.png "pdb clone validation success ")
@@ -452,7 +448,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this task, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 18.8, by relocating it to Container database cdb186.subnet.vcn.oraclevcn.com.
+1. In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
 
       ![](images/current-env-details.png "current-configuration")        
 
@@ -477,7 +473,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
-5. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+5. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is hr.subnet.vcn.oraclevcn.com.
 
       ![](images/fm-flow2.png "selection")
 
@@ -533,79 +529,85 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       ![](images/env-list-final.png "new version check")
 
-      We can see that Finance pdb is relocated to a new CDB - cdb186.subnet.vcn.oraclevcn.com.
+      We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
 ## Task 5: Compliance Management for Pluggable Database
 
-Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use *High Security Configuration for Oracle Pluggable Database* compliance standard to secure configuration of provisioned database.
+Center of Internet Security compliance(CIS) Standard
+The Center for Internet Security compliance(CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards. A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+
+A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated. Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use   *Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
 
-1. Navigate to ***Enterprise >> Compliance >> Library*** to get started
+1. From the Enterprise menu, select **Compliance, then select Library**  to get started
 
-    ![](images/dblmcompliancelibrary.jpg " ")
+    ![Navigate to Library](images/compliance-library.png " ")
+
 
 2. Click the **Compliance Standards** tab.
 
-    Click on the Dropdown next to **Search**.
-    In the Compliance Standard section type  "High Security" as the key word and hit search.
+    In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
+    Applicable To section Drop down select **Pluggable Database** hit search.
 
-     Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+    ![Search CIS](images/compliance-search-pluggable.png "  ")
 
+    Select the row **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-      ![](images/compliance-associate-target.png " ")
+    ![Target associate](images/associate-cis-targets.png " ")
 
-3.  Click Add and choose the row with your PDB you wish to associate. Choose PROV_PDB, click **Select**.
+3.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
+
+    ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
 
     Verify the PDB name is added and Click **OK**
 
-
-    ![](images/compliance-choose-pdb.png " ")
-    ![](images/compliance-add-pdb.png " ")
+    ![Enable CIS](images/compliance-enable-status-pdb.png " ")
 
 4. In the Save Association dialog box, Click Yes.
 
-
-    ![](images/compliance-save-association.png " ")
-
+    ![Confirm Association ](images/compliance-save-association-pdb.png "")
 
 5. Click OK on the Information processing prompt.
 
+    ![Confirm Association ](images/complinace_submitted-process-pdb.png " ")
 
-    ![](images/compliance-pdb-processing.png " ")
+6. Now Navigate to ***Enterprise >> Compliance >> Results***
 
+    ![Navigate to result](images/compliance-navigate-results.png "  ")
 
-7. Now Navigate to ***Enterprise >> Compliance >> Results***
+7. Click on **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
 
-    ![](images/compliance-navigate.png " ")
+    ![Click on results](images/compliance-cis-results.png " ")
 
-8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards.
+8.  The compliance result shows the target is with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
 
+    ![Overview scorecard ](images/compliance-results-cis-scorecard-pdb.png " ")
 
-    ![](images/compliance-navigate-result.png " ")
+    Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab
 
+    ![Validate CIS ](images/compliance-all-cis-violations-pdb.png " ")
 
+9.  You can see failed CIS standard recommendations rules for each main category of CIS Standards  
 
-10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations.
-    In case of violations you will dee details like last evaluation date, name of the rule violated and rationale for the violation under the violation tab
-    ![](images/compliance-results.png " ")
+    ![Validations](images/compliance-cis-recommendation-violations-pdb.png " ")
 
+10. Each recommendations violations rules can be further explored by clicking on each recommendation with violation events, status In case of each violations you will see details like violation details, name of the rule violated under the violation Events tab
 
-12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets.
-The Dashboard provides a brief summary of the violations  , corrective actions and compliance standard score.
+    ![Check for violations](images/compliance-cis-compliance-individual-violation-pdb.png " ")
 
+11. In case of each violations you will see details like rule type, severity, compliance rule state, description and rationale for the violation under the Rule details tab
 
-    From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**
+    ![Rule Details](images/compliance-rule-details-pdb.png " ")
 
+12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
 
-    ![](images/compliance-navigate-dashboard.png " ")
+    From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
+    ![Result Dashboard ](images/compliance-navigation-to-dashboard-pdb.png " ")
 
+    **Dashboard View**
 
-      **Dashboard View**
-
-
-    ![](images/compliance-dashboard-result.png " ")
-
+    ![Result Dashboard-1](images/compliance-dashboard-pdb.png " ")
 
 13. You can also generate a comprehensive compliance report for
 
@@ -613,29 +615,25 @@ The Dashboard provides a brief summary of the violations  , corrective actions a
 
     B. Each Target with all Compliance standard associated to it.
 
-
     Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
 
-    ![](images/compliance-result-pdb.png " ")
+    ![Complaince Summary  ](images/compliance-standard-summary-target-pdb.png " ")
 
-
-    ![](images/compliance-result-standard.png " ")
+    ![Complaince Standard](images/compliance-standards-summary-pdb.png " ")
 
     **Sample report**
 
-    ![](images/compliancereport1.png " ")
-    ![](images/compliancereport2.png " ")
-    ![](images/compliancereport3.png " ")
-    ![](images/compliancereport4.png " ")
+    ![Final Report 1 "](images/compliance-cis-standard-report1.png ")
 
+    ![FInal Report 2 ](images/compliance-cis-standard-report2.png " ")
 
-
+    ![Final Report 3 ](images/compliance-cis-standard-report3.png " ")
 
 
 
  Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
 
-  ![](images/logout-as-sysman.png " ")
+  ![Logout ](images/logout-as-sysman.png " ")
 
 ## Task 6: Self-Service to Request PDB Using PDBaaS
 
@@ -778,7 +776,7 @@ The PDBs are created using a precreated service template on CDBs which are virtu
     *  Create and register the database
 
 
-    The request should take less than 7 minutes to complete.
+    The request should take less than 5 minutes to complete.
 
     Click on refresh icon or as an alternative set Refresh to 30 seconds.
 
@@ -833,10 +831,10 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
 17.  Next delete the database Instance:
 
-      Go to the Database Cloud Services Home page by clicking on **Database Cloud Service Portal link**
+      Go to the Database Cloud Services Home page by clicking on **Database Cloud Self Service Portal** link
 
 
-      ![](images/a24b112c579e1df59bb4919a0bbe2b67.jpg " ")
+      ![](images/cmp-initiate-delete.png " ")
 
 18. Click on the action menu for new PDB and delete this instance.
 
