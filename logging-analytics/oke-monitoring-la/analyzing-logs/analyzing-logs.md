@@ -248,10 +248,69 @@ Estimated Time: 30 minutes
             <copy>
                 'Log Source' = 'Kubernetes Event Object Logs' | timestats count as logrecords by 'Log Source'
             </copy>
-        ```   
+        ```  
+
+3. In the Fields panel, in the Search Fields textbox, search for the field **Involved Object Kind**.
+   ![involved-object-kind](images/involved-object-kind.png) 
+
+
+4. Drag and Drop the **Involved Object Kind** field in the **Display Fields** textbox under Visualization Panel.
+   ![drag-drop-involved-object-kind](images/drag-drop-involved-object-kind.png)   
+
+5. In the Fields panel, in the Search Fields textbox, search for the field **Involved Object Name**.
+   ![involved-object-name](images/involved-object-name.png) 
+
+
+6. Drag and Drop the **Involved Object Name** field in the **Display Fields** textbox under Visualization Panel.
+   ![drag-drop-involved-object-name](images/drag-drop-involved-object-name.png)
+
+
+7. In the Fields panel, in the Search Fields textbox, search for the field **Event Type**.
+   ![event-type](images/event-type.png) 
+
+
+8. Drag and Drop the **Event Type** field in the **Display Fields** textbox under Visualization Panel.
+   ![drag-drop-event-type](images/drag-drop-event-type.png)
+
+  > **Note** : Remove the fields **Entity** , **Entity Type** , **Host Name (Server)**, **Problem Priority**, **Label** from the **Display Fields** textbox.
+
+9. Click on the **Apply** button.
+   ![apply-button-display-fields](images/apply-button-display-fields.png)
+
+
+10. The **Table** view in context of **Kubernetes Event Object Logs** Log Source will be displayed.
+   ![table-view-k8s-event-log-source](images/table-view-k8s-event-log-source.png)
+
+11. Click on the expand field button to view all the extracted fields of a log entry. You can now see that various important information from the log entry has been extracted into different fields which can be further used for filtering and various analytics. 
+
+    ![expand-icon-log-entry](images/expand-icon-log-entry.png)
+
+> **Note** : We will use this set up to create the Dashboard in the next step.    
+
 
 
 ## Task 7 : Add Visualization to the Dashboard
+
+1. Click on the **Actions** button.
+   ![actions-button.png](images/actions-button.png)
+
+2. Click on the **Save as** option.
+   ![save-as-button](images/save-as-button.png)
+
+3. A **Save search** pop up will be displayed.
+   ![save-search-popup](images/save-search-popup.png)
+
+4. In the  **Save search** pop up perform the following actions.
+    - Enter the **Search Name**.
+    - Check the **Add to dashboard** checkbox.
+    - Select **New Dashboard** radio button.
+    - Enter the **Dashboard Name**.
+    - Click on **Save** button.
+    ![create-dashboard](images/create-dashboard.png)
+
+    
+ 
+
 
 
 ## Task 8 : Review Custom Log Source
