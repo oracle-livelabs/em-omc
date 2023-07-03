@@ -238,7 +238,7 @@ This lab assumes you have already completed the following:
 
      The **Blocking Sessions** tab displays the current blocking and waiting sessions in a hierarchical display. You can view detailed information about each blocking session and view the sessions blocked by each blocking session. You can also use the tab to inspect or perform deeper analysis of the SQL involved to determine the cause of the blocking. You can perform several operations in the tab, including stopping one or more of the listed sessions to resolve a waiting session problem.
 
-## Task 7: Performing Database Performance Diagnostics
+## Task 7: Real-time performance monitoring with Top Activity Lite
 
 1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
