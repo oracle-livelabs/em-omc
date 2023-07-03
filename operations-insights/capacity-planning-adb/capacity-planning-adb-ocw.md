@@ -40,7 +40,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/filter-ocw.png " ")
 
-4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Operations Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and UsageTrend) by these database targets.
+4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Operations Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
 
       ![Left Pane](./images/inventory-ocw.png " ")
 
@@ -169,7 +169,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/storage-trend-forecast-ocw.png " ")
 
-5.  In the **Trend & Forecast** chart View click on **Machine Learning** to project future resource consumption. Machine Learning is a more advanced model that considers seasonality.
+5.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 
       ![Left Pane](./images/storage-trend-forecast-ml-ocw.png " ")
 
@@ -177,7 +177,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/storage-menu-payd-ocw.png " ")
 
-7.  In the **Trend & Forecast** chart View the storage trend and forecast for the selected database.
+7.  In the **Trend & Forecast** chart view the storage trend and forecast for the selected database.
 
       ![Left Pane](./images/storage-trend-payd.png " ")
 
