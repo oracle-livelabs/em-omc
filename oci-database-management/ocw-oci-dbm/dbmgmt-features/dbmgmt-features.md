@@ -238,8 +238,75 @@ This lab assumes you have already completed the following:
 
      The **Blocking Sessions** tab displays the current blocking and waiting sessions in a hierarchical display. You can view detailed information about each blocking session and view the sessions blocked by each blocking session. You can also use the tab to inspect or perform deeper analysis of the SQL involved to determine the cause of the blocking. You can perform several operations in the tab, including stopping one or more of the listed sessions to resolve a waiting session problem.
 
+## Task 7: Real-time performance monitoring with Top Activity Lite
+
+1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+
+     ![](./images/perf-hub-ocw.png " ")
+
+2.  Click **Top Activity Lite** .
+
+     ![](./images/top-activity-lite.png " ")
+
+3.  **Top Activity Lite** provides a less resource intensive view of real-time activity compared to Performance Hub.  This allows for quicker refreshes of current performance even when the database is impacted by a heavier application workload.  You will utilize a familiar time-frame slider to select a window for historic or current performance investigation.  
+
+     ![](./images/top-activity-lite-mfg.png " ")
+
+     Auto refresh of Top Activity Lite is possible at 15, 30 and 60 second intervals.  Select the **Auto Refresh** drop down menu and select 30 seconds to configure.
+
+4.  The **Data Source** can be changed for the ASH Analytics monitoring.  The two options are **Memory** and **Memory and AWR**.  Select **Memory** from the Data Source drop down menu.  You will likely see a reduction of data in the slider due to historic AWR data being removed from the view.
+
+     ![](./images/top-activity-lite-mfg-ds.png " ")
+
+5.  Additional information about the activity in the highlighted period of the Average Active Sessions slider can be seen in tables below the chart.  You can adjust the view of information in these tables to focus the performance investigation.  Utilize the **Columns** drop down menu to include **SQL Text** to more easily see which statements are generating the most activity in the databaseand and expand the table.
+
+     ![](./images/top-activity-lite-mfg-cols.png " ")
+
+     ![](./images/top-activity-lite-mfg-sqltext.png " ")
+
+## Task 8: Custom and Out-of-the-box Dashboards
+
+Dashboards are built upon a powerful data visualization framework that gathers real-time data and displays it in customizable widgets. You can either use the pre-configured, out-of-the-box dashboards or build customizable dashboards for specific operational and business requirements.
+
+Performance dashboards can be utilized in investigations for a single database or for an entire fleet of databases.  Out of the box dashboards are available to quickly assess the overall performance for your environments, and the option to create custom dashboards enables modifying and tailoring widgets to focus on the most important resources or to assist in triaging performance investigations for specific application workflows.
+
+The Dashboard Framework allows quick, easy editing of your own dashboards with customizations to layout and metric groupings from OCI namespaces.  These custom dashboards can be shared via PDFs or distributed to other OCI users by an export/import JSON feature.
+
+1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **Database Management** service links click **Dashboards**.
+
+     ![](./images/oandm-dbm-dashboards.png " ")
+
+2.  There are several out-of-the-box dashboards available, including fleet database performance, single database performance, cloud database infrastructure performance, and even cross-service dashboards.  Select the **Database Performance – Single DB** out-of-the-box dashboard.  You may need to expand the **Name** column to differentiate between the fleet and single database dashboards.
+
+     ![](./images/oandm-dbm-dashboards-dbperf.png " ")
+
+3.  Here you will see two main sections, one being Filters and the other Widgets.  Widgets are **miniature-reports** of metric collections that can be displayed in various chart configurations.  The widgets can be grouped together to share filter parameters which allows for easy toggling between OCI region or compartment resources.  
+Filters allow narrowing the scope of the resources presented in the dashboard.  They also allow selecting multiple databases to be displayed in the same widget for a fleet wide comparison of resources.
+
+     Default time period is the last 60 minutes, this can be adjusted by utilizing the time period selector in the upper-righthand.  Adjust the time period to past 24 hours.
+
+     ![](./images/oandm-dbm-dashboards-tp.png " ")
+
+4.  Now you can hover over widgets to view metric data at a given time period.  The selector also shows corresponding charts data to easily visualize any performance abnormalities during that time.  This can assist in correlation and finding root cause of the performance issues.
+
+     ![](./images/oandm-dbm-dashboards-mdata.png " ")
+
+5.  On the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **Database Management** service links click **Dashboards**. On the **Dashboards** page click **Database Performance – Fleet**.
+
+     ![](./images/oandm-dbm-dashboards-fleet.png " ")
+
+6.  Once the dashboard has launched, you will see multiple widgets with several databases listed in their legends.  You can select a smaller set of databases by utilizing the **Databases** filter at the top.  Use the drop down menu to select 3 separate databases to compare.
+
+     ![](./images/oandm-dbm-dashboards-dbs.png " ")
+
+7.  You can even remove a database resource from a single widget by selecting the corresponding box in the widget legend.  This allows further focusing for a widget without needing to change filters. Click on one of the database boxes in the legend to exclude.
+
+     ![](./images/oandm-dbm-dashboards-db.png " ")
+
+8.  Finally, you can follow the same steps to go back and check out the **Cloud DB Infrastructure Performance** dashboard.  This dashboard provides various infrastructure and host metrics to monitor a database system in a single location.  Included metric widgets are **Node Status**, **OCPU allocation**, **CPU utilization**, **Memory utilization** and storage metrics such as **File System utilization** and **ASM Disk Group utilization**.
+
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Murtaza Husain and Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Jul 2023
