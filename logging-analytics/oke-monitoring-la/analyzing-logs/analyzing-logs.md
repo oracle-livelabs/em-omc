@@ -299,14 +299,45 @@ Estimated Time: 30 minutes
 
 3. A **Save search** pop up will be displayed.
    ![save-search-popup](images/save-search-popup.png)
+    > Note : Getting AuthZ error, needs the fix.
 
 4. In the  **Save search** pop up perform the following actions.
+    - Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid**
+        > Note : You can always find the **Compartment** name from the View Login Info page.
+
     - Enter the **Search Name**.
     - Check the **Add to dashboard** checkbox.
-    - Select **New Dashboard** radio button.
+    - Select the **New Dashboard** radio button.
+    - Select the **Dashboard Compartment** name same as step 1.
     - Enter the **Dashboard Name**.
     - Click on **Save** button.
     ![create-dashboard](images/create-dashboard.png)
+    - A saved search will be created and added to the Dashboard.
+    ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
+
+5. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards** 
+    ![dashboard-navigation](images/dashboard-navigation.png)
+
+    **OR**
+
+   Copy-paste the following link in your browser's address bar to navigate to the Dashboards.
+      ```
+         <copy>
+           https://cloud.oracle.com/loganalytics/dashboards?region=us-phoenix-1
+         </copy>
+      ```
+
+6. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 5.
+    ![dashboards-page](images/dashboards-page.png)
+
+7. A widget showing the saved search data will be displayed.
+    ![dashboard-with-widget](images/dashboard-with-widget.png)
+
+
+
+
+ 
+
 
     
  
