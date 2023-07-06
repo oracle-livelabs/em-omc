@@ -533,81 +533,75 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 5: Compliance Management for Pluggable Database
 
-Center of Internet Security compliance(CIS) Standard
-The Center for Internet Security compliance(CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards. A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
-
-A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated. Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use   *Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
+Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use *High Security Configuration for Oracle Pluggable Database* compliance standard to secure configuration of provisioned database.
 
 
-1. From the Enterprise menu, select **Compliance, then select Library**  to get started
+1. Navigate to ***Enterprise >> Compliance >> Library*** to get started
 
-    ![Navigate to Library](images/compliance-library.png " ")
-
+    ![](images/dblmcompliancelibrary.jpg " ")
 
 2. Click the **Compliance Standards** tab.
 
-    In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
-    Applicable To section Drop down select **Pluggable Database** hit search.
+    Click on the Dropdown next to **Search**.
+    In the Compliance Standard section type  "High Security" as the key word and hit search.
 
-    ![Search CIS](images/compliance-search-pluggable.png "  ")
+     Select the row **High Security Configuration for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-    Select the row **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-    ![Target associate](images/associate-cis-targets.png " ")
+      ![](images/compliance-associate-target.png " ")
 
-3.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
-
-    ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
+3.  Click Add and choose the row with your PDB you wish to associate. Choose PROV_PDB, click **Select**.
 
     Verify the PDB name is added and Click **OK**
 
-    ![Enable CIS](images/compliance-enable-status-pdb.png " ")
+
+    ![](images/compliance-choose-pdb.png " ")
+    ![](images/compliance-add-pdb.png " ")
 
 4. In the Save Association dialog box, Click Yes.
 
-    ![Confirm Association ](images/compliance-save-association-pdb.png "")
+
+    ![](images/compliance-save-association.png " ")
+
 
 5. Click OK on the Information processing prompt.
 
-    ![Confirm Association ](images/complinace_submitted-process-pdb.png " ")
 
-6. Now Navigate to ***Enterprise >> Compliance >> Results***
+    ![](images/compliance-pdb-processing.png " ")
 
-    ![Navigate to result](images/compliance-navigate-results.png "  ")
 
-7. Click on **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
+7. Now Navigate to ***Enterprise >> Compliance >> Results***
 
-    ![Click on results](images/compliance-cis-results.png " ")
+    ![](images/compliance-navigate.png " ")
 
-8.  The compliance result shows the target is with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
+8. Click on **High Security Configuration for Oracle Pluggable Database** under Compliance Standards.
 
-    ![Overview scorecard ](images/compliance-results-cis-scorecard-pdb.png " ")
 
-    Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab
+    ![](images/compliance-navigate-result.png " ")
 
-    ![Validate CIS ](images/compliance-all-cis-violations-pdb.png " ")
 
-9.  You can see failed CIS standard recommendations rules for each main category of CIS Standards  
 
-    ![Validations](images/compliance-cis-recommendation-violations-pdb.png " ")
+10.  The compliance result shows the target is 100% compliant    against the selected standard with no violations.
+    In case of violations you will dee details like last evaluation date, name of the rule violated and rationale for the violation under the violation tab
+    ![](images/compliance-results.png " ")
 
-10. Each recommendations violations rules can be further explored by clicking on each recommendation with violation events, status In case of each violations you will see details like violation details, name of the rule violated under the violation Events tab
 
-    ![Check for violations](images/compliance-cis-compliance-individual-violation-pdb.png " ")
+12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets.
+The Dashboard provides a brief summary of the violations  , corrective actions and compliance standard score.
 
-11. In case of each violations you will see details like rule type, severity, compliance rule state, description and rationale for the violation under the Rule details tab
 
-    ![Rule Details](images/compliance-rule-details-pdb.png " ")
+    From the home page Navigate to **Enterprise** >> **Compliance** >> **Dashboard**
 
-12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
 
-    From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
+    ![](images/compliance-navigate-dashboard.png " ")
 
-    ![Result Dashboard ](images/compliance-navigation-to-dashboard-pdb.png " ")
 
-    **Dashboard View**
 
-    ![Result Dashboard-1](images/compliance-dashboard-pdb.png " ")
+      **Dashboard View**
+
+
+    ![](images/compliance-dashboard-result.png " ")
+
 
 13. You can also generate a comprehensive compliance report for
 
@@ -615,25 +609,29 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     B. Each Target with all Compliance standard associated to it.
 
+
     Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
 
-    ![Complaince Summary  ](images/compliance-standard-summary-target-pdb.png " ")
+    ![](images/compliance-result-pdb.png " ")
 
-    ![Complaince Standard](images/compliance-standards-summary-pdb.png " ")
+
+    ![](images/compliance-result-standard.png " ")
 
     **Sample report**
 
-    ![Final Report 1 "](images/compliance-cis-standard-report1.png ")
+    ![](images/compliancereport1.png " ")
+    ![](images/compliancereport2.png " ")
+    ![](images/compliancereport3.png " ")
+    ![](images/compliancereport4.png " ")
 
-    ![FInal Report 2 ](images/compliance-cis-standard-report2.png " ")
 
-    ![Final Report 3 ](images/compliance-cis-standard-report3.png " ")
+
 
 
 
  Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
 
-  ![Logout ](images/logout-as-sysman.png " ")
+  ![](images/logout-as-sysman.png " ")
 
 ## Task 6: Self-Service to Request PDB Using PDBaaS
 
