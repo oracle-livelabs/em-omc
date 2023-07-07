@@ -299,10 +299,10 @@ Estimated Time: 30 minutes
 
 3. A **Save search** pop up will be displayed.
    ![save-search-popup](images/save-search-popup.png)
-    > Note : Getting AuthZ error, needs the fix.
+    > Note : You will be see the Authorization error, which is expected since by default _root_ **Compartment** is selected.
 
 4. In the  **Save search** pop up perform the following actions.
-    - Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid**
+    - Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.
         > Note : You can always find the **Compartment** name from the View Login Info page.
 
     - Enter the **Search Name**.
@@ -315,12 +315,12 @@ Estimated Time: 30 minutes
     - A saved search will be created and added to the Dashboard.
     ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
 
-5. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards** 
+5. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards**.
     ![dashboard-navigation](images/dashboard-navigation.png)
 
     **OR**
 
-   Copy-paste the following link in your browser's address bar to navigate to the Dashboards.
+   Copy-paste the following link in your browser's address bar to navigate to the **Dashboards**.
       ```
          <copy>
            https://cloud.oracle.com/loganalytics/dashboards?region=us-phoenix-1
