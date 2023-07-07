@@ -325,6 +325,7 @@ Estimated Time: 30 minutes
          <copy>
            https://cloud.oracle.com/loganalytics/dashboards?region=us-phoenix-1
          </copy>
+     
       ```
 
 6. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 5.
