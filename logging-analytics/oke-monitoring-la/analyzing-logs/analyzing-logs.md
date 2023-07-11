@@ -335,16 +335,6 @@ Estimated Time: 30 minutes
     ![dashboard-with-widget](images/dashboard-with-widget.png)
 
 
-
-
- 
-
-
-    
- 
-
-
-
 ## Task 8 : Review Custom Log Source
 
 1. Run the following query in the **Query Bar**.
@@ -400,40 +390,6 @@ You'll get the opportunity to showcase your dashboard at the end of the lab. You
   - Which city or region is at the top from total orders ?
   - What about sales amount perspective ?
 
-
-
-## Task 2: Get list of events for cluster, namespace, pods, services
-    
-    
-
-## Task 3: Find number of pods by namespace
-
-  
-
-## Task 4: Get different type of events → Group-by different objects → Remove informational events
-
-
-
-## Task 5: Get health status of pods, services 
-
-
-
-## Task 6: Find pods running on a node
-
-
-
-## Task 7: Review fields extracted by custom parser for Mishap Orders App Logs
-
-
-
-## Task 8: Find trend of orders
-
-
-
-## Task 9: Find total order value 
-
-
-
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
 - TO BE UPDATED
 
@@ -441,5 +397,5 @@ You'll get the opportunity to showcase your dashboard at the end of the lab. You
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
-* **Last Updated By/Date** - Vikram Reddy, Sep, 2022
+* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
+* **Last Updated By/Date** - Vikram Reddy, Jul, 2023
