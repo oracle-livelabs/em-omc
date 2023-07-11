@@ -351,19 +351,17 @@ Estimated Time: 30 minutes
 
     ```  
       <copy>
-        'Log Source' = 'mushop-orders-app' and 'ReceivedCustomer' | timestats count as logrecords by 'Log Source'
+       'Log Source' = 'mushop-orders-app' | timestats sum('Sales Amount') as Revenue
       </copy>
     ``` 
 
 2. The previous step takes you to the **Records with Histogram** view in context of **mushop-orders-app** Log Source.
 
-3. Select the visualization **Cluster**.
-  ![cluster-visualization](images/cluster-visualization.png)
+3. Select the visualization **Line**.
+  ![line-chart-visualization](images/line-chart-visualization.png)
 
-4. The previous step takes you to the **Cluster** view in context of **mushop-orders-app** Log Source.
-  ![cluster-view-mushop-orders-log-source](images/cluster-view-mushop-orders-log-source.png)
-
-5. Next Steps to be updated.  
+4. The previous step takes you to the **Line** chart view in context of **mushop-orders-app** Log Source displaying the **Time** in the X-axis and **Revenue** in the Y-axis.
+  ![line-chart-view-mushop-orders-log-source](images/line-chart-view-mushop-orders-log-source.png)
 
 
 ## Task 9 : Find average daily  sales amount
