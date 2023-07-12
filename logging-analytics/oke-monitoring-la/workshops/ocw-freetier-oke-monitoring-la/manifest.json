@@ -41,9 +41,9 @@
             "filename": "../../designing-dashboards/designing-dashboards.md"
         },
         {
-            "title": "Lab 6: Advanced Dashboard",
+            "title": "Lab 6: Build a Query to list the Load Balancers and Summarize the results using tiles",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
-            "filename": "../../advanced-dashboard/advanced-dashboard.md"
+            "filename": "../../load-balancer-query/load-balancer-query.md"
         },
         {
             "title": "Lab 7 (Optional): Ingestion Flow Setup",
