@@ -34,16 +34,18 @@ To navigate to Marketplace, follow one of the following two methods.
 2. Click on the **Kubernetes Monitoring and Management** application to land on the application page.
 ![k8s-app-search](./images/k8s-app-search.png " ")
 
-3. Select the Compartment from the dropdown.
+3. Select the **LiveLabs-v.3.0.0 (7/3/2023)** version from the version dropdown.
 
-4. Check the **Terms and Restrictions** checkbox
+4. Select the user Compartment from the dropdown. For your user the Compartment name will be **LLresrvationid-COMPARTMENT**.
 
-5. Click on **Launch Stack** to launch the application.
+5. Check the **Terms and Restrictions** checkbox.
+
+6. Click on **Launch Stack** to launch the application.
 ![k8s-app-launch](./images/k8s-app-launch.png " ")
 
 ## Task 3: Configure Stack
 
-1. On **Create Stack** page, you will see the **Stack information**. You can modify the name of the stack. 
+1. On **Create Stack** page, you will see the **Stack information**.
 
   Click on **Next** button to proceed to the Configure variables section.
   ![stack-information](./images/stack-information.png " ")
@@ -51,22 +53,20 @@ To navigate to Marketplace, follow one of the following two methods.
 
 2. In **Configure variables** section, you have to set the following variables for the stack:
 
-    - **OKE Cluster Compartment:** Select the cluster compartment from the dropdown.
+    - **OKE Cluster Compartment:** Select the **oke-lab-9501** cluster compartment from the dropdown.
 
-    - **OKE Cluster:** Select the OKE cluster from the dropdown.
+    - **OKE Cluster:** Select the **oke-cw23-II** OKE cluster from the dropdown.
 
-    - **OCI Logging Analytics Compartment:** Select the compartment from the dropdown where you want to create Dashboards, Log Groups and other Monitoring service resources.
-
-    - **OCI Logging Analytics Log Group:** Select OCI LA log group from the dropdown.
+    - **OCI Logging Analytics Log Group:** Select **Kubernetesreservationid** log group from the dropdown.
 
   Click on **Next** button to proceed to the Review section.
-  ![configure-varaibles](./images/configure-varaibles.png " ")
+  ![configure-varaibles](./images/configure-varaiblesconfigure-varaibles.png " ")
 
 3. In **Review** section, you can verify the stack configurations which you have selected in the previous two sections.
 
-  - If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
+  - Click on the **Show** button to view the stack configurations.
 
-  - Click the checkbox **Run apply**.
+  - If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
 
   - Click on the **Create** button to create the stack.
     ![review-stack](./images/review-stack.png " ")
@@ -74,12 +74,51 @@ To navigate to Marketplace, follow one of the following two methods.
 
 ## Task 4: Application Information
 
-- After the stack creation is successful, click on the **Application information** tab to view the application information.
+1. It will take around 90 seconds for the stack to get created.
 
-- Click on the **View Dashboard** button to view the dashboards.
+2. After the stack creation is successful, it will take few seconds for the **Application information** tab to appear.
+![stack-creation](./images/stack-creation.png " ")
 
-- Click on the **View Instructions** button to go the the Marketplace app.
-  ![view-dashboards](./images/application-information.png " ")
+3. Click on the **Application information** tab to view the application information.
+
+4. Click on the **View Dashboard** button to view the dashboards.
+  ![application-information](./images/application-information.png " ")
+
+
+## Task 5: Dashboards
+
+1. After clicking on the **View Dashboards** button, a new tab will open displaying all the dasboards.
+
+2. Click on the **Kubernetes Cluster Summary** dashboard. It will take few seconds for the dashboard widgets to load.
+![dashboards](./images/dashboards.png " ")
+
+3. Click on the **Scope Filter** panel.
+![scope-filter](./images/scope-filter.png " ")
+
+4. Select **LLresrvationid-COMPARTMENT** in the **Log Group Compartment** field and **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
+![compartment-cluster](images/compartment-cluster.png)
+
+5. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
+![k8s-cluster-summary](images/k8s-cluster-summary.png)
+
+6. Navigate to the **Container Logs** widget.
+![container-logs](images/container-logs.png)
+
+7. Click on the View Query Icon to view the query used to populate the data in widget.
+![view-query](images/view-query.png)
+![query](images/query.png)
+
+8. Click on the Punch Out Icon on the Container Logs widget.
+![punch-out](images/punch-out.png) 
+
+9. This will take you to the "Pie view" of Log Explorer in context of Kubernetes Cluster Name.
+![log-explorer](images/log-explorer.png)
+
+10. To navigate back to the Kubernetes Cluster Summary page, click on the **Kubernetes Cluster Summary** as highlighted in the image below.
+![summary-page](images/summary-page.png)
+
+11. Similarly you can explore other widgets in the cluster summary and other dashboards.
+
 
 
 
