@@ -331,6 +331,7 @@ Estimated Time: 30 minutes
 
     - Enter the name in the **Search Name** field and click on the **Save** button to save the search.
     ![save-search](./images/save-search.png " ")
+    > **Note:** You will be see the Authorization error, which is expected since by default root Compartment is selected.
 
 
 
