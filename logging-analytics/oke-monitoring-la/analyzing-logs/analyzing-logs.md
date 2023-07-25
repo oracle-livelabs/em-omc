@@ -2,49 +2,81 @@
 
 ## Introduction
 
-```
-  TO BE UPDATED
-```
-
-Watch the video below for a quick walk-through of the lab.
+  In this lab, you'll explore the logs collected by Kubernetes Monitoring Solution you deployed in [previous lab](#prev). You'll also do basic analysis of the logs collected and learn types of logs are collected.
 
 ### Objectives
 
-```
-  TO BE UPDATED
-```
+- Understand the data model of telemetry collected by kubernetes monitoring solution
+- Gather information about the monitored OKE Cluster interactively in Log Explorer
 
 
 Estimated Time: 30 minutes
 
 ## Task 1: View the Logs in Log Explorer
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
+    > Note : For a quick refresher on Log Explorer GUI [review Lab 1](?lab=log-explorer-gui).
 
-2. In the following steps we will select the **Compartment** to view the various logs.
-    > **Note:** By default root **Compartmemnt** (in this case emdemo(root)) will always be selected. Do not change the **Compartment** throughout this livelab session.
+2. Once you land on the **Log Explorer** page if the scope has pre-selected **Log Group Compartment**, then you can reset it by clicking on the `x` icon.
+   ![close-icon-for-scope-filter](images/close-icon-for-scope-filter.png)
+    
+    > Note: If you have followed this step you can skip the below step.
+   
+   **OR**
 
+   In the following steps we will select the **emdemo(root)** **Compartment** to view the various logs.
+   
     - Click on the **Scope** filter, select the **emdemo(root)** **Compartment** into **Log Group Compartment** dropdown textbox and click **Apply** button.
     ![select-root-compartment](images/select-root-compartment.png)
 
     - Click on **Close** button
 
-3. In the Fields panel, in the Search Fields textbox, search for the field **Log Group**.
-    ![log-group-field-search](images/log-group-field-search.png)
-    
+3. Clear the **Query** bar if it has any query present in it by clicking on the `x` icon and click on **Run** button.
+    ![close-icon-query-bar-run-button](images/close-icon-query-bar-run-button.png)
 
-4. Drag and Drop the **Log Group** field in the **Group by** textbox under Visualization Panel and click **Apply**.
-    ![drag-drop-log-group-field](images/drag-drop-log-group-field.png)
 
-5. The **Pie** chart view in context of **Log Group** will be displayed along with logrecords count for each **Log Group**.
-     ![pie-chart-view-log-count](images/pie-chart-view-log-count.png) 
+4. Add Log Group Field to Group By. 
 
-6. You can also use the following query in the **Query Bar** to get the **Pie Chart** view.
+
+    - In the Fields panel, in the Search Fields textbox, search for the field **Log Group**.
+    - In the resultant field, click on the three vertical dots menu icon.
+    - Click on the **Add to Group By** menu option.
+       ![log-group-add-to-groupby](images/log-group-add-to-groupby.png)
+    - The **Log Group** field will be added in the **Group by** textbox under Visualization Panel. Click **Apply** button to apply the changes.
+       ![drag-drop-log-group-field](images/drag-drop-log-group-field.png)   
+
+
+5. The **Pie** chart view in the context of **Log Group** will be displayed along with logrecords count for each **Log Group**.
+      > Note : The **Log Group** <em>kubernetes_logs</em> is precreated and it has VCN, LBaaS logs and it also has a copy of Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**.
+   
+   ![pie-chart-view-log-count](images/pie-chart-view-log-count.png) 
+
+**OR**
+
+5. (Optional) You can also use the following query in the **Query Bar** to get the **Pie Chart** view in the context of **Log Group**.
 
      ```
       <copy>
         * | stats count as logrecords by 'Log Group' | sort -logrecords
       </copy>
      ```
+
+6. **End Notes** : Keep the same set up and perform the following actions.
+
+  - Select the Visualization **Sunburst** from the Visualization drop-down.
+      ![sunburst-visualization](images/sunburst-visualization.png)
+
+  - Add the field **Log Source** to the **Group by** by following the instructions in step 4.
+      
+      > **Note :** Do Not Remove **Log Group** field from the **Group by**.
+
+  - The **Sunburst** chart view in the context of **Log Group** and **Log Source** along with log record **Count** for each **Log Source** is displayed.
+      ![sunburst-data-lg-ls](images/sunburst-data-lg-ls.png)
+
+  - You can also hover over different colors of **Sunburst** chart view the stats of the **Log Source**.
+         
+
+ 
+
 
 
 ## Task 2: Review Logs in Log Groups
@@ -76,7 +108,8 @@ Estimated Time: 30 minutes
 
 6. (Optional) You can select any other visualization (e.g Sunburst, TreeMap etc) from the  **Visualizations** panel to view the data.  
 
-## Task 3: Get inventory of namespace, pods, services, nodes for your cluster
+
+## Task 3 (To Be Updated and Task 5 will be removed): Get inventory of namespace, pods, services, nodes for your cluster
 
 ### **Review Cluster**
 
@@ -136,28 +169,48 @@ Estimated Time: 30 minutes
 
 ## Task 4 : Building Interactive Visualization for Deployments
 
- 
+ In this task we will find what type of workloads are running in different namespaces and the names of those workloads
 
 1. Select the visualization **Distinct**.
   ![distinct-visualization](images/distinct-visualization.png)
 
-2. In the Fields panel, in the Search Fields textbox, search for the field **Namespace**. Drag and Drop the **Namespace** field in the **Group by** textbox under Visualization Panel.  
+2. Add Namespace Field to Group By. 
 
-    > **Note** : Remove **Log Source** and **Log Group** field from Group by section.
-  
-3. In the Fields panel, in the Search Fields textbox, search for the field **Controller**. Drag and Drop the **Controller** field in the **Group by** textbox under Visualization Panel.     
 
-4. In the Fields panel, in the Search Fields textbox, search for the field **Controller Kind**. Drag and Drop the **Controller Kind** field in the **Group by** textbox under Visualization Panel.  
+    - In the Fields panel, in the Search Fields textbox, search for the field **Namespace**.
+    - In the resultant field, click on the three vertical dots menu icon.
+    - Click on the **Add to Group By** menu option.
+       ![ namespace-to-group-by.png](images/namespace-to-group-by.png)
+    - The **Namespace** field will be added in the **Group by** textbox under Visualization Panel. 
+       ![namespace-added-to-group-by](images/namespace-added-to-group-by.png) 
 
-5. The **Group by** section should look like the following. Click on the **Apply** button. 
-   ![group-by-controller-namespace-controllerkind](images/group-by-controller-namespace-controllerkind.png)
+       
 
-6.  The results will be grouped by **Namespace** , **Controller** and **Controller Kind**. 
-   ![distinct-view-namespace-controller-controllerkind](images/distinct-view-namespace-controller-controllerkind.png)
+3. Repeat the instructions in the step 2 to add fields **Controller** and  **Controller Kind**.
+     > **Note :** Remove all the other fields apart from **Namespace** , **Controller** and  **Controller Kind** from the Group by textbox. 
 
-7. Screenshot to be updated with user namespace and controllers. The below screenshot is not final
-   ![expand-user-namespace.png](images/expand-user-namespace.png)
+4. The **Group by** section should look like the following. Click on the **Apply** button to apply the changes. 
+   ![group-by-controller-namespace-controllerkind](images/group-by-controller-namespace-controllerkind.png)   
 
+5. The results will be grouped by **Namespace** , **Controller** and **Controller Kind**. 
+   ![distinct-view-namespace-controller-controllerkind](images/distinct-view-namespace-controller-controllerkind.png) 
+
+6. In the results look for the your user's **Namespace**. The **Namespace** can be found from the **View Login Info** page with the field name **Kubernetes Namespace**.
+
+      > Note : The **Namespace** will  be in the format **resrReservationId**.  
+
+    i. Click on expand icon to view the different resources (Controller) created in your user's Namespace. 
+     ![expand-icon-for-k8s-namespace](images/expand-icon-for-k8s-namespace.png) 
+
+
+   ii. Click on expand icon of **oci-onm-logan** resource to see kind (Controller Kind) of the resource. It displays Daemonset & Deployment created as part of Kubernetes Solution installation performed in the [previous lab](#prev). 
+     ![expand-icon-for-controller](images/expand-icon-for-controller.png) 
+
+
+   iii. Repeat the step ii to view the Controller Kind of other resources which are created as part of the Kubernetes Solution installation.
+
+   > Note : Upon expanding the Namespace icon we can also see No Value, need to check with Santhosh.
+     
 
 ## Task 5 : Find number of total pods, running pods in a namespace
 
@@ -238,70 +291,65 @@ Estimated Time: 30 minutes
     
 
 
-## Task 6 : Viewing Events 
+## Task 6 : Viewing Kubernetes Events
 
-1. Select the visualization **Table**.
-  ![distinct-visualization](images/table-visualization.png)
-
-2. Run the following query in the Query Bar.
+1. Run the following query in the Query Bar.
         ```  
             <copy>
                 'Log Source' = 'Kubernetes Event Object Logs' | timestats count as logrecords by 'Log Source'
             </copy>
-        ```  
+        ``` 
+        ![query-bar-with-k8s-event-objects.png](images/query-bar-with-k8s-event-objects.png) 
 
-3. In the Fields panel, in the Search Fields textbox, search for the field **Involved Object Kind**.
-   ![involved-object-kind](images/involved-object-kind.png) 
+2. Select the visualization **Table**.
+  ![table-visualization](images/table-visualization.png)
 
+3. Add fields to the Display Fields.
+    - In the Fields panel, in the Search Fields textbox, search for the field  **Involved Object Kind**.
+         > **Note** : Kubernetes objects are persistent entities in the Kubernetes system and are used to represent the state of your cluster.  Read more about Kubernetes Objects [here](https://kubernetes.io/docs/concepts/overview/working-with-objects/).  
 
-4. Drag and Drop the **Involved Object Kind** field in the **Display Fields** textbox under Visualization Panel.
-   ![drag-drop-involved-object-kind](images/drag-drop-involved-object-kind.png)   
+    - In the resultant field, click on the three vertical dots menu icon. 
+    - Click on **Add to Display Fields** menu icon.
+       ![add-to-display-fields.png](images/add-to-display-fields.png)
 
-5. In the Fields panel, in the Search Fields textbox, search for the field **Involved Object Name**.
-   ![involved-object-name](images/involved-object-name.png) 
+4. Repeat the step 3 for the fields **Involved Object Name** & **Event Type**.
+      > **Note** : Remove all the other fields apart from **Involved Object Kind** , **Involved Object Name** & **Event Type**  from the **Display Fields** textbox.
 
+5. The Display fields textbox will look like the following after adding the fields **Involved Object Kind** , **Involved Object Name** & **Event Type**. 
 
-6. Drag and Drop the **Involved Object Name** field in the **Display Fields** textbox under Visualization Panel.
-   ![drag-drop-involved-object-name](images/drag-drop-involved-object-name.png)
+      Click on the **Apply** button.
+      ![k8s-event-obj-display-fields](images/k8s-event-obj-display-fields.png )
 
+6. The **Table** view in context of **Kubernetes Event Object Logs** Log Source will be displayed.
+   ![k8s-event-object-table-view](images/k8s-event-object-table-view.png)
 
-7. In the Fields panel, in the Search Fields textbox, search for the field **Event Type**.
-   ![event-type](images/event-type.png) 
-
-
-8. Drag and Drop the **Event Type** field in the **Display Fields** textbox under Visualization Panel.
-   ![drag-drop-event-type](images/drag-drop-event-type.png)
-
-  > **Note** : Remove the fields **Entity** , **Entity Type** , **Host Name (Server)**, **Problem Priority**, **Label** from the **Display Fields** textbox.
-
-9. Click on the **Apply** button.
-   ![apply-button-display-fields](images/apply-button-display-fields.png)
-
-
-10. The **Table** view in context of **Kubernetes Event Object Logs** Log Source will be displayed.
-   ![table-view-k8s-event-log-source](images/table-view-k8s-event-log-source.png)
-
-11. Click on the expand field button to view all the extracted fields of a log entry. You can now see that various important information from the log entry has been extracted into different fields which can be further used for filtering and various analytics. 
+7. Click on the expand field button to view all the extracted fields of a log entry. You can now see that various important information from the log entry has been extracted into different fields which can be further used for filtering and various analytics. 
 
     ![expand-icon-log-entry](images/expand-icon-log-entry.png)
 
-> **Note** : We will use this set up to create the Dashboard in the next step.    
+> **Note** : We will use this set up to create the Dashboard in the next step.      
 
 
 
 ## Task 7 : Add Visualization to the Dashboard
 
-1. Click on the **Actions** button.
+1. Select the visualization **Bar**.
+   ![bar-chart-visualization](images/bar-chart-visualization.png)
+
+2. The **Bar** chart view in context of **Kubernetes Event Object Logs** Log Source will be displayed.
+   ![bar-chart-view-k8s-event-object](images/bar-chart-view-k8s-event-object.png)
+
+3. Click on the **Actions** button.
    ![actions-button.png](images/actions-button.png)
 
-2. Click on the **Save as** option.
+4. Click on the **Save as** option.
    ![save-as-button](images/save-as-button.png)
 
-3. A **Save search** pop up will be displayed.
+5. A **Save search** pop up will be displayed.
    ![save-search-popup](images/save-search-popup.png)
-    > Note : You will be see the Authorization error, which is expected since by default _root_ **Compartment** is selected.
+    > Note : You will see the Authorization error - which is expected - if _root_ **Compartment** is selected.
 
-4. In the  **Save search** pop up perform the following actions.
+6. In the  **Save search** pop up perform the following actions.
     - Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.
         > Note : You can always find the **Compartment** name from the View Login Info page.
 
@@ -315,7 +363,7 @@ Estimated Time: 30 minutes
     - A saved search will be created and added to the Dashboard.
     ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
 
-5. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards**.
+7. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards**.
     ![dashboard-navigation](images/dashboard-navigation.png)
 
     **OR**
@@ -328,16 +376,27 @@ Estimated Time: 30 minutes
      
       ```
 
-6. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 5.
+8. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 5.
     ![dashboards-page](images/dashboards-page.png)
 
-7. A widget showing the saved search data will be displayed.
+9. A widget showing the saved search data will be displayed.
     ![dashboard-with-widget](images/dashboard-with-widget.png)
 
 
-## Task 8 : Review Custom Log Source
+## Task 8 : Collecting Application Logs (Custom Log Sources)
 
-1. Run the following query in the **Query Bar**.
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
+
+   **OR**
+
+  You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
+    ```
+         <copy>
+            https://cloud.oracle.com/loganalytics/explorer?region=us-phoenix-1
+         </copy>   
+    ```
+
+2. Run the following query in the **Query Bar**.
 
     ```  
       <copy>
@@ -345,16 +404,24 @@ Estimated Time: 30 minutes
       </copy>
     ``` 
 
-2. The previous step takes you to the **Records with Histogram** view in context of **mushop-orders-app** Log Source.
+3. The previous step takes you to the **Records with Histogram** view in context of **mushop-orders-app** Log Source.
+   ![mushop-orders-app-data](images/mushop-orders-app-data.png)
 
-3. Select the visualization **Line**.
+4. Click on the expand field button to view all the extracted fields of a log entry of **mushop-orders-app** Log Source.
+    ![expand-icon-mushop-orders-app](images/expand-icon-mushop-orders-app.png)
+
+5. Select the visualization **Line**.
   ![line-chart-visualization](images/line-chart-visualization.png)
 
-4. The previous step takes you to the **Line** chart view in context of **mushop-orders-app** Log Source displaying the **Time** in the X-axis and **Revenue** in the Y-axis.
+6. The previous step takes you to the **Line** chart view in context of **mushop-orders-app** Log Source displaying the **Time** in the X-axis and **Revenue** in the Y-axis for last 60 Minutes.
   ![line-chart-view-mushop-orders-log-source](images/line-chart-view-mushop-orders-log-source.png)
+
+7. End Note : Change the values in the Time Picker to **Last 24 Hours**, **Last 14 Days** etc and check whether the line chart changes.  
 
 
 ## Task 9 : Find average daily  sales amount
+
+   We looked at the trend of revenue in previous task. In this task we want to find out average **Sales Amount** that is processed.    
 
 1. Select the visualization **Pie Chart**.
 
@@ -362,24 +429,40 @@ Estimated Time: 30 minutes
 
     ```  
       <copy>
-        'Log Source' = 'mushop-orders-app' | timestats count as logrecords by 'Log Source'
+        'Log Source' = 'mushop-orders-app' | stats count as logrecords by 'Log Source'
       </copy>
     ```
 
+3. Add the field **Sales Amount** to the Value textbox.
+      - In the Fields panel, in the Search Fields textbox, search for the field  **Sales Amount**.
+      - In the resultant field, click on the three vertical dots menu icon. 
+      - Click on **Add to Value** menu icon.
+         ![sales-amount-add-to-value](images/sales-amount-add-to-value.png)
+      - The **Value** textbox will look like the following.
+         ![value-field-with-count-sales-amount](images/value-field-with-count-sales-amount.png)
 
 
-3. In the Fields panel, in the Search Fields textbox, search for the field **Sales Amount**.
-   ![mushop-sales-amount](images/mushop-sales-amount.png) 
 
+4. Click on the Drop Down icon in the **Value** textbox. Select the **Average** menu item. Click **Apply** button.
+     ![avg-sales-amount](images/avg-sales-amount.png)    
 
-4. Drag and Drop the **Sales Amount** field in the **Value** textbox under Visualization Panel.
-   ![sales-amount-in-value-field](images/sales-amount-in-value-field.png) 
+5. The daily average sales values will be dispalyed.
+     ![daily-avg-sales-amount](images/daily-avg-sales-amount.png)
 
-5. Click on the Drop Down icon in the **Value** textbox. Select the **Average Count** menu item. Click **Apply** button.
+ 6. Food For Thought - Do you think this value is correct? 
     
+    
+      > **Hint** : In the begining of this Lab we selected root compartment which has two **Log Group** and we learnt that the **Log Group** <em>kubernetes_logs</em> has the copy of the Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**. Refer **Task 1** > **Step 5** > **Note** to ascertain this.
 
-6. The daily average sales values will be dispalyed.
-   ![daily-average-sales](images/daily-average-sales.png)
+7. Retrieveing the correct value of the daily average sales.
+  - Clear the field **Kubernetes Cluster Name** in the Fields panel's Search Fields textbox by clicking `x` button.
+  - Click on the field **Log Group**  in the Fields panel.
+     ![field-log-group](images/field-log-group.png)
+  -  **Filter Log Group** pop-window will be displayed.
+  - Select your user's **Log Group**. 
+  - Click on **Apply** button.
+
+         
                  
 ## Task 10 : Workshop Show and Tell
 

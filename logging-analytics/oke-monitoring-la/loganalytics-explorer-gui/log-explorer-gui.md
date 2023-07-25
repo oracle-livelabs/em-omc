@@ -107,7 +107,7 @@ There are three ways to navigate to the **Add Data** page.
 2. Click on the **Configure log collection for OCI resources** button. 
 ![configure-log-collection-for-oci-resources-button](./images/configure-log-collection-for-oci-resources-button.png)
 
-3. The **Configure log collection for OCI resources** page will be displayed and table will display all OCI Resources (entities) from which logs can be collected.
+3. The **Configure log collection for OCI resources** page will be displayed and table will display all OCI Resources (entities) which your user has access (read) to and from which logs can be collected.
 ![configure-log-collection-for-oci-resources-page](./images/configure-log-collection-for-oci-resources-page.png)
 
     - **Entity** - An entity is a resource in Logging Analytics which is used to reference the real asset on your on-premises host or virtual host. After you discover this entity in Logging Analytics, you can associate it with a log source and enable log collection from it.
@@ -132,7 +132,7 @@ There are three ways to navigate to the **Add Data** page.
       Click on **Take me to Log Explorer** button.
         ![loadbalancer-config-success](./images/loadbalancer-config-success.png)
 
-    - Log Explorer will display all the logs collected/parsed via Service Connector Flow.
+    - Log Explorer will display all the logs ingested using the **Service Connector Flow** in previous steps of this task.
         ![sc-take-me-to-log-explorer](./images/sc-take-me-to-log-explorer.png)
 
 
@@ -142,12 +142,22 @@ There are three ways to navigate to the **Add Data** page.
 
 ## **Task 5:** Ingesting logs using Management Agent
 
-  - The following gif shows the steps for setting up Log collection with Management Agent.
+  This task will walk you through the steps for setting up Log collection with Management Agent. As part of this lab the following tasks have 
+  already been done.
+  
+  1. Required entities have been created, entity properties have been set, and entity has been mapped with an agent which has access to the entity's logs. 
+  2. Users can select a specific entity type (database)
+
+  3. Each Log Source has one or more target entity-types. This information is used to identify and configure which logs can be collected for an entity. 
+
+  The following gif shows the steps for setting up Log collection with Management Agent.
     
     ![management-agent-log-configuration](./images/management-agent-log-configuration.gif)
 
+    > **Note** : Live Lab user does not have Authz to configure the Agent at the moment, **Kumar** to fix it.
 
-## **Task 6:** Ingesting logs using On-Demand upload (ODU)
+
+## **Task 6:** Upload log files from your computer desktop
 1. Navigate to the **Add Data** page by using any one of the options in Task #3.
 
 2. Click on the **Advanced Collection Methods**. 
@@ -165,11 +175,15 @@ There are three ways to navigate to the **Add Data** page.
 6. In the Upload Files Page, perform the following actions
     - **Upload Name** - Specify any text value.
 
-    - **Log Group Compartment** - Select a valid Log Group Compartment from the dropdown.
+    - **Log Group Compartment** - Select your user's Log Group Compartment from the dropdown.
 
-    - **Log Group** - Select a Valid Log Group Name in the Log Group Compartment.
+    - **Log Group** - Select your user's Log Group Name in the Log Group Compartment.
+     
+          > Note : **Log Group Compartment** &  **Log Group** can be found in **View Login Info** page.
 
-    - Click on the **Select Files** button and select the file to upload.
+    - Click on the **Select Files** button and select the file to upload from your **Computer**.
+     
+          > **Note** : I have selected LinuxSyslogSource.log file from the  **Computer**.
 
     - Click on **Next** button. 
       ![upload-details](./images/upload-details.png)
