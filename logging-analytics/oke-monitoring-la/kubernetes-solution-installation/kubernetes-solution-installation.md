@@ -11,7 +11,7 @@ Watch the video below for a quick walk-through of the lab.
 
 In this lab, you will see step-by-step instructions to:
 
-  - Use OCI Marketplace to configure and deploy solution.
+  - Use OCI Marketplace to configure and deploy the Kubernetes Monitoring solution.
   - Verify successful deployment. 
   - Review Application Information. 
 
@@ -21,7 +21,7 @@ Estimated Time: 15 minutes
 
 To navigate to Kubernetes Monitoring and Management application, follow one of the following two methods.
 
-1. To manually navigate to the application, follow the following steps:
+1. To manually navigate to the application:
 
     - From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Marketplace** > **All Applications**.
 ![marketplace-navigation](./images/marketplace-navigation.gif " ")
@@ -48,7 +48,7 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 
 3. Check the **Terms and Restrictions** checkbox.
 
-4. Click on **Launch Stack** to launch the application.
+4. Click on **Launch Stack** button to launch the application.
 ![k8s-app-launch](./images/k8s-app-launch.png " ")
 
 ## Task 3: Configure Stack
@@ -108,7 +108,7 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 3. Click on the **Scope Filter** panel.
 ![scope-filter](./images/scope-filter.png " ")
 
-4. Select **LLresrvationid-COMPARTMENT** in the **Log Group Compartment** field and **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
+4. Select your user compartment i.e. **LLresrvationid-COMPARTMENT** in the **Log Group Compartment** field and **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
 ![compartment-cluster](images/compartment-cluster.png)
 
 5. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
@@ -118,26 +118,31 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 ![container-logs](images/container-logs.png)
 
 7. Click on the View Query Icon to view the query used to populate the data in widget.
-![view-query](images/view-query.png)
-![query](images/query.png)
+
+  ![view-query](images/view-query.png)
+  ![query](images/query.png)
+
+  After viewing the query, click on **Close** button.
 
 8. Click on the Punch Out Icon on the Container Logs widget.
 ![punch-out](images/punch-out.png) 
 
-9. This will take you to the "Pie view" of Log Explorer in context of Kubernetes Cluster Name.
+9. This will take you to the **Pie Chart view** of Log Explorer in context of Kubernetes Cluster Name.
 ![log-explorer](images/log-explorer.png)
 
 10. To navigate back to the Kubernetes Cluster Summary page, click on the **Kubernetes Cluster Summary** as highlighted in the image below.
 ![summary-page](images/summary-page.png)
 
-11. Similarly you can explore other widgets in the cluster summary and other dashboards.
+11. Similarly you can explore other widgets in the Kubernetes Cluster Summary and other dashboards.
 
 
 
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
-- Installed Kubernetes solution using the Resource manager.
+- Used OCI Marketplace to configure and deploy the Kubernetes Monitoring solution.
+- Verified successful deployment.
+- Reviewed Application Information.
 
   You may now proceed to the [next lab](#next).
 
