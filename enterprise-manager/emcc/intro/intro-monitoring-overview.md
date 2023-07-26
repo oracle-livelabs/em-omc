@@ -3,7 +3,7 @@
 ## About this Workshop
 This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Workshop Time*: 110 minutes
+*Estimated Workshop Time*: 130 minutes
 
 ### About Oracle Enterprise Manager
 Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
@@ -23,6 +23,13 @@ In this workshop, you will learn how to use:
 - Monitoring Templates
 - Administration Groups and Template Collections
 - Incident Rules
+- Event Compression Policies
+- Event Compression Analysis
+
+### Prerequisites
+- An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
+    
+    **Note:** If you have a **Free Trial** account, when your Free Trial expires, your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)** 
 
 ### Prerequisites
 - An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
@@ -44,6 +51,8 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 - Dynamic Runbooks to triage and resolve your incidents
 
+- Event Compression Policies to reduce your volume of incidents
+
 #### Applicable Enterprise Manager Management Packs
 Labs under this workshop do not need any additional Management Pack and are a core functionality of the Enterprise Manager.
 
@@ -58,6 +67,7 @@ The following are covered in this workshop:
 - Create a Monitoring Template from a Database Instance target and deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise
 - View the hierarchy of an existing Administrator Group
 - Review out-of-the-box incident rules shipped with Enterprise Manager
+- Creating and testing an Event Compression Policy to reduce your volume of incidents
 
 
 ### Additional Workshop Supported Use Cases
