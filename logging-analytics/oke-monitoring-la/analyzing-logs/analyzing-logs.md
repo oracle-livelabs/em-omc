@@ -72,14 +72,12 @@ Estimated Time: 30 minutes
   - The **Sunburst** chart view in the context of **Log Group** and **Log Source** along with log record **Count** for each **Log Source** is displayed.
       ![sunburst-data-lg-ls](images/sunburst-data-lg-ls.png)
 
-  - You can also hover over different colors of **Sunburst** chart view the stats of the **Log Source**.
+  - You can also hover over different colors of **Sunburst** chart to view the stats of the **Log Source**.
          
 
- 
 
 
-
-## Task 2: Review Logs in Log Groups
+## Task 2 (To Be Removed as Task 1 End Notes Cover This): Review Logs in Log Groups
 
 1. Select the visualization **Horizontal Bar**. This will take you to the **Horizontal Bar** view in context of **Log Group** along with logrecords count for each **Log Group**.
     ![horizontal-bar-view](images/horizontal-bar-view.png)
