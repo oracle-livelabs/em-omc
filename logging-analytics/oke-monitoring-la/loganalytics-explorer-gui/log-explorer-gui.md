@@ -11,7 +11,7 @@ In this lab, you will familiarize with:
 
 Estimated Time: 5 minutes
 
-## **Task 1:**  Navigating to Log Explorer
+## Task 1:  Navigating to Log Explorer
 
 To navigate to Log Explorer, follow one of the below two methods.
 
@@ -27,7 +27,7 @@ To navigate to Log Explorer, follow one of the below two methods.
 
 
 
-## **Task 2:**  User interfaces of Log Explorer
+## Task 2:  User interfaces of Log Explorer
 
 Here are the main parts of the user interface that will be used throughout this workshop.
 
@@ -47,7 +47,7 @@ Here are the main parts of the user interface that will be used throughout this 
 
 >**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
 
-## **Task 3:** Navigating to the Add Data Page
+## Task 3: Navigating to the Add Data Page
 
 In this task we will perform the following activities
 
@@ -97,7 +97,7 @@ There are three ways to navigate to the **Add Data** page.
  ![add-data-page](./images/add-data-page.png)   
 
 
-## **Task 4:** Ingesting logs using Service Connector
+## Task 4: Ingesting logs using Service Connector
 
  > **Note:** The following set up is already been done as part of this LiveLab, thus you do not have to perform these steps. 
 
@@ -140,7 +140,7 @@ There are three ways to navigate to the **Add Data** page.
 
        
 
-## **Task 5:** Ingesting logs using Management Agent
+## Task 5: Ingesting logs using Management Agent
 
   This task will walk you through the steps for setting up Log collection with Management Agent. As part of this lab the following tasks have 
   already been done.
@@ -157,7 +157,7 @@ There are three ways to navigate to the **Add Data** page.
     > **Note** : Live Lab user does not have Authz to configure the Agent at the moment, **Kumar** to fix it.
 
 
-## **Task 6:** Upload log files from your computer desktop
+## Task 6: Upload log files from your computer desktop
 1. Navigate to the **Add Data** page by using any one of the options in Task #3.
 
 2. Click on the **Advanced Collection Methods**. 
