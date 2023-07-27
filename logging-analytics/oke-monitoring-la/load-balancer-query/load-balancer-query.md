@@ -2,30 +2,32 @@
 
 ## Introduction
 
-```
-  TO BE UPDATED
-```
+In this lab you'll learn advanced analytics features of Logging Analytics. You'll learn more about the query language, do correlation (link), generate standard statistical metrics from logs, extract new fields for analysis, and visualize dense information for dashboards and interactive analysis.
 
 Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-In this lab, we will build two queries. One to get an inventory of the Cluster Services with Load Balancers, and another to monitor the Load Balancers. We will then link the second query from the first query, to be able to view the Load Balancer errors in the context of a cluster.
+In this lab, we will build two queries. One to get an inventory of the kubernetes services of type Load Balancers, and using Load Balancer Access and Error Logs. Finally, you'll link the two queries to build interactive analysis view to correlated LBaaS(infrastructure) telemetry with that of a Kubernetes Service(Platform Object).
 
 We will use these commands and features:
-- Query Search
-- Link Visualization
-- stats command
-- eventstats command
-- addfields command
-- eval replace and url commands
-- Link Tiles feature
+- [Query Search](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/query-search.html)
+- [Link Visualization](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/link-visualization.html)
+- [stats](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/stats.html) command
+- [eventstats](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/eventstats.html) command
+- [addfields](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/addfields.html) command
+- [eval](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/eval.html) replace and [url](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/eval.html#GUID-B4C729D1-689B-4AD5-A12F-4359D93D0800) commands
+- [Link Tiles feature](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/tiles-link-visualization.html)
 
 
 Estimated Time: 30 minutes
 
 
 ## Task 1: Inventory of Services with Load Balancers
+
+In Kubernetes, a [Service](https://kubernetes.io/docs/concepts/services-networking/service/) is a method for exposing a network application that is running as one or more Pods in your cluster.
+
+In this task we'll find kubernetes services which are exposed through an OCI Load Balancer.
 
 1. Navigate to Log Explorer and reset previous selections.
 
@@ -62,7 +64,7 @@ Estimated Time: 30 minutes
     - In Visualizations panel, Click on the dropdown and select **Link** under Analysis section.
 ![link](./images/link.png " ")
 
-    - You should now see around 30 log sources that fetch information about various parts of your Kubernetes Infrastructure.
+    - You should now see around 31 log sources that fetch information about various parts of your Kubernetes Infrastructure.
 ![link-result](./images/link-result.png " ")
 
 
