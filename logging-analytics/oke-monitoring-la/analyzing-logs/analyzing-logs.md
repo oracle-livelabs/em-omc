@@ -167,7 +167,7 @@ Estimated Time: 30 minutes
 
 ## Task 4 : Building Interactive Visualization for Deployments
 
- In this task we will find what type of workloads are running in different namespaces and the names of those workloads
+ In this task we will find what type of workloads are running in different namespaces and the names of those workloads.
 
 1. Select the visualization **Distinct**.
   ![distinct-visualization](images/distinct-visualization.png)
@@ -181,6 +181,7 @@ Estimated Time: 30 minutes
        ![ namespace-to-group-by.png](images/namespace-to-group-by.png)
     - The **Namespace** field will be added in the **Group by** textbox under Visualization Panel. 
        ![namespace-added-to-group-by](images/namespace-added-to-group-by.png) 
+      > **Note :** The Group By textbox allows a maximum of 4 fields in the Distinct Visualization. Hence remove all the other fields apart from **Namespace**   
 
        
 
@@ -193,9 +194,11 @@ Estimated Time: 30 minutes
 5. The results will be grouped by **Namespace** , **Controller** and **Controller Kind**. 
    ![distinct-view-namespace-controller-controllerkind](images/distinct-view-namespace-controller-controllerkind.png) 
 
-6. In the results look for the your user's **Namespace**. The **Namespace** can be found from the **View Login Info** page with the field name **Kubernetes Namespace**.
+6. In the results look for your user's **Namespace** by scrolling in the **Field Value** column . The **Namespace** can be found from the **View Login Info** page with the field name **Kubernetes Namespace**.
+         
+      > **Note :** The **Namespace** will  be in the format **resrReservationId**.  
 
-      > Note : The **Namespace** will  be in the format **resrReservationId**.  
+
 
     i. Click on expand icon to view the different resources (Controller) created in your user's Namespace. 
      ![expand-icon-for-k8s-namespace](images/expand-icon-for-k8s-namespace.png) 
@@ -210,7 +213,7 @@ Estimated Time: 30 minutes
    > Note : Upon expanding the Namespace icon we can also see No Value, need to check with Santhosh.
      
 
-## Task 5 : Find number of total pods, running pods in a namespace
+## Task 5 (To Be Removed) : Find number of total pods, running pods in a namespace
 
   > **Note** : Before moving on to the next steps. Clear the query bar and click on **Run**.
 
@@ -343,25 +346,27 @@ Estimated Time: 30 minutes
 4. Click on the **Save as** option.
    ![save-as-button](images/save-as-button.png)
 
-5. A **Save search** pop up will be displayed.
+5. A **Save search** pop up will be displayed. By default your user's **Compartment** in selected in **Save Search Compartment** dropdown.
    ![save-search-popup](images/save-search-popup.png)
-    > Note : You will see the Authorization error - which is expected - if _root_ **Compartment** is selected.
+    > Note : You will see the Authorization error if any other **Compartment** is selected in **Save Search Compartment** dropdown.
 
 6. In the  **Save search** pop up perform the following actions.
-    - Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.
-        > Note : You can always find the **Compartment** name from the View Login Info page.
+   
+    - (Optional) Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.  You can always find the **Compartment** name from the View Login Info page.
+        > Note : This step is optional if you have not changed the **Compartment** in step 5.
+        
 
     - Enter the **Search Name**.
     - Check the **Add to dashboard** checkbox.
     - Select the **New Dashboard** radio button.
-    - Select the **Dashboard Compartment** name same as step 1.
-    - Enter the **Dashboard Name**.
+    - Select the **Dashboard Compartment** name. Make sure that you select the same **Compartment** for Dashboard and Save Search.
+    - Enter the **Dashboard Name**. 
     - Click on **Save** button.
     ![create-dashboard](images/create-dashboard.png)
     - A saved search will be created and added to the Dashboard.
     ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
 
-7. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards**.
+7. Click on the drop-down on top left side of the Log Explorer Page and select **Dashboards**.
     ![dashboard-navigation](images/dashboard-navigation.png)
 
     **OR**
@@ -422,6 +427,8 @@ Estimated Time: 30 minutes
    We looked at the trend of revenue in previous task. In this task we want to find out average **Sales Amount** that is processed.    
 
 1. Select the visualization **Pie Chart**.
+   ![pie-chart-visualization](images/pie-chart-visualization.png)
+
 
 2. Run the following query in the **Query Bar**.
 
@@ -453,12 +460,13 @@ Estimated Time: 30 minutes
       > **Hint** : In the begining of this Lab we selected root compartment which has two **Log Group** and we learnt that the **Log Group** <em>kubernetes_logs</em> has the copy of the Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**. Refer **Task 1** > **Step 5** > **Note** to ascertain this.
 
 7. Retrieveing the correct value of the daily average sales.
-  - Clear the field **Kubernetes Cluster Name** in the Fields panel's Search Fields textbox by clicking `x` button.
+  - Clear the field **Sales Amount** in the Fields panel's Search Fields textbox by clicking `x` button.
   - Click on the field **Log Group**  in the Fields panel.
      ![field-log-group](images/field-log-group.png)
   -  **Filter Log Group** pop-window will be displayed.
   - Select your user's **Log Group**. 
   - Click on **Apply** button.
+  - Now you will be able to see the correct value of the daily average sales.
 
          
                  
