@@ -81,7 +81,7 @@ Estimated Time: 30 minutes
 
 ## Task 2 : Get inventory of namespace, pods, services, nodes for your cluster
 
-
+   In this task we will find out all the pods in each of the Node in the OKE cluster filtered based on the **Namespace**.
 
 1. In the Fields panel, in the Search Fields textbox, search for the field **Kubernetes Cluster Name**. Click on the resultant field **Kubernetes Cluster Name**.
     ![k8s-cluster-name](images/k8s-cluster-name.png) 
@@ -148,7 +148,163 @@ Estimated Time: 30 minutes
       - You can view it under the widget **Failed/Pending Pods per Node** in the [Kubernetes Nodes Dashboard] (https://cloud.oracle.com/loganalytics/dashboards?id=ocid1.managementdashboard.oc1..aaaaaaaa6nwudwqff62jbjfwmextzwchmciqvwe5fv3aoaspjrk5e46clnbq).  
 
 
-## Task 3 : Building Interactive Visualization for Deployments
+## Task 3 : Creating Interactive Dashboard
+In this task we will create the Dashboard with the results of the Task 2.
+
+1. Click on the **Actions** button.
+   ![actions-button.png](images/actions-button.png)
+
+2. Click on the **Save as** option.
+   ![save-as-button](images/save-as-button.png)
+
+3. A **Save search** pop up will be displayed. By default your user's **Compartment** is selected in **Save Search Compartment** dropdown.
+   ![save-search-popup](images/save-search-popup.png)
+    > **Note** : You will see the Authorization error if any other **Compartment** is selected in **Save Search Compartment** dropdown.
+
+4. In the  **Save search** pop up perform the following actions.
+   
+    - (Optional) Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.  You can always find the **Compartment** name from the View Login Info page.
+        > **Note** : This step is optional if you have not changed the **Compartment** in step 3.
+        
+
+    - Enter the **Search Name**.
+    - Check the **Add to dashboard** checkbox.
+    - Select the **New Dashboard** radio button.
+    - Select the **Dashboard Compartment** name. Make sure that you select the same **Compartment** for Dashboard and Save Search.
+    - Enter the **Dashboard Name**. 
+    - Click on **Save** button.
+    ![create-dashboard](images/create-dashboard.png)
+    - A saved search will be created and added to the Dashboard.
+    ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
+
+5. Click on the drop-down on top left side of the Log Explorer Page and select **Dashboards**.
+    ![dashboard-navigation](images/dashboard-navigation.png)
+
+ **OR**
+
+   Copy-paste the following link in your browser's address bar to navigate to the **Dashboards**.
+      ```
+         <copy>
+           https://cloud.oracle.com/loganalytics/dashboards?region=us-phoenix-1
+         </copy>
+     
+      ```
+
+6. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 4.
+    ![dashboards-page](images/dashboards-page.png) 
+7. A widget showing the saved search data will be displayed.
+    ![pods-status-dashboard](images/pods-status-dashboard.png)       
+
+
+## Task 4 : Updating  the widget to show data from different namespaces
+ In the previous two tasks i.e Task 2 and Task 3, we have filtered the results based on the specific namespace **mushop**. In this task
+ we will extend our saved search query to support any namespace value.
+
+ 1. Clearing the **Namespace** field from the Widget query.
+ 
+    - Click on the Punch Out icon of the widget. 
+      ![punch-out-icon](images/punch-out-icon.png) 
+
+    - Previous step will take you to the Log Explorer view in the context of saved search. 
+
+    - In the Fields panel, under the Referenced section click on the _Clear_ text next to the field **Namespace**.
+      ![clear-namespace-value](images/clear-namespace-value.png) 
+
+    - Save the Dashboard again by clicking on the **Actions** > **Save**.
+      ![save-dashboard](images/save-dashboard.png)  
+
+    - Navigate back to the Dashboard by clicking on Dashboard Name at the top.
+      ![dashboard-navigate](images/dashboard-navigate.png)  
+
+      
+ 2. Navigating to the Filter tab .
+    - Click on the Actions > Edit.
+      ![dashboard-actions-edit](images/dashboard-actions-edit.png) 
+
+    - The Dashboard page will open in the edit mode.
+      ![dashboard-page-edit-mode](images/dashboard-page-edit-mode.png) 
+
+    - In the Dashboard Editor on the far right side, click on the Filter tab. A filter section showing different filter items will be displayed.
+      ![dashboard-filter-tab](images/dashboard-filter-tab.png) 
+
+ 3. Searching the **Log Field** filter item to create **Namespace** Log Field.
+    - In the search box under the  Filter tab search for the **Log Field** filter item.
+       ![log-field-filter](images/log-field-filter.png) 
+
+    - Click on the **Log Field** filter item. A popup-window will be displayed to Configure Log Group Compartment input for Log Field.
+
+    - Select the option Link the **Log Group Compartment** input with an existing filter. Click **Save Changes**.
+       ![log-group-compartment-for-filter](images/log-group-compartment-for-filter.png) 
+
+    - A new popup-window will be displayed to Configure **Log Field** Name input for Log Field.
+
+    - Select the option Specify the **Log Field** Name input. And in **Enter a value** dropdown enter the text **Namespace**.
+       ![ns-field-for-log-field](images/ns-field-for-log-field.png) 
+
+    - Select the resultant **Namespace** field. Click Save Changes.
+       ![ns-field-for-log-field-save-changes](images/ns-field-for-log-field-save-changes.png)
+
+    - Under the Log Field Filter click on the pencil icon to select the value for the **Region** field.
+       ![region-value-for-log-field](images/region-value-for-log-field.png)
+
+    - A popup-window will be displayed to Configure **Region** input for Log Field.
+    - Select the option Specify the **Region** input. And in **Enter a value** dropdown enter the text **US West (Phoenix)** and select the resultant field.
+    - Click **Save Changes**.
+       ![us-phx-region](images/us-phx-region.png)
+    
+    - At this point the Filter Label will be **Log Field**. We have to change the Log Field filter Label to **Namespace**. 
+      ![log-field-label](images/log-field-label.png)
+
+    - Enter the text **Namespace** in the Filter Label textbox. 
+      ![filter-label-namespace](images/filter-label-namespace.png)
+
+    - Click **Save Changes**.
+      ![save-changes-label-ns](images/save-changes-label-ns.png)
+
+    - A new **Namespace** field is added to the Dashboard.
+      ![namespace-field-in-the-dashboard](images/namespace-field-in-the-dashboard.png)
+
+     At this point, we have added the field Namespace to the Dashboard, however it is still not linked with the Widget thus results won't be 
+     rendered. In the next steps we add this Namespace filter to the Widget.
+
+4. Add Filter to widget
+    - Click on the Actions > Edit.
+      ![dashboard-actions-edit](images/dashboard-actions-edit.png) 
+
+    - In the Dashboard Editor click on the Widgets tab. Then in the Widgets tab select Edit Widgets tab.
+      ![dashboard-edit-widget](images/dashboard-edit-widget.png) 
+
+    - A saved search name created in the Task 3 will be displayed. Click on the expand icon.
+      ![saved-search-from-task-3](images/saved-search-from-task-3.png) 
+
+    - Information about the widget will be displayed. Click on Add Input button.
+      ![widget-info](images/widget-info.png) 
+
+    - A popup-window will be displayed to Configure input for your saved search.
+
+    - Select the option Link the input with an existing filter. 
+
+    - In Select an existing filter dropdown enter the text **Namespace** and select the resultant field. 
+
+    - Parameter Name will be automatically populated upon selecting the filter. 
+
+    - Click **Save Changes**.
+      ![select-filter-namespace](images/select-filter-namespace.png)
+
+    - Click **Save Changes** to save changes of the Dashboard.
+      ![save-changes-dashboard](images/save-changes-dashboard.png)
+
+    - The saved search widget will be refreshed.
+
+    - In the Namespace field enter the namespace value as **oci-onm**.
+
+      > **Note:** Screenshot will be added once oci-onm is available
+
+    - Validate that the data in the widget is refreshed to display the pods in the oci-onm namespace.  
+      ![oci-onm-ns-widget](images/oci-onm-ns-widget.png) 
+
+
+## Task 5 (Could Be Removed if we finalize on Task 4) : Building Interactive Visualization for Deployments
 
  In this task we will find what type of workloads are running in different namespaces and the names of those workloads.
 
@@ -197,7 +353,7 @@ Estimated Time: 30 minutes
      
 
  
-## Task 4 : Viewing Kubernetes Events
+## Task 6 (Could Be Removed if we finalize on Task 4) : Viewing Kubernetes Events
 
 1. Run the following query in the Query Bar.
         ```  
@@ -237,7 +393,7 @@ Estimated Time: 30 minutes
 
 
 
-## Task 5 : Add Visualization to the Dashboard
+## Task 7 (Could Be Removed if we finalize on Task 4) : Add Visualization to the Dashboard
 
 1. Select the visualization **Bar**.
    ![bar-chart-visualization](images/bar-chart-visualization.png)
@@ -291,7 +447,7 @@ Estimated Time: 30 minutes
     ![dashboard-with-widget](images/dashboard-with-widget.png)
 
 
-## Task 6 : Collecting Application Logs (Custom Log Sources)
+## Task 8 : Collecting Application Logs (Custom Log Sources)
 
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 
@@ -327,7 +483,7 @@ Estimated Time: 30 minutes
 7. End Note : Change the values in the Time Picker to **Last 24 Hours**, **Last 14 Days** etc and check whether the line chart changes.  
 
 
-## Task 7 : Find average daily  sales amount
+## Task 9 : Find average daily  sales amount
 
    We looked at the trend of revenue in previous task. In this task we want to find out average **Sales Amount** that is processed.    
 
@@ -375,7 +531,7 @@ Estimated Time: 30 minutes
 
          
                  
-## Task 8 : Workshop Show and Tell
+## Task 10 : Workshop Show and Tell
 
 You'll get the opportunity to showcase your dashboard at the end of the lab. You can add any visualization that you like to your dashboard - here are few examples.
   - Find average number of orders per day, per hour ?
