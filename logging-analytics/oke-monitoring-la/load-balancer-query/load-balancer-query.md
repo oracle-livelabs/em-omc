@@ -68,9 +68,11 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![link-result](./images/link-result.png " ")
 
 
-5. Link by the required fields.
+5. Find the unique combinations of different values of **Namespace**, **Service** and **Load Balancer IP**.
 
-    - In the Search Fields textbox, search **Namespace**, **Service** and **Load Balancer IP** fields and drag and drop these fields into the **Group By** area.
+    - We'll use  link command with these field names to group-by.
+
+    - In the Search Fields textbox, search **Namespace**, **Service** and **Load Balancer IP**(public IP address that serves as the entry point for incoming traffic) fields and drag and drop these fields into the **Group By** area.
 
     - Remove the **Log Source** field from the Group By.
 
