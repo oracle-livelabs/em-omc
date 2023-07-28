@@ -1059,7 +1059,9 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![compressed incident opened in new tab](images/event-compression/incident-manager-compressed-incident-opened-in-new-tab.png " ")
 
-6. The incident details display the information about the events that were grouped into this incident. Details include the number of events in the incident, the Event Compression Policy used to compress the events into the incident, the Incident Rule used to create the incident and the list of compressed events in the bottom pane.
+6. The incident details display the information about the events that were grouped into this incident. Details include the number of events in the incident, the Event Compression Policy used to compress the events into the incident, the Incident Rule used to create the incident and the list of compressed events in the bottom pane. 
+
+     **Note:** You can ignore any differences between the Last Comment field in the screenshot vs. what you see in your lab environment. The Last Comment was updated for lab purposes.
 
      ![compressed incident details in new tab](images/event-compression/compressed-incident-important-details-highlighted.png " ")
 
@@ -1223,11 +1225,10 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 19. Click the actions icon under your policy. Select Publish. 
 
      There are other actions you can complete on this policy such as:
-     - Edit the current policy when it is in draft state and disabled.
-     - Create like which essentially clones the policy and allows you to modify the clone as a separate policy.
-     - Reorder your policy in the list so it has higher priority when being evaluated by an event rule. For user-defined event compression policies, they will always appear at the bottom of the policy list when created. However, you may change their order in the execution list. They can be placed anywhere above or below the out-of-box policies but cannot be placed in between the out-of-box policies.
-     - Delete your policy.
-
+     - Editing the policy when it is in draft state and disabled.
+     - Creating a like policy which creates a separate and editable copy of your policy.
+     - Reordering your policy in the list so it has higher priority when being evaluated by an event rule. 
+     - Deleting your policy.
 
      ![draft policy actions menu](images/event-compression/new-policy-actions.png " ")
 
@@ -1300,4 +1301,4 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 - **Author** - Karilyn Loui, Oracle Enterprise Manager Product Management
 - **Contributing Author** - Ana McCollum, Daniel Suherman, Murtaza Husain, Desiree Abrokwa, Oracle Enterprise Manager Product Management
 - **Adapted for Cloud** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [June 2023]
+- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [July 2023]
