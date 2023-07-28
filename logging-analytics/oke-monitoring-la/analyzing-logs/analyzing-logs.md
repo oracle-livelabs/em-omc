@@ -81,7 +81,7 @@ Estimated Time: 30 minutes
 
 ## Task 2 : Get inventory of namespace, pods, services, nodes for your cluster
 
-   In this task we will find out all the pods in each of the Node in the OKE cluster filtered based on the **Namespace**.
+   In this task we will find out all the pods in each Node of the OKE cluster filtered based on the **Namespace**.
 
 1. In the Fields panel, in the Search Fields textbox, search for the field **Kubernetes Cluster Name**. Click on the resultant field **Kubernetes Cluster Name**.
     ![k8s-cluster-name](images/k8s-cluster-name.png) 
@@ -201,7 +201,7 @@ In this task we will create the Dashboard with the results of the Task 2.
  we will extend our saved search query to support any namespace value.
 
  1. Clearing the **Namespace** field from the Widget query.
- 
+
     - Click on the Punch Out icon of the widget. 
       ![punch-out-icon](images/punch-out-icon.png) 
 
