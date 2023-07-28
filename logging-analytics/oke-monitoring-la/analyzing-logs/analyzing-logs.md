@@ -14,12 +14,12 @@ Estimated Time: 30 minutes
 
 ## Task 1: View the Logs in Log Explorer
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
-    > Note : For a quick refresher on Log Explorer GUI [review Lab 1](?lab=log-explorer-gui).
+    > **Note** : For a quick refresher on Log Explorer GUI [review Lab 1](?lab=log-explorer-gui).
 
 2. Once you land on the **Log Explorer** page if the scope has pre-selected **Log Group Compartment**, then you can reset it by clicking on the `x` icon.
    ![close-icon-for-scope-filter](images/close-icon-for-scope-filter.png)
     
-    > Note: If you have followed this step you can skip the below step.
+    > **Note**: If you have followed this step you can skip the below step.
    
    **OR**
 
@@ -46,7 +46,7 @@ Estimated Time: 30 minutes
 
 
 5. The **Pie** chart view in the context of **Log Group** will be displayed along with logrecords count for each **Log Group**.
-      > Note : The **Log Group** <em>kubernetes_logs</em> is precreated and it has VCN, LBaaS logs and it also has a copy of Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**.
+      > **Note** : The **Log Group** <em>kubernetes_logs</em> is precreated and it has VCN, LBaaS logs and it also has a copy of Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**.
    
    ![pie-chart-view-log-count](images/pie-chart-view-log-count.png) 
 
@@ -73,101 +73,240 @@ Estimated Time: 30 minutes
       ![sunburst-data-lg-ls](images/sunburst-data-lg-ls.png)
 
   - You can also hover over different colors of **Sunburst** chart to view the stats of the **Log Source**.
+
+7. Before proceeding to **Task 2** perform the following step. 
+   - Click on **Actions** and in the menu item select **Create New**.
+     ![actions-create-new](images/actions-create-new.png)
+
+
+## Task 2 : Get inventory of namespace, pods, services, nodes for your cluster
+
+   In this task we will find out all the pods in each Node of the OKE cluster filtered based on the **Namespace**.
+
+1. In the Fields panel, in the Search Fields textbox, search for the field **Kubernetes Cluster Name**. Click on the resultant field **Kubernetes Cluster Name**.
+    ![k8s-cluster-name](images/k8s-cluster-name.png) 
+2. **Filter Kubernetes Cluster Name** pop-window will be displayed showing the OKE Cluster **oke-cw23-ll**.
+    Click on the checkbox of **oke-cw23-ll** and click **Apply**.
+    ![filter-k8s-cluster-name](images/filter-k8s-cluster-name.png)
+    The Log Explorer will show the Pie-Chart Visualization of all the various logs that are being collected from the OKE cluster.
+    ![k8s-llcluster-data](images/k8s-llcluster-data.png)
+3. Filtering all the pods from a specific Namespace.
+      - In the Fields panel, in the Search Fields textbox, search for the field **Pod**. Click on the resultant field **Pod**. 
+         ![k8s-pod](images/k8s-pod.png)
+      - **Filter Pod** pop-window will be displayed. Around 100+ are running in the OKE Cluster. The popup-window shows results upto 100 pods.
+         ![k8s-pod](images/k8s-filter-pod.png)
+      -  Now in the Fields Panel, in the Search Fields textbox, search for the field **Namespace**. Click on the resultant field **Namespace**.
+      The popup-window display all the available **Namespace(s)** in the Kubernetes Cluster. 
+         ![k8s-filter-namespace](images/k8s-filter-namespace.png)
+      - Select the namespace **mushop** and click **Apply**.
+         ![mushop-ns](images/mushop-ns.png)
          
+      - Now in the Fields Panel, in the Search Fields textbox, search for the field **Pod**. Click on the resultant field **Pod**.
+        In the popup-window you should now see all the Pods in the namespace **mushop**. If observed closely we can see that we have only 50 pods.
+         > **Note :** The number of pods in **mushop** namespace may differ.
+            
+         ![mushop-all-pods](images/mushop-all-pods.png)
 
 
+4. Selecting the **Kubernetes Pod Object Logs** Log Source
+      - In the Fields Panel, in the Search Fields textbox, search for the field **Log Source**. Click on the resultant field **Log Source**.
+      - In the popup-window, in the Search textbox, search for Log Source **Kubernetes Pod Object Logs**. 
+      - Click on the checkbox of **Kubernetes Pod Object Logs** Log Source.
+      - Click **Apply**. 
+        ![kubernetes-pods-log-source](images/kubernetes-pods-log-source.png)
 
-## Task 2 (To Be Removed as Task 1 End Notes Cover This): Review Logs in Log Groups
+5. Select the visualization **Tree Map**.
+      ![visualization-treemap](images/visualization-treemap.png)
+6. Add **Node** Field to the Group By textbox. 
+      - In the Fields panel, in the Search Fields textbox, search for the field **Node**.
+      - In the resultant field, click on the three vertical dots menu icon.
+      - Click on the **Add to Group By** menu option.
+         ![node-to-groupby](images/node-to-groupby.png)
+      - Repeat the steps to add **Pod Phase** Field to the Group By textbox.
+      - Remove any other field in the Group By apart from **Node** and **Pod Phase**.
+      - The Group By textbox will look like the following. 
+            ![group-by-podphase-node](images/group-by-podphase-node.png) 
 
-1. Select the visualization **Horizontal Bar**. This will take you to the **Horizontal Bar** view in context of **Log Group** along with logrecords count for each **Log Group**.
-    ![horizontal-bar-view](images/horizontal-bar-view.png)
-    ![log-records-horizontal-bar-view](images/log-records-horizontal-bar-view.png)
-    
+7. Add Pod field to the **Value** textbox.
+      - In the Fields panel, in the Search Fields textbox, search for the field **Pod**.
+      - In the resultant field, click on the three vertical dots menu icon.
+      - Click on the **Add to Value** menu option.
+         ![pod-add-to-value](images/pod-add-to-value.png)
+      - The Value textbox will look like the following.
+         ![pod-in-value-textbox](images/pod-in-value-textbox.png)
+8. Determining the Pods running on each Node of the OKE Cluster.
+      - Click on the Drop Down icon in the Value textbox. Select the **Distinct Count** menu item.
+         ![distinct-count](images/distinct-count.png)
+      - Verify that the Value textbox & Group By textbox looks like the following. Click **Apply**.
+         ![number-of-pods-viz-panel](images/number-of-pods-viz-panel.png)
+      - All the Pods running on each **Node** of the OKE Cluster will be displayed.
+          ![number-of-pods-running-each-node](images/number-of-pods-running-each-node.png)
+      
+9. **End Notes :** 
+      - We have performed this excerise to show the capabilities of the **Logging Analytics** and ease of building the queries.
+      - We have already created a widget in the out-of-the-box Dashboard for viewing all the Pods on each Node of the OKE Cluster.
+      - You can view it under the widget **Failed/Pending Pods per Node** in the [Kubernetes Nodes Dashboard] (https://cloud.oracle.com/loganalytics/dashboards?id=ocid1.managementdashboard.oc1..aaaaaaaa6nwudwqff62jbjfwmextzwchmciqvwe5fv3aoaspjrk5e46clnbq).  
 
-2. In the Fields panel, in the Search Fields textbox, search for the field **Log Source**.
-    ![log-source-field-search](images/log-source-field-search.png)
 
+## Task 3 : Creating Interactive Dashboard
+In this task we will create the Dashboard with the results of the Task 2.
 
-3. Drag and Drop the **Log Source** field in the **Group by** textbox under Visualization Panel and click **Apply**.
-    ![group-by-logsource-loggroup](images/group-by-logsource-loggroup.png)  
+1. Click on the **Actions** button.
+   ![actions-button.png](images/actions-button.png)
 
-4. The results will be grouped by **Log Source** and **Log Group**.
-    ![horizontal-bar-view-for-loggroup-logsource](images/horizontal-bar-view-for-loggroup-logsource.png)  
+2. Click on the **Save as** option.
+   ![save-as-button](images/save-as-button.png)
 
+3. A **Save search** pop up will be displayed. By default your user's **Compartment** is selected in **Save Search Compartment** dropdown.
+   ![save-search-popup](images/save-search-popup.png)
+    > **Note** : You will see the Authorization error if any other **Compartment** is selected in **Save Search Compartment** dropdown.
 
-5. You can also use the following query in the **Query Bar** to get the view the results.
-    > **Note:** Run this query only after step 1 is finished.
+4. In the  **Save search** pop up perform the following actions.
+   
+    - (Optional) Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.  You can always find the **Compartment** name from the View Login Info page.
+        > **Note** : This step is optional if you have not changed the **Compartment** in step 3.
+        
 
+    - Enter the **Search Name**.
+    - Check the **Add to dashboard** checkbox.
+    - Select the **New Dashboard** radio button.
+    - Select the **Dashboard Compartment** name. Make sure that you select the same **Compartment** for Dashboard and Save Search.
+    - Enter the **Dashboard Name**. 
+    - Click on **Save** button.
+    ![create-dashboard](images/create-dashboard.png)
+    - A saved search will be created and added to the Dashboard.
+    ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
+
+5. Click on the drop-down on top left side of the Log Explorer Page and select **Dashboards**.
+    ![dashboard-navigation](images/dashboard-navigation.png)
+
+ **OR**
+
+   Copy-paste the following link in your browser's address bar to navigate to the **Dashboards**.
       ```
          <copy>
-           * | stats count as logrecords by 'Log Group', 'Log Source' | sort -logrecords
-          </copy>
-       ``` 
+           https://cloud.oracle.com/loganalytics/dashboards?region=us-phoenix-1
+         </copy>
+     
+      ```
 
-6. (Optional) You can select any other visualization (e.g Sunburst, TreeMap etc) from the  **Visualizations** panel to view the data.  
-
-
-## Task 3 (To Be Updated and Task 5 will be removed): Get inventory of namespace, pods, services, nodes for your cluster
-
-### **Review Cluster**
-
-1. Select the visualization **Distinct**.
-    ![distinct-visualization](images/distinct-visualization.png)  
-
-2. In the Fields panel, in the Search Fields textbox, search for the field **Kubernetes Cluster Name**. Click on the resultant field **Kubernetes Cluster Name**.
-    ![k8s-cluster-name](images/k8s-cluster-name.png)  
-
-3. **Filter Kubernetes Cluster Name** pop-window will be displayed. All the Kubernetes Cluster Names will be displayed.
-
-    ![filter-k8s-cluster-name](images/filter-k8s-cluster-name.png)
-
-4. Click on **Cancel** Button.
-
-5. Clear the field **Kubernetes Cluster Name** in the Fields panel's Search Fields textbox by clicking `x` button.
+6. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 4.
+    ![dashboards-page](images/dashboards-page.png) 
+7. A widget showing the saved search data will be displayed.
+    ![pods-status-dashboard](images/pods-status-dashboard.png)       
 
 
-### **Review Namespace**
+## Task 4 : Updating  the widget to show data from different namespaces
+ In the previous two tasks i.e Task 2 and Task 3, we have filtered the results based on the specific namespace **mushop**. In this task
+ we will extend our saved search query to support any namespace value.
 
-1. In the Fields panel, in the Search Fields textbox, search for the field **Namespace**. Click on the resultant field **Namespace**.
-   ![k8s-namespace](images/k8s-namespace.png) 
+ 1. Clearing the **Namespace** field from the Widget query.
 
-2. **Filter Namespace** pop-window will be displayed. All the Kubernetes Namespaces will be displayed. 
-   ![k8s-namespace](images/filter-k8s-namespace.png) 
+    - Click on the Punch Out icon of the widget. 
+      ![punch-out-icon](images/punch-out-icon.png) 
 
-3. Click on **Cancel** Button.
+    - Previous step will take you to the Log Explorer view in the context of saved search. 
 
-4. Clear the text **Namespace** in the Fields panel's Search Fields textbox by clicking `x` button.    
+    - In the Fields panel, under the Referenced section click on the _Clear_ text next to the field **Namespace**.
+      ![clear-namespace-value](images/clear-namespace-value.png) 
+
+    - Save the Dashboard again by clicking on the **Actions** > **Save**.
+      ![save-dashboard](images/save-dashboard.png)  
+
+    - Navigate back to the Dashboard by clicking on Dashboard Name at the top.
+      ![dashboard-navigate](images/dashboard-navigate.png)  
+
+      
+ 2. Navigating to the Filter tab .
+    - Click on the Actions > Edit.
+      ![dashboard-actions-edit](images/dashboard-actions-edit.png) 
+
+    - The Dashboard page will open in the edit mode.
+      ![dashboard-page-edit-mode](images/dashboard-page-edit-mode.png) 
+
+    - In the Dashboard Editor on the far right side, click on the Filter tab. A filter section showing different filter items will be displayed.
+      ![dashboard-filter-tab](images/dashboard-filter-tab.png) 
+
+ 3. Searching the **Log Field** filter item to create **Namespace** Log Field.
+    - In the search box under the  Filter tab search for the **Log Field** filter item.
+       ![log-field-filter](images/log-field-filter.png) 
+
+    - Click on the **Log Field** filter item. A popup-window will be displayed to Configure Log Group Compartment input for Log Field.
+
+    - Select the option Link the **Log Group Compartment** input with an existing filter. Click **Save Changes**.
+       ![log-group-compartment-for-filter](images/log-group-compartment-for-filter.png) 
+
+    - A new popup-window will be displayed to Configure **Log Field** Name input for Log Field.
+
+    - Select the option Specify the **Log Field** Name input. And in **Enter a value** dropdown enter the text **Namespace**.
+       ![ns-field-for-log-field](images/ns-field-for-log-field.png) 
+
+    - Select the resultant **Namespace** field. Click Save Changes.
+       ![ns-field-for-log-field-save-changes](images/ns-field-for-log-field-save-changes.png)
+
+    - Under the Log Field Filter click on the pencil icon to select the value for the **Region** field.
+       ![region-value-for-log-field](images/region-value-for-log-field.png)
+
+    - A popup-window will be displayed to Configure **Region** input for Log Field.
+    - Select the option Specify the **Region** input. And in **Enter a value** dropdown enter the text **US West (Phoenix)** and select the resultant field.
+    - Click **Save Changes**.
+       ![us-phx-region](images/us-phx-region.png)
+    
+    - At this point the Filter Label will be **Log Field**. We have to change the Log Field filter Label to **Namespace**. 
+      ![log-field-label](images/log-field-label.png)
+
+    - Enter the text **Namespace** in the Filter Label textbox. 
+      ![filter-label-namespace](images/filter-label-namespace.png)
+
+    - Click **Save Changes**.
+      ![save-changes-label-ns](images/save-changes-label-ns.png)
+
+    - A new **Namespace** field is added to the Dashboard.
+      ![namespace-field-in-the-dashboard](images/namespace-field-in-the-dashboard.png)
+
+     At this point, we have added the field Namespace to the Dashboard, however it is still not linked with the Widget thus results won't be 
+     rendered. In the next steps we add this Namespace filter to the Widget.
+
+4. Add Filter to widget
+    - Click on the Actions > Edit.
+      ![dashboard-actions-edit](images/dashboard-actions-edit.png) 
+
+    - In the Dashboard Editor click on the Widgets tab. Then in the Widgets tab select Edit Widgets tab.
+      ![dashboard-edit-widget](images/dashboard-edit-widget.png) 
+
+    - A saved search name created in the Task 3 will be displayed. Click on the expand icon.
+      ![saved-search-from-task-3](images/saved-search-from-task-3.png) 
+
+    - Information about the widget will be displayed. Click on Add Input button.
+      ![widget-info](images/widget-info.png) 
+
+    - A popup-window will be displayed to Configure input for your saved search.
+
+    - Select the option Link the input with an existing filter. 
+
+    - In Select an existing filter dropdown enter the text **Namespace** and select the resultant field. 
+
+    - Parameter Name will be automatically populated upon selecting the filter. 
+
+    - Click **Save Changes**.
+      ![select-filter-namespace](images/select-filter-namespace.png)
+
+    - Click **Save Changes** to save changes of the Dashboard.
+      ![save-changes-dashboard](images/save-changes-dashboard.png)
+
+    - The saved search widget will be refreshed.
+
+    - In the Namespace field enter the namespace value as **oci-onm**.
+
+      > **Note:** Screenshot will be added once oci-onm is available
+
+    - Validate that the data in the widget is refreshed to display the pods in the oci-onm namespace.  
+      ![oci-onm-ns-widget](images/oci-onm-ns-widget.png) 
 
 
-### **Review Pods**
+## Task 5 (Could Be Removed if we finalize on Task 4) : Building Interactive Visualization for Deployments
 
-1. In the Fields panel, in the Search Fields textbox, search for the field **Pod**. Click on the resultant field **Pod**.
-   ![k8s-pod](images/k8s-pod.png) 
-
-2. **Filter Pod** pop-window will be displayed. All the Pods will be displayed. 
-   ![k8s-pod](images/filter-k8s-pod.png) 
-
-3. Click on **Cancel** Button.
-
-4. Clear the field **Pod** in the Fields panel's Search Fields textbox by clicking `x` button.   
-  
-
-### **Review Nodes**
-
-1. In the Fields panel, in the Search Fields textbox, search for the field **Node**. Click on the resultant field **Node**.
-   ![k8s-pod](images/k8s-node.png) 
-
-2. **Filter Node** pop-window will be displayed. All the Nodes will be displayed. Click on the checkbox of `Show Trend Chart`.
-   ![k8s-pod](images/filter-k8s-node.png) 
-
-3. Click on **Cancel** Button.
-
-4. Clear the field **Node** in the Fields panel's Search Fields textbox by clicking `x` button.
-
-
-## Task 4 : Building Interactive Visualization for Deployments
-
- In this task we will find what type of workloads are running in different namespaces and the names of those workloads
+ In this task we will find what type of workloads are running in different namespaces and the names of those workloads.
 
 1. Select the visualization **Distinct**.
   ![distinct-visualization](images/distinct-visualization.png)
@@ -181,6 +320,7 @@ Estimated Time: 30 minutes
        ![ namespace-to-group-by.png](images/namespace-to-group-by.png)
     - The **Namespace** field will be added in the **Group by** textbox under Visualization Panel. 
        ![namespace-added-to-group-by](images/namespace-added-to-group-by.png) 
+      > **Note :** The Group By textbox allows a maximum of 4 fields in the Distinct Visualization. Hence remove all the other fields apart from **Namespace**   
 
        
 
@@ -193,9 +333,11 @@ Estimated Time: 30 minutes
 5. The results will be grouped by **Namespace** , **Controller** and **Controller Kind**. 
    ![distinct-view-namespace-controller-controllerkind](images/distinct-view-namespace-controller-controllerkind.png) 
 
-6. In the results look for the your user's **Namespace**. The **Namespace** can be found from the **View Login Info** page with the field name **Kubernetes Namespace**.
+6. In the results look for your user's **Namespace** by scrolling in the **Field Value** column . The **Namespace** can be found from the **View Login Info** page with the field name **Kubernetes Namespace**.
+         
+      > **Note :** The **Namespace** will  be in the format **resrReservationId**.  
 
-      > Note : The **Namespace** will  be in the format **resrReservationId**.  
+
 
     i. Click on expand icon to view the different resources (Controller) created in your user's Namespace. 
      ![expand-icon-for-k8s-namespace](images/expand-icon-for-k8s-namespace.png) 
@@ -210,86 +352,8 @@ Estimated Time: 30 minutes
    > Note : Upon expanding the Namespace icon we can also see No Value, need to check with Santhosh.
      
 
-## Task 5 : Find number of total pods, running pods in a namespace
-
-  > **Note** : Before moving on to the next steps. Clear the query bar and click on **Run**.
-
-1. Select the visualization **Pie Chart**.
-  ![distinct-visualization](images/distinct-visualization.png)
-
-2. In the Fields panel, in the Search Fields textbox, search for the field **Namespace**. Click on the resultant field **Namespace**.
-   ![k8s-namespace](images/k8s-namespace.png) 
-
-3. **Filter Namespace** pop-window will be displayed. All the Kubernetes Namespaces will be displayed. 
-   ![k8s-namespace](images/filter-k8s-namespace.png)
-
-4. You can select any namespace value from the list - for e.g **default**. Click on the **Apply**.
-   ![select-default-namespace](images/select-default-namespace.png)
-
-5. Clear the field **Namespace** in the Fields panel's Search Fields textbox by clicking `x` button.   
-
-6. In the Fields panel, in the Search Fields textbox, search for the field **Status**. Click on the resultant field **Status**.
-   ![k8s-pods-status](images/k8s-pods-status.png) 
-
-7. **Filter Status** pop-window will be displayed. All the pods status' will be displayed. 
-   ![filter-k8s-pods-status](images/filter-k8s-pods-status.png) 
-
-8. Select the status value **running** . Click on the **Apply**.
-   ![select-running-pod-status](images/select-running-pod-status.png)
-
-9. Clear the field **Status** in the Fields panel's Search Fields textbox by clicking `x` button.   
-
-10. In the Fields panel, in the Search Fields textbox, search for the field **Namespace**.
-   ![k8s-namespace](images/k8s-namespace.png) 
-
-11. Drag and Drop the **Namespace** field in the **Group by** textbox under Visualization Panel and click **Apply**.
-    ![group-by-namespace](images/group-by-namespace.png)
-
-12. Clear the field **Namespace** in the Fields panel's Search Fields textbox by clicking `x` button. 
-
-13. In the Fields panel, in the Search Fields textbox, search for the field **Pod**.
-   ![k8s-pod](images/k8s-pod.png) 
-
-14. Drag and Drop the **Pod** field in the **Value** textbox under Visualization Panel.
-    ![pod-field-in-value](images/pod-field-in-value.png)   
-
-15. Click on the Drop Down icon in the **Value** textbox. Select the **Distinct Count** menu item.
-    ![distinct-value-menu-item](images/distinct-value-menu-item.png)   
-
-16. Click on the **Apply** button.
-
-17. The count of all the distinct running Pods in the selected Namespace will be displayed.
-    ![distinct-running-pods-namespace](images/distinct-running-pods-namespace.png) 
-
-18. The query in the query bar will be following.
-    ```
-      <copy>
-        Namespace = default and Status = running | stats distinctcount(Pod) by Namespace
-      </copy>
-
-    ```  
-
-19. Edit the query and provide the Name to the `distinctcount(Pod)` using the **as** operator. 
-     - In the following query we used as operator and provided the Name `'Running Pods'` to the `distinctcount(Pod)`. 
-     - You can copy and paste the following query in the **Query Bar**.
-
-        ```
-          <copy>
-             Namespace = default and Status = running | stats distinctcount(Pod) as 'Running Pods' by Namespace
-          </copy>
-
-        ``` 
-      - The column name will be changed to **Running Pods**.
-      ![running-pods-as-operator](images/running-pods-as-operator.png) 
-
-   > **Note** : Click the **x** icon in the query bar and click on the **Run** button before  moving to next Task.   
-
-      
-
-    
-
-
-## Task 6 : Viewing Kubernetes Events
+ 
+## Task 6 (Could Be Removed if we finalize on Task 4) : Viewing Kubernetes Events
 
 1. Run the following query in the Query Bar.
         ```  
@@ -329,7 +393,7 @@ Estimated Time: 30 minutes
 
 
 
-## Task 7 : Add Visualization to the Dashboard
+## Task 7 (Could Be Removed if we finalize on Task 4) : Add Visualization to the Dashboard
 
 1. Select the visualization **Bar**.
    ![bar-chart-visualization](images/bar-chart-visualization.png)
@@ -343,25 +407,27 @@ Estimated Time: 30 minutes
 4. Click on the **Save as** option.
    ![save-as-button](images/save-as-button.png)
 
-5. A **Save search** pop up will be displayed.
+5. A **Save search** pop up will be displayed. By default your user's **Compartment** is selected in **Save Search Compartment** dropdown.
    ![save-search-popup](images/save-search-popup.png)
-    > Note : You will see the Authorization error - which is expected - if _root_ **Compartment** is selected.
+    > **Note** : You will see the Authorization error if any other **Compartment** is selected in **Save Search Compartment** dropdown.
 
 6. In the  **Save search** pop up perform the following actions.
-    - Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.
-        > Note : You can always find the **Compartment** name from the View Login Info page.
+   
+    - (Optional) Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.  You can always find the **Compartment** name from the View Login Info page.
+        > **Note** : This step is optional if you have not changed the **Compartment** in step 5.
+        
 
     - Enter the **Search Name**.
     - Check the **Add to dashboard** checkbox.
     - Select the **New Dashboard** radio button.
-    - Select the **Dashboard Compartment** name same as step 1.
-    - Enter the **Dashboard Name**.
+    - Select the **Dashboard Compartment** name. Make sure that you select the same **Compartment** for Dashboard and Save Search.
+    - Enter the **Dashboard Name**. 
     - Click on **Save** button.
     ![create-dashboard](images/create-dashboard.png)
     - A saved search will be created and added to the Dashboard.
     ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
 
-7. Click on the drop-down of top left side of the Log Explorer Page and select **Dashboards**.
+7. Click on the drop-down on top left side of the Log Explorer Page and select **Dashboards**.
     ![dashboard-navigation](images/dashboard-navigation.png)
 
     **OR**
@@ -374,7 +440,7 @@ Estimated Time: 30 minutes
      
       ```
 
-8. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 5.
+8. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 6.
     ![dashboards-page](images/dashboards-page.png)
 
 9. A widget showing the saved search data will be displayed.
@@ -422,6 +488,8 @@ Estimated Time: 30 minutes
    We looked at the trend of revenue in previous task. In this task we want to find out average **Sales Amount** that is processed.    
 
 1. Select the visualization **Pie Chart**.
+   ![pie-chart-visualization](images/pie-chart-visualization.png)
+
 
 2. Run the following query in the **Query Bar**.
 
@@ -453,12 +521,13 @@ Estimated Time: 30 minutes
       > **Hint** : In the begining of this Lab we selected root compartment which has two **Log Group** and we learnt that the **Log Group** <em>kubernetes_logs</em> has the copy of the Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**. Refer **Task 1** > **Step 5** > **Note** to ascertain this.
 
 7. Retrieveing the correct value of the daily average sales.
-  - Clear the field **Kubernetes Cluster Name** in the Fields panel's Search Fields textbox by clicking `x` button.
+  - Clear the field **Sales Amount** in the Fields panel's Search Fields textbox by clicking `x` button.
   - Click on the field **Log Group**  in the Fields panel.
      ![field-log-group](images/field-log-group.png)
   -  **Filter Log Group** pop-window will be displayed.
   - Select your user's **Log Group**. 
   - Click on **Apply** button.
+  - Now you will be able to see the correct value of the daily average sales.
 
          
                  
