@@ -304,10 +304,10 @@ In this task we will create the Dashboard with the results of the Task 2.
       ![oci-onm-ns-widget](images/oci-onm-ns-widget.png) 
 
 
-## Task 5 (Could Be Removed if we finalize on Task 4) : Building Interactive Visualization for Deployments
+## Task 5 : Building Interactive Visualization for Deployments
 
  In this task we will find what type of workloads are running in different namespaces and the names of those workloads.
-
+  > **Note :**  (Could Be Removed if we finalize on Task 4)
 1. Select the visualization **Distinct**.
   ![distinct-visualization](images/distinct-visualization.png)
 
@@ -353,7 +353,9 @@ In this task we will create the Dashboard with the results of the Task 2.
      
 
  
-## Task 6 (Could Be Removed if we finalize on Task 4) : Viewing Kubernetes Events
+
+## Task 6 : Viewing Kubernetes Events
+ > **Note :**  (Could Be Removed if we finalize on Task 4)
 
 1. Run the following query in the Query Bar.
         ```  
@@ -393,7 +395,9 @@ In this task we will create the Dashboard with the results of the Task 2.
 
 
 
-## Task 7 (Could Be Removed if we finalize on Task 4) : Add Visualization to the Dashboard
+
+## Task 7 : Add Visualization to the Dashboard
+ > **Note :**  (Could Be Removed if we finalize on Task 4)
 
 1. Select the visualization **Bar**.
    ![bar-chart-visualization](images/bar-chart-visualization.png)
