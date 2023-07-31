@@ -308,7 +308,6 @@ In this task we will create the Dashboard with the results of the Task 2.
 
  In this task we will find what type of workloads are running in different namespaces and the names of those workloads.
   > **Note :**  (Could Be Removed if we finalize on Task 4)
-
 1. Select the visualization **Distinct**.
   ![distinct-visualization](images/distinct-visualization.png)
 
@@ -354,6 +353,7 @@ In this task we will create the Dashboard with the results of the Task 2.
      
 
  
+
 ## Task 6 : Viewing Kubernetes Events
  > **Note :**  (Could Be Removed if we finalize on Task 4)
 
@@ -392,6 +392,7 @@ In this task we will create the Dashboard with the results of the Task 2.
     ![expand-icon-log-entry](images/expand-icon-log-entry.png)
 
 > **Note** : We will use this set up to create the Dashboard in the next step.      
+
 
 
 
