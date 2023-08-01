@@ -37,7 +37,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![reset](./images/reset.png " ")
 
 
-2. Select the log group compartment.
+2. (To be removed) Select the log group compartment.
 
     - Click the scope filter ![scope-filter](images/scope-filter.png).
 
@@ -64,7 +64,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     - In Visualizations panel, Click on the dropdown and select **Link** under Analysis section.
 ![link](./images/link.png " ")
 
-    - You should now see around 31 log sources that fetch information about various parts of your Kubernetes Infrastructure.
+    - You should now see around 36 log sources that fetch information about various parts of your Kubernetes Infrastructure.
 ![link-result](./images/link-result.png " ")
 
 
@@ -78,6 +78,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - Click on **Apply** button.
 ![group-by](./images/group-by.png " ")
+![group-by-result](./images/group-by-result.png " ")
 
 
 6. Add *includenulls = True* to the link command.
@@ -335,7 +336,11 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - Enter the name in the **Search Name** field and click on the **Save** button to save the search.
     ![save-search](./images/save-search.png " ")
-    > **Note:** You will be see the Authorization error, which is expected since by default root Compartment is selected.
+    > **Note:** You will be see the Authorization error, which is expected since by default *root* Compartment is selected.
+
+    - A saved search will be created and added to the Dashboard.
+    ![save-search-popup](images/save-search-popup.png)
+
 
 
 
@@ -361,12 +366,16 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - Click on **Apply** button.
     ![lb-ip](./images/lb-ip.png " ")
+    ![lb-ip-result](./images/lb-ip-result.png " ")
 
 
 3. Switch to Records with Histogram view.
 
     - In Visualizations panel, Click on the dropdown and select **Records with Histogram**.
     ![histogram](./images/histogram.png " ")
+
+    - Records with Histogram view will get displayed.
+    ![histogram-result](./images/histogram-result.png " ")
 
 
 4. Display issues in the selected Load Balancer.
@@ -375,7 +384,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - The query is automatically updated. You should see a similar query like this:
     ```
-        'Load Balancer IP' = '129.153.66.95' and 'Problem Priority' != null
+        'Load Balancer IP' = '129.146.149.186' and 'Problem Priority' != null
 | timestats count as logrecords by 'Log Source'
 | sort -logrecords  
     ```
@@ -394,13 +403,14 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - The query is automatically updated. You should see a similar query like this:
     ```
-        'Load Balancer IP' = '129.153.66.95' and 'Problem Priority' != null | timestats count as logrecords by 'Destination IP' | sort -logrecords 
+        'Load Balancer IP' = '129.146.149.186' and 'Problem Priority' != null | timestats count as logrecords by 'Destination IP' | sort -logrecords 
     ```
 
     - Click on **Apply** button.
 
     - You can now view the Load Balancer issues grouped by backend IPs.
     ![groupby-destination-ip](./images/groupby-destination-ip.png " ")
+    ![groupby-destination-ip-result](./images/groupby-destination-ip-result.png " ")
 
 
 6. Add a Time between clause to the query.
@@ -421,7 +431,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
         >**Note:** Following is the sample query for reference. **Do Not Copy these.**
 
         ```
-            Time between '2023-06-29T00:00:00.000Z' and '2023-06-30T00:00:00.000Z' and 'Load Balancer IP' = '129.153.66.95' and 'Problem Priority' != null
+            Time between '2023-06-29T00:00:00.000Z' and '2023-06-30T00:00:00.000Z' and 'Load Balancer IP' = '129.146.149.186' and 'Problem Priority' != null
 | timestats count as logrecords by 'Destination IP'
 | sort -logrecords
         ```
@@ -469,11 +479,9 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
             </copy>   
         ```
         > **Note:** Make sure the URL is inside single quotes. 
-
-        ![eval-url](./images/eval-url.png " ")
-
     
     - Click on the **Run** button to run the query.
+    ![eval-url](./images/eval-url.png " ")
 
     - Place the cursor on the query bar and press **Ctrl+I** to indent the query.
     ![eval-url-result](./images/eval-url-result.png " ")
@@ -498,29 +506,28 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
            formatDate('Query Start Time')),
          '2023-06-30T00:00:00.000Z',
            formatDate('Query End Time')),
-          '129.153.66.95',
+          '129.146.149.186',
             'Load Balancer IP')
     ```
 
-    ![eval-replace](./images/eval-replace.png " ")
-
     - Following is a sample query after the updates. Your query may look different if you had different values in your URL:
-    >**Note:** Following is the sample query for reference. **Do Not Copy these.**
+    
+        >**Note:** Following is the sample query for reference. **Do Not Copy these.**
 
-    ```
-            'Log Group' = kubernetes_logs
-| link includenulls = true Namespace, Service, 'Load Balancer IP'
-| stats unique('Kubernetes Cluster Name') as Cluster, unique(Type) as 'LB Type'
-| addfields [ 'Load Balancer IP' != null and 'Problem Priority' != null | stats count as Errors ]
-| eventstats sum(Errors) as 'LB Errors' by 'Load Balancer IP'
-| eventstats distinctcount(Namespace) as Namespaces, distinctcount(Service) as Services, distinctcount('Load Balancer IP') as 'Load Balancers'
-| where 'LB Type' = loadbalancer
-| eval URL1 = 'https://cloud.oracle.com/loganalytics/explorer?viz=records_histogram&query=Time%20between%20%272023-06-29T00%3A00%3A00.000Z%27%20and%20%272023-06-30T00%3A00%3A00.000Z%27%20and%20%27Load%20Balancer%20IP%27%20%3D%20%27129.153.66.95%27%20and%20%27Problem%20Priority%27%20!%3D%20null%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Destination%20IP%27%20%7C%20sort%20-logrecords&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaav6rhb53wepyh3yhnm4ulfl4ko4wsyhmpfkkwr2v5dst64376xwhq%2Ctrue%3Brs%3Aocid1.compartment.oc1..aaaaaaaauxh6chgelqkqzrxmwdsydbnvodf4hhceqbsltkv63islsduvanga%2Ctrue%3Brg%3Aus-phoenix-1&timeNum=60&timeUnit=MINUTES&region=us-phoenix-1&tenant=emdemo'
-| eval URL2 = replace(replace(replace(URL1, '2023-06-29T00:00:00.000Z', formatDate('Query Start Time')), '2023-06-30T00:00:00.000Z', formatDate('Query End Time')), '129.153.66.95', 'Load Balancer IP')
-    ```
+        ```
+                'Log Group' = kubernetes_logs
+    | link includenulls = true Namespace, Service, 'Load Balancer IP'
+    | stats unique('Kubernetes Cluster Name') as Cluster, unique(Type) as 'LB Type'
+    | addfields [ 'Load Balancer IP' != null and 'Problem Priority' != null | stats count as Errors ]
+    | eventstats sum(Errors) as 'LB Errors' by 'Load Balancer IP'
+    | eventstats distinctcount(Namespace) as Namespaces, distinctcount(Service) as Services, distinctcount('Load Balancer IP') as 'Load Balancers'
+    | where 'LB Type' = loadbalancer
+    | eval URL1 = 'https://cloud.oracle.com/loganalytics/explorer?viz=records_histogram&query=Time%20between%20%272023-06-29T00%3A00%3A00.000Z%27%20and%20%272023-06-30T00%3A00%3A00.000Z%27%20and%20%27Load%20Balancer%20IP%27%20%3D%20%27129.146.149.186%27%20and%20%27Problem%20Priority%27%20!%3D%20null%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Destination%20IP%27%20%7C%20sort%20-logrecords&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaav6rhb53wepyh3yhnm4ulfl4ko4wsyhmpfkkwr2v5dst64376xwhq%2Ctrue%3Brs%3Aocid1.compartment.oc1..aaaaaaaauxh6chgelqkqzrxmwdsydbnvodf4hhceqbsltkv63islsduvanga%2Ctrue%3Brg%3Aus-phoenix-1&timeNum=60&timeUnit=MINUTES&region=us-phoenix-1&tenant=emdemo'
+    | eval URL2 = replace(replace(replace(URL1, '2023-06-29T00:00:00.000Z', formatDate('Query Start Time')), '2023-06-30T00:00:00.000Z', formatDate('Query End Time')), '129.146.149.186', 'Load Balancer IP')
+        ```
 
     - Click on the **Run** button to run the query.
-
+    ![eval-replace](./images/eval-replace.png " ")
     ![eval-replace-result](./images/eval-replace-result.png " ")
 
 
@@ -538,9 +545,10 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     ```
 
     - Click on the **Run** button to run the query.
+    ![eval-url-clickable](./images/eval-url-clickable.png " ")
 
     - You should now see a new clickable field **Load Balancer Errors**.
-![eval-url-clickable](./images/eval-url-clickable.png " ")
+![eval-url-clickable-result](./images/eval-url-clickable-result.png " ")
 
 
 5. Hide unnecessary columns using the fields command.
@@ -575,13 +583,13 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
    distinctcount(Service)   as Services,
    distinctcount('Load Balancer IP') as 'Load Balancers'
 | where 'LB Type' = loadbalancer
-| eval URL1 = 'https://cloud.oracle.com/loganalytics/explorer?viz=records_histogram&query=Time%20between%20%272023-06-29T00%3A00%3A00.000Z%27%20and%20%272023-06-30T00%3A00%3A00.000Z%27%20and%20%27Load%20Balancer%20IP%27%20%3D%20%27129.153.66.95%27%20and%20%27Problem%20Priority%27%20!%3D%20null%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Destination%20IP%27%20%7C%20sort%20-logrecords&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaav6rhb53wepyh3yhnm4ulfl4ko4wsyhmpfkkwr2v5dst64376xwhq%2Ctrue%3Brs%3Aocid1.compartment.oc1..aaaaaaaauxh6chgelqkqzrxmwdsydbnvodf4hhceqbsltkv63islsduvanga%2Ctrue%3Brg%3Aus-phoenix-1&timeNum=60&timeUnit=MINUTES&region=us-phoenix-1&tenant=emdemo'
+| eval URL1 = 'https://cloud.oracle.com/loganalytics/explorer?viz=records_histogram&query=Time%20between%20%272023-06-29T00%3A00%3A00.000Z%27%20and%20%272023-06-30T00%3A00%3A00.000Z%27%20and%20%27Load%20Balancer%20IP%27%20%3D%20%27129.146.149.186%27%20and%20%27Problem%20Priority%27%20!%3D%20null%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Destination%20IP%27%20%7C%20sort%20-logrecords&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaav6rhb53wepyh3yhnm4ulfl4ko4wsyhmpfkkwr2v5dst64376xwhq%2Ctrue%3Brs%3Aocid1.compartment.oc1..aaaaaaaauxh6chgelqkqzrxmwdsydbnvodf4hhceqbsltkv63islsduvanga%2Ctrue%3Brg%3Aus-phoenix-1&timeNum=60&timeUnit=MINUTES&region=us-phoenix-1&tenant=emdemo'
 | eval URL2 = replace(replace(replace(URL1,
                                       '2023-06-29T00:00:00.000Z',
                                       formatDate('Query Start Time')),
                               '2023-06-30T00:00:00.000Z',
                               formatDate('Query End Time')),
-                      '129.153.66.95',
+                      '129.146.149.186',
                       'Load Balancer IP')
 | eval 'Load Balancer Errors' = url(URL2, toString('LB Errors'))
 | fields -'LB Type', -'LB Errors', -URL1, -URL2
@@ -593,7 +601,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
 6. Report is complete.
 
-    - Congratulations ! You have successfully built a **Cluster Monitoring Query** with dynamic drill downs.
+    - You have successfully built a **Cluster Monitoring Query** with dynamic drill downs.
 
     - Click on any non-zero value for the **Load Balancer Errors** column to drill down and view the second report.
 
@@ -602,7 +610,9 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
-- TO BE UPDATED
+- Build query to get an inventory of the kubernetes services of type Load Balancers.
+- Build query to monitor Load Balancers.
+- Link the two queries to build interactive analysis view to correlated LBaaS(infrastructure) telemetry with that of a Kubernetes Service(Platform Object).
 
   You may now proceed to the [next lab](#next).
 
