@@ -145,7 +145,7 @@ A gold image is the end of state software definition that contains information a
 
 Lets review tile 1 and find out details of databases which are not subscribed to any of the gold images.
 
-    ![](images/Subscribe-homepage.png "Subscribe home page")
+  ![](images/Subscribe-homepage.png "Subscribe home page")
 
     We see that the CDB ***sales.subnet.vcn.oraclevcn.com*** is not subscribed to any gold image. As we want to update one of its PDB to 19.18 version, lets subscribe the CDB to Gold image of 19.18 version. Currently, subscription at pluggable level is not supported.
 
