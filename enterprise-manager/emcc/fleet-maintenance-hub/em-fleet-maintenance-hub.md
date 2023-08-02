@@ -48,7 +48,7 @@ Tile 2, ***Patch Recommendations for Images***, lists out the health status of y
 
 ![](images/Intro-tile3.png " introduction for tile3")
 
-Tile 3, ***Patch Compliance for Targets***, list out the databases or grids that are subscribed to a gold image. If the image is not up-to-date,  a warning icon will be shown. Patch level will show following information.
+Tile 3, ***Patch Compliance with Images***, list out the databases or grids that are subscribed to a gold image. If the image is not up-to-date,  a warning icon will be shown. Patch level will show following information.
 - If the target is on current version,  show "Current"
 - If the target is drifted, show 'Drifter'
 - Otherwise,  you will see the image version that the target is on
@@ -176,7 +176,7 @@ Lets review tile 1 and find out details of databases which are not subscribed to
 
 ## Task 7: Review Patch Compliance
 
-1. Lets move to tile 3, which is ***Patch Compliance for Targets***. From the bar chart we can see that the sales CDB is not complaint. In order to proceed with patching, from the actions column, lets select ***Update Pluggable Database***
+1. Lets move to tile 3, which is ***Patch Compliance with Images***. From the bar chart we can see that the sales CDB is not complaint. In order to proceed with patching, from the actions column, lets select ***Update Pluggable Database***
 ![](images/update-pdb.png "update pdb")
 
 ## Task 8: Update PDB
@@ -266,5 +266,4 @@ You may now proceed to the next lab.
 ## Acknowledgements
   - **Authors**
     - Romit Acharya, Oracle Enterprise Manager Product Management
-    - Rene Fontcha, LiveLabs Platform Lead, NA Technology
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2022
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, June 2023
