@@ -297,17 +297,102 @@ In this task we will create the Dashboard with the results of the Task 2.
     - The saved search widget will be refreshed.
 
     - In the Namespace field enter the namespace value as **oci-onm**.
-
-      > **Note:** Screenshot will be added once oci-onm is available
+      ![oci-onm-ns-in-logfield](images/oci-onm-ns-in-logfield.png) 
+     
 
     - Validate that the data in the widget is refreshed to display the pods in the oci-onm namespace.  
       ![oci-onm-ns-widget](images/oci-onm-ns-widget.png) 
 
 
-## Task 5 : Building Interactive Visualization for Deployments
+## Task 5 : Collecting Application Logs (Custom Log Sources)
+
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
+
+   **OR**
+
+  You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
+    ```
+         <copy>
+            https://cloud.oracle.com/loganalytics/explorer?region=us-phoenix-1
+         </copy>   
+    ```
+
+2. Run the following query in the **Query Bar**.
+
+    ```  
+      <copy>
+       'Log Source' = 'mushop-orders-app' | timestats sum('Sales Amount') as Revenue
+      </copy>
+    ``` 
+
+3. The previous step takes you to the **Records with Histogram** view in context of **mushop-orders-app** Log Source.
+   ![mushop-orders-app-data](images/mushop-orders-app-data.png)
+
+4. Click on the expand field button to view all the extracted fields of a log entry of **mushop-orders-app** Log Source.
+    ![expand-icon-mushop-orders-app](images/expand-icon-mushop-orders-app.png)
+
+5. Select the visualization **Line**.
+  ![line-chart-visualization](images/line-chart-visualization.png)
+
+6. The previous step takes you to the **Line** chart view in context of **mushop-orders-app** Log Source displaying the **Time** in the X-axis and **Revenue** in the Y-axis for last 60 Minutes.
+  ![line-chart-view-mushop-orders-log-source](images/line-chart-view-mushop-orders-log-source.png)
+
+7. End Note : Change the values in the Time Picker to **Last 24 Hours**, **Last 14 Days** etc and check whether the line chart changes.  
+
+
+## Task 6 : Find average daily  sales amount
+
+   We looked at the trend of revenue in previous task. In this task we want to find out average **Sales Amount** that is processed.    
+
+1. Select the visualization **Pie Chart**.
+   ![pie-chart-visualization](images/pie-chart-visualization.png)
+
+
+2. Run the following query in the **Query Bar**.
+
+    ```  
+      <copy>
+        'Log Source' = 'mushop-orders-app' | stats count as logrecords by 'Log Source'
+      </copy>
+    ```
+
+3. Add the field **Sales Amount** to the Value textbox.
+      - In the Fields panel, in the Search Fields textbox, search for the field  **Sales Amount**.
+      - In the resultant field, click on the three vertical dots menu icon. 
+      - Click on **Add to Value** menu icon.
+         ![sales-amount-add-to-value](images/sales-amount-add-to-value.png)
+      - The **Value** textbox will look like the following.
+         ![value-field-with-count-sales-amount](images/value-field-with-count-sales-amount.png)
+
+
+
+4. Click on the Drop Down icon in the **Value** textbox. Select the **Average** menu item. Click **Apply** button.
+     ![avg-sales-amount](images/avg-sales-amount.png)    
+
+5. The daily average sales values will be dispalyed.
+     ![daily-avg-sales-amount](images/daily-avg-sales-amount.png)
+
+ 6. Food For Thought - Do you think this value is correct? 
+    
+    
+      > **Hint** : In the begining of this Lab we selected root compartment which has two **Log Group** and we learnt that the **Log Group** <em>kubernetes_logs</em> has the copy of the Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**. Refer **Task 1** > **Step 5** > **Note** to ascertain this.
+
+7. Retrieveing the correct value of the daily average sales.
+  - Clear the field **Sales Amount** in the Fields panel's Search Fields textbox by clicking `x` button.
+  - Click on the field **Log Group**  in the Fields panel.
+     ![field-log-group](images/field-log-group.png)
+  -  **Filter Log Group** pop-window will be displayed.
+  - Select your user's **Log Group**. 
+  - Click on **Apply** button.
+  - Now you will be able to see the correct value of the daily average sales.
+
+
+
+
+
+## (Excercise) Task 7 : Building Interactive Visualization for Deployments
 
  In this task we will find what type of workloads are running in different namespaces and the names of those workloads.
-  > **Note :**  (Could Be Removed if we finalize on Task 4)
 1. Select the visualization **Distinct**.
   ![distinct-visualization](images/distinct-visualization.png)
 
@@ -354,8 +439,7 @@ In this task we will create the Dashboard with the results of the Task 2.
 
  
 
-## Task 6 : Viewing Kubernetes Events
- > **Note :**  (Could Be Removed if we finalize on Task 4)
+## (Excercise) Task 8 : Viewing Kubernetes Events
 
 1. Run the following query in the Query Bar.
         ```  
@@ -396,8 +480,7 @@ In this task we will create the Dashboard with the results of the Task 2.
 
 
 
-## Task 7 : Add Visualization to the Dashboard
- > **Note :**  (Could Be Removed if we finalize on Task 4)
+## (Excercise) Task 9 : Add Visualization to the Dashboard
 
 1. Select the visualization **Bar**.
    ![bar-chart-visualization](images/bar-chart-visualization.png)
@@ -450,91 +533,7 @@ In this task we will create the Dashboard with the results of the Task 2.
 9. A widget showing the saved search data will be displayed.
     ![dashboard-with-widget](images/dashboard-with-widget.png)
 
-
-## Task 8 : Collecting Application Logs (Custom Log Sources)
-
-1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
-
-   **OR**
-
-  You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
-    ```
-         <copy>
-            https://cloud.oracle.com/loganalytics/explorer?region=us-phoenix-1
-         </copy>   
-    ```
-
-2. Run the following query in the **Query Bar**.
-
-    ```  
-      <copy>
-       'Log Source' = 'mushop-orders-app' | timestats sum('Sales Amount') as Revenue
-      </copy>
-    ``` 
-
-3. The previous step takes you to the **Records with Histogram** view in context of **mushop-orders-app** Log Source.
-   ![mushop-orders-app-data](images/mushop-orders-app-data.png)
-
-4. Click on the expand field button to view all the extracted fields of a log entry of **mushop-orders-app** Log Source.
-    ![expand-icon-mushop-orders-app](images/expand-icon-mushop-orders-app.png)
-
-5. Select the visualization **Line**.
-  ![line-chart-visualization](images/line-chart-visualization.png)
-
-6. The previous step takes you to the **Line** chart view in context of **mushop-orders-app** Log Source displaying the **Time** in the X-axis and **Revenue** in the Y-axis for last 60 Minutes.
-  ![line-chart-view-mushop-orders-log-source](images/line-chart-view-mushop-orders-log-source.png)
-
-7. End Note : Change the values in the Time Picker to **Last 24 Hours**, **Last 14 Days** etc and check whether the line chart changes.  
-
-
-## Task 9 : Find average daily  sales amount
-
-   We looked at the trend of revenue in previous task. In this task we want to find out average **Sales Amount** that is processed.    
-
-1. Select the visualization **Pie Chart**.
-   ![pie-chart-visualization](images/pie-chart-visualization.png)
-
-
-2. Run the following query in the **Query Bar**.
-
-    ```  
-      <copy>
-        'Log Source' = 'mushop-orders-app' | stats count as logrecords by 'Log Source'
-      </copy>
-    ```
-
-3. Add the field **Sales Amount** to the Value textbox.
-      - In the Fields panel, in the Search Fields textbox, search for the field  **Sales Amount**.
-      - In the resultant field, click on the three vertical dots menu icon. 
-      - Click on **Add to Value** menu icon.
-         ![sales-amount-add-to-value](images/sales-amount-add-to-value.png)
-      - The **Value** textbox will look like the following.
-         ![value-field-with-count-sales-amount](images/value-field-with-count-sales-amount.png)
-
-
-
-4. Click on the Drop Down icon in the **Value** textbox. Select the **Average** menu item. Click **Apply** button.
-     ![avg-sales-amount](images/avg-sales-amount.png)    
-
-5. The daily average sales values will be dispalyed.
-     ![daily-avg-sales-amount](images/daily-avg-sales-amount.png)
-
- 6. Food For Thought - Do you think this value is correct? 
-    
-    
-      > **Hint** : In the begining of this Lab we selected root compartment which has two **Log Group** and we learnt that the **Log Group** <em>kubernetes_logs</em> has the copy of the Kubernetes Logs ingested through Kubernetes Cluster **oke-cw23-II**. Refer **Task 1** > **Step 5** > **Note** to ascertain this.
-
-7. Retrieveing the correct value of the daily average sales.
-  - Clear the field **Sales Amount** in the Fields panel's Search Fields textbox by clicking `x` button.
-  - Click on the field **Log Group**  in the Fields panel.
-     ![field-log-group](images/field-log-group.png)
-  -  **Filter Log Group** pop-window will be displayed.
-  - Select your user's **Log Group**. 
-  - Click on **Apply** button.
-  - Now you will be able to see the correct value of the daily average sales.
-
-         
-                 
+              
 ## Task 10 : Workshop Show and Tell
 
 You'll get the opportunity to showcase your dashboard at the end of the lab. You can add any visualization that you like to your dashboard - here are few examples.
@@ -545,11 +544,12 @@ You'll get the opportunity to showcase your dashboard at the end of the lab. You
   - What about sales amount perspective ?
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
-- TO BE UPDATED
-
+- Understood the data model of telemetry collected by Kubernetes Monitoring Solution
+- Gathered information about the monitored OKE Cluster interactively in Log Explorer
+  
   You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, Jul, 2023
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2023
