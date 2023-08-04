@@ -573,8 +573,8 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
 6. Now Navigate to ***Enterprise >> Compliance >> Results***
     
-    *Processing and displaying the results on the Compliance Results Page will take approximately take 3-5 minutes.
-    Optionally you could navigate to next task and revisit the results at a later point in time as well* 
+    *Processing and displaying the results on the Compliance Results Page will take approximately 5 minutes to complete. 
+    You may want to switch to the next 'Task 6: Self-Service to Request PDB Using PDBaaS complete step 20', then come back here to finish this task steps.* 
 
     ![Navigate to result](images/compliance-navigate-results.png "  ")
 
@@ -856,7 +856,8 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
      Click on the refresh icon on the top right in case the PDB is still seen on the page.
     
-Incase you had skipped validating the results in the task 5 'Compliance Management', now would be the right time to revisit. If not, proceed to the next task
+
+     *Note : Go back to Task 5, complete steps 6 to 13 before proceeding to Task 7: Setup PDB-as-a-Service (PDBaaS)*
 
   
 
