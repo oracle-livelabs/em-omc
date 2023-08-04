@@ -142,7 +142,11 @@ Select between *Task 1A* and *Task 1B*
 
 14. Click on the **activity** tab to understand about the activity breakdown for this SQL.
 
-16. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
+15. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
+
+16. Click on the **Outline** tab is useful for reproducing the execution plan.
+
+17. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
 
 ## Task 3: Real-Time Database Operations Monitoring
 
