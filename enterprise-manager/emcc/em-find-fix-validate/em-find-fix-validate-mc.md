@@ -134,7 +134,7 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/533523dca8453a0ce246ac933fdb639c.jpg " ")
 
-11. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hrs. time period to identify the historical SQL that was monitored.
+11. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
     1.  Tabular view - More columns and can navigate through a big plan
     2.  Graphical view - Color coded and darker the color more rows
@@ -151,7 +151,33 @@ Select between *Task 1A* and *Task 1B*
 
 17. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
 
-## Task 3: Real-Time Database Operations Monitoring
+## Task 3: Top Activity Lite
+
+1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![](images/emffvlab2step1.png " ")
+
+2. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+
+    ![](images/emffvlab2step2.png " ")
+
+    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+
+3.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
+
+    ![](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
+
+4.  Notice that the PSALES database is the busiest. We focus our attention to this PDB. Let us now navigate to Performance Hub. Select Performance Hub from the Performance Menu and Click on ASH Analytics and use the sales\_system credential name from the database login screen.
+
+    ![](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
+
+5.  Navigate to **Top Activity Lite**, this page is a simplified version of Performance Hub, which contains **ASH Analytics** and **SQL Monitoring** tabs
+
+6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen
+
+7. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions.
+
+## Task 4: Real-Time Database Operations Monitoring
 
 1. From the terminal session on your remote desktop, run as user *oracle*
 
@@ -185,7 +211,7 @@ Now execute the file \@DBOP.sql
 
     ![](images/1a32fbdd89e519c2b8401e7dd0626890.jpg " ")
 
-## Task 4: Tuning a SQL in a PDB
+## Task 5: Tuning a SQL in a PDB
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -247,7 +273,7 @@ Now execute the file \@DBOP.sql
 
 <!-- This concludes the Database Performance Management lab activity. You can now move on to Real Application Testing lab activity. -->
 
-## Task 5: SQL Performance Analyzer
+## Task 6: SQL Performance Analyzer
 
 1.  Log into an Enterprise Manager VM. The Enterprise Manager credentials are “sysman/welcome1”. **Click** on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
@@ -428,7 +454,7 @@ Now execute the file \@DBOP.sql
     ![](images/emratlab1step15c.png " ")
 
 
-## Task 6: Database Workload Replay - Capture Workload
+## Task 7: Database Workload Replay - Capture Workload
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -553,7 +579,7 @@ Now execute the file \@DBOP.sql
 
     ![](images/emratlab2step17f.png " ")
 
-## Task 7: Database Workload Replay - API
+## Task 8: Database Workload Replay - API
 
 ### Login to Host using SSH Key based authentication
 In this lab, we are going to use a pre-captured workload of Sales History. The workload located in directory **/home/oracle/scripts/CAPTURE/lab4con/lab4SH**
