@@ -136,11 +136,14 @@ Select between *Task 1A* and *Task 1B*
 
 11. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hrs. time period to identify the historical SQL that was monitored.
 
+    1.  Tabular view - More columns and can navigate through a big plan
+    2.  Graphical view - Color coded and darker the color more rows
+
 12. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
 13. Click on the **SQL Text** tab. You can see the query text which has been executed.
 
-14. Click on the **activity** tab to understand about the activity breakdown for this SQL.
+14. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
 
 15. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
 
