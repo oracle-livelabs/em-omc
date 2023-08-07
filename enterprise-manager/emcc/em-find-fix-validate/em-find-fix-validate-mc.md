@@ -453,8 +453,135 @@ Now execute the file \@DBOP.sql
 
     ![](images/emratlab1step15c.png " ")
 
+## Task 7: Workload Analysis
 
-## Task 7: Database Workload Replay - Capture Workload
+Create SQL Tuning Set - 1
+
+1. Download this file 
+
+    [Click here to download file.](./files/SOE_Client_Side_2_NCPFalse.xml?download=1)
+
+2. Login to the terminal and run the following commands which is creating a backup of xml file and replacing it with another xml file
+
+    ```
+    <copy>
+    cp /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2_backup.xml
+    cp /home/oracle/Downloads/SOE_Client_Side_2_NCPFalse.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml
+    </copy>
+    ```
+3. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
+
+      ![](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
+
+4. Go to Enterprise - Job - Library
+
+      ![](images/emratlab2step2.png " ")
+
+5. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
+
+      ![](images/emratlab2step3.png " ")
+
+6. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
+
+     ![](images/emratlab2step4.png " ")
+
+7.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![](images/emffvlab2step1.png " ")
+
+8. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+
+    ![](images/emffvlab2step2.png " ")
+
+    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+
+9.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
+
+10. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
+
+11. Go to SQL and choose SQL Tuning Set and Create STS as follows
+
+    i. Name: WLA_MC_STS1
+    ii. Choose Cursor cache
+    iii. with SOE as value
+    iv. Next
+    v. Finish
+
+12. Refresh the page and you could see the count as **34**
+
+13. Stop Swing bench
+
+Create SQL Tuning Set - 2
+
+1. Download this file 
+
+    [Click here to download file.](./files/SOE_Client_Side_2_NOPFalse.xml?download=1)
+
+2. Login to the terminal and run the following commands which is creating a backup of xml file and replacing it with another xml file
+
+    ```
+    <copy>
+        cp /home/oracle/Downloads/SOE_Client_Side_2_NOPFalse.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml
+    </copy>
+    ```
+
+3. Make an index invisible
+        a.	Connect to OLTP Database
+        b.	SQL Worksheet
+        c.	Alter index SOE.ORDER_PK invisible
+            i.	(check) Auto-commit
+            ii.	(uncheck) Allow only SELECT statement                           
+
+4. Connect to OLTP Pluggable DB:
+    a.	Alter system flush shared_pool
+        i.	(check) Auto-commit
+        ii.	(uncheck) Allow only SELECT statement
+
+5. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
+
+      ![](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
+
+6. Go to Enterprise - Job - Library
+
+      ![](images/emratlab2step2.png " ")
+
+7. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
+
+      ![](images/emratlab2step3.png " ")
+
+8. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
+
+     ![](images/emratlab2step4.png " ")
+
+9.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![](images/emffvlab2step1.png " ")
+
+10. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+
+    ![](images/emffvlab2step2.png " ")
+
+    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+
+11.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
+
+12. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
+
+13. Go to SQL and choose SQL Tuning Set and Create STS as follows
+
+    i. Name: WLA_MC_STS2
+    ii. Choose Cursor cache
+    iii. with SOE as value
+    iv. Next
+    v. Finish
+
+14. Refresh the page and you could see the count as **30**
+
+15. Stop Swing bench
+
+Compare STS1 to STS2
+
+## Task 8: Database Workload Replay - Capture Workload
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
