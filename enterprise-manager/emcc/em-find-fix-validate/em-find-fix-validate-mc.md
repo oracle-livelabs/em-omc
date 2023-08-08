@@ -455,7 +455,7 @@ Now execute the file \@DBOP.sql
 
 ## Task 7: Workload Analysis
 
-Create SQL Tuning Set - 1
+**Create SQL Tuning Set - 1**
 
 1. Download this file 
 
@@ -501,17 +501,17 @@ Create SQL Tuning Set - 1
 
 11. Go to SQL and choose SQL Tuning Set and Create STS as follows
 
-    i. Name: WLA_MC_STS1
-    ii. Choose Cursor cache
-    iii. with SOE as value
-    iv. Next
-    v. Finish
+    1. Name: WLAMCSTS1
+    2. Choose Cursor cache
+    3. with SOE as value
+    4. Next
+    5. Finish
 
 12. Refresh the page and you could see the count as **34**
 
 13. Stop Swing bench
 
-Create SQL Tuning Set - 2
+**Create SQL Tuning Set - 2**
 
 1. Download this file 
 
@@ -526,16 +526,16 @@ Create SQL Tuning Set - 2
     ```
 
 3. Make an index invisible
-        a.	Connect to OLTP Database
-        b.	SQL Worksheet
-        c.	Alter index SOE.ORDER_PK invisible
-            i.	(check) Auto-commit
-            ii.	(uncheck) Allow only SELECT statement                           
+    1. Connect to OLTP Database
+    2.	SQL Worksheet
+    3.	Alter index SOE.ORDER_PK invisible
+        1.	(check) Auto-commit
+        2.	(uncheck) Allow only SELECT statement                           
 
 4. Connect to OLTP Pluggable DB:
-    a.	Alter system flush shared_pool
-        i.	(check) Auto-commit
-        ii.	(uncheck) Allow only SELECT statement
+    1.	Alter system flush shared_pool
+        1.	(check) Auto-commit
+        2.	(uncheck) Allow only SELECT statement
 
 5. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -569,17 +569,31 @@ Create SQL Tuning Set - 2
 
 13. Go to SQL and choose SQL Tuning Set and Create STS as follows
 
-    i. Name: WLA_MC_STS2
-    ii. Choose Cursor cache
-    iii. with SOE as value
-    iv. Next
-    v. Finish
+    1. Name: WLAMCSTS2
+    2. Choose Cursor cache
+    3. with SOE as value
+    4. Next
+    5. Finish
 
 14. Refresh the page and you could see the count as **30**
 
 15. Stop Swing bench
 
-Compare STS1 to STS2
+**Compare STS1 to STS2**
+
+1. Navigate to Workload Analysis from the Performance Menu.
+
+2. Go to One-Time Analysis tab and click on Create Analysis Task.
+
+3. Give Name: CompareWLACSTS1&2
+
+4. Under Reference Workload, click on search icon to choose WLAMCSTS1 from the dropdown menu. Later choose WLAMCSTS2 from the Compared Workload search
+
+5. in Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time. Hit on submit.
+
+6. Click on submit and refresh. You should see both the reports and click on those reports.
+
+7. You should be able to view the missing, new SQL and plan SQLs which would help in analysing the workload.
 
 ## Task 8: Database Workload Replay - Capture Workload
 
