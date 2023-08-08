@@ -37,19 +37,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![reset](./images/reset.png " ")
 
 
-2. (To be removed) Select the log group compartment.
-
-    - Click the scope filter ![scope-filter](images/scope-filter.png).
-
-    - Enter **oke-lab-9501** in the Log group Compartment textbox and select the **oke-lab-9501** compartment from the dropdown.
-
-    - Click on **Apply** button to apply the filter. 
-
-    - Click on **Close** button to close the filter window.
-![compartment](./images/compartment.png " ")
-
-
-3. Select the log group.
+2. Select the log group.
 
     - Click on the **Log Group** field in the fields panel.
 
@@ -59,7 +47,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![log-group](./images/log-group.png " ")
 
 
-4. Switch to the **Link** Visualization.
+3. Switch to the **Link** Visualization.
 
     - In Visualizations panel, Click on the dropdown and select **Link** under Analysis section.
 ![link](./images/link.png " ")
@@ -68,7 +56,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![link-result](./images/link-result.png " ")
 
 
-5. Find the unique combinations of different values of **Namespace**, **Service** and **Load Balancer IP**.
+4. Find the unique combinations of different values of **Namespace**, **Service** and **Load Balancer IP**.
 
     - We'll use  link command with these field names to group-by.
 
@@ -81,7 +69,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![group-by-result](./images/group-by-result.png " ")
 
 
-6. Add *includenulls = True* to the link command.
+5. Add *includenulls = True* to the link command.
 
     -   The link query will bring in only those Log Sources that have all of the fields specified in the Group By. In this case, we want to bring in the records, even if at least one of those fields are non-null. This is achieved by adding **includenulls = True** to the link command.
 
@@ -102,7 +90,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![includenulls-true](./images/includenulls-true.png " ")
 
 
-7. Extract additional fields using the *stats* command.
+6. Extract additional fields using the *stats* command.
 
     - The link table has one row per unique combination of the selected Group By fields. Each of these rows has underlying log records, as shown in the Count field.
 
@@ -138,7 +126,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![stats](./images/stats.png " ")
 
 
-8. Identify Load Balancer Errors using *addfields*.
+7. Identify Load Balancer Errors using *addfields*.
 
     - OCI Load Balancer Access Logs and OCI Load Balancer Error Logs capture details about the Load Balancers.
 
@@ -157,7 +145,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![addfields-lb-errors](./images/addfields-lb-errors.png " ")
 
 
-9. Rollup the Load Balancer Errors using the *eventstats* command.
+8. Rollup the Load Balancer Errors using the *eventstats* command.
 
     - Use the *eventstats* command to aggregate the Load Balancer Errors by each Load Balancer.
 
@@ -174,7 +162,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![rollup-lb-errors](./images/rollup-lb-errors.png " ")
 
 
-10. Summarize using the *eventstats* Command.
+9. Summarize using the *eventstats* Command.
 
     - We will use the *eventstats* command to aggregate the fields we have generated so far.
 
@@ -217,7 +205,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![eventstats](./images/eventstats.png " ")
 
 
-11. Filter the Table using *Type = loadbalancer* using the where command.
+10. Filter the Table using *Type = loadbalancer* using the where command.
 
     - There are multiple types of Load Balancers in the cluster. We will limit our analysis to only the type *loadbalancer*.
 
@@ -233,7 +221,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 ![lb-type](./images/lb-type.png " ")
 
 
-12. Hide unnecessary columns in the UI.
+11. Hide unnecessary columns in the UI.
 
     - We have several fields that we would only use in the Tiles.
 
@@ -250,7 +238,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
         ![hide-columns](./images/hide-columns.png " ")
 
 
-13. Summarize using Link Tiles.
+12. Summarize using Link Tiles.
 
     - The values in the first row of the link table can be used to create Tiles.
 
@@ -289,7 +277,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
         ![tile-summary-2](./images/tile-summary-2.png " ")
 
 
-14. Summary view.
+13. Summary view.
 
     - You should now be able to view the summary tiles.
 
@@ -325,7 +313,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
         ![summary-view](./images/summary-view.png " ")
 
 
-15. Save the search.
+14. Save the search.
 
     - Click on the **Actions** dropdown and click on **Save As**.
     ![actions-save](./images/actions-save.png " ")
