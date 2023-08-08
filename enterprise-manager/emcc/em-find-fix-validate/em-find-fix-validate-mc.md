@@ -500,8 +500,12 @@ Now execute the file \@DBOP.sql
 9.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
 
 10. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
+    
+    ![](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
 
-11. Go to SQL and choose SQL Tuning Set and Create STS as follows
+11. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
+
+    ![](images/WLA_STS.png " ")
 
     1. Name: WLA\_MC\_STS\_1
     2. Choose Cursor cache
@@ -509,9 +513,11 @@ Now execute the file \@DBOP.sql
     4. Next
     5. Finish
 
-12. Refresh the page and you could see the count as **34**
+12. Refresh the page and you could see the count as <em>29</em>
 
-13. Stop Swing bench
+13. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
+
+    ![](images/WLASTSswStop.png " ") 
 
 **Create SQL Tuning Set - 2**
 
@@ -527,21 +533,28 @@ Now execute the file \@DBOP.sql
     </copy>
     ```
 
-3. Make an index invisible
+3. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database. Click on the expandable arrow and choose OLTP pluggable database.
+
+    ![](images/WLAoltpDBselection.png " ")
+
+4. Go to SQL under Performance menu and choose SQL Worksheet and run the following commands to make an index invisble and flush the cache.
+
+    ![](images/WLAsqlws.png " ")  
+    
+Make an index invisible
     1. Connect to OLTP Database
     2.	SQL Worksheet
     3.	Alter index SOE.ORDER_PK invisible
         1.	(check) Auto-commit
-        2.	(uncheck) Allow only SELECT statement                           
+        2.	(uncheck) Allow only SELECT statement   
 
-4. Connect to OLTP Pluggable DB:
-    1.	Alter system flush shared_pool
+   ![](images/WLAIndexVisible.png " ")                        
+
+5. Alter system flush shared_pool
         1.	(check) Auto-commit
         2.	(uncheck) Allow only SELECT statement
 
-5. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
-
-      ![](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
+    ![](images/WLAFlush.png " ")
 
 6. Go to Enterprise - Job - Library
 
@@ -569,7 +582,9 @@ Now execute the file \@DBOP.sql
 
 12. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
 
-13. Go to SQL and choose SQL Tuning Set and Create STS as follows
+13. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
+
+    ![](images/WLA_STS.png " ") 
 
     1. Name: WLA\_MC\_STS\_2
     2. Choose Cursor cache
@@ -577,25 +592,55 @@ Now execute the file \@DBOP.sql
     4. Next
     5. Finish
 
-14. Refresh the page and you could see the count as **30**
+14. Refresh the page and you could see the count as <em>27</em>
 
-15. Stop Swing bench
+15. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
+
+    ![](images/WLASTSswStop.png " ") 
 
 **Compare STS1 to STS2**
 
-1. Navigate to Workload Analysis from the Performance Menu.
+1. Navigate to Workload Analysis from the Performance Menu. Go to One-Time Analysis tab and click on Create Analysis Task.
 
-2. Go to One-Time Analysis tab and click on Create Analysis Task.
+    ![](images/WLACreateTask.png " ") 
 
 3. Give Name: Compare\_WLA\_MC\_STS1\_2
 
 4. Under Reference Workload, click on search icon to choose WLAMCSTS1 from the dropdown menu. Later choose WLAMCSTS2 from the Compared Workload search
 
+    ![](images/WLASearchIcon.png " ") 
+
 5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time.
 
+    ![](images/WLAallInputs.png " ") 
+
 6. Click on submit and refresh. You should see both the reports and click on those reports.
+    
+    ![](images/WLAComparisonReports.png " ") 
 
 7. You should be able to view the missing, new SQL and plan SQLs which would help in analysing the workload.
+
+    ![](images/WLASampleBufferGetsReport.png " ") 
+
+8. Click on the new plan block, you could see the plans changed for the index we made invisible.
+
+    ![](images/WLANewplanReport.png " ") 
+
+9. Click on the SQLID and you could see the plan changed
+
+    ![](images/WLAPlanChangeReport.png " ") 
+
+**Revert Changes - Final**
+
+1. Make index visible
+
+2.  Copy the parameter back to original with the following command in terminal
+
+    ```
+    <copy>
+    cp /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2_backup.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml
+    </copy>
+    ```
 
 ## Task 8: Database Workload Replay - Capture Workload
 
