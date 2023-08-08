@@ -27,6 +27,7 @@ To navigate to Log Explorer, follow one of the below two methods.
 
 
 
+
 ## Task 2:  User interfaces of Log Explorer
 
 Here are the main parts of the user interface that will be used throughout this workshop.
@@ -49,16 +50,13 @@ Here are the main parts of the user interface that will be used throughout this 
 
 ## Task 3: Navigating to the Add Data Page
 
-In this task we will perform the following activities
-
-
 The Add Data Page lists the different mechanisms through which the user can ingest data to Logging Analytics.
 
   1. Monitor OCI core infrastructure : Allows user setting up data ingestion using Service Connector.
 
   2. Monitor apps and on-premises infrastructure : Allows user setting up data ingestion using Management Agent.
 
-  3. Advanced collection methods : Allows user to ingest data using On-Demand upload feature. This mechanism will be used if user wants to ingest log files without continuously collecting them using the Service Connector or  Management Agent.
+  3. Advanced collection methods : Allows user to upload the data from there computer desk. This mechanism will be used if user wants to ingest log files without continuously collecting them using the Service Connector or  Management Agent.
 
 
 There are three ways to navigate to the **Add Data** page.
@@ -142,8 +140,7 @@ There are three ways to navigate to the **Add Data** page.
 
 ## Task 5: Ingesting logs using Management Agent
 
-  This task will walk you through the steps for setting up Log collection with Management Agent. As part of this lab the following tasks have 
-  already been done.
+  This task will walk you through the steps for setting up Log collection with Management Agent. As part of this workshop the following tasks have already been done.
   
   1. Required entities have been created, entity properties have been set, and entity has been mapped with an agent which has access to the entity's logs. 
   2. Users can select a specific entity type (database)
@@ -220,8 +217,13 @@ There are three ways to navigate to the **Add Data** page.
       ![log-explorer-view-of-upload](./images/log-explorer-view-of-upload.png)  
 
 You may now proceed to the [next lab](#next).
+## Learn More
+For further reading please refer to the resources.
+
+[Configure Sources] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/configure-sources.html)
+[Manage Entities] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-entities.html)
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, June, 2023
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2023
