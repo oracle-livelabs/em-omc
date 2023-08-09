@@ -4,7 +4,7 @@
 
 The goal of this lab is to become familiar with on-premise and Oracle Cloud Database performance management (Virtual Machine/Bare Metal/Exadata Cloud Service) capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Lab Time:* 45 minutes
+*Estimated Lab Time:* 40 minutes
 
 ### About Database Performance Management
 Performance Hub is a single pane of glass view of database performance with access to Active Session History (ASH) Analytics, Real-time SQL Monitoring and SQL Tuning together. In this lab you will get familiar with Performance hub, Real-time database operation monitoring, SQL Performance Analyzer, etc.  
@@ -131,12 +131,18 @@ Select between *Task 1A* and *Task 1B*
 
 10. You can see all the executed SQL during that time along with different attributes like ‘user’,’Start’,’Ended’ etc. The test next to the \@ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
-    ![](images/533523dca8453a0ce246ac933fdb639c.jpg " ")
+    ![](images/PlanStatistics_Latest.png " ")
 
 11. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
-    1.  Tabular view - More columns and can navigate through a big plan
-    2.  Graphical view - Color coded and darker the color more rows
+    1.  Tabular view, helps in navigating through a big plan and customize the columns
+    
+    ![](images/PS_WithTablularView_HL.png " ")
+
+    2.  Graphical view is colour coded and darker the color more the data flow 
+
+    ![](images/PS_GraphicalView.png " ")
+
 
 12. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
@@ -172,9 +178,15 @@ Select between *Task 1A* and *Task 1B*
 
 5.  Navigate to **Top Activity Lite**, this page is a simplified version of Performance Hub, which contains **ASH Analytics** and **SQL Monitoring** tabs
 
+    ![](images/TALEntry.jpg " ")
+
 6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen
 
+    ![](images/TALAutoRefresh.jpg " ")
+
 7. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions.
+
+    ![](images/TALEnd.jpg " ")
 
 ## Task 4: Workload Analysis
 
