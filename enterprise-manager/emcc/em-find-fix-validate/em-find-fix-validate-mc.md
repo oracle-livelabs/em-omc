@@ -20,7 +20,6 @@ In this lab you will learn:
 | **2**  | Top Activity Lite                               | 5 minutes       | Top Activity Lite is a new feature introduced in 13c RU 15 to provide optimal response time for real-time monitoring for performance monitoring.                                                                                           | Top Activity Lite feature is a simplified version of Performance Hub, optimized for quick response under heavy loads while providing key performance diagnostics information through simple and effective  visualization. This feature helps DBAs monitor their database using a Network Operations Center (NOC) like screen.                                                                                                                                                                                                                                                                      |
 | **3**  | Workload Analysis        | 15 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create two SQL Tuning Sets with different parameter file and compare them using different comparison metrics.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate SQL performance before upgrade Database from 18.3 to 19.10. How each SQLs in the application's workload (Sales History) performs in new 19.10 upgrade. Sales History workload SQLs gathered in SQL Tuning Set SHSTS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-
 | **5**  | Tuning a SQL in a Pluggable Database (PDB) - Optional                     | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
 
 
@@ -240,13 +239,21 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/WLA_STS.png " ")
 
-    1. Name: WLA\_MC\_STS\_1
-    2. Choose Cursor cache
-    3. with SOE as value
-    4. Next
-    5. Finish
+    ![](images/WLASTSCreate.png " ")
 
+    Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
+
+    ![](images/WLASTSName.png " ")
+
+    ![](images/WLASTSCursorCache.png " ")
+
+    Choose the SOE as filter as shown in the image below and click on Finish.
+
+    ![](images/WLASTSFilter.png " ")
+    
 12. Refresh the page and you could see the count as <em>29</em>
+
+    ![](images/WLASTS1Done.png " ")
 
 13. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
 
@@ -317,15 +324,25 @@ Make an index invisible
 
 13. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    ![](images/WLA_STS.png " ") 
+    Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    1. Name: WLA\_MC\_STS\_2
-    2. Choose Cursor cache
-    3. with SOE as value
-    4. Next
-    5. Finish
+    ![](images/WLA_STS.png " ")
+
+    ![](images/WLASTSCreate.png " ")
+
+    Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
+
+    ![](images/WLASTS2Create.png " ")
+
+    ![](images/WLASTSCursorCache.png " ")
+
+    Choose the SOE as filter as shown in the image below and click on Finish.
+
+    ![](images/WLASTSFilter.png " ")
 
 14. Refresh the page and you could see the count as <em>27</em>
+
+    ![](images/WLASTS2withRefresh.png " ")
 
 15. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
 
@@ -363,7 +380,7 @@ Make an index invisible
 
     ![](images/WLAPlanChangeReport.png " ") 
 
-**Revert Changes - Final**
+**Revert Changes**
 
 1. Make index visible
 
