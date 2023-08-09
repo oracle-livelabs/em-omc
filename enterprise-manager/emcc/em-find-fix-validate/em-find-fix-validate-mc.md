@@ -281,44 +281,46 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/WLAsqlws.png " ")  
     
-Make an index invisible
-    1. Connect to OLTP Database
-    2.	SQL Worksheet
-    3.	Alter index SOE.ORDER_PK invisible
-        1.	(check) Auto-commit
-        2.	(uncheck) Allow only SELECT statement   
-
+5. Connect to OLTP pluggable database and make an index invisible to view the plan changes in the Workload Analysis. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
+    
+    ```
+    <copy>
+        Alter index SOE.ORDER_PK invisible
+    </copy>
+    ```	
    ![](images/WLAIndexVisible.png " ")                        
 
-5. Alter system flush shared_pool
-        1.	(check) Auto-commit
-        2.	(uncheck) Allow only SELECT statement
+6. In the same SQL Worksheet that connects to OLTP pluggable database, let's flush the shared_pool. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
 
+    ```
+    <copy>
+        Alter system flush shared_pool
+    </copy>
+    ```	
+    
     ![](images/WLAFlush.png " ")
 
-6. Go to Enterprise - Job - Library
+7. Go to Enterprise - Job - Library
 
       ![](images/emratlab2step2.png " ")
 
-7. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
+8. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
 
       ![](images/emratlab2step3.png " ")
 
-8. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
+9. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
 
      ![](images/emratlab2step4.png " ")
 
-9.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+10.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
     ![](images/emffvlab2step1.png " ")
 
-10. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+11. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
     ![](images/emffvlab2step2.png " ")
 
     ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
-
-11.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
 
 12. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
 
