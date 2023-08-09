@@ -501,7 +501,7 @@ Now execute the file \@DBOP.sql
 
 10. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
     
-    ![](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
+    ![](images/LoginSalesSystem.png " ")
 
 11. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
