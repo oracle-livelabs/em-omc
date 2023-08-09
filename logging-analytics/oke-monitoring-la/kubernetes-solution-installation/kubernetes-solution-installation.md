@@ -4,8 +4,6 @@
 
 In this lab, you'll deploy Kubernetes Monitoring Solution from OCI Marketplace to enable monitoring of an existing OKE Cluster.
 
-Watch the video below for a quick walk-through of the lab.
-
 
 ### Objectives
 
