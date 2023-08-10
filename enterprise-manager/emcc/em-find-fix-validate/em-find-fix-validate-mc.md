@@ -18,8 +18,8 @@ In this lab you will learn:
 |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1**  | Performance Hub                               | 15 minutes       | Oracle Enterprise Manager 13c includes a new Jet based unified Performance Hub Jet interface for performance monitoring.                                                                                           | Performance Hub is a single pane of glass view of database performance with access to Active Session History (ASH) Analytics, Real-time SQL Monitoring and SQL Tuning together. The time picker allows the administrator to switch between Real-Time and Historical views of database performance.                                                                                                                                                                                                                                                                      |
 | **2**  | Top Activity Lite                               | 5 minutes       | Top Activity Lite is a new feature introduced in 13c RU 15 to provide optimal response time for real-time monitoring for performance monitoring.                                                                                           | Top Activity Lite feature is a simplified version of Performance Hub, optimized for quick response under heavy loads while providing key performance diagnostics information through simple and effective  visualization. This feature helps DBAs monitor their database using a Network Operations Center (NOC) like screen.                                                                                                                                                                                                                                                                      |
-| **3**  | Workload Analysis        | 15 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create two SQL Tuning Sets with different parameter file and compare them using different comparison metrics.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate SQL performance before upgrade Database from 18.3 to 19.10. How each SQLs in the application's workload (Sales History) performs in new 19.10 upgrade. Sales History workload SQLs gathered in SQL Tuning Set SHSTS.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **3**  | Workload Analysis        | 15 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create two SQL Tuning Sets(STS) with different workloads and indexes and compare them using different comparison metrics.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate the SQL performance before upgrade Database from 18.3 to 19.10.  You will see how each SQLs in the application's workload (Sales History) performs in new 19.10 upgrade. The Sales History workload SQLs are gathered in SQL Tuning Set SHSTS..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **5**  | Tuning a SQL in a Pluggable Database (PDB) - Optional                     | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
 
 
@@ -114,46 +114,41 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
 
-7. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see how much activity is consumed by this SQL. Now using the same list of filters select the PDB dimension. Session Identifiers PDB.
+7. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see SQL text of this SQL. Now using the same list of filters you can choose multiple dimensions.
 
     ![](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
 
-8. What do you see? The chart changes to activity by the different pluggable databases created in this Container database.Click on the **PSALES** pluggable database on the list to add it to the filter by list and drilldown to activity by this PDB on the same page.
-
-    ![](images/384fdb12e234cbc0d60df1639079dc3e.jpg " ")
-
-    ![](images/07dcb138dcb6773ee6b560681a62ec5f.jpg " ")
-
-9. Click on the SQL Monitoring Tab
+8. Click on the SQL Monitoring Tab
 
       ![](images/6e47bf2703c3c1e4adffd39d2202045f.jpg " ")
 
-10. You can see all the executed SQL during that time along with different attributes like ‘user’,’Start’,’Ended’ etc. The test next to the \@ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
+9. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
     ![](images/PlanStatistics_Latest.png " ")
 
-11. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
+10. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
     1.  Tabular view, helps in navigating through a big plan and customize the columns
     
     ![](images/PS_WithTablularView_HL.png " ")
 
-    2.  Graphical view is colour coded and darker the color more the data flow 
+    2.  Graphical view is color coded and darker the color more the data flow 
 
     ![](images/PS_GraphicalView.png " ")
 
+11. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
-12. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
+12. Click on the **SQL Text** tab. You can see the query text which has been executed along with the bind variables.
 
-13. Click on the **SQL Text** tab. You can see the query text which has been executed.
+    ![](images/SQLBind.jpg " ")
 
-14. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
+13. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
 
-15. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
+14. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
 
-16. Click on the **Outline** tab is useful for reproducing the execution plan.
+15. Click on the **Outline** tab is useful for reproducing the execution plan.
 
-17. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
+16. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
 
 ## Task 3: Top Activity Lite
 
@@ -179,13 +174,18 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/TALEntry.jpg " ")
 
-6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen
+6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen. 
+
 
     ![](images/TALAutoRefresh.jpg " ")
 
-7. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions.
+7. By default, the Time viewport updates to latest five minutes of data. However, if moved, it will remain fixed in absolute terms (ex: 1:00 - 1:05 PM) as the chart updates to show the last hour of data, If the viewport reaches the left side of the chart and rolls over, it should be auto-pinned again to the right side of the chart.
 
     ![](images/TALEnd.jpg " ")
+
+8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
+
+    
 
 ## Task 4: Workload Analysis
 
@@ -251,11 +251,15 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/WLASTSFilter.png " ")
     
-12. Refresh the page and you could see the count as <em>29</em>
+12. Refresh the page and you could see the count (for example: 29)
 
     ![](images/WLASTS1Done.png " ")
 
-13. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
+13. Go to Enterprise - Job - Library
+
+      ![](images/emratlab2step2.png " ")
+
+14. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
 
     ![](images/WLASTSswStop.png " ") 
 
@@ -288,7 +292,7 @@ Select between *Task 1A* and *Task 1B*
         Alter index SOE.ORDER_PK invisible
     </copy>
     ```	
-   ![](images/WLAIndexVisible.png " ")                        
+   ![](images/WLAIndexInvisible.png " ")                        
 
 6. In the same SQL Worksheet that connects to OLTP pluggable database, let's flush the shared_pool. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
 
@@ -326,8 +330,6 @@ Select between *Task 1A* and *Task 1B*
 
 13. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
-
     ![](images/WLA_STS.png " ")
 
     ![](images/WLASTSCreate.png " ")
@@ -342,21 +344,31 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/WLASTSFilter.png " ")
 
-14. Refresh the page and you could see the count as <em>27</em>
+14. Refresh the page and you could see the count (for example: 27)
 
     ![](images/WLASTS2withRefresh.png " ")
 
-15. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
+15. Go to Enterprise - Job - Library
+
+      ![](images/emratlab2step2.png " ")
+
+16. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
 
     ![](images/WLASTSswStop.png " ") 
 
 **Compare STS1 to STS2**
 
-1. Navigate to Workload Analysis from the Performance Menu. Go to One-Time Analysis tab and click on Create Analysis Task.
+1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+
+    ![](images/emffvlab2step2.png " ")
+
+    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    
+2. Navigate to Workload Analysis from the Performance Menu. Go to One-Time Analysis tab and click on Create Analysis Task.
 
     ![](images/WLACreateTask.png " ") 
 
-3. Give Name: Compare\_WLA\_MC\_STS1\_2
+3. Enter Name: Compare\_WLA\_MC\_STS1\_2
 
 4. Under Reference Workload, click on search icon to choose WLAMCSTS1 from the dropdown menu. Later choose WLAMCSTS2 from the Compared Workload search
 
@@ -384,7 +396,14 @@ Select between *Task 1A* and *Task 1B*
 
 **Revert Changes**
 
-1. Make index visible
+1. Connect to OLTP pluggable database and make an index invisible to view the plan changes in the Workload Analysis. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
+    
+    ```
+    <copy>
+        Alter index SOE.ORDER_PK invisible
+    </copy>
+    ```	
+   ![](images/WLAIndexVisible.png " ")     
 
 2.  Copy the parameter back to original with the following command in terminal
 
