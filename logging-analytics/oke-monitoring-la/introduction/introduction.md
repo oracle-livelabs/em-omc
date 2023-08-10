@@ -28,7 +28,8 @@ In this workshop, you will learn how to:
         ![kubernetes-pods](images/kubernetes-pods.png)
      - ### Kubernetes Workloads
      
-        ![kubernetes-workloads](images/kubernetes-workloads.png)      
+        ![kubernetes-workloads](images/kubernetes-workloads.png) 
+* Perform advanced analytics to correlate Infrastructure (LBaaS) and K8S Platform telemetry.             
 
 
 ### Prerequisites
