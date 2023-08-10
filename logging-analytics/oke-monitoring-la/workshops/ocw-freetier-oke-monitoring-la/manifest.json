@@ -41,9 +41,9 @@
             "filename": "../../designing-dashboards/designing-dashboards.md"
         },
         {
-            "title": "Lab 6: Build a Query to list the Load Balancers and Summarize the results using tiles",
+            "title": "Lab 6: Advanced Analytics with Drill Downs",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
-            "filename": "../../load-balancer-query/load-balancer-query.md"
+            "filename": "../../advanced-analytics/advanced-analytics.md"
         },
         {
             "title": "Conclusion",
