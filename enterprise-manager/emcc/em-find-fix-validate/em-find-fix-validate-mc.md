@@ -102,7 +102,7 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/d4ec276ea05aceb2ff86f5b7ea71c36e.jpg " ")
 
-    ![](images/58e81976fa9957ee57f89139a06c4841.jpg " ")
+    ![](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
 
 5. Make sure to slide the time picker on an area of high usage (e.g., CPU, IO or Waits). Notice how the corresponding selected time window also changes in the summary section. You can also resize the slider to entirely cover the time period of your interest.
 
@@ -110,23 +110,19 @@ Select between *Task 1A* and *Task 1B*
 
     Wait class isn’t the only dimension you can drill into the performance issue by. Let us say you wanted to identify the SQL that was causing the biggest performance impact. You can do that by Clicking the drop down list and changing the top dimension from wait class to SQL ID.
 
-6. Select the SQL ID dimension from the list of available dimensions (Under Top Dimensions) using the dropdown box that is currently displaying Wait Class. Top Dimensions SQL ID
-
-    ![](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
-
-7. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see SQL text of this SQL. Now using the same list of filters you can choose multiple dimensions.
+6. Select the SQL ID dimension from the list of available dimensions (Under Top Dimensions) using the dropdown box that is currently displaying Wait Class. Top Dimensions SQL ID. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see SQL text of this SQL. Now using the same list of filters you can choose multiple dimensions.
 
     ![](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
 
-8. Click on the SQL Monitoring Tab
+7. Click on the SQL Monitoring Tab
 
       ![](images/6e47bf2703c3c1e4adffd39d2202045f.jpg " ")
 
-9. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
+8. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
     ![](images/PlanStatistics_Latest.png " ")
 
-10. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
+9. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
     1.  Tabular view, helps in navigating through a big plan and customize the columns
     
@@ -136,19 +132,19 @@ Select between *Task 1A* and *Task 1B*
 
     ![](images/PS_GraphicalView.png " ")
 
-11. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
+10. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
-12. Click on the **SQL Text** tab. You can see the query text which has been executed along with the bind variables.
+11. Click on the **SQL Text** tab. You can see the query text which has been executed along with the bind variables.
 
     ![](images/SQLBind.jpg " ")
 
-13. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
+12. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
 
-14. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
+13. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
 
-15. Click on the **Outline** tab is useful for reproducing the execution plan.
+14. Click on the **Outline** tab is useful for reproducing the execution plan.
 
-16. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
+15. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
 
 ## Task 3: Top Activity Lite
 
@@ -185,7 +181,6 @@ Select between *Task 1A* and *Task 1B*
 
 8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
 
-    
 
 ## Task 4: Workload Analysis
 
