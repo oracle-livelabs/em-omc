@@ -2,20 +2,16 @@
 
 ## Introduction
 
-```
-  TO BE UPDATED
-```
+In this lab, you will be creating a metric widget to visualize metrics in the dashboard.
 
 Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
-```
-  TO BE UPDATED
-```
+* Create a Metric Widget using an MQL Query
+* Add the metric to the dashboard
 
-
-Estimated Time: 30 minutes
+Estimated Time: 10 minutes
 
 ## Task 1: Create a widget for pod resource usage metrics (query based widget)
 You can create a metric widget based an an MQL Query as shown below
@@ -70,11 +66,13 @@ Save the dashboard to associate the new metric widget with your dashboard.  You 
 
 ## Congratulations ##
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
-- TO BE UPDATED
 
-  You may now proceed to the [next lab](#next).
+* Create a Metric Widget using an MQL Query
+* Add the metric to the dashboard
+
+You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Vikram Reddy , OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
-* **Last Updated By/Date** - Vikram Reddy, Sep, 2022
+* **Author** - Vikram Reddy, OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
+* **Contributors** -  Madhavan Arnisethangaraj, Nirav Gandhi, OCI Management Agent, Vikram Reddy, Santhosh Kumar Vuda, OCI Logging Analytics
+* **Last Updated By/Date** - Madhavan Arnisethangaraj, August, 2023
