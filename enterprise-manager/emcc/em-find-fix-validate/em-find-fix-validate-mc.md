@@ -116,7 +116,7 @@ Select between *Task 1A* and *Task 1B*
 
 7. Click on the SQL Monitoring Tab
 
-      ![](images/6e47bf2703c3c1e4adffd39d2202045f.jpg " ")
+      ![](images/SqlMonitoring.jpg " ")
 
 8. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
