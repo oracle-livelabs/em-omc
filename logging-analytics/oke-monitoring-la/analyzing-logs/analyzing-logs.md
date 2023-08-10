@@ -4,13 +4,15 @@
 
   In this lab, you'll explore the logs collected by Kubernetes Monitoring Solution you deployed in [previous lab](#prev). You'll also do basic analysis of the logs collected and learn types of logs are collected.
 
+Estimated Time: 30 minutes  
+
 ### Objectives
 
 - Understand the data model of telemetry collected by kubernetes monitoring solution
 - Gather information about the monitored OKE Cluster interactively in Log Explorer
 
 
-Estimated Time: 30 minutes
+
 
 ## Task 1: View the Logs in Log Explorer
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
@@ -62,21 +64,21 @@ Estimated Time: 30 minutes
 
 6. **End Notes** : Keep the same set up and perform the following actions.
 
-  - Select the Visualization **Sunburst** from the Visualization drop-down.
-      ![sunburst-visualization](images/sunburst-visualization.png)
+    - Select the Visualization **Sunburst** from the Visualization drop-down.
+       ![sunburst-visualization](images/sunburst-visualization.png)
 
-  - Add the field **Log Source** to the **Group by** by following the instructions in step 4.
+    - Add the field **Log Source** to the **Group by** by following the instructions in step 4.
       
-      > **Note :** Do Not Remove **Log Group** field from the **Group by**.
+       > **Note :** Do Not Remove **Log Group** field from the **Group by**.
 
-  - The **Sunburst** chart view in the context of **Log Group** and **Log Source** along with log record **Count** for each **Log Source** is displayed.
-      ![sunburst-data-lg-ls](images/sunburst-data-lg-ls.png)
+    - The **Sunburst** chart view in the context of **Log Group** and **Log Source** along with log record **Count** for each **Log Source** is displayed.
+       ![sunburst-data-lg-ls](images/sunburst-data-lg-ls.png)
 
-  - You can also hover over different colors of **Sunburst** chart to view the stats of the **Log Source**.
+    - You can also hover over different colors of **Sunburst** chart to view the stats of the **Log Source**.
 
 7. Before proceeding to **Task 2** perform the following step. 
-   - Click on **Actions** and in the menu item select **Create New**.
-     ![actions-create-new](images/actions-create-new.png)
+    - Click on **Actions** and in the menu item select **Create New**.
+      ![actions-create-new](images/actions-create-new.png)
 
 
 ## Task 2 : Get inventory of namespace, pods, services, nodes for your cluster

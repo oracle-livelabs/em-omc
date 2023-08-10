@@ -4,6 +4,7 @@
 
 In this lab, you'll deploy Kubernetes Monitoring Solution from OCI Marketplace to enable monitoring of an existing OKE Cluster.
 
+Estimated Time: 15 minutes
 
 ### Objectives
 
@@ -13,7 +14,7 @@ In this lab, you will see step-by-step instructions to:
   - Verify successful deployment. 
   - Review Application Information. 
 
-Estimated Time: 15 minutes
+
 
 ## Task 1: Navigate to Kubernetes Monitoring and Management application
 

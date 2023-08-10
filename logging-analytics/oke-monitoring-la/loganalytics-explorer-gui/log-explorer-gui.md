@@ -1,5 +1,9 @@
 # Logging Analytics Overview
 
+## Introduction
+Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure.
+
+Estimated Time: 5 minutes
 
 ## Objectives
 
@@ -9,7 +13,7 @@ In this lab, you will familiarize with:
 * Discovering & enabling OCI Service Logs in bulk
 * Collecting new logs (log sources) for existing entities
 
-Estimated Time: 5 minutes
+
 
 ## Task 1:  Navigating to Log Explorer
 
