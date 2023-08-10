@@ -1,10 +1,9 @@
-# Build a Query to list the Load Balancers and Summarize the results using tiles
+# Advanced Analytics with Drill Downs
 
 ## Introduction
 
 In this lab you'll learn advanced analytics features of Logging Analytics. You'll learn more about the query language, do correlation (link), generate standard statistical metrics from logs, extract new fields for analysis, and visualize dense information for dashboards and interactive analysis.
 
-Watch the video below for a quick walk-through of the lab.
 
 ### Objectives
 
