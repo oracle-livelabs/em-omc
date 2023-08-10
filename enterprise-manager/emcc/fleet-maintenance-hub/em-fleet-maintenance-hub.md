@@ -140,60 +140,73 @@ A gold image is the end of state software definition that contains information a
 
 ## Task 5: Subscribe Database
 
-1.  Before we start the update process, lets execute some scripts to ensure that the lab is fir to execute the required steps.
-    Script 1 will be to unsubscribe	sales.subnet.vcn.oraclevcn.com database
+1.  Before we start the update process, lets execute some scripts to check the subscription status of database ***sales.subnet.vcn.oraclevcn.com database***
 
-Lets review tile 1 and find out details of databases which are not subscribed to any of the gold images.
+  ![](images/check-sales-subscription.png "sales-status")
+  We see that sales database is associated with highlighted gold image. This was done as a pre-requisite step for another Fleet Maintenance Lab. Next step is to unsubscribe the database by
+  using the below command.
 
-  ![](images/Subscribe-homepage.png "Subscribe home page")
+  ![](images/sales-unsubscribe.png "sales-unsubscribe")
+  If the image id is same as the one highlighted above, you may use the below command. First, we will again resize the column width.
+  ```
+  <copy>emcli db_software_maintenance -unsubscribeTarget -target_name=sales.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id=FC6A1AA82CB23A62E053260 0000AB0CE</copy>
+  ```   
 
-    We see that the CDB ***sales.subnet.vcn.oraclevcn.com*** is not subscribed to any gold image. As we want to update one of its PDB to 19.18 version, lets subscribe the CDB to Gold image of 19.18 version. Currently, subscription at pluggable level is not supported.
+  else make changes in the below command and execute it.
+
+  ```
+  <copy> emcli db_software_maintenance -unsubscribeTarget -target_name=sales.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id={Insert IMAGE ID from List available gold images}</copy>
+  ```   
+
+  ![](images/New-Subscribe-homepage.png "Subscribe home page")
+
+  We see that the CDB ***sales.subnet.vcn.oraclevcn.com*** is not subscribed to any gold image. As we want to update one of its PDB to 19.18 version, lets subscribe the CDB to Gold image of 19.18 version. Currently, subscription at pluggable level is not supported.
 
 
 2. Subscribe the CDB.
 
     Lets click on the Subscribe button at the top left section of the grid. Once done a new slide out appears.
-    ![](images/Subscribe-slideout.png "Subscribe home page")
+    ![](images/New-Subscribe-slideout.png "Subscribe home page")
 
-    In the slideout, lets ensure that we have selected proper filtering criteria and from the image selection drop down, we select 19.18 gold image.
+    In the slideout, lets ensure that we have selected proper filtering criteria and from the image selection drop down, we select ***19cDB-Linux-x64-Apps***.
 
     Under Targets, lets select the CDB ***sales.subnet.vcn.oraclevcn.com***. Click on subscribe.
 
-    ![](images/Subscribe-complete.png "Subscribe complete")
+    ![](images/New-Subscribe-complete.png "Subscribe complete")
 
     Subscription of CDB completed successfully, and we can close the slideout. We can now see that the initial count of unsubscribe databases has reduced.
-    ![](images/less-count-subscribe.png "Subscribe lesscount")
+    ![](images/New-less-count-subscribe.png "Subscribe lesscount")
 
 ## Task 6: Review Image recommendations
 
-1. In order to complete the deployment of new image, lets review if the gold image we selected in previous step has all the recommended patches. Lets click on tile 2, which is ***Patch recommendation for images***.
+1. In order to complete the deployment of new image, lets review if the gold image we selected in previous step has all the recommended patches. Lets click on tile 2, which is ***Patch Recommendations for Images***.
 
-    ![](images/Patch-recommendations-image.png "Subscribe lesscount")
+    ![](images/New-Patch-recommendations-image.png "Subscribe lesscount")
 
-    If we examine the row which is related to the 19.18 gold image we selected, we see that patch recommendation for the image has a green checkmark, suggesting all recommended Oracle patches are part of the current version of the image.
+    If we examine the row which is related to the 19cDB-Linux-x64-Apps gold image we selected, we see that patch recommendation for the image has a green checkmark, suggesting all recommended Oracle patches are part of the current version of the image.
 
     However, under patch compliance column, we see that the cigar bar has some red portion. This is due to the fact that we have subscribed the CDB which is not patched to the same version of this gold image. The bar suggests that there is a pending action to update the database.
 
 ## Task 7: Review Patch Compliance
 
 1. Lets move to tile 3, which is ***Patch Compliance with Images***. From the bar chart we can see that the sales CDB is not complaint. In order to proceed with patching, from the actions column, lets select ***Update Pluggable Database***
-![](images/update-pdb.png "update pdb")
+![](images/New-update-pdb.png "update pdb")
 
 ## Task 8: Update PDB
 
 1. In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
-      ![](images/fm-flow1.png "selection")
+      ![](images/New-fm-flow1.png "selection")
       Where:
-      -  Image = We will select ***PDB Image***. Desired version of Oracle home, which our target database should run after successful completion of operation.
+      -  Image = We will select ***19cDB-Linux-x64-Apps***. Desired version of Oracle home, which our target database should run after successful completion of operation.
       -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
       -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
       -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
 
       We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
-2. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is cdb186.subnet.vcn.oraclevcn.com.
+2. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is hr.subnet.vcn.oraclevcn.com.
 
-      ![](images/fm-flow2.png "selection")
+      ![](images/New-fm-flow2.png "selection")
 
       Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
       -  Normal Host Credentials as ***ORACLE***
@@ -245,9 +258,9 @@ Lets review tile 1 and find out details of databases which are not subscribed to
 
 8.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
-      ![](images/env-list-final.png "new version check")
+      ![](images/New-env-list-final.png "new version check")
 
-      We can see that Finance pdb is relocated to a new CDB - cdb186.subnet.vcn.oraclevcn.com.
+      We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
 
 
