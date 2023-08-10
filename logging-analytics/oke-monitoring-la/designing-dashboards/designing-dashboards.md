@@ -73,6 +73,6 @@ Save the dashboard to associate the new metric widget with your dashboard.  You 
 You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Vikram Reddy, OCI Logging Analytics, Madhavan Arnisethangaraj, OCI Management Agent
-* **Contributors** -  Madhavan Arnisethangaraj, Nirav Gandhi, OCI Management Agent, Vikram Reddy, Santhosh Kumar Vuda, OCI Logging Analytics
+* **Author** - Madhavan Arnisethangaraj, OCI Management Agent
+* **Contributors** -  Madhavan Arnisethangaraj, Nirav Gandhi, OCI Management Agent
 * **Last Updated By/Date** - Madhavan Arnisethangaraj, August, 2023
