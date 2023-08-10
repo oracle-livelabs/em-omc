@@ -70,7 +70,7 @@ Save the dashboard to associate the new metric widget with your dashboard.  You 
 * Create a Metric Widget using an MQL Query
 * Add the metric to the dashboard
 
-You may now proceed to the [next lab](#next).
+You may now **proceed to the next lab**.
 
 ## Acknowledgements
 * **Author** - Madhavan Arnisethangaraj, OCI Management Agent
