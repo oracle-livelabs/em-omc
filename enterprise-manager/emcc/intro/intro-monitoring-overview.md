@@ -3,7 +3,7 @@
 ## About this Workshop
 This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Workshop Time*: 130 minutes
+*Estimated Workshop Time*: 105 minutes
 
 ### About Oracle Enterprise Manager
 Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
