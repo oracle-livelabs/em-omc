@@ -116,27 +116,27 @@ Select between *Task 1A* and *Task 1B*
 
 7. Click on the SQL Monitoring Tab
 
-      ![](images/SqlMonitoring.jpg " ")
+      ![](images/sqlmonitoring.jpg " ")
 
 8. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
-    ![](images/PlanStatistics_Latest.png " ")
+    ![](images/planstatisticslatest.png " ")
 
 9. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
     1.  Tabular view, helps in navigating through a big plan and customize the columns
     
-    ![](images/PS_WithTablularView_HL.png " ")
+    ![](images/pswithtablularviewhl.png " ")
 
     2.  Graphical view is color coded and darker the color more the data flow 
 
-    ![](images/PS_GraphicalView.png " ")
+    ![](images/psgraphicalview.png " ")
 
 10. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
 11. Click on the **SQL Text** tab. You can see the query text which has been executed along with the bind variables.
 
-    ![](images/SQLBind.jpg " ")
+    ![](images/sqlbind.jpg " ")
 
 12. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
 
@@ -168,16 +168,16 @@ Select between *Task 1A* and *Task 1B*
 
 5.  Navigate to **Top Activity Lite**, this page is a simplified version of Performance Hub, which contains **ASH Analytics** and **SQL Monitoring** tabs
 
-    ![](images/TALEntry.jpg " ")
+    ![](images/talentry.jpg " ")
 
 6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen. 
 
 
-    ![](images/TALAutoRefresh.jpg " ")
+    ![](images/talautorefresh.jpg " ")
 
 7. By default, the Time viewport updates to latest five minutes of data. However, if moved, it will remain fixed in absolute terms (ex: 1:00 - 1:05 PM) as the chart updates to show the last hour of data, If the viewport reaches the left side of the chart and rolls over, it should be auto-pinned again to the right side of the chart.
 
-    ![](images/TALEnd.jpg " ")
+    ![](images/talend.jpg " ")
 
 8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
 
@@ -228,27 +228,27 @@ Select between *Task 1A* and *Task 1B*
 
 10. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
     
-    ![](images/LoginSalesSystem.png " ")
+    ![](images/loginsalessystem.png " ")
 
 11. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    ![](images/WLA_STS.png " ")
+    ![](images/wlasts.png " ")
 
-    ![](images/WLASTSCreate.png " ")
+    ![](images/wlastscreate.png " ")
 
     Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
 
-    ![](images/WLASTSName.png " ")
+    ![](images/wlastsname.png " ")
 
-    ![](images/WLASTSCursorCache.png " ")
+    ![](images/wlastscursorcache.png " ")
 
     Choose the SOE as filter as shown in the image below and click on Finish.
 
-    ![](images/WLASTSFilter.png " ")
+    ![](images/wlastsfilter.png " ")
     
 12. Refresh the page and you could see the count (for example: 29)
 
-    ![](images/WLASTS1Done.png " ")
+    ![](images/wlasts1done.png " ")
 
 13. Go to Enterprise - Job - Library
 
@@ -256,7 +256,7 @@ Select between *Task 1A* and *Task 1B*
 
 14. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
 
-    ![](images/WLASTSswStop.png " ") 
+    ![](images/wlastsswstop.png " ") 
 
 **Create SQL Tuning Set - 2**
 
@@ -274,11 +274,11 @@ Select between *Task 1A* and *Task 1B*
 
 3. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database. Click on the expandable arrow and choose OLTP pluggable database.
 
-    ![](images/WLAoltpDBselection.png " ")
+    ![](images/wlaoltpdbselection.png " ")
 
 4. Go to SQL under Performance menu and choose SQL Worksheet and run the following commands to make an index invisble and flush the cache.
 
-    ![](images/WLAsqlws.png " ")  
+    ![](images/wlasqlws.png " ")  
     
 5. Connect to OLTP pluggable database and make an index invisible to view the plan changes in the Workload Analysis. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
     
@@ -287,7 +287,7 @@ Select between *Task 1A* and *Task 1B*
         Alter index SOE.ORDER_PK invisible
     </copy>
     ```	
-   ![](images/WLAIndexInvisible.png " ")                        
+   ![](images/wlaindexinvisible.png " ")                        
 
 6. In the same SQL Worksheet that connects to OLTP pluggable database, let's flush the shared_pool. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
 
@@ -297,7 +297,7 @@ Select between *Task 1A* and *Task 1B*
     </copy>
     ```	
     
-    ![](images/WLAFlush.png " ")
+    ![](images/wlaflush.png " ")
 
 7. Go to Enterprise - Job - Library
 
@@ -325,23 +325,23 @@ Select between *Task 1A* and *Task 1B*
 
 13. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    ![](images/WLA_STS.png " ")
+    ![](images/wlasts.png " ")
 
-    ![](images/WLASTSCreate.png " ")
+    ![](images/wlastscreate.png " ")
 
     Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
 
-    ![](images/WLASTS2Create.png " ")
+    ![](images/wlasts2create.png " ")
 
-    ![](images/WLASTSCursorCache.png " ")
+    ![](images/wlastscursorcache.png " ")
 
     Choose the SOE as filter as shown in the image below and click on Finish.
 
-    ![](images/WLASTSFilter.png " ")
+    ![](images/wlastsfilter.png " ")
 
 14. Refresh the page and you could see the count (for example: 27)
 
-    ![](images/WLASTS2withRefresh.png " ")
+    ![](images/wlasts2withrefresh.png " ")
 
 15. Go to Enterprise - Job - Library
 
@@ -349,7 +349,7 @@ Select between *Task 1A* and *Task 1B*
 
 16. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
 
-    ![](images/WLASTSswStop.png " ") 
+    ![](images/wlastsswstop.png " ") 
 
 **Compare STS1 to STS2**
 
@@ -361,33 +361,33 @@ Select between *Task 1A* and *Task 1B*
     
 2. Navigate to Workload Analysis from the Performance Menu. Go to One-Time Analysis tab and click on Create Analysis Task.
 
-    ![](images/WLACreateTask.png " ") 
+    ![](images/wlacreatetask.png " ") 
 
 3. Enter Name: Compare\_WLA\_MC\_STS1\_2
 
 4. Under Reference Workload, click on search icon to choose WLAMCSTS1 from the dropdown menu. Later choose WLAMCSTS2 from the Compared Workload search
 
-    ![](images/WLASearchIcon.png " ") 
+    ![](images/wlasearchicon.png " ") 
 
 5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time.
 
-    ![](images/WLAallInputs.png " ") 
+    ![](images/wlaallinputs.png " ") 
 
 6. Click on submit and refresh. You should see both the reports and click on those reports.
     
-    ![](images/WLAComparisonReports.png " ") 
+    ![](images/wlacomparisonreports.png " ") 
 
 7. You should be able to view the missing, new SQL and plan SQLs which would help in analysing the workload.
 
-    ![](images/WLASampleBufferGetsReport.png " ") 
+    ![](images/wlasamplebuffergetsreport.png " ") 
 
 8. Click on the new plan block, you could see the plans changed for the index we made invisible.
 
-    ![](images/WLANewplanReport.png " ") 
+    ![](images/wlanewplanreport.png " ") 
 
 9. Click on the SQLID and you could see the plan changed
 
-    ![](images/WLAPlanChangeReport.png " ") 
+    ![](images/wlaplanchangereport.png " ") 
 
 **Revert Changes**
 
@@ -398,7 +398,7 @@ Select between *Task 1A* and *Task 1B*
         Alter index SOE.ORDER_PK invisible
     </copy>
     ```	
-   ![](images/WLAIndexVisible.png " ")     
+   ![](images/wlaindexvisible.png " ")     
 
 2.  Copy the parameter back to original with the following command in terminal
 
