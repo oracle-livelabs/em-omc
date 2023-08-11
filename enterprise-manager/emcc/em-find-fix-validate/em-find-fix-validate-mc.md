@@ -444,13 +444,14 @@ Select between *Task 1A* and *Task 1B*
 
    ![](images/emratlab0step2k.png " ")
 
-4. **Click** on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emratlab1step2.png " ")
+4.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![](images/emffvlab2step1.png " ")
 
 5. Here you will notice different databases listed, such as SALES, HR etc., we will work in pluggable database psales inside the sales container database. **Expand** the Sales database from the list, and **Click** sales.subnet.vcn.oraclevcn.com_PSALES
 
-    ![](images/emratlab1step3.png " ")
+    ![](images/PSales.jpg " ")
 
 6. Go to SQL Tuning Set page by **Click** on Performance menu -> SQL -> SQL Tuning Set. Check "Named" on Credential and use SYS_SALES Credential Name from the database login screen
 
