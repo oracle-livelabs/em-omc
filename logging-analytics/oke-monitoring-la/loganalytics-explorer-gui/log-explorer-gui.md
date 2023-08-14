@@ -223,7 +223,9 @@ You may now proceed to the [next lab](#next).
 For further reading please refer to the resources.
 
 [Configure Sources] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/configure-sources.html)
+
 [Manage Entities] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-entities.html)
+
 [Upload Logs on Demand] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/upload-logs-demand.html)
 
 ## Acknowledgements
