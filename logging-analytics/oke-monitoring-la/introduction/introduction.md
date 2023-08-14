@@ -11,11 +11,10 @@ Estimated Workshop Time: 01 hours 30 minutes
 
 In this workshop, you will learn how to:
 
-* Set up Fluentd to collect Kubernetes & Linux System logs, application/container logs and Kubernetes Objects logs.
+* Install OCI Kubernetes Monitoring Solution to collect Kubernetes & Linux System logs, application/container logs and Kubernetes Objects logs.
 * Set up Management Agent to collect Kubernetes metrics and reporting them to OCI Monitoring.
-* Create a setup to monitor logs of Custom Applications/Services deployed on OKE.
-* Modify configuration to collect and process some MuShop container logs using their specific Log Sources.
-* Verify the log data of those MuShop logs in the Log Explorer.
+* Understand the data model of telemetry collected by Kubernetes Monitoring Solution.
+* Review the log data for specific MuShop logs in Log Explorer.
 * Visualize the data collected from the OKE Cluster through Dashboards like below.
      - ### Kubernetes Cluster Summary
 
@@ -50,4 +49,4 @@ This lab assumes you have:
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, Sept, 2022
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2023
