@@ -101,7 +101,7 @@ There are three ways to navigate to the **Add Data** page.
 
 ## Task 4: Ingesting logs using Service Connector
 
- > **Note:** The following set up is already been done as part of this LiveLab, thus you do not have to perform these steps. 
+The following setup is already done for this **Workshop**, no further action required.
 
 1. Click on the **Monitor OCI core infrastructure** header. OCI Core Infrastructure section will be displayed.
  ![oci-core-infrastructure](./images/oci-core-infrastructure.png)
