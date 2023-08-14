@@ -491,9 +491,9 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     ```
             | eval URL2 =
      replace(replace(replace(URL1,
-         '2023-06-29T00:00:00.000Z',                                
+         '2023-06-29T00%3A00%3A00.000Z',                                
            formatDate('Query Start Time')),
-         '2023-06-30T00:00:00.000Z',
+         '2023-06-30T00%3A00%3A00.000Z',
            formatDate('Query End Time')),
           '129.146.149.186',
             'Load Balancer IP')
@@ -512,7 +512,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     | eventstats distinctcount(Namespace) as Namespaces, distinctcount(Service) as Services, distinctcount('Load Balancer IP') as 'Load Balancers'
     | where 'LB Type' = loadbalancer
     | eval URL1 = 'https://cloud.oracle.com/loganalytics/explorer?viz=records_histogram&query=Time%20between%20%272023-06-29T00%3A00%3A00.000Z%27%20and%20%272023-06-30T00%3A00%3A00.000Z%27%20and%20%27Load%20Balancer%20IP%27%20%3D%20%27129.146.149.186%27%20and%20%27Problem%20Priority%27%20!%3D%20null%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Destination%20IP%27%20%7C%20sort%20-logrecords&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaav6rhb53wepyh3yhnm4ulfl4ko4wsyhmpfkkwr2v5dst64376xwhq%2Ctrue%3Brs%3Aocid1.compartment.oc1..aaaaaaaauxh6chgelqkqzrxmwdsydbnvodf4hhceqbsltkv63islsduvanga%2Ctrue%3Brg%3Aus-phoenix-1&timeNum=60&timeUnit=MINUTES&region=us-phoenix-1&tenant=emdemo'
-    | eval URL2 = replace(replace(replace(URL1, '2023-06-29T00:00:00.000Z', formatDate('Query Start Time')), '2023-06-30T00:00:00.000Z', formatDate('Query End Time')), '129.146.149.186', 'Load Balancer IP')
+    | eval URL2 = replace(replace(replace(URL1, '2023-06-29T00%3A00%3A00.000Z', formatDate('Query Start Time')), '2023-06-30T00%3A00%3A00.000Z', formatDate('Query End Time')), '129.146.149.186', 'Load Balancer IP')
         ```
 
     - Click on the **Run** button to run the query.
@@ -574,9 +574,9 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 | where 'LB Type' = loadbalancer
 | eval URL1 = 'https://cloud.oracle.com/loganalytics/explorer?viz=records_histogram&query=Time%20between%20%272023-06-29T00%3A00%3A00.000Z%27%20and%20%272023-06-30T00%3A00%3A00.000Z%27%20and%20%27Load%20Balancer%20IP%27%20%3D%20%27129.146.149.186%27%20and%20%27Problem%20Priority%27%20!%3D%20null%20%7C%20timestats%20count%20as%20logrecords%20by%20%27Destination%20IP%27%20%7C%20sort%20-logrecords&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaav6rhb53wepyh3yhnm4ulfl4ko4wsyhmpfkkwr2v5dst64376xwhq%2Ctrue%3Brs%3Aocid1.compartment.oc1..aaaaaaaauxh6chgelqkqzrxmwdsydbnvodf4hhceqbsltkv63islsduvanga%2Ctrue%3Brg%3Aus-phoenix-1&timeNum=60&timeUnit=MINUTES&region=us-phoenix-1&tenant=emdemo'
 | eval URL2 = replace(replace(replace(URL1,
-                                      '2023-06-29T00:00:00.000Z',
+                                      '2023-06-29T00%3A00%3A00.000Z',
                                       formatDate('Query Start Time')),
-                              '2023-06-30T00:00:00.000Z',
+                              '2023-06-30T00%3A00%3A00.000Z',
                               formatDate('Query End Time')),
                       '129.146.149.186',
                       'Load Balancer IP')

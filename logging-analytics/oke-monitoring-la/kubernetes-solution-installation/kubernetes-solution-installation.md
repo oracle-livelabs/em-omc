@@ -81,7 +81,9 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 
   - If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
 
-  - Click on the **Create** button to create the stack. It will take around 90 seconds for the stack to get created.
+  - Click on the **Create** button to create the stack. This step will create an ORM (Oracle Resource Manager) job that uses [Terraform](https://github.com/oracle-quickstart/oci-kubernetes-monitoring/tree/main/terraform) to deploy the solution.
+  
+  - It will take around 90 seconds for the stack to get created.
     ![review-stack](./images/review-stack.png " ")
     ![stack-execution](./images/stack-execution.png " ")
   
