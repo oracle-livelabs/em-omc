@@ -124,7 +124,7 @@ The following setup is already done for this **Workshop**, no further action req
     - In the textbox enter the text **LoadBalancer**  and click on the resultant **LoadBalancer** text. A list of all available Load Balancers will be displayed.
         ![load-balancers-list](./images/load-balancers-list.png)
 
-    - Select the Load Balancer from which logs needs to be collected. And click **Next**
+    - Select the Load Balancer from which logs needs to be collected. Click **Next**
         ![select-load-balancer-click-next](./images/select-load-balancer-click-next.png) 
 
     - Configure Service Connector Panel will be displayed. Click on **Configure Log Collection** button.
