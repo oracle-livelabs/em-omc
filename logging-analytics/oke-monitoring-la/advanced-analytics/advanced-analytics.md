@@ -636,4 +636,4 @@ In this workshop, we have
 ## Acknowledgements
 * **Author** - Samarthya Sahu , OCI Logging Analytics
 * **Contributors** - Sreeji Das , OCI Logging Analytics
-* **Last Updated By/Date** - Samarthya Sahu, Sep, 2023
+* **Last Updated By/Date** - Samarthya Sahu, Aug, 2023

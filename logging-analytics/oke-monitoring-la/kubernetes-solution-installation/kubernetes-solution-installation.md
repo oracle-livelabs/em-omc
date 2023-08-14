@@ -151,4 +151,4 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 ## Acknowledgements
 * **Author** - Samarthya Sahu , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Samarthya Sahu, Jun, 2023
+* **Last Updated By/Date** - Samarthya Sahu, Aug, 2023

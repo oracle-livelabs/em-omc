@@ -13,7 +13,7 @@ In this workshop, you will learn how to:
 
 * Install OCI Kubernetes Monitoring Solution to collect Kubernetes & Linux System logs, application/container logs and Kubernetes Objects logs.
 * Set up Management Agent to collect Kubernetes metrics and reporting them to OCI Monitoring.
-* Understand the data model of the collected log data.
+* Understand the data model of telemetry collected by Kubernetes Monitoring Solution.
 * Review the log data for specific MuShop logs in Log Explorer.
 * Visualize the data collected from the OKE Cluster through Dashboards like below.
      - ### Kubernetes Cluster Summary
