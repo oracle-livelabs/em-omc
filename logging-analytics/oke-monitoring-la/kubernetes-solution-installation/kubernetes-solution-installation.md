@@ -12,7 +12,8 @@ In this lab, you will see step-by-step instructions to:
 
   - Use OCI Marketplace to configure and deploy the Kubernetes Monitoring solution.
   - Verify successful deployment. 
-  - Review Application Information. 
+  - Review Application Information.
+  - Explore created Kubernetes Dashboards.
 
 
 
