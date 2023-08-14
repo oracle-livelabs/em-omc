@@ -60,7 +60,7 @@ The Add Data Page lists the different mechanisms through which the user can inge
 
   2. Monitor apps and on-premises infrastructure : Allows user setting up data ingestion using Management Agent.
 
-  3. Advanced collection methods : Allows user to upload the data from there computer desk. This mechanism will be used if user wants to ingest log files without continuously collecting them using the Service Connector or  Management Agent.
+  3. Advanced collection methods : Allows user to upload the data from there computer desktop. This mechanism will be used if user wants to ingest log files without continuously collecting them using the Service Connector or  Management Agent.
 
 
 There are three ways to navigate to the **Add Data** page.
