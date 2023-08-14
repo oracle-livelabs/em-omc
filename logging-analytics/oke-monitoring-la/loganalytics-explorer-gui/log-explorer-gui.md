@@ -155,8 +155,6 @@ The following setup is already done for this **Workshop**, no further action req
     
     ![management-agent-log-configuration](./images/management-agent-log-configuration.gif)
 
-    > **Note** : Live Lab user does not have Authz to configure the Agent at the moment, **Kumar** to fix it.
-
 
 ## Task 6: Upload log files from your computer desktop
 1. Navigate to the **Add Data** page by using any one of the options in Task #3.
@@ -180,11 +178,11 @@ The following setup is already done for this **Workshop**, no further action req
 
     - **Log Group** - Select your user's Log Group Name in the Log Group Compartment.
      
-          > Note : **Log Group Compartment** &  **Log Group** can be found in **View Login Info** page.
+          > **Note** : **Log Group Compartment** &  **Log Group** can be found in **View Login Info** page.
 
-    - Click on the **Select Files** button and select the file to upload from your **Computer**.
+    - Click on the **Select Files** button and select the file to upload from your **Computer Desktop**.
      
-          > **Note** : I have selected LinuxSyslogSource.log file from the  **Computer**.
+          > **Note** : I have selected LinuxSyslogSource.log file from the  **Computer Desktop**.
 
     - Click on **Next** button. 
       ![upload-details](./images/upload-details.png)
@@ -226,6 +224,7 @@ For further reading please refer to the resources.
 
 [Configure Sources] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/configure-sources.html)
 [Manage Entities] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-entities.html)
+[Upload Logs on Demand] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/upload-logs-demand.html)
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
