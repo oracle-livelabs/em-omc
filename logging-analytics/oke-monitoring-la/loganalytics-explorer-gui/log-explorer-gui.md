@@ -5,7 +5,7 @@ Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that l
 
 Estimated Time: 5 minutes
 
-## Objectives
+### Objectives
 
 In this lab, you will familiarize with:
 * Navigating to Log Explorer
