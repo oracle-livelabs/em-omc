@@ -7,6 +7,9 @@ This live lab will cover setting up end-to-end monitoring solution for a sample 
 
 Estimated Workshop Time: 01 hours 30 minutes
 
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Logging Analytics](videohub:1_dt55vn2d) 
+
 ### Objectives
 
 In this workshop, you will learn how to:
