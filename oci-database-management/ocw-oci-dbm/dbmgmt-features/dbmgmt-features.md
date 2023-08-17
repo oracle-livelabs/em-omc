@@ -22,7 +22,7 @@ Database Administration
 Estimated Time: 1 hour
 
 Watch the video below for a quick walk-through of the lab.
-[Exploring Oracle Cloud Infrastructure Database Management](videohub:1_qpjm77l8)
+[Exploring Oracle Cloud Infrastructure Database Management](videohub:1_mpf7rizz)
 
 ### Objectives
 
