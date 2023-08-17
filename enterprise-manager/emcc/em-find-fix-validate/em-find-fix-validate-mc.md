@@ -47,29 +47,29 @@ Select between *Task 1A* and *Task 1B*
     Password: <copy>welcome1</copy>
     ```
 
-    ![](../initialize-environment/images/em-login.png " ")
+    ![EM login](../initialize-environment/images/em-login.png " ")
 
 2. From the upper left, navigate from **Enterprise** to **Job** to then **Library**
 
-    ![](images/emjobnav.png " ")
+    ![EM Job Navigation](images/emjobnav.png " ")
 
 3. Locate and select the job name **1-DB\_LAB\_START**, and Click the Submit  button.
 
-    ![](images/emdbstartjob.png " ")
+    ![EM DB start job](images/emdbstartjob.png " ")
 
 4. Leave default values in the fields and then click the Submit button in the upper right hand of your window.
 
-    ![](images/emjobsubmitbutton.png " ")
+    ![EM Job Submit Button](images/emjobsubmitbutton.png " ")
 
 5. The workload has started and will take a few minutes to ramp up.
 
-    ![](images/emjobcom.png " ")
+    ![EM Job Confirmation](images/emjobcom.png " ")
 
 ## Task 1B: Prepare database Using the terminal
 
 1. Instead of *Task 1A* above, you may run the block below from the terminal as user *oracle*
 
-    ![](images/em-login2.png " ")
+    ![EM login](images/em-login2.png " ")
 
     ```
     <copy>
@@ -78,31 +78,31 @@ Select between *Task 1A* and *Task 1B*
     . ./1-db_lab_start.sh</copy>
     ```
 
-    ![](images/emopt3start.png " ")
+    ![EM Terminal Start](images/emopt3start.png " ")
 
 ## Task 2: Performance Hub
 
 1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emffvlab2step1.png " ")
+    ![Navigating to the Databases](images/emffvlab2step1.png " ")
 
 2. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
-    ![](images/emffvlab2step2.png " ")
+    ![Select the database](images/emffvlab2step2.png " ")
 
-    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    ![EM DB Home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
 
 3.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
 
-    ![](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
+    ![Containers tab on DB Home page](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
 
 4.  Notice that the PSALES database is the busiest. We focus our attention to this PDB. Let us now navigate to Performance Hub. Select Performance Hub from the Performance Menu and Click on ASH Analytics and use the sales\_system credential name from the database login screen.
 
-    ![](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
+    ![Navigate to ASH Analytics](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
 
-    ![](images/d4ec276ea05aceb2ff86f5b7ea71c36e.jpg " ")
+    ![DB Login page](images/d4ec276ea05aceb2ff86f5b7ea71c36e.jpg " ")
 
-    ![](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
+    ![Performance Hub page](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
 
 5. Make sure to slide the time picker on an area of high usage (e.g., CPU, IO or Waits). Notice how the corresponding selected time window also changes in the summary section. You can also resize the slider to entirely cover the time period of your interest.
 
@@ -112,31 +112,31 @@ Select between *Task 1A* and *Task 1B*
 
 6. Select the SQL ID dimension from the list of available dimensions (Under Top Dimensions) using the dropdown box that is currently displaying Wait Class. Top Dimensions SQL ID. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see SQL text of this SQL. Now using the same list of filters you can choose multiple dimensions.
 
-    ![](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
+    ![Dimensions list on Performance Hub page](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
 
 7. Click on the SQL Monitoring Tab
 
-      ![](images/sqlmonitoring.jpg " ")
+      ![SQL Monitoring](images/sqlmonitoring.jpg " ")
 
 8. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
-    ![](images/planstatisticslatest.png " ")
+    ![Plan Statistics](images/planstatisticslatest.png " ")
 
 9. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
     1.  Tabular view, helps in navigating through a big plan and customize the columns
     
-    ![](images/pswithtablularviewhl.png " ")
+    ![Tabular View on SQL Monitoring](images/pswithtablularviewhl.png " ")
 
     2.  Graphical view is color coded and darker the color more the data flow 
 
-    ![](images/psgraphicalview.png " ")
+    ![Graphical View](images/psgraphicalview.png " ")
 
 10. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
 11. Click on the **SQL Text** tab. You can see the query text which has been executed along with the bind variables.
 
-    ![](images/sqlbind.jpg " ")
+    ![SQL Bind variables list](images/sqlbind.jpg " ")
 
 12. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
 
@@ -150,34 +150,34 @@ Select between *Task 1A* and *Task 1B*
 
 1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emffvlab2step1.png " ")
+    ![Navigating to databases](images/emffvlab2step1.png " ")
 
 2. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
-    ![](images/emffvlab2step2.png " ")
+    ![Select the database](images/emffvlab2step2.png " ")
 
-    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
 
 3.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
 
-    ![](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
+    ![Containers tab](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
 
 4.  Notice that the PSALES database is the busiest. We focus our attention to this PDB. Let us now navigate to Performance Hub. Select Performance Hub from the Performance Menu and Click on ASH Analytics and use the sales\_system credential name from the database login screen.
 
-    ![](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
+    ![Navigate to ASH Analytics](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
 
 5.  Navigate to **Top Activity Lite**, this page is a simplified version of Performance Hub, which contains **ASH Analytics** and **SQL Monitoring** tabs
 
-    ![](images/talentry.jpg " ")
+    ![Top Activity Lite entry point](images/talentry.jpg " ")
 
 6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen. 
 
 
-    ![](images/talautorefresh.jpg " ")
+    ![Auto Refresh option on Top Activity Lite page](images/talautorefresh.jpg " ")
 
 7. By default, the Time viewport updates to latest five minutes of data. However, if moved, it will remain fixed in absolute terms (ex: 1:00 - 1:05 PM) as the chart updates to show the last hour of data, If the viewport reaches the left side of the chart and rolls over, it should be auto-pinned again to the right side of the chart.
 
-    ![](images/talend.jpg " ")
+    ![Tabs on Top Activity Lite](images/talend.jpg " ")
 
 8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
 
@@ -200,63 +200,63 @@ Select between *Task 1A* and *Task 1B*
     ```
 3. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
-      ![](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
+      ![EM login](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
 
 4. Go to Enterprise - Job - Library
 
-      ![](images/emratlab2step2.png " ")
+      ![Job library](images/emratlab2step2.png " ")
 
 5. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
 
-      ![](images/emratlab2step3.png " ")
+      ![Start Swingbench](images/emratlab2step3.png " ")
 
 6. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
 
-     ![](images/emratlab2step4.png " ")
+     ![Submit Job](images/emratlab2step4.png " ")
 
 7.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emffvlab2step1.png " ")
+    ![Navigating to the databases](images/emffvlab2step1.png " ")
 
 8. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
-    ![](images/emffvlab2step2.png " ")
+    ![Select the database](images/emffvlab2step2.png " ")
 
-    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
 
 9.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
 
 10. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
     
-    ![](images/loginsalessystem.png " ")
+    ![Login into the database](images/loginsalessystem.png " ")
 
 11. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    ![](images/wlasts.png " ")
+    ![SQL Tuning Set](images/wlasts.png " ")
 
-    ![](images/wlastscreate.png " ")
+    ![Create SQL Tuning Sets](images/wlastscreate.png " ")
 
     Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
 
-    ![](images/wlastsname.png " ")
+    ![STS Name](images/wlastsname.png " ")
 
-    ![](images/wlastscursorcache.png " ")
+    ![Option to create STS](images/wlastscursorcache.png " ")
 
     Choose the SOE as filter as shown in the image below and click on Finish.
 
-    ![](images/wlastsfilter.png " ")
+    ![Enter SOE in schema](images/wlastsfilter.png " ")
     
 12. Refresh the page and you could see the count (for example: 29)
 
-    ![](images/wlasts1done.png " ")
+    ![STS is created](images/wlasts1done.png " ")
 
 13. Go to Enterprise - Job - Library
 
-      ![](images/emratlab2step2.png " ")
+      ![Job Library](images/emratlab2step2.png " ")
 
 14. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
 
-    ![](images/wlastsswstop.png " ") 
+    ![Stop Swingbench](images/wlastsswstop.png " ") 
 
 **Create SQL Tuning Set - 2**
 
@@ -274,11 +274,11 @@ Select between *Task 1A* and *Task 1B*
 
 3. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database. Click on the expandable arrow and choose OLTP pluggable database.
 
-    ![](images/wlaoltpdbselection.png " ")
+    ![Choosing OLTP Database](images/wlaoltpdbselection.png " ")
 
 4. Go to SQL under Performance menu and choose SQL Worksheet and run the following commands to make an index invisble and flush the cache.
 
-    ![](images/wlasqlws.png " ")  
+    ![SQL Worksheet](images/wlasqlws.png " ")  
     
 5. Connect to OLTP pluggable database and make an index invisible to view the plan changes in the Workload Analysis. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
     
@@ -287,7 +287,7 @@ Select between *Task 1A* and *Task 1B*
         Alter index SOE.ORDER_PK invisible
     </copy>
     ```	
-   ![](images/wlaindexinvisible.png " ")                        
+   ![Index invisible query](images/wlaindexinvisible.png " ")                        
 
 6. In the same SQL Worksheet that connects to OLTP pluggable database, let's flush the shared_pool. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
 
@@ -297,97 +297,97 @@ Select between *Task 1A* and *Task 1B*
     </copy>
     ```	
     
-    ![](images/wlaflush.png " ")
+    ![Flush shared pool query](images/wlaflush.png " ")
 
 7. Go to Enterprise - Job - Library
 
-      ![](images/emratlab2step2.png " ")
+      ![Job Library](images/emratlab2step2.png " ")
 
 8. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
 
-      ![](images/emratlab2step3.png " ")
+      ![Start Swingbench](images/emratlab2step3.png " ")
 
 9. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
 
-     ![](images/emratlab2step4.png " ")
+     ![Submit Job](images/emratlab2step4.png " ")
 
 10.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emffvlab2step1.png " ")
+    ![Navigating to the Databases](images/emffvlab2step1.png " ")
 
 11. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
-    ![](images/emffvlab2step2.png " ")
+    ![Database list](images/emffvlab2step2.png " ")
 
-    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
 
 12. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
 
 13. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
 
-    ![](images/wlasts.png " ")
+    ![SQL Tuning Set](images/wlasts.png " ")
 
-    ![](images/wlastscreate.png " ")
+    ![Create STS](images/wlastscreate.png " ")
 
-    Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
+    Enter the name as WLA\_MC\_STS\_2, choose Cursor Cache radio button.
 
-    ![](images/wlasts2create.png " ")
+    ![Enter name](images/wlasts2create.png " ")
 
-    ![](images/wlastscursorcache.png " ")
+    ![Choose cursor Cache](images/wlastscursorcache.png " ")
 
     Choose the SOE as filter as shown in the image below and click on Finish.
 
-    ![](images/wlastsfilter.png " ")
+    ![Choose SOE in schema](images/wlastsfilter.png " ")
 
 14. Refresh the page and you could see the count (for example: 27)
 
-    ![](images/wlasts2withrefresh.png " ")
+    ![Refresh STS](images/wlasts2withrefresh.png " ")
 
 15. Go to Enterprise - Job - Library
 
-      ![](images/emratlab2step2.png " ")
+    ![Job Library](images/emratlab2step2.png " ")
 
 16. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
 
-    ![](images/wlastsswstop.png " ") 
+    ![Stop Swingbench](images/wlastsswstop.png " ") 
 
 **Compare STS1 to STS2**
 
 1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
-    ![](images/emffvlab2step2.png " ")
+    ![DB list](images/emffvlab2step2.png " ")
 
-    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
     
 2. Navigate to Workload Analysis from the Performance Menu. Go to One-Time Analysis tab and click on Create Analysis Task.
 
-    ![](images/wlacreatetask.png " ") 
+    ![One-Time Analysis tab](images/wlacreatetask.png " ") 
 
 3. Enter Name: Compare\_WLA\_MC\_STS1\_2
 
-4. Under Reference Workload, click on search icon to choose WLAMCSTS1 from the dropdown menu. Later choose WLAMCSTS2 from the Compared Workload search
+4. Under Reference Workload, click on search icon to choose WLA\_MC\_STS\_1 from the dropdown menu. Later choose WLA\_MC\_STS\_2 from the Compared Workload search
 
-    ![](images/wlasearchicon.png " ") 
+    ![Choose from the search icon](images/wlasearchicon.png " ") 
 
 5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time.
 
-    ![](images/wlaallinputs.png " ") 
+    ![All Inputs for comparison](images/wlaallinputs.png " ") 
 
 6. Click on submit and refresh. You should see both the reports and click on those reports.
     
-    ![](images/wlacomparisonreports.png " ") 
+    ![Comparison reports](images/wlacomparisonreports.png " ") 
 
 7. You should be able to view the missing, new SQL and plan SQLs which would help in analysing the workload.
 
-    ![](images/wlasamplebuffergetsreport.png " ") 
+    ![Sample report with Buffer Gets Comparison metric](images/wlasamplebuffergetsreport.png " ") 
 
 8. Click on the new plan block, you could see the plans changed for the index we made invisible.
 
-    ![](images/wlanewplanreport.png " ") 
+    ![Plan change in the report](images/wlanewplanreport.png " ") 
 
 9. Click on the SQLID and you could see the plan changed
 
-    ![](images/wlaplanchangereport.png " ") 
+    ![SQLID for the plan change](images/wlaplanchangereport.png " ") 
 
 **Revert Changes**
 
@@ -395,10 +395,10 @@ Select between *Task 1A* and *Task 1B*
     
     ```
     <copy>
-        Alter index SOE.ORDER_PK invisible
+        Alter index SOE.ORDER_PK visible
     </copy>
     ```	
-   ![](images/wlaindexvisible.png " ")     
+   ![Make index visible](images/wlaindexvisible.png " ")     
 
 2.  Copy the parameter back to original with the following command in terminal
 
@@ -412,56 +412,56 @@ Select between *Task 1A* and *Task 1B*
 
 1.  Log into an Enterprise Manager VM. The Enterprise Manager credentials are “sysman/welcome1”. **Click** on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
+    ![EM login](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
 
-    ![](images/emratlab1step2.png " ")
+    ![Navigate to the Databases](images/emratlab1step2.png " ")
 
 
 
 2. Shutdown Databases cdb186.subnet.vcn.oraclevcn.com, finance.subnet.vcn.oraclevcn.com, hr.subnet.vcn.oraclevcn.com.
 
-  ![](images/emratlab0step2a.png " ")
+  ![DB list](images/emratlab0step2a.png " ")
 
-  ![](images/emratlab0step2b.png " ")
+  ![Database shutdown](images/emratlab0step2b.png " ")
 
-  ![](images/emratlab0step2c.png " ")
+  ![Inputs for DB startup/shutdown](images/emratlab0step2c.png " ")
 
-  ![](images/emratlab0step2d.png " ")
+  ![Confirmation](images/emratlab0step2d.png " ")
 
-  ![](images/emratlab0step2e.png " ")
+  ![In-progress](images/emratlab0step2e.png " ")
 
 3. In this Lab, we use Databases db19c.subnet.vcn.oraclevcn.com, emrep.us.oracle.com, sales.subnet.vcn.oraclevcn.com. Check if Database db19c.subnet.vcn.oraclevcn.com is open and available. If it is down, please start Database db19c.subnet.vcn.oraclevcn.com. Open Pluggable Databases db19c.subnet.vcn.oraclevcn.com\_OLTP\_CL2, db19c.subnet.vcn.oraclevcn.com\_PSAL\_CL1.
 
-   ![](images/emratlab0step2f.png " ")
+   ![DB list](images/emratlab0step2f.png " ")
 
-   ![](images/emratlab0step2g.png " ")
+   ![Startup/Shutdown](images/emratlab0step2g.png " ")
 
-   ![](images/emratlab0step2h.png " ")
+   ![Open or Close pluggable database](images/emratlab0step2h.png " ")
 
-   ![](images/emratlab0step2i.png " ")
+   ![DB login](images/emratlab0step2i.png " ")
 
-   ![](images/emratlab0step2j.png " ")
+   ![Open or Close pluggable database](images/emratlab0step2j.png " ")
 
-   ![](images/emratlab0step2k.png " ")
+   ![Open or Close pluggable database](images/emratlab0step2k.png " ")
 
 
 4.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emffvlab2step1.png " ")
+    ![Navigate to the databases](images/emffvlab2step1.png " ")
 
 5. Here you will notice different databases listed, such as SALES, HR etc., we will work in pluggable database psales inside the sales container database. **Expand** the Sales database from the list, and **Click** sales.subnet.vcn.oraclevcn.com_PSALES
 
-    ![](images/PSales.jpg " ")
+    ![choose PSales pluggable db](images/psales.jpg " ")
 
 6. Go to SQL Tuning Set page by **Click** on Performance menu -> SQL -> SQL Tuning Set. Check "Named" on Credential and use SYS_SALES Credential Name from the database login screen
 
-    ![](images/emratlab1step4a.png " ")
+    ![Navigate to STS](images/emratlab1step4a.png " ")
 
-    ![](images/emratlab1step4b.png " ")
+    ![DB login](images/emratlab1step4b.png " ")
 
 7. Pick SQL Tuning Set 'shsts1' and **Click** Copy To A Database button
 
-    ![](images/emratlab1step5.png " ")
+    ![Choose shsts1](images/emratlab1step5.png " ")
 
 8. Enter Copy SQL Tuning Set
 
@@ -470,11 +470,11 @@ Select between *Task 1A* and *Task 1B*
        - Pick **ORACLE** for both Source and Destination Credentials and **SYS_SALES** for Destination Database Credential
        - Click **Ok**
 
-    ![](images/emratlab1step6a.png " ")
+    ![Choose the DB](images/emratlab1step6a.png " ")
 
-    ![](images/emratlab1step6b.png " ")
+    ![Choose from the dropdwon](images/emratlab1step6b.png " ")
 
-    ![](images/emratlab1step6c.png " ")
+    ![Choose named credentials](images/emratlab1step6c.png " ")
 
    View on job page to check status of the Copy STS job. It can take 1.5-2 minutes.
 
@@ -483,42 +483,42 @@ Select between *Task 1A* and *Task 1B*
        - **Click** db19c.subnet.vcn.oraclevcn.com - PDB **PSAL_CLone1**
        - **Click** on menu Performance - SQL - SQL Performance Analyzer
 
-    ![](images/emratlab1step7a.png " ")
+    ![Navigate to the databases](images/emratlab1step7a.png " ")
 
-    ![](images/emratlab1step7b.png " ")
+    ![Choose the DB](images/emratlab1step7b.png " ")
 
-    ![](images/emratlab1step7c.png " ")
+    ![SPA Home](images/emratlab1step7c.png " ")
 
 10. In SPA (SQL Performance Analyzer) page, **Click** Guided Workflow
 
-    ![](images/emratlab1step8.png " ")
+    ![Guided workflow](images/emratlab1step8.png " ")
 
 11. Step 1 Create SPA Task  based on STS
 
-    ![](images/emratlab1step9a.png " ")
+    ![Create SPA Task](images/emratlab1step9a.png " ")
 
        - Enter Name for the Task Name : **SHSPATASK**
        - Enter Description : **Sales History SPA Task**
        - Pick STS : **SHSTS1**
 
-    ![](images/emratlab1step9b.png " ")
+    ![Inputs for SPA task](images/emratlab1step9b.png " ")
 
        - **Click** Create and back to **Guided Workflow** page
 
 12. Step 2 Create SQL Trial in Initial Environment
 
-    ![](images/emratlab1step10a.png " ")
+    ![Go to the step2](images/emratlab1step10a.png " ")
 
        - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_18C**
        - Enter Description : Sales History 18C run
        - Creation Method: **Execute SQLs Remotely**
 
-    ![](images/emratlab1step10b.png " ")
+    ![Execute SQLs Remotely](images/emratlab1step10b.png " ")
 
        - Default per-SQL Time Limit
        - Click Create Database Link button
 
-    ![](images/emratlab1step10e.png " ")
+    ![Create Databse link](images/emratlab1step10e.png " ")
 
        - Enter Name :  **PSALES.SUBNET.VCN.ORACLEVCN.COM**
        - Enter Net Service Name :
@@ -532,26 +532,26 @@ Select between *Task 1A* and *Task 1B*
        - Password : **welcome1**
        - Click Ok
 
-    ![](images/emratlab1step10f.png " ")
+    ![Inputs for DB link](images/emratlab1step10f.png " ")
 
        - Click Search button then pick Database Link  **PSALES.SUBNET.VCN.ORACLEVCN.COM**
 
-    ![](images/emratlab1step10c.png " ")
+    ![Search icon](images/emratlab1step10c.png " ")
 
        - **Check** Trial environment established
        - **Click** Submit
 
 13. Back to SQL Performance Analyzer Home page, to check the status of the task run.
 
-    ![](images/emratlab1step11a.png " ")
+    ![Processing SPA task](images/emratlab1step11a.png " ")
 
        - Continue the Workflow **Click** SHSPATASK
 
-    ![](images/emratlab1step11b.png " ")
+    ![Completed SPA task](images/emratlab1step11b.png " ")
 
 14. Continue Step 3 in SPA Guided Workflow **SHSPATASK**, and create SQL Trial in Changed Environment
 
-    ![](images/emratlab1step12a.png " ")
+    ![Step3 for SPA task](images/emratlab1step12a.png " ")
 
        - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_19C**
        - Enter Description : Sales History 19C Run
@@ -560,95 +560,95 @@ Select between *Task 1A* and *Task 1B*
        - **Check** Trial environment established
        - **Click** Submit
 
-    ![](images/emratlab1step12b.png " ")
+    ![Give inputs](images/emratlab1step12b.png " ")
 
 15. Back to SQL Performance Analyzer Home page, to check the status of the task run.
 
-    ![](images/emratlab1step13.png " ")
+    ![Run task](images/emratlab1step13.png " ")
 
        - Continue the Workflow **Click** SHSPATASK
 
 16. Continue Step 4 in SPA Guided Workflow **SHSPATASK**, and compare Step 2 and Step 3
 
-    ![](images/emratlab1step14a.png " ")
+    ![Step4 of SPA task](images/emratlab1step14a.png " ")
 
        - Trial 1 Name : **SHSTS\_SQL\_TRIAL\_18C**
        - Trial 2 Name : **SHSTS\_SQL\_TRIAL\_19C**
        - Comparison Metric : **Buffer Get**
        - **Click** Submit
 
-    ![](images/emratlab1step14c.png " ")
+    ![Choose Buffer gets](images/emratlab1step14c.png " ")
 
 17. Continue Step 5 in SPA Guided Workflow **SHSPATASK**, View Trial Comparison report
 
-    ![](images/emratlab1step15a.png " ")
+    ![Step5 of SPA task](images/emratlab1step15a.png " ")
 
-    ![](images/emratlab1step15b.png " ")
+    ![Choose SQL ID](images/emratlab1step15b.png " ")
 
        - **Click** one of the SQLID to check the detail of the SQL comparison
 
-    ![](images/emratlab1step15c.png " ")
+    ![Click on the Comparison metric](images/emratlab1step15c.png " ")
 
 
 ## Task 6: Tuning a SQL in a PDB - Optional
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
-    ![](images/8e45436e4fa48b9a5bda495da7b0a674.jpg " ")
+    ![EM login](images/8e45436e4fa48b9a5bda495da7b0a674.jpg " ")
 
 2.  Once logged into Enterprise Manager, Select **Targets**, then **Databases** . Click on the **expand** icon on the left and click on the database **sales.subnet.vcn.oraclevcn.com**
 
-    ![](images/63f4072fb3b311db561d2c284bc93ffe.png " ")
+    ![DB list](images/63f4072fb3b311db561d2c284bc93ffe.png " ")
 
 3.  You should now see the Database Home page.
 
-    ![](images/611d814ca29dfc9f327a7c8159608093.jpg " ")
+    ![DB home page](images/611d814ca29dfc9f327a7c8159608093.jpg " ")
 
 4.  From the Performance Menu Click on **Performance Hub**, then **ASH Analytics**.
 
-    ![](images/ea10a67618855f3e0ce1a5f5c7157d71.jpg " ")
+    ![ASH analytics](images/ea10a67618855f3e0ce1a5f5c7157d71.jpg " ")
 
 5.  In the bottom left of the page, Click on the **activity bar** for the SQL showing highest activity.
 
-    ![](images/1530ad41444abf8120ba3a6bce8d9ba1.jpg " ")
+    ![Activity bar](images/1530ad41444abf8120ba3a6bce8d9ba1.jpg " ")
 
 6.  Now schedule the SQL Tuning Advisor by Clicking on the **Tune SQL** button.
 
-    ![](images/4532cfdb72eeef8ade51f86d9974061e.jpg " ")
+    ![Tune SQL](images/4532cfdb72eeef8ade51f86d9974061e.jpg " ")
 
 7.  Accept the default and Submit the **SQL tuning Job**.
 
-    ![](images/528d1e6ee4c55f477811c554c2eeff99.jpg " ")
+    ![Choose default](images/528d1e6ee4c55f477811c554c2eeff99.jpg " ")
 
-    ![](images/8aaa9d1d202302cd87c3870ffe51b956.png " ")
+    ![Submit the job](images/8aaa9d1d202302cd87c3870ffe51b956.png " ")
 
 8.  Once the job completes. You should see the recommendations for either creating a profile or an index.
 
-    ![](images/64e4e02ca8258d7c1fc54bec446b691a.png " ")
+    ![Recommendations list](images/64e4e02ca8258d7c1fc54bec446b691a.png " ")
 
 9.  Implement the SQL Profile recommendation. SQL Profiles are a great way of tuning a SQL without creating any new objects or making any code changes.
 
 10. At this point let us now turn off the load: Change directory to scripts and execute the script ***1-db\_lab\_stop.sh*** as shown below
 
-    ![](images/e032d591c5b1132ac156974c6abbe2f4.jpg " ")
+    ![DB Lab stop script](images/e032d591c5b1132ac156974c6abbe2f4.jpg " ")
 
     >Alternatively you can use the Enterprise Manager Job Scheduler capability to stop the job.
 
 11. Navigate to Enterprise, then Job, then to Library
 
-    ![](images/emjoblibnav.png " ")
+    ![Job library](images/emjoblibnav.png " ")
 
 12. Select the job *1-DB\_LAB\_STOP*
 
-    ![](images/emjoblabstop.png " ")
+    ![DB lab stop](images/emjoblabstop.png " ")
 
 13. And then Submit the job
 
-    ![](images/emlabstopsubmit.png " ")
+    ![Submit the job](images/emlabstopsubmit.png " ")
 
 14. When the job is completed, the workload stops
 
-    ![](images/emlabstopped.png " ")
+    ![Lab stopped](images/emlabstopped.png " ")
 
 <!-- This concludes the Database Performance Management lab activity. You can now move on to Real Application Testing lab activity. -->
 
