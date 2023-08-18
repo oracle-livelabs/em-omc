@@ -18,7 +18,7 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 
 Watch the video below for a quick walk-through of the lab.
-[Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
+[Enterprise Monitoring Quick Tour](videohub:1_voigdsx5)
 
 ### Objectives
 The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
