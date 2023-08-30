@@ -18,7 +18,7 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 
 Watch the video below for a quick walk-through of the lab.
-[Enterprise Monitoring Quick Tour](videohub:1_cmd73lma)
+[Enterprise Monitoring Quick Tour](videohub:1_voigdsx5)
 
 ### Objectives
 The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
@@ -109,6 +109,18 @@ The Overview pane shows the Target Status of your IT estate. The Status section 
 
 Incident Manager provides in one location the ability to search, view, manage, and resolve events, incidents and problems impacting your environment.
 
+1. Open a new terminal in your remote desktop.
+
+     ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
+
+2. Execute the following script "./scripts/livelabs/update-incidents.sh".
+
+     ![Execute a script](images/incident-manager/execute-script.png " ")
+
+     ![Execute script results](images/incident-manager/execute-script-results.png " ")
+
+3. Close out of the terminal.
+
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
@@ -185,6 +197,20 @@ Incident Manager provides in one location the ability to search, view, manage, a
 Runbooks are documented best practice procedures that IT staff follow to resolve an issue. In Enterprise Manager, you can create Dynamic Runbooks to encapsulate your best practice procedures in the form of steps that your ITOps teams can execute inside Enterprise Manager in context of an incident. To use Dynamic Runbooks, you start a Runbook Session against an incident, choose a Dynamic Runbook, and then follow the steps in the runbook.
 
 For this task, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
+
+**Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager.**
+
+1. Open a new terminal in your remote desktop.
+
+     ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
+
+2. Execute the following script "./scripts/livelabs/update-incidents.sh".
+
+     ![Execute a script](images/incident-manager/execute-script.png " ")
+
+     ![Execute script results](images/incident-manager/execute-script-results.png " ")
+
+3. Close out of the terminal.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
@@ -294,6 +320,20 @@ For this task, a Dynamic Runbook has already been published for you to use. You 
 Runbooks are documented procedures that IT staff follow to resolve an issue. In Enterprise Manager, Dynamic Runbooks consist of a set of ordered steps that users execute to resolve an incident. To create a Dynamic Runbook, you create it in context of an incident. This runbook in development is called a runbook draft. The runbook draft will contain the incident context that includes the target, metric of the incident, etc. against which you can develop and test the runbook steps. Once runbook creation and testing is complete, it can be published for general use.  
 
 For this task, a Dynamic Runbook draft has already been created. You will go through the process of modifying the Runbook and later publishing it to be used by others.  
+
+**Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager.**
+
+1. Open a new terminal in your remote desktop.
+
+     ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
+
+2. Execute the following script "./scripts/livelabs/update-incidents.sh".
+
+     ![Execute a script](images/incident-manager/execute-script.png " ")
+
+     ![Execute script results](images/incident-manager/execute-script-results.png " ")
+
+3. Close out of the terminal.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 

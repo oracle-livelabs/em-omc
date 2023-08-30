@@ -4,6 +4,8 @@
 
 In this lab you'll learn advanced analytics features of Logging Analytics. You'll learn more about the query language, do correlation (link), generate standard statistical metrics from logs, extract new fields for analysis, and visualize dense information for dashboards and interactive analysis.
 
+Estimated Time: 30 minutes
+
 
 ### Objectives
 
@@ -19,7 +21,7 @@ We will use these commands and features:
 - [Link Tiles feature](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/tiles-link-visualization.html)
 
 
-Estimated Time: 30 minutes
+
 
 
 ## Task 1: Inventory of Services with Load Balancers
@@ -601,9 +603,37 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 - Build query to monitor Load Balancers.
 - Link the two queries to build interactive analysis view to correlated LBaaS(infrastructure) telemetry with that of a Kubernetes Service(Platform Object).
 
-  You may now proceed to the [next lab](#next).
+
+## Workshop Achievements
+
+In this workshop, we have 
+
+- Installed Kubernetes Monitoring Solution and collected various logs
+    - Kubernetes & Linux System logs, 
+    - Application/Container logs,
+    - Kubernetes Objects logs,
+    - Custom Applications/Services logs (MuShop container logs).
+- Verified the collected logs through Log Explorer.
+- Set up Management Agent and collected Kubernetes metrics
+- Visualized the data collected (logs and metrics) through dashboards using various widgets. 
+
+## References
+
+[Latest Features](https://docs.oracle.com/en-us/iaas/releasenotes/services/logging-analytics/)
+
+[Product Videos](https://www.youtube.com/watch?v=EoBJkaq9Png&list=PLiuPvpy8QsiV_QT9A-pECFkK30yMJEXOu)
+
+[Blogs](https://blogs.oracle.com/observability/category/oem-logging-analytics)
+
+[Logging Analytics Documentation](https://docs.cloud.oracle.com/en-us/iaas/logging-analytics/index.html)
+
+[Management Agent Documentation](https://docs.oracle.com/en-us/iaas/management-agents/index.html)
+
+[Reference Architectures - Kubernetes Monitoring](https://docs.oracle.com/en/solutions/kubernetes-oke-logging-analytics/index.html)
+
+[OCI Kubernetes Monitoring] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring)  
 
 ## Acknowledgements
 * **Author** - Samarthya Sahu , OCI Logging Analytics
 * **Contributors** - Sreeji Das , OCI Logging Analytics
-* **Last Updated By/Date** - Samarthya Sahu, Sep, 2023
+* **Last Updated By/Date** - Samarthya Sahu, Aug, 2023
