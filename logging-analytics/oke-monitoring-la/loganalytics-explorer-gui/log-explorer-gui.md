@@ -1,4 +1,4 @@
-# Logging Analytics Overview
+# Study Lab Logging Analytics Overview
 
 ## Introduction
 Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure.
@@ -52,7 +52,11 @@ Here are the main parts of the user interface that will be used throughout this 
 
 >**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
 
-## Task 3: Navigating to the Add Data Page
+
+## (Reading Excercise) Task 3: Navigating to the Add Data Page
+
+**No action is needed from the user as this is only reading excercise.**
+
 
 The Add Data Page lists the different mechanisms through which the user can ingest data to Logging Analytics.
 
@@ -99,7 +103,8 @@ There are three ways to navigate to the **Add Data** page.
  ![add-data-page](./images/add-data-page.png)   
 
 
-## Task 4: Ingesting logs using Service Connector
+## (Reading Excercise) Task 4: Ingesting logs using Service Connector
+**No action is needed from the user as this is only reading excercise.**
 
 The following setup is already done for this **Workshop**, no further action required.
 
@@ -112,9 +117,9 @@ The following setup is already done for this **Workshop**, no further action req
 3. The **Configure log collection for OCI resources** page will be displayed and table will display all OCI Resources (entities) which your user has access (read) to and from which logs can be collected.
 ![configure-log-collection-for-oci-resources-page](./images/configure-log-collection-for-oci-resources-page.png)
 
-    - **Entity** - An entity is a resource in Logging Analytics which is used to reference the real asset on your on-premises host or virtual host. After you discover this entity in Logging Analytics, you can associate it with a log source and enable log collection from it.
-
     - **Log Source** - Log Sources define where the log files are located and how to parse and enrich the logs while ingesting them, irrespective of the method of ingestion.
+
+    - **Entity** - An entity is a resource in Logging Analytics which is used to reference the real asset on your on-premises host or virtual host. After you discover this entity in Logging Analytics, you can associate it with a log source and enable log collection from it.
 
 4. **Load Balancer Flow**
 
@@ -142,7 +147,9 @@ The following setup is already done for this **Workshop**, no further action req
 
        
 
-## Task 5: Ingesting logs using Management Agent
+## (Reading Excercise) Task 5: Ingesting logs using Management Agent
+
+**No action is needed from the user as this is only reading excercise.**
 
   This task will walk you through the steps for setting up Log collection with Management Agent. As part of this workshop the following tasks have already been done.
   
@@ -156,7 +163,10 @@ The following setup is already done for this **Workshop**, no further action req
     ![management-agent-log-configuration](./images/management-agent-log-configuration.gif)
 
 
-## Task 6: Upload log files from your computer desktop
+## (Reading Excercise) Task 6: Upload log files from your computer desktop
+
+**No action is needed from the user as this is only reading excercise.**
+
 1. Navigate to the **Add Data** page by using any one of the options in Task #3.
 
 2. Click on the **Advanced Collection Methods**. 
