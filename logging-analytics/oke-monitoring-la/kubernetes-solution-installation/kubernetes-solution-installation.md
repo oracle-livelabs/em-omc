@@ -19,32 +19,33 @@ In this lab, you will see step-by-step instructions to:
 
 ## Task 1: Navigate to Kubernetes Monitoring and Management application
 
-To navigate to Kubernetes Monitoring and Management application, follow one of the following two methods.
+To navigate to Kubernetes Monitoring and Management application, follow the given steps:
 
-1. To manually navigate to the application:
-
-    - From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Marketplace** > **All Applications**.
+  - From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Marketplace** > **All Applications**.
 ![marketplace-navigation](./images/marketplace-navigation.gif " ")
 
-    - In the search bar, enter the text **Kubernetes Monitoring and Management**.
+  - In the search bar, enter the text **Kubernetes Monitoring and Management**.
 
-    - Click on the **Kubernetes Monitoring and Management** application to land on the application page.
+  - Click on the **Kubernetes Monitoring and Management** application to land on the application page.
 ![k8s-app-search](./images/k8s-app-search.png " ")
 
-2. Direct link to app:
+  - You will land on the **Kubernetes Monitoring and Management** application page.
+![k8s-app](./images/k8s-app.png " ")
+
+  - Quick tip, you can use the direct link to land on the application page:
     ```
          <copy>
             https://cloud.oracle.com/marketplace/application/136942717/overview?region=us-phoenix-1
          </copy>   
     ```
-![k8s-app](./images/k8s-app.png " ")
 
 
 ## Task 2: Launch Kubernetes Monitoring and Management application
 
-1. Select the **LiveLabs-v.3.0.0 (7/3/2023)** version from the version dropdown.
+1. Select the **LiveLabs-V3.0 (7/19/2023)** version from the version dropdown.
 
-2. Select the user Compartment from the dropdown. For your user the Compartment name will be **LLresrvationid-COMPARTMENT**.
+2. Select the user Compartment from the dropdown. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
+  >**Note:** The compartment name can be found from **View Login Info** page.
 
 3. Check the **Terms and Restrictions** checkbox.
 
@@ -65,22 +66,16 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 
     - **OKE Cluster:** Select the **oke-cw23-II** OKE cluster from the dropdown.
 
-    - **OCI Logging Analytics Compartment:** Select the **LLresrvationid-COMPARTMENT** compartment from the dropdown.
+    - **OCI Logging Analytics Compartment:** Select the compartment from the dropdown. The compartment will be in the format **LL{reservationId}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
 
-    - **OCI Logging Analytics Log Group:** Select **Kubernetesreservationid** log group from the dropdown.
+    - **OCI Logging Analytics Log Group:** Select log group from the dropdown. The log group will be in the format **Kubernetes{reservationId}**, for e.g. Kubernetes55379.
+      
+        >**Note:** The **reservationId** can be found from **View Login Info** page.
 
   Click on **Next** button to proceed to the Review section.
   ![configure-varaibles](./images/configure-varaibles.png " ")
 
-3. In **Review** section, you can verify the stack configurations which you have selected in the previous two sections.
-
-  - Click on the **Show** button to view the stack configurations. Check the following stack configurations you selected in the previous steps:
-      - OKE Cluster Compartment
-      - OKE Cluster
-      - OCI Logging Analytics Compartment
-      - OCI Logging Analytics Log Group
-
-  - If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
+3. In **Review** section, you can see the stack configurations you selected in the previous steps.
 
   - Click on the **Create** button to create the stack. This step will create an ORM (Oracle Resource Manager) job that uses [Terraform](https://github.com/oracle-quickstart/oci-kubernetes-monitoring/tree/main/terraform) to deploy the solution.
   
@@ -110,13 +105,13 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 3. Click on the **Scope Filter** panel.
 ![scope-filter](./images/scope-filter.png " ")
 
-4. Select your user compartment i.e. **LLresrvationid-COMPARTMENT** in the **Log Group Compartment** field and **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
+4. Select your user Compartment from the dropdown in the **Log Group Compartment** field. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT. Select **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
 ![compartment-cluster](images/compartment-cluster.png)
 
 5. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
 ![k8s-cluster-summary](images/k8s-cluster-summary.png)
 
-6. Navigate to the **Container Logs** widget.
+6. Scroll down to the **Container Logs** widget in the dashboard.
 ![container-logs](images/container-logs.png)
 
 7. Click on the View Query Icon to view the query used to populate the data in widget.
@@ -149,6 +144,6 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
   You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Samarthya Sahu , OCI Logging Analytics
+* **Author** - Samarthya Sahu, OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
 * **Last Updated By/Date** - Samarthya Sahu, Aug, 2023
