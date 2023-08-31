@@ -4,6 +4,7 @@
 
 In this lab, you'll deploy Kubernetes Monitoring Solution from OCI Marketplace to enable monitoring of an existing OKE Cluster.
 
+Estimated Time: 15 minutes
 
 ### Objectives
 
@@ -11,9 +12,10 @@ In this lab, you will see step-by-step instructions to:
 
   - Use OCI Marketplace to configure and deploy the Kubernetes Monitoring solution.
   - Verify successful deployment. 
-  - Review Application Information. 
+  - Review Application Information.
+  - Explore created Kubernetes Dashboards.
 
-Estimated Time: 15 minutes
+
 
 ## Task 1: Navigate to Kubernetes Monitoring and Management application
 
@@ -80,7 +82,9 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 
   - If you want to make changes, click on **Previous** button to go back and edit the stack configurations.
 
-  - Click on the **Create** button to create the stack. It will take around 90 seconds for the stack to get created.
+  - Click on the **Create** button to create the stack. This step will create an ORM (Oracle Resource Manager) job that uses [Terraform](https://github.com/oracle-quickstart/oci-kubernetes-monitoring/tree/main/terraform) to deploy the solution.
+  
+  - It will take around 90 seconds for the stack to get created.
     ![review-stack](./images/review-stack.png " ")
     ![stack-execution](./images/stack-execution.png " ")
   
@@ -147,4 +151,4 @@ To navigate to Kubernetes Monitoring and Management application, follow one of t
 ## Acknowledgements
 * **Author** - Samarthya Sahu , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Samarthya Sahu, Jun, 2023
+* **Last Updated By/Date** - Samarthya Sahu, Aug, 2023

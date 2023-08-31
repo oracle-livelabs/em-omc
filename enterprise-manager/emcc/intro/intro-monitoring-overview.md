@@ -3,7 +3,7 @@
 ## About this Workshop
 This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Workshop Time*: 130 minutes
+*Estimated Workshop Time*: 105 minutes
 
 ### About Oracle Enterprise Manager
 Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
@@ -28,13 +28,6 @@ In this workshop, you will learn how to use:
 
 ### Prerequisites
 - An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
-    
-    **Note:** If you have a **Free Trial** account, when your Free Trial expires, your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)** 
-
-### Prerequisites
-- An Oracle Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported.
-    
-    **Note:** If you have a **Free Trial** account, when your Free Trial expires, your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)** 
 
 ## Summary
 Oracle Enterprise Manager enables you to get complete monitoring visibility into your IT infrastructure, applications stack and applications that are critical to running your business.
@@ -60,7 +53,7 @@ Labs under this workshop do not need any additional Management Pack and are a co
 The following are covered in this workshop:
 - Explore Enterprise Summary page and drill down to see a list of down targets
 - Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
-- Start a Dynamic Runbook session against an incident from Incident Manager then modify and publish a Runbook draft
+- Start a Runbook session against an incident from Incident Manager then modify and publish a Runbook draft
 - Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
 - Create a new Corrective Action and associate it with a metric
 - Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
@@ -123,20 +116,20 @@ For additional Enterprise Manager use cases, see below and visit [LiveLabs](http
 - Review Oracle Enterprise Manager DBaaS setup for Pluggable Databases
 - Provision, resize, shutdown, start and delete a Pluggable Database using Ansible playbooks and EM's DBaaS capabilities
 
-## More Information on Oracle Enterprise Manager
+## Learn More
 Managing Your Hybrid Database Fleet
 [](youtube:TUaAweMX3S4)
 
 Drive Your Autonomous Future with Oracle Enterprise Manager
 [](youtube:7khTglg0_3g)
 
-- [Enterprise Manager Cloud Control Solutions](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emcon/enterprise-manager-management-focus-areas.html#GUID-7F3BF18C-97DF-44BC-8BB7-6A864AF1A150)
-- [Enterprise Manager Cloud Control 13.4 Getting Started](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/index.html)
-- [Architecture of Enterprise Manager Cloud Control](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/emcon/enterprise-manager-cloud-control-architecture.html#GUID-1A384373-7CD5-434D-9939-874E940CBF21)
-- [Installation and Upgrade](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/install.html)
+- [Enterprise Manager Cloud Control Solutions](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emcon/enterprise-manager-management-focus-areas.html#GUID-7F3BF18C-97DF-44BC-8BB7-6A864AF1A150)
+- [Enterprise Manager Cloud Control 13.5 Getting Started](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/index.html)
+- [Architecture of Enterprise Manager Cloud Control](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emcon/enterprise-manager-cloud-control-architecture.html#GUID-1A384373-7CD5-434D-9939-874E940CBF21)
+- [Installation and Upgrade](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/install.html)
 - [Enterprise Manager Blogs](https://blogs.oracle.com/oem/)
-- [Enterprise Manager Videos](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/videos.html)
-- [Enterprise Manager Licensing Guide](https://docs.oracle.com/cd/E63000_01/OEMLI/introduction.htm#OEMLI108)
+- [Enterprise Manager Videos](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/videos.html)
+- [Enterprise Manager Licensing Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/oemli/index.html)
 - [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
 
 ## Acknowledgements
