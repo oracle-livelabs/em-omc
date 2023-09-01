@@ -1,4 +1,4 @@
-# Study Lab Logging Analytics Overview
+# Study Lab - Logging Analytics Overview
 
 ## Introduction
 Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure.
@@ -53,9 +53,9 @@ Here are the main parts of the user interface that will be used throughout this 
 >**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
 
 
-## (Reading Excercise) Task 3: Navigating to the Add Data Page
+## (Reading Excercise Only) Task 3: Navigating to the Add Data Page
 
-**No action is needed from the user as this is only reading excercise.**
+> **Note** : **No action is needed from the user as this is only reading excercise.**
 
 
 The Add Data Page lists the different mechanisms through which the user can ingest data to Logging Analytics.
@@ -103,8 +103,9 @@ There are three ways to navigate to the **Add Data** page.
  ![add-data-page](./images/add-data-page.png)   
 
 
-## (Reading Excercise) Task 4: Ingesting logs using Service Connector
-**No action is needed from the user as this is only reading excercise.**
+## (Reading Excercise Only) Task 4: Ingesting logs using Service Connector
+
+> **Note** : **No action is needed from the user as this is only reading excercise.**
 
 The following setup is already done for this **Workshop**, no further action required.
 
@@ -147,9 +148,9 @@ The following setup is already done for this **Workshop**, no further action req
 
        
 
-## (Reading Excercise) Task 5: Ingesting logs using Management Agent
+## (Reading Excercise Only) Task 5: Ingesting logs using Management Agent
 
-**No action is needed from the user as this is only reading excercise.**
+> **Note** : **No action is needed from the user as this is only reading excercise.**
 
   This task will walk you through the steps for setting up Log collection with Management Agent. As part of this workshop the following tasks have already been done.
   
@@ -163,9 +164,9 @@ The following setup is already done for this **Workshop**, no further action req
     ![management-agent-log-configuration](./images/management-agent-log-configuration.gif)
 
 
-## (Reading Excercise) Task 6: Upload log files from your computer desktop
+## (Reading Excercise Only) Task 6: Upload log files from your computer desktop
 
-**No action is needed from the user as this is only reading excercise.**
+> **Note** : **No action is needed from the user as this is only reading excercise.**
 
 1. Navigate to the **Add Data** page by using any one of the options in Task #3.
 
