@@ -32,6 +32,11 @@
       "filename": "./../../em-monitoring-overview/em-monitoring-overview.md"
     },
     {
+      "title": "Lab 4 (Optional): Environment Cleanup",
+      "description": "Cleanly dispose of all OCI resources created by ORM for the workshop, and delete the stack",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cleanup-stack/cleanup-stack.md"
+    },
+    {
       "title": "Troubleshoot Enterprise Manager Environment",
       "description": "How to initialize and start all the workshop components",
       "publisheddate": "10/14/2020",
@@ -42,11 +47,6 @@
       "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
       "publisheddate": "8/12/2020",
       "filename": "./../../faq/faq.md"
-    },
-    {
-      "title": "Environment Cleanup",
-      "description": "Cleanly dispose of all OCI resources created by ORM for the workshop, and delete the stack",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cleanup-stack/cleanup-stack.md"
     },
     {
       "title": "Need Help?",

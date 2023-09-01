@@ -5,7 +5,8 @@ Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that l
 
 Estimated Time: 5 minutes
 
-## Objectives
+
+### Objectives
 
 In this lab, you will familiarize with:
 * Navigating to Log Explorer
@@ -162,6 +163,7 @@ The following setup is already done for this **Workshop**, no further action req
   The following gif shows the steps for setting up Log collection with Management Agent.
     
     ![management-agent-log-configuration](./images/management-agent-log-configuration.gif)
+
 
 
 ## (Reading Excercise Only) Task 6: Upload log files from your computer desktop

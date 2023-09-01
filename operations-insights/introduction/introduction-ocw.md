@@ -6,6 +6,9 @@ In this workshop, there are six lab exercises. They have been organized to help 
 
 Estimated Workshop Time: 1 hour
 
+Watch the video below for a quick walk-through of the lab.
+[Exploring Oracle Cloud Infrastructure Operation Insights](videohub:1_fuoh53zk)
+
 ### About Operations Insights
 
 Oracle Cloud Infrastructure Operations Insights is an Oracle Cloud Infrastructure (OCI) native service that provides holistic insight into database and host resource utilization and capacity.  Operations Insights (OPSI) provides capacity planning, long-term SQL analysis, and historical performance reports for your Oracle databases. The service has a full offering of features to improve performance and reduce overhead for your resources. The ability to quickly and easily ingest valuable metric data allows administrators, engineers, and executives to make informed decisions on allocating resources to prevent major issues and reduce overhead for managing their infrastructure resources.
