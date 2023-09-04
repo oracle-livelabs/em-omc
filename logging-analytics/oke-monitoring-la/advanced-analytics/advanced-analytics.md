@@ -319,13 +319,12 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     - Click on the **Actions** dropdown and click on **Save As**.
     ![actions-save](./images/actions-save.png " ")
 
-    - Type the Compartment name in the **Saved Search Compartment**. For your user the Compartment name will be **LLresrvationid-COMPARTMENT**.
-
-    > **Note:** You can always find the **Compartment** name from the View Login Info page.
+    - Type the Compartment name in the **Saved Search Compartment**. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
+    >**Note:** The compartment name can be found from **View Login Info** page.
 
     - Enter the name in the **Search Name** field and click on the **Save** button to save the search.
     ![save-search](./images/save-search.png " ")
-    > **Note:** You will be see the Authorization error, which is expected since by default *root* Compartment is selected.
+    > **Note:** You will see the Authorization error, which is expected since by default *root* Compartment is selected.
 
     - A saved search will be created and added to the Dashboard.
     ![save-search-popup](images/save-search-popup.png)
@@ -378,8 +377,6 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 | sort -logrecords  
     ```
 
-    - Click on the **Run** button to run the query.
-
     - You can now see all the issues in the selected Load Balancer for the chosen time period.
 ![show-issues](./images/show-issues.png " ")
 
@@ -408,7 +405,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - We will copy this modified query and link this from the first query we built.
 
-    - Append the following command to the beginning of your query. The actual time does not matter, since we will replace this in the first query:
+    - Prepend the following command to the beginning of your query. The actual time does not matter, since we will replace this in the first query:
     ```
         <copy>
             Time between '2023-06-29T00:00:00.000Z' and '2023-06-30T00:00:00.000Z' and
@@ -451,7 +448,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
         - Click on **Actions** > **Open**.
     ![actions-open](./images/actions-open.png " ")
 
-        - In the **Widget Compartment**, enter your user the Compartment i.e. **LLresrvationid-COMPARTMENT**.
+        - In the **Widget Compartment**, enter your user the Compartment. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
 
         - In the **Search** textbox, enter the name you used to save the first search and select your saved search from the results.
 
@@ -634,6 +631,6 @@ In this workshop, we have
 [OCI Kubernetes Monitoring] (https://github.com/oracle-quickstart/oci-kubernetes-monitoring)  
 
 ## Acknowledgements
-* **Author** - Samarthya Sahu , OCI Logging Analytics
-* **Contributors** - Sreeji Das , OCI Logging Analytics
+* **Author** - Samarthya Sahu, OCI Logging Analytics
+* **Contributors** - Sreeji Das, OCI Logging Analytics
 * **Last Updated By/Date** - Samarthya Sahu, Aug, 2023
