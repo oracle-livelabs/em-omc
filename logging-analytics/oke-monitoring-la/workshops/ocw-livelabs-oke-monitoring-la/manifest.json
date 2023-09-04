@@ -13,34 +13,34 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Logging Analytics Overview",
-            "description": "Logging Analytics Overview",
-            "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
-        },
-        {
-            "title": "Lab 2 : Management Agent Overview",
-            "description": "This live lab outlines the overview of the Management Agent",
-            "filename": "../../management-agent-overview/management-agent-overview.md"
-        },        
-        {
-            "title": "Lab 3: Kubernetes Solution Installation",
+            "title": "Lab 1: Kubernetes Solution Installation",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../kubernetes-solution-installation/kubernetes-solution-installation.md"
         },
         {
-            "title": "Lab 4: Analyzing Logs",
+            "title": "Lab 2: Analyzing Logs",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../analyzing-logs/analyzing-logs.md"
         },
         {
-            "title": "Lab 5: Designing Dashboards",
+            "title": "Lab 3: Designing Dashboards",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../designing-dashboards/designing-dashboards.md"
         },
         {
-            "title": "Lab 6: Advanced Analytics with Drill Downs",
+            "title": "Lab 4: Advanced Analytics with Drill Downs",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../advanced-analytics/advanced-analytics.md"
+        },
+        {
+            "title": "Lab 5: Study Lab - Logging Analytics Overview",
+            "description": "Logging Analytics Overview",
+            "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
+        },
+        {
+            "title": "Lab 6 : Management Agent Overview",
+            "description": "This live lab outlines the overview of the Management Agent",
+            "filename": "../../management-agent-overview/management-agent-overview.md"
         },
         {
 
