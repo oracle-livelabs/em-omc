@@ -1,4 +1,4 @@
-# Study Lab - Logging Analytics Overview
+# Logging Analytics Overview (Optional Study)
 
 ## Introduction
 Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure.
@@ -51,7 +51,7 @@ Here are the main parts of the user interface that will be used throughout this 
 
 6. **Main panel**, where the visualization output appears above the results of the query.
 
->**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
+      >**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
 
 
 ## (Reading Excercise Only) Task 3: Navigating to the Add Data Page
