@@ -67,13 +67,7 @@ Estimated Time: 30 minutes
     - Select the Visualization **Sunburst** from the Visualization drop-down.
        ![sunburst-visualization](images/sunburst-visualization.png)
 
-    - Add the field **Log Source** to the **Group by** by following the instructions in step 4. For convenience you can also paste the following query to view the data.
-
-      ```
-         <copy>
-           * | stats count as logrecords by 'Log Group', 'Log Source' | sort -logrecords
-         </copy>
-      ```
+    - Add the field **Log Source** to the **Group by** by following the instructions in step 4. 
 
        ![log-source-to-group-by](images/log-source-to-group-by.png)  
       
@@ -81,7 +75,16 @@ Estimated Time: 30 minutes
    
     - The **Group By** section should look like the following. 
 
-       ![logsource-loggroup-groupby](images/logsource-loggroup-groupby.png)    
+       ![logsource-loggroup-groupby](images/logsource-loggroup-groupby.png)  
+
+
+    - After performing the aforementioned steps the query in the **Query Bar** should look like the following.
+
+      ```
+         <copy>
+           * | stats count as logrecords by 'Log Group', 'Log Source' | sort -logrecords
+         </copy>
+      ```           
     
     - The **Sunburst** chart view in the context of **Log Group** and **Log Source** along with log record **Count** for each **Log Source** is displayed.
        ![sunburst-data-lg-ls](images/sunburst-data-lg-ls.png)
@@ -137,37 +140,40 @@ Estimated Time: 30 minutes
       - Click on the **Add to Group By** menu option.
          ![node-to-groupby](images/node-to-groupby.png)
       - Repeat the steps to add **Pod Phase** Field to the Group By textbox.
-      - Remove any other field in the Group By apart from **Node** and **Pod Phase**. For convienence you can also paste the following 
-      query in the **Query Bar**.
+      - Remove any other field in the Group By apart from **Node** and **Pod Phase**. 
+      - The Group By textbox will look like the following. 
+            ![group-by-podphase-node](images/group-by-podphase-node.png)
+
+      - After performing the aforementioned steps the query query in the **Query Bar** should look like the following.
+       
+        
          ```
             <copy>
                'Kubernetes Cluster Name' = 'oke-cw23-ll' and Namespace = mushop and 'Log Source' = 'Kubernetes Pod Object Logs' | stats count as logrecords by Node, 'Pod Phase' | sort -logrecords
             </copy>
          ```
-
-      - The Group By textbox will look like the following. 
-            ![group-by-podphase-node](images/group-by-podphase-node.png) 
+       
 
 7. Add Pod field to the **Value** textbox.
       - In the Fields panel, in the Search Fields textbox, search for the field **Pod**.
       - In the resultant field, click on the three vertical dots menu icon.
       - Click on the **Add to Value** menu option. 
-         ![pod-add-to-value](images/pod-add-to-value.png)
-      - For convienence you can also paste the following query in the **Query Bar**. 
+         ![pod-add-to-value](images/pod-add-to-value.png)     
+      - The Value textbox will look like the following.
+         ![pod-in-value-textbox](images/pod-in-value-textbox.png)
+      - After performing the aforementioned steps the query in the **Query Bar** should look like the following.
         
          ```
             <copy> 
                 'Kubernetes Cluster Name' = 'oke-cw23-ll' and Namespace = mushop and 'Log Source' = 'Kubernetes Pod Object Logs' | stats count(Pod) by Node, 'Pod Phase'
             </copy>
-         ```       
-      - The Value textbox will look like the following.
-         ![pod-in-value-textbox](images/pod-in-value-textbox.png)
+         ```     
 8. Determining the Pods running on each Node of the OKE Cluster.
       - Click on the Drop Down icon in the Value textbox. Select the **Distinct Count** menu item.
          ![distinct-count](images/distinct-count.png)
       - Verify that the Value textbox & Group By textbox looks like the following. Click **Apply**.
          ![number-of-pods-viz-panel](images/number-of-pods-viz-panel.png)
-      - For convienence you can also paste the following query in the **Query Bar**. 
+      - After performing the aforementioned steps the query in the **Query Bar** should look like the following. 
 
          ```
             <copy>  
@@ -458,7 +464,7 @@ In this task we will create the Dashboard with the results of the Task 2.
 4. Repeat the instructions in the step 2 to add fields **Controller** and  **Controller Kind**.
      > **Note :** Remove all the other fields apart from **Namespace** , **Controller** and  **Controller Kind** from the Group by textbox. 
 
-5.  For convenience you can also paste the following query to view the data
+5.  After performing the aforementioned steps the query in the **Query Bar** should look like the following.
       ```
        <copy>
           * | distinct Namespace, Controller, 'Controller Kind'
@@ -476,7 +482,7 @@ In this task we will create the Dashboard with the results of the Task 2.
 
 8. In the results look for your user's **Namespace** by scrolling in the **Field Value** column . The **Namespace** can be found from the **View Login Info** page with the field name **Kubernetes Namespace**.
          
-      > **Note :** The **Namespace** will  be in the format **resr{reservationid}**, for e.g resr58829.  
+      > **Note :** The **Namespace** will  be in the format **resr{reservationid}**, e.g resr58829.  
 
 
 
@@ -538,62 +544,8 @@ In this task we will create the Dashboard with the results of the Task 2.
 
 > **Note** : We will use this set up to create the Dashboard in the next step.      
 
-
-## (Excercise) Task 9 : Add Visualization to the Dashboard
-
-1. Select the visualization **Bar**.
-   ![bar-chart-visualization](images/bar-chart-visualization.png)
-
-2. The **Bar** chart view in context of **Kubernetes Event Object Logs** Log Source will be displayed.
-   ![bar-chart-view-k8s-event-object](images/bar-chart-view-k8s-event-object.png)
-
-3. Click on the **Actions** button.
-   ![actions-button.png](images/actions-button.png)
-
-4. Click on the **Save as** option.
-   ![save-as-button](images/save-as-button.png)
-
-5. A **Save search** pop up will be displayed. By default your user's **Compartment** is selected in **Save Search Compartment** dropdown.
-   ![save-search-popup](images/save-search-popup.png)
-    > **Note** : You will see the Authorization error if any other **Compartment** is selected in **Save Search Compartment** dropdown.
-
-6. In the  **Save search** pop up perform the following actions.
-   
-    - (Optional) Type the **Compartment** name in the **Saved Search Compartment** for your user the **Compartment** name will be **LLresrvationid-COMPARTMENT**.  You can always find the **Compartment** name from the View Login Info page.
-        > **Note** : This step is optional if you have not changed the **Compartment** in step 5.
-        
-
-    - Enter the **Search Name**.
-    - Check the **Add to dashboard** checkbox.
-    - Select the **New Dashboard** radio button.
-    - Select the **Dashboard Compartment** name. Make sure that you select the same **Compartment** for Dashboard and Save Search.
-    - Enter the **Dashboard Name**. 
-    - Click on **Save** button.
-    ![create-dashboard](images/create-dashboard.png)
-    - A saved search will be created and added to the Dashboard.
-    ![save-search-and-dashboard-confirmation](images/save-search-and-dashboard-confirmation.png)  
-
-7. Click on the drop-down on top left side of the Log Explorer Page and select **Dashboards**.
-    ![dashboard-navigation](images/dashboard-navigation.png)
-
-    **OR**
-
-   Copy-paste the following link in your browser's address bar to navigate to the **Dashboards**.
-      ```
-         <copy>
-           https://cloud.oracle.com/loganalytics/dashboards?region=us-phoenix-1
-         </copy>
-     
-      ```
-
-8. A Dashboards Page will be displayed. Click on the Dashboard Name that you have created in the Step 6.
-    ![dashboards-page](images/dashboards-page.png)
-
-9. A widget showing the saved search data will be displayed.
-    ![dashboard-with-widget](images/dashboard-with-widget.png)
-
               
-## Task 10 : Workshop Show and Tell
+## Task 9 : Workshop Show and Tell
 
 You'll get the opportunity to showcase your dashboard at the end of the lab. You can add any visualization that you like to your dashboard - here are few examples.
   - Find average number of orders per day, per hour ?
