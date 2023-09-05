@@ -323,6 +323,7 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
 
 **Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager or Task 3A: Dynamic Runbooks.**
 
+
 1. Open a new terminal in your remote desktop.
 
      ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
