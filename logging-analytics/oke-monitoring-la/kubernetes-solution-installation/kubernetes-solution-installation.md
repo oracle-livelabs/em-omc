@@ -42,9 +42,9 @@ To navigate to Kubernetes Monitoring and Management application, follow the give
 
 ## Task 2: Launch Kubernetes Monitoring and Management application
 
-1. Select the **LiveLabs-V3.0 (7/19/2023)** version from the version dropdown.
+1. Select the **LiveLabs-V3.0 (DD/MM/YYYY)** version from the version dropdown, where DD/MM/YYYY represents the date.
 
-2. Select the user Compartment from the dropdown. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
+2. Select the user Compartment from the dropdown. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, e.g. LL55379-COMPARTMENT.
   >**Note:** The compartment name can be found from **View Login Info** page.
 
 3. Check the **Terms and Restrictions** checkbox.
@@ -66,9 +66,9 @@ To navigate to Kubernetes Monitoring and Management application, follow the give
 
     - **OKE Cluster:** Select the **oke-cw23-II** OKE cluster from the dropdown.
 
-    - **OCI Logging Analytics Compartment:** Select the compartment from the dropdown. The compartment will be in the format **LL{reservationId}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
+    - **OCI Logging Analytics Compartment:** Select the compartment from the dropdown. The compartment will be in the format **LL{reservationId}-COMPARTMENT**, e.g. LL55379-COMPARTMENT.
 
-    - **OCI Logging Analytics Log Group:** Select log group from the dropdown. The log group will be in the format **Kubernetes{reservationId}**, for e.g. Kubernetes55379.
+    - **OCI Logging Analytics Log Group:** Select log group from the dropdown. The log group will be in the format **Kubernetes{reservationId}**, e.g. Kubernetes55379.
       
         >**Note:** The **reservationId** can be found from **View Login Info** page.
 
@@ -105,7 +105,7 @@ To navigate to Kubernetes Monitoring and Management application, follow the give
 3. Click on the **Scope Filter** panel.
 ![scope-filter](./images/scope-filter.png " ")
 
-4. Select your user Compartment from the dropdown in the **Log Group Compartment** field. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT. Select **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
+4. Select your user Compartment from the dropdown in the **Log Group Compartment** field. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, e.g. LL55379-COMPARTMENT. Select **oke-cw23-II** cluster in the **Kubernetes Cluster** field.
 ![compartment-cluster](images/compartment-cluster.png)
 
 5. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.

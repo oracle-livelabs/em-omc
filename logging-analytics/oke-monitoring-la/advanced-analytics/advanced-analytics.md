@@ -37,6 +37,8 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     - Click on **Actions** > **Create New** to reset the view.
 ![reset](./images/reset.png " ")
 
+    - In the **Log Explorer** page if the scope filter has pre-selected **Log Group Compartment**, then you can reset it by clicking on the `x` icon.
+![close-icon-for-scope-filter](images/close-icon-for-scope-filter.png)
 
 2. Select the log group.
 
@@ -150,6 +152,8 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - Use the *eventstats* command to aggregate the Load Balancer Errors by each Load Balancer.
 
+    - The *eventstats* command is used to obtain overall summary statistics, optionally grouped by fields, on properties of groups identified by any grouping command such as stats, link, or timestats. Its output will include one field for each aggregation.
+
     - Append the following to your query:
     ```
          <copy>
@@ -219,7 +223,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
 
     - Click on the **Run** button to run the query.
 
-![lb-type](./images/lb-type.png " ")
+        ![lb-type](./images/lb-type.png " ")
 
 
 11. Hide unnecessary columns in the UI.
@@ -319,7 +323,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
     - Click on the **Actions** dropdown and click on **Save As**.
     ![actions-save](./images/actions-save.png " ")
 
-    - Type the Compartment name in the **Saved Search Compartment**. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
+    - Type the Compartment name in the **Saved Search Compartment**. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, e.g. LL55379-COMPARTMENT.
     >**Note:** The compartment name can be found from **View Login Info** page.
 
     - Enter the name in the **Search Name** field and click on the **Save** button to save the search.
@@ -448,7 +452,7 @@ In this task we'll find kubernetes services which are exposed through an OCI Loa
         - Click on **Actions** > **Open**.
     ![actions-open](./images/actions-open.png " ")
 
-        - In the **Widget Compartment**, enter your user the Compartment. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, for e.g. LL55379-COMPARTMENT.
+        - In the **Widget Compartment**, enter your user the Compartment. For your user the Compartment name will be in the format **LL{reservationid}-COMPARTMENT**, e.g. LL55379-COMPARTMENT.
 
         - In the **Search** textbox, enter the name you used to save the first search and select your saved search from the results.
 
