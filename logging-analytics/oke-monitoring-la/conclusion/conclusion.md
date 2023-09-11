@@ -2,7 +2,7 @@
 
 In this workshop, we have 
 
-- Set up Fluentd and collected various different logs 
+- Installed Kubernetes Monitoring Solution and collected various logs
     - Kubernetes & Linux System logs, 
     - Application/Container logs,
     - Kubernetes Objects logs,

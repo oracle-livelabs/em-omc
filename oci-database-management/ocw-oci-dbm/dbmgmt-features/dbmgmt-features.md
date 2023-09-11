@@ -22,7 +22,7 @@ Database Administration
 Estimated Time: 1 hour
 
 Watch the video below for a quick walk-through of the lab.
-[Exploring Oracle Cloud Infrastructure Database Management](videohub:1_qpjm77l8)
+[Exploring Oracle Cloud Infrastructure Database Management](videohub:1_mpf7rizz)
 
 ### Objectives
 
@@ -37,9 +37,9 @@ This lab assumes you have already completed the following:
 
 1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
 
-     ![](./images/dbmgmt1.png " ")
+     ![Database Management](./images/dbmgmt1.png " ")
 
-     ![](./images/dbmgmt-overview.png " ")
+     ![Database Management Overview](./images/dbmgmt-overview.png " ")
 
 2.  The **Oracle databases** tile (on the **Overview** page) displays the total number of Oracle Databases in the compartment and the number of Oracle Databases for which Database Management is enabled.
 
@@ -47,9 +47,9 @@ This lab assumes you have already completed the following:
 
 1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation -
 
-     ![](./images/compartment-select.png " ")
+     ![Compartment](./images/compartment-select.png " ")
      
-     ![](./images/fleet-summary-ocw.png " ")
+     ![Fleet Summary](./images/fleet-summary-ocw.png " ")
 
 2.  The following tiles are available on the **Fleet Summary** page:
 
@@ -63,7 +63,7 @@ This lab assumes you have already completed the following:
 
 4.  On **Fleet Summary** page under **Inventory** tile, select **CDB** option for **Type** to view the CDBs in the database fleet.
 
-     ![](./images/showcdbs-ocw.png " ")
+     ![Show Container Databases](./images/showcdbs-ocw.png " ")
 
     For each database including the CDB, the following metrics are displayed along with the change percentage that denotes the comparison of database metrics between the selected period and the comparison time period:
     - **Avg. Active Sessions**: Displays the average active sessions broken down by CPU, User I/O, and Others, which includes different categories within wait time such as System I/O and Commit.
@@ -73,7 +73,7 @@ This lab assumes you have already completed the following:
 
 5.  On **Fleet Summary** page, click the **Performance** tab. The **Performance** tree map is a visual representation of the performance of the Oracle Databases in a compartment or Database Group for a selected database metric. The databases are displayed as a collection of rectangles in different sizes and colors, in which the size of a rectangle indicates the value of the selected metric and the color indicates the change percentage for the selected metric over the selected time period. The **Performance** tree map is especially useful if you have many databases in your fleet and you want to assess their performance at a glance.
 
-     ![](./images/perf-ocw.png " ")
+     ![Performance Tree Map](./images/perf-ocw.png " ")
 
      Above the **Performance** tree map, select a metric in the **Metric** drop-down list. Depending on the selected metric, additional options may be displayed below the tree map. For example, if you select **CPU** in the Metric drop-down list, then you have the option of assigning the Size attribute to CPU time (Avg. Active CPU) or Allocation (CPU).
      
@@ -85,11 +85,11 @@ This lab assumes you have already completed the following:
 
 1.  On **Fleet Summary** page, click **Database Groups** under **Database Management**.
 
-     ![](./images/database-group-ocw.png " ")
+     ![Database Groups](./images/database-group-ocw.png " ")
 
 2.  Click **dbmgmt\_pdbs\_group** under the list of Database Groups.
 
-     ![](./images/dbmgmt-pdbs-group-ocw.png " ")
+     ![PDBs Group](./images/dbmgmt-pdbs-group-ocw.png " ")
 
 3.  On **Database group details** page, **Managed Databases** section has the list of all Managed Databases that are part of the group. You can also:
 
@@ -100,7 +100,7 @@ This lab assumes you have already completed the following:
 
 4.  On the **Database Group Details** page, under **Resources** on the left pane, click **Jobs** to list jobs associated with the database group.
 
-     ![](./images/jobs-ocw.png " ")
+     ![Jobs](./images/jobs-ocw.png " ")
 
     - **Runs**: On this tab, you can monitor job runs and executions.
     - **Definitions**: On this tab, you can create a job and view the jobs that are in the Active state and were created within the time period selected in the **Time Period** field.
@@ -109,29 +109,29 @@ This lab assumes you have already completed the following:
 
      **Note** : Select a longer time period if you do not see data.
 
-     ![](./images/jobs-runs-ocw.png " ")
+     ![Job Executions](./images/jobs-runs-ocw.png " ")
 
 6.  Click on a particular Job Execution to view the **Job execution details** page, which contains the execution details of the job and **Job execution output**.
 
-     ![](./images/job-exec-output-ocw.png " ")
+     ![Jobs Execution Output](./images/job-exec-output-ocw.png " ")
 
 7.  Click the **Database group details** link in the breadcrumb or upper side of the screen and go back to the **Database group details** page. On **Database group details** page, click **Definitions** tab under **Jobs** to view the list of jobs.
 
-     ![](./images/job-definition-ocw.png " ")
+     ![Job Definition](./images/job-definition-ocw.png " ")
 
 8.  Click a particular Job under **Job Name** to view Job details.
 
-     ![](./images/job-details-ocw.png " ")
+     ![Job Details](./images/job-details-ocw.png " ")
 
 ## Task 4: Monitoring Alert Log
 
 1.  Click **Database Management** from the top left corner of the screen. On the left pane under **Database Management**, click **Fleet Summary** to go back to **Fleet Summary** page. Scroll down to the **Members** tab on the Fleet Summary page. Click **MFG** under **Members** tab to go to **Managed database details** page.
 
-     ![](./images/mfg-db-details.png " ")
+     ![Monitoring of Database](./images/mfg-db-details.png " ")
 
 2.  On the left pane, under **Resources** click **Alert logs** to view alert and attention logs generated for the Managed Database in a selected time period. 
 
-     ![](./images/mfg-alert-log-ocw.png " ")
+     ![Monitoring Alerts](./images/mfg-alert-log-ocw.png " ")
 
     You can use the drop-down lists, fields, and links on this tab to reduce the number of log entries displayed, or search for specific log entries:
 
@@ -142,11 +142,11 @@ This lab assumes you have already completed the following:
 
 1.  Go back to **Fleet Summary** page. Scroll down to the **Members** tab on the Fleet Summary page.
 
-     ![](./images/fleet-summary-ocw.png " ")
+     ![Fleet Summary](./images/fleet-summary-ocw.png " ")
 
 2.  Click the **MFG** database in the **Members** tab. In the **Managed Database Details** page Scroll down to the **Summary** section.
 
-     ![](./images/op-stats-ocw.png " ")
+     ![Operation Stats](./images/op-stats-ocw.png " ")
 
 3.  We can monitor database performance attributes in the **Summary** section, for the time period selected in the **Time Period** menu on the top of this page. Last 60 min is the default time period, and the visual representations or charts provide a quick insight into the health of the database during the selected time period.
 
@@ -176,25 +176,25 @@ This lab assumes you have already completed the following:
 
 5.  On **Managed database details** page, click **Tablespaces** from the left pane to monitor the tablespaces and datafiles stored in each tablespace in the Managed Database.
 
-     ![](./images/tablespace-ocw.png " ")
+     ![Tablespace](./images/tablespace-ocw.png " ")
 
 6.  On **Managed database details** page, click **Users** from the left pane to view the users created in the Oracle Database.
 
-     ![](./images/users-ocw.png " ")
+     ![Users](./images/users-ocw.png " ")
 
 7.  On **Managed database details** page, click **Database Parameters** from the left pane to view and edit the database parameters for the Managed Database.
 
-     ![](./images/db-parameters-ocw.png " ")
+     ![DB Parameters](./images/db-parameters-ocw.png " ")
 
 ## Task 6: Performing Database Performance Diagnostics
 
 1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
-     ![](./images/perf-hub-ocw.png " ")
+     ![Performance Hub](./images/perf-hub-ocw.png " ")
 
 2.  This will launch the **Performance Hub** page. Performance Hub provides a single view of the database’s performance and enables you to perform the rapid diagnosis of its issues.
 
-     ![](./images/perf-hub1-ocw.png " ")
+     ![Performance Hub](./images/perf-hub1-ocw.png " ")
 
      Performance Hub provides holistic performance management capabilities providing a single view of the database performance using a varied set of features, such as Active Session History Analytics, Real-time SQL Monitoring, Automatic Database Diagnostics Monitoring (ADDM), Blocking sessions, and so on.
 
@@ -202,7 +202,7 @@ This lab assumes you have already completed the following:
 
 3.  Stay in **Performance Hub**, scroll down and click the **SQL Monitoring** tab.
 
-     ![](./images/sql-monitoring-ocw.png " ")
+     ![SQL Monitoring](./images/sql-monitoring-ocw.png " ")
 
      With Real-Time SQL Monitoring, you can perform complex run-time application SQL analysis, identity, and guide optimization of application calls in the data tier.
 
@@ -217,12 +217,12 @@ This lab assumes you have already completed the following:
 
 4.  Click on one of the SQLs listed under the **SQL ID** column to view **Real-time SQL Monitoring for SQL**
 
-     ![](./images/sql-monitoring1-ocw.png " ")
+     ![SQL Monitoring](./images/sql-monitoring1-ocw.png " ")
 
 5.  Click **Back** on top left of the page to go back to **Performance Hub** and select the **Last 8 Hours** in the time select. Click the **ADDM** tab and select the most recent snapshot interval to view the automatic report. Note the **ADDM Task** section is updated. Click on the **Top SQL Statements** link under the **Name** column in the **Findings** section to view the recommendations
 
-     ![](./images/addm1-ocw.png " ")
-     ![](./images/addm2-ocw.png " ")
+     ![ADDM Spotlight](./images/addm1-ocw.png " ")
+     ![ADDM Spotlight](./images/addm2-ocw.png " ")
 
      The statistical data needed for the accurate diagnosis of a problem is saved in the Automatic Workload Repository (AWR) of the Oracle Database. The Automatic Database Diagnostic Monitor (ADDM) analyzes the AWR data regularly, locates the root causes of the performance problems, provides recommendations for correcting any problems, and identifies non-problem areas of the system. You can use ADDM to analyze performance issues after the event, often saving the time and resources needed to reproduce a problem.
 
@@ -234,12 +234,79 @@ This lab assumes you have already completed the following:
 
 5.  Click the **<-Back** link at the top left corner to go back to the **Performance Hub** page, scroll down and click the **Blocking Sessions** tab.
 
-     ![](./images/blocking-session.png " ")
+     ![Blocking Sessions](./images/blocking-session.png " ")
 
      The **Blocking Sessions** tab displays the current blocking and waiting sessions in a hierarchical display. You can view detailed information about each blocking session and view the sessions blocked by each blocking session. You can also use the tab to inspect or perform deeper analysis of the SQL involved to determine the cause of the blocking. You can perform several operations in the tab, including stopping one or more of the listed sessions to resolve a waiting session problem.
+
+## Task 7: Real-time performance monitoring with Top Activity Lite
+
+1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+
+     ![Performance Hub](./images/perf-hub-ocw.png " ")
+
+2.  Click **Top Activity Lite** .
+
+     ![Top Activity Lite](./images/top-activity-lite.png " ")
+
+3.  **Top Activity Lite** provides a less resource intensive view of real-time activity compared to Performance Hub.  This allows for quicker refreshes of current performance even when the database is impacted by a heavier application workload.  You will utilize a familiar time-frame slider to select a window for historic or current performance investigation.  
+
+     ![Top Activity Lite](./images/top-activity-lite-mfg.png " ")
+
+     Auto refresh of Top Activity Lite is possible at 15, 30 and 60 second intervals.  Select the **Auto Refresh** drop down menu and select 30 seconds to configure.
+
+4.  The **Data Source** can be changed for the ASH Analytics monitoring.  The two options are **Memory** and **Memory and AWR**.  Select **Memory** from the Data Source drop down menu.  You will likely see a reduction of data in the slider due to historic AWR data being removed from the view.
+
+     ![Top Activity Lite](./images/top-activity-lite-mfg-ds.png " ")
+
+5.  Additional information about the activity in the highlighted period of the Average Active Sessions slider can be seen in tables below the chart.  You can adjust the view of information in these tables to focus the performance investigation.  Utilize the **Columns** drop down menu to include **SQL Text** to more easily see which statements are generating the most activity in the databaseand and expand the table.
+
+     ![Top Activity Lite Columns](./images/top-activity-lite-mfg-cols.png " ")
+
+     ![SQL Text](./images/top-activity-lite-mfg-sqltext.png " ")
+
+## Task 8: Custom and Out-of-the-box Dashboards
+
+Dashboards are built upon a powerful data visualization framework that gathers real-time data and displays it in customizable widgets. You can either use the pre-configured, out-of-the-box dashboards or build customizable dashboards for specific operational and business requirements.
+
+Performance dashboards can be utilized in investigations for a single database or for an entire fleet of databases.  Out of the box dashboards are available to quickly assess the overall performance for your environments, and the option to create custom dashboards enables modifying and tailoring widgets to focus on the most important resources or to assist in triaging performance investigations for specific application workflows.
+
+The Dashboard Framework allows quick, easy editing of your own dashboards with customizations to layout and metric groupings from OCI namespaces.  These custom dashboards can be shared via PDFs or distributed to other OCI users by an export/import JSON feature.
+
+1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **Database Management** service links click **Dashboards**.
+
+     ![DB Dashboard](./images/oandm-dbm-dashboards.png " ")
+
+2.  There are several out-of-the-box dashboards available, including fleet database performance, single database performance, cloud database infrastructure performance, and even cross-service dashboards.  Select the **Database Performance – Single DB** out-of-the-box dashboard.  You may need to expand the **Name** column to differentiate between the fleet and single database dashboards.
+
+     ![DB Performance Dashboard](./images/oandm-dbm-dashboards-dbperf.png " ")
+
+3.  Here you will see two main sections, one being Filters and the other Widgets.  Widgets are **miniature-reports** of metric collections that can be displayed in various chart configurations.  The widgets can be grouped together to share filter parameters which allows for easy toggling between OCI region or compartment resources.  
+Filters allow narrowing the scope of the resources presented in the dashboard.  They also allow selecting multiple databases to be displayed in the same widget for a fleet wide comparison of resources.
+
+     Default time period is the last 60 minutes, this can be adjusted by utilizing the time period selector in the upper-righthand.  Adjust the time period to past 24 hours.
+
+     ![DB Dashboard](./images/oandm-dbm-dashboards-tp.png " ")
+
+4.  Now you can hover over widgets to view metric data at a given time period.  The selector also shows corresponding charts data to easily visualize any performance abnormalities during that time.  This can assist in correlation and finding root cause of the performance issues.
+
+     ![Metric Data](./images/oandm-dbm-dashboards-mdata.png " ")
+
+5.  On the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **Database Management** service links click **Dashboards**. On the **Dashboards** page click **Database Performance – Fleet**.
+
+     ![DB Performance Fleet](./images/oandm-dbm-dashboards-fleet.png " ")
+
+6.  Once the dashboard has launched, you will see multiple widgets with several databases listed in their legends.  You can select a smaller set of databases by utilizing the **Databases** filter at the top.  Use the drop down menu to select 3 separate databases to compare.
+
+     ![DB Dashboard](./images/oandm-dbm-dashboards-dbs.png " ")
+
+7.  You can even remove a database resource from a single widget by selecting the corresponding box in the widget legend.  This allows further focusing for a widget without needing to change filters. Click on one of the database boxes in the legend to exclude.
+
+     ![DB Dashboard](./images/oandm-dbm-dashboards-db.png " ")
+
+8.  Finally, you can follow the same steps to go back and check out the **Cloud DB Infrastructure Performance** dashboard.  This dashboard provides various infrastructure and host metrics to monitor a database system in a single location.  Included metric widgets are **Node Status**, **OCPU allocation**, **CPU utilization**, **Memory utilization** and storage metrics such as **File System utilization** and **ASM Disk Group utilization**.
 
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Murtaza Husain and Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Jul 2023
