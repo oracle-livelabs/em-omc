@@ -9,7 +9,7 @@
 5. Your image names should have descriptive names. Not just adb1, adb2, adb3.  For handicap accessibility, we need the image descriptions to explain what the image looks like.  Remember all lowercase and dashes.
 6. Download our QA doc from WMS.  We find workshops get in production quicker when you know what's needed to move to production up front and you use the skeleton.
 
-PS:  You do not need a Readme.md.  Readme's exist only at the top library levels. We direct all traffic to LiveLabs since we can't track usage on GitHub.  Do not create any direct links to GitHub, your workshop may be super popular but we can't track it so no one will know.
+PS:  You do not need a Readme.md. Readme's exist only at the top library levels. We direct all traffic to LiveLabs since we can't track usage on GitHub.  Do not create any direct links to GitHub, your workshop may be super popular but we can't track it so no one will know.
 
 ## Absolute Path for Oracle Cloud menu Navigation
 
