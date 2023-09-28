@@ -9,7 +9,7 @@
 5. Your image names should have descriptive names. Not just adb1, adb2, adb3.  For handicap accessibility, we need the image descriptions to explain what the image looks like.  Remember all lowercase and dashes.
 6. Download our QA doc from WMS.  We find workshops get in production quicker when you know what's needed to move to production up front and you use the skeleton.
 
-PS:  You do not need a Readme.md.  Readme's exist only at the top library levels. We direct all traffic to LiveLabs since we can't track usage on GitHub.  Do not create any direct links to GitHub, your workshop may be super popular but we can't track it so no one will know.
+PS:  You do not need a Readme.md. Readme's exist only at the top library levels. We direct all traffic to LiveLabs since we can't track usage on GitHub.  Do not create any direct links to GitHub, your workshop may be super popular but we can't track it so no one will know.
 
 ## Absolute Path for Oracle Cloud menu Navigation
 
@@ -54,7 +54,7 @@ Look at the product-name-workshop/freetier folder and look at the manifest.json 
 
 > **Note:** The use of "Lab n:" in the titles is optional
 
-The Prerequisite "lab" is the first lab in a common folder on the oracle/learning-library repo. Because this lab already exists, we can use a RAW/absolute URL instead:
+The Prerequisite "lab" is the first lab in a common folder on the oracle-livelabs/common repo. Because this lab already exists, we can use a RAW/absolute URL instead:
 
   ```
   "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"        },
@@ -68,6 +68,6 @@ The manifest.json file needs to know the location of each lab relative to where 
 
 ### For example:
 
-This [APEX Workshop](https://oracle.github.io/learning-library/developer-library/apex/spreadsheet/workshops/freetier/) is a good example of a workshop with a single set of labs: [https://github.com/oracle-livelabs/apex/tree/main/spreadsheet](https://github.com/oracle-livelabs/apex/tree/main/spreadsheet).
+This [APEX Workshop](https://oracle-livelabs.github.io/apex/spreadsheet/workshops/freetier/) is a good example of a workshop with a single set of labs: [https://github.com/oracle-livelabs/apex/tree/main/spreadsheet](https://github.com/oracle-livelabs/apex/tree/main/spreadsheet).
 
 
