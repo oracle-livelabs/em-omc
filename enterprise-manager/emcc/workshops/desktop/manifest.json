@@ -22,7 +22,7 @@
       "title": "Lab 2: Database Performance Management: Find-Fix-Validate",
       "description": "The objective is to become familiar with on-premise and Oracle Cloud Database performance management (Virtual Machine/Bare Metal/Exadata Cloud Service) capabilities using Oracle Enterprise Manager Cloud",
       "publisheddate": "7/16/2020",
-      "filename": "./../../em-find-fix-validate/em-find-fix-validate-mc.md"
+      "filename": "./../../em-find-fix-validate/em-find-fix-validate.md"
     },
     {
       "title": "Lab 3: Automated Database Patching at Scale with Fleet Maintenance UI",
@@ -82,10 +82,6 @@
       "title": "Need Help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
-    },
-    {
-      "title": "Oracle CloudWorld 2023 - Support",
-      "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
     }
   ]
 }
