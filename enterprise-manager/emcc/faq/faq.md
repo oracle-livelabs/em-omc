@@ -86,11 +86,11 @@ The following are Frequently Asked Questions (FAQ) you may refer to when trouble
     ````
     The Named Credential can also be updated via Enterprise Manager UI. On the EM Console navigate to Setup, then Security, and then Named Credentials.
     ​
-    ![](images/700f13b043e394456607f070b599bc24.png " ")
+    ![Named Credentials in EM UI](images/700f13b043e394456607f070b599bc24.png " ")
     ​
     **Click** on Credential Name ORACLE and **Click** on Edit. **Enter** the new password in the Credentials Sections twice and **Click** on Save. Repeat for Credential ORACLE_HOST
     ​
-    ![](images/2e38a554bdbc3a68ce7cbfd84a6a3588.png " ")
+    ![Edit Credential Properties UI](images/2e38a554bdbc3a68ce7cbfd84a6a3588.png " ")
 
 10. Unable to connect to Enterprise Manager Console
 
