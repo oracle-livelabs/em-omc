@@ -1,0 +1,11 @@
+{
+  "workshoptitle": "Alarms and Detection Rules with Logging Analytics",
+  "help": "livelabs-help-em_us@oracle.com",
+  "tutorials": [
+      {
+          "title": "Introduction",
+          "description": "Introduction",
+          "filename": "../../introduction/introduction.md"
+      }
+  ]
+}
