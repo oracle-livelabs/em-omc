@@ -16,6 +16,11 @@
           "title": "Sensitive Data Access from Threat Tagged Location",
           "description": "This lab explains how to create multi-conditional labels, and OOTB Threat score enrichment.",
           "filename": "../../threat-tagged-location/threat-tagged-location.md"
+      },
+      {
+          "title": "Sensitive Data Access from Threat Tagged Location",
+          "description": "This lab explains how to create multi-conditional labels, and OOTB Threat score enrichment.",
+          "filename": "../../problem-labels/problem-labels.md"
       }
   ]
 }
