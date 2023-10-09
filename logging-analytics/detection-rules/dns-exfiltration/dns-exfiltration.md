@@ -19,6 +19,17 @@ In this lab, you will:
 
 ## **Task 1:**  Navigate to detection Rules
 
+1. Click on the option "Administration" in the drop-down menu to access to "Administration Overview".
+   ![](../images/admin-access.png "UIdescription")
+
+2. Click on the option "Detection Rules" inside "Resources" sidebar menu at the left.
+   ![](../images/detection-rules-access.png "UIdescription")
+
+  Now you are in "Detection Rules" and can start doing this lab.
+   ![](../images/detection-rules.png "UIdescription")
+
+
+
 
 ## Acknowledgements
 * **Author** - Oswaldo Osuna, Logging Analytics Development Team
