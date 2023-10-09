@@ -11,6 +11,11 @@
           "title": "DNS Exfiltration on Windows Systems",
           "description": "This lab uses labels and SST to identify DNS exfilteration attempts.",
           "filename": "../../dns-exfiltration/dns-exfiltration.md"
+      },
+      {
+          "title": "Sensitive Data Access from Threat Tagged Location",
+          "description": "This lab explains how to create multi-conditional labels, and OOTB Threat score enrichment.",
+          "filename": "../../threat-tagged-location/threat-tagged-location.md"
       }
   ]
 }
