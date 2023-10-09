@@ -21,6 +21,11 @@
           "title": "Problem Labels for Custom Apps-Logs",
           "description": "This lab explains how to create problem labels, EFDs, and new-fields using eval/extract for a cusom log.",
           "filename": "../../problem-labels/problem-labels.md"
+      },
+      {
+          "title": "Logs from DB Tables",
+          "description": "This lab explains how to create a DB table log-source.",
+          "filename": "../../logs-db/logs-db.md"
       }
   ]
 }
