@@ -18,8 +18,8 @@
           "filename": "../../threat-tagged-location/threat-tagged-location.md"
       },
       {
-          "title": "Sensitive Data Access from Threat Tagged Location",
-          "description": "This lab explains how to create multi-conditional labels, and OOTB Threat score enrichment.",
+          "title": "Problem Labels for Custom Apps-Logs",
+          "description": "This lab explains how to create problem labels, EFDs, and new-fields using eval/extract for a cusom log.",
           "filename": "../../problem-labels/problem-labels.md"
       }
   ]
