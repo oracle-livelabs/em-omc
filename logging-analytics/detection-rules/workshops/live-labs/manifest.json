@@ -6,6 +6,11 @@
           "title": "Introduction",
           "description": "Introduction",
           "filename": "../../introduction/introduction.md"
+      },
+      {
+          "title": "DNS Exfiltration on Windows Systems",
+          "description": "This lab uses labels and SST to identify DNS exfilteration attempts.",
+          "filename": "../../dns-exfiltration/dns-exfiltration.md"
       }
   ]
 }
