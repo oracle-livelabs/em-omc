@@ -164,7 +164,6 @@ We will go through steps for update(patching) database target ***sales.subnet.vc
 
 1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
 
-
     ![](images/sales-db-status.png "sales-db-version")
 
 ## Task 4: Create Gold Image [Step Already Performed, Read-Only Step]
@@ -275,9 +274,9 @@ We will go through steps for update(patching) database target ***sales.subnet.vc
    <copy>emcli db_software_maintenance -getTargetSubscriptions -target_name=sales.subnet.vcn.oraclevcn.com -target_type=oracle_database</copy>
    ```   
 
-    ![](images/sales-subscription.png "sales subscribe ")
+   ![](images/sales-subscription.png "sales subscribe ")
 
-    We see that sales database is already subscribed to the desired gold image. Hence, we can go to next step.
+   We see that sales database is already subscribed to the desired gold image. Hence, we can go to next step.
 
 ## Task 6: Deploy Image
 

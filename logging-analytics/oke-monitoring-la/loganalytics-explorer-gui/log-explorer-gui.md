@@ -1,7 +1,12 @@
-# Logging Analytics Overview
+# Logging Analytics Overview (Optional Study)
+
+## Introduction
+Logging Analytics is a cloud solution in Oracle Cloud Infrastructure(OCI) that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure.
+
+Estimated Time: 5 minutes
 
 
-## Objectives
+### Objectives
 
 In this lab, you will familiarize with:
 * Navigating to Log Explorer
@@ -9,7 +14,7 @@ In this lab, you will familiarize with:
 * Discovering & enabling OCI Service Logs in bulk
 * Collecting new logs (log sources) for existing entities
 
-Estimated Time: 5 minutes
+
 
 ## Task 1:  Navigating to Log Explorer
 
@@ -24,6 +29,7 @@ To navigate to Log Explorer, follow one of the below two methods.
             https://cloud.oracle.com/loganalytics/explorer?region=us-phoenix-1
          </copy>   
     ```
+
 
 
 
@@ -45,11 +51,12 @@ Here are the main parts of the user interface that will be used throughout this 
 
 6. **Main panel**, where the visualization output appears above the results of the query.
 
->**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
+      >**Note:** The main panel is empty till you set up log ingestion, which will be performed in the [next lab](#next).
 
-## Task 3: Navigating to the Add Data Page
 
-In this task we will perform the following activities
+## (Reading Excercise Only) Task 3: Navigating to the Add Data Page
+
+> **Note** : **No action is needed from the user as this is only reading excercise.**
 
 
 The Add Data Page lists the different mechanisms through which the user can ingest data to Logging Analytics.
@@ -58,7 +65,7 @@ The Add Data Page lists the different mechanisms through which the user can inge
 
   2. Monitor apps and on-premises infrastructure : Allows user setting up data ingestion using Management Agent.
 
-  3. Advanced collection methods : Allows user to ingest data using On-Demand upload feature. This mechanism will be used if user wants to ingest log files without continuously collecting them using the Service Connector or  Management Agent.
+  3. Advanced collection methods : Allows user to upload the data from there computer desktop. This mechanism will be used if user wants to ingest log files without continuously collecting them using the Service Connector or  Management Agent.
 
 
 There are three ways to navigate to the **Add Data** page.
@@ -97,9 +104,11 @@ There are three ways to navigate to the **Add Data** page.
  ![add-data-page](./images/add-data-page.png)   
 
 
-## Task 4: Ingesting logs using Service Connector
+## (Reading Excercise Only) Task 4: Ingesting logs using Service Connector
 
- > **Note:** The following set up is already been done as part of this LiveLab, thus you do not have to perform these steps. 
+> **Note** : **No action is needed from the user as this is only reading excercise.**
+
+The following setup is already done for this **Workshop**, no further action required.
 
 1. Click on the **Monitor OCI core infrastructure** header. OCI Core Infrastructure section will be displayed.
  ![oci-core-infrastructure](./images/oci-core-infrastructure.png)
@@ -110,9 +119,9 @@ There are three ways to navigate to the **Add Data** page.
 3. The **Configure log collection for OCI resources** page will be displayed and table will display all OCI Resources (entities) which your user has access (read) to and from which logs can be collected.
 ![configure-log-collection-for-oci-resources-page](./images/configure-log-collection-for-oci-resources-page.png)
 
-    - **Entity** - An entity is a resource in Logging Analytics which is used to reference the real asset on your on-premises host or virtual host. After you discover this entity in Logging Analytics, you can associate it with a log source and enable log collection from it.
-
     - **Log Source** - Log Sources define where the log files are located and how to parse and enrich the logs while ingesting them, irrespective of the method of ingestion.
+
+    - **Entity** - An entity is a resource in Logging Analytics which is used to reference the real asset on your on-premises host or virtual host. After you discover this entity in Logging Analytics, you can associate it with a log source and enable log collection from it.
 
 4. **Load Balancer Flow**
 
@@ -122,7 +131,7 @@ There are three ways to navigate to the **Add Data** page.
     - In the textbox enter the text **LoadBalancer**  and click on the resultant **LoadBalancer** text. A list of all available Load Balancers will be displayed.
         ![load-balancers-list](./images/load-balancers-list.png)
 
-    - Select the Load Balancer from which logs needs to be collected. And click **Next**
+    - Select the Load Balancer from which logs needs to be collected. Click **Next**
         ![select-load-balancer-click-next](./images/select-load-balancer-click-next.png) 
 
     - Configure Service Connector Panel will be displayed. Click on **Configure Log Collection** button.
@@ -140,10 +149,11 @@ There are three ways to navigate to the **Add Data** page.
 
        
 
-## Task 5: Ingesting logs using Management Agent
+## (Reading Excercise Only) Task 5: Ingesting logs using Management Agent
 
-  This task will walk you through the steps for setting up Log collection with Management Agent. As part of this lab the following tasks have 
-  already been done.
+> **Note** : **No action is needed from the user as this is only reading excercise.**
+
+  This task will walk you through the steps for setting up Log collection with Management Agent. As part of this workshop the following tasks have already been done.
   
   1. Required entities have been created, entity properties have been set, and entity has been mapped with an agent which has access to the entity's logs. 
   2. Users can select a specific entity type (database)
@@ -154,10 +164,12 @@ There are three ways to navigate to the **Add Data** page.
     
     ![management-agent-log-configuration](./images/management-agent-log-configuration.gif)
 
-    > **Note** : Live Lab user does not have Authz to configure the Agent at the moment, **Kumar** to fix it.
 
 
-## Task 6: Upload log files from your computer desktop
+## (Reading Excercise Only) Task 6: Upload log files from your computer desktop
+
+> **Note** : **No action is needed from the user as this is only reading excercise.**
+
 1. Navigate to the **Add Data** page by using any one of the options in Task #3.
 
 2. Click on the **Advanced Collection Methods**. 
@@ -179,11 +191,11 @@ There are three ways to navigate to the **Add Data** page.
 
     - **Log Group** - Select your user's Log Group Name in the Log Group Compartment.
      
-          > Note : **Log Group Compartment** &  **Log Group** can be found in **View Login Info** page.
+          > **Note** : **Log Group Compartment** &  **Log Group** can be found in **View Login Info** page.
 
-    - Click on the **Select Files** button and select the file to upload from your **Computer**.
+    - Click on the **Select Files** button and select the file to upload from your **Computer Desktop**.
      
-          > **Note** : I have selected LinuxSyslogSource.log file from the  **Computer**.
+          > **Note** : I have selected LinuxSyslogSource.log file from the  **Computer Desktop**.
 
     - Click on **Next** button. 
       ![upload-details](./images/upload-details.png)
@@ -220,8 +232,16 @@ There are three ways to navigate to the **Add Data** page.
       ![log-explorer-view-of-upload](./images/log-explorer-view-of-upload.png)  
 
 You may now proceed to the [next lab](#next).
+## Learn More
+For further reading please refer to the resources.
+
+[Configure Sources] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/configure-sources.html)
+
+[Manage Entities] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/manage-entities.html)
+
+[Upload Logs on Demand] (https://docs.oracle.com/en-us/iaas/logging-analytics/doc/upload-logs-demand.html)
 
 ## Acknowledgements
 * **Author** - Vikram Reddy , OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, June, 2023
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2023
