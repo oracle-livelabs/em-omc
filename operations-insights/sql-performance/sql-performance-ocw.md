@@ -150,6 +150,25 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 6. Click **Run** to execute the query.
 
+7. This will display the query result in a tabular format.
+
+      ![SQL Output](./images/sql-query-table.png " ")
+
+8. Under the **Visualization** tab on the right pane, select the following -
+
+      **Chart type** : **Bar Chart**
+      **Y axis** : **SUM(CPU_TIME)**
+      **X axis** : **DISPLAY_NAME**
+      **Series** : **SQL_ID**
+      **Color by** : **SQL_ID**
+      **Y axis title** : **CPU time (s)**
+      **Legend** : **None**
+      Check mark **Stacked**
+
+      ![SQL Visualization](./images/sql-query-visual.png " ")
+
+9. This will display the visualization as a Stacked Bar Chart.
+
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
