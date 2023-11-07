@@ -118,6 +118,14 @@ This lab assumes you have completed the following labs:
 
 ## Task 2: SQL Insights
 
+1. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
+
+      ![Left Pane](./images/sql-insights.png " ")
+
+2. Click **DB time treemap** to view the tree map.
+
+      ![Left Pane](./images/sql-insights-treemap.png " ")      
+
 ## Task 3: SQL Explorer
 
 SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Operations Insights SQL Warehouse.
