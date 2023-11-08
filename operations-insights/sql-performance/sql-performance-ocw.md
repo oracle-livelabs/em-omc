@@ -142,15 +142,17 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 3. This will take you to the **SQL Explorer** page.
 
-      ![SQL Explorer](./images/sql-explorer1.png " ")
+      ![SQL Explorer](./images/sql-explorer-main.png " ")
 
 4. Enter the following SQL in the SQL query section
 
-      <copy>SELECT DISPLAY_NAME,SQL_ID,sum(CPU_TIME)
-      WHERE DISPLAY_NAME='SALES-WT'
-      GROUP BY DISPLAY_NAME,SQL_ID
-      HAVING
-      ORDER BY sum(CPU_TIME)desc</copy>
+      ```
+      <copy>SELECT DISPLAY\_NAME,SQL\_ID,sum(CPU\_TIME)
+            WHERE DISPLAY\_NAME='SALES-WT'
+            GROUP BY DISPLAY\_NAME,SQL\_ID
+            HAVING
+            ORDER BY sum(CPU\_TIME)desc</copy>
+      ```
 
       ![SQL Query](./images/sql-query.png " ")
 
@@ -165,10 +167,10 @@ In this lab create visualuzations using pre-existing performance statistics via 
 8. Under the **Visualization** tab on the right pane, select the following -
 
       **Chart type** : **Bar Chart**
-      **Y axis** : **SUM(CPU_TIME)**
-      **X axis** : **DISPLAY_NAME**
-      **Series** : **SQL_ID**
-      **Color by** : **SQL_ID**
+      **Y axis** : **SUM(CPU\_TIME)**
+      **X axis** : **DISPLAY\_NAME**
+      **Series** : **SQL\_ID**
+      **Color by** : **SQL\_ID**
       **Y axis title** : **CPU time (s)**
       **Legend** : **None**
       Check mark **Stacked**
