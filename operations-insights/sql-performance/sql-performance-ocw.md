@@ -167,12 +167,19 @@ In this lab create visualuzations using pre-existing performance statistics via 
 8. Under the **Visualization** tab on the right pane, select the following -
 
       **Chart type** : **Bar Chart**
+
       **Y axis** : **SUM(CPU\_TIME)**
+      
       **X axis** : **DISPLAY\_NAME**
+      
       **Series** : **SQL\_ID**
+      
       **Color by** : **SQL\_ID**
+      
       **Y axis title** : **CPU time (s)**
+      
       **Legend** : **None**
+      
       Check mark **Stacked**
 
       ![SQL Visualization](./images/sql-query-visual.png " ")
