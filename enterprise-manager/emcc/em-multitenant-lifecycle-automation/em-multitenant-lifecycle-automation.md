@@ -6,7 +6,7 @@ This workshop will help you understand how one can utilize Enterprise Manager to
 *Estimated Lab Time: 60 minutes*
 
 Watch the video below for a quick walk-through of the lab.
-[Hybrid Multitenant Database Lifecycle Management](videohub:1_1yzsbufd)
+[Hybrid Multitenant Database Lifecycle Management](videohub:1_fls378ro)
 
 ### About Hybrid Multitenant Database Lifecycle Management
 
@@ -466,7 +466,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 4.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
       ![](images/fm-flow1.png "selection")
       Where:
-      -  Image = We will select ***PDB Image***. Desired version of Oracle home, which our target database should run after successful completion of operation.
+      -  Image = We will select ***19cDB-Linux-x64-Apps***. Desired version of Oracle home, which our target database should run after successful completion of operation.
       -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
       -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
       -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
@@ -572,6 +572,9 @@ A compliance standard is mapped to one or more compliance standard rules and is 
     ![Confirm Association ](images/complinace_submitted-process-pdb.png " ")
 
 6. Now Navigate to ***Enterprise >> Compliance >> Results***
+    
+    *Processing and displaying the results on the Compliance Results Page will take approximately 5 minutes to complete. 
+    You may want to switch to the next 'Task 6: Self-Service to Request PDB Using PDBaaS complete step 20', then come back here to finish this task steps.* 
 
     ![Navigate to result](images/compliance-navigate-results.png "  ")
 
@@ -849,9 +852,14 @@ The PDBs are created using a precreated service template on CDBs which are virtu
 
 20.  Click **Close** to close the confirmation dialog box.
 
-   The Instance has been successfully deleted.
+     The Instance has been successfully deleted.
 
-   Click on the refresh icon on the top right in case the PDB is still seen on the page.
+     Click on the refresh icon on the top right in case the PDB is still seen on the page.
+    
+
+     *Note : Go back to Task 5, complete steps 6 to 13 before proceeding to Task 7: Setup PDB-as-a-Service (PDBaaS)*
+
+  
 
 ## Task 7:  Setup  PDB-as-a-Service (PDBaaS)
 
