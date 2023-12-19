@@ -22,7 +22,9 @@ This lab assumes you have completed the following labs:
 
 Perform the following steps to download the agent software:
 
-1.  On the Management Agents home page, click the **Downloads and Keys** from the left menu to view the Software Download pane. The Software Download pane is displayed.
+1.  From the Oracle Cloud Console **Navigation menu** located in the upper left, click **Observability & Management**. Under **Management Agent**, click **Downloads and Keys**.
+
+    ![Downloads and Keys Page](./images/agentdownloadandkeys.png " ")
 
 2.  On the Software Download pane, select the operating system that the Management Agent will be installed on from the **Download** column with **Package type** as **RPM**.
 
@@ -36,17 +38,11 @@ Perform the following steps to download the agent software:
 
 1.  You need to create an agent install key before performing the Management Agent installation. An agent install key is issued against your tenancy and validates the authenticity of the installation.
 
-    a) From the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left, click **Observability & Management** and select **Management Agent**.
+2.  On **Download and Keys** page, scroll down to the **Install keys** section. The Install Keys pane is displayed at the bottom of the page.
 
-    b) Select compartment **dbmgmt-demo** from the list of compartments on the left
+    a) On the Install Keys pane, click **Create Key** to create a key
 
-    ![Management Agents](./images/managementagents.png " ")
-
-2.  On the Management Agents home page, click **Download and Keys** from the left menu to view the Agent Install Keys pane. The Agent Install Keys pane is displayed at the bottom of the page.
-
-    a) On the Agent Install Keys pane, click **Create Key** to create a key
-
-    ![Agent Install Pane](./images/agentinstallpane.png " ")
+    ![Agent Install Pane](./images/install-keys.png " ")
 
     b) Enter the required details in the Create Key window
 
@@ -119,4 +115,4 @@ Perform the following steps to download the agent software:
 
 - **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, September 2021
+- **Last Updated By/Date** - Vivek Verma, December 2023
