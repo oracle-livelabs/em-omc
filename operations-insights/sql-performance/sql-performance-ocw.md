@@ -147,11 +147,11 @@ In this lab create visualuzations using pre-existing performance statistics via 
 4. Enter the following SQL in the SQL query section
 
       ```
-      <copy>SELECT DISPLAY\_NAME,SQL\_ID,sum(CPU\_TIME)
-            WHERE DISPLAY\_NAME='SALES-WT'
-            GROUP BY DISPLAY\_NAME,SQL\_ID
+      <copy>SELECT DISPLAY_NAME,SQL_ID,sum(CPU_TIME)
+            WHERE DISPLAY_NAME='SALES-WT'
+            GROUP BY DISPLAY_NAME,SQL_ID
             HAVING
-            ORDER BY sum(CPU\_TIME)desc</copy>
+            ORDER BY sum(CPU_TIME)desc</copy>
       ```
 
       ![SQL Query](./images/sql-query.png " ")
@@ -186,8 +186,58 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 9. This will display the visualization as a Stacked Bar Chart.
 
+10. In the second use case we will sum up all the Elapsed time per SQL ID across the fleet of Databases and then sort that in descending order.
+
+11. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+
+      ![SQL Explorer](./images/sql-explorer.png " ")
+
+12. This will take you to the **SQL Explorer** page.
+
+      ![SQL Explorer](./images/sql-explorer-main.png " ")
+
+13. Enter the following SQL in the SQL query section
+
+      ```
+      <copy>SELECT DISPLAY_NAME,SQL_ID,sum(ELAPSED_TIME)
+            WHERE
+            ​GROUP BY DISPLAY_NAME,SQL_ID
+            HAVING sum(ELAPSED_TIME)>70000000
+            ORDER BYDISPLAY_NAME,sum(ELAPSED_TIME)desc</copy>
+      ```
+
+      ![SQL Query](./images/sql-query1.png " ")
+
+14. Enter **1000** for **LIMIT** to limit 1000 records per page.
+
+15. Click **Run** to execute the query.
+
+16. This will display the query result in a tabular format.
+
+      ![SQL Output](./images/sql-query-table1.png " ")
+
+17. Under the **Visualization** tab on the right pane, select the following -
+
+      **Chart type** : **Bar Chart**
+
+      **Y axis** : **SUM(ELAPSED\_TIME)**
+      
+      **X axis** : **DISPLAY\_NAME**
+      
+      **Series** : **SQL\_ID**
+      
+      **Color by** : **SQL\_ID**
+            
+      **Legend** : **None**
+      
+      Check mark **Stacked**
+
+      ![SQL Visualization](./images/sql-query-visual1.png " ")
+
+9. This will display the visualization as a Stacked Bar Chart.
+
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, December 2023
