@@ -23,7 +23,7 @@ This lab assumes you have:
     - [emcc-mkplc-devops-automation.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/6EjpEzKgfo4Ce0hyErkls4-MelxNp0H7DCqCbqodXyM01VzlLRDFQp12TxPFsHu9/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-devops-automation.zip)
 </if>
 <if type="devops-patching">
-    - [emcc-mkplc-devops-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jWhIypO2ggUpXPmYguVGVT5mS2O2MhV1wU6Xce3i6-WTib12dO8sEu1IP4iLOckQ/n/natdsecurity/b/stack/o/emcc-mkplc-devops-patching.zip)
+    - [emcc-mkplc-devops-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/0kq1pND_WCBBYLXCDnpxD3iR-h1ZRo4pwEydk0g_IydMXOCenJZl65oFtsADn9_e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-patching.zip)
 </if>
 <if type="find-fix-validate">
     - [emcc-mkplc-find-fix-validate.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/6EjpEzKgfo4Ce0hyErkls4-MelxNp0H7DCqCbqodXyM01VzlLRDFQp12TxPFsHu9/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-find-fix-validate.zip)
@@ -50,10 +50,10 @@ This lab assumes you have:
     - [emcc-mkplc-lifecycle.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/6EjpEzKgfo4Ce0hyErkls4-MelxNp0H7DCqCbqodXyM01VzlLRDFQp12TxPFsHu9/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-lifecycle.zip)
 </if>
 <if type="migration-workbench">
-    - [emcc-mkplc-migration-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Q6veHpp9MXq--zR-YNkyRZHsUe1hww9cYdV2u9Ucc-K1loj_iWcSmpIbuUaFhM3k/n/natdsecurity/b/stack/o/emcc-mkplc-migration-workbench.zip)
+    - [emcc-mkplc-migration-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/tIfVdCiZsEO9_8FwmL6GZrXpViDWF7K5VBvwsIMXkadmSnZXWhVCIN6iut2z3oEV/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench.zip)
 </if>
 <if type="migration-workbench-adb">
-    - [emcc-mkplc-migration-workbench-adb.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/iG4N8I6m7YWxlMoNbbu30t66Iyc94B_lZKeVeitGRc4ZNZYk61Srv84xPTpxcttp/n/natdsecurity/b/stack/o/emcc-mkplc-migration-workbench-adb.zip)
+    - [emcc-mkplc-migration-workbench-adb.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/zqv4ccIzpSf1XX2xm50vy6buPjOjKa-ABMWyuPeh96N7WIJWqx4wMAPSP-8UXt9e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench-adb.zip)
 </if>
 <if type="monitoring-overview">
     - [emcc-mkplc-monitoring-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/6EjpEzKgfo4Ce0hyErkls4-MelxNp0H7DCqCbqodXyM01VzlLRDFQp12TxPFsHu9/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-monitoring-overview.zip)
