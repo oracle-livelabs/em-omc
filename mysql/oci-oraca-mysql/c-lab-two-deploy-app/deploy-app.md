@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Now that the infrastructure is up and running, it's time to deploy the app and see it all come together. This workshop uses Spring Boot-based Java microservices as a target application and in this lab, you will deploy the application to the Kubernetes cluster created in Lab 1.
+Now that the infrastructure is up and running, it's time to deploy the app and see it all come together. We demonstrated how easy it is to develop Java apps using Oracle Code Assist. This workshop uses the same Spring Boot-based Java microservice, that was developed in the demo as a target application. In this lab, you will deploy the application to the Kubernetes cluster created in Lab 1.
 
 Estimated time: 15 minutes
 

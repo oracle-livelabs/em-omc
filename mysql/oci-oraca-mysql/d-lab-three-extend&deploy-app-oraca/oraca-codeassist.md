@@ -233,8 +233,6 @@ The full do it yourself (DIY) approach involves building the app with the new co
     - Type `:wq` (colon followed by wq) in the editor.
     - Press Enter to execute a save and exit.
 
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png " ")
-
 10. Execute the command below to deploy the **AdMessage** application to the cluster.
 
     ```bash
@@ -245,7 +243,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     Verify the service and stateful set are both created:
 
-    ![Oracle Coud console, Cloud Shell](images/3-2-3-5-admessage.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png)
 
 11. Verify that the new **admessage** pod is running successfully
 
@@ -255,13 +253,16 @@ The full do it yourself (DIY) approach involves building the app with the new co
     </copy>
     ```
 
+
+    **Result**:
+
     ```bash
     $ kubectl get pods
     NAME             READY   STATUS    RESTARTS   AGE
-    admessage-0      1/1     Running   0          23m
-    wstore-back-0    1/1     Running   0          110m
-    wstore-back-1    1/1     Running   0          110m
-    wstore-front-0   1/1     Running   0          5s
+    admessage-0      1/1     Running   0          31s
+    wstore-back-0    1/1     Running   0          48m
+    wstore-back-1    1/1     Running   0          48m
+    wstore-front-0   1/1     Running   0          48m
     ```
 
 ## Task 2 - Deployment Option 2: Take the automated path
