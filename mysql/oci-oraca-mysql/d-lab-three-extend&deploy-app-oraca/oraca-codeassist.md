@@ -27,7 +27,7 @@ Estimated time: Up to 20 minutes
       </copy>
       ```
 
-      ![Kubectl command](images/3-1-1-buildapp.png " ")
+      ![Kubectl command](images/3-1-1-admessage.png " ")
 
 2. Execute the command below to connect to the MySQL HeatWave Database using the Private IP address of the database and the credentials provided when the DB System was created.
 
@@ -37,7 +37,7 @@ Estimated time: Up to 20 minutes
       </copy>
       ```
 
-      ![Kubectl command](images/3-1-2-buildapp.png " ")
+      ![Kubectl command](images/3-1-2-admessage.png " ")
 
 3. Execute the command below to connect to the **wine** database
 
@@ -76,7 +76,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     </copy>
     ```
 
-    ![Cloud Shell - Maven build process](images/3-2-1-admessage.png " ")
+    ![Cloud Shell - Maven build process](images/3-2-1-1-admessage.png " ")
 
 2. Prepare the container image
 
@@ -222,18 +222,18 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
-    ![Oracle Cloud console, Cloud Shell](images/3-2-2-admessage.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
 
     - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
 
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-admessage.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-admessage.png " ")
     
 
     - Press the Esc key to ensure you are in command mode.
     - Type `:wq` (colon followed by wq) in the editor.
     - Press Enter to execute a save and exit.
 
-    ![Oracle Cloud console, Cloud Shell](images/3-2-4-admessage.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png " ")
 
 10. Execute the command below to deploy the **AdMessage** application to the cluster.
 
@@ -245,7 +245,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     Verify the service and stateful set are both created:
 
-    ![Oracle Coud console, Cloud Shell](images/3-2-5-admessage.png " ")
+    ![Oracle Coud console, Cloud Shell](images/3-2-3-5-admessage.png " ")
 
 11. Verify that the new **admessage** pod is running successfully
 
@@ -274,8 +274,6 @@ The full do it yourself (DIY) approach involves building the app with the new co
     npx zx scripts/artifacts.mjs
     </copy>
     ```
-
-
 
 ## Task 2 - Deployment Option 3: Just Deploy
 

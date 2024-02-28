@@ -77,7 +77,7 @@ Estimated time: 45 minutes
       </copy>
       ```
 
-> NOTE: terraform deployment will take ~20-25 minutes (mainly because the creation of the Kubernetes Cluster plus node pool).
+> **Note:** terraform deployment will take ~20-25 minutes (mainly because the creation of the Kubernetes Cluster plus node pool).
 
 7. After a while, Terraform will finish and you can return to the root folder of the project.
 
