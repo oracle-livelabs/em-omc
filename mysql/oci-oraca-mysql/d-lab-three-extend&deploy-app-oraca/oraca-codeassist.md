@@ -211,14 +211,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     latest: digest: sha256:94570178a7149ca8dda2b921b2e04440d99cbb94d5d89a960fe31eb1898d8f6a size: 1579
     ```
 
-9. Modify the file **admessage.yaml** to update hte MySQL HeatWave Database Private IP and container image location.
-
-    ```bash
-    <copy>
-    cd ~/oci-devlive-2024/sb-hol
-    vi admessage.yaml
-    </copy>
-    ```
+9. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
 
     - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
@@ -282,7 +275,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console - Cloud Shell](images/3-2-2-2-admessage.png " ")
 
-3. Modify the file **admessage.yaml** to update hte MySQL HeatWave Database Private IP and container image location.
+3. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
 
     ```bash
     <copy>
@@ -295,7 +288,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
 
-    - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
+    - Update the field for **image** (line 32). Use the full path that you copied from the previous **Released:** output at the end of the script.
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-admessage.png " ")
     
@@ -323,7 +316,6 @@ The full do it yourself (DIY) approach involves building the app with the new co
     kubectl get pods
     </copy>
     ```
-
 
     **Result**:
 
