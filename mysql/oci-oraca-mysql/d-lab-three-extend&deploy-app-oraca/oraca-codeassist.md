@@ -214,6 +214,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 9. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
 
     ```bash
+    ###
     <copy>
     cd ~/oci-devlive-2024/sb-hol
     vi admessage.yaml
