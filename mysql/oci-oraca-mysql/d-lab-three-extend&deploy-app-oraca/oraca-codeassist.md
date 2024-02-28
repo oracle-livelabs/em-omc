@@ -211,14 +211,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     latest: digest: sha256:94570178a7149ca8dda2b921b2e04440d99cbb94d5d89a960fe31eb1898d8f6a size: 1579
     ```
 
-9. Modify the file **admessage.yaml** to update hte MySQL HeatWave Database Private IP and container image location
-
-    ```bash
-    <copy>
-    cd ~/oci-devlive-2024/sb-hol
-    vi admessage.yaml
-    </copy>
-    ```
+9. Modify the file **admessage.yaml** to update hte MySQL HeatWave Database Private IP and container image location.
 
     - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
