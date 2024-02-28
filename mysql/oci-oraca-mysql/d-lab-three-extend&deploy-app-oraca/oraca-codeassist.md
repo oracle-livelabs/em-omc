@@ -213,6 +213,13 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
 9. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
 
+    ```bash
+    <copy>
+    cd ~/oci-devlive-2024/sb-hol
+    vi admessage.yaml
+    </copy>
+    ```
+
     - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
