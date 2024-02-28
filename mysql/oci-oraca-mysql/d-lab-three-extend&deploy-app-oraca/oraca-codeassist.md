@@ -267,13 +267,73 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
 ## Task 2 - Deployment Option 2: Take the automated path
 
-1. Run the super awesome script (TODO: expand further)
+1. There is a Node.js script available to automate most of the build process. If you have chosen this path, begin with the command below.
 
     ```bash
     <copy>
     cd ~/oci-devlive-2024
     npx zx scripts/artifacts.mjs
     </copy>
+    ```
+
+    ![Oracle Cloud console - Cloud Shell](images/3-2-2-1-admessage.gif " ")
+
+2. Copy the **Released:** value when the script finishes running. This is the path to your OCIR container image.
+
+    ![Oracle Cloud console - Cloud Shell](images/3-2-2-2-admessage.png " ")
+
+3. Modify the file **admessage.yaml** to update hte MySQL HeatWave Database Private IP and container image location.
+
+    ```bash
+    <copy>
+    cd ~/oci-devlive-2024/sb-hol
+    vi admessage.yaml
+    </copy>
+    ```
+
+    - Update the field for the MySQL HeatWave Databae Private IP (line 38)
+
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
+
+    - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
+
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-admessage.png " ")
+    
+
+    - Press the Esc key to ensure you are in command mode.
+    - Type `:wq` (colon followed by wq) in the editor.
+    - Press Enter to execute a save and exit.
+
+4. Execute the command below to deploy the **AdMessage** application to the cluster.
+
+    ```bash
+    <copy>
+    kubectl apply -f admessage.yaml --validate=false
+    </copy>
+    ```
+
+    Verify the service and stateful set are both created:
+
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png)
+
+5. Verify that the new **admessage** pod is running successfully
+
+    ```bash
+    <copy>
+    kubectl get pods
+    </copy>
+    ```
+
+
+    **Result**:
+
+    ```bash
+    $ kubectl get pods
+    NAME             READY   STATUS    RESTARTS   AGE
+    admessage-0      1/1     Running   0          31s
+    wstore-back-0    1/1     Running   0          48m
+    wstore-back-1    1/1     Running   0          48m
+    wstore-front-0   1/1     Running   0          48m
     ```
 
 ## Task 2 - Deployment Option 3: Just Deploy
