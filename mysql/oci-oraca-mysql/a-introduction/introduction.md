@@ -9,7 +9,8 @@ Estimated Time: 120 minutes
 
 ### About Oracle AI Code Assistant 
 
-Oracle AI code assist utilizes machine learning models to provide real-time suggestions and autocompletions while writing code. Oracle AI code assist analyzes the context and structure of the code being written, offering relevant snippets and completing code patterns. Available as IntelliJ IDEA plugin to enhance the productivity by reducing manual typing and helping developers discover and apply appropriate code constructs.
+The Oracle Code Assist is an IntelliJ IDEA plugin that utilizes machine learning models to help developers auto-generate code, test cases, and documentation. It thereby enhances productivity by reducing manual typing and helps developers discover and apply appropriate code constructs.
+Oracle AI code Assist analyzes the context and structure of the code, offering relevant snippets and completing code patterns.
 
 ### MySQL Heatwave Database 
 

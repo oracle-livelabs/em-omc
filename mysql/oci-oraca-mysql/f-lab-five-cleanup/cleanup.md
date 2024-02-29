@@ -4,11 +4,11 @@
 
 In this lab, you will clean up the workshop environment by running commands from the Cloud shell, also manually removing the Oracle cloud resources using the Oracle Cloud console.
 
-Estimated time: 10 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
-* Remove the lab configurations and setups
+* Remove the lab configurations and resources
 
 ### Prerequisites
 
@@ -16,141 +16,59 @@ Estimated time: 10 minutes
 
 ## Task 1: Clean Up the application setup
 
-To delete the workshop setup from your tenancy, follow the steps below.
+To delete the workshop setup from your tenancy, follow the steps below using.
 
-1. Run the oci ce (Container Engine) command that you saved in Lab 3, Task 2, step 5.
+1. From the OCI menu, navigate to **Databases** -> **MySQL HeatWave** -> **DB Systems**
 
-2. Remove the application deployment.
+2. Click the name of the DB System created in Lab 1. Then click `[More actions]` and choose `[Delete]`.
 
-    ``` bash
+3. When prompted, click the checkbox to "Delete DB System permanently." and click **`[Delete DB sysme]`**
+
+    >**Note:** If Termination Protection is active, you will not be able to delete the DB System. You will instead need to Edit the DB System, locate the advanced settings, uncheck the **Termination Protection** box, and save. It will take a few minutes to update before you can then delete the resource.
+
+    ![Oracle Cloud console - DB Systems](images/5-2-1-cleanup.png " ")
+
+4. When the resource has been deleted, open Cloud Shell and navigate to **sb-hol** directory. Then run the command to delete the Kubernetes deployments.
+
+    ```bash
     <copy>
-    kubectl delete -f ~/sb-hol/wstore.yaml
+    cd ~/oci-devlive-2024/sb-hol
+    terraform delete -f wstore.yaml,admessage.yaml,apmnamespace.yaml,customapmresource.yaml
     </copy>
     ```
 
-3. Remove the storage configuration from the cluster.
+    - Allow a minute or so for the resources to be deleted.
 
-    a) If you created a file system, run the command below.
-    ``` bash
+5. Navigate to the the Terraform directory.
+
+    ```bash
     <copy>
-    kubectl delete -f ~/sb-hol/apmlab-fss.yaml
-    </copy>
-    ```
-    ![Oracle Cloud, Cloud Shell](images/4-1-cleanup.png " ")
-
-    b) If you created block volumes, run the command below.
-
-    ``` bash
-    <copy>
-    kubectl delete -f ~/sb-hol/apmlab-pvc.yaml
+    cd ~/oci-devlive-2024/deployment/terraform
     </copy>
     ```
 
+6. Run the following command to allow Terraform to destroy the remaining resources that were used in this workshop.
 
-## Task 2: Remove the Target Mount and the File System
-
-If you created a file system, complete steps 1 - 6 below. If you created block volumes instead, please proceed to the next Task.
-
-1. From the navigation menu in the Oracle Cloud console, select **Storage** > **Mount Target**.
-   Then click the link to the MountTarget configured in the workshop.
-
-    ![Oracle Cloud, Cloud console](images/4-2-cleanup.png " ")
-
-2. In the **Mount Target Details** page, click **Delete**. In the confirmation window, click **Delete**.
-
-    ![Oracle Cloud, Cloud console](images/4-3-cleanup.png " ")    
-
-3. Deletion of the Mount Target starts and completes.
-
-    ![Oracle Cloud, Cloud console](images/4-4-cleanup.png " ")    
-
-4. From the navigation menu in the Oracle Cloud console, select **Storage** > **File Systems**. Then click the link to the File System configured in the workshop.
-
-    ![Oracle Cloud, Cloud console](images/4-5-cleanup.png " ")       
-
-5. In the **File System Details** page, click **Delete**. In the confirmation window, click **Delete**.
-
-    ![Oracle Cloud, Cloud console](images/4-6-cleanup.png " ")    
-
-6. Deletion of the File System starts and completes.
-
-    ![Oracle Cloud, Cloud console](images/4-7-cleanup.png " ")    
-
-
-
-
-## Task 3: Remove the container
-
-1. From the navigation menu in the Oracle Cloud console, select **Developer Services** > **Kubernetes Container(OKE)**. Then click the link to the Cluster configured in the workshop.
-
-    ![Oracle Cloud, Cloud console](images/4-8-cleanup.png " ")       
-
-2. In the **Cluster Details** page, click **Delete**. In the confirmation window, enter the name of the cluster, then click **Delete**.
-
-    ![Oracle Cloud, Cloud console](images/4-9-cleanup.png " ")    
-
-3. Deletion of the File System starts and completes.
-
-    ![Oracle Cloud, Cloud console](images/4-10-cleanup.png " ")  
-
-## Task 4: Remove the VCN
-
-1. From the navigation menu in the Oracle Cloud console, select **Networking** > **Virtual Cloud Networks**. Then click the link to the VCN configured in the workshop.
-
-    ![Oracle Cloud, Cloud console](images/4-11-cleanup.png " ")       
-
-2. In the **Virtual Cloud Network Details** page, scroll down to locate the **Subnets** section. Select one of the subnets and click the three-dot icon on the right-hand side of the row.
-
-    ![Oracle Cloud, Cloud console](images/4-12-cleanup.png " ")    
-
-3. From the pulldown menu, select **Terminate**. In the confirmation window, click **Terminate**.
-
-    ![Oracle Cloud, Cloud console](images/4-13-cleanup.png " ")      
-
-4. Repeat to terminate other subnets. Once all the subnets are deleted, from the upper side of the VCN details page, click **Terminate** to remove the VCN.
-
-    ![Oracle Cloud, Cloud console](images/4-14-cleanup.png " ")    
-
-5. **Delete Virtual Cloud Network** dialog opens. Click **Scan**.
-
-
-    ![Oracle Cloud, Cloud console](images/4-14-2-cleanup.png " ")    
-
-
-
-6. Click the **Terminate All** button when activated. Termination of the resources begins. Once the message **Virtual Cloud Network termination complete** shows, click **Close**.
-    ![Oracle Cloud, Cloud console](images/4-15-cleanup.png " ")    
-
-## Task 5: Remove the workshop directory
-
-1. Open the Oracle Cloud shell, and run the following commands to remove the files and the workshop directory.
-
-    ``` bash
+    ```bash
     <copy>
-    cd ~; rm apm-java-agent-installer-*.jar; rm index.html; rm -r sb-hol;rm sb-hol.zip
+    terraform init
+    terraform destroy -auto-approve
     </copy>
     ```
-   ![Oracle Cloud, Cloud console](images/4-16-cleanup.png " ")   
 
-## Task 6: Remove the APM domain and compartment
+7. While the terraform destroy command is running (it may take about 10 minutes), you can minimize Cloud Shell. Using the OCI Menu, navigate to **Observability & Management** -> **Application Performance Monitoring** -> **Administration**
 
-   1. From the navigation menu in the Oracle Cloud console, select **Observability & Management** > **Administration**. Then click the link to the APM domain which you created in the workshop.
-      ![Oracle Cloud, Cloud console](images/6-1-cleanup.png " ")
+8. Use the menu to the right side of your APM domain to delete it.
 
-   2. In the **Domain details** page, click **Delete**. In the confirmation window, enter the name of the APM domain, then click **Delete**.   
-      ![Oracle Cloud, Cloud console](images/6-2-cleanup.png " ")
+    ![Oracle Cloud console - APM](images/5-2-2-cleanup.png " ")
 
-   3. Deletion of the APM domain starts and completes. This may take a few minutes. Refresh the screen periodically and check the status.
-      ![Oracle Cloud, Cloud console](images/6-3-cleanup.png " ")
+9. Use the OCI Menu to navigate to **Developer Services** -> **Resource Manager** -> **Stacks**. Locate the stack you created in lab for.
 
-   4. From the navigation menu in the Oracle Cloud console, select **Identity & Security** > **Compartment**. Then click the link to the compartment which you created in the workshop.  
-      ![Oracle Cloud, Cloud console](images/6-4-cleanup.png " ")   
+    - It should look something like this `Kubernetes Monitoring and Management-20240222162903`
 
-   5. In the **Compartment details** page, click **Delete**. In the confirmation window, click **Delete**.  
-      ![Oracle Cloud, Cloud console](images/6-5-cleanup.png " ")
+10. Click the name of the stack to view its details. Then click the **`Destroy`** button to remove related resources.
 
-   6. Deletion of the compartment starts and completes. This may take a few minutes.   
-      ![Oracle Cloud, Cloud console](images/6-6-cleanup.png " ")   
+11. When the destroy job is complete, you can use the `[More actions]` menu to **Delete stack**
 
 
 
@@ -160,4 +78,5 @@ If you created a file system, complete steps 1 - 6 below. If you created block v
 - **Contributors** -
 Yutaka Takatsu, Senior Principal Product Manager,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Anand Prabhu, January 2024
+Eli Schilling, Developer Advocate
+* **Last Updated By/Date** - Eli Schilling, February 2024
