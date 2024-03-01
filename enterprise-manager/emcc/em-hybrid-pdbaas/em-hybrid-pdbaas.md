@@ -142,7 +142,7 @@ In  this task we will build all the necessary componets required in setting up P
     ![Paas-zone](images/Paas-add-role.png "PaaS Zone")
 
 10. Review the details and click "Submit"
-    ![Paas-zone](images/Paas-review.png "PaaS Zone")
+    ![Paas-zone](images/paas-review.png "PaaS Zone")
 
 
     The PaaS infra zone has been created successfully. 
@@ -641,8 +641,6 @@ The PDBs are created using our service template on CDBs which we have virtually 
 		
 	Choose Profile, PDB Name , Service and Size details:
     On the configuration page, click on the magnifier icon to choose the Data profile. Select the profile name and click Select.
-
-    ![deploypdb](images/deploypdb15.png "deploypdb") 
 
     ```
 	PDB Name: NewDemoSales
