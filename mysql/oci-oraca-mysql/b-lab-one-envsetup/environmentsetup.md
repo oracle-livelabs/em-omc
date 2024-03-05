@@ -109,11 +109,22 @@ Estimated time: 45 minutes
   ![Oracle Cloud console, Create MySQL HeatWave Database](images/3-7-mysqlheatwave.png " ")
   ![Oracle Cloud console, Create MySQL HeatWave Database](images/3-8-mysqlheatwave.png " ")
 
-7. This will start to create a MySQL HeatWave Database, and takes 10-15 minutes to complete. While waiting for the creation of the MySQL HeatWave Database, the workshop facilitators will discuss some of the benefits of MySQL HeatWave. In Lab 2, we will resume the steps to deploy the application connecting to the MySQL HeatWave Database.
+7. This will start to create a MySQL HeatWave Database, and takes 10-15 minutes to complete. While waiting for the creation of the MySQL HeatWave Database, the workshop facilitators will discuss some of the benefits of MySQL HeatWave Database. In Lab 2, we will resume the steps to deploy the application connecting to the MySQL HeatWave Database.
 
   ![Oracle Cloud console, Create MySQL HeatWave Database](images/3-9-mysqlheatwave.png " ")
 
-You may now **proceed to the next lab**.
+   Watch a video demonstration of creating MySQL HeatWave Database with Database Management enabled
+   [](youtube:LS89O0ACDYs?si=wMP6eM0sdziBVnvz)
+
+   Watch a video demonstration of monitoring and managing MySQL HeatWave Database 
+   [](youtube:4VlRypYXJ48?si=k68OnLN9XI4KXo9B)
+
+   Watch a video demonstration of tuning MySQL HeatWave DB System queries using  Performance Hub
+   [](youtube:vXqA8nkcF4c?si=B314cImffyHCfk1b)
+
+
+[You may now **proceed to the next lab**.](#next)
+
 
 ## Acknowledgements
 

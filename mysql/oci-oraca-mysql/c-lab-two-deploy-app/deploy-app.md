@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Now that the infrastructure is up and running, it's time to deploy the app and see it all come together. We demonstrated how easy it is to develop Java apps using Oracle Code Assist. This workshop uses the same Spring Boot-based Java microservice, that was developed in the demo as a target application. In this lab, you will deploy the application to the Kubernetes cluster created in Lab 1.
+Now that the infrastructure is up and running, it's time to deploy the app and see it all come together. We demonstrated how easy it is to deploy a Java app with MySQL HeatWave Database as backend and deploy on Oracle Cloud Infrastructure Container Engine for Kubernetes (OKE). In this lab, you will prepare MySQL HeatWave Database with application schema and then deploy the Java Application to Kubernetes cluster created in Lab 1.
 
 Estimated time: 15 minutes
 
 ### Objectives
 
 * Connect to the OKE Cluster
-* Prepare the MySQL Database
+* Prepare the MySQL HeatWave Database
 * Deploy the application
 
 ### Prerequisites
@@ -94,7 +94,7 @@ Estimated time: 15 minutes
 
       ```bash
       <copy>
-      ls
+      ls -l
       </copy>
       ```
 
@@ -104,17 +104,19 @@ Estimated time: 15 minutes
       * admessage.yaml
       * apmnamespace.yaml
       * customapmresource.yaml
+      * enableapm.sh
       * wstore.yaml
 
 3. Modify the file **wstore.yaml** to update the MySQL HeatWave Database Private IP
 
       ```bash
       <copy>
+      cd ~/oci-devlive-2024/sb-hol
       vi wstore.yaml
       </copy>
       ```
 
-    - Update field **<mds-private-ip-address>** with MySQL HeatWave Database Private IP (line 88) 
+    - Update field **<mds-private-ip-address>** with MySQL HeatWave Database Private IP (line 84) 
 
     ![Oracle Cloud console, Cloud Shell](images/2-3-2-buildapp.png " ")
 
@@ -128,7 +130,7 @@ Estimated time: 15 minutes
 
       ```bash
       <copy>
-      kubectl apply -f wstore.yaml --validate=false
+      kubectl apply -f wstore.yaml
       </copy>
       ```
 
@@ -136,7 +138,7 @@ Estimated time: 15 minutes
 
 1. Verify the 2 services and 2 statefule sets are created successfully
 
-      ![Oracle Cloud console, Cloud Shell](images/2-4-1-buildapp.png " ")
+      ![Oracle Cloud console, Cloud Shell](images/2-4-1-0-buildapp.png " ")
 
 2. Run the `kubectl` command below to display the status of the pod creation. Wait until all pods are in the 'Running' state. This might take a minute or two.
 
@@ -146,13 +148,7 @@ Estimated time: 15 minutes
       </copy>
       ```
 
-      ```bash
-      $ kubectl get pods
-      NAME             READY   STATUS    RESTARTS   AGE
-      wstore-back-0    1/1     Running   0          2d23h
-      wstore-back-1    1/1     Running   0          2d23h
-      wstore-front-0   1/1     Running   0          2d23h
-      ```
+      ![Oracle Cloud console, Cloud Shell](images/2-4-1-1-buildapp.png " ")
 
 3. Retrieve the public IP address for the application service endpoint. Copy it into a text file for future use.
 
@@ -176,7 +172,7 @@ Estimated time: 15 minutes
 
       >**Note:** It may take a few minutes to complete the deployment and start loading the page content on the screen for the first time.
 
-You may now **proceed to the next lab**.
+[You may now **proceed to the next lab**.](#next)
 
 ## Acknowledgements
 
