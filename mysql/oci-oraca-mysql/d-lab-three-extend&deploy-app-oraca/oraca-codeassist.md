@@ -1,8 +1,8 @@
-# Build a microservices application using Oracle AI Code Assist 
+# Build a new microservice application to extend WineCellar App 
 
 ## Introduction
 
-In this workshop you'll enhance the existing microservices application with a brand new component. Currently, we have a static ad message **2023 Thanks Giving Promotion: Buy 1 get 1!!!!** shown in the storefront. Watch as we use Oracle AI Code Assist to generate all the code for a Spring Boot-based Java app. That code has been provided as part of the workshop resources so now it's time to package and deploy it.
+In this workshop you'll enhance the existing microservice application with a brand new component. Currently, we have a static ad message **2023 Thanks Giving Promotion: Buy 1 get 1!!!!** shown in the storefront. Build a new Spring Boot-based Java app to make ad messages dynamic to fetch from database and integrate it with WineCellar App. That code has been provided as part of the workshop resources so now it's time to package and deploy it.
 
 For this portion of the workshop, you have three different options to pick from when you reach **Task 2** - choose only one option:
 1. [ ~20 minutes ] Build, package, and deploy the code entirely on your own.
@@ -62,12 +62,25 @@ Estimated time: Up to 20 minutes
 
     ![Oracle Cloud console, Cloud Shell](images/3-1-4-admessage.png " ")
 
+5. Type **exit** to leave the MySQL client, then **exit** once more to leave and terminate the MySQL Client pod.
+
+    ![Oracle Cloud console, Cloud Shell](images/3-1-5-admessage.png " ")
 
 ## Task 2 - Deployment Option 1: Full DIY Approach
 
-The full do it yourself (DIY) approach involves building the app with the new code, using the output to create a new container image, pushing that image to the OCI Container Registry (OCIR), and deploying the app to Kubernetes. If you choose this path, you can then skip the remaining deployment options. This will take about 20 minutes.
+>The full do it yourself (DIY) approach involves building the app with the new code, using the output to create a new container image, pushing that image to the OCI Container Registry (OCIR), and deploying the app to Kubernetes. If you choose this path, you can then skip the remaining deployment options. This will take about 20 minutes.
 
-1. Build an artifact from the source code.
+1. Make sure the architecture of the cloud shell is set to **X86_64**
+
+    If the current architecture is not shown as **X86\_64**, then select **X86\_64** as the preffered architecture and click **Confirm and Restart**. 
+
+    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-0-admessage.png " ")
+
+    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-1-admessage.png " ")
+
+    This helps us to build the image on platform X86_64. 
+
+2. Build an artifact from the source code.
 
     ```bash
     <copy>
@@ -78,7 +91,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Cloud Shell - Maven build process](images/3-2-1-1-admessage.png " ")
 
-2. Prepare the container image
+3. Prepare the container image
 
     ```bash
     <copy>
@@ -106,7 +119,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     Successfully tagged admessage:latest
     ```
 
-3. Retrieve the user credentials for connecting to the OCI Container Registry
+4. Retrieve the user credentials for connecting to the OCI Container Registry
 
     ```bash
     <copy>
@@ -145,9 +158,9 @@ The full do it yourself (DIY) approach involves building the app with the new co
     }
     ```
 
-4. Copy the **value** for repository_name, user_auth_token, and user_name and store them for later use.
+5. Copy the **value** for repository\_name, user\_auth\_token, and user\_name and store them for later use.
 
-5. Retrieve the Object Storage Namespace for the tenancy and store it for later use.
+6. Retrieve the Object Storage Namespace for the tenancy and store it for later use.
 
     ```bash
     <copy>
@@ -161,7 +174,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     }
     ```
 
-6. Authenticate to OCIR. This will require the `user_name` and `user_auth_token` values copied earlier.
+7. Authenticate to OCIR. This will require the `user_name` and `user_auth_token` values copied earlier.
 
     ```bash
     <copy>
@@ -170,6 +183,17 @@ The full do it yourself (DIY) approach involves building the app with the new co
     ```
 
     >**Note**: Once again, be sure to replace `phx` with the abbreviation for your selected region.
+    To get the key used for your region just execute the below oci command with the city name in lowercase as shown in the oci console
+
+    >![Oracle Cloud console, Cloud Shell](images/3-2-6-1-admessage.png " ")
+
+    >```bash
+    <copy>
+    oci iam region list --query "data[?contains("name", 'city_name_here')]"
+    </copy>
+    >```
+    
+    >![Oracle Cloud console, Cloud Shell](images/3-2-6-2-admessage.png " ")
 
     ```bash
     $ echo "---redacted---" | docker login -u a---redacted---2/devlive-nj-ocir-user --password-stdin phx.ocir.io
@@ -177,7 +201,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     Login Succeeded
     ```
     
-7. Tag the container image
+8. Tag the container image
 
     ```bash
     <copy>
@@ -191,54 +215,40 @@ The full do it yourself (DIY) approach involves building the app with the new co
     $ docker tag admessage phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage:v1.0.0
     ```
 
-8. Push the container image to OCIR
+9. Push the container image to OCIR
 
     ```bash
     <copy>
-    docker push phx.ocir.io/a---redacted---2/devlive-##-repository/admessage:latest
-    <copy>
+    docker push phx.ocir.io/a---redacted---2/devlive-##-repository/admessage:v1.0.0
+    </copy>
     ```
 
-    ```bash
-    $ docker push phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage:latest
-    The push refers to repository [phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage]
-    68c651c86e51: Pushed 
-    9d8f57404a71: Pushed 
-    0bf5a6521e69: Pushed 
-    dc9fa3d8b576: Pushed 
-    27ee19dc88f2: Pushed 
-    c8dd97366670: Pushed 
-    latest: digest: sha256:94570178a7149ca8dda2b921b2e04440d99cbb94d5d89a960fe31eb1898d8f6a size: 1579
-    ```
+    ![Oracle Cloud console, Cloud Shell](images/3-2-8-1-admessage.png " ")
 
-9. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
+
+10. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
 
     ```bash
-    ###
     <copy>
     cd ~/oci-devlive-2024/sb-hol
     vi admessage.yaml
     </copy>
     ```
 
+    - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
     - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
-
-    - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
-
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-admessage.png " ")
-    
 
     - Press the Esc key to ensure you are in command mode.
     - Type `:wq` (colon followed by wq) in the editor.
     - Press Enter to execute a save and exit.
 
-10. Execute the command below to deploy the **AdMessage** application to the cluster.
+11. Execute the command below to deploy the **AdMessage** application to the cluster.
 
     ```bash
     <copy>
-    kubectl apply -f admessage.yaml --validate=false
+    kubectl apply -f admessage.yaml
     </copy>
     ```
 
@@ -246,7 +256,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png)
 
-11. Verify that the new **admessage** pod is running successfully
+12. Verify that the new **admessage** pod is running successfully
 
     ```bash
     <copy>
@@ -268,7 +278,18 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
 ## Task 2 - Deployment Option 2: Take the automated path
 
-1. There is a Node.js script available to automate most of the build process. If you have chosen this path, begin with the command below.
+1. Make sure the architecture of the cloud shell is set to **X86_64**
+
+    If the current architecture is not shown as **X86\_64**, then select **X86\_64** as the preffered architecture and click **Confirm and Restart**. 
+
+    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-0-admessage.png " ")
+
+    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-1-admessage.png " ")
+
+    This helps us to build the image on platform X86_64. 
+
+
+2. There is a Node.js script available to automate most of the build process. If you have chosen this path, begin with the command below.
 
     ```bash
     <copy>
@@ -279,11 +300,11 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console - Cloud Shell](images/3-2-2-1-admessage.gif " ")
 
-2. Copy the **Released:** value when the script finishes running. This is the path to your OCIR container image.
+3. Copy the **Released:** value when the script finishes running. This is the path to your OCIR container image.
 
     ![Oracle Cloud console - Cloud Shell](images/3-2-2-2-admessage.png " ")
 
-3. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
+4. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
 
     ```bash
     <copy>
@@ -292,24 +313,21 @@ The full do it yourself (DIY) approach involves building the app with the new co
     </copy>
     ```
 
+
+    - Update the field for **image** (line 32). Use the full path from the previous **Released:** output at the end of the script.
     - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
-
-    - Update the field for **image** (line 32). Use the full path that you copied from the previous **Released:** output at the end of the script.
-
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-admessage.png " ")
-    
 
     - Press the Esc key to ensure you are in command mode.
     - Type `:wq` (colon followed by wq) in the editor.
     - Press Enter to execute a save and exit.
 
-4. Execute the command below to deploy the **AdMessage** application to the cluster.
+5. Execute the command below to deploy the **AdMessage** application to the cluster.
 
     ```bash
     <copy>
-    kubectl apply -f admessage.yaml --validate=false
+    kubectl apply -f admessage.yaml
     </copy>
     ```
 
@@ -317,7 +335,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png)
 
-5. Verify that the new **admessage** pod is running successfully
+6. Verify that the new **admessage** pod is running successfully
 
     ```bash
     <copy>
@@ -338,34 +356,34 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
 ## Task 2 - Deployment Option 3: Just Deploy
 
-1. Go back to the cloud shell and inside **~/sb-hol** directory, find **admessage.yaml**
+1. Go back to the cloud shell and inside **~/oci-devlive-2024/sb-hol** directory, find **admessage.yaml**
 
    ![Oracle Cloud console, Cluster details](images/3-2-3-1-admessage.png " ")
 
-   Admessage.yaml contains reference to the containerized image with packaged Admessage application built through Oracle AI Code assist.
+   Admessage.yaml contains reference to the containerized image with packaged Admessage application
 
 2. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP 
 
     ``` bash
     <copy>
+    cd ~/oci-devlive-2024/sb-hol
     vi admessage.yaml
     </copy>
     ```
-    - Update field **<mds-private-ip-address>** with MySQL HeatWave Database Private IP (line 38) 
+    
+    - Update the field for the MySQL HeatWave Databae Private IP (line 38)
 
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-3-admessage.png " ")
 
     - Press the Esc key to ensure you are in command mode.
-    - Type :wq (colon followed by wq) in the vi editor.
-    - Press Enter to execute the command to save the file 
-
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-admessage.png " ")
+    - Type `:wq` (colon followed by wq) in the editor.
+    - Press Enter to execute a save and exit.
 
 3. Execute the command below to deploy the **AdMessage** application to the cluster.
 
     ``` bash
     <copy>
-    kubectl apply -f ~/sb-hol/admessage.yaml --validate=false
+    kubectl apply -f ~/oci-devlive-2024/sb-hol/admessage.yaml
     </copy>
     ```
 
@@ -373,7 +391,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console, Cluster details](images/3-2-3-4-admessage.png " ")
 
-3. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
+4. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
 
     ``` bash
     <copy>
@@ -382,7 +400,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-5-admessage.png " ")
 
-4. Run the kubectl command below to display the deployed services.
+5. Run the kubectl command below to display the deployed services.
 
     ``` bash
     <copy>
@@ -397,10 +415,11 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ``` bash
     <copy>
+    cd ~/oci-devlive-2024/sb-hol
     vi wstore.yaml
     </copy>
     ```
-    - Update value of parameter  **winStore.services.adservice** with **AdMessage Endpoint** mentioned below. New endpoint is `adapi/admessage` (line 59)
+    - Update value of parameter  **winStore.services.adservice** with **AdMessage Endpoint** mentioned below. New endpoint is `adapi/admessage` (line 55)
 
     ``` bash
     <copy>
@@ -413,14 +432,12 @@ The full do it yourself (DIY) approach involves building the app with the new co
     - Press the Esc key to ensure you are in command mode.
     - Type :wq (colon followed by wq) in the vi editor.
     - Press Enter to execute the command to save the file 
-
-    ![Oracle Cloud console, Cloud Shell](images/3-3-2-admessage.png " ")
   
 2. Execute the command below to deploy the application to the cluster.
 
     ``` bash
     <copy>
-    kubectl apply -f ~/sb-hol/wstore.yaml --validate=false
+    kubectl apply -f ~/oci-devlive-2024/sb-hol/wstore.yaml 
     </copy>
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-3-3-admessage.png " ")
@@ -443,7 +460,7 @@ The full do it yourself (DIY) approach involves building the app with the new co
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-3-5-admessage.png " ")
 
-4. Launch the application to see new **ad message** 
+5. Launch the application to see new **ad message** 
 
     ``` bash
     <copy>
@@ -453,11 +470,11 @@ The full do it yourself (DIY) approach involves building the app with the new co
 
     ![Oracle Cloud console, Cloud Shell](images/3-3-6-admessage.png " ")
 
-5. Additional task: Update table **admessage** to see how the admessage changes on update of table and refreshing the winestore url in the browser. 
+6. **Additional task:** Update table **admessage** to see how the admessage changes on update of table and refreshing the winestore url in the browser. 
 
     ``` bash
     <copy>
-    UPDATE admessage SET message="Oracle AI Code Assistant HOL" WHERE ID=1;
+    UPDATE admessage SET message="Successfully Deployed and Integrated AdMessage API" WHERE ID=1;
     COMMIT;
     SELECT * FROM admessage;
 
@@ -473,4 +490,4 @@ You may now **proceed to the next lab**.
 Anand Prabhu, Principal Member of Technical Staff, Enterprise and Cloud Manageability
 Victor Martin, Product Strategy Directory 
 Eli Schilling, Developer Advocate
-* **Last Updated By/Date** - Eli Schilling, February 2024
+* **Last Updated By/Date** - Anand, March 2024

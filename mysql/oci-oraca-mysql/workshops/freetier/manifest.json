@@ -1,5 +1,5 @@
 {
-  "workshoptitle": "Build microservice application using Oracle AI Code Assist and MySQL Heatwave Database",
+  "workshoptitle": "Intelligent App Dev with MySQL Heatwave Database and Advanced Observability",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -23,8 +23,8 @@
             "filename": "../../c-lab-two-deploy-app/deploy-app.md"
         },
         {
-            "title": "Lab 3: Enhance application with new microservice built using Oracle AI Code Assist",
-            "description": "Build new microservice using Oracle AI Code Assist",
+            "title": "Lab 3: Enhance WineCellar application with a new microservice",
+            "description": "Enhance WineCellar application with a new microservice",
             "filename": "../../d-lab-three-extend&deploy-app-oraca/oraca-codeassist.md"
         },
         {
