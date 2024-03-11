@@ -88,6 +88,8 @@ Estimated time: Up to 20 minutes
     docker build -f Dockerfile -t admessage:latest .
     </copy>
     ```
+    
+    Example:
 
     ```bash
     $ docker build -f Dockerfile -t admessage:latest .
@@ -117,7 +119,7 @@ Estimated time: Up to 20 minutes
     terraform output -json | jq 
     </copy>
     ```
-
+    Example:
     ```bash
     {
         "deploy_id": {
@@ -158,6 +160,7 @@ Estimated time: Up to 20 minutes
     </copy>
     ```
 
+    Example:
     ```bash
     {
     "data": "a---redacted---2"
@@ -181,6 +184,7 @@ Estimated time: Up to 20 minutes
     </copy>
     ```
 
+    Example:
     ```bash
     $ echo "---redacted---" | docker login -u a---redacted---2/devlive-nj-ocir-user --password-stdin phx.ocir.io
 
@@ -194,7 +198,7 @@ Estimated time: Up to 20 minutes
     docker tag admessage <region key>.ocir.io/{object storage namespace}/devlive-##-repository/admessage:1.0.0
     </copy>
     ```
-
+    Example:
     ```bash
     $ docker tag admessage phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage:v1.0.0
     ```
@@ -207,6 +211,7 @@ Estimated time: Up to 20 minutes
     </copy>
     ```
 
+    Example:
     ```bash
     $ docker push phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage:v1.0.0
     ```
@@ -258,6 +263,8 @@ Estimated time: Up to 20 minutes
     wstore-back-1    1/1     Running   0          48m
     wstore-front-0   1/1     Running   0          48m
     ```
+
+[You may now **proceed to the Task 3**.]
 
 ## Task 2 - Deployment Option 2: Take the automated path
 
@@ -319,6 +326,8 @@ Estimated time: Up to 20 minutes
     wstore-front-0   1/1     Running   0          48m
     ```
 
+[You may now **proceed to the Task 3**.]
+
 ## Task 2 - Deployment Option 3: Just Deploy
 
 1. Click on the code editor and open the file **OCI-DEVLIVE-2024 > sb-hol > admessage.yaml** in the code editor.
@@ -362,6 +371,8 @@ Estimated time: Up to 20 minutes
     </copy>
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-6-admessage.png " ")
+
+[You may now **proceed to the Task 3**.]
 
 ## Task 3: Integrate the AdMessage API with the main Wine App
 

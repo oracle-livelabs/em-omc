@@ -155,7 +155,7 @@ Estimated time: 15 minutes
       http://<Public IP of the wstore-frontend service>/winestore/
       </copy>
       ```
-If you see the WineCellar content as illustrated in the screenshot below, deployment was successfull.
+If you see the WineCellar content as illustrated in the screenshot below, deployment was successful.
 
       ![Wine cellar demo app](images/2-4-3-buildapp.png " ")
 

@@ -18,7 +18,7 @@ In this lab, you will see step-by-step instructions to:
 
     ![Oracle Cloud console Menu](images/4-0-1-dbm.png " ")
 
-2. select compartment **devliv24** to see the fleet Summary - showing MySQL HeatWave Database systems inventory, monitoring status, resource usage & alarams.
+2. Select compartment **devliv24** to see the fleet Summary - showing MySQL HeatWave Database systems inventory, monitoring status, resource usage & alarms.
 
     ![Oracle Cloud console Menu](images/4-0-2-dbm.png " ")
 
@@ -174,7 +174,7 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
 
    ![Oracle Cloud, Trace Explorer](images/5-1-4-0-traces.png " ")
 
-5.	Click the trace link at the **Service:Operationame** column.
+5.	Click the trace link at the **Service:Operation name** column.
 
    ![Oracle Cloud, Trace Explorer](images/5-1-4-1-traces.png " ")
 
