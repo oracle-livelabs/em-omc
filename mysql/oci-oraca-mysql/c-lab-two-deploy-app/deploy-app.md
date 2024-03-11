@@ -18,12 +18,29 @@ Estimated time: 15 minutes
 
 ## Task 1: Connect to Kubernetes
 
-1. Export the `kubeconfig` variable to enable communication to your new OKE cluster. **Note**: During the Terraform execution process, the `kubeconfig` file was automatically retrieved and stored in a project subfolder. 
+1. Access the OKE Cluster 
+    * From the OCI menu, select **Developer Services**, then **Containers & Artifacts > Kubernetes Clusters (OKE)**.
+
+    ![Oracle Cloud console Menu](images/2-1-1-okeaccess.png " ")
+
+    * Select compartment **devlive24** from the drop down and click on the OKE cluster **devlive24-oke**
+    ![Oracle Cloud console Menu](images/2-1-2-okeaccess.png " ")
+
+    * Click on **Access Cluster**
+    ![Oracle Cloud console Menu](images/2-1-3-okeaccess.png " ")
+
+    * Copy the command to connect to OKE and then click on the Launch Cloud Shell 
+    ![Oracle Cloud console Menu](images/2-1-4-okeaccess.png " ")
+
+    * Right click and paste the command copied to the cloud shell to set the kubeconfig 
+    ![Oracle Cloud console Menu](images/2-1-5-okeaccess.png " ")
+
+2. Export the `kubeconfig` variable to enable communication to your new OKE cluster.
 
       ```bash
       <copy>
       cd ~/oci-devlive-2024
-      export KUBECONFIG=~/oci-devlive-2024/deployment/terraform/generated/kubeconfig
+      export KUBECONFIG=$HOME/.kube/config
       </copy>
       ```
 
@@ -55,7 +72,7 @@ Estimated time: 15 minutes
 
       ![Kubectl command](images/2-2-1-buildapp.png " ")
 
-2. Execute the command below to connect to the MySQL HeatWave Database using the Private IP address of the database and the credentials provided when the DB System was created.
+2. Execute the command below to connect to the MySQL HeatWave Database using the Private IP address of the MySQL HeatWave database and the credentials which was saved in a text file when the MySQL HeatWave DB System was created.(Refer Lab 1 > Task 5 > Step 9)
 
       ```bash
       <copy>
@@ -82,54 +99,25 @@ Estimated time: 15 minutes
 
 ## Task 3: Deploy the application
 
-1. Navigate to the app deployment folder.
+1. Click on the code editor and open the file **OCI-DEVLIVE-2024 > sb-hol > wstore.yaml** in the code editor.
+   ![Oracle Cloud console, Cloud Shell](images/2-3-0-buildapp.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/2-3-1-buildapp.png " ")
 
-      ```bash
-      <copy>
-      cd ~/oci-devlive-2024/sb-hol
-      </copy>
-      ```
-
-2. Verify the contents of the **sb-hol** directory.
-
-      ```bash
-      <copy>
-      ls -l
-      </copy>
-      ```
-
-      ![Oracle Cloud console, Cloud Shell](images/2-3-1-buildapp.png " ")
-
-      >**Note:** Verify the follwoing files are present in the folder
-      * admessage.yaml
-      * apmnamespace.yaml
-      * customapmresource.yaml
-      * enableapm.sh
-      * wstore.yaml
-
-3. Modify the file **wstore.yaml** to update the MySQL HeatWave Database Private IP
-
-      ```bash
-      <copy>
-      cd ~/oci-devlive-2024/sb-hol
-      vi wstore.yaml
-      </copy>
-      ```
-
-    - Update field **<mds-private-ip-address>** with MySQL HeatWave Database Private IP (line 84) 
+2. Go to **line 84** to update field **`<mds-private-ip-address>`** with MySQL HeatWave Database Private IP which was saved in a text file when the MySQL HeatWave DB System was created.(Refer Lab 1 > Task 5 > Step 9)
 
     ![Oracle Cloud console, Cloud Shell](images/2-3-2-buildapp.png " ")
 
-    - Press the Esc key to ensure you are in command mode.
-    - Type :wq (colon followed by wq) in the vi editor.
-    - Press Enter to execute the command to save the file 
+3. Click on **File > Save All**
 
     ![Oracle Cloud console, Cloud Shell](images/2-3-3-buildapp.png " ")
 
-4. Execute the command below to deploy to the application cluster.
+4. Click on Cloud Shell and then execute the command below to deploy the application to the cluster.
+
+    ![Oracle Cloud console, Cloud Shell](images/2-3-4-buildapp.png " ")
 
       ```bash
       <copy>
+      cd ~/oci-devlive-2024/sb-hol
       kubectl apply -f wstore.yaml
       </copy>
       ```
@@ -150,7 +138,7 @@ Estimated time: 15 minutes
 
       ![Oracle Cloud console, Cloud Shell](images/2-4-1-1-buildapp.png " ")
 
-3. Retrieve the public IP address for the application service endpoint. Copy it into a text file for future use.
+3. Retrieve the EXTERNAL-IP address for the wstore-frontend (application service endpoint). Copy it into a text file for future use.
 
       ```bash
       <copy>
@@ -160,13 +148,14 @@ Estimated time: 15 minutes
 
       ![OCI Console, Cloud Shell, kubectl results](images/2-4-2-buildapp.png " ")
 
-4. Refer to the example below and construct a URL, then paste it into the address bar of a new browser tab. If you see the WineCellar content as illustrated in the screenshot below, deployment was successfull.
+4. Refer to the example below and construct a URL, then paste it into the address bar of a new browser tab. Replace Public IP of the wstore-frontend service with the EXTERNAL-IP retrieved in the previous **step 3**.
 
       ```bash
       <copy>
-      http://<IP of the wstore-frontend service>/winestore/
+      http://<Public IP of the wstore-frontend service>/winestore/
       </copy>
       ```
+If you see the WineCellar content as illustrated in the screenshot below, deployment was successfull.
 
       ![Wine cellar demo app](images/2-4-3-buildapp.png " ")
 

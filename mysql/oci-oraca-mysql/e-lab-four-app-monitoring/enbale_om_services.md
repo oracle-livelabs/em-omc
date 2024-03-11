@@ -88,26 +88,19 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
 
 ## Task 4: Enable APM for the **Wine Cellar** application
 
-1. Enable APM using K8 Open telemetry operator at the namespace
+1. Open Code Editor and then open file **OCI-DEVLIVE-2024 > sb-hol >customapmresource.yaml**
 
-    - Update field **<apm-endpoint>** (line 11) with APM upload end point obtained from task 2. 
-    - Update field **<apm-private-data-key>** (line 13) with private data key obtained from task 2. 
+    ![Oracle Cloud console, Cloud Shell](images/4-3-1-1-appmon.png " ")
+    ![Oracle Cloud console, Cloud Shell](images/4-3-2-2-appmon.png " ")
 
+2. Update and save the file **customapmresource.yaml** with apm endpoint and private data key 
+    - Update field **<apm-endpoint>** (line 11) with APM upload end point obtained from task 3. 
+    - Update field **<apm-private-data-key>** (line 13) with private data key obtained from task 3. 
+    ![Oracle Cloud console, Cloud Shell](images/4-3-3-3-appmon.png " ")
+    - save the file 
+    ![Oracle Cloud console, Cloud Shell](images/4-3-4-4-appmon.png " ")
 
-    ``` bash
-    <copy>
-    cd ~/oci-devlive-2024/sb-hol
-    vi customapmresource.yaml
-    </copy>
-    ```
-
-    ![Oracle Cloud console, Cloud Shell](images/4-3-2-appmon.png " ")
-
-    - Press the Esc key to ensure you are in command mode.
-    - Type :wq (colon followed by wq) in the vi editor.
-    - Press Enter to execute the command to save the file 
-
-3. Running **enableapm.sh** enables APM for the Kubernetes cluster
+3. Open cloud shell and run **enableapm.sh** to enable APM for the Kubernetes cluster
 
     enableapm.sh 
     - Installs required libraries to enable K8 Open Telemetry operator 
@@ -117,6 +110,7 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
     ``` bash
     <copy>
     cd ~/oci-devlive-2024/sb-hol
+    chmod 755 enableapm.sh
     ./enableapm.sh
     </copy>
     ```
@@ -225,106 +219,64 @@ Span error message shows that the table **A1P_USERS** is missing in the wine dat
     - Logging Analytics Service is enabled in the tenancy. Click **Close**.
     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-5-okela.png " ")
 
-2. Navigate to Kubernetes Monitoring and Management application
+2. Enable Logging Analytics OKE Solutions 
 
-    To navigate to Kubernetes Monitoring and Management application, follow the given steps:
+    - From Navigation Menu ![navigation-menu](images/4-1-6-okela.png) > **Observability & Management** > **Logging Analytics** > **Solutions**.
 
-    - From Navigation Menu ![navigation-menu](images/4-1-6-okela.png) > **Marketplace** > **All Applications**.
+    - Click on **Kubernetes**
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-7-okela.png " ")
 
-    - In the search bar, enter the text **Kubernetes Monitoring and Management**.
-    - Click on the **Kubernetes Monitoring and Management** application to land on the application page. 
-    ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-7-okela.png " ")
+    - Click on **Connect clusters**
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-8-okela.png " ")
 
+    - Click on **Oracle OKE**
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-9-okela.png " ")
 
-3. Launch Kubernetes Monitoring and Management application
+    - Select the **devlive24-oke** created in lab 1 and click **Next**
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-10-okela.png " ")
 
-    - Select the **v3.0.1 (12/3/2023) - default** version from the version dropdown.
+    - Accept defaults and click on **Configure log collection** 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-11-okela.png " ")
 
-    - Select the compartment **devlive24** from the dropdown.
+    - Configured OKE **devlive24-oke** for monitoring. Click on **Take me to Kubernetes**
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-12-okela.png " ")
 
-    - Check the **Terms and Restrictions** checkbox.
+    - Collection of metrics and log data is still in progress - wait for 4 to 5 mins for collection to complete 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-13-okela.png " ")
 
-    - Click on **Launch Stack** button to launch the application.
-    ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-8-okela.png " ")
+    - Once the collection is complete it shows CPU, memory and latest telemetry data for the cluster 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-14-okela.png " ")
 
-4. Configure Stack
+## Task 8: Explore the Logging Analytics solutions for OKE Clusters
 
-    - On **Create Stack** page, you will see the **Stack information**.
+1. Click on the cluster **devlive24-oke** 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-15-okela.png " ")
 
-    - Click on **Next** button to proceed to the Configure variables section.
-    ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-9-okela.png " ")
-  
+2. Overview of the cluster **devlive24-oke** is shown 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-16-okela.png " ")
 
-    - In **Configure variables** section, you have to set the following variables for the stack:
+3. Filter by namespaces in the cluster 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-17-okela.png " ")
 
-    - **OKE cluster Compartment:** Select the **devlive24** compartment from the dropdown.
+4. Wine Cellar application is deployed on default namespace on filtering by namespace it shows the topology, usuage metrics which makes it easy to quickly identify the issues 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-18-okela.png " ")
 
-    - **OKE Cluster:** Select the **devlive-##-oke** OKE cluster from the dropdown.
-    ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-10-okela.png " ")
+5. Dedicated events tab shows all the events occured on the specific namespace
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-19-okela.png " ")
 
-    - In OCI Observability and Management Services Configuration 
-    - Select the compartment **devlive24** from the dropdown. 
-    - Check box to create a new log group and enter **devlivegrp** as the OCI Logging Analytics log group name
-    ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-11-1-okela.png " ")
-    - Click on **Next** button to proceed to the Review section.
-    ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-11-2-okela.png " ")
-  
+6. Analyze further based on cluster, workload, node and pod 
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-20-okela.png " ")
 
-5. In **Review** section, you can see the stack configurations you selected in the previous steps.
+7. Quick view on metrics and its trend helps us further to understand how cluster is performing
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-21-okela.png " ")
+    ![Oracle Cloud console, Enable Logging Analytics](images/4-1-22-okela.png " ")
 
-  - Click on the **Create** button to create the stack. This step will create an ORM (Oracle Resource Manager) job that uses [Terraform](https://github.com/oracle-quickstart/oci-kubernetes-monitoring/tree/main/terraform) to deploy the solution.
-  ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-12-okela.png " ")
+8. Analyze different metrics together
+     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-23-okela.png " ")
 
+>Note: OCI Logging Analytics provides one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications.
 
-  - It will take around 90 seconds for the stack to get created.
-  ![Oracle Cloud console, Enable Logging Analytics for OKE](images/4-1-13-okela.png " ")
-
-## Task 8: Navigate to installed dashboards in Logging Analytics
-
-1. After the stack creation is successful, From Navigation Menu > **Observability & Management** > **Logging Analytics** > **Dashboards**
-
-  ![LA Dashboards](./images/4-7-1-okela.png  " ")
-
-2. Select the compartment **devlive24** and now see the newly created logging analytics dashboards for monitoring Oracle Kubernetes Cluster.  
-
-  ![LA Dashboards](./images/4-7-2-okela.png  " ")
-
-
-## Task 9: Exploring Kubernetes Dashboards
-
-1. Click on the **Kubernetes Cluster Summary** dashboard. It will take few seconds for the dashboard widgets to load.
-![dashboards](./images/dashboards.png " ")
-
-3. Click on the **Scope Filter** panel.
-![scope-filter](./images/scope-filter.png " ")
-
-4. Select **devlive24** Compartment from the dropdown in the **Log Group Compartment** field and select **devlive-##-oke** cluster in the **Kubernetes Cluster** field.
-![compartment-cluster](images/compartment-cluster.png)
-
-5. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
-![k8s-cluster-summary](images/k8s-cluster-summary.png)
-
-6. Scroll down to the **Container Logs** widget in the dashboard.
-![container-logs](images/container-logs.png)
-
-7. Click on the View Query Icon to view the query used to populate the data in widget.
-
-  ![view-query](images/view-query.png)
-  ![query](images/query.png)
-
-  After viewing the query, click on **Close** button.
-
-8. Click on the Punch Out Icon on the Container Logs widget.
-![punch-out](images/punch-out.png) 
-
-9. This will take you to the **Pie Chart view** of Log Explorer in context of Kubernetes Cluster Name.
-![log-explorer](images/log-explorer.png)
-
-10. To navigate back to the Kubernetes Cluster Summary page, click on the **Kubernetes Cluster Summary** as highlighted in the image below.
-![summary-page](images/summary-page.png)
-
-11. Similarly you can explore other widgets in the Kubernetes Cluster Summary and other dashboards.
-
+[You may now **proceed to the next lab**.](#next)
 
 ## Acknowledgements
 
