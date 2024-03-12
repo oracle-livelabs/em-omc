@@ -70,17 +70,7 @@ Estimated time: Up to 20 minutes
 
 >The full do it yourself (DIY) approach involves building the app with the new code, using the output to create a new container image, pushing that image to the OCI Container Registry (OCIR), and deploying the app to Kubernetes. If you choose this path, you can then skip the remaining deployment options. This will take about 20 minutes.
 
-1. Make sure the architecture of the cloud shell is set to **X86_64**
-
-    If the current architecture is not shown as **X86\_64**, then select **X86\_64** as the preffered architecture and click **Confirm and Restart**. 
-
-    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-0-admessage.png " ")
-
-    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-1-admessage.png " ")
-
-    This helps us to build the image on platform X86_64. 
-
-2. Build an artifact from the source code.
+1. Build an artifact from the source code.
 
     ```bash
     <copy>
@@ -91,13 +81,15 @@ Estimated time: Up to 20 minutes
 
     ![Cloud Shell - Maven build process](images/3-2-1-1-admessage.png " ")
 
-3. Prepare the container image
+2. Prepare the container image
 
     ```bash
     <copy>
     docker build -f Dockerfile -t admessage:latest .
     </copy>
     ```
+    
+    Example:
 
     ```bash
     $ docker build -f Dockerfile -t admessage:latest .
@@ -119,15 +111,15 @@ Estimated time: Up to 20 minutes
     Successfully tagged admessage:latest
     ```
 
-4. Retrieve the user credentials for connecting to the OCI Container Registry
+3. Retrieve the user credentials for connecting to the OCI Container Registry
 
     ```bash
     <copy>
     cd ~/oci-devlive-2024/deployment/terraform/
-    terraform output -json
+    terraform output -json | jq 
     </copy>
     ```
-
+    Example:
     ```bash
     {
         "deploy_id": {
@@ -158,9 +150,9 @@ Estimated time: Up to 20 minutes
     }
     ```
 
-5. Copy the **value** for repository\_name, user\_auth\_token, and user\_name and store them for later use.
+4. Copy the **value** for **repository\_name, user\_auth\_token, and user\_name** from JSON output in previous step and store it for later use.
 
-6. Retrieve the Object Storage Namespace for the tenancy and store it for later use.
+5. Retrieve the Object Storage Namespace for the tenancy and store it for later use.
 
     ```bash
     <copy>
@@ -168,49 +160,45 @@ Estimated time: Up to 20 minutes
     </copy>
     ```
 
+    Example:
     ```bash
     {
     "data": "a---redacted---2"
     }
     ```
 
-7. Authenticate to OCIR. This will require the `user_name` and `user_auth_token` values copied earlier.
-
+6. Get the key used for the OCI region: Execute the below oci command with the city name in lowercase as shown in the oci console
+    ![Oracle Cloud console, Cloud Shell](images/3-2-6-1-admessage.png " ")
     ```bash
-    <copy>
-    echo "<replace with auth token value>" | docker login -u <os namespace>/user_name --password-stdin phx.ocir.io
-    </copy>
-    ```
-
-    >**Note**: Once again, be sure to replace `phx` with the abbreviation for your selected region.
-    To get the key used for your region just execute the below oci command with the city name in lowercase as shown in the oci console
-
-    >![Oracle Cloud console, Cloud Shell](images/3-2-6-1-admessage.png " ")
-
-    >```bash
     <copy>
     oci iam region list --query "data[?contains("name", 'city_name_here')]"
     </copy>
-    >```
-    
-    >![Oracle Cloud console, Cloud Shell](images/3-2-6-2-admessage.png " ")
+    ```
+    ![Oracle Cloud console, Cloud Shell](images/3-2-6-2-admessage.png " ")
 
+7. Authenticate to OCIR. This will require the `user_name` and `user_auth_token` values copied earlier in step 4, object storage namespace from step 5 and replace key used for the OCI region from step 6. 
+
+    ```bash
+    <copy>
+    echo "<replace with auth token value>" | docker login -u <os namespace>/user_name --password-stdin <region key>.ocir.io
+    </copy>
+    ```
+
+    Example:
     ```bash
     $ echo "---redacted---" | docker login -u a---redacted---2/devlive-nj-ocir-user --password-stdin phx.ocir.io
 
     Login Succeeded
     ```
     
-8. Tag the container image
+8. Tag the container image by replacing the object storage namespace, region key values and repository name from step 5,6 and 3 respectively in the below command. 
 
     ```bash
     <copy>
-    docker tag admessage phx.ocir.io/{object storage namespace}/devlive-##-repository/admessage:1.0.0
+    docker tag admessage <region key>.ocir.io/{object storage namespace}/devlive-##-repository/admessage:1.0.0
     </copy>
     ```
-
-    >**Note**: `phx.ocir.io` is the endpoint for your selected region. If you are not using Phoenix, replace `phx` with the 3-letter abbreviation for your region.
-
+    Example:
     ```bash
     $ docker tag admessage phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage:v1.0.0
     ```
@@ -219,36 +207,36 @@ Estimated time: Up to 20 minutes
 
     ```bash
     <copy>
-    docker push phx.ocir.io/a---redacted---2/devlive-##-repository/admessage:v1.0.0
+    docker push <region key>.ocir.io/{object storage namespace}/devlive-##-repository/admessage:v1.0.0
     </copy>
+    ```
+
+    Example:
+    ```bash
+    $ docker push phx.ocir.io/a---redacted---2/devlive-nj-repository/admessage:v1.0.0
     ```
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-8-1-admessage.png " ")
 
 
-10. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
+10. Click on the code editor and open the file **OCI-DEVLIVE-2024 > sb-hol > admessage.yaml** in the code editor.
+   ![Oracle Cloud console, Cloud Shell](images/3-2-10-1-admessage.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/3-2-10-2-admessage.png " ")
+
+    - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
+    - Update the field for the MySQL HeatWave Databae Private IP (line 38) which was saved in a text file when the MySQL HeatWave DB System was created.(Refer Lab 1 > Task 5 > Step 9)
+
+     ![Oracle Cloud console, Cloud Shell](images/3-2-10-3-admessage.png " ")
+    - Click on **File > Save All**
+     ![Oracle Cloud console, Cloud Shell](images/3-2-10-4-admessage.png " ")
+
+11. Go to cloud shell and execute the command below to deploy the **AdMessage** application to the cluster.
 
     ```bash
     <copy>
     cd ~/oci-devlive-2024/sb-hol
-    vi admessage.yaml
-    </copy>
-    ```
-
-    - Update the field for **image** (line 32). Use the full path from the previous `docker push` command.
-    - Update the field for the MySQL HeatWave Databae Private IP (line 38)
-
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
-
-    - Press the Esc key to ensure you are in command mode.
-    - Type `:wq` (colon followed by wq) in the editor.
-    - Press Enter to execute a save and exit.
-
-11. Execute the command below to deploy the **AdMessage** application to the cluster.
-
-    ```bash
-    <copy>
     kubectl apply -f admessage.yaml
+
     </copy>
     ```
 
@@ -276,20 +264,11 @@ Estimated time: Up to 20 minutes
     wstore-front-0   1/1     Running   0          48m
     ```
 
+[You may now **proceed to the Task 3**.]
+
 ## Task 2 - Deployment Option 2: Take the automated path
 
-1. Make sure the architecture of the cloud shell is set to **X86_64**
-
-    If the current architecture is not shown as **X86\_64**, then select **X86\_64** as the preffered architecture and click **Confirm and Restart**. 
-
-    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-0-admessage.png " ")
-
-    ![Cloud Shell - Cloud Shell Architecture](images/3-2-0-1-admessage.png " ")
-
-    This helps us to build the image on platform X86_64. 
-
-
-2. There is a Node.js script available to automate most of the build process. If you have chosen this path, begin with the command below.
+1. There is a Node.js script available to automate most of the build process. If you have chosen this path, begin with the command below.
 
     ```bash
     <copy>
@@ -300,33 +279,26 @@ Estimated time: Up to 20 minutes
 
     ![Oracle Cloud console - Cloud Shell](images/3-2-2-1-admessage.gif " ")
 
-3. Copy the **Released:** value when the script finishes running. This is the path to your OCIR container image.
+2. Copy the **Released:** value when the script finishes running. This is the path to your OCIR container image.
 
     ![Oracle Cloud console - Cloud Shell](images/3-2-2-2-admessage.png " ")
 
-4. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP and container image location.
+3. Click on the code editor and open the file **OCI-DEVLIVE-2024 > sb-hol > admessage.yaml** in the code editor.
+   ![Oracle Cloud console, Cloud Shell](images/3-2-10-1-admessage.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/3-2-10-2-admessage.png " ")
+
+    - Update the field for **image** (line 32).Use the full path from the previous **Released:** output at the end of the script.
+    - Update the field for the MySQL HeatWave Databae Private IP (line 38) which was saved in a text file when the MySQL HeatWave DB System was created.(Refer Lab 1 > Task 5 > Step 9)
+
+     ![Oracle Cloud console, Cloud Shell](images/3-2-10-3-admessage.png " ")
+    - Click on **File > Save All**
+     ![Oracle Cloud console, Cloud Shell](images/3-2-10-4-admessage.png " ")
+
+4. Go to cloud shell and execute the command below to deploy the **AdMessage** application to the cluster.
 
     ```bash
     <copy>
     cd ~/oci-devlive-2024/sb-hol
-    vi admessage.yaml
-    </copy>
-    ```
-
-
-    - Update the field for **image** (line 32). Use the full path from the previous **Released:** output at the end of the script.
-    - Update the field for the MySQL HeatWave Databae Private IP (line 38)
-
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-admessage.png " ")
-
-    - Press the Esc key to ensure you are in command mode.
-    - Type `:wq` (colon followed by wq) in the editor.
-    - Press Enter to execute a save and exit.
-
-5. Execute the command below to deploy the **AdMessage** application to the cluster.
-
-    ```bash
-    <copy>
     kubectl apply -f admessage.yaml
     </copy>
     ```
@@ -335,7 +307,7 @@ Estimated time: Up to 20 minutes
 
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-admessage.png)
 
-6. Verify that the new **admessage** pod is running successfully
+5. Verify that the new **admessage** pod is running successfully
 
     ```bash
     <copy>
@@ -354,36 +326,27 @@ Estimated time: Up to 20 minutes
     wstore-front-0   1/1     Running   0          48m
     ```
 
+[You may now **proceed to the Task 3**.]
+
 ## Task 2 - Deployment Option 3: Just Deploy
 
-1. Go back to the cloud shell and inside **~/oci-devlive-2024/sb-hol** directory, find **admessage.yaml**
+1. Click on the code editor and open the file **OCI-DEVLIVE-2024 > sb-hol > admessage.yaml** in the code editor.
+   ![Oracle Cloud console, Cloud Shell](images/3-2-3-1-1-admessage.png " ")
+   ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-1-admessage.png " ")
 
-   ![Oracle Cloud console, Cluster details](images/3-2-3-1-admessage.png " ")
+    - Update the field for the MySQL HeatWave Databae Private IP (line 38) which was saved in a text file when the MySQL HeatWave DB System was created.(Refer Lab 1 > Task 5 > Step 9)
 
-   Admessage.yaml contains reference to the containerized image with packaged Admessage application
+     ![Oracle Cloud console, Cloud Shell](images/3-2-3-3-1-admessage.png " ")
+    - Click on **File > Save All**
+     ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-1-admessage.png " ")
 
-2. Modify the file **admessage.yaml** to update the MySQL HeatWave Database Private IP 
+
+3. Go to cloud shell and execute and execute the command below to deploy the **AdMessage** application to the cluster.
 
     ``` bash
     <copy>
     cd ~/oci-devlive-2024/sb-hol
-    vi admessage.yaml
-    </copy>
-    ```
-    
-    - Update the field for the MySQL HeatWave Databae Private IP (line 38)
-
-    ![Oracle Cloud console, Cloud Shell](images/3-2-3-2-3-admessage.png " ")
-
-    - Press the Esc key to ensure you are in command mode.
-    - Type `:wq` (colon followed by wq) in the editor.
-    - Press Enter to execute a save and exit.
-
-3. Execute the command below to deploy the **AdMessage** application to the cluster.
-
-    ``` bash
-    <copy>
-    kubectl apply -f ~/oci-devlive-2024/sb-hol/admessage.yaml
+    kubectl apply -f admessage.yaml
     </copy>
     ```
 
@@ -409,16 +372,13 @@ Estimated time: Up to 20 minutes
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-6-admessage.png " ")
 
+[You may now **proceed to the Task 3**.]
+
 ## Task 3: Integrate the AdMessage API with the main Wine App
 
-1. Modify the file **wstore.yaml** to update the endpoint of the **Admessage**
+1. Click on the code editor and open the file **OCI-DEVLIVE-2024 > sb-hol > wstore.yaml** in the code editor.
+   ![Oracle Cloud console, Cloud Shell](images/3-3-1-1-admessage.png " ")
 
-    ``` bash
-    <copy>
-    cd ~/oci-devlive-2024/sb-hol
-    vi wstore.yaml
-    </copy>
-    ```
     - Update value of parameter  **winStore.services.adservice** with **AdMessage Endpoint** mentioned below. New endpoint is `adapi/admessage` (line 55)
 
     ``` bash
@@ -426,18 +386,19 @@ Estimated time: Up to 20 minutes
     http://${ADMESSAGE_SERVICE_HOST}:${ADMESSAGE_SERVICE_PORT}/adapi/admessage/
     </copy>
     ```
+    
+    ![Oracle Cloud console, Cloud Shell](images/3-3-1-2-admessage.png " ")
 
-    ![Oracle Cloud console, Cloud Shell](images/3-3-1-admessage.png " ")
+    - Click on **File > Save All**
+     ![Oracle Cloud console, Cloud Shell](images/3-3-1-3-admessage.png " ")
 
-    - Press the Esc key to ensure you are in command mode.
-    - Type :wq (colon followed by wq) in the vi editor.
-    - Press Enter to execute the command to save the file 
-  
-2. Execute the command below to deploy the application to the cluster.
+
+2. Go to cloud shell and execute the command below to deploy the application to the cluster.
 
     ``` bash
     <copy>
-    kubectl apply -f ~/oci-devlive-2024/sb-hol/wstore.yaml 
+    cd ~/oci-devlive-2024/sb-hol
+    kubectl apply -f wstore.yaml
     </copy>
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-3-3-admessage.png " ")
@@ -460,11 +421,11 @@ Estimated time: Up to 20 minutes
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-3-5-admessage.png " ")
 
-5. Launch the application to see new **ad message** 
+5. Refer to the example below and construct a URL, then paste it into the address bar of a new browser tab. Replace Public IP of the wstore-frontend service with the EXTERNAL-IP retrieved in the previous **step 4**.
 
     ``` bash
     <copy>
-    http://<IP of the wstore-frontend service>/winestore/
+    http://<Public IP of the wstore-frontend service>/winestore/
     </copy>
     ```
 
@@ -481,7 +442,7 @@ Estimated time: Up to 20 minutes
     </copy>
     ```
 
-You may now **proceed to the next lab**.
+[You may now **proceed to the next lab**.](#next)
 
 ## Acknowledgements
 

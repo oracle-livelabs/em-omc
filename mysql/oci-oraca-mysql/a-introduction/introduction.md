@@ -25,7 +25,7 @@ Monitor, analyze, and manage multicloud applications and infrastructure environm
 
 - Logging Analytics 
 
-    Cloud Infrastructure (OCI) Logging Analytics lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure on cloud or on-premises. Oracle Logging Analytics provides a one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications.For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Logging Analytics to monitor Kubernetes](https://docs.oracle.com/en/solutions/kubernetes-oke-logging-analytics/index.html)**.
+    Cloud Infrastructure (OCI) Logging Analytics lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure on cloud or on-premises. Oracle Logging Analytics provides a one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications. For more information on Logging Analytics and log Explorer please refer to Observability and Management > **[Use Logging Analytics to monitor Kubernetes](https://docs.oracle.com/en/solutions/kubernetes-oke-logging-analytics/index.html)**.
 
 
 ### Objectives

@@ -13,8 +13,8 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
         },
         {
-            "title": "Lab 1: Environment Setup",
-            "description": "Environment Setup",
+            "title": "Lab 1: Provision the infrastructure",
+            "description": "Provision the infrastructure",
             "filename": "../../b-lab-one-envsetup/environmentsetup.md"
         },
         {
@@ -28,8 +28,8 @@
             "filename": "../../d-lab-three-extend&deploy-app-oraca/oraca-codeassist.md"
         },
         {
-            "title": "Lab 4: End to End Application Monitoring using OCI O&M Services",
-            "description": "End to End Application Monitoring using OCI O&M Services",
+            "title": "Lab 4: Monitor Application Using OCI O&M Services",
+            "description": "Monitor Application Using OCI O&M Services",
             "filename": "../../e-lab-four-app-monitoring/enbale_om_services.md"
         },
         {

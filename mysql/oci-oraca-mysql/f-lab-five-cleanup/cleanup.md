@@ -24,6 +24,8 @@ To delete the workshop setup from your tenancy, follow the steps below using.
 
 3. When prompted, click the checkbox to "Delete DB System permanently." and click **`[Delete DB sysme]`**
 
+    ![Oracle Cloud console - DB Systems](images/5-2-0-cleanup.png " ")
+
     >**Note:** If Termination Protection is active, you will not be able to delete the DB System. You will instead need to Edit the DB System, locate the advanced settings, uncheck the **Termination Protection** box, and save. It will take a few minutes to update before you can then delete the resource.
 
     ![Oracle Cloud console - DB Systems](images/5-2-1-cleanup.png " ")
@@ -33,7 +35,7 @@ To delete the workshop setup from your tenancy, follow the steps below using.
     ```bash
     <copy>
     cd ~/oci-devlive-2024/sb-hol
-    terraform delete -f wstore.yaml,admessage.yaml,apmnamespace.yaml,customapmresource.yaml
+    kubectl delete -f wstore.yaml,admessage.yaml,apmnamespace.yaml,customapmresource.yaml
     </copy>
     ```
 
@@ -62,15 +64,20 @@ To delete the workshop setup from your tenancy, follow the steps below using.
 
     ![Oracle Cloud console - APM](images/5-2-2-cleanup.png " ")
 
-9. Use the OCI Menu to navigate to **Developer Services** -> **Resource Manager** -> **Stacks**. Locate the stack you created in lab for.
+9. Use the OCI Menu to navigate to  **Observability & Management** -> **Logging Analytics** -> **Solutions** -> **Kubernetes**. Locate the cluster created in lab 1. 
 
-    - It should look something like this `Kubernetes Monitoring and Management-20240222162903`
+    ![Oracle Cloud console - LA](images/5-2-3-cleanup.png " ")
 
-10. Click the name of the stack to view its details. Then click the **`Destroy`** button to remove related resources.
+    ![Oracle Cloud console - LA](images/5-2-4-cleanup.png " ")
 
-11. When the destroy job is complete, you can use the `[More actions]` menu to **Delete stack**
+    ![Oracle Cloud console - LA](images/5-2-5-cleanup.png " ")
 
 
+10. Use the OCI Menu to navigate to  **Developer Services** -> **Containers & Artifacts** -> **Kubernetes Clusters (OKE)** -> **Kubernetes**. Locate the cluster created in lab 1. 
+
+    ![Oracle Cloud console - OKE](images/5-2-6-cleanup.png " ")
+    ![Oracle Cloud console - OKE](images/5-2-7-cleanup.png " ")
+    ![Oracle Cloud console - OKE](images/5-2-8-cleanup.png " ")
 
 ## Acknowledgements
 
