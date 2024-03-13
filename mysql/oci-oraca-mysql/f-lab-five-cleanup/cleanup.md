@@ -4,7 +4,7 @@
 
 In this lab, you will clean up the workshop environment by running commands from the Cloud shell, also manually removing the Oracle cloud resources using the Oracle Cloud console.
 
-Estimated time: 20 minutes
+Estimated time: 10 minutes
 
 ### Objectives
 

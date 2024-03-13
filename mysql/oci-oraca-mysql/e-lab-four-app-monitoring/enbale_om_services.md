@@ -4,7 +4,7 @@
 
 In this lab, you'll enable OCI Logging Analytics Service to monitor Oracle Kubernetes Engine and OCI Application Performance Management (APM) for application monitoring and also OCI Database Management for monitoring MySQL HeatWave Database to get end to end visibility of the application and its stack. 
 
-Estimated Time: 20 minutes
+Estimated Time: 40 minutes
 
 ### Objectives
 
@@ -43,7 +43,7 @@ In this lab, you will see step-by-step instructions to:
 
     ![Oracle Cloud console Menu](images/4-0-6-dbm.png " ")
 
-  - Click on one of the top query **UPDATE 'A1P_USERS'** to see the performance of the query 
+  - Click on any one of the top query. To see the performance of the query. For example clicking on **UPDATE 'A1P_USERS'** shows the following - your environment may be different.
 
     ![Oracle Cloud console Menu](images/4-0-7-dbm.png " ")
 
@@ -174,11 +174,11 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
 
    ![Oracle Cloud, Trace Explorer](images/5-1-4-0-traces.png " ")
 
-5.	Click the trace link at the **Service:Operation name** column.
+5.	Click on the trace **wstore-web: Full Update /winestore/confirm** under Service:Operation name column.
 
    ![Oracle Cloud, Trace Explorer](images/5-1-4-1-traces.png " ")
 
-   >**Note:** If you do not see a slow trace with a duration of 10 seconds or more, you can navigate the WineStore demo app a few times until you see the programmed slowness in the checkout service.
+   >**Note:** If you do not see a **wstore-web: Full Update /winestore/confirm** trace, you can navigate the WineStore demo app to perform the checkout operation.
 
 6. **Trace Details** page opens. Review the trace information on the upper screen. E.g., Status, Trace ID, Whether it has an error or not, how many spans and services are involved, or the duration of the trace.
    ![Oracle Cloud, Trace Explorer](images/5-1-5-traces.png " ")
@@ -198,7 +198,7 @@ To upload tracing data to an APM domain, Data Upload Endpoint and both Private a
 
 Span error message shows that the table **A1P_USERS** is missing in the wine database which resulted in the error in this particular trace.
 
- >**Note:** With APM its easy to query the trace and span data using the trace query language and explore other tabs (Users, SQLs, Web Apps, Sessions, etc..) in trace explorer to get quick insights into application performance.
+ >**Note:** With APM its easy to query the trace and span data using the trace query language. Explore other tabs (Users, SQLs, Web Apps, Sessions, etc..) in trace explorer to get quick insights into application performance.
 
 
 ## Task 7: Enable Logging Analytics Service 
@@ -267,12 +267,19 @@ Span error message shows that the table **A1P_USERS** is missing in the wine dat
 6. Analyze further based on cluster, workload, node and pod 
     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-20-okela.png " ")
 
-7. Quick view on metrics and its trend helps us further to understand how cluster is performing
+7. On the right we can see metric widgets as shown below which help us further understand how OKE is performing.
     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-21-okela.png " ")
     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-22-okela.png " ")
 
-8. Analyze different metrics together
+8. Analyze different metrics together to understand the workload patterns, resource utilization and also for effective troubleshooting. 
+    * Click on the expand button which shows when you hover the mouse on a particular metric. Lets select metric **CPU cores(used/allocatable)** 
      ![Oracle Cloud console, Enable Logging Analytics](images/4-1-23-okela.png " ")
+    * Click on **Metrics to analyze**
+     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-24-okela.png " ")
+    * Click on metrics of interest to analyze together (Maximum of 3 metrics are allowed to analyze together). Lets select the metric **Memory Used** 
+     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-25-okela.png " ")
+    * Click again on **Metrics to analyze** and select the metric **Total API server requests**. Now all the three metrics can be analyzed together to understand workload patterns or for the effective troubleshooting. 
+     ![Oracle Cloud console, Enable Logging Analytics](images/4-1-26-okela.png " ")
 
 >Note: OCI Logging Analytics provides one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications.
 
