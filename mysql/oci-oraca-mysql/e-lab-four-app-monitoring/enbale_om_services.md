@@ -278,7 +278,7 @@ Span error message shows that the table **A1P_USERS** is missing in the wine dat
      ![Oracle Cloud console, Enable Logging Analytics](images/4-1-24-okela.png " ")
     * Click on metrics of interest to analyze together (Maximum of 3 metrics are allowed to analyze together). Lets select the metric **Memory Used** 
      ![Oracle Cloud console, Enable Logging Analytics](images/4-1-25-okela.png " ")
-    * Click again on **Metrics to analyze** and select the metric **Total API server requests**. Now all the metrics can be analyzed together to understand workload patterns or for the effective troubleshooting. 
+    * Click again on **Metrics to analyze** and select the metric **Total API server requests**. Now all the three metrics can be analyzed together to understand workload patterns or for the effective troubleshooting. 
      ![Oracle Cloud console, Enable Logging Analytics](images/4-1-26-okela.png " ")
 
 >Note: OCI Logging Analytics provides one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications.
