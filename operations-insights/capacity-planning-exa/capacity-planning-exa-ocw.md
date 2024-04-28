@@ -21,7 +21,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/exadata-insights-ocw.png " ")
 
-2.  This will show the Exadata systems registered for Operations Insights.
+2.  This will show the Exadata systems registered for Ops Insights.
 
       ![Left Pane](./images/exadata-systems-ocw.png " ")
 
@@ -86,4 +86,4 @@ In Conclusion, OPSI Exadata Insights provides comprehensive capacity analysis to
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Apr 2024

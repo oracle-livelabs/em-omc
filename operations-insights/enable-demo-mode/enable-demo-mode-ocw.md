@@ -1,25 +1,25 @@
-# Enable Demo Mode for Operations Insights
+# Enable Demo Mode for Ops Insights
 
 ## Introduction
 
-In this lab, you will go through the steps to enable Demo Mode for Oracle Cloud Infrastructure Operations Insights.
+In this lab, you will go through the steps to enable Demo Mode for Oracle Cloud Infrastructure Ops Insights.
 
 Estimated time: 10 minutes
 
 ### Objectives
 
 - Log into OCI Tenancy.
-- Enable Operations Insights Demo Mode.
+- Enable Ops Insights Demo Mode.
 
 ## Task 1: Enable Demo Mode
 
-1.  To access Operations Insights, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Observability & Management**, go to **Operations Insights** and click **Overview**.
+1.  To access Ops Insights, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Observability & Management**, go to **Ops Insights** and click **Overview**.
 
-      ![Operations Insights](./images/opsi-main-ocw.png " ")
+      ![Ops Insights](./images/opsi-main-ocw.png " ")
 
 2.  Click on **Enable Demo Mode** to enable Demo Mode.
 
-      ![Enable Demo Mode](./images/opsi-enable-demo-ocw.png " ")
+      ![Enable Demo Mode](./images/opsi-enable-demo.png " ")
 
 3.  After clicking on the **Enable Demo Mode**, the following error message will pop-up stating that authorization error has occurred. Please skip this message by clicking on Enable demo mode icon again.
 
@@ -37,4 +37,4 @@ Estimated time: 10 minutes
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Apr 2024

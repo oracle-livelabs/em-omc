@@ -17,7 +17,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Analyze SQL Performance
 
-1.  On the **Operations Insights Overview** page, from the left pane click on **Oracle SQL Warehouse**.
+1.  On the **Ops Insights Overview** page, from the left pane click on **Oracle SQL Warehouse**.
 
       ![Left Pane](./images/sql-warehouse-ocw.png " ")
 
@@ -118,7 +118,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 2: SQL Insights
 
-1. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
+1. On the **Ops Insights Overview** page, from the left pane click **SQL Insights**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
 
       ![Left Pane](./images/sql-insights.png " ")
 
@@ -128,7 +128,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 3: SQL Explorer
 
-SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Operations Insights SQL Warehouse.
+SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Ops Insights SQL Warehouse.
 
 With SQL Explorer, you can explore performance statistics via a SQL query to extract the data with which to create an intuitive visualization. This provides interactive data exploration and visualization for deep exploration of application SQL performance statistics. The user interface is designed to simplify and streamline query development.
 
@@ -136,7 +136,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 1. In this example we will sum up all the CPU time per SQL ID for one specific DB and then sort them by descending order.
 
-2. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+2. On the **Ops Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
 
       ![SQL Explorer](./images/sql-explorer.png " ")
 
@@ -188,7 +188,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 10. In the second use case we will sum up all the Elapsed time per SQL ID across the fleet of Databases and then sort that in descending order.
 
-11. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+11. On the **Ops Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
 
       ![SQL Explorer](./images/sql-explorer.png " ")
 
@@ -240,4 +240,4 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, December 2023
+- **Last Updated By/Date** - Vivek Verma, Apr 2024

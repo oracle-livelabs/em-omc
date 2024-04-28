@@ -17,13 +17,13 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Capacity Planning - Databases
 
-1.  On the **Operations Insights Overview** page, from the left pane click on **Capacity Planning**.
+1.  On the **Ops Insights Overview** page, from the left pane click on **Capacity Planning**.
 
-      ![Left Pane](./images/capacity-planning-ocw.png " ")
+      ![Left Pane](./images/capacity-planning.png " ")
 
 2.  On the **Database Capacity Planning** page, you will obtain a fleet-wide overview of your resource consumption and trends.  CPU insights, storage insights, and memory insights give a quick view into top resource consumers now and forecast potential resource bottlenecks over the selected period.
 
-      ![Left Pane](./images/database-capacity-planning-ocw.png " ")
+      ![Left Pane](./images/database-capacity-planning.png " ")
 
     From this page you can perform the following tasks in support of the Capacity Planning use case goals:
 
@@ -40,7 +40,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/filter-ocw.png " ")
 
-4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Operations Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
+4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
 
       ![Left Pane](./images/inventory-ocw.png " ")
 
@@ -156,9 +156,9 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/storage-menu-ocw.png " ")
 
-2.  You get a complete view of storage usage across all Operations Insights enabled databases
+2.  You get a complete view of storage usage across all Ops Insights enabled databases
 
-      ![Left Pane](./images/database-storage-ocw.png " ")
+      ![Left Pane](./images/database-storage.png " ")
 
     From here we can identify servers with underused or overused storage and also compare storage utilization between databases.
 
@@ -194,4 +194,4 @@ This lab assumes you have completed the following labs:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Apr 2024

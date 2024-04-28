@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Get started with Oracle Cloud Infrastructure Operations Insights",
+    "workshoptitle": "Get started with Oracle Cloud Infrastructure Ops Insights",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -13,8 +13,8 @@
             "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Enable Demo Mode for Operations Insights",
-            "description": "Enable Demo Mode for Operations Insights.",
+            "title": "Lab 1: Enable Demo Mode for Ops Insights",
+            "description": "Enable Demo Mode for Ops Insights.",
             "filename": "../../enable-demo-mode/enable-demo-mode-ocw.md"
         },
         {
