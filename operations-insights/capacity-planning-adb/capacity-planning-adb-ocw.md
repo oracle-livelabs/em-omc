@@ -150,6 +150,15 @@ This lab assumes you have completed the following labs:
 
      The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types. This also lets you review the problem across fleet of databases. The databases with dark color are critical and are high on utilization. The size of the box displayed on the treemap shows usage in terms of active CPU.
 
+16.  To view **Unused CPU capacity** within your database resources navigate to **Capacity Planning**, then **Databases**, and select **CPU**. In the Database CPU screen select the **Aggregate** tab, under **Grouping** select either **Exadata**, **VM cluster** or **Host**. 
+
+      Selecting one of these will allow you to checkmark the **Show Unused Capacity** check.
+      Once the **Show Unused Capacity** has been checked, a gray bar will appear on the treemap showing the unused space. 
+      
+      You can additionally expand the treemap for a better visualization, as well as view the treemap squarified, vertical, or horiziontal. Unused capacity will be grouped by vertically default.
+
+      ![Left Pane](./images/db-unused-capacity.png " ")
+
 ## Task 3: Capacity Planning - Storage
 
 1.  Click on the **Storage** menu on the left panel.

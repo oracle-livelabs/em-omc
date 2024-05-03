@@ -59,23 +59,34 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/trend-host-database-ocw.png " ")
 
-11.  Click **Metrics by Host** on the left pane.
+11.  To view **Unused CPU capacity** within your database resources navigate to **Metrics by database**. Under **Grouping** select either **VM cluster** or **Host**. Choose **Usage (avg. active CPU)** under **Size** and **Utilization (%)** under **Color**.
+
+      Selecting one of these will allow you to checkmark the **Show Unused Capacity** check.
+      Once the **Show Unused Capacity** has been checked, a gray bar will appear on the treemap showing the unused space. 
+      
+      You can additionally expand the treemap for a better visualization, as well as view the treemap squarified, vertical, or horiziontal. Unused capacity will be grouped by vertically default.
+
+      ![Left Pane](./images/exa-unused-host.png " ")
+
+      ![Left Pane](./images/exa-unused-vmcluster.png " ")
+
+12.  Click **Metrics by Host** on the left pane.
 
       ![Left Pane](./images/metrics-by-host-ocw.png " ")
 
-12.  On the **Metrics by Host** page, click on the **CPU** tab, select **All hosts** to see the aggregate trend & forecast. 
+13.  On the **Metrics by Host** page, click on the **CPU** tab, select **All hosts** to see the aggregate trend & forecast. 
 
       ![Left Pane](./images/cpu-all-hosts-ocw.png " ")
 
-13.  Click the **Exadata Storage Server** option on the left pane.
+14.  Click the **Exadata Storage Server** option on the left pane.
 
       ![Left Pane](./images/exadata-storage-server-ocw.png " ")
 
-14. Select **Individual data series** on the top right pane to show the individual storage utilization.
+15. Select **Individual data series** on the top right pane to show the individual storage utilization.
 
       ![Left Pane](./images/exadata-storage-server1-ocw.png " ")
 
-15. Select **Aggregate data series and forecast** on the top right pane to show total individual storage utilization.
+16. Select **Aggregate data series and forecast** on the top right pane to show total individual storage utilization.
 
       ![Left Pane](./images/exadata-storage-server2.png " ")
 
