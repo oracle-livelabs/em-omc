@@ -135,6 +135,27 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 9. This will display the visualization as a Stacked Bar Chart.
 
+10. Click on **Advanced** Mode to view **SQL Explorer** in advanced mode. The advanced mode give you more control over the SQL queries that you are running against your database to view database performance.
+
+      ![SQL Visualization](./images/sql-explorer-advanced.png " ")
+
+11. This will take you to the **SQL Explorer Advanced** Mode page. Advanced mode can be used to execute your own custom queries and obtain more information above the SQLs running in the database.
+
+      ![SQL Visualization](./images/sql-explorer-advanced-main.png " ")
+
+12. Click **Views & columns and sample queries** to view available views and columns which can be used in the explorer.
+
+      ![SQL Visualization](./images/sql-explorer-view-queries.png " ")
+
+13. **View & columns and sample queries** shows **View and columns** and **Sample query** that can be used in the explorer.
+
+      ![SQL Visualization](./images/view-queries.png " ")
+
+13. Click on a View to see the underlying columns that can be used to fetch desired data.
+
+      ![SQL Visualization](./images/sql-column-details.png " ")
+
+
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
