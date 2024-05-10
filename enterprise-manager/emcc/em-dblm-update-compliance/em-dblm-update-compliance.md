@@ -256,15 +256,27 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
 6.  You will be navigated to Create Rule: Agent-side Rule: Details page,
 
-    type Rule section "CIS_Grant_Execute_Procedure_DBSNMP_Rule",
-    select Compliance Rule State **Production**,
-    select severity **Critical**,
-    Applicable to **Pluggable Database**,
-    type description "Grant privileges to execute any PROCEDURE privileges to user : DBSNMP ",
+    ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+    Click Next
+
+    ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
+
+    type Rule section "CIS_Grant_Execute_Procedure_DBSNMP_Rule"
+
+    select Compliance Rule State **Production**
+
+    select severity **Critical**
+
+    Applicable to **Pluggable Database**
+
+    type description "Grant privileges to execute any PROCEDURE privileges to user : DBSNMP "
+
     type Rationale "The account is used by Oracle Enterprise Manager's Management Agent component to monitor and manage the database. Granting the user account DBSNMP based on authentication by management change requirement this user account still allows executes any procedure"
+
     type Recommendation "Execute the following SQL statement to remediate this setting. GRANT EXECUTE ANY PROCEDURE TO DBSNMP;"
 
-    ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+    ![Enable CIS](images/compliance-enable-status-pdb.png " ")
 
     Click Next
 
@@ -332,7 +344,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
       ![Target associate](images/associate-cis-targets.png " ")
 
-13.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
+13.  Click Add and choose the row with your PDB you wish to associate. Choose sales.subnet.vcn.oraclevcn.com_FINANCE, click **Select**.
 
     ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
 
@@ -350,7 +362,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
 16. Now Navigate to ***Enterprise >> Compliance >> Results***
 
-    *Processing and displaying the results on the Compliance Results Page will take approximately 5 minutes to complete.
+    *Processing and displaying the results on the Compliance Results Page will take approximately 3 minutes to complete.
     You may want to switch to the next 'Task 6: Self-Service to Request PDB Using PDBaaS complete step 20', then come back here to finish this task steps.*
 
     ![Navigate to result](images/compliance-navigate-results.png "  ")
