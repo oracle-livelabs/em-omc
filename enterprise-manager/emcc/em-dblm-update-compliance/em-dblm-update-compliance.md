@@ -219,23 +219,120 @@ The Center for Internet Security compliance(CIS) is a set of Industry standards 
 A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated. Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use   *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
 
-1. From the Enterprise menu, select **Compliance, then select Library**  to get started
+1.  From the Enterprise menu, select **Compliance, then select Library**  to get started
 
-    ![Navigate to Library](images/compliance-library.png " ")
+      ![Navigate to Library](images/compliance-library.png " ")
 
 
-2. Click the **Compliance Standards** tab.
+2.  Click the **Compliance Standards** tab.
 
-    In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
-    Applicable To section Drop down select **Pluggable Database** hit search.
+      Click on Search, In the Compliance Standard field type section  "Oracle 19c Database CIS" as word and
+      Applicable To section Drop down select **Pluggable Database** hit search.
 
-    ![Search CIS](images/compliance-search-pluggable.png "  ")
+      ![Search CIS](images/compliance-search-pluggable.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+    Select the out of the box standard row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Create Like** option.
 
-    ![Target associate](images/associate-cis-targets.png " ")
+      ![Create CIS](images/compliance-search-pluggable.png "  ")
 
-3.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
+3.  In the pop-up window type "OCW-2024_CIS_STD" Click Continue
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+4.  Navigates to Compliance Standard page **OCW-2024_CIS_STD**, you will see CIS controls and its rules
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Click Save, Information pop-up window indicates new Customized Standard 2024_CIS_STD IS created
+
+
+5.  Click on Compliance Standard Rules tab, Click on **Create**
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Create rule pop-up window, select Agent-side Rule, click on Continue
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+6.  You will be navigated to Create Rule: Agent-side Rule: Details page,
+
+    type Rule section "CIS_Grant_Execute_Procedure_DBSNMP_Rule",
+    select Compliance Rule State **Production**,
+    select severity **Critical**,
+    Applicable to **Pluggable Database**,
+    type description "Grant privileges to execute any PROCEDURE privileges to user : DBSNMP ",
+    type Rationale "The account is used by Oracle Enterprise Manager's Management Agent component to monitor and manage the database. Granting the user account DBSNMP based on authentication by management change requirement this user account still allows executes any procedure"
+    type Recommendation "Execute the following SQL statement to remediate this setting. GRANT EXECUTE ANY PROCEDURE TO DBSNMP;"
+
+    ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+    Click Next
+
+7.  You will be navigated to **Create Rule: Agent-side Rule: Check Definition** page
+
+      Click on Configuration Extension Alias Name Search
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Pop-up window appears,
+
+      type Alias name section "CIS19C_1_1_0_RULE_5_2_4_PDB Configuration" , click Search  
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Click "OK"
+
+8.  You will be navigated back to **Create Rule: Agent-side Rule: Check Definition** page
+
+      type Non-Compliant Message "EXECUTE ANY PROCEDURE privilege is not enabled"
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Click Next in Step 3 of 4
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Click Finish
+
+      Information Pop-up window appears **Rule CIS_Grant_Execute_Procedure_DBSNMP_Rule was created**
+
+      Click OK
+
+9.  Click on Compliance Standards tab
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      select "OCW-2024_CIS_STD" , Click "Edit"
+
+      You will be navigated to **Compliance Standard: OCW-2024_CIS_STD** Page
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+10. Right click on OCW-2024_CIS_STD
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Click on Add Rules..., pop-up window appears "Incident Rule Reference"
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      type "CIS_Grant_Execute_Procedure_DBSNMP_Rule", click Search
+
+      Click OK
+
+11. You will be Navigated to Compliance Standard
+
+      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+
+      Click save
+
+      Information pop-up window appears "Standard OCW-2024_CIS_STD has been updated"
+
+12. Select the row **OCW-2024_CIS_STD**, and then Click the **Associate Targets** tab.
+
+      ![Target associate](images/associate-cis-targets.png " ")
+
+13.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
 
     ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
 
@@ -243,26 +340,26 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![Enable CIS](images/compliance-enable-status-pdb.png " ")
 
-4. In the Save Association dialog box, Click Yes.
+14. In the Save Association dialog box, Click Yes.
 
     ![Confirm Association ](images/compliance-save-association-pdb.png "")
 
-5. Click OK on the Information processing prompt.
+15. Click OK on the Information processing prompt.
 
     ![Confirm Association ](images/complinace_submitted-process-pdb.png " ")
 
-6. Now Navigate to ***Enterprise >> Compliance >> Results***
+16. Now Navigate to ***Enterprise >> Compliance >> Results***
 
     *Processing and displaying the results on the Compliance Results Page will take approximately 5 minutes to complete.
     You may want to switch to the next 'Task 6: Self-Service to Request PDB Using PDBaaS complete step 20', then come back here to finish this task steps.*
 
     ![Navigate to result](images/compliance-navigate-results.png "  ")
 
-7. Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
+17. Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
 
     ![Click on results](images/compliance-cis-results.png " ")
 
-8.  The compliance result shows the target is with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
+18.  The compliance result shows the target is with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
 
     ![Overview scorecard ](images/compliance-results-cis-scorecard-pdb.png " ")
 
@@ -270,19 +367,19 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![Validate CIS ](images/compliance-all-cis-violations-pdb.png " ")
 
-9.  You can see failed CIS standard recommendations rules for each main category of CIS Standards  
+19.  You can see failed CIS standard recommendations rules for each main category of CIS Standards  
 
     ![Validations](images/compliance-cis-recommendation-violations-pdb.png " ")
 
-10. Each recommendations violations rules can be further explored by clicking on each recommendation with violation events, status In case of each violations you will see details like violation details, name of the rule violated under the violation Events tab
+20. Each recommendations violations rules can be further explored by clicking on each recommendation with violation events, status In case of each violations you will see details like violation details, name of the rule violated under the violation Events tab
 
     ![Check for violations](images/compliance-cis-compliance-individual-violation-pdb.png " ")
 
-11. In case of each violations you will see details like rule type, severity, compliance rule state, description and rationale for the violation under the Rule details tab
+21. In case of each violations you will see details like rule type, severity, compliance rule state, description and rationale for the violation under the Rule details tab
 
     ![Rule Details](images/compliance-rule-details-pdb.png " ")
 
-12. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
+22. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
 
     From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
@@ -292,7 +389,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![Result Dashboard-1](images/compliance-dashboard-pdb.png " ")
 
-13. You can also generate a comprehensive compliance report for
+23. You can also generate a comprehensive compliance report for
 
     A. Each compliance standard and all its associated targets.
 
