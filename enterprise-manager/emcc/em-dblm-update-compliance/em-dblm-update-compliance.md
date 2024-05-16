@@ -41,136 +41,98 @@ In this lab you will perform the following steps:
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository. Workshop activities included in this lab will be executed both locally on the instance using Enterprise Manager Command Line Interface (EMCLI) or Rest APIs, and the Enterprise Manager console (browser)
 
-## Task 1: Execute Patch Recommendation job
+## Task 1: Assess patch recommendation and create gold image [Read-Only Step]
 
-To complete a patching cycle, it is important that you know the correct set of patches. If the number of targets( databases and grid infrastructure) is high, then patching becomes a challenging assignment. In this lab, we'll review offline mode of uploading patch recommendations in Enterprise Manager. We will also analyze the job that is automatically executed as a part of patch catalog upload.
+In this task, we will review patch recommendations for existing gold images. Based upon the recommendations, we will create a new version.
 
-1. At the bottom of the Enterprise Summary page, you will find ***Patch Recommendations*** section. This section provides both online and offline mode to upload patch catalog. In the interest of the accuracy of this workbook, we'll select *offline mode*. If you select online mode(clicking credentials link), then today's latest patch recommendation will be shown, which would require new set of patches. This will impact the later part of the workbook. Therefore, in order to complete the lab successfully, we strongly recommend that you upload the pre-downloaded catalog by following the instructions given the workbook.
+1. Login to Enterprise Manager as user - emadmin and password - welcome1
 
-![](images/em-summary.png "em-summary")
+![](images/em-login.png "em-login")
 
-Click on ***offline*** hyperlink and in the new window choose file by clicking on the button and upload ***em_catalog.zip*** from the location ***/home/oracle/fleet/patching***.
-![](images/em-summary-upload.png "em-summary-upload")
+2. Once logged in, navigate to ***Targets >> Databases***  
 
-Once the upload is successful, you will find the confirmation at the top section of the page. kindly note that this process has automatically executed a job ***Refresh from My Oracle Support***.
-![](images/em-summary-upload-job.png "em-summary-upload-job")
+![](images/em-navig1.png "em-navig1")
 
-To know more about this job, click on the job name and it will take you to job activity page. This job will be completed with 5 minutes.
-![](images/em-summary-upload-job-details.png "em-summary-upload-job-details")
+   and then ***Administration >> Fleet Maintenance Hub***
 
-## Task 2: Review Image Health Status
+![](images/em-navig2.png "em-navig2")
 
-In this task, we will review the gold images post completion of patch recommendations job. Launch Fleet Maintenance Hub from Targets->Databases and then Administration-> Fleet Maintenance Hub. From Tile 2, ***Patch Recommendations for Images***, you can review the status of gold images. Here, we see that one of the gold images ***Image Name*** has a green tick mark against its name. This suggests that the image is up-to-date and can be used for patching. There is one more image ***Image Name*** which has a red cross against its name, suggesting that it needs to be refreshed before using it to patch databases.
+3. This is the homepage of Fleet Maintenance Hub. At the top right corner we see the status of ***Last Patch Recommendation Update***. If you see a date below it, then it suggests that patch recommendation was executed on that particular date. To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/downloading-patch-recommendations-and-patches.html).
 
-We see the benefits of using automatic patch recommendations along with Fleet Maintenance Hub. It cuts down all the manual tasks along with scope of error in missing out a recommended patch(es).
+![](images/em-hub.png "em-hub")
+   For successful completion of this lab, we suggest that you do not upload any new patch catalog or enter your MOS credential as per above documentation. This will generate new recommendations, which might be different than the one in the upcoming sections of this document.
 
-![](images/Intro-tile2.png " introduction for tile2")
+4. Lets review Tile 2 of Fleet Maintenance Hub, which is referred as Patch Recommendations for Images
 
-## Task 3: Review Patch Recommendations
+![](images/tile2.png "hub-tile2")
 
-Lets review the gold image ***Image Name***. From Hub, we see that there are 2 patch recommendations. To understand more about these patches, click on the numeric value and in the new page, we see the details of these patches.
+Here we see that goldimages - 19cDB-Linux-x64-ERP has 2 patch recommendations, while 19cDB-Linux-x64-APPS has a green tick against it. This suggests that 19cDB-Linux-x64-ERP should have a new version that includes these two recommended patches, whereas 19cDB-Linux-x64-APPS is in good shape and can be used to perform patching.
 
-![](images/review-gold-image.png "gold image review")
+Follow [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand steps involved to refresh a goldimage. For this lab, we will use 19cDB-Linux-x64-APPS image.
 
-To make this gold image at par with Oracle's recommendation, we need to create a new version, which includes these 2 patches and then mark this version as current. Version marked as current is used to deploy Oracle Homes. To create a new version for this image, click on the message - Create new version and follow the workflow. Ensure that the required patches are uploaded with Enterprise Manager's Software Library. In the interest of the time and to complete the lab, please do not proceed with this step. Once you complete the lab, you may revisit this section and follow the workflow to complete the lab.
 
-## Task 4: Subscribe Targets *[Which has already been implemented]*
+## Task 2: Secure databases by updating with new gold image
 
-Fleet Maintenance is a subscription based solution. To patch/upgrade a target, you need to subscribe that target to the Gold Image. Gold Image represents a software end state. An Enterprise Manager Software Library Gold Image is a software archive created from a patched oracle home uploaded to EM Software Library.
+In this task, we will perform pdb patching. In this usecase, we will unplug one of the pdbs and plug it to a higher version CDB.
+We will unplug Finance pdb (associated with CDB -sales) and plug it to HR CDB. Finance is currently at 19.17 version and HR is at 19.23.
+![](images/pre-update.png "pre-update")
 
-Go to tile 1, Target Subscription and click on Subscribe.
-![](images/subscribe-button.png "subscribe")
+Lets complete below steps to perform the pdb patching.
 
-In this task, we will subscribe ***sales.subnet.vcn.oraclevcn.com*** to gold image ***image name***. In this lab, we are subscribing only target, but you can subscribe as many targets as you want.
-![](images/subscribe-db.png "subscribe-db")
+1. Subscribe sales CDB to goldimage 19cDB-Linux-x64-APP.
 
-Once you get the successful message, click on Close button at the top right hand corner. This completes the subscription operation.
+Under Target Subscription tab in Fleet Maintenance Hub, click on ***Subscribe*** button. Select filter 19 under Release. From the dropdown select the goldimage - 19cDB-Linux-x64-APPS. From the list of databases, select sales.subnet.vcn.oraclevcn.com. Click on subscribe at the top right corner.
+![](images/sales-subscribe.png "subscribe")
 
-## Task 5: Launch operation UI from Hub
+Upon completion, click on close.
 
-In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
+2. Go to Tile 3 - Target Patch Compliance in Fleet Maintenance Hub.
+![](images/tile3.png "tile3")
 
-1. From tile 3, ***Target Patch Compliance***, identify the row which has the details of sales.subnet.vcn.oraclevcn.com.
+Click on doner icon, under Actions for sales CDB and select Update Pluggable Database. This will launch the operator UI of Fleet Maintenance.
 
-2. Click the Doner icon on that row, and select update.
+3. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
+![](images/patching-ui1.png "patching-ui1")
+Select Finance pdb and hit next.
 
-## Task 6: PDB Patching
+4. In this page, we will select relevant options and enter values wherever required.
+Under Maintenance Task, we will select Attach Existing 19cDB
+under Attach Existing CDB, we will review the source CDB, which is sales. Under Destination CDB, we will only see HR.
+Under credentials, select from the drop down menu as per the image.
+Select Next.
 
-1. In this page, we will have pre-select ***Image Name***, ***Target Type*** and ***Operation***.
-      ![](images/New-fm-flow1.png "selection")
-      Where:
-      -  Image = We will select ***19cDB-Linux-x64-Apps***. Desired version of Oracle home, which our target database should run after successful completion of operation.
-      -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
-      -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
-      -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
+![](images/patching-ui2.png "patching-ui2")
 
-      We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
+5. Click on Validate and then select Quick Validation. Once you get successful validation message, click close and hit submit.
+![](images/patching-ui3.png "patching-ui3")
 
-2. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is hr.subnet.vcn.oraclevcn.com.
+6. A new dialogue box will ask for the name of the deployment procedure, to track the pdb patching. This unique name will allow you to track the operation. We have provided name - Demo_update.
+![](images/patching-ui4.png "patching-ui4")
 
-      ![](images/New-fm-flow2.png "selection")
+7. There are two Deployment Procedure submitted.
+- Attach Existing CDB
+- Update PDB
 
-      Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
-      -  Normal Host Credentials as ***ORACLE***
-      -  Privileged Host Credentials as ***ROOT***
-      -  SYSDBA Database Credentials as ***SYS_SALES***     
+Click on monitor progress, which will open a new window.
+![](images/patching-ui5.png "patching-ui5")
 
-      Under Options, we can use default value /tmp for Working Directory. This is the location where log files will be created.
+8. In the new page, under search, we have entered Demo, so that we only see the two Deployment procedures, which are associated with this lab.
+![](images/patching-ui6.png "patching-ui6")
 
-      Select ***Next***.    
+We see that Deployment procedure with name Attach has completed successfully. Lets click on Update and review the steps performed.
+![](images/patching-ui7.png "patching-ui7")
 
-3. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
+9. With both Deployment procedures completed successfully, lets go back to databases homepage by navigating Targets->Databases.
+![](images/patching-ui8.png "patching-ui8")
 
-      ![](images/fm-flow3-validate.png "quick and full valdiation modes")
+We see that the Finance PDB has moved out of sales and is plugged with HR CDB.
 
-4. Review the validation result.
 
-      ![](images/fm-flow3-validate-result.png "result of valdiation")
-
-      Incase of any error, we can fix it and choose revalidate. Select ***Close***.
-
-5. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
-      ```
-      <copy>finance_pdb_patching</copy>
-      ```
-      ![](images/fm-flow4-dp-name.png "job name")
-      Here, we can see that we have opted to attach existing CDB and update PDB.
-
-      ![](images/dp-submit.png "submit operation")    
-      Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
-
-6. Review the Deployment Procedures (DP).
-
-      ![](images/dp-list.png "Deployment Procedures submitted")
-
-      We can see that one of the DP related to Attach operation has already completed. Lets click on it and find out the steps executed by this DP.
-
-      ![](images/dp1-attach-complete.png "review dp for attach")
-      Lets go back to the Procedure Activity page and review the other DP.
-
-7.  We can see that second DP for update operation is running.
-      ![](images/dp-list2.png "Deployment Procedures submitted")
-
-      Lets click on it and find out the steps executed by this DP.
-
-      ![](images/dp2-update-running.png "review dp for update")
-
-      We can see that attach DP completed successfully.
-      ![](images/dp2-update-complete.png "review dp for update_completed")
-
-8.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
-
-      ![](images/New-env-list-final.png "new version check")
-
-      We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
-
-## Task 7: Review PDB in Hub
-
-Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for gold image ***image name*** is green. Similarly, in Tile 3, we see that both gold image and target has a green icon next to it, suggesting that both gold image and target are healthy.
+## Task 3: Elevate security posture by auditing for compliance
 
 
 
-That completes the Automated Database Patching at Scale with Fleet Maintenance HUB.
+That completes the Database Patching and Compliance lab.
 
 You may now proceed to the next lab.
 
@@ -186,4 +148,4 @@ You may now proceed to the next lab.
   - **Authors**
     - Romit Acharya, Oracle Enterprise Manager Product Management
     - Shiva Prasad, Oracle Enterprise Manager Product Management
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, April 2024
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, May 2024
