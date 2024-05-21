@@ -25,7 +25,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/opsi-dashboard-listing.png " ")
 
-3. In addition to creating dashboards, Ops Insights also provides the following predefined dashboards which can be access by clicking on the "Dasdboard Name" from "Dashboard Listing":
+3. In addition to creating dashboards, Ops Insights also provides the following predefined dashboards which can be access by clicking on the "Dashboard Name" from "Dashboard Listing":
 
     Exadata Cell Dashboard - Hourly	Hourly granularity dashboard for cell disk metrics. The disk metrics are aggregated across the flash and hard disks as indicated by the widget names.
     Useful to help identify potential disk-related IO bottlenecks and cell outliers.
