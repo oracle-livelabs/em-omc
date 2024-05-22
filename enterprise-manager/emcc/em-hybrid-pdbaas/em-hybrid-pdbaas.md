@@ -54,13 +54,13 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 2.  On the right, click on the 'Setup' menu and choose 'Security' and then 'Roles'.  
 
-    ![Navigate to Security](images/Navigate-to-security.png " Navigate to Security ")
+    ![Navigate to Security](images/navigate-to-security.png " Navigate to Security ")
 
     The "Developer" role you see has been pre-created. This is the role which will be attached to the SSA USER( CYRUS) which will be used in this Demo. 
     Click on the "Developer" role to view more details. 
     
     View the target and resource privileges associated with this role.  You will also see a user 'Cyrus' is already associated to this role. 
-    ![SSA-Role](images/SSA-Role.png " SSA Role ") 
+    ![SSA-Role](images/ssa-Role.png " SSA Role ") 
 
     Click 'OK'
 
@@ -71,7 +71,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![Navigate-to-security](images/demo-admin-user.png " Navigate-to-security ")  
     
     Click 'CYRUS'
-    ![Choose-Cyrus-User.png](images/Choose-Cyrus-User.png " Choose-Cyrus-User.png ") 
+    ![Choose-Cyrus-User.png](images/choose-cyrus-User.png " Choose-Cyrus-User.png ") 
 
     You can see here the "DEVELOPER" role which we reviewed earlier is also attached to the "Cyrus" user. You can also view the Target privileges and resource privileges.
     ![cyrus-user-details](images/cyrus-user-details.png " cyrus-user-detail ") 
@@ -91,25 +91,25 @@ In  this task we will build all the necessary componets required in setting up P
     
     Navigate from Setup >> Cloud >> Database
 
-    ![Navigate-to-Cloud](images/Navigate-to-Cloud.png "Navigate-to-Cloud") 
+    ![Navigate-to-Cloud](images/navigate-to-cloud.png "Navigate-to-Cloud") 
 
 2. Choose pluggable database from the dropdown. 
-    ![Choose-PDB-Dropdown](images/Choose-PDB-Dropdown.png "Choose-PDB-Dropdown")
+    ![Choose-PDB-Dropdown](images/choose-pdb-dropdown.png "Choose-PDB-Dropdown")
 
 3. Click on 'PaaS Infrastucture Zone' on the left menu bar and then click 'Create'. 
 
-    ![Creating-PaaS-Zone](images/Creating-PaaS-Zone.png "Creating-PaaS-Zone")
+    ![Creating-PaaS-Zone](images/creating-paas-zone.png "Creating-PaaS-Zone")
 
 4. Provide a Target Name and Description as suggested below. 
 
     Click Next
 
-    ![PaaSzoneDetails](images/PaaSzoneDetails.png "PaaSzoneDetails")
+    ![PaaSzoneDetails](images/paaszoneDetails.png "PaaSzoneDetails")
 
 5. In the Members page  click on "Add" . 
     From the pop-up dialog box Choose 'emcc.marketplace' and click on "select". 
 
-    ![Paas-memebers](images/Paas-memebers.png "Paas-memebers")
+    ![Paas-memebers](images/paas-memebers.png "Paas-memebers")
 
     Click Next
 
@@ -118,28 +118,28 @@ In  this task we will build all the necessary componets required in setting up P
 
     Click Next
 
-    ![Paas-zone](images/Paas-zone-credentails.png "PaaS Zone")
+    ![Paas-zone](images/paas-zone-credentails.png "PaaS Zone")
 
 7. No changes on the "Placement Constraints" page,  let us continue with the
     default value as seen below. 
 
     Click "Next"
 
-    ![Paas-zone](images/Paas-placement.png "PaaS Zone")
+    ![Paas-zone](images/paas-placement.png "PaaS Zone")
 
 8. No changes on the "Characteristics" page. Optionally you can choose to 
    add tags as shown below. You can select a value from the dropdown. 
 
     Click "Next"
 
-    ![Paas-zone](images/Paas-tags.png "PaaS Zone")
+    ![Paas-zone](images/paas-tags.png "PaaS Zone")
 
 9. On the Roles page, click  "Add". Choose the "Developer" role and 
     click  "Select"
     
     Click Next
 
-    ![Paas-zone](images/Paas-add-role.png "PaaS Zone")
+    ![Paas-zone](images/paas-add-role.png "PaaS Zone")
 
 10. Review the details and click "Submit"
     ![Paas-zone](images/paas-review.png "PaaS Zone")
@@ -147,7 +147,7 @@ In  this task we will build all the necessary componets required in setting up P
 
     The PaaS infra zone has been created successfully. 
     
-    ![Paas-zone](images/Paas-create-confirm.png "PaaS Zone")
+    ![Paas-zone](images/paas-create-confirm.png "PaaS Zone")
 
 11. **Creation of Pluggable Database Pool**
 
@@ -202,7 +202,7 @@ In  this task we will build all the necessary componets required in setting up P
       Version : 19.0.0.0
       ```
     
-    ![Paas-zone](images/Pdbpool-details1.png "PaaS Zone")
+    ![Paas-zone](images/pdbpool-details1.png "PaaS Zone")
 
     Next step would be to add the container databases of our choice to the pool.
 
@@ -810,7 +810,16 @@ As a prerequisite we have already created a gold image for 19.12.
 This concludes the lab. 
 
 
+## Learn More
+- [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
+- [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
+- [Database Cloud Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/cloud.html)
+- [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/lifecycle.html)
 
+## Acknowledgements
+  - **Author** - Sravanth Mouli, Oracle Enterprise Manager Product Management
+  - **Contributors** -  Anand Prabu 
+  - **Last Updated By/Date** - Sravanth Mouli, Oracle Enterprise Manager Product Management -  May 2024
     
 
 
