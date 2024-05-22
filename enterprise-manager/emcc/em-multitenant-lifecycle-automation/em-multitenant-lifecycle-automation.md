@@ -448,9 +448,9 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
+1. In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.23, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
 
-      ![](images/current-env-details.png "current-configuration")        
+      ![](images/patching-current-config.png "current-configuration")        
 
 2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
 
@@ -458,13 +458,31 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
 
-      ![](images/admin-fm.png "navigation")
+      ![](images/navigation1.png "navigation")
 
 
-3.  We have already created the gold image (named PDB Image) and subscribed Finance PDB to it. This is a mandatory pre-requisite step.
+3.  Lets complete below steps to perform the pdb patching. Subscribe sales CDB to goldimage 19cDB-Linux-x64-APP.
+
+    Under Target Subscription tab in Fleet Maintenance Hub, Click on **Subscribe** button. 
+    
+    Select filter 19 under Release. 
+    
+    From the dropdown select the goldimage - **19cDB-Linux-x64-APPS.** 
+    
+    From the list of databases, select **sales.subnet.vcn.oraclevcn.com.** 
+    
+    Click on subscribe at the top right corner.
+    ![](images/sales-subscribe.png "Subscribe")
+
+    Upon completion, click on close.
+
+4. Navigate to Tile 3 - **Target Patch Compliance** in Fleet Maintenance Hub.
+    Click on doner icon under Actions for sales CDB and select Update Pluggable Database. This will launch the operator UI of Fleet Maintenance.
+
+    ![](images/deploy-operator-ui.png "Subscribe")
 
 4.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
-      ![](images/fm-flow1.png "selection")
+      ![](images/fm-flow1-new.png "selection")
       Where:
       -  Image = We will select ***19cDB-Linux-x64-Apps***. Desired version of Oracle home, which our target database should run after successful completion of operation.
       -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
@@ -527,7 +545,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 11.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
-      ![](images/env-list-final.png "new version check")
+      ![](images/env-list-final-new.png "new version check")
 
       We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
