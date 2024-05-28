@@ -167,8 +167,9 @@ A gold image is the end of state software definition that contains information a
 We will go through steps for update(patching) database target ***finance.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 19.17.0.0.0 version. The goal is to patch this target to 19.23.0.0.0. As part of the update(patching) exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
 
 1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
+![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
 
-
+Review version of ***finance.subnet.vcn.oraclevcn.com***
   ![](images/patch-db-layout.png "finance-db-version")
 
 ## Task 4: Review Gold Image [Step Already Performed, Read-Only Step]
@@ -184,13 +185,14 @@ We will go through steps for update(patching) database target ***finance.subnet.
 
     ![](images/Launch-Hub.png "Hub Homepage")
 
-    Click on middle Tile 2, which is **Patch Recommendations for Images**. Here we see two gold images. The highlighted one is a healthy image, which ahs all the patch recommendations. We will use this gold image to complete our patching activity in this lab.
+    Click on middle Tile 2, which is **Patch Recommendations for Images**. Here we see two gold images. The highlighted one is a healthy image, which has all the patch recommendations. We will use this gold image to complete our patching activity in this lab.
+    ![](images/Hub-Tile2.png "Hub Homepage")
 
 ## Task 5: Subscribe Database
 
 1.  We will subscribe database target ***finance.subnet.vcn.oraclevcn.com***, to the above suggested gold image ***19cDB-Linux-x64-Apps***. To do so, in the Hub, select Tile 1, which is ***Target Subscription***. Click on the ***Subscribe*** button.
 
-    ![](images/Susbcribe-Hub.png "Subscribe flow")
+    ![](images/Subscribe-Hub.png "Subscribe flow")
 
 2. A new layout will appear. In this layout, select
 
@@ -200,11 +202,10 @@ We will go through steps for update(patching) database target ***finance.subnet.
 
    Click on Subscribe button and wait for it to completed.
 
-    ![](images/Susbcribe-FinanceDB.png "Susbcribe-FinanceDB")
+    ![](images/Subscribe-FinanceDB.png "Susbcribe-FinanceDB")
 
    Once done, click on close button.
 
-    ![](images/Subscribe-Close.png.png "Subscribe-Close.png")
 
 ## Task 6: Deploy Image
 
@@ -226,7 +227,8 @@ We will go through steps for update(patching) database target ***finance.subnet.
 
 3. In this page, we will provide ***new Oracle home location***, select which ***tasks*** can be performed, select ***credential model***, provide ***log file location*** under options and select any   ***custom scripts*** to run as part of the operation.
 
-    ![](images/sales-patch-screen2.png "input values")
+    ![](images/finance-patch-screen2.png "input values")
+
 
     We can enter following values
     Under Maintenance tasks
