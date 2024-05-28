@@ -71,7 +71,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 4.  On the Provision Pluggable Database Console, in the *Container   Database* section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
 
     ![](images/select-cdb-main-flow-helper.png " select cdb page")
-    ![](images/select-cdb-main-flow.png " choose cdb page  ")
+    ![](images/select-cdb-main-flow-1.png " choose cdb page  ")
 
 
 
@@ -178,7 +178,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly created PDB
 
-    ![](images/create-pdb-validation.png " new pdb validation")
+    ![](images/create-pdb-validation-1.png " new pdb validation")
 
 ## Task 2: Unplug/Plug an existing Pluggable Database (PDB)
 
@@ -192,7 +192,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to Unplug PDBs.
     ![](images/select-cdb-main-flow-helper.png " cdb selection")
-    ![](images/select-cdb-main-flow.png " choose the pdb")
+    ![](images/select-cdb-main-flow-1.png " choose the pdb")
 
 4.  In the PDB Operations section, select **Unplug Pluggable Databases**, then Click **Launch**
 
@@ -252,7 +252,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
      Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB you unplugged is no longer in the list.
 
 
-    ![](images/unplug-pdb-validation.png " unplug validation ")
+    ![](images/unplug-pdb-validation-1.png " unplug validation ")
 
 9.  Let us continue to the next steps and plug the same PDB back into the container database.
 
@@ -267,7 +267,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**cdb186.subnet.vcn.oraclevcn.com186**) within which you want to Plug the PDBs.
 
     ![](images/select-cdb-main-flow-helper.png " choose cdb ")
-      ![](images/select-cdb-main-flow.png " cdb select ")
+      ![](images/select-cdb-main-flow-1.png " cdb select ")
 
 12. In the PDB Operations section, select **Create New Pluggable Databases** and click **Launch**.
 
@@ -353,7 +353,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB which was recently plugged.
 
 
-    ![](images/create-pdb-validation.png " plug pdb validation")
+    ![](images/create-pdb-validation-1.png " plug pdb validation")
 
     *Note*: You do not have to wait until the steps complete and move on to the next section.
 
@@ -372,11 +372,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     **Click** on the **hr.subnet.vcn.oraclevcn.com_HRPDB** PDB as highlighted
 
 
-    ![](images/cloning-show-existing-pdb.png " cloning-show-existing-pdb ")
+    ![](images/cloning-show-existing-pdb-1.png " cloning-show-existing-pdb ")
 
 3.  This will open up the PDB Home page
 
-    ![](images/clone-pdb-home-page.png " HR PDB Home page")
+    ![](images/clone-pdb-home-page-1.png " HR PDB Home page")
 
 
 4.  Navigate from **Oracle Database >> Cloning >> Create Full Clone**  
@@ -443,7 +443,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases.
 
     We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com** CDB
-![](images/clone-validation.png "pdb clone validation success ")
+![](images/clone-validation-1.png "pdb clone validation success ")
 
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
@@ -567,11 +567,11 @@ A compliance standard is mapped to one or more compliance standard rules and is 
     In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
     Applicable To section Drop down select **Pluggable Database** hit search.
 
-    ![Search CIS](images/compliance-search-pluggable.png "  ")
+    ![Search CIS](images/compliance-search-pluggable-1.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-    ![Target associate](images/associate-cis-targets.png " ")
+    ![Target associate](images/associate-cis-targets-1.png " ")
 
 3.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
 
