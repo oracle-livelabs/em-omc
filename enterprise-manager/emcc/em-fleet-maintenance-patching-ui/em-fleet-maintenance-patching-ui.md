@@ -21,7 +21,7 @@ Benefits of using the EM Fleet Maintenance capability include:
 - Ability to schedule/retry/suspend/resume operations
 - Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
 
-![](images/new-em-fleet-maintenance-overview.png " ")
+![](images/FM-Overview2024.png "FM-Overview2024")
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
@@ -94,7 +94,7 @@ Software Standardization Advisor enables administrators to understand various da
     Graphs may look different from the ones represented in the workbook.
     A Software Configuration is identified by the database release, platform, and the patches installed on the target.
 
-    In the analysis performed by the Software Configuration Advisor, it has identified that there are 5 unique software configurations in the environment (pie chart labeled “Current Unique Software Configurations”). The recommendation displayed is for only 2 Software Configurations ( pie chart labeled “Recommended Software Configurations”).
+    In the analysis performed by the Software Configuration Advisor, it has identified that there are 6 unique software configurations in the environment (pie chart labeled “Current Unique Software Configurations”). The recommendation displayed is for only 2 Software Configurations ( pie chart labeled “Recommended Software Configurations”).
 
     Next, we will review the report generated.
 
@@ -251,7 +251,7 @@ We will go through steps for update(patching) database target ***finance.subnet.
 
 There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation mode and click on Validate.
 
-    ![](images/quick-validate.png "quick and full valdiation modes")
+  ![](images/quick-validate.png "quick and full valdiation modes")
 
 5. Review the validation result.
 
@@ -270,7 +270,8 @@ There are two validation modes - Quick and Full. We can select either of these. 
     Click on submit.
     ![](images/finance-job-monitor.png "monitor")
 
-    Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***
+    Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***.
+    ![](images/navigate-dp.png " ")
 
 7. Review the Deployment Procedures (DP).
 
@@ -355,7 +356,7 @@ below.
 
 3. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
 
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
+    ![](images/navigate-dp.png " ")
 
 Below are the list of Deployment Procedures. Select the latest one.
 
@@ -366,9 +367,6 @@ Verify that the update has been completed successfully.
 
 4. Verify and confirm that the target has been re-patched to Oracle Database 19.23 by going to Targets Databases as shown below.
 
-    ![](images/038585c9308635261ae7e4aa956525af.png " ")
-
-    Review the version of finance database.
     ![](images/new-finance-status.png "new sales version")
 
 5. Review and execute the following command as a dry-run to report on cleanup impact for *finance.subnet.vcn.oraclevcn.com*  
@@ -389,7 +387,7 @@ Verify that the update has been completed successfully.
     ![](images/finance-cleanup-submission.png "cleanup action")
 
 7. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity***.
-    ![](images/e9091a9e1e04a1a988cb61d9171a483d.png " ")
+    ![](images/navigate-dp.png " ")
 
     Monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
