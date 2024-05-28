@@ -55,7 +55,9 @@ To save time, the following steps were already completed.
 
 1. Gold Image of Oracle Home was created using Fleet Maintenance Hub.
 
-To ensure smooth execution of the use cases, we have pre-hosted the scripts to be used later at */home/oracle/fleet*
+To ensure smooth execution of the use cases, we have pre-hosted the scripts to be used later at */home/oracle/fleet*. To know more about using this feature, follow the below video link.
+
+[Video Walk-through] (https://www.youtube.com/watch?v=ibEEkTa05iM&t=182s)
 
 ## Task 2: Detect Configuration Pollution with Software Standardization Advisor
 
