@@ -158,7 +158,7 @@ A gold image is the end of state software definition that contains information a
 
 Starting with Enterprise Manager 13.5 RU16, Enterprise Manager offers a new interface - Fleet Maintenance Hub to ease automated update(patching), and upgrade of your database fleet. The Fleet Maintenance Hub within Enterprise Manager offers a comprehensive solution for managing database vulnerabilities and patch operations. It streamlines the process by identifying potential security risks, providing patch recommendations, and enabling efficient scheduling and monitoring of patching and upgrade operations. With the ability to manage diverse infrastructures and ensure compliance with patch policies, the Fleet Maintenance Hub serves as a centralized and powerful tool for maintaining the security and stability of database assets.
 
-We will go through steps for upgrading database target ***cdb186.subnet.vcn.oraclevcn.com***, a Container Database currently at 18.8.0.0.0. The goal is to upgrade this target to 19.23.0.0.0.
+We will go through steps for upgrading database target ***cdb186.subnet.vcn.oraclevcn.com***, a Container Database currently at 18.8.0.0.0. The goal is to upgrade this target to 19.23.0.0.0. Instead of DBUA, we will use Auto Upgrade tool, which is the recommended method by Database Team.
 
 1. Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
 
@@ -308,11 +308,10 @@ After the deploy operation and migrate listener task have completed successfully
 1.  Similar to migrate listener, we also submitted Update Database in task 7. If this needs to be submitted separately, then we had to uncheck update database task ( review step 3 of task 7).
     ![](images/uncheck-update-db.png "uncheck dp")
 
-    The image below shows the task is in a running state.
-
     Upgrade operation has completed successfully.
 
-    ![](images/upgrade-dp-complete.png "update-dp-steps")
+    ![](images/upgrade-db-complete.png "update-dp-steps")
+
 
     Lets validate the version of ***cdb186*** database. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***. We can see the updated version of ***cdb186*** database.
     ![](images/cdb-final-version.png "db version post operation")
