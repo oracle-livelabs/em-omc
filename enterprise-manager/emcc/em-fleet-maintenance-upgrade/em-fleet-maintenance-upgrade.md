@@ -59,7 +59,7 @@ Software Standardization Advisor enables administrators to understand various da
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
 -->
-  ![](images/new-em-fleet-maintenance-overview-2.png " ")
+  ![](images/new-em-fleet-maintenance-overview-2.png "FM overview")
 
 1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -71,7 +71,7 @@ Software Standardization Advisor enables administrators to understand various da
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/patch.png " ")
+    ![](images/patch.png "vnc env homepage")
 
 2.  After successful login, in the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
@@ -99,7 +99,7 @@ Software Standardization Advisor enables administrators to understand various da
 
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/current-config.png " ")
+    ![](images/current-config.png "current config")
 
     When you download the report, a warning on XLS format and file extension mismatch pops up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
@@ -115,7 +115,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
 
-    ![](images/workshop-instance.png " ")
+    ![](images/workshop-instance.png "workshop")
 
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 
@@ -205,7 +205,7 @@ We will go through steps for upgrading database target ***cdb186.subnet.vcn.orac
           <copy>emcli db_software_maintenance -getImages</copy>
           ```
 
-  ![](images/emcli-list-images.png " ")
+  ![](images/emcli-list-images.png "list images")
 
   IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
 
@@ -223,7 +223,7 @@ We will go through steps for upgrading database target ***cdb186.subnet.vcn.orac
           ```   
   This command lists Gold Image versions with their VERSION ID and STATUS.
 
-  ![](images/emcli-list-version.png " ")
+  ![](images/emcli-list-version.png "version list")
 
   When a Gold Image is created for the first time, its first version is created as per the input and marked as current. Whenever we run a DEPLOY operation for a target, Gold Image version marked as CURRENT is used to deploy the new Oracle Home.
 
@@ -241,7 +241,7 @@ If the image id for Gold Image ***19cDB-Linux-x64-APPS*** is different, the upda
 <copy>emcli db_software_maintenance -subscribeTarget -target_name=cdb186.subnet.vcn.oraclevcn.com -target_type=oracle_database -image_id={Insert IMAGE ID from List available gold images}</copy>
 ```
 
-  ![](images/emcli-subscribe-cdb186.png " ")
+  ![](images/emcli-subscribe-cdb186.png "subscribe command")
 
     Where:
       - target\_name – Name of the Database target which needs to be patched
@@ -257,7 +257,7 @@ If the image id for Gold Image ***19cDB-Linux-x64-APPS*** is different, the upda
     <copy>cd ~/fleet; sh deploy1923_cdb186.sh</copy>
     ```
 
-  ![](images/emcli-deploy-cdb186.png " ")
+  ![](images/emcli-deploy-cdb186.png "deploy OH using emcli")
 
 
     Where:
@@ -277,14 +277,14 @@ If the image id for Gold Image ***19cDB-Linux-x64-APPS*** is different, the upda
 
 2. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console.
 
-    ![](images/navigate-dp.png " ")
+    ![](images/navigate-dp.png "DP Navigation")
  Click on ‘DEPLOY\_SYSMAN\_\*’ run
 
-     ![](images/deploy-dp.png " ")
+     ![](images/deploy-dp.png "deploy dp")
 
 3. Review the Procedure Activity steps performed.
 
-    ![](images/deploy-complete.png " ")
+    ![](images/deploy-complete.png "deploy dp complete")
 
 ## Task 7: Migrate Listener to New Upgraded Home
 
@@ -294,15 +294,15 @@ If the image id for Gold Image ***19cDB-Linux-x64-APPS*** is different, the upda
     <copy>sh migrate_listener_cdb186_update.sh</copy>
     ```
 
-    ![](images/emcli-migrate.png " ")
+    ![](images/emcli-migrate.png "emcli listener migration")
 
 2. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘Fleet\_migrate\_\*’ run
 
-    ![](images/navigate-dp.png " ")
+    ![](images/navigate-dp.png "navigate dp")
 
 3. Review the Procedure Activity steps performed.
 
-    ![](images/migrate-DP.png " ")
+    ![](images/migrate-DP.png "migrate dp")
 
 ## Task 8: Update Database – Upgrade to 19.23
 
@@ -314,7 +314,7 @@ With the deploy operation completed successfully, we are ready to run the final 
     <copy>sh update_cdb186.sh</copy>
     ```
 
-    ![](images/upgrade-cdb186.png " ")
+    ![](images/upgrade-cdb186.png "emcli to upgrade")
 
     Where:  
       - Name – Name of the operation. This is a logical name and should be kept unique  
@@ -322,15 +322,15 @@ With the deploy operation completed successfully, we are ready to run the final 
 
 2. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_UPDATE\_...’ deployment procedure instance.
 
-    ![](images/upgrade-dp.png " ")
+    ![](images/upgrade-dp.png "upgrade dp list")
 
 3. Review the Procedure Activity steps performed
 
-    ![](images/upgrade-dp-complete.png " ")
+    ![](images/upgrade-dp-complete.png "upgrade dp complete")
 
 4. Verify the Upgraded target by going to ***Targets >> Databases*** as shown below. Operation above will take \~40 minutes to complete.
 
-    ![](images/post-upgrade-version.png " ")
+    ![](images/post-upgrade-version.png "verify dp")
 
 
 This completes this lab.

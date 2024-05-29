@@ -67,7 +67,7 @@ Software Standardization Advisor enables administrators to understand various da
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
 -->
-  ![](images/new-em-fleet-maintenance-overview-2.png " ")
+  ![](images/new-em-fleet-maintenance-overview-2.png "Fleet Maintenance Overview")
 
 1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -79,13 +79,13 @@ Software Standardization Advisor enables administrators to understand various da
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/patch.png " ")
+    ![](images/patch.png "vnc home page")
 
 2.  After successful login, in the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
     ![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
 
-3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select Software ***Standardization Advisor***
+3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select ***Software Standardization Advisor***
 
     ![](images/new-software-std-advisor.png "additional items in drop down ")
 
@@ -131,23 +131,11 @@ Software Standardization Advisor enables administrators to understand various da
 
     ![](images/recommend-config.png "recommended changes ")
 
-    <!-- The report recommends a reduction of the 5 configurations and standardizing the database estate to 2 configurations (18c and 19c). This means all Oracle homes for Release 18c should uptake the standard 18c configuration and the 19c Oracle homes the standard 19c configuration. -->
-
     The reports recommendation is to consolidate the configuration drift (pollution) from the current six database to two (18c and 19c). This recommendation would reduce the number of configurations and standardize the environment for easier management.
 
     ![](images/recommend-report.png "recommendations ")
 
     The recommendation is based on a union of bugs included in the patches in all Oracle homes and based on the configuration type.
-
-  <!-- This completes Step 1. In this section, you learned how to perform the following:
-
-    - Access the Database Software Standardization Advisor
-    - View Configuration summary
-    - Generate and download current and recommended configuration reports
-
-  In the next section we will follow these recommendations to perform the following using Enterprise Manager 13c Fleet Maintenance.
-
-    - Patch database “hr.subnet.vcn.oraclevcn.com” from 18.3 to 18.10 -->
 
 ## Task 3: Database Server update(patching) with Fleet maintenance (Overview)
 
@@ -159,7 +147,6 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 
 A gold image is the end of state software definition that contains information about the base software version plus the additional patches. Targets, to be patched, subscribe to a relevant Gold Image. Target subscription persists through the lifecycle of the Target or Gold Image unless modified by an administrator.
 
-  <!--![](images/DB_Fleet_Patching.png " ")  -->
   ![](images/new-db-fleet-patching.png "new interface")
 
 ### **Patching with Fleet Maintenance Hub**
@@ -185,7 +172,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
     ![](images/Launch-Hub.png "Hub Homepage")
 
-    Click on middle Tile 2, which is **Patch Recommendations for Images**. Here we see two gold images. The highlighted one is a healthy image, which has all the patch recommendations. We will use this gold image to complete our patching activity in this lab.
+    Click on middle Tile 2, which is **Patch Recommendations for Images**. Here, we see two gold images. The highlighted one is a healthy image, which has all the patch recommendations. We will use this gold image to complete our patching activity in this lab.
     ![](images/Hub-Tile2.png "Hub Homepage")
 
 ## Task 5: Subscribe Database
@@ -196,13 +183,13 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
 2. A new layout will appear. In this layout, select
 
--  Release as 19.0.0.0.0
+-  Release as ***19.0.0.0.0***
 -  From the drop down, select the gold image name ***19cDB-Linux-x64-Apps***
 -  From Unsubscribed Targets, select database target ***finance.subnet.vcn.oraclevcn.com***
 
    Click on Subscribe button and wait for it to completed.
 
-    ![](images/Subscribe-FinanceDB.png "Susbcribe-FinanceDB")
+    ![](images/Subscribe-FinanceDB.png "Subscribe-FinanceDB")
 
    Once done, click on close button.
 
@@ -238,6 +225,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
         ```
 
     Check both Migrate Listener and Update Database options
+
     Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
     -  Normal Host Credentials as ***ORACLE***
     -  Privileged Host Credentials as ***ROOT***
@@ -253,7 +241,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 4. We can validate our entries (new Oracle home, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate*** and a new pop-up screen will appear.
     ![](images/submit-Validate.png "quick and full valdiation modes")
 
-There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation mode and click on Validate.
+There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this lab, choose Quick validation mode and click on Validate.
 
   ![](images/quick-validate.png "quick and full valdiation modes")
 
@@ -318,7 +306,7 @@ There are two validation modes - Quick and Full. We can select either of these. 
 
 ## Task 9:  Rollback Database – Reversed Patch 19.23 to 19.17
 
-Once the database is updated(patched), we will perform a rollback to Oracle Database 19.17. In a future release capability is being planned to perform rollback of an operation using the UI.
+Once the database is updated(patched), we will perform a rollback to Oracle Database 19.17. In a future release, capability is being planned to perform rollback of an operation using the UI.
 
 1. Review and execute below command from the terminal to rollback database Target ***finance.subnet.vcn.oraclevcn.com***
 
@@ -330,7 +318,7 @@ Once the database is updated(patched), we will perform a rollback to Oracle Data
     ![](images/rollback-finance.png " ")
 
 2. From the Enterprise Manager menu bar, navigate to the ***Enterprise*** drop-down menu and then ***Provisioning and Patching >> Procedure Activity*** to review Execution details of this operation via Enterprise Manager Console
-    ![](images/9091a9e1e04a1a988cb61d9171a483d.png " ")
+    ![](images/navigate-dp.png " ")
 
 
 3. Review the Procedure Activity steps performed         
@@ -344,7 +332,7 @@ below.
 
 ## Task 10:  Cleanup Old homes
 
-1. Clean up Database Finance. In a future release capability is being planned to perform cleanup of an operation using the UI.
+1. Clean up old oracle homes used by database Finance. In a future release, capability is being planned to perform cleanup of an operation using the UI.
 
    In order to have an old empty home previously used by “***finance.subnet.vcn.oraclevcn.com***” at our disposal to demonstrate a cleanup operation, we will now re-update(re-patch) the database.
 
@@ -373,7 +361,7 @@ Verify that the update has been completed successfully.
 
     ![](images/new-finance-status.png "new sales version")
 
-5. Review and execute the following command as a dry-run to report on cleanup impact for *finance.subnet.vcn.oraclevcn.com*  
+5. Now that finance database has been patched, we have its old Oracle Home for cleanup. Review and execute the following command in terminal as a dry-run to report on cleanup impact for *finance.subnet.vcn.oraclevcn.com*  
 
 
     ```

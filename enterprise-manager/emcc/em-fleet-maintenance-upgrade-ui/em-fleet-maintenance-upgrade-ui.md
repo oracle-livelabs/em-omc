@@ -60,7 +60,7 @@ Software Standardization Advisor enables administrators to understand various da
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
 -->
-  ![](images/new-em-fleet-maintenance-overview-2.png " ")
+  ![](images/new-em-fleet-maintenance-overview-2.png "Fleet Maintenance overview")
 
 1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -72,7 +72,7 @@ Software Standardization Advisor enables administrators to understand various da
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/patch.png " ")
+    ![](images/patch.png "vnc home page")
 
 2.  After successful login, in the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
@@ -100,7 +100,7 @@ Software Standardization Advisor enables administrators to understand various da
 
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/current-config.png " ")
+    ![](images/current-config.png "current config")
 
     When you download the report, a warning on XLS format and file extension mismatch pops up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
@@ -116,7 +116,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
 
-    ![](images/workshop-instance.png " ")
+    ![](images/workshop-instance.png "workshop")
 
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 
@@ -205,14 +205,13 @@ We will go through steps for upgrading database target ***cdb186.subnet.vcn.orac
 
    Once done, click on close button.
 
-
-## Task 7: Deploy Image
+## Task 6: Deploy Image
 
 1. From Hub, Navigate to Tile 3, which is ***Target Patch Compliance***. From the below table, we see our target database ***cdb186.subnet.vcn.oraclevcn.com***. Either click on the upgrade link under column ***Target Compliance*** or select ***Upgrade Databases*** from the Actions column.
 
     ![](images/Tile3.png "Tile 3.png")
 
-2. A new tab will open. This page is referred as Operator UI or Operator Centric page. All the activities performed so far are termed as Admin centric as we have a healthy image and subscribed relevant targets. In the page, all the selections we have made so far are pre-selected. However, its better to verfiy.
+2. A new tab will open. This page is referred as Operator UI or Operator Centric page. All the activities performed so far are termed as Admin centric as we have a healthy image and subscribed relevant targets. In the page, all the selections we have made so far are pre-selected. However, its better to verify.
 
     ![](images/selection.png "selection")
 
@@ -253,17 +252,17 @@ We will go through steps for upgrading database target ***cdb186.subnet.vcn.orac
     Select Next.
 
 4. We can validate our entries (new Oracle home, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***.
-    ![](images/validate.png "valdiation modes")
+    ![](images/validate.png "validation modes")
 
 A new pop-up screen will appear.
 
 There are two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose Quick validation mode and click on Validate.
 
-  ![](images/quick-validate.png "quick and full valdiation modes")
+  ![](images/quick-validate.png "quick and full validation modes")
 
 5. Review the validation result.
 
-    ![](images/cdb-validation-success.png "result of valdiation")
+    ![](images/cdb-validation-success.png "result of validation")
 
     Incase of any error, we can fix it and choose revalidate. Else, click on close.
 
@@ -279,7 +278,7 @@ There are two validation modes - Quick and Full. We can select either of these. 
     ![](images/cdb-job-monitor.png "monitor")
 
     Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***.
-    ![](images/navigate-dp.png " ")
+    ![](images/navigate-dp.png "DP navigation")
 
 7. Review the Deployment Procedures (DP).
 

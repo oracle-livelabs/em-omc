@@ -67,7 +67,7 @@ Software Standardization Advisor enables administrators to understand various da
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
 -->
-  ![](images/new-em-fleet-maintenance-overview-2.png " ")
+  ![](images/new-em-fleet-maintenance-overview-2.png "new overview")
 
 1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
 
@@ -79,7 +79,7 @@ Software Standardization Advisor enables administrators to understand various da
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/patch.png " ")
+    ![](images/patch.png "vnc homepage")
 
 2.  After successful login, in the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
@@ -107,7 +107,7 @@ Software Standardization Advisor enables administrators to understand various da
 
 6.  On the same page, click on **Current Configurations** to open the Excel report.
 
-    ![](images/current-config.png " ")
+    ![](images/current-config.png "current config")
 
     When you download the report, a warning on XLS format and file extension mismatch pops up (like below). Simply click on “Yes” to ignore the warning and open the file.
 
@@ -123,7 +123,7 @@ Software Standardization Advisor enables administrators to understand various da
 
     Incase you are unable to review the report in Livelab VNC, then open the environment url directly on your laptop browser and run the report again. Example: If you see instance IP address as 129.146.247.99, then the url to open on your browser will be https://129.146.247.99:7803/em .
 
-    ![](images/workshop-instance.png " ")
+    ![](images/workshop-instance.png "workshop")
 
     Please accept any warning message that your browser may show to continue to login to Enterprise Manager.
 
@@ -188,7 +188,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
 
-    ![](images/emcli-list-images.png " ")
+    ![](images/emcli-list-images.png "get images")
 
     IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
 
@@ -206,7 +206,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
     ```   
     This command lists Gold Image versions with their VERSION ID and STATUS.
 
-    ![](images/emcli-list-version.png " ")
+    ![](images/emcli-list-version.png "version list")
 
     When a Gold Image is created for the first time, its first version is created as per the input and marked as current. Whenever we run a DEPLOY operation for a target, Gold Image version marked as CURRENT is used to deploy the new Oracle Home.
 
@@ -232,7 +232,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
     - Output of above emcli command is redirected to a file. You may review the output using any standard editor or tool of your choice.
 
-    ![](images/emcli-image-applicability.png " ")
+    ![](images/emcli-image-applicability.png "applicability")
 
     This command can show one of the following results:
 
@@ -260,7 +260,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
    -  target\_type – type of target to be patched. This should be oracle\_database in this case
    -  image\_id – ID of the Gold Image to which the target should be patched
 
-    ![](images/emcli-subscribe.png " ")
+    ![](images/emcli-subscribe.png "subscribe via emcli ")
 
 ## Task 6: Deploy Image
 
@@ -270,7 +270,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
     <copy>cd ~/fleet; sh deploy1923_finance.sh</copy>
     ```
 
-    ![](images/emcli-deploy.png " ")
+    ![](images/emcli-deploy.png "deploy OH using emcli")
 
     Where:
     -  NEW\_ORACLE\_HOME\_LIST = Absolute path to the File System location where new Oracle Home will be deployed.
@@ -290,14 +290,14 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
 3. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console.
 
-    ![](images/navigate-dp.png " ")
+    ![](images/navigate-dp.png "DP navigation ")
 
 Click on ‘DEPLOY\_SYSMAN\_\*’ run
-    ![](images/deploy-dp.png " ")
+    ![](images/deploy-dp.png "deploy OH DP")
 
 4. Review the Procedure Activity steps performed.
 
-    ![](images/deploy-dp-complete.png " ")
+    ![](images/deploy-dp-complete.png "Deploy complete")
 
 ## Task 7: Migrate Listener
 
@@ -307,15 +307,15 @@ Click on ‘DEPLOY\_SYSMAN\_\*’ run
     <copy>sh migrate_listener_finance_update.sh</copy>
     ```
 
-    ![](images/emcli-listener-migration.png " ")
+    ![](images/emcli-listener-migration.png "emcli listener migration")
 
 2. Navigate to ***Enterprise >> Provisioning and Patching >> Procedure Activity*** to Review Execution Details of this operation via Enterprise Manager Console. Click on ‘Fleet\_migrate\_\*’ run
 
-    ![](images/migrate-dp.png " ")
+    ![](images/migrate-dp.png "migrate DP")
 
 3. Review the Procedure Activity steps performed.  
 
-    ![](images/migrate-dp-complete.png " ")
+    ![](images/migrate-dp-complete.png "migrate complete")
 
 ## Task 8: Update Database – Patch 18.3 to 19.23
 
@@ -325,7 +325,7 @@ Click on ‘DEPLOY\_SYSMAN\_\*’ run
     <copy>sh update_finance.sh</copy>
     ```
 
-    ![](images/emcli-update.png " ")
+    ![](images/emcli-update.png "update using emcli")
 
     Where:
       - Name – Name of the operation. This is a logical name and should be kept unique  
@@ -333,18 +333,18 @@ Click on ‘DEPLOY\_SYSMAN\_\*’ run
 
 3. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_UPDATE\_...’ deployment procedure instance.
 
-    ![](images/update-dp.png " ")
+    ![](images/update-dp.png "dp details")
 
 4. Review the Procedure Activity steps performed  
 
-    ![](images/update-dp-complete.png " ")
+    ![](images/update-dp-complete.png "patch complete")
 
 5. Verify the patched target by going to ***Targets >> Databases*** as shown below.
 
-    ![](images/Target-Databases-Navig.png " ")
+    ![](images/Target-Databases-Navig.png "DB version check")
 
     Review the version of finance database.
-    ![](images/post-db-version.png " ")
+    ![](images/post-db-version.png "version list")
 
 ## Task 9:  Rollback Database – Reversed Patch 19.23 to 19.17
 
@@ -356,23 +356,23 @@ Once the database is updated, we will perform a rollback to 19.17
     <copy>sh rollback_hr.sh</copy>
     ```
 
-    ![](images/emcli-rollback.png " ")
+    ![](images/emcli-rollback.png "emcli rollback submit")
 
 2. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_ROLLBACK\_...’ deployment procedure instance.
 
-    ![](images/rollback-dp.png " ")
+    ![](images/rollback-dp.png "rollback dp")
 
 3. Review the Procedure Activity steps performed         
 
-    ![](images/rollback-dp-complete.png " ")
+    ![](images/rollback-dp-complete.png "rollback complete")
 
 4. Verify the rolled back target by going to ***Targets >> Databases*** as shown
 below.
-![](images/Target-Databases-Navig.png " ")
+![](images/Target-Databases-Navig.png "DP navigation")
 
 Review the version of finance database.
 
-  ![](images/post-rollback-version.png " ")
+  ![](images/post-rollback-version.png "rollback complete")
 
 ## Task 10:  Cleanup Old Homes
 
@@ -385,7 +385,7 @@ In order to have an old empty home previously used by “***finance.subnet.vcn.o
     ```
     <copy>sh update_finance.sh</copy>
     ```
-    ![](images/emcli-update.png " ")
+    ![](images/emcli-update.png "emcli cleanup ")
 
     Where:
       -  Name – Name of the operation. This is a logical name and should be kept unique Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
@@ -393,11 +393,11 @@ In order to have an old empty home previously used by “***finance.subnet.vcn.o
 
 3. Verify that the update has been completed successfully before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
 
-    ![](images/post-rollback-update.png " ")
+    ![](images/post-rollback-update.png "post cleanup")
 
 4. Verify and confirm that the target has been re-patched to 19.23 by going to Targets Databases as shown below
 
-    ![](images/update2-final-db.png " ")
+    ![](images/update2-final-db.png "os listing")
 
 5. Execute the following command as a dry-run to report on cleanup impact for *finance.subnet.vcn.oraclevcn.com*  
 
@@ -405,22 +405,22 @@ In order to have an old empty home previously used by “***finance.subnet.vcn.o
     <copy>sh cleanup_finance_report.sh</copy>
     ```
 
-    ![](images/emcli-cleanup-report.png " ")
+    ![](images/emcli-cleanup-report.png "cleanup command")
 
 6. Execute the following command to cleanup *finance.subnet.vcn.oraclevcn.com*   
 
     ```
     <copy>sh cleanup_finance.sh</copy>
     ```
-    ![](images/cleanup-dp-submit.png " ")
+    ![](images/cleanup-dp-submit.png "cleanup DP")
 
 7. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
-    ![](images/cleanup-dp.png " ")
+    ![](images/cleanup-dp.png "view DP")
 
 8. Review the Procedure Activity steps performed        
 
-    ![](images/cleanup-dp-complete.png " ")
+    ![](images/cleanup-dp-complete.png "DP complete")
 
 9. Verify to confirm the old Oracle Home has been removed
 
@@ -428,7 +428,7 @@ In order to have an old empty home previously used by “***finance.subnet.vcn.o
     <copy>ls -l /u01/app/19c/finance</copy>
     ```
 
-    ![](images/cleanup-verification.png " ")
+    ![](images/cleanup-verification.png "cleanup verification")
 
 This completes this lab.
 
