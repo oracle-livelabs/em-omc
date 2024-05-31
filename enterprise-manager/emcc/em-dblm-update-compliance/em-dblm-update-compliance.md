@@ -241,7 +241,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     **hr.subnet.vcn.oraclevcn.com_FINANCE** appears, click **Select**.
 
-    ![Add PDB](images/select-cis-target-pdb.png " ")
+    ![Add PDB](images/select-cis-pdb-target.png " ")
 
 4. Verify the PDB name is added and Click **OK**
 
