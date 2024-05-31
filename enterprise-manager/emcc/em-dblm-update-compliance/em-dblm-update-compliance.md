@@ -283,15 +283,15 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
 11. You will see unauthorized  grantee 'IX' has DBA role
 
-    ***The Oracle database "DBA" role is the powerful database administrator role provided for the allocation of administrative privileges to make changes configuration changes, access to senstive information. This unauthorized grantee 'IX' should not have that role.***
+    ***The Oracle database "DBA" role is the powerful database administrator role provided for the allocation of administrative privileges to make changes configuration changes, access to sensitive information. This unauthorized grantee 'IX' should not have that role.***
 
-  ![Check for violations](images/cis-unauthorized-grantee.png " ")
+    ![Check for violations](images/cis-unauthorized-grantee.png " ")
 
-  Click **Close**
+    Click **Close**
 
 12. Click on **Rule Details** tab you will see details like rule type, severity, compliance rule state, description, rationale and recommendation for the violation remediation
 
-  ![Check for violations](images/cis-rule-details.png " ")
+    ![Check for violations](images/cis-rule-details.png " ")
 
 13. Click on **Violation Events** tab gives you the incident attributes information about the violated rule
 
