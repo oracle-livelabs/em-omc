@@ -213,185 +213,97 @@ Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for go
 
 ## Task 8: Compliance Management for Pluggable Database
 
-Center of Internet Security compliance(CIS) Standard
-The Center for Internet Security compliance(CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards. A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+CIS Benchmark from Center of Internet Security:
+The Center for Internet Security (CIS) is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards. A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
-A compliance standard is mapped to one or more compliance standard rules and is associated with one or more targets that should be evaluated. Securing a provisioned Oracle Database is critical to protect your data. You need to safeguard that data with security controls that restrict access according to your policy by using either industry/regulatory standard benchmarks or custom policies. In this lab, we will use   *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
+In this lab, you will get hands-on experience is using *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
-1.  From the Enterprise menu, select **Compliance, then select Library**  to get started
+1. From the Enterprise menu, select **Compliance, then select Library**  to get started
 
-      ![Navigate to Library](images/compliance-library.png " ")
+    ![Navigate to Library](images/enterprise-compliance-library.png " ")
 
 
-2.  Click the **Compliance Standards** tab.
+2. Click the **Compliance Standards** tab.
 
-      Click on Search, In the Compliance Standard field type section  "Oracle 19c Database CIS" as word and
-      Applicable To section Drop down select **Pluggable Database** hit search.
+    In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
+    Applicable To section Drop down select **Pluggable Database** click search.
 
-      ![Search CIS](images/compliance-search-pluggable.png "  ")
+    ![Search CIS](images/search-cis-pluggable-std.png "  ")
 
-    Select the out of the box standard row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Create Like** option.
+    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-      ![Create CIS](images/compliance-search-pluggable.png "  ")
+    ![Target associate](images/cis-compliance-associate-target.png " ")
 
-3.  In the pop-up window type "OCW-2024_CIS_STD" Click Continue
+3.  Click Add and choose the row with your PDB you wish to associate. Target name section type  **_FINANCE**  click search.  
 
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+    ![Add PDB](images/add-cis-search-pdb.png " ")
 
-4.  Navigates to Compliance Standard page **OCW-2024_CIS_STD**, you will see CIS controls and its rules
+    **hr.subnet.vcn.oraclevcn.com_FINANCE** appears, click **Select**.
 
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+    ![Add PDB](images/select-cis-target-pdb.png " ")
 
-      Click Save, Information pop-up window indicates new Customized Standard 2024_CIS_STD IS created
+4. Verify the PDB name is added and Click **OK**
 
+    ![Enable CIS](images/enable-status-pdb.png " ")
 
-5.  Click on Compliance Standard Rules tab, Click on **Create**
+    In the Save Association dialog box, Click **Yes**.
 
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+    ![Confirm Association ](images/save-association-pdb.png "")
 
-      Create rule pop-up window, select Agent-side Rule, click on Continue
+5. Click **OK** on the Information pop-up window.
 
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
+    ![Confirm Association ](images/compliance-std-target-process.png " ")
 
-6.  You will be navigated to Create Rule: Agent-side Rule: Details page,
+6. Now Navigate to ***Enterprise >> Compliance >> Results***
 
-    ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-    Click Next
-
-    ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
-
-    type Rule section "CIS_Grant_Execute_Procedure_DBSNMP_Rule"
-
-    select Compliance Rule State **Production**
-
-    select severity **Critical**
-
-    Applicable to **Pluggable Database**
-
-    type description "Grant privileges to execute any PROCEDURE privileges to user : DBSNMP "
-
-    type Rationale "The account is used by Oracle Enterprise Manager's Management Agent component to monitor and manage the database. Granting the user account DBSNMP based on authentication by management change requirement this user account still allows executes any procedure"
-
-    type Recommendation "Execute the following SQL statement to remediate this setting. GRANT EXECUTE ANY PROCEDURE TO DBSNMP;"
-
-    ![Enable CIS](images/compliance-enable-status-pdb.png " ")
-
-    Click Next
-
-7.  You will be navigated to **Create Rule: Agent-side Rule: Check Definition** page
-
-      Click on Configuration Extension Alias Name Search
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      Pop-up window appears,
-
-      type Alias name section "CIS19C_1_1_0_RULE_5_2_4_PDB Configuration" , click Search  
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      Click "OK"
-
-8.  You will be navigated back to **Create Rule: Agent-side Rule: Check Definition** page
-
-      type Non-Compliant Message "EXECUTE ANY PROCEDURE privilege is not enabled"
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      Click Next in Step 3 of 4
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      Click Finish
-
-      Information Pop-up window appears **Rule CIS_Grant_Execute_Procedure_DBSNMP_Rule was created**
-
-      Click OK
-
-9.  Click on Compliance Standards tab
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      select "OCW-2024_CIS_STD" , Click "Edit"
-
-      You will be navigated to **Compliance Standard: OCW-2024_CIS_STD** Page
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-10. Right click on OCW-2024_CIS_STD
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      Click on Add Rules..., pop-up window appears "Incident Rule Reference"
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      type "CIS_Grant_Execute_Procedure_DBSNMP_Rule", click Search
-
-      Click OK
-
-11. You will be Navigated to Compliance Standard
-
-      ![Create Compliance Standard CIS](images/compliance-search-pluggable.png "  ")
-
-      Click save
-
-      Information pop-up window appears "Standard OCW-2024_CIS_STD has been updated"
-
-12. Select the row **OCW-2024_CIS_STD**, and then Click the **Associate Targets** tab.
-
-      ![Target associate](images/associate-cis-targets.png " ")
-
-13.  Click Add and choose the row with your PDB you wish to associate. Choose sales.subnet.vcn.oraclevcn.com_FINANCE, click **Select**.
-
-    ![Add PDB](images/compliance-add-pluggable-pdb.png " ")
-
-    Verify the PDB name is added and Click **OK**
-
-    ![Enable CIS](images/compliance-enable-status-pdb.png " ")
-
-14. In the Save Association dialog box, Click Yes.
-
-    ![Confirm Association ](images/compliance-save-association-pdb.png "")
-
-15. Click OK on the Information processing prompt.
-
-    ![Confirm Association ](images/complinace_submitted-process-pdb.png " ")
-
-16. Now Navigate to ***Enterprise >> Compliance >> Results***
-
-    *Processing and displaying the results on the Compliance Results Page will take approximately 3 minutes to complete.
-    You may want to switch to the next 'Task 6: Self-Service to Request PDB Using PDBaaS complete step 20', then come back here to finish this task steps.*
+    *Processing and displaying the results on the Compliance Results Page will take approximately 4 minutes to complete.*
 
     ![Navigate to result](images/compliance-navigate-results.png "  ")
 
-17. Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
+7. Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
 
-    ![Click on results](images/compliance-cis-results.png " ")
+    ![Click on results](images/compliance-results.png " ")
 
-18.  The compliance result shows the target is with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
+8.  You will see compliance results about the target with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
 
-    ![Overview scorecard ](images/compliance-results-cis-scorecard-pdb.png " ")
+    ![Overview scorecard ](images/cis-compliance-pdb-results.png " ")
 
     Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab
 
-    ![Validate CIS ](images/compliance-all-cis-violations-pdb.png " ")
+    ![Validate CIS ](images/compliance-cis-violations-pdb.png " ")
 
-19.  You can see failed CIS standard recommendations rules for each main category of CIS Standards  
+9.  You will see failed CIS standard recommendations rules for each main category of CIS Standard  
 
-    ![Validations](images/compliance-cis-recommendation-violations-pdb.png " ")
+    ![Validations](images/cis-recommended-violations.png " ")
 
-20. Each recommendations violations rules can be further explored by clicking on each recommendation with violation events, status In case of each violations you will see details like violation details, name of the rule violated under the violation Events tab
+10. Each violation can be explored by clicking on **Violations number**
 
-    ![Check for violations](images/compliance-cis-compliance-individual-violation-pdb.png " ")
+    ![Check for violations](images/cis-rule-violation.png " ")
 
-21. In case of each violations you will see details like rule type, severity, compliance rule state, description and rationale for the violation under the Rule details tab
+11. You will see unauthorized  grantee 'IX' has DBA role
 
-    ![Rule Details](images/compliance-rule-details-pdb.png " ")
+    ***The Oracle database "DBA" role is the powerful database administrator role provided for the allocation of administrative privileges to make changes configuration changes, access to senstive information. This unauthorized grantee 'IX' should not have that role.***
 
-22. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets. The Dashboard provides a brief summary of the violations, corrective actions and compliance standard score.
+  ![Check for violations](images/cis-unauthorized-grantee.png " ")
+
+  Click **Close**
+
+12. Click on **Rule Details** tab you will see details like rule type, severity, compliance rule state, description, rationale and recommendation for the violation remediation
+
+  ![Check for violations](images/cis-rule-details.png " ")
+
+13. Click on **Violation Events** tab gives you the incident attributes information about the violated rule
+
+    ![Rule Details](images/cis-violation-events.png  " ")
+
+    Click on **table row section**
+
+14. You will see Event details about violated rule information, violation details and also provides you an option of Guided resolution about Recommendations
+
+    ![Event Details](images/cis-event-details-violation.png  " ")
+
+    click on **Corrective actions**
 
     From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
 
@@ -401,7 +313,7 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![Result Dashboard-1](images/compliance-dashboard-pdb.png " ")
 
-23. You can also generate a comprehensive compliance report for
+15. You can also generate a comprehensive compliance report for
 
     A. Each compliance standard and all its associated targets.
 
@@ -421,6 +333,11 @@ A compliance standard is mapped to one or more compliance standard rules and is 
 
     ![Final Report 3 ](images/compliance-cis-standard-report3.png " ")
 
+
+
+ Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
+
+  ![Logout ](images/logout-as-sysman.png " ")
 
 
  Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
