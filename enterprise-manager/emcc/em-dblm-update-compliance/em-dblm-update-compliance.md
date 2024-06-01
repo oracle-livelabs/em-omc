@@ -74,6 +74,8 @@ In this lab you will perform the following steps:
 | 5                    | Launch Update(Patching) operation | 2  minutes  | Launch the patching operation. | Understand how patching can be initiated and explore the options that Fleet Maintenance porvides.
 | 6                    | Patch a Pluggable Database with Fleet Maintenance Maintenance | 5  minutes  | Update(Patch) a PDB using a Gold Image. As part of patching the Pluggable Database, unplug Oracle Pluggable Database in that Container Database and plug it to higher version Container Database. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Pluggable Database.
 | 7                    | Review Pluggable Database in Fleet Maintenance Hub | 3  minutes  | Review post patching results in Hub. | Understand how graphs are updated in Fleet Maintenance Hub post patching and the end state that DBA's should aim to attain for their database estate.
+| 8                    | Compliance Management for Pluggable Database | 20  minutes  | Apply a industry Standard for Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on PDB, generate report and validate the results. | Understand implementing stringent security measures and achieving regulatory compliance by aligning with CIS benchmarks, enhances and operational efficiencies of database management through centralized auditing and monitoring, fostering and enhancing multitenant pluggable databases integrity and operational efficiencies.
+
 
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
@@ -375,9 +377,27 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     **The Dashboard view provides a brief summary of the violations, corrective actions and compliance standard score.**
 
-    ![Compliance Results](images/compliance-dashboard.png  " ")
+    ![Compliance Dashboard](images/compliance-dashboard.png  " ")
 
-That completes the Automated Database Patching at Scale with Fleet Maintenance HUB.
+26. You will be able to generate a comprehensive compliance report for
+
+    CIS compliance standard and its associated pluggable database targets.
+
+    ![Compliance Report](images/cis-standard-report1.png  " ")
+
+    Towards bottom of the page in the Compliance Summary section, click on the report against each Compliance standard.
+
+    Sample report
+
+    ![Compliance Report](images/cis-standard-report2.png  " ")
+    ![Compliance Report](images/cis-standard-report3.png " ")
+    ![Compliance Report](images/cis-standard-report4.png " ")
+
+    ***This completes the Automated Database Patching at Scale with Fleet Maintenance HUB and CIS compliance management for pluggable database.***
+
+    ![Compliance Dashboard](images/dashboard-logout.png  " ")
+
+    Click on ***Setup>>Log Out***  
 
 You may now proceed to the next lab.
 
