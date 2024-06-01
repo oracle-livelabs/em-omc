@@ -219,7 +219,7 @@ The Center for Internet Security (CIS) is a set of Industry standards for IT sys
 
 In this lab, you will get hands-on experience is using *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
-1. From the Enterprise menu, select **Compliance, then select Library**  to get started
+1. From the Enterprise menu, select **Compliance, then select Library**  to get started.
 
     ![Navigate to Library](images/enterprise-compliance-library.png " ")
 
@@ -243,11 +243,11 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Add PDB](images/select-cis-pdb-target.png " ")
 
-4. Verify the PDB name is added and Click **OK**
+4. Verify the PDB name is added and Click **OK**.
 
     ![Enable CIS](images/enable-status-pdb.png " ")
 
-    In the Save Association dialog box, Click **Yes**.
+    In the Save Association dialog box, click **Yes**.
 
     ![Confirm Association ](images/save-association-pdb.png "")
 
@@ -255,7 +255,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Confirm Association ](images/compliance-std-target-process.png " ")
 
-6. Now Navigate to ***Enterprise >> Compliance >> Results***
+6. Now you will navigate to ***Enterprise >> Compliance >> Results***.
 
     *Processing and displaying the results on the Compliance Results Page will take approximately 4 minutes to complete.*
 
@@ -269,81 +269,107 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Overview scorecard ](images/cis-compliance-pdb-results.png " ")
 
-    Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab
+    Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab.
 
     ![Validate CIS ](images/compliance-cis-violations-pdb.png " ")
 
-9.  You will see failed CIS standard recommendations rules for each main category of CIS Standard  
+9.  You will see failed CIS standard recommendations rules for each main category of CIS Standard.  
 
-    ![Validations](images/cis-recommended-violations.png " ")
+      ![Validations](images/cis-recommended-violations.png " ")
 
-10. Each violation can be explored by clicking on **Violations number**
+10. Each violation can be explored by clicking on **Violations number**.
 
-    ![Check for violations](images/cis-rule-violation.png " ")
+      ![Check for violations](images/cis-rule-violation.png " ")
 
 11. You will see unauthorized  grantee 'IX' has DBA role
 
     ***The Oracle database "DBA" role is the powerful database administrator role provided for the allocation of administrative privileges to make changes configuration changes, access to sensitive information. This unauthorized grantee 'IX' should not have that role.***
 
-    ![Check for violations](images/cis-unauthorized-grantee.png " ")
+      ![Check for violations](images/cis-unauthorized-grantee.png " ")
 
-    Click **Close**
+      Click **Close**.
 
-12. Click on **Rule Details** tab you will see details like rule type, severity, compliance rule state, description, rationale and recommendation for the violation remediation
+12. Click on **Rule Details** tab you will see details like rule type, severity, compliance rule state, description, rationale and recommendation for the violation remediation.
 
-    ![Check for violations](images/cis-rule-details.png " ")
+      ![Check for violations](images/cis-rule-details.png " ")
 
-13. Click on **Violation Events** tab gives you the incident attributes information about the violated rule
+13. Click on **Violation Events** tab gives you the incident attributes information about the violated rule.
 
-    ![Rule Details](images/cis-violation-events.png  " ")
+      ![Rule Details](images/cis-violation-events.png  " ")
 
-    Click on **table row section**
+      Click on **table row section**.
 
 14. You will see Event details about violated rule information, violation details and also provides you an option of Guided resolution about Recommendations
 
-    ![Event Details](images/cis-event-details-violation.png  " ")
+      ![Event Details](images/cis-event-details-violation.png  " ")
 
-    click on **Corrective actions**
+      Click on **Corrective actions**.
 
-    From the home page Navigate to **Enterprise >> Compliance >> Dashboard**
+      You will see Corrective Actions pop-up window appears.
 
-    ![Result Dashboard ](images/compliance-navigation-to-dashboard-pdb.png " ")
+      ![Event Details](images/corrective-actions-pop-up.png  " ")
 
-    **Dashboard View**
+      Select **CORRECTIVE_ACTION_REVOKE_DBA_ROLE_PRIVILEGE** row.
 
-    ![Result Dashboard-1](images/compliance-dashboard-pdb.png " ")
+15. You will see **Database Credentials** and **Host Credentials**.
 
-15. You can also generate a comprehensive compliance report for
+      ![Event Details](images/credentials-selection.png  " ")
 
-    A. Each compliance standard and all its associated targets.
+      Select **Named** for both credentials, Click **Submit**.
 
-    B. Each Target with all Compliance standard associated to it.
+16. You will see pop-window **Corrective action**
 
-    Towards bottom of the page in the **Compliance Summary** section, click on the report against each Compliance standard or Targets.
+      ![Event Details](images/corrective-action-submitt.png " ")
 
-    ![Complaince Summary  ](images/compliance-standard-summary-target-pdb.png " ")
+      Click to view execution details.  
 
-    ![Complaince Standard](images/compliance-standards-summary-pdb.png " ")
+17. You will see corrective action revoke dba role job completed successfully.
 
-    **Sample report**
+    ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
-    ![Final Report 1 "](images/compliance-cis-standard-report1.png ")
+18. Now, you will navigate to ***Targets >> Databases***
 
-    ![FInal Report 2 ](images/compliance-cis-standard-report2.png " ")
+    ![Navigate to result](images/target-databases.png  " ")
 
-    ![Final Report 3 ](images/compliance-cis-standard-report3.png " ")
+19. You will select  **hr.subnet.vcn.oraclevcn.com_FINANCE** on Name section
+
+    ![Navigate to result](images/select-pluggable-pdb.png  " ")
+
+    Click on selected pluggable db, you will navigated to pluggable database page
+
+    ![Navigate to result](images/dbs-pdb-page.png " ")
+
+20. Click on ***Oracle Database >> Configuration >> Latest***
+
+    ![Navigate to result](images/db-configuration-latest.png  " ")
+
+    You will see Latest Configuration page
+
+    ![Latest Configuration](images/pdb-latest-configuration.png  " ")
+
+    Click **Refresh**
+
+21.  **Refresh Processing**, It will take about 3 minutes.
+
+    ![Latest Configuration](images/navigate-results.png  " ")
+
+22.   You will navigate to ***Enterprise >> Compliance >> Results.***
+
+    ![Latest Configuration](images/navigate-results.png  " ")
+
+23. You will see **Compliance Results, number of violations are reduced from 107 to 106.**
+
+    ![Compliance Results](images/cis-compliance-violations-results.png  " ")
+
+    Click on **Compliance Standards** section
+
+24. You will see **Compliance standards Results in detail see the violation is "0", which Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE' (Compliance Standard Rule) has been successfully remediated through automated corrective action.**
+
+    ![Compliance Results](images/cis-pdb-compliance-remeidiated.png  " ")
 
 
 
- Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
-
-  ![Logout ](images/logout-as-sysman.png " ")
-
-
- Now that you have gone through PDB life cycle operations, we will switch focus and cover the use case of building a private cloud using Enterprise Manager and how to quickly provision (with minimal inputs) and manage PDBs using PDB-as-a-service (PDBaaS). To proceed as a self service user, please logout as SYSMAN.
-
-  ![Logout ](images/logout-as-sysman.png " ")
-
+    Click on selected  **hr.subnet.vcn.oraclevcn.com_FINANCE**    
 
 That completes the Automated Database Patching at Scale with Fleet Maintenance HUB.
 
