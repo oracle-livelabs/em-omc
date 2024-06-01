@@ -367,9 +367,15 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Compliance Results](images/cis-pdb-compliance-remeidiated.png  " ")
 
+25. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets.
 
+    Navigate to Enterprise >> Compliance >> Dashboard
 
-    Click on selected  **hr.subnet.vcn.oraclevcn.com_FINANCE**    
+    ![Compliance Results](images/compilance-dashboard-option.png  " ")
+
+   **The Dashboard view provides a brief summary of the violations, corrective actions and compliance standard score.**
+
+    ![Compliance Results](images/compliance-dashboard.png  " ")
 
 That completes the Automated Database Patching at Scale with Fleet Maintenance HUB.
 
