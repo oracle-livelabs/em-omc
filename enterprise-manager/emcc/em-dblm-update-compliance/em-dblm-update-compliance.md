@@ -349,9 +349,9 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     Click **Refresh**
 
-21.  **Refresh Processing**, It will take about 3 minutes.
+21.  you can see **Refresh Processing** will take about 3 minutes.
 
-    ![Latest Configuration](images/configuration-pdb-new.png  " ")
+    ![Latest Configuration](images/configuration-refresh-pdb.png  " ")
 
 22.   You will navigate to ***Enterprise >> Compliance >> Results.***
 
