@@ -373,7 +373,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Compliance Results](images/compilance-dashboard-option.png  " ")
 
-   **The Dashboard view provides a brief summary of the violations, corrective actions and compliance standard score.**
+    **The Dashboard view provides a brief summary of the violations, corrective actions and compliance standard score.**
 
     ![Compliance Results](images/compliance-dashboard.png  " ")
 
