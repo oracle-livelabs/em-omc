@@ -9,10 +9,13 @@ Learn how to secure and ensure compliance of your enterprise databases in this w
 You can watch this video below for a quick walk-through of this lab.
 [Video Walk-through](videohub:1_vyyju031)
 
-### About key features of Fleet Maintenance Hub in Oracle Enterprise Manager
+### Secure database assets using Fleet Maintenance Hub in Oracle Enterprise Manager
 
 Starting with Enterprise Manager 13.5 RU16, Enterprise Manager offers a new interface - Fleet Maintenance Hub to ease automated update(patching), and upgrade of your database fleet.
 The Fleet Maintenance Hub within Enterprise Manager offers a comprehensive solution for managing database vulnerabilities and patch operations. It streamlines the process by identifying potential security risks, providing patch recommendations, and enabling efficient scheduling and monitoring of patching and upgrade operations. With the ability to manage diverse infrastructures and ensure compliance with patch policies, the Fleet Maintenance Hub serves as a centralized and powerful tool for maintaining the security and stability of database assets.
+
+### Compliance check of your database assets using Oracle Enterprise Manager
+<<Data from Shiva>>
 
 #### Video Preview
 Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
@@ -27,8 +30,8 @@ Watch a preview of database patching using Oracle Enterprise Manager Fleet Maint
 In this lab you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Assess patch recommendation and create gold image                             | 5 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Provides patch recommendations for gold image. Discover the advantages of utilizing patch recommendations, where manual, time-intensive tasks are automated to yield highly precise outcomes.                  |
-| 2                    | Secure databases by updating with new gold image | 5 minutes  | Update databases using Gold image | Demonstrate with ease to update a pluggable database                   |
+| 1                    | Assess patch recommendation and create gold image                             | 10 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Provides patch recommendations for gold image. Discover the advantages of utilizing patch recommendations, where manual, time-intensive tasks are automated to yield highly precise outcomes.                  |
+| 2                    | Secure databases by updating with new gold image | 10 minutes  | Update databases using Gold image | Demonstrate with ease to update a pluggable database                   |
 | 3                    | Elevate security posture by auditing for compliance | 5  minutes  | Refresh a Gold Image based on latest patch recommendation | How to steps to create a new version for a gold image. Latest version will be used to update and upgrade process.
 
 
@@ -41,7 +44,7 @@ In this lab you will perform the following steps:
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository. Workshop activities included in this lab will be executed both locally on the instance using Enterprise Manager Command Line Interface (EMCLI) or Rest APIs, and the Enterprise Manager console (browser)
 
-## Task 1: Assess patch recommendation and create gold image [Read-Only Step]
+## Task 1: Assess patch recommendation and create gold image
 
 In this task, we will review patch recommendations for existing gold images. Based upon the recommendations, we will create a new version.
 
@@ -70,6 +73,16 @@ Here we see that goldimages - 19cDB-Linux-x64-ERP has 2 patch recommendations, w
 
 Follow [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand steps involved to refresh a goldimage. For this lab, we will use 19cDB-Linux-x64-APPS image.
 
+5. In order to complete the lab in the given timelines, we will use 19cDB-Linux-x64-APPS to secure one the databases. However, in next few steps, we will use Fleet Maintenance Hub to refresh 19cDB-Linux-x64-ERP.
+
+6. As seen in step 4, that 19cDB-Linux-x64-ERP has two patch recommendations.
+![](images/patch-recommendation.png "patch-recommendation")
+
+ Lets click on the numeric value 2. A new slideout will appear.
+![](images/patch-slideout.png "slideout")
+
+7. Next step is to create a new version in 19cDB-Linux-x64-ERP, that will include the recommended patches. Close the slideout and click on create new version link under Patch Recommendation column. Alternatively, click on doner icon under Actions and create new version.
+![](images/create-version.png "create version")
 
 ## Task 2: Secure databases by updating with new gold image
 
