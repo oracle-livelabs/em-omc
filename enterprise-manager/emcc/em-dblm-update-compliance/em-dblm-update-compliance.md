@@ -84,6 +84,35 @@ Follow [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterp
 7. Next step is to create a new version in 19cDB-Linux-x64-ERP, that will include the recommended patches. Close the slideout and click on create new version link under Patch Recommendation column. Alternatively, click on doner icon under Actions and create new version.
 ![](images/create-version.png "create version")
 
+8. In the new window we need to provide source details, which act as input for version creation and version details. In the left hand section, we first select Oracle Home, which will be used as a source Oracle Home.
+- Select Oracle Home.
+  1. Click on the Select Oracle Home button and select the Oracle Home
+  2. Select one of the radio buttons. You can either choose to clone the above selected Oracle Home, apply recommended patches to cloned Oracle Home and the use this home to create a new version. Or, you can select the option to patch the Oracle Home and use it to create a new version. We will select the later option as shown in the image.
+- Work Directory. - Provide location where logs will be created
+- Credentials - Provide Normal and Privileged Credentials
+
+In the right hand section, provided
+- New version name that we are creating.
+- Select Storage options. We will select the default one.
+![](images/version-options.png "options")
+
+Click Next.
+
+9. In this screen select the two patches, which we have already downloaded and uploaded in software library.
+
+![](images/rec-patches.png "rec-patches")
+Click Next.
+
+10. In the next page, review the selections that we have made previous screen. Click on Submit to initiate the operation to create a new version.
+
+![](images/submit-version.png "submit-version")
+
+11. Once you submit, a new Deployment Procedure is submitted. You can click on the DP name to review the steps. However, to complete this lab, we will proceed to next step.
+![](images/DP.png "DP")
+
+Note: Above Submitted Deployment Procedure may fail. If you face the below error, then click on ignore and select OK in the confirmation window.
+![](images/error-DP.png "error-DP")
+
 ## Task 2: Secure databases by updating with new gold image
 
 In this task, we will perform pdb patching. In this usecase, we will unplug one of the pdbs and plug it to a higher version CDB.
