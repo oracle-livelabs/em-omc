@@ -220,6 +220,8 @@ The CIS is a set of Industry standards for IT systems and databases. CIS benchma
 
 ![compliance stack](images/stack-security-compliance.png " ")
 
+Stack security compliance will help you take control and understand all risk factors, assess levels of exposure to determine the best course of action, and ensure all standards are met. In addition to that, now you can secure underlying Exadata Engineered Systems. By doing this, you are securing everything from database to infrastructure.
+
 
 In this lab, you will get hands-on experience is using *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
