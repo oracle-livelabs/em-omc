@@ -218,6 +218,8 @@ Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for go
 Center for Internet Security(CIS) Benchmark from Center of Internet Security:
 The CIS is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards. A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
 
+![compliance stack](images/stack-security-compliance.png " ")
+
 
 In this lab, you will get hands-on experience is using *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
