@@ -215,13 +215,13 @@ Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for go
 
 ## Task 8: Compliance Management for Pluggable Database
 
-Center for Internet Security(CIS) Benchmark from Center of Internet Security:
-The CIS is a set of Industry standards for IT systems and databases. CIS benchmark provides the baseline configurations to ensure oracle database compliance with CIS standards. A compliance standard is a collection of checks or rules that follow broadly accepted best practices. It is the Cloud Control representation of a compliance control that must be tested against some set of IT infrastructure to determine if the control is being followed. This ensures that IT infrastructure, applications, business services, and processes are organized, configured, managed, and monitored properly. A compliance standard evaluation can provide information related to platform compatibility, known issues affecting other customers with similar configurations, security vulnerabilities, patch recommendations, and more. A compliance standard is also used to define where to perform real-time change monitoring.
+After using fleet maintenance hub to upgrade and patching, its time to secure your multi-tenant pluggable database in Enterprise Manager. Enforce compliance with with industry standards by implementing strict access controls, regular auditing and monitoring to maintain a robust security posture and prevent breaches.  
 
 ![compliance stack](images/stack-security-compliance.png " ")
 
-Stack security compliance will help you take control and understand all risk factors, assess levels of exposure to determine the best course of action, and ensure all standards are met. In addition to that, now you can secure underlying Exadata Engineered Systems. By doing this, you are securing everything from database to infrastructure.
+Stack security compliance will help you take control and understand all risk factors, assess levels of exposure to determine the best course of action, and ensure all standards are met. In addition to that, you can secure underlying Exadata Engineered Systems. By doing this, you are securing everything from database to infrastructure.
 
+The Center for Internet Security (CIS) benchmark for Oracle database provides a set of best practices, compliance and configuration guidelines to secure  against cyber threats and data breaches. It ensures compliance with industry standards, enhancing database security through systematic controls, checks, rules, monitoring, and recommendations to remediate violations for optimal security posture.  
 
 In this lab, you will get hands-on experience is using *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
 
@@ -241,7 +241,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Target associate](images/cis-compliance-associate-target.png " ")
 
-3.  Click Add and choose the row with your PDB you wish to associate. Target name section type  **_FINANCE**  click search.  
+3. Click Add and choose the row with your PDB you wish to associate. Target name section type  **_FINANCE**  click search.  
 
     ![Add PDB](images/add-cis-search-pdb.png " ")
 
@@ -261,29 +261,37 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Confirm Association ](images/compliance-std-target-process.png " ")
 
-6. Now you will navigate to ***Enterprise >> Compliance >> Results***.
+6. Now you will navigate to ***Enterprise >> Compliance >> Dashboard***.
 
-    *Processing and displaying the results on the Compliance Results Page will take approximately 4 minutes to complete.*
+    ![Navigate to result](images/navigate-dashboard.png "  ")
 
-    ![Navigate to result](images/compliance-navigate-results.png "  ")
+    **Processing and displaying the results on the Compliance Results Page will take approximately 4 minutes to complete.**
 
-7. Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database** under Compliance Standards.
+    Please keep refreshing on icon![Refresh](images/refresh-icon.png "  ")  **Compliance Dashboard section Page**
 
-    ![Click on results](images/compliance-results.png " ")
+    ![Navigate to result](images/complaince-dashboard-result.png  "  ")
 
-8.  You will see compliance results about the target with critical violations against the selected standard with multiple violations along with it's score along with evaluation date.
+    In this dashboard, you will see and can explore about **Targets  Evaluated, Violation and Errors Donut color chart, Open Security Incidents numbers and Compliance Standard score Distribution in percentage chart t and Compliance Violations by different Target types bar chart indicating severity of Violations color representation.**
+
+7. You will see Compliance Summary Standards section having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on Standards having critical violations along with Warning and Minor Warning.**
+
+    ![Navigate to result](images/complinace-standard-summary-violations.png "  ")
+
+    Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**
+
+8. You will see Compliance Results about the target with violations against the selected standard along with it's score along with evaluation date.
 
     ![Overview scorecard ](images/cis-compliance-pdb-results.png " ")
 
-    Total violations you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab.
+    Violations tab - you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab.
 
     ![Validate CIS ](images/compliance-cis-violations-pdb.png " ")
 
-9.  You will see failed CIS standard recommendations rules for each main category of CIS Standard.  
+9. You will see failed CIS standard recommendations rules for each main category of CIS Standard.  
 
       ![Validations](images/cis-recommended-violations.png " ")
 
-10. Each violation can be explored by clicking on **Violations number**.
+10. Each violation can be explored by clicking on **Violations number**.  
 
       ![Check for violations](images/cis-rule-violation.png " ")
 
@@ -375,17 +383,15 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
 25. Compliance Management also provides you an option to have a dashboard view of compliance summary against all the associated targets.
 
-    Navigate to Enterprise >> Compliance >> Dashboard
+    Navigate to **Enterprise >> Compliance >> Dashboard**
 
     ![Compliance Results](images/compilance-dashboard-option.png  " ")
 
-    **The Dashboard view provides a brief summary of the violations, corrective actions and compliance standard score.**
+    **The Dashboard view provides a reduced number of violations count, brief summary of the violations and compliance standard score.**
 
-    ![Compliance Dashboard](images/compliance-dashboard.png  " ")
+    ![Compliance Dashboard](images/compliance-dashboard-count.png  " ")
 
-26. You will be able to generate a comprehensive compliance report for
-
-    CIS compliance standard and its associated pluggable database targets.
+26. Click on **Report**, You will be able to generate a comprehensive compliance report for CIS compliance standard and its associated pluggable database targets.
 
     ![Compliance Report](images/cis-standard-report1.png  " ")
 
