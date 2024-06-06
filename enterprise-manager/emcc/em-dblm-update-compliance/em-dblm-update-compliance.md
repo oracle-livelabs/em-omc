@@ -263,25 +263,25 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
 6. Now you will navigate to ***Enterprise >> Compliance >> Dashboard***.
 
-    ![Navigate to result](images/navigate-dashboard.png "  ")
+    ![Navigate to result](images/navigate-to-dashboard.png " ")
 
     **Processing and displaying the results on the Compliance Results Page will take approximately 4 minutes to complete.**
 
     Please keep refreshing on icon![Refresh](images/refresh-icon.png "  ")  **Compliance Dashboard section Page**
 
-    ![Navigate to result](images/complaince-dashboard-result.png  "  ")
+    ![Navigate to result](images/complaince-dashboard-results.png " ")
 
     In this dashboard, you will see and can explore about **Targets  Evaluated, Violation and Errors Donut color chart, Open Security Incidents numbers and Compliance Standard score Distribution in percentage chart t and Compliance Violations by different Target types bar chart indicating severity of Violations color representation.**
 
 7. You will see Compliance Summary Standards section having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on Standards having critical violations along with Warning and Minor Warning.**
 
-    ![Navigate to result](images/complinace-standard-summary-violations.png "  ")
+    ![Navigate to result](images/complinace-standard-summary-violation.png "  ")
 
     Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**
 
 8. You will see Compliance Results about the target with violations against the selected standard along with it's score along with evaluation date.
 
-    ![Overview scorecard ](images/cis-compliance-pdb-results.png " ")
+    ![Overview scorecard ](images/cis-compliance-pdb-result.png " ")
 
     Violations tab - you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab.
 
@@ -290,7 +290,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 9. You will see failed CIS standard recommendations rules for each main category of CIS Standard.  
 
       ![Validations](images/cis-recommended-violations.png " ")
-
+      
 10. Each violation can be explored by clicking on **Violations number**.  
 
       ![Check for violations](images/cis-rule-violation.png " ")
