@@ -285,12 +285,12 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     Violations tab - you will see details each rule , target name, applicable to target type pluggable and severity of the rule under violation tab.
 
-    ![Validate CIS ](images/compliance-cis-violations-pdb.png " ")
+    ![Validate CIS ](images/compliance-violations-pdb.png " ")
 
-9. You will see failed CIS standard recommendations rules for each main category of CIS Standard.  
+9. You will see failed CIS standard recommendations and violation rules for each main category of CIS Standard.  
 
-      ![Validations](images/cis-recommended-violations.png " ")
-      
+      ![Validations](images/cis-recommend-violations.png " ")
+
 10. Each violation can be explored by clicking on **Violations number**.  
 
       ![Check for violations](images/cis-rule-violation.png " ")
