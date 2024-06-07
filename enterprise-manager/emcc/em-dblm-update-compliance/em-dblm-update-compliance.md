@@ -263,11 +263,11 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
-    click Select. 
+    click Select.
 
     ![Add PDB](images/select-cis-pdb-target.png " ")
 
-4. Verify the PDB name is added and click **OK**.
+4. Verify the PDB selected and click **OK**.
 
     ![Enable CIS](images/enable-status-pdb.png " ")
 
@@ -279,7 +279,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Confirm Association ](images/compliance-std-target-process.png " ")
 
-6. Now,Navigate to ***Enterprise >> Compliance >> Dashboard***.
+6. Compliance Results Analysis
+
+   You have completed one-time setup process.
+
+   Lets' analyze the Results.
+
+   Now, Navigate to ***Enterprise >> Compliance >> Dashboard***.
 
     ![Navigate to result](images/navigate-to-dashboard.png " ")
 
