@@ -297,19 +297,21 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     In this dashboard, you can explore each dashlet:
 
-    Targets Evaluated,
+      Targets Evaluated:
 
-    Violation and Errors,
+    Violation and Errors:
 
-    Open Security Incidents numbers,
+    Open Security Incidents numbers:
 
-    Compliance Standard score Distribution,
+    Compliance Standard score Distribution:
 
-    Compliance Violations by different Target type,
+    Compliance Violations by different Target type:
 
-    bar chart indicating the severity of violations**.
+    bar chart indicating the severity of violations.
 
-7. You will see the **Compliance Summary Standards** section having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on standards with critical violations along with warning and minor warning**.
+7. In the **Compliance Summary** panel, select Standards tab
+
+    Select **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database with critical violations along with warning and minor warning**.
 
     ![Navigate to result](images/complinace-standard-summary-violation.png "  ")
 
