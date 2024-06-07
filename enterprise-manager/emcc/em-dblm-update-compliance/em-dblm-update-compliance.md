@@ -74,7 +74,7 @@ In this lab you will perform the following steps:
 | 5                    | Launch Update(Patching) operation | 2  minutes  | Launch the patching operation. | Understand how patching can be initiated and explore the options that Fleet Maintenance porvides.
 | 6                    | Patch a Pluggable Database with Fleet Maintenance Maintenance | 5  minutes  | Update(Patch) a PDB using a Gold Image. As part of patching the Pluggable Database, unplug Oracle Pluggable Database in that Container Database and plug it to higher version Container Database. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Pluggable Database.
 | 7                    | Review Pluggable Database in Fleet Maintenance Hub | 3  minutes  | Review post patching results in Hub. | Understand how graphs are updated in Fleet Maintenance Hub post patching and the end state that DBA's should aim to attain for their database estate.
-| 8                    | Compliance Management for Pluggable Database | 20  minutes  | Apply a industry Standard for Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on PDB, generate report and validate the results. | Implementing stringent security measures and achieving regulatory compliance with CIS benchmarks enhances operational efficiencies and security through centralized auditing, monitoring, and automated corrective actions.
+| 8                    | Secure database configuration and Audit for Compliance | 20  minutes  |  CIS Oracle Database 19c Benchmark v1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database to secure configuration of provisioned database. | Elevate database posture by stringent security measures and achieving regulatory compliance with CIS benchmarks enhances operational efficiencies and security through centralized auditing, monitoring, and automated corrective actions.
 
 
 ### Prerequisites
@@ -221,7 +221,7 @@ Enterprise Manager provides solution to secure and ensure compliance with securi
 
 ![compliance stack](images/stack-security-compliance.png " ")
 
-For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, DoD'(Department of Defense) Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
+For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, Department of Defense (DoD) Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
 
 For underlying Linux hosts, built-in SCAP engine enables security standards like STIG, PCI-DSS, HIPAA are available.
 
@@ -235,14 +235,16 @@ Lets start the lab.
 
 To begin, lets take a look at available CIS Benchmarks and choose one of them for associating a database target for security assessment.
 
-1. From the Enterprise menu, select **Compliance, then select Library**  to get started.
+1. From the Enterprise menu, select **Compliance, then select Library**.
 
     ![Navigate to Library](images/enterprise-compliance-library.png " ")
 
-2. Click the **Compliance Standards** tab.**
+2. Click the **Compliance Standards** tab.
 
-    In the Compliance Standard section, type "Oracle 19c Database CIS" as the keyword.
-    In the **Applicable To** section dropdown, select **Pluggable Database**.
+    You will out of box Compliance standards. Lets us look for CIS Standard Benchmarks.
+    Search for "Oracle 19c Database CIS".
+    
+    In the **Applicable To** dropdown, select **Pluggable Database**.
     Click **Search**.
 
     ![Search CIS](images/search-cis-pluggable-std.png "  ")
