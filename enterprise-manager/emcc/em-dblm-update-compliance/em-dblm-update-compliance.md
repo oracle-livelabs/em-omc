@@ -241,10 +241,12 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 2. Click the **Compliance Standards** tab.
 
-    You will out of box Compliance standards. Lets us look for CIS Standard Benchmarks.
+    You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
+
     Search for "Oracle 19c Database CIS".
-    
+
     In the **Applicable To** dropdown, select **Pluggable Database**.
+
     Click **Search**.
 
     ![Search CIS](images/search-cis-pluggable-std.png "  ")
