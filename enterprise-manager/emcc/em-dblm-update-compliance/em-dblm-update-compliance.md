@@ -271,7 +271,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     ![Navigate to result](images/complaince-dashboard-results.png " ")
 
-    In this dashboard, you will see and can explore about **Targets  Evaluated, Violation and Errors Donut color chart, Open Security Incidents numbers and Compliance Standard score Distribution in percentage chart t and Compliance Violations by different Target types bar chart indicating severity of Violations color representation.**
+    In this dashboard, you will see and can explore about **Targets  Evaluated, Violation and Errors Donut color chart, Open Security Incidents numbers and Compliance Standard score Distribution in percentage chart and Compliance Violations by different Target types bar chart indicating severity of Violations color representation.**
 
 7. You will see Compliance Summary Standards section having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on Standards having critical violations along with Warning and Minor Warning.**
 
