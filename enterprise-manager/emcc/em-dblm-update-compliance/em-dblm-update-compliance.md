@@ -283,13 +283,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    You have completed one-time setup process.
 
-   Lets' analyze the Results.
+   Lets' analyze the results.
 
-   Now, Navigate to ***Enterprise >> Compliance >> Dashboard***.
+   Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
     ![Navigate to result](images/navigate-to-dashboard.png " ")
 
-    **Processing and displaying the results on the Compliance Results Page will take approximately 4 minutes to complete**.
+    **At this point, all CIS security controls in the CIS benchmark is getting processed, will take approximately 4 minutes to complete**.
 
     Please keep refreshing the icon on ![Refresh](images/refresh-icon.png "  ")  ****Compliance Dashboard section page**.
 
