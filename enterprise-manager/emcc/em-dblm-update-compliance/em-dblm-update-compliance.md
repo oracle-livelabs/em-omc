@@ -297,7 +297,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     In this dashboard, you can explore each dashlet:
 
-    **Targets Evaluated,
+    Targets Evaluated,
 
     Violation and Errors,
 
