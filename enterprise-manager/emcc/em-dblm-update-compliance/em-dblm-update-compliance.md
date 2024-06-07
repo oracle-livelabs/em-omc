@@ -261,7 +261,9 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Add PDB](images/add-cis-search-pdb.png " ")
 
-    click **Select **hr.subnet.vcn.oraclevcn.com_FINANCE**.
+    Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
+
+    click Select. 
 
     ![Add PDB](images/select-cis-pdb-target.png " ")
 
