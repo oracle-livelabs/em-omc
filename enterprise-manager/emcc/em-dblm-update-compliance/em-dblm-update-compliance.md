@@ -215,7 +215,9 @@ Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for go
 
 ## Task 8: Compliance Management for Pluggable Database
 
-After using fleet maintenance hub to upgrade and patching, its time to secure your multi-tenant pluggable database in Enterprise Manager. Enforce compliance with with industry standards by implementing strict access controls, regular auditing and monitoring to maintain a robust security posture and prevent breaches.  
+Now that you have applied security patches your pluggable database, you want to ensure the configuration, access and user privileges are secure and audit for compliance with CIS Benchmarks which is the industry standard.
+
+Enterprise Manager provides solution to secure and ensure compliance with security policies defined by your security office and auditors. With this solution, you can secure the entire stack from databases, underlying Linux hosts and Exadata infrastructure with out-of-box security controls.  
 
 ![compliance stack](images/stack-security-compliance.png " ")
 
