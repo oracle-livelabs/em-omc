@@ -1,7 +1,7 @@
 # Automated Database Patching at Scale with Fleet Maintenance
 
 ## Introduction
-The goal of this lab is to explore end-to-end automated patching of the Oracle Database using Enterprise Manager. This lab is a command based(emcli) lab. You can also check an equivalent UI based lab.
+The goal of this lab is to explore end-to-end automated patching of the Oracle Database using Enterprise Manager. This lab is command based(emcli) lab. You can also check an equivalent UI based lab.
 
 *Estimated Lab Time*: 75 minutes
 
@@ -10,16 +10,17 @@ Watch the video below for a quick walk through of the lab.
 
 ### About Database Fleet Maintenance
 
-Database Fleet Maintenance is an end-to-end automated solution for update(patching) and upgrade of Oracle Databases. Fleet Maintenance enables DBAs to automate update(patching) of a wide range of Oracle Database configurations including Oracle RAC environments with Data Guard Standby.
+Database Fleet Maintenance is an end-to-end automated solution for updating (patching) and upgrading Oracle Databases. Fleet Maintenance enables DBAs to automate the updating (patching) of a wide range of Oracle Database configurations, including Oracle RAC environments with Data Guard Standby.
 
-Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to ease automated update(patching), and upgrade of your database fleet.
+Starting with Enterprise Manager 13.5 RU1, Enterprise Manager offers a new interface to simplify the automated update (patching) and upgrade of your database fleet.
 
 Benefits of using the EM Fleet Maintenance capability include:
-- Minimizing downtime with use of Out of Place patching
-- Enterprise scalability using the Enterprise Manger Deployment Procedures Framework
-- A single pane of glass for monitoring and managing the entire update(patching) and upgrade operations
-- Ability to schedule/retry/suspend/resume operations
-- Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
+
+- Minimizing downtime with the use of Out of Place patching.
+- Enterprise scalability using the Enterprise Manager Deployment Procedures Framework.
+- A single pane of glass for monitoring and managing the entire update (patching) and upgrade operations.
+- Patch Oracle Databases across different infrastructures, including engineered systems like Oracle ExaCC.
+- Ability to schedule/retry/suspend/resume operations.
 
 ![](images/FM-Overview2024.png "FM-Overview2024")
 
@@ -53,9 +54,9 @@ In this lab you will perform the following steps:
 
 To save time, the following steps were already completed.
 
-1. Gold Image of Oracle Home was created using Fleet Maintenance Hub.
+1. The Gold Image of Oracle Home was created using Fleet Maintenance Hub.
 
-To ensure smooth execution of the use cases, we have pre-hosted the scripts to be used later at */home/oracle/fleet*. To know more about using this feature, follow the below video link.
+To ensure smooth execution of the use cases, we have pre-hosted the scripts at */home/oracle/fleet*. To know more about using this feature, follow the below video link.
 
 [Video Walk-through] (https://www.youtube.com/watch?v=ibEEkTa05iM&t=182s)
 
@@ -63,7 +64,7 @@ To ensure smooth execution of the use cases, we have pre-hosted the scripts to b
 
 In this lab activity, you will analyze the database estate to identify any configuration drift (pollution) using the Software Standardization Advisor.
 
-Software Standardization Advisor enables administrators to understand various database configurations prevailing in their environment. Each deployment with a unique platform, release and patch level is identified as a distinct configuration. This provides the administrators a view of the configuration pollution in their estate. It also analyzes and provides a recommendation to standardize the environment and reduce the number of configurations required for managing the database estate.
+The Software Standardization Advisor enables administrators to understand various database configurations prevailing in their environment. Each deployment with a unique platform, release, and patch level is identified as a distinct configuration. This provides administrators with a view of the configuration pollution in their estate. It also analyzes and provides recommendations to standardize the environment and reduce the number of configurations required for managing the database estate.
 <!--
   ![](images/em-fleet-maintenance-overview-2.png " ")
 -->
