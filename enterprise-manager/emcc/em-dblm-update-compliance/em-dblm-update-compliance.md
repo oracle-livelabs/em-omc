@@ -221,11 +221,19 @@ Enterprise Manager provides solution to secure and ensure compliance with securi
 
 ![compliance stack](images/stack-security-compliance.png " ")
 
-Stack security compliance will help you take control and understand all risk factors, assess levels of exposure to determine the best course of action, and ensure all standards are met. In addition to that, you can secure underlying Exadata Engineered Systems. By doing this, you are securing everything from database to infrastructure.
+For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, DoD' Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
 
-The Center for Internet Security (CIS) benchmark for Oracle database provides a set of best practices, compliance and configuration guidelines to secure  against cyber threats and data breaches. It ensures compliance with industry standards, enhancing database security through systematic controls, checks, rules, monitoring, and recommendations to remediate violations for optimal security posture.  
+For underlying Linux hosts, built-in SCAP engine enables security standards like STIG, PCI-DSS, HIPAA are available.
 
-In this lab, you will get hands-on experience is using *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
+Finally, for Exadata family of Engineered Systems, compliance standards tied to Autonomous Health Framework (AHF) Exachk is available out-of-box.
+
+In this lab, you will get hands-on experience with *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
+
+Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyber threats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
+
+Lets start the lab.
+
+To begin, lets take a look at available CIS Benchmarks and choose one of them for associating a database target for security assessment.
 
 1. From the Enterprise menu, select **Compliance, then select Library**  to get started.
 
@@ -365,7 +373,7 @@ In this lab, you will get hands-on experience is using *Oracle 19c Database CIS 
 
     Click **Refresh**
 
-21. You can see **Refresh Processing** will take about 3 minutes.
+21. You can see **Refresh Processing** will take about 8 minutes.
 
     ![Latest Configuration](images/configuration-refresh-pdb.png  " ")
 
