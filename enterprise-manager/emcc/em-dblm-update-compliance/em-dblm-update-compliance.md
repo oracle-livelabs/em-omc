@@ -227,7 +227,7 @@ For underlying Linux hosts, built-in SCAP engine enables security standards like
 
 Finally, for Exadata family of Engineered Systems, compliance standards tied to Autonomous Health Framework (AHF) Exachk is available out-of-box.
 
-In this lab, you will get hands-on experience with *Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database* to secure configuration of provisioned database.
+In this lab, you will get hands-on experience with ***Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database*** to secure configuration of provisioned database.
 
 Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyber threats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
 
@@ -273,7 +273,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Confirm Association ](images/compliance-std-target-process.png " ")
 
-6. Now,Navigate to **Enterprise >> Compliance >>Dashboard**.
+6. Now,Navigate to ***Enterprise >> Compliance >> Dashboard***.
 
     ![Navigate to result](images/navigate-to-dashboard.png " ")
 
@@ -357,7 +357,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
-18. Navigate to **Targets >> Databases**.
+18. Navigate to ***Targets >> Databases***.
 
     ![Navigate to result](images/target-databases.png  " ")
 
@@ -425,7 +425,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Compliance Dashboard](images/dashboard-logout.png  " ")
 
-    Click on ***Setup>>Log Out***  
+    Click on ***Setup >> Log Out***  
 
 You may now proceed to the next lab.
 
