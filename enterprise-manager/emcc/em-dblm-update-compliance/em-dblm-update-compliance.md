@@ -251,17 +251,17 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Search CIS](images/search-cis-pluggable-std.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click the **Associate Targets** tab.
+    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
 
     ![Target associate](images/cis-compliance-associate-target.png " ")
 
-3. Click **Add** and choose the row with the PDB you wish to associate.
+3. Click **Add** and Select **hr.subnet.vcn.oraclevcn.com_FINANCE** PDB you wish to associate.
 
-    In the **Target name** section, type **_FINANCE** and click **Search**.
+    In the **Target name**, type **_FINANCE** and click **Search**.
 
     ![Add PDB](images/add-cis-search-pdb.png " ")
 
-    When **hr.subnet.vcn.oraclevcn.com_FINANCE** appears, click **Select**.
+    click **Select **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
     ![Add PDB](images/select-cis-pdb-target.png " ")
 
