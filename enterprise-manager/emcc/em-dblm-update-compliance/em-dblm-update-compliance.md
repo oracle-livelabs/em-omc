@@ -291,11 +291,23 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **At this point, all CIS security controls in the CIS benchmark is getting processed, will take approximately 4 minutes to complete**.
 
-    Please keep refreshing the icon on ![Refresh](images/refresh-icon.png "  ")  ****Compliance Dashboard section page**.
+    Keep refresh the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
     ![Navigate to result](images/complaince-dashboard-results.png " ")
 
-    In this dashboard, you can explore **Targets Evaluated, Violation and Errors Donut color chart, Open Security Incidents numbers, Compliance Standard score Distribution in percentage chart, and Compliance Violations by different Target types bar chart indicating the severity of violations**.
+    In this dashboard, you can explore each dashlet:
+
+    **Targets Evaluated,
+
+    Violation and Errors,
+
+    Open Security Incidents numbers,
+
+    Compliance Standard score Distribution,
+
+    Compliance Violations by different Target type,
+
+    bar chart indicating the severity of violations**.
 
 7. You will see the **Compliance Summary Standards** section having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database on standards with critical violations along with warning and minor warning**.
 
