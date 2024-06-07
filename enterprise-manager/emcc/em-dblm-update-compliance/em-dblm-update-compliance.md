@@ -421,7 +421,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     ![Compliance Report](images/cis-standard-report3.png " ")
     ![Compliance Report](images/cis-standard-report4.png " ")
 
-    ***This completes the Automated Database Patching at Scale with Fleet Maintenance HUB and CIS compliance management for pluggable database Violation Remediation by corrective Action.***
+    ***This completes the Automated Database Patching at Scale with Fleet Maintenance HUB and Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database benchmark Rule Violation Remediation by corrective Action.***
 
     ![Compliance Dashboard](images/dashboard-logout.png  " ")
 
