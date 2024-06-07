@@ -215,13 +215,13 @@ Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for go
 
 ## Task 8: Compliance Management for Pluggable Database
 
-Now that you have applied security patches your pluggable database, you want to ensure the configuration, access and user privileges are secure and audit for compliance with CIS Benchmarks which is the industry standard.
+Now that you have applied security patches to your pluggable database, you want to ensure the configuration, access and user privileges are secure and audit for compliance with CIS Benchmarks which is the industry standard.
 
 Enterprise Manager provides solution to secure and ensure compliance with security policies defined by your security office and auditors. With this solution, you can secure the entire stack from databases, underlying Linux hosts and Exadata infrastructure with out-of-box security controls.  
 
 ![compliance stack](images/stack-security-compliance.png " ")
 
-For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, DoD' Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
+For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, DoD'(Department of Defense) Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
 
 For underlying Linux hosts, built-in SCAP engine enables security standards like STIG, PCI-DSS, HIPAA are available.
 
