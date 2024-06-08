@@ -70,7 +70,7 @@ The Software Standardization Advisor enables administrators to understand variou
 -->
   ![](images/new-em-fleet-maintenance-overview-2.png "new overview")
 
-1. On the browser page when the Enterprise Manager Cloud Control 13c login can be seen, copy and paste or type in these username and password credentials into the fields.
+1. When you see the Enterprise Manager Cloud Control 13c login page on your browser, copy and paste or type in the following username and password credentials into the fields.
 
     ```
     Username: <copy>emadmin</copy>
@@ -82,11 +82,11 @@ The Software Standardization Advisor enables administrators to understand variou
 
     ![](images/patch.png "vnc homepage")
 
-2.  After successful login, in the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
+2.  After successful login, in the upper toolbar, locate the ***Targets*** icon. Click the drop-down menu and then select ***Databases***.
 
     ![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
 
-3.  On the Databases targets page, click on the ***Administration*** tab, drop down the menu, and select Software ***Standardization Advisor***
+3.  On the Databases targets page, click on the ***Administration*** tab, and from drop down menu, select Software ***Standardization Advisor***
 
     ![](images/new-software-std-advisor.png "additional items in drop down ")
 
@@ -97,7 +97,7 @@ The Software Standardization Advisor enables administrators to understand variou
     Graphs may look different from the ones represented in the workbook.
     A Software Configuration is identified by the database release, platform, and the patches installed on the target.
 
-    In the analysis performed by the Software Configuration Advisor, it has identified that there are 6 unique software configurations in the environment (pie chart labeled “Current Unique Software Configurations”). The recommendation displayed is for only 2 Software Configurations ( pie chart labeled “Recommended Software Configurations”).
+    In the analysis performed by the Software Configuration Advisor, it has identified that there are 6 unique software configurations in the environment (pie chart labeled “Current Unique Software Configurations”). The recommendation displayed is for only 2 Software Configurations (pie chart labeled “Recommended Software Configurations”).
 
     Next, we will review the report generated.
 
@@ -151,7 +151,7 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 
 We will go through steps for update(patching) database target ***finance.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 19.17.0.0.0 version. The goal is to patch this target to 19.23.0.0.0. As part of the update(patching) exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
 
-1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu and select ***Databases*** to review the status and version of database targets.
+1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu. Then, choose ***Databases*** to review the status and version of database targets.
 ![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
 
 Review version of ***finance.subnet.vcn.oraclevcn.com***

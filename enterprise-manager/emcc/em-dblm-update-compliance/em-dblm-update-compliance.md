@@ -29,9 +29,9 @@ Watch a preview of database patching using Oracle Enterprise Manager Fleet Maint
 In this lab you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Assess patch recommendation and create gold image                             | 10 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Provides patch recommendations for gold image. Discover the advantages of utilizing patch recommendations, where manual, time-intensive tasks are automated to yield highly precise outcomes.                  |
-| 2                    | Secure databases by updating with new gold image | 15 minutes  | Update databases using Gold image | Demonstrate with ease to update a pluggable database                   |
-| 3                    | Elevate security posture by auditing for compliance | 5  minutes  | Refresh a Gold Image based on latest patch recommendation | How to steps to create a new version for a gold image. Latest version will be used to update and upgrade process.
+| 1                    | Assess patch recommendation and create gold image                             | 10 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Experience the benefits of using these recommendations, which automate traditionally manual and time-consuming tasks to produce highly accurate results.                  |
+| 2                    | Secure databases by updating with new gold image | 15 minutes  | Update databases using Gold image | Effortlessly update your pluggable database, saving time and ensuring seamless operations.                   |
+| 3                    | Elevate security posture by auditing for compliance | 5  minutes  | Refresh a Gold Image based on latest patch recommendation | Streamline the process of creating a new version for a gold image with these steps. The latest version ensures an efficient update and upgrade process.
 
 
 ### Prerequisites
@@ -68,20 +68,20 @@ In this task, we will review patch recommendations for existing gold images and 
 
 ![](images/tile2.png "hub-tile2")
 
-Here, we see that goldimages - 19cDB-Linux-x64-ERP has two patch recommendations, while 19cDB-Linux-x64-APPS has a green checkmark. This indicates that 19cDB-Linux-x64-ERP should have a new version that includes the two recommended patches, whereas 19cDB-Linux-x64-APPS is up to date and can be used for patching.
+Here, we see that goldimages - ***19cDB-Linux-x64-ERP*** has two patch recommendations, while ***19cDB-Linux-x64-APPS*** has a green checkmark. This indicates that 19cDB-Linux-x64-ERP should have a new version that includes the two recommended patches, whereas 19cDB-Linux-x64-APPS is up to date and can be used for patching.
 
 Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand the steps involved in refreshing a gold image. For this lab, we will use the 19cDB-Linux-x64-APPS image.
 
-5. To complete the lab within the given timeline, we will use 19cDB-Linux-x64-APPS to secure one of the databases. In the next few steps, we will use the Fleet Maintenance Hub to refresh 19cDB-Linux-x64-ERP.
+5. To complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases. In the next few steps, we will use the Fleet Maintenance Hub to refresh 19cDB-Linux-x64-ERP.
 
 
-6. Let's review the workflow for updating or refreshing a gold image. As observed in step 4, 19cDB-Linux-x64-ERP has two patch recommendations.
+6. Let's review the workflow for updating or refreshing a gold image. As observed in step 4, ***19cDB-Linux-x64-ERP*** has two patch recommendations.
 ![](images/patch-recommendation.png "patch-recommendation")
 
  Click on the numeric value 2. A new slideout will appear.
 ![](images/patch-slideout.png "slideout")
 
-7. The next step is to create a new version in 19cDB-Linux-x64-ERP that will include the recommended patches. Close the slideout and click on the "Create New Version" link under the Patch Recommendation column. Alternatively, click on the "Doner" icon under Actions and create a new version.
+7. The next step is to create a new version in 19cDB-Linux-x64-ERP that will include the recommended patches. Close the slideout and click on the ***"Create New Version"*** link under the Patch Recommendation column. Alternatively, click on the kebab menu under Actions and create a new version.
 ![](images/create-version.png "create version")
 
 8. In the new window, we need to provide source details, which act as input for version creation and version details. In the left-hand section, we first select the Oracle Home, which will be used as the source Oracle Home.
@@ -114,13 +114,13 @@ Note: The submitted Deployment Procedure above may fail. If you encounter the er
 
 ## Task 2: Secure databases by updating with new gold image
 
-In this task, we will perform PDB patching. In this scenario, we will unplug the Finance PDB (associated with the CDB - sales) and plug it into a higher version CDB, HR. Currently, Finance is at version 19.17, while HR is at version 19.23.
+In this task, we will perform Pluggable Database patching. In this scenario, we will unplug the ***Finance PDB*** (associated with the Container database - sales.subnet.vcn.oraclevcn.com) and plug it into a higher version CDB, ***hr.subnet.vcn.oraclevcn.com***. Currently, Finance is at version 19.17, while HR is at version 19.23.
 
 ![](images/pre-update.png "pre-update")
 
 Lets complete below steps to perform the pdb patching.
 
-1. Subscribe sales CDB to goldimage 19cDB-Linux-x64-APP.
+1. Subscribe sales CDB to goldimage ***19cDB-Linux-x64-APP***.
 
 Under the "Target Subscription" tab in the Fleet Maintenance Hub, follow these steps:
 
@@ -134,10 +134,10 @@ Under the "Target Subscription" tab in the Fleet Maintenance Hub, follow these s
 
 Upon completion, click on "Close".
 
-2. Navigate to Tile 3 - Target Patch Compliance in the Fleet Maintenance Hub.
+2. Navigate to Tile 3 - ***Target Patch Compliance*** in the Fleet Maintenance Hub.
 ![](images/tile3.png "tile3")
 
-Click on the "Doner" icon under Actions for the sales CDB, and select "Update Pluggable Database". This will launch the operator UI of Fleet Maintenance.
+Click on the kebab menu under Actions for the sales CDB, and select "Update Pluggable Database". This will launch the operator UI of Fleet Maintenance.
 
 3. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
 ![](images/patching-ui1.png "patching-ui1")
@@ -178,6 +178,7 @@ We see that the Deployment procedure with the name "Attach" has completed succes
 
 We see that the Finance PDB has moved out of the sales CDB and is now plugged into the HR CDB.
 
+In next step, we will review and elevate security posture by auditing for compliance.
 
 ## Task 3: Elevate security posture by auditing for compliance
 
