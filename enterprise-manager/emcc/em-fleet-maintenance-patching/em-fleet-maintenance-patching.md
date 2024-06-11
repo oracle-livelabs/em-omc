@@ -170,7 +170,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
     ![](images/Launch-Hub.png "Hub Homepage")
 
-    Click on middle Tile 2, which is **Patch Recommendations for Images**. Here we see two gold images. The highlighted one is a healthy image, which has all the patch recommendations. We will use this gold image to complete our patching activity in this lab.
+    Click on middle Tile 2, which is **Patch Recommendations for Images**. Here we see two gold images. The highlighted one, ***19cDB-Linux-x64-Apps*** is a healthy image, which has all the patch recommendations. We will use this gold image to complete our patching activity in this lab.
 
     ![](images/Hub-Tile2.png "Hub Homepage")
 
@@ -188,13 +188,9 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
     ```
     <copy>emcli db_software_maintenance -getImages</copy>
     ```
-
     ![](images/emcli-list-images.png "get images")
-
     IMAGE ID retrieved from the output of above command is used in further operations like Target Subscription.
-
     After retrieving a list of the available images, one can view a list of versions available for a specific image with the following command:
-
     If the image id for Gold Image ***19cDB-Linux-x64-APPS*** is same as above, then use the below command to get the version details of this image.
 
     ```
