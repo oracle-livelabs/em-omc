@@ -155,7 +155,7 @@ We will go through steps for update(patching) database target ***finance.subnet.
 ![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
 
 Review version of ***finance.subnet.vcn.oraclevcn.com***
-  ![](images/patch-db-layout.png "finance-db-version")
+![](images/patch-db-layout.png "finance-db-version")
 
 ## Task 4: Review Gold Image [Step Already Performed, Read-Only Step]
 
