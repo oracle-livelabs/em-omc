@@ -174,7 +174,8 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
     ![](images/Hub-Tile2.png "Hub Homepage")
 
-7. Alternately, you can run emcli to list available Gold Images. Execute the following commands in the terminal to see the list of Gold Images available
+7. Alternately, you can run emcli to list available Gold Images. Execute the following commands in the terminal to see the list of Gold Images available.
+
     To  retrieve Column values in same line, execute the below format command in terminal
 
     ```
@@ -289,7 +290,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
     ![](images/navigate-dp.png "DP navigation ")
 
-Click on ‘DEPLOY\_SYSMAN\_\*’ run
+Click on ‘DEPLOY*’ run
     ![](images/deploy-dp.png "deploy OH DP")
 
 4. Review the Procedure Activity steps performed.
@@ -314,7 +315,7 @@ Click on ‘DEPLOY\_SYSMAN\_\*’ run
 
     ![](images/migrate-dp-complete.png "migrate complete")
 
-## Task 8: Update Database – Patch 18.3 to 19.23
+## Task 8: Update Database – Patch 19.17 to 19.23
 
 1. Execute below shell script to update DB Target *finance.subnet.vcn.oraclevcn.com*
 
@@ -323,10 +324,6 @@ Click on ‘DEPLOY\_SYSMAN\_\*’ run
     ```
 
     ![](images/emcli-update.png "update using emcli")
-
-    Where:
-      - Name – Name of the operation. This is a logical name and should be kept unique  
-      - Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
 
 3. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘Fleet\_UPDATE\_...’ deployment procedure instance.
 
@@ -350,7 +347,7 @@ Once the database is updated, we will perform a rollback to 19.17
 1. Execute below shell script from the terminal to rollback DB Target ***finance.subnet.vcn.oraclevcn.com***
 
     ```
-    <copy>sh rollback_hr.sh</copy>
+    <copy>sh rollback_finance.sh</copy>
     ```
 
     ![](images/emcli-rollback.png "emcli rollback submit")
@@ -365,11 +362,11 @@ Once the database is updated, we will perform a rollback to 19.17
 
 4. Verify the rolled back target by going to ***Targets >> Databases*** as shown
 below.
-![](images/Target-Databases-Navig.png "DP navigation")
+    ![](images/Target-Databases-Navig.png "DP navigation")
 
 Review the version of finance database.
 
-  ![](images/post-rollback-version.png "rollback complete")
+    ![](images/post-rollback-version.png "rollback complete")
 
 ## Task 10:  Cleanup Old Homes
 
@@ -383,10 +380,6 @@ In order to have an old empty home previously used by “***finance.subnet.vcn.o
     <copy>sh update_finance.sh</copy>
     ```
     ![](images/emcli-update.png "emcli cleanup ")
-
-    Where:
-      -  Name – Name of the operation. This is a logical name and should be kept unique Purpose – There are standard purposes defined which can be performed by Fleet Operations. “UPDATE\_DB” is one of them.
-
 
 3. Verify that the update has been completed successfully before proceeding with any cleanup action, Same as done in step \#8, this should complete within 10\~15 minutes.
 
