@@ -149,7 +149,7 @@ Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscriptio
 
 ### **Patching with Fleet Maintenance**
 
-We will go through steps for update(patching) database target ***finance.subnet.vcn.oraclevcn.com***, a Container Database that is currently at 19.17.0.0.0 version. The goal is to patch this target to 19.23.0.0.0. As part of the update(patching) exercise this Container Database and all Pluggable Databases in that Container Database will automatically get patched.
+We will go through steps for update(patching) database target ***finance.subnet.vcn.oraclevcn.com***, currently at 19.17.0.0.0 version to 19.23.0.0.0.
 
 1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu. Then, choose ***Databases*** to review the status and version of database targets.
 ![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
