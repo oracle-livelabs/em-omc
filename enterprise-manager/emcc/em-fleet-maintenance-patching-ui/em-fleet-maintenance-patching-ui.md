@@ -217,12 +217,11 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
     ![](images/finance-patch-screen2.png "input values")
 
 
-    We can enter following values
-    Under Maintenance tasks
-        Destination Oracle Home as
-        ```
-        <copy>/u01/livelabs/db/19c/19.23/finance</copy>
-        ```
+    Under Maintenance tasks, we can enter following values
+    Destination Oracle Home as
+    ```
+    <copy>/u01/livelabs/db/19c/19.23/finance</copy>
+    ```
 
     Check both Migrate Listener and Update Database options
 
