@@ -343,7 +343,7 @@ In this lab, we will use DBUA utility to upgrade database. Starting with Enterpr
 
 3. Navigate to the Procedure Activity Page and monitor the progress of this operation with ‘CLEANUP\_SOFTWARE\_...’ deployment procedure instance.
 
-  ![](images/cleanup-dp-complete.png "DP complete")
+  ![](images/cleanup-dp-completed.png "DP complete")
 
 4. Verify to confirm the old Oracle Home has been removed
 
