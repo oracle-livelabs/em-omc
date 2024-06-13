@@ -120,7 +120,7 @@ In this task, we will perform Pluggable Database patching. In this scenario, we 
 
 Lets complete below steps to perform the pdb patching.
 
-1. Subscribe sales CDB to goldimage ***19cDB-Linux-x64-APP***.
+1. Subscribe sales CDB to goldimage ***19cDB-Linux-x64-APPS***.
 
 Under the "Target Subscription" tab in the Fleet Maintenance Hub, follow these steps:
 
