@@ -218,7 +218,7 @@ Review version of ***finance.subnet.vcn.oraclevcn.com***
 
 
     Under Maintenance tasks, we can enter following values
-    Destination Oracle Home as
+    - Destination Oracle Home as
     ```
     <copy>/u01/livelabs/db/19c/19.23/finance</copy>
     ```
