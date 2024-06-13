@@ -301,9 +301,9 @@ In this lab, we will use DBUA utility to upgrade database. Starting with Enterpr
 
 1. Review and execute below command to update DB Target *cdb186.subnet.vcn.oraclevcn.com*
 
-  ```
-  <copy>sh update_cdb186.sh</copy>
-  ```
+```
+<copy>sh update_cdb186.sh</copy>
+```
 
   ![](images/upgrade-cdb186.png "emcli to upgrade")
 
@@ -327,17 +327,17 @@ In this lab, we will use DBUA utility to upgrade database. Starting with Enterpr
 
 1. Execute the following command as a dry-run to report on cleanup impact for *cdb186.subnet.vcn.oraclevcn.com*  
 
-    ```
-    <copy>sh cleanup_cdb186_report.sh</copy>
-    ```
+```
+<copy>sh cleanup_cdb186_report.sh</copy>
+```
 
  ![](images/emcli-cleanup-cdb186-report.png "cleanup command")
 
 2. Execute the following command to cleanup *cdb186.subnet.vcn.oraclevcn.com*   
 
-    ```
-    <copy>sh cleanup_cdb186.sh</copy>
-    ```
+```
+<copy>sh cleanup_cdb186.sh</copy>
+```
 
   ![](images/cleanup-dp-submit.png "cleanup DP")
 
@@ -347,11 +347,11 @@ In this lab, we will use DBUA utility to upgrade database. Starting with Enterpr
 
 4. Verify to confirm the old Oracle Home has been removed
 
-  ```
-  <copy>ls -ltr /u01/app/cdb186/cdb186</copy>
-  ```
+```
+<copy>ls -ltr /u01/app/cdb186/cdb186</copy>
+```
 
-![](images/cleanup-verification.png "cleanup verification")    
+  ![](images/cleanup-verification.png "cleanup verification")    
 
 This completes this lab.
 
