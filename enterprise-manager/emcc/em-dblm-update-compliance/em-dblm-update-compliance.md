@@ -297,17 +297,17 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     In this dashboard, you can explore each dashlet:
 
-      Targets Evaluated:
+    **Targets Evaluated: Provides a quick overview of how many databases, middleware, and other components have been assessed for compliance.Helps gauge the scope of compliance monitoring, shows the extent of compliance evaluation across the IT environment**
 
-    Violation and Errors:
+    **Violation and Errors: Visual representation of compliance status, Segments the pie chart into compliant, warning, and non-compliant statuses.Highlights the proportion of violations and errors, Allows quick identification of areas needing attention.**
 
-    Open Security Incidents numbers:
+    **Open Security Incidents numbers:Displays current open security incidents. Includes target affected, severity, and remediation status. Facilitates timely resolution, Helps prioritize and address security issues promptly**
 
-    Compliance Standard score Distribution:
+    **Compliance Standard score Distribution: Visual display of compliance scores, Shows the distribution of compliance scores across different targets or policies.Highlights overall compliance health. Gives a snapshot of the compliance performance, indicating which areas are doing well and which need improvement.**
 
-    Compliance Violations by different Target type:
+    **Compliance Violations by Target type: Breakdown of violations by target type. Categorizes violations based on the type of target (e.g., databases, hosts, WebLogic server and more). Helps identify problematic areas, Pinpoints specific types of systems that are more prone to compliance issues.**
 
-    bar chart indicating the severity of violations.
+    **Compliance Summary: Comprehensive overview systems compliance. Summarizes the compliance status of Compliance standards results, Key metrics and indicators like displays average compliance scores, violation counts, and remediation status for these high-value assets. Facilitates targeted compliance efforts to ensure critical systems meet required compliance standards, enhancing overall IT governance.**
 
 7. In the **Compliance Summary** panel, select Standards tab
 
@@ -405,7 +405,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click **Refresh**.
 
-21. You will see that **Refresh Processing** will take about 8 minutes.
+21. You will see that **Refresh Processing** will take about few minutes.
 
     ![Latest Configuration](images/configuration-refresh-pdb.png  " ")
 
