@@ -263,7 +263,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
-    click Select.
+    Click Select.
 
     ![Add PDB](images/select-cis-pdb-target.png " ")
 
@@ -309,34 +309,69 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Summary: Comprehensive overview systems compliance. Summarizes the compliance status of Compliance standards results, key metrics and indicators like displays average compliance scores, violation counts, and remediation status for these high-value assets. Facilitates targeted compliance efforts to ensure critical systems meet required compliance standards, enhancing overall IT governance.**
 
-7. Compliance Results Analysis
+7. You will see Compliance Summary, in the Standards tab having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**
 
+    ![Compliance Summary](images/compliance-summary.png  " ")
 
-In the **Compliance Summary** panel, select Standards tab
+    Compliance Summary Standards Analysis
 
-    Select **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database with critical violations along with warning and minor warning**.
+    **Compliant Targets: It identifies and displays all targets that meet the required compliance standards.**
 
-    ![Navigate to result](images/complinace-standard-summary-violation.png "  ")
+    **Non-Compliant Targets: It highlights targets that fail to adhere to the required compliance standards.**
 
-    Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**.
+    **Critical: It marks targets with severe compliance issues that require immediate attention and remediation.**
 
-8. You will see **Compliance Results** about the target with violations against the selected standard along with its score and evaluation date.
+    **Warning: It indicates targets with significant compliance concerns that need prompt corrective actions.**
+
+    **Minor Warning: It shows targets with minor compliance issues that should be monitored and addressed as necessary.**
+
+    **Average Compliance Score: It provides an aggregate score representing the overall compliance level across all targets.**
+
+    Click on **Non-Compliant Targets**, you will see Non Compliant Targets window having the Target name, Last Evaluation Date, Compliance Score, and Report.
+
+    ![Compliance Summary](images/non-compliant-target.png " ")
+
+    Click on 'x' to close.
+
+8. Click on **Critical**, you will see the Critical Violations window having Target Name, Target Type as Pluggable Database, and Standard Name as CIS benchmark and Report.
+
+    ![Compliance Summary](images/non-compliant-target-critical-window.png " ")
+
+    Click on hr.subnet.vcn.Oraclevcn.com_FINANCE icon.
+
+    You will see the Critical Violations window in detail.
+
+     It shows each rule violation with the Last evaluation date, Rule Name, Remedy, and Rationale.
+
+    ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
+
+    Click on 'x' to close.
+
+9.   In the **Compliance Summary** panel, select the Standards tab.
+
+     Select **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database with critical violations along with warning and minor warning**.
+
+     ![Navigate to result](images/complinace-standard-summary-violation.png "  ")
+
+     Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**.
+
+10. You will see **Compliance Results** about the target with violations against the selected standard and its score and evaluation date.
 
     ![Overview scorecard ](images/cis-compliance-pdb-result.png " ")
 
-     In the **Violations** tab, you will see details of each rule, target name, applicable target type (pluggable), and severity of the rule under violation tab.
+     In the **Violations** tab, you will see details of each rule, target name, applicable target type (pluggable), and severity of the rule under the violation tab.
 
     ![Validate CIS ](images/compliance-violations-pdb.png " ")
 
-9. You will see failed CIS standard recommendations and violation rules for each main category of the CIS Standard.  
+11. You will see failed CIS standard recommendations and violation rules for each main category of the CIS Standard.  
 
     ![Validations](images/cis-recommend-violations.png " ")
 
-10. Each violation can be explored by clicking on the **Violations** number.  
+12. Each violation can be explored by clicking on the **Violations** number. 
 
       ![Check for violations](images/cis-rule-violation.png " ")
 
-11. You will see that unauthorized grantee 'IX' has the DBA role.
+13. You will see that unauthorized grantee 'IX' has the DBA role.
 
     **The Oracle database "DBA" role is the powerful database administrator role provided for the allocation of administrative privileges to make configuration changes and access sensitive information. This unauthorized grantee 'IX' should not have that role.**
 
@@ -344,13 +379,13 @@ In the **Compliance Summary** panel, select Standards tab
 
       Click **Close**.
 
-12. Click on the **Rule Details** tab.
+14. Click on the **Rule Details** tab.
 
     You will see details like rule type, severity, compliance rule state, description, rationale, and recommendation for the violation remediation.
 
       ![Check for violations](images/cis-rule-details.png " ")
 
-13. Click on the **Violation Events** tab.
+15. Click on the **Violation Events** tab.
 
     This gives you incident attributes information about the violated rule.
 
@@ -358,7 +393,7 @@ In the **Compliance Summary** panel, select Standards tab
 
     Click on the table row section.
 
-14. You will see **Event details** about violated rule information, violation details, and an option of Guided resolution about Recommendations.
+16. You will see **Event details** about violated rule information, violation details, and an option of Guided resolution about Recommendations.
 
       ![Event Details](images/cis-event-details-violation.png  " ")
 
@@ -370,27 +405,27 @@ In the **Compliance Summary** panel, select Standards tab
 
       Select the **CORRECTIVE_ACTION_REVOKE_DBA_ROLE_PRIVILEGE** row.
 
-15. You will see **Database Credentials** and **Host Credentials**.
+17. You will see **Database Credentials** and **Host Credentials**.
 
       ![Event Details](images/preferred-credentials-selection.png  " ")
 
       Select **Preferred** for both credentials and click **Submit**.
 
-16. You will see the pop-up window for **Corrective action**.
+18. You will see the pop-up window for **Corrective action**.
 
       ![Event Details](images/corrective-action-submitt.png " ")
 
       Click to view execution details.  
 
-17. You will see that the corrective action to revoke the DBA role job completed successfully.
+19. You will see that the corrective action to revoke the DBA role job completed successfully.
 
     ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
-18. Navigate to ***Targets >> Databases***.
+20. Navigate to ***Targets >> Databases***.
 
     ![Navigate to result](images/target-databases.png  " ")
 
-19. Select **hr.subnet.vcn.oraclevcn.com_FINANCE** in the Name section.
+21. Select **hr.subnet.vcn.oraclevcn.com_FINANCE** in the Name section.
 
     ![Navigate to result](images/select-pluggable-pdb.png  " ")
 
@@ -398,7 +433,7 @@ In the **Compliance Summary** panel, select Standards tab
 
     ![Navigate to result](images/dbs-pdb-page.png " ")
 
-20. Click on ***Oracle Database >> Configuration >> Latest***.
+22. Click on ***Oracle Database >> Configuration >> Latest***.
 
     ![Navigate to result](images/db-configuration-latest.png  " ")
 
@@ -408,27 +443,27 @@ In the **Compliance Summary** panel, select Standards tab
 
     Click **Refresh**.
 
-21. You will see that **Refresh Processing** will take about few minutes.
+23. You will see that **Refresh Processing** will take about few minutes.
 
     ![Latest Configuration](images/configuration-refresh-pdb.png  " ")
 
-22. Navigate to ***Enterprise >> Compliance >> Results***.
+24. Navigate to ***Enterprise >> Compliance >> Results***.
 
     ![Latest Configuration](images/navigate-results.png  " ")
 
-23. You will see **Compliance Results**, and the number of violations reduced from **107 to 106**.
+25. You will see **Compliance Results**, and the number of violations reduced from **107 to 106**.
 
     ![Compliance Results](images/cis-compliance-violations-results.png  " ")
 
     Click on the **Compliance Standards** section.
 
-24. You will see **Compliance Standards Results** in detail.
+26. You will see **Compliance Standards Results** in detail.
 
     See that the violation is "0", "Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE' " (Compliance Standard Rule) has been successfully remediated through automated corrective action.
 
     ![Compliance Results](images/cis-pdb-compliance-remeidiated.png  " ")
 
-25. Compliance Management also provides an option to have a dashboard view of the compliance summary against all the associated targets.
+27. Compliance Management also provides an option to have a dashboard view of the compliance summary against all the associated targets.
 
     Navigate to ***Enterprise >> Compliance >> Dashboard***
 
@@ -438,7 +473,7 @@ In the **Compliance Summary** panel, select Standards tab
 
     ![Compliance Dashboard](images/compliance-dashboard-count.png  " ")
 
-26. Click on **Report** to generate a comprehensive compliance report for CIS compliance standard and its associated pluggable database targets.
+28. Click on **Report** to generate a comprehensive compliance report for CIS compliance standard and its associated pluggable database targets.
 
     ![Compliance Report](images/cis-standard-report1.png  " ")
 
