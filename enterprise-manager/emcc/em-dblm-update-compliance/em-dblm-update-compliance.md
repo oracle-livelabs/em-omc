@@ -287,13 +287,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
-    ![Navigate to result](images/navigate-to-dashboard.png " ")
+    ![Navigate to result](images/navigated-dashboard.png " ")
 
-    **At this point, all CIS security controls in the CIS benchmark is getting processed, will take approximately 4 minutes to complete**.
+    **At this point, all CIS security controls in the CIS benchmark is getting processed, will take approximately few minutes to complete**.
 
     Keep refresh the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
-    ![Navigate to result](images/complaince-dashboard-results.png " ")
+    ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
     In this dashboard, you can explore each dashlet:
 
@@ -309,7 +309,10 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Summary: Comprehensive overview systems compliance. Summarizes the compliance status of Compliance standards results, key metrics and indicators like displays average compliance scores, violation counts, and remediation status for these high-value assets. Facilitates targeted compliance efforts to ensure critical systems meet required compliance standards, enhancing overall IT governance.**
 
-7. In the **Compliance Summary** panel, select Standards tab
+7. Compliance Results Analysis
+
+
+In the **Compliance Summary** panel, select Standards tab
 
     Select **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database with critical violations along with warning and minor warning**.
 
