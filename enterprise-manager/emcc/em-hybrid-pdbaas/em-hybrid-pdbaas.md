@@ -56,12 +56,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![Navigate to Security](images/navigate-to-security.png " Navigate to Security ")
 
-    The "Developer" role you see has been pre-created. This is the role which will be attached to the SSA USER( CYRUS) which will be used in this Demo. 
+    The "Developer" role you see has been pre-created. This is the role which will be attached to the SSA USER( CYRUS) which will be used in this Demo.
+
     Click on the "Developer" role to view more details. 
     
     View the target and resource privileges associated with this role.  You will also see a user 'Cyrus' is already associated to this role. 
 
-    ![SSA-Role](images/ssa-role.png " SSA Role ") 
+ 
+    ![SSA-Role](images/ssa-role.png " SSA Role " )
 
     Click 'OK'
 
