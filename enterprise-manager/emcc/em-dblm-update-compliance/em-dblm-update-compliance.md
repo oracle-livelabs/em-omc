@@ -335,7 +335,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 8. Click on **Critical**, you will see the Critical Violations window having Target Name, Target Type as Pluggable Database, and Standard Name as CIS benchmark and Report.
 
-    ![Compliance Summary](images/non-compliant-target-critical-window.png " ")
+    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
     Click on hr.subnet.vcn.Oraclevcn.com_FINANCE icon.
 
