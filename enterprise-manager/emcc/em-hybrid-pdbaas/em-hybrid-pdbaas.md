@@ -61,7 +61,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     
     View the target and resource privileges associated with this role.  You will also see a user 'Cyrus' is already associated to this role. 
 
-    ![SSA-Role](images/ssa-role-1.png " SSA Role ") 
+    ![SSA-Role](images/ssa-role1.png " SSA Role ") 
 
     Click 'OK'
 
@@ -73,11 +73,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     
     Click 'CYRUS'
 
-    ![Choose-Cyrus-User.png](images/choose-cyrus-user-1.png " Choose-Cyrus-User.png ") 
+    ![Choose-Cyrus-User.png](images/choose-cyrus-user1.png " Choose-Cyrus-User.png ") 
 
     You can see here the "DEVELOPER" role which we reviewed earlier is also attached to the "Cyrus" user. You can also view the Target privileges and resource privileges.
     
-    ![cyrus-user-details](images/cyrus-user-details-1.png " cyrus-user-detail ") 
+    ![cyrus-user-details](images/cyrus-user-details1.png " cyrus-user-detail ") 
 
     Click 'Close'. 
 
@@ -107,7 +107,7 @@ In  this task we will build all the necessary componets required in setting up P
 
     Click Next
 
-    ![PaaSzoneDetails](images/paaszonedetails.png "PaaSzoneDetails")
+    ![PaaS-zone-Details](images/paas-zone-details.png "PaaS-zone-Details")
 
 5. In the Members page  click on "Add" . 
     From the pop-up dialog box Choose 'emcc.marketplace' and click on "select". 
