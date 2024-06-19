@@ -60,6 +60,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click on the "Developer" role to view more details. 
     
     View the target and resource privileges associated with this role.  You will also see a user 'Cyrus' is already associated to this role. 
+
     ![SSA-Role](images/ssa-role-1.png " SSA Role ") 
 
     Click 'OK'
@@ -71,9 +72,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![Navigate-to-security](images/demo-admin-user.png " Navigate-to-security ")  
     
     Click 'CYRUS'
+
     ![Choose-Cyrus-User.png](images/choose-cyrus-user-1.png " Choose-Cyrus-User.png ") 
 
     You can see here the "DEVELOPER" role which we reviewed earlier is also attached to the "Cyrus" user. You can also view the Target privileges and resource privileges.
+    
     ![cyrus-user-details](images/cyrus-user-details-1.png " cyrus-user-detail ") 
 
     Click 'Close'. 
