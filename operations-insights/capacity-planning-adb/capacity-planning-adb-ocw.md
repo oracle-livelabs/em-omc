@@ -140,8 +140,9 @@ This lab assumes you have completed the following labs:
 
       A new pop up will appear with the AutoML forecasting charts loaded. It will state the training period and the selected forecast algorithms for maximum usage and average usage. The maximum and average confidence channels are also displayed within the chart. The confidence interval for these are 95%, meaning that 95% of future points are expected to fall within this radius from the forecast.
 
-      ![Left Pane](./images/automl-database.png " ")           
- 
+      ![Left Pane](./images/automl-database.png " ")
+
+      Click **Close** to close the **AutoML forecasting** pop-up and return to **Database CPU** page.    
 
 15.  Click **Aggregate** on the top and from **Grouping** select **Database Type**.
 
