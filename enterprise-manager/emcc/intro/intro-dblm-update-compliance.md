@@ -1,16 +1,13 @@
 # Introduction
 ## About this Workshop
-
-This workshop provides a fully configured and functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
-- The VM for this workshop comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.8, 19.17, 19.18 and 19.23
-- The environment deploys and starts up automatically in ~20 minutes
-- In this workshop, you will experience using the Fleet UI to patch multiple Oracle targets using the Oracle Enterprise Manager. This new UI was introduced in Enterprise Manager 13.5 RU1
-
+The Database Configuration and Compliance Management is a fully functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
+- This Workshop VM comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.8, 19.17, 19.18 and 19.23
+- It's easy and quick to deploy with everything starting automatically in under 20 minutes
 
 *Estimated Time:* 60 minutes
 
 ## About Oracle Enterprise Manager
-Oracle Enterprise Manager is Oracle’s on-premises management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
+Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
 
 Join Oracle's ***Wim Coekaerts***, *senior vice president of software development*, as he describes key innovations delivered in Oracle Enterprise Manager to help customers easily migrate their databases to the cloud and simplify management of hybrid IT environments
 
@@ -21,12 +18,13 @@ Join Oracle's ***Wim Coekaerts***, *senior vice president of software developmen
 Labs under this workshop are covered by the following Management Pack.
 - Database Lifecycle Management Pack
 
-###  Objectives
-Database Fleet Maintenance is an end-to-end automated solution for patching and upgrade of Oracle Database. Fleet Maintenance enables DBAs to automate patching and upgrade of wide range of DB Configurations including Oracle RAC environments with Data Guard Standby. The following are covered in this workshop:
-* Detect Configuration Pollution
-* Patch a Database target using a Gold Image
-    - All Pluggable Databases in that Container Database will automatically get patched
-    - Rollback and Cleanup
+### Content
+Oracle Database Compliance and Drift Management including configuration and security compliance management of managed targets. The following are covered in this workshop:
+- Analyze, Increase standardization, reduce number of different configuration sets
+- Execute a one-time comparison to compare the latest reference configuration to one or more targets to determine the configuration differences
+- Continuous drift monitoring of multiple targets against a reference target for initialization parameters using customized configuration monitoring template
+- Run a review aggregated security compliance framework and standard for Oracle Database 12c and Oracle Host targets
+- Host security compliance using custom compliance standard
 
 ### Additional Workshop Supported Use Cases
 
@@ -46,18 +44,11 @@ For additional Enterprise Manager use cases, see below and visit [LiveLabs](http
 - Use SQL Performance Analyzer Optimizer to gather statistics for validation
 - Use Database Workload Replay to run real workload against your changes for additional validation
 
-#### 3. Database Fleet Maintenance - Upgrade
+#### 4. Database Fleet Maintenance - Upgrade
 * Detect Configuration Pollution
 * Upgrade Oracle DB Software at scale with minimal downtime
     - All Pluggable Databases in that Container Database will automatically get upgraded
     - Cleanup
-
-#### 4. Compliance and Drift Management
-- Analyze, Increase standardization, reduce number of different configuration sets
-- Execute a one-time comparison to compare the latest reference configuration to one or more targets to determine the configuration differences
-- Continuous drift monitoring of multiple targets against a reference target for initialization parameters using customized configuration monitoring template
-- Run a review aggregated security compliance framework and standard for Oracle Database 12c and Oracle Host targets
-- Host security compliance using custom compliance standard
 
 #### 5. Job System Automation
 * Understand how to create an OS Command Job
@@ -80,6 +71,11 @@ For additional Enterprise Manager use cases, see below and visit [LiveLabs](http
 - View the hierarchy of an existing Administrator Group
 - Review out-of-the-box incident rules shipped with Enterprise Manager
 
+#### 8. Deploy and Manage Oracle Databases with Ansible and Enterprise Manager
+- Install and configure Ansible to work with Oracle Enterprise Manager 13c
+- Review Oracle Enterprise Manager DBaaS setup for Pluggable Databases
+- Provision, resize, shutdown, start and delete a Pluggable Database using Ansible playbooks and EM's DBaaS capabilities
+
 ## Learn More
 Managing Your Hybrid Database Fleet
 [](youtube:TUaAweMX3S4)
@@ -96,7 +92,8 @@ Drive Your Autonomous Future with Oracle Enterprise Manager
 - [Enterprise Manager Licensing Guide](https://www.oracle.com/pls/topic/lookup?ctx=en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5&id=OEMLI-GUID-7B2095D3-4E88-4346-9566-638219FF1130)
 - [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
 
+
 ## Acknowledgements
 - **Author** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Contributors** - Dave Le Roy, Pankaj Chandiramani, Shefali Bhargava - Enterprise Manager Product Management
-- **Last Updated By/Date** - Romit Acharya - Enterprise Manager Product Management, January 2022
+- **Contributors** - Dave Le Roy, Harish Niddagatta - Enterprise Manager Product Management
+- **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022
