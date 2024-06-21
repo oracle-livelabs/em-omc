@@ -62,25 +62,25 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
     Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
 
-    ![inventory-and-usage-detail-page](images/inventory-and-usage-detail-page.png " inventory-and-usage-detail-page ")
+    ![inventory-and-usage-details-page](images/inventory-and-usage-details-page.png " inventory-and-usage-details-page ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-    ![em-compliance-configs-alldb-page](images/em-compliance-configs-alldb.png " em-compliance-configs-alldb-page ")
+    ![em-compliance-config-alldbs-page](images/em-compliance-config-alldbs.png " em-compliance-config-alldbs-page ")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDBs 19c highlighted above page.
 
 5.  **Table View** can be visible by selecting and adjusting the grid line on the page as shown below.
 
-    ![table-view-grid-line-selects-page](images/table-view-grid-line-selects.png " table-view-grid-line-selects-page ")
+    ![table-review-grid-line-page](images/table-review-grid-line.png " table-review-grid-line-page ")
 
     Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
-    ![em-inventory-usage-detail-page](images/em-inventory-usage-detail.png " em-inventory-usage-detail-page ")
+    ![inventory-usage-detail-page](images/inventory-usage-detail.png " inventory-usage-detail-page ")
 
 6. Click on Table View, further details to explore.
 
-    ![em-inventory-usage-detail-table_select-page](images/em-inventory-usage-detail-table_select.png " em-inventory-usage-detail-table_select-page ")  
+    ![em-inventory-usage-detail-table-select-page](images/em-inventory-usage-detail-table-select.png " em-inventory-usage-detail-table-select-page ")  
 
     Click **Close**.
 
@@ -96,11 +96,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 8.  Inventory usage and Details can be exported for offline further reviews and analysis.
 
-    ![em-inventory-usage-detail-export-summary-page](images/em-inventory-usage-detail-export-summary.png " em-inventory-usage-detail-export-summary-page ")
+    ![em-inventory-detail-export-summary-page](images/em-inventory-detail-export-summary.png " em-inventory-detail-export-summary-page ")
 
     These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
 
-    ![em-ecm-inv-usage-detail-excel-file](images/em-ecm-inv-usage-detail-excel-file.png " em-ecm-inv-usage-detail-excel-file ")  
+    ![em-ecm-inv-usage-detail-page](images/em-ecm-inv-usage-detail.png " em-ecm-inv-usage-detail ")  
 
 ## Task 2: One-Time Database Comparison
 
