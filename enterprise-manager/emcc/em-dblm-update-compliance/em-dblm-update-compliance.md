@@ -35,191 +35,219 @@ In this lab you will perform the following steps:
 
 ## Task 1: Assess patch recommendation and create gold image
 
-In this task, we will review patch recommendations for existing gold images and create a new version based on those recommendations.
+In this task, you will review patch recommendations for existing gold images and create a new version based on those recommendations.
 
-1. Login to Enterprise Manager as user - emadmin and password - welcome1
 
-![](images/em-login.png "em-login")
+1. Login to Enterprise Manager as user - emadmin. Copy and paste or type in the following username and password credentials into the fields.
+
+
+    ```
+    Username: <copy>emadmin</copy>
+    ```
+
+    ```
+    Password: <copy>welcome1</copy>
+    ```
+
+   ![](images/em-login.png "em-login")
 
 2. Once logged in, navigate to ***Targets >> Databases***  
 
-![](images/em-navig1.png "em-navig1")
+    ![](images/em-navig1.png "em-navig1")
 
-   and then ***Administration >> Fleet Maintenance Hub***
+    and then ***Administration >> Fleet Maintenance Hub***
 
-![](images/em-navig2.png "em-navig2")
+   ![](images/em-navig2.png "em-navig2")
 
 3. Fleet Maintenance Hub is one stop place for end to end patch assessment and performing patching operation.
 
-In the top right corner, you see the status of ***Last Patch Recommendation Update***. If a date is shown below it, the patch recommendation was executed on that date.
+    ![](images/em-hub.png "em-hub")
+
+    In the top right corner, you see the status of ***Last Patch Recommendation Update***. If a date is shown below it, the patch recommendation was executed on that date.
 
 <!--
 To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/downloading-patch-recommendations-and-patches.html).
 -->
 
-![](images/em-hub.png "em-hub")
+
 <!--
    To successfully complete this lab, do not upload any new patch catalogs or enter your MOS credentials as described in the above documentation. Doing so will generate new recommendations that may differ from those in the upcoming sections.
 -->
 
-4. click on Tile 2 of the Fleet Maintenance Hub, referred to as Patch Recommendations for Images.
 
-In this tile, you can review the health of your gold images. If a gold image is shown green ( listed under up to date ), that suggests that the particular gold image is healthy and has all recommended patches. This image should be used for patching or upgrade operation.
+4. Click on Tile 2 of the Fleet Maintenance Hub, referred to as Patch Recommendations for Images.
 
-Similarly, if a gold image is shown red ( listed under Images with patch recommendations ), that suggests that the particular gold image lacks critical recommended patches and should not be used for patching or upgrade operation. Administrator should create a new version such images.
+    In this tile, you can review the health of your gold images. If a gold image is shown green ( listed under up to date ), then that particular gold image is healthy and contains all recommended patches. This image should be used for patching or upgrade operation.
 
-![](images/tile2.png "hub-tile2")
+    Similarly, if a gold image is shown red ( listed under Images with patch recommendations ), then that suggests that the particular gold image lacks critical recommended patches and should not be used for patching or upgrade operation.
 
-Here, we see that goldimages - ***19cDB-Linux-x64-ERP*** has two patch recommendations, while ***19cDB-Linux-x64-APPS*** has a green checkmark. This indicates that 19cDB-Linux-x64-ERP should have a new version that includes the two recommended patches, whereas 19cDB-Linux-x64-APPS is up to date and can be used for patching.
+    Administrator should create a new version such images.
+
+    ![](images/tile2.png "hub-tile2")
+
+    Here, we see that goldimages - ***19cDB-Linux-x64-ERP*** has two patch recommendations, while ***19cDB-Linux-x64-APPS*** has a green checkmark.
+
+    This indicates that 19cDB-Linux-x64-ERP should have a new version that includes the two recommended patches, whereas 19cDB-Linux-x64-APPS is up to date and can be used for patching.
+
+    For this lab, we will use the ***19cDB-Linux-x64-APPS*** image.
 
 <!--
 Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand the steps involved in refreshing a gold image.
 -->
 
-For this lab, we will use the ***19cDB-Linux-x64-APPS*** image.
+5. In the next few steps, we will use the Fleet Maintenance Hub to refresh gold image 19cDB-Linux-x64-ERP.
 
-5. In the next few steps, we will use the Fleet Maintenance Hub to refresh 19cDB-Linux-x64-ERP.
+    While the refresh process is running, to complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases.
 
-While the refresh process is running, to complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases.
+6. Let's refresh the gold image - ***19cDB-Linux-x64-ERP***
 
-6. Let's refresh the gold image.
+    As observed in step 4, ***19cDB-Linux-x64-ERP*** has two patch recommendations.
 
-As observed in step 4, ***19cDB-Linux-x64-ERP*** has two patch recommendations.
+    ![](images/patch-recommendation.png "patch-recommendation")
 
-![](images/patch-recommendation.png "patch-recommendation")
+    Click on the numeric value 2.
 
-Click on the numeric value 2.
+    A new slideout will appear.
 
-A new slideout will appear.
-
-![](images/patch-slideout.png "slideout")
+    ![](images/patch-slideout.png "slideout")
 
 7. The next step is to create a new version in 19cDB-Linux-x64-ERP that will include the recommended patches.
-Close the slideout.
-Click on the ***"Create New Version"*** link under the Patch Recommendation column. Alternatively, click on the menu under Actions and create a new version.
-![](images/create-version.png "create version")
+    Close the slideout.
+    ![](images/create-version.png "create version")
+    Click on the ***"Create New Version"*** link under the Patch Recommendation column.
+    Alternatively, click on the menu under Actions and create a new version.
 
 8. In the new window, we need to provide source details, which act as input for version creation and version details.
 
-In the left-hand section, we first select the Oracle Home, which will be used as the source Oracle Home.
+    In the left-hand section, we first select the Oracle Home, which will be used as the source Oracle Home.
 
-![](images/version-options.png "options")
+    ![](images/version-options.png "options")
 
-- Select Oracle Home.
-  1. Click on the Select Oracle Home button. In the new screen select the Oracle Home ending with ***3383***.
-  2. Select Include Patches.
-  3. Select one of the radio buttons. You can either choose to clone the above selected Oracle Home, apply recommended patches to the cloned Oracle Home, and then use this home to create a new version. Alternatively, you can select the option to patch the Oracle Home and use it to create a new version.
-  We will select the latter option, as shown in the image.
+    - Select Oracle Home.
+      1. Click on the Select Oracle Home button. In the new screen select the Oracle Home ending with ***3383***.
+      2. Select Include Patches.
+      3. Select one of the radio buttons. You can either choose to clone the above selected Oracle Home, apply recommended patches to the cloned Oracle Home, and then use this home to create a new version. Alternatively, you can select the option to patch the Oracle Home and use it to create a new version.
+      We will select the latter option, as shown in the image.
 
-- Under Work Directory, provide location where logs will be created. You may enter location as ***/tmp/u01***
-- Credentials - Provide Normal and Privileged Credentials to complete this operation.
+    - Under Work Directory, provide location where logs will be created. You may enter location as ***/tmp/u01***
+    - Credentials - Provide Normal and Privileged Credentials to complete this operation.
 
-For Normal Host credentials, from the drop down select ***ORACLE***.
+    For Normal Host credentials, from the drop down select ***ORACLE***.
 
-For Privileged Host credentials, from the drop down select ***ROOT***.
+    For Privileged Host credentials, from the drop down select ***ROOT***.
+
+    In the right hand section, provide
+    - New version name that we are creating. You may enter ***v19.23DBRU***
+    - Select Storage options. This will determine the source and location where the new version will be saved. We will select the default values as shown in the image.
 
 
-In the right hand section, provide
-- New version name that we are creating. You may enter ***v19.23DBRU***
-- Select Storage options. This will determine the source and location where the new version will be saved. We will select the default values as shown in the image.
-
-
-Click Next.
+    Click ***Next***.
 
 9. In this screen, select the two patches that we have already downloaded and uploaded in the software library.
 
-![](images/rec-patches.png "rec-patches")
-Click Next.
+    ![](images/rec-patches.png "rec-patches")
+    Click ***Next***.
 
-10. On the next page, review the selections that we made on the previous screen. Then, click on "Submit" to initiate the operation to create a new version.
-![](images/submit-version.png "submit-version")
+10. In the next page, review the selections that we made on the previous screen. Then, click on ***Submit*** to initiate the operation to create a new version.
+    ![](images/submit-version.png "submit-version")
 
 11. Once you submit, a new Deployment Procedure (DP) is initiated. Click on the DP name to review the steps.
-![](images/DP.png "DP")
+    ![](images/DP.png "DP")
 
-lets stay on this page for 2 minutes.
+    lets stay on this page for 2 minutes.
 
-Note: The submitted Deployment Procedure above may fail. If you encounter the error below, click on "Ignore" and select "OK" in the confirmation window.
-![](images/error-DP.png "error-DP")
+    Note: The submitted Deployment Procedure above may fail. If you encounter the error below, click on "Ignore" and select "OK" in the confirmation window.
+    ![](images/error-DP.png "error-DP")
 
-However, to complete this lab, we will proceed to the next step.
+    However, to complete this lab, we will proceed to the next step.
 
 ## Task 2: Secure databases by updating with new gold image
 
-In this task, we will perform Pluggable Database patching. Lets navigate to Databases Homepage, by clicking on ***Targets >> Databases***  
+In this task, we will perform Pluggable Database patching.
 
-![](images/em-navig11.png "em-navig1")
+1. Lets navigate to Databases Homepage, by clicking on ***Targets >> Databases***
+   ![](images/em-navig11.png "em-navig1")
 
-In this scenario, we will unplug the ***Finance PDB*** (associated with the Container database - sales.subnet.vcn.oraclevcn.com) and plug it into a higher version CDB, ***hr.subnet.vcn.oraclevcn.com***. Currently, Finance is at version 19.17, while HR is at version 19.23.
+    In this scenario, we will unplug the ***Finance PDB*** (associated with the Container database - sales.subnet.vcn.oraclevcn.com) and plug it into a higher version CDB, ***hr.subnet.vcn.oraclevcn.com***.
+    Currently, Finance is at version 19.17, while HR is at version 19.23.
 
-![](images/pre-update.png "pre-update")
+    ![](images/pre-update.png "pre-update")
 
-Lets complete below steps to perform the pdb patching.
+    Lets complete below steps to perform the pdb patching.
 
-1. Subscribe sales CDB to goldimage ***19cDB-Linux-x64-APPS***.
+2. Subscribe sales CDB to goldimage ***19cDB-Linux-x64-APPS***.
 
-Navigate to Fleet Maintenance Hub, by clicking on ***Administration >> Fleet Maintenance Hub***
+    Navigate to Fleet Maintenance Hub, by clicking on ***Administration >> Fleet Maintenance Hub***
 
-![](images/em-navig2.png "em-navig2")
-Under the "Target Subscription" tab in the Fleet Maintenance Hub, follow these steps:
+    ![](images/em-navig2.png "em-navig2")
 
-- Click on the Subscribe button.
-- Select filter 19 under Release.
-- From the dropdown, select the goldimage - 19cDB-Linux-x64-APPS.
-- From the list of databases, select sales.subnet.vcn.oraclevcn.com.
-- Click on "Subscribe" at the top right corner.
+    Under the "Target Subscription" tab in the Fleet Maintenance Hub, follow these steps:
 
-![](images/sales-subscribe.png "subscribe")
+    - Click on the ***Subscribe*** button.
+    - Select filter 19 under Release.
+    - From the dropdown, select the goldimage - ***19cDB-Linux-x64-APPS***.
+    - From the list of databases, select ***sales.subnet.vcn.oraclevcn.com***.
+    - Click on ***Subscribe*** at the top right corner.
 
-Upon completion, click on "Close".
+    ![](images/sales-subscribe.png "subscribe")
 
-2. Navigate to Tile 3 - ***Target Patch Compliance*** in the Fleet Maintenance Hub.
-![](images/tile3.png "tile3")
+    Upon completion, click on ***Close***.
 
-In tile 3, we see that the sales CDB is associated with goldimage ***19cDB-Linux-x64-APPS***.
-Under Target Compliance columns, we see that the CDB is drifted and needs to be patched. In this lab, we will perform a PDB level patching.
+3. Navigate to Tile 3 - ***Target Patch Compliance*** in the Fleet Maintenance Hub.
+    ![](images/tile3.png "tile3")
 
-Click on the menu under Actions for the sales CDB, and select "Update Pluggable Database". This will launch the operator UI of Fleet Maintenance.
+    In tile 3, we see that the sales CDB is associated with goldimage ***19cDB-Linux-x64-APPS***.
+    Under Target Compliance columns, we see that the CDB is drifted and needs to be patched. In this lab, we will perform a PDB level patching.
 
-3. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
-![](images/patching-ui1.png "patching-ui1")
-Select Finance pdb and click "Next".
+    Click on the menu under Actions for the sales CDB, and select "Update Pluggable Database". This will launch the operator UI of Fleet Maintenance.
 
-4. In this page, we will select relevant options and enter values wherever required.
+4. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
+    ![](images/patching-ui1.png "patching-ui1")
+    Select Finance pdb and click ***Next***.
 
-- Under Maintenance Task, select "Attach Existing 19cDB".
-- Under Attach Existing CDB, review the source CDB, which is sales.
-- Under Destination CDB, select HR.
-- Under credentials, select from the drop-down menu as per the image.
-- Under Work Directory, entre ***/u01/tmp***
-- Then, click "Next".
+5. In this page, we will select relevant options and enter values wherever required.
 
-![](images/patching-ui2.png "patching-ui2")
+    - Under Maintenance Task, select ***Attach Existing CDB***.
+    - Under Attach Existing CDB, review the source CDB, which is sales.
+    - Under Destination CDB, select HR.
+    - Under credentials, select values from the drop-down menu as per the image.
+        - Normal Host Credentials as ***ORACLE***
+        - Privileged Host Credentials as ***ROOT***
+        - SYSDBA Database Credentials as ***SYS_SALES***
+    - Under Work Directory, enter ***/u01/tmp***
+    - Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
 
-5. Click on "Validate" and then select "Quick Validation". Once you receive the successful validation message, click "Close" and then hit "Submit".
-![](images/patching-ui3.png "patching-ui3")
+    ![](images/patching-ui2.png "patching-ui2")
 
-6. A new dialogue box will ask for the name of the deployment procedure to track the PDB patching. This unique name will allow you to track the operation. We have provided the name "Demo_update".
+    Click ***Next***.
 
-![](images/patching-ui4.png "patching-ui4")
+6. Click on ***Validate*** and then select ***Quick Validation***.
+    ![](images/patching-ui3.png "patching-ui3")
+    Once you receive the successful validation message, click ***Close*** and then hit ***Submit***.
 
-7. There are two Deployment Procedure submitted.
-- Attach Existing CDB
-- Update PDB
+7. A new dialogue box will ask for the name of the deployment procedure.
+    This unique name will allow you to track the operation. We have provided the name "Demo_update".
 
-Click on "Monitor Progress", which will open a new window.
-![](images/patching-ui5.png "patching-ui5")
+    ![](images/patching-ui4.png "patching-ui4")
 
-8. In the new page, under search, enter "Demo" so that you only see the two Deployment procedures associated with this lab.
-![](images/patching-ui6.png "patching-ui6")
+8. There are two Deployment Procedure submitted.
+    - Attach Existing CDB
+    - Update PDB
 
-We see that the Deployment procedure with the name "Attach" has completed successfully. Let's click on "Update" and review the steps performed.
-![](images/patching-ui7.png "patching-ui7")
+    Click on ***Monitor Progress***, which will open a new window.
+    ![](images/patching-ui5.png "patching-ui5")
 
-9. With both Deployment procedures completed successfully, let's go back to the databases homepage by navigating to Targets -> Databases.
-![](images/patching-ui8.png "patching-ui8")
+9. In the new page, under search, enter ***Demo*** so that you only see the two Deployment procedures associated with this lab.
+    ![](images/patching-ui6.png "patching-ui6")
 
-We see that the Finance PDB has moved out of the sales CDB and is now plugged into the HR CDB, running at version 19.23
+    We see that the Deployment procedure with the name "Attach" has completed successfully.
+    Let's click on "Update" and review the steps performed.
+    ![](images/patching-ui7.png "patching-ui7")
+
+9. With both Deployment procedures completed successfully, let's go back to the databases homepage by navigating to ***Targets -> Databases***.
+    ![](images/patching-ui8.png "patching-ui8")
+
+    We see that the Finance PDB has moved out of the sales CDB and is now plugged into the HR CDB, running at version 19.23
 
 Now that you have patched PDB with recommended patches, it is also important to elevate the security posture by putting in relevant security control and audit for compliance. The next step will help you gain understanding on how to complete the relevant steps.
 
