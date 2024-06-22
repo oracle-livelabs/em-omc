@@ -63,7 +63,7 @@ In this task, you will review patch recommendations for existing gold images and
 
     ![](images/em-hub.png "em-hub")
 
-    In the top right corner, you see the status of ***Last Patch Recommendation Update***. If a date is shown below it, the patch recommendation was executed on that date.
+    In the top right corner, you see the status of ***Last Patch Recommendation Update***. If a date is shown below it, then the patch recommendation was executed on that date.
 
 <!--
 To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/downloading-patch-recommendations-and-patches.html).
@@ -89,7 +89,7 @@ To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.o
 
     This indicates that 19cDB-Linux-x64-ERP should have a new version that includes the two recommended patches, whereas 19cDB-Linux-x64-APPS is up to date and can be used for patching.
 
-    For this lab, we will use the ***19cDB-Linux-x64-APPS*** image.
+    For this lab, we will use the ***19cDB-Linux-x64-APPS*** image to perform pdb patching.
 
 <!--
 Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand the steps involved in refreshing a gold image.
