@@ -81,7 +81,7 @@ To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.o
 
     Similarly, if a gold image is shown red ( listed under Images with patch recommendations ), then that suggests that the particular gold image lacks critical recommended patches and should not be used for patching or upgrade operation.
 
-    Administrator should create a new version such images.
+    Administrator should create a new version for such images.
 
     ![](images/tile2.png "hub-tile2")
 
@@ -95,7 +95,7 @@ To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.o
 Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand the steps involved in refreshing a gold image.
 -->
 
-5. In the next few steps, we will use the Fleet Maintenance Hub to refresh gold image 19cDB-Linux-x64-ERP.
+5. In the next few steps, we will use the Fleet Maintenance Hub to refresh gold image ***19cDB-Linux-x64-ERP***.
 
     While the refresh process is running, to complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases.
 
@@ -112,9 +112,13 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
     ![](images/patch-slideout.png "slideout")
 
 7. The next step is to create a new version in 19cDB-Linux-x64-ERP that will include the recommended patches.
+
     Close the slideout.
+
     ![](images/create-version.png "create version")
+
     Click on the ***"Create New Version"*** link under the Patch Recommendation column.
+
     Alternatively, click on the menu under Actions and create a new version.
 
 8. In the new window, we need to provide source details, which act as input for version creation and version details.
@@ -124,17 +128,16 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
     ![](images/version-options.png "options")
 
     - Select Oracle Home.
-      1. Click on the Select Oracle Home button. In the new screen select the Oracle Home ending with ***3383***.
+      1. Click on the ***Select Oracle Home*** button. In the new screen select the Oracle Home ending with ***3383***.
       2. Select Include Patches.
       3. Select one of the radio buttons. You can either choose to clone the above selected Oracle Home, apply recommended patches to the cloned Oracle Home, and then use this home to create a new version. Alternatively, you can select the option to patch the Oracle Home and use it to create a new version.
-      We will select the latter option, as shown in the image.
+      We will select the latter option - ***Patch the selected Oracle Home***, as shown in the image.
 
     - Under Work Directory, provide location where logs will be created. You may enter location as ***/tmp/u01***
     - Credentials - Provide Normal and Privileged Credentials to complete this operation.
 
-    For Normal Host credentials, from the drop down select ***ORACLE***.
-
-    For Privileged Host credentials, from the drop down select ***ROOT***.
+        For Normal Host credentials, from the drop down select ***ORACLE***.
+        For Privileged Host credentials, from the drop down select ***ROOT***.
 
     In the right hand section, provide
     - New version name that we are creating. You may enter ***v19.23DBRU***
@@ -154,7 +157,7 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
 11. Once you submit, a new Deployment Procedure (DP) is initiated. Click on the DP name to review the steps.
     ![](images/DP.png "DP")
 
-    lets stay on this page for 2 minutes.
+    lets stay on the DP page for 2 minutes.
 
     Note: The submitted Deployment Procedure above may fail. If you encounter the error below, click on "Ignore" and select "OK" in the confirmation window.
     ![](images/error-DP.png "error-DP")
@@ -165,10 +168,11 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
 
 In this task, we will perform Pluggable Database patching.
 
-1. Lets navigate to Databases Homepage, by clicking on ***Targets >> Databases***
+1. Lets navigate to Databases Homepage, by clicking on ***Targets >> Databases***.
+
    ![](images/em-navig11.png "em-navig1")
 
-    In this scenario, we will unplug the ***Finance PDB*** (associated with the Container database - sales.subnet.vcn.oraclevcn.com) and plug it into a higher version CDB, ***hr.subnet.vcn.oraclevcn.com***.
+    In this scenario, we will unplug the ***Finance PDB*** (associated with the Container database - ***sales.subnet.vcn.oraclevcn.com***) and plug it into a higher version CDB, ***hr.subnet.vcn.oraclevcn.com***.
     Currently, Finance is at version 19.17, while HR is at version 19.23.
 
     ![](images/pre-update.png "pre-update")
@@ -181,10 +185,10 @@ In this task, we will perform Pluggable Database patching.
 
     ![](images/em-navig2.png "em-navig2")
 
-    Under the "Target Subscription" tab in the Fleet Maintenance Hub, follow these steps:
+    In the Fleet Maintenance Hub, under the "Target Subscription" tab in Tile 1, follow these steps:
 
     - Click on the ***Subscribe*** button.
-    - Select filter 19 under Release.
+    - Select filter ***19*** under Release.
     - From the dropdown, select the goldimage - ***19cDB-Linux-x64-APPS***.
     - From the list of databases, select ***sales.subnet.vcn.oraclevcn.com***.
     - Click on ***Subscribe*** at the top right corner.
@@ -199,7 +203,7 @@ In this task, we will perform Pluggable Database patching.
     In tile 3, we see that the sales CDB is associated with goldimage ***19cDB-Linux-x64-APPS***.
     Under Target Compliance columns, we see that the CDB is drifted and needs to be patched. In this lab, we will perform a PDB level patching.
 
-    Click on the menu under Actions for the sales CDB, and select "Update Pluggable Database". This will launch the operator UI of Fleet Maintenance.
+    Click on the menu under Actions for the sales CDB, and select ***Update Pluggable Database***. This will launch the operator UI of Fleet Maintenance.
 
 4. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
     ![](images/patching-ui1.png "patching-ui1")
@@ -230,6 +234,12 @@ In this task, we will perform Pluggable Database patching.
 
     ![](images/patching-ui4.png "patching-ui4")
 
+    Copy and paste or type in the following into the Submission Procedure Name prefix.
+
+        ```
+        <copy>Demo_update</copy>
+        ```
+
 8. There are two Deployment Procedure submitted.
     - Attach Existing CDB
     - Update PDB
@@ -241,7 +251,7 @@ In this task, we will perform Pluggable Database patching.
     ![](images/patching-ui6.png "patching-ui6")
 
     We see that the Deployment procedure with the name "Attach" has completed successfully.
-    Let's click on "Update" and review the steps performed.
+    Let's click on the Deployment procedure with the name "Update" and review the steps performed.
     ![](images/patching-ui7.png "patching-ui7")
 
 9. With both Deployment procedures completed successfully, let's go back to the databases homepage by navigating to ***Targets -> Databases***.
