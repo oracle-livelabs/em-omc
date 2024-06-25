@@ -599,7 +599,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
-    ![hipaa-association-count-compliance-library-page](images/hipaa-association-count-compliance-library.png? " ahipaa-association-count-compliance-library-page ")
+    ![hipaa-association-count-compliance-library-page](images/hipaa-association-count-compliance-library.png " ahipaa-association-count-compliance-library-page ")
 
 14. If evaluation status **Enabled** and Transfer Status indicates **Successfully Done**, it means the compliance check is complete. Click the **Cancel** button.
 
@@ -607,7 +607,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
-    ![hipaa-compliance-dashboard-page](images/hipaa-compliance-dashboard.png " hipaa-compliance-dashboard-page ")
+    ![hipaa-compliance-dashboard-page](images/hipaa-compliance-dashboard.png? " hipaa-compliance-dashboard-page ")
 
 16. Compliance Dashboard populates:
 
