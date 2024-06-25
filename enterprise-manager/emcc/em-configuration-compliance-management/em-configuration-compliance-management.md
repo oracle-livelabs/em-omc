@@ -571,7 +571,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 7. Click on **Associate Targets** to associate a database target for this selected standard.
 
-    ![hipaa-compliance-library-associate-target-page](images/hipaa-compliance-library-associate-target.png " hipaa-compliance-library-associate-target-page ")
+    ![hipaa-compliance-lib-associate-target-page](images/hipaa-compliance-lib-associate-target.png " hipaa-compliance-lib-associate-target-page ")
 
 8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
