@@ -616,11 +616,11 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     Click on the number under the **Critical** column. to see details of the host's critical violations.
 
-    ![compliance-dashboard-summary-hipaa-ol-7-page](images/compliance-dashboard-summary-hipaa-ol-7.png? " compliance-dashboard-summary-hipaa-ol-7-page ")
+    ![compliance-dashboard-summary-hipaa-ol-7-page](images/compliance-dashboard-summary-hipaa-ol-7.png " compliance-dashboard-summary-hipaa-ol-7-page ")
 
 17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
-    ![critical-violations-hipaa-compliance-ol-7-page](images/critical-violations-hipaa-compliance-ol-7.png? " critical-violations-hipaa-compliance-ol-7-page ")
+    ![critical-violations-hipaa-compliance-ol-7-page](images/critical-violations-hipaa-compliance-ol-7.png " critical-violations-hipaa-compliance-ol-7-page ")
 
     Each critical rule violations status can be seen on this pop-up page in detail.
 
