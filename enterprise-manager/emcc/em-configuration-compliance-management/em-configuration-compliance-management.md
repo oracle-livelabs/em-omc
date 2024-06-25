@@ -595,7 +595,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 12. Once, the Compliance standard host target is been submitted you will be taken to a Compliance Library's page, which shows Compliance Standard is submitted for processing.
 
-    ![information-hipaa-compliance-standard-confirm-page](images/information-hipaa-compliance-standard-confirm.png? " information-hipaa-compliance-standard-confirm-page ")
+    ![information-hipaa-compliance-standard-confirm-page](images/information-hipaa-compliance-standard-confirm.png " information-hipaa-compliance-standard-confirm-page ")
 
 13. To check if the compliance processing is complete, click the target number in the **Association Count** column.
 
