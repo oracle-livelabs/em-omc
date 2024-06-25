@@ -289,17 +289,17 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Navigate to result](images/navigated-dashboard.png " ")
 
-    **At this point, all CIS security controls in the CIS benchmark is getting processed, will take approximately few minutes to complete**.
+    At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
-    Keep refresh the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
+    Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
     ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
     In this dashboard, you can explore each dashlet:
 
-    **Targets Evaluated: Provides a quick overview of how many databases, middleware, and other components have been assessed for compliance. Helps gauge the scope of compliance monitoring, shows the extent of compliance evaluation across the IT environment**
+    Targets Evaluated: Provides a quick overview of how many databases, middleware, and other components have been assessed for compliance. Helps gauge the scope of compliance monitoring, shows the extent of compliance evaluation across the IT environment**
 
-    **Violation and Errors: Visual representation of compliance status, segments the pie chart into compliant, warning, and non-compliant statuses. Highlights the proportion of violations and errors, allows quick identification of areas needing attention.**
+    Violation and Errors: Visual representation of compliance status, segments the pie chart into compliant, warning, and non-compliant statuses. Highlights the proportion of violations and errors, allows quick identification of areas needing attention.**
 
     **Open Security Incidents numbers: Displays current open security incidents. Includes target affected, severity, and remediation status. Facilitates timely resolution, helps prioritize and address security issues promptly**
 
@@ -307,21 +307,20 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Violations by Target type: Breakdown of violations by target type. Categorizes violations based on the type of target (e.g., databases, hosts, WebLogic server and more). Helps identify problematic areas,  pinpoints specific types of systems that are more prone to compliance issues.**
 
-    **Compliance Summary: Comprehensive overview systems compliance. Summarizes the compliance status of Compliance standards results, key metrics and indicators like displays average compliance scores, violation counts, and remediation status for these high-value assets. Facilitates targeted compliance efforts to ensure critical systems meet required compliance standards, enhancing overall IT governance.**
+    **Compliance Summary: Comprehensive overview systems compliance. Summarizes the compliance status of Compliance standards results, key metrics and indicators like displays average compliance scores, violation counts, and remediation status for these high-value assets. Facilitates targeted compliance efforts to ensure critical systems meet required compliance standards, enhancing overall IT governance.
 
-7. You will see Compliance Summary, in the Standards tab having **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**
+7. In the Compliance Summary, under standards tab you will see **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**
 
     ![Compliance Summary](images/compliance-summary.png  " ")
 
-    Compliance Summary Standards Analysis
 
-    **Compliant Targets: It identifies and displays all targets that meet the required compliance standards.**
+    **Compliant Targets:** It identifies and displays all targets that meet the required compliance standards.**
 
-    **Non-Compliant Targets: It highlights targets that fail to adhere to the required compliance standards.**
+    **Non-Compliant Targets:** It highlights targets that fail to adhere to the required compliance standards.**
 
-    **Critical: It marks targets with severe compliance issues that require immediate attention and remediation.**
+    **Critical:** It marks targets with severe compliance issues that require immediate attention and remediation.**
 
-    **Warning: It indicates targets with significant compliance concerns that need prompt corrective actions.**
+    **Warning:** It indicates targets with significant compliance concerns that need prompt corrective actions.**
 
     **Minor Warning: It shows targets with minor compliance issues that should be monitored and addressed as necessary.**
 

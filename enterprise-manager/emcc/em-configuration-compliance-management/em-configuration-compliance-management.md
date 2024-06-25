@@ -80,6 +80,8 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 6. Click on Table View, further details to explore.
 
+    ![em-inventory-usage-detail-table-select-page](images/test.png " em-inventory-usage-detail-table-select-page ")  
+
     ![em-inventory-usage-detail-table-select-page](images/em-inventory-usage-detail-table-select.png " em-inventory-usage-detail-table-select-page ")  
 
     Click **Close**.
@@ -553,7 +555,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
-    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
+    ![all_compliance-library-standards-page](images/all-compliance-library-standards.png " call_compliance-library-standards-page ")
 
 4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
