@@ -607,7 +607,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 15. Go to the **Compliance Dashboard** page to check the compliance posture.
 
-    ![hipaa-compliance-dashboard-page](images/hipaa-compliance-dashboard.png? " hipaa-compliance-dashboard-page ")
+    ![hipaa-compliance-dashboard-page](images/hipaa-compliance-dashboard.png " hipaa-compliance-dashboard-page ")
 
 16. Compliance Dashboard populates:
 
@@ -616,7 +616,7 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     Click on the number under the **Critical** column. to see details of the host's critical violations.
 
-    ![compliance-dashboard-summary-hipaa-ol-7-page](images/compliance-dashboard-summary-hipaa-ol-7.png " compliance-dashboard-summary-hipaa-ol-7-page ")
+    ![compliance-dashboard-summary-hipaa-ol-7-page](images/compliance-dashboard-summary-hipaa-ol-7.png?  " compliance-dashboard-summary-hipaa-ol-7-page ")
 
 17. Host's critical violations can be explored by clicking the **Target name** column arrow.
 
