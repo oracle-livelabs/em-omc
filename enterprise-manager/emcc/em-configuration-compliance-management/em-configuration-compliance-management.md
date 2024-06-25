@@ -407,9 +407,9 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
-    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
+    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " all_compliance-library-standards-page ")
 
-    Click on Caret Right Icon!("images/caret-search.png") search 
+    Click on Caret Right Icon ![Caret](images/caret-search.png " ")search
 
 4.  In the Compliance Standards tab, search for Compliance Standard by entering **CIS**
 and Applicate To drop down column choose **Database Instance** and click on **Search**.
