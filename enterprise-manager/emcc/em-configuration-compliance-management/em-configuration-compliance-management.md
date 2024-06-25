@@ -559,15 +559,15 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
-    ![hipaa-compliance-library-search-page](images/hipaa-compliance-library-search.png " hipaa-compliance-library-search-page")
+    ![hipaa-compliance-lib-search-page](images/hipaa-compliance-lib-search.png " hipaa-compliance-lib-search-page")
 
 5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
-    ![hipaa-compliance-library-show-details-page](images/hipaa-compliance-library-show-details.png " hipaa-compliance-library-show-details-page ")
+    ![hipaa-compliance-library-show-detail-page](images/hipaa-compliance-library-show-detail.png " hipaa-compliance-library-show-detail-page ")
 
 6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
-    ![compliance-standard-hipaa-ol-7-detail-page](images/compliance-standard-hipaa-ol-7-detail.png " compliance-standard-hipaa-ol-7-detail-page ")
+    ![compliance-standard-hipaa-ol-7-details-page](images/compliance-standard-hipaa-ol-7-details.png " compliance-standard-hipaa-ol-7-details-page ")
 
 7. Click on **Associate Targets** to associate a database target for this selected standard.
 
