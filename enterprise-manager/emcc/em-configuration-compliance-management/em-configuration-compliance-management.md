@@ -522,15 +522,20 @@ Click the **Cancel** button.
 
     ![cis-compliance-results-by-standard-rules-page](images/cis-compliance-results-by-standard-rules.png " cis-compliance-results-by-standard-rules-page ")
 
-    By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
+21. By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
 
     ![cis-compliance-results-by-standard-rules1-page](images/cis-compliance-results-by-standard-rules1.png " cis-compliance-results-by-standard-rules1-page ")
 
+    Click **Close**
+    
     Further, each violations event details, recommendations and remediations could be explored
 
     ![cis-compliance-results-by-standard-rules2-page](images/cis-compliance-results-by-standard-rules2.png " cis-compliance-results-by-standard-rules2-page ")
 
-  All of these will give you a CIS Compliance security posture of database target.
+    ![cis-compliance-results-logout-page](images/cis-compliance-results-logout-page.png " cis-compliance-results-logout-page ")  
+
+    <!-- All of these steps will give you a CIS Compliance security posture of database target. -->  
+    
 
 ## Task 5: Host Security Compliance
 
