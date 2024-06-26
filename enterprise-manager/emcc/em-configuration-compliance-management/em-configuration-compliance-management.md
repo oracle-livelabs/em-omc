@@ -494,7 +494,7 @@ Click the **Cancel** button.
 
     By clicking under Target Name.
 
-    ![cis-compliance-critical-violations-page](images/cis-compliance-critical-violations.png " cis-compliance-critical-violations-page ")
+    ![cis-compliance-critical-violations-page](images/compliance-dashboard-evaluation.png " cis-compliance-critical-violations-page ")
 
 18. Each rule name violated and rationale for the violation can be explored below, And also by clicking on Report.
 
