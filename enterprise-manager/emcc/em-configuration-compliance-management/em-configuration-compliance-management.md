@@ -409,16 +409,22 @@ A compliance standard rule is a specific test to determine if a configuration da
 
     ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " all_compliance-library-standards-page ")
 
-    Click on Caret Right Icon ![Caret](images/caret-search.png " ")search
+    Click on Caret Right Icon  ![caret](images/caret-search.png " ") search
 
 4.  In the Compliance Standards tab, search for Compliance Standard by entering **CIS**
 and Applicate To drop down column choose **Database Instance** and click on **Search**.
 
     ![search-compliance-library-database-instance-page](images/search-compliance-library-database-instance.png " search-compliance-library-database-instance-page ")
 
-5.  Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
+5.  Click on collapsable icon ![collapse](images/collapsed-search.png " ") search
+
+    ![library-page](images/compliance-library.png " compliance-library-page ")
+
+    Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
     ![choose-cis-compliance-library-page](images/choose-cis-compliance-library.png " choose-cis-compliance-library-page ")
+
+    Click on Collapsable search 
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard.
 
