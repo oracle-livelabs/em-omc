@@ -424,7 +424,6 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
     ![choose-cis-compliance-library-page](images/choose-cis-compliance-library.png " choose-cis-compliance-library-page ")
 
-    Click on Collapsable search 
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard.
 
@@ -479,9 +478,9 @@ Click the **Cancel** button.
 
     ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
 
-16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
+16. Go to the **Compliance >> Dashboard** page to check the CIS compliance posture. It takes about few minutes to show up in compliance dashboard results.
 
-    ![ccompliance-dashboard-page](images/ompliance-dashboard-summary-hipaa-ol-7.png?" compliance-dashboard-page ")
+    ![compliance-dashboard-page](images/compliance-results-dashboard.png" compliance-dashboard-page ")
 
   Under the Compliance Summary panel at the bottom below page:
 
