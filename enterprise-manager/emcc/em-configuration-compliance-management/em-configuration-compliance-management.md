@@ -478,7 +478,7 @@ Click the **Cancel** button.
 
     ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
 
-16. Go to the **Compliance >> Dashboard** page to check the CIS compliance posture. It takes about few minutes to show up in compliance dashboard results.
+16. Go to the **Compliance >> dashboard ** page to check the CIS compliance posture. It takes about few minutes to show up in compliance dashboard results.
 
     ![compliance-dashboard-page](images/compliance-results-dashboard.png" compliance-dashboard-page ")
 
