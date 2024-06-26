@@ -420,7 +420,7 @@ and Applicate To drop down column choose **Database Instance** and click on **Se
 
     ![library-page](images/compliance-library.png " compliance-library-page ")
 
-    Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
+6.   Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
     ![choose-cis-compliance-library-page](images/choose-cis-compliance-library.png " choose-cis-compliance-library-page ")
 
