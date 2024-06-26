@@ -514,7 +514,7 @@ Click the **Cancel** button.
 
     ![close-evaluate-cis-critical-violations-page](images/close-evaluate-cis-critical-violations.png " close-evaluate-cis-critical-violations-page ")  
 
-20. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
+20. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations of results.
 
     ![compliance-dashboard-cis-compliance-summary-page](images/compliance-dashboard-cis-compliance-summary.png " compliance-dashboard-cis-compliance-summary-page ")
 
