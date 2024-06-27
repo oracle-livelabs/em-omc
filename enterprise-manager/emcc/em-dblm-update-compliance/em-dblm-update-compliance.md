@@ -315,21 +315,23 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
-    Click on **Non-Compliant Targets**, you will see Non Compliant Targets window having the Target name, Last Evaluation Date, Compliance Score, and Report.
+    Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
     ![Compliance Summary](images/non-compliant-target.png " ")
 
     Click on 'x' to close.
 
-8. Click on **Critical**, and you will see the Critical Violations window, which contains the Target Name, Target Type as Pluggable Database, and Standard Name as CIS benchmark and Report
+8. Let us analyze the severity
+
+    Click on **Critical** number, you will see unique violations for this target.
 
     ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
-    Click on hr.subnet.vcn.Oraclevcn.com_FINANCE icon.
+    Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right  ![Caret-right](images/cis-caret-search.png " ") icon.
 
-    Explore the Critical Violations window thoroughly.
+    You will see the details of the evaluation.
 
-    It displays each rule violation along with the last evaluation date, rule name, remedy, and rationale.
+    You will get the comprehensive view of the violation.
 
     ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
@@ -337,15 +339,19 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Similarly, we can explore Warning and Minor Warning violations if they exist.
 
-9. Make sure to access by selecting the Standards tab in the **Compliance Summary**.
+9. Let us drill down to results.
 
-    Select **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database with 97 critical violations**.
+   Click on **Standards >> Name** and let us remediate one of the solution.
 
-    ![Navigate to result](images/compliance-standard-summary-violation.png " ")
+   You will see "97" violations number going down to "96".
 
-    Click on **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**.
+   ![Navigate to result](images/compliance-standard-summary-violation.png " ")
 
     You will be presented with the **Compliance Results**, including the target's violations against the selected standard, as well as its score and evaluation date.
+
+    You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
+
+    ![Validations](images/cis-compliance-pdb-controls.png " ")
 
     ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
@@ -373,9 +379,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click on 'Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database'.   
 
-    You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
-
-    ![Validations](images/cis-compliance-pdb-controls.png " ")
+    
 
 12. Verify the selected violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
 
