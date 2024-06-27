@@ -297,34 +297,23 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     In this dashboard, you can explore each dashlet:
 
-    Targets Evaluated: Provides a quick overview of how many databases, middleware, and other components have been assessed for compliance. Helps gauge the scope of compliance monitoring, shows the extent of compliance evaluation across the IT environment**
+    **Targets Evaluated:** Summarizes the number of databases, hosts, and Exdata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
 
-    Violation and Errors: Visual representation of compliance status, segments the pie chart into compliant, warning, and non-compliant statuses. Highlights the proportion of violations and errors, allows quick identification of areas needing attention.**
+    **Violation and Errors:**  A pie chart showing compliant, warning, and non-compliant statuses, highlighting the proportion of violations and errors for quick identification of areas needing attention.
 
-    **Open Security Incidents numbers: Displays current open security incidents. Includes target affected, severity, and remediation status. Facilitates timely resolution, helps prioritize and address security issues promptly**
+    **Open Security Incidents numbers:** Displays current open security incidents, including affected targets, severity, and remediation status for timely resolution and prioritization.
 
-    **Compliance Standard score Distribution: Visual display of compliance scores, shows the distribution of compliance scores across different targets or policies. Highlights overall compliance health. Gives a snapshot of the compliance performance, indicating which areas are doing well and which need improvement.**
+    **Compliance Standard score Distribution:** Shows the distribution of compliance scores across different targets or policies, highlighting overall compliance health and areas needing improvement.
 
-    **Compliance Violations by Target type: Breakdown of violations by target type. Categorizes violations based on the type of target (e.g., databases, hosts, WebLogic server and more). Helps identify problematic areas,  pinpoints specific types of systems that are more prone to compliance issues.**
+    **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
 
-    **Compliance Summary: Comprehensive overview systems compliance. Summarizes the compliance status of Compliance standards results, key metrics and indicators like displays average compliance scores, violation counts, and remediation status for these high-value assets. Facilitates targeted compliance efforts to ensure critical systems meet required compliance standards, enhancing overall IT governance.
+    **Compliance Summary:** Provides an overview of system compliance, summarizing compliance standards, key metrics like average compliance scores, violation counts, and remediation status, facilitating targeted efforts to meet compliance standards and enhance IT governance.
 
-7. In the Compliance Summary, under standards tab you will see **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**
+7. You will see Compliance Summary, Standards tab
 
     ![Compliance Summary](images/compliance-summary.png  " ")
 
-
-    **Compliant Targets:** It identifies and displays all targets that meet the required compliance standards.**
-
-    **Non-Compliant Targets:** It highlights targets that fail to adhere to the required compliance standards.**
-
-    **Critical:** It marks targets with severe compliance issues that require immediate attention and remediation.**
-
-    **Warning:** It indicates targets with significant compliance concerns that need prompt corrective actions.**
-
-    **Minor Warning: It shows targets with minor compliance issues that should be monitored and addressed as necessary.**
-
-    **Average Compliance Score: It provides an aggregate score representing the overall compliance level across all targets.**
+    Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
     Click on **Non-Compliant Targets**, you will see Non Compliant Targets window having the Target name, Last Evaluation Date, Compliance Score, and Report.
 
@@ -348,7 +337,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Similarly, we can explore Warning and Minor Warning violations if they exist.
 
-9.  Make sure to access by selecting the Standards tab in the **Compliance Summary**.
+9. Make sure to access by selecting the Standards tab in the **Compliance Summary**.
 
     Select **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database with 97 critical violations**.
 

@@ -532,6 +532,8 @@ Click the **Cancel** button.
 
     ![cis-compliance-results-by-standard-rules2-page](images/cis-compliance-results-by-standard-rules2.png " cis-compliance-results-by-standard-rules2-page ")
 
+    Click **Logout**
+
     ![cis-compliance-results-logout-page](images/cis-compliance-results-logout-page.png " cis-compliance-results-logout-page ")  
 
     <!-- All of these steps will give you a CIS Compliance security posture of database target. -->  
