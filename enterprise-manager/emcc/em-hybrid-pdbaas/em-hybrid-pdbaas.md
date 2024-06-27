@@ -56,11 +56,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     ![Navigate to Security](images/navigate-to-security.png " Navigate to Security ")
 
-    The "Developer" role you see has been pre-created. This is the role which will be attached to the SSA USER( CYRUS) which will be used in this Demo. 
+    The "Developer" role you see has been pre-created. This is the role which will be attached to the SSA USER( CYRUS) which will be used in this Demo.
+
     Click on the "Developer" role to view more details. 
     
     View the target and resource privileges associated with this role.  You will also see a user 'Cyrus' is already associated to this role. 
-    ![SSA-Role](images/ssa-role.png " SSA Role ") 
+
+ 
+    ![SSA-Role](images/ssa-role.png " SSA Role " )
 
     Click 'OK'
 
@@ -71,12 +74,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     ![Navigate-to-security](images/demo-admin-user.png " Navigate-to-security ")  
     
     Click 'CYRUS'
-    ![Choose-Cyrus-User.png](images/choose-cyrus-User.png " Choose-Cyrus-User.png ") 
+
+    ![Choose-Cyrus-User.png](images/choose-cyrus-user.png " Choose-Cyrus-User.png ") 
 
     You can see here the "DEVELOPER" role which we reviewed earlier is also attached to the "Cyrus" user. You can also view the Target privileges and resource privileges.
+    
     ![cyrus-user-details](images/cyrus-user-details.png " cyrus-user-detail ") 
 
-    Click OK. 
+    Click 'Close'. 
 
     Click on the Oracle logo on the top left as shown in the image above to take you back to the EM Home Page.
 
@@ -104,7 +109,7 @@ In  this task we will build all the necessary componets required in setting up P
 
     Click Next
 
-    ![PaaSzoneDetails](images/paaszoneDetails.png "PaaSzoneDetails")
+    ![PaaS-zone-Details](images/paaszonedetails.png "PaaS-zone-Details")
 
 5. In the Members page  click on "Add" . 
     From the pop-up dialog box Choose 'emcc.marketplace' and click on "select". 
