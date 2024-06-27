@@ -287,57 +287,57 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
-    ![Navigate to result](images/navigated-dashboard.png " ")
+   ![Navigate to result](images/navigated-dashboard.png " ")
 
-    At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
+   At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
-    Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
+   Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
-    ![Navigate to result](images/navigated-to-dashboard.png  " ")
+   ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
-    In this dashboard, you can explore each dashlet:
+   In this dashboard, you can explore each dashlet:
 
-    **Targets Evaluated:** Summarizes the number of databases, hosts, and Exdata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
+   **Targets Evaluated:** Summarizes the number of databases, hosts, and Exdata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
 
-    **Violation and Errors:**  A pie chart showing compliant, warning, and non-compliant statuses, highlighting the proportion of violations and errors for quick identification of areas needing attention.
+   **Violation and Errors:**  A pie chart showing compliant, warning, and non-compliant statuses, highlighting the proportion of violations and errors for quick identification of areas needing attention.
 
-    **Open Security Incidents numbers:** Displays current open security incidents, including affected targets, severity, and remediation status for timely resolution and prioritization.
+   **Open Security Incidents numbers:** Displays current open security incidents, including affected targets, severity, and remediation status for timely resolution and prioritization.
 
-    **Compliance Standard score Distribution:** Shows the distribution of compliance scores across different targets or policies, highlighting overall compliance health and areas needing improvement.
+   **Compliance Standard score Distribution:** Shows the distribution of compliance scores across different targets or policies, highlighting overall compliance health and areas needing improvement.
 
-    **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
+   **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
 
-    **Compliance Summary:** Provides an overview of system compliance, summarizing compliance standards, key metrics like average compliance scores, violation counts, and remediation status, facilitating targeted efforts to meet compliance standards and enhance IT governance.
+   **Compliance Summary:** Provides an overview of system compliance, summarizing compliance standards, key metrics like average compliance scores, violation counts, and remediation status, facilitating targeted efforts to meet compliance standards and enhance IT governance.
 
 7. You will see Compliance Summary, Standards tab
 
-    ![Compliance Summary](images/compliance-summary.png  " ")
+   ![Compliance Summary](images/compliance-summary.png  " ")
 
-    Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
+   Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
-    Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
+   Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
-    ![Compliance Summary](images/non-compliant-target.png " ")
+   ![Compliance Summary](images/non-compliant-target.png " ")
 
-    Click on 'x' to close.
+   Click on 'x' to close.
 
 8. Let us analyze the severity
 
-    Click on **Critical** number, you will see unique violations for this target.
+   Click on **Critical** number, you will see unique violations for this target.
 
-    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
+   ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
-    Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right  ![Caret-right](images/cis-caret-search.png " ") icon.
+   Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right  ![Caret-right](images/cis-caret-search.png " ") icon.
 
-    You will see the details of the evaluation.
+   You will see the details of the evaluation.
 
-    You will get the comprehensive view of the violation.
+   You will get the comprehensive view of the violation.
 
-    ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
+   ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
-    Click on 'x' to close.
+   Click on 'x' to close.
 
-    Similarly, we can explore Warning and Minor Warning violations if they exist.
+   Similarly, we can explore Warning and Minor Warning violations if they exist.
 
 9. Let us drill down to results.
 
@@ -347,17 +347,17 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    ![Navigate to result](images/compliance-standard-summary-violation.png " ")
 
-    You will be presented with the **Compliance Results**, including the target's violations against the selected standard, as well as its score and evaluation date.
+   You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
 
-    You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
+   You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
 
-    ![Validations](images/cis-compliance-pdb-controls.png " ")
+   ![Validations](images/cis-compliance-pdb-controls.png " ")
 
-    ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
+   ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
-     Click on 'Violations'.
+   Click on 'Violations'.
 
-10. In the **Violations** window, you will find Compliance Standard rules for each violation, along with the Violation Count.
+10.In the **Violations** window, you will find Compliance Standard rules for each violation, along with the Violation Count.
 
     ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
 
