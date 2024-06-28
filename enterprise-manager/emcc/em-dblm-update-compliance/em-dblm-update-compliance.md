@@ -389,7 +389,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
 
-    ![Check for violations](images/cis-rule-violation.png " ")
+   ![Check for violations](images/cis-rule-violation.png " ")
 
 13. You will notice that the "Unauthorized user 'IX' has been assigned the DBA role".
 
