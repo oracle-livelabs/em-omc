@@ -398,7 +398,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     ![Check for violations](images/cis-unauthorized-grantee.png " ")
 
     Click **Close**.
-
+    
 14. Click on the **Rule Details** tab.
 
     You will find detailed rule information including severity and recommended remediation.
