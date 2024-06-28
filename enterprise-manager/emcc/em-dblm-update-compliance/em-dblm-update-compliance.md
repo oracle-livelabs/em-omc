@@ -327,7 +327,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
-   Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right  ![Caret-right](images/cis-caret-search.png " ") icon.
+   Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
 
    You will see the details of the evaluation.
 
@@ -351,45 +351,49 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
 
+   The Target Scorecard pie chart displays the overall compliance evaluation status of the monitored target, summarizing its adherence to defined CIS benchmark security policies.
+
+   The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
+
    ![Validations](images/cis-compliance-pdb-controls.png " ")
+
+   Results by Target tab shows number of violations occurred, score and latest target evaluated date.
 
    ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
-   Click on 'Violations'.
+   Let us click on Violations number.
 
-10.In the **Violations** window, you will find Compliance Standard rules for each violation, along with the Violation Count.
+10. In the **Violations** window, you will find failed Compliance Standard rule description along with the Violation Count.
 
-    ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
+   ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
 
-    Click on Violation Count.
+   Click on Violation Count.
 
-    You can export to Excel for off line Analysis.
+   You can export to Excel for off line Analysis.
 
-    ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
+   ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
 
-    Click on 'Back'
+   Click on 'Back'
 
-    ![Validate CIS](images/cis-violations-close.png " ")
+   ![Validate CIS](images/cis-violations-close.png " ")
 
-    Click on 'Close'
+   Click on 'Close'
 
-11. Under the **Violations** tab, you'll find comprehensive details for each rule, including the target name, the applicable target type (pluggable), and the severity of the violation.
+11. Let us select **Violations** tab, you'll find the table with comprehensive details for each rule violations for the target and severity of the violation.
 
     ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
-    Click on 'Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database'.   
+    Click on Summary tab.
 
-    
+12. You can explore further by clicking on caret-right ![Caret-right](images/cis-caret-search.png " ") icon to explore each main category controls' **Violations**.
 
-12. Verify the selected violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
-
-    You can explore it further by clicking on the number of **Violations**.
+    Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
 
     ![Check for violations](images/cis-rule-violation.png " ")
 
 13. You will notice that the "Unauthorized user 'IX' has been assigned the DBA role".
 
-    **The Oracle DBA role grants powerful administrative privileges for configuration changes and access to sensitive information. 'IX' should not have this role.**
+    The Oracle DBA role grants powerful administrative privileges for configuration changes and access to sensitive information. 'IX' should not have this role.
 
     ![Check for violations](images/cis-unauthorized-grantee.png " ")
 
@@ -397,13 +401,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 14. Click on the **Rule Details** tab.
 
-    You will have access to details such as rule type, severity, compliance rule state, description, rationale, and recommendations for remediation.
+    You will find detailed rule information including severity and recommended remediation.
 
     ![Check for violations](images/cis-rule-details.png " ")
 
 15. Click on the **Violation Events** tab.
 
-    This provides essential information about the incident's attributes in relation to the violated rule.
+    This will provide you essential information about violation details about user, who has a elevated DBA privilege, which should be revoked.
 
     ![Rule Details](images/cis-violation-events.png  " ")
 
@@ -441,11 +445,11 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Navigate to result](images/target-databases.png  " ")
 
-21. You will come across the **hr.subnet.vcn.oraclevcn.com_FINANCE** PDB in the Name.
+21. You will see the **hr.subnet.vcn.oraclevcn.com_FINANCE** PDB in the Name.
 
     ![Navigate to result](images/select-pluggable-pdb.png  " ")
 
-    Click on the selected PDB, you will be taken to the pluggable database page.
+    Click on the selected PDB, you will be navigated to the PDB database page.
 
     ![Navigate to result](images/dbs-pdb-page.png " ")
 
@@ -459,7 +463,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click **Refresh**.
 
-23. **Processing** will take a few minutes to complete and get refreshed.
+23. **Processing** will take about few minutes to complete and get refreshed.
 
     ![Latest Configuration](images/configuration-refresh-pdb.png  " ")
 
@@ -485,7 +489,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Compliance Results](images/cis-pdb-no-data.png  " ")
 
-    Thus, Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE' " (Compliance Standard Rule) violation have been successfully remediated through automated corrective action.
+    Thus, Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE' " (Compliance Standard Rule) violation have been successfully remediated through corrective action.
 
     Click on Summary tab.
 
