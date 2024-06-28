@@ -287,13 +287,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
-   ![Navigate to result](images/navigated-dashboard.png " ")
+    ![Navigate to result](images/navigated-dashboard.png " ")
 
    At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
    Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
-   ![Navigate to result](images/navigated-to-dashboard.png  " ")
+    ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
    In this dashboard, you can explore each dashlet:
 
@@ -311,13 +311,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 7. You will see Compliance Summary, Standards tab
 
-   ![Compliance Summary](images/compliance-summary.png  " ")
+    ![Compliance Summary](images/compliance-summary.png  " ")
 
    Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
    Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
-   ![Compliance Summary](images/non-compliant-target.png " ")
+    ![Compliance Summary](images/non-compliant-target.png " ")
 
    Click on 'x' to close.
 
@@ -325,7 +325,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Click on **Critical** number, you will see unique violations for this target.
 
-   ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
+    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
    Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
 
@@ -333,7 +333,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    You will get the comprehensive view of the violation.
 
-   ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
+    ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
    Click on 'x' to close.
 
@@ -345,7 +345,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    You will see "97" violations number going down to "96".
 
-   ![Navigate to result](images/compliance-standard-summary-violation.png " ")
+    ![Navigate to result](images/compliance-standard-summary-violation.png " ")
 
    You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
 
@@ -355,23 +355,23 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
 
-   ![Validations](images/cis-compliance-pdb-controls.png " ")
+    ![Validations](images/cis-compliance-pdb-controls.png " ")
 
    Results by Target tab shows number of violations occurred, score and latest target evaluated date.
 
-   ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
+    ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
    Let us click on Violations number.
 
 10. In the **Violations** window, you will find failed Compliance Standard rule description along with the Violation Count.
 
-   ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
+    ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
 
-   Click on Violation Count.
+    Click on Violation Count.
 
-   You can export to Excel for off line Analysis.
+    You can export to Excel for off line Analysis.
 
-   ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
+    ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
 
    Click on 'Back'
 
