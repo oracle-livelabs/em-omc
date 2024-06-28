@@ -383,7 +383,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
-    Click on Summary tab.
+   Click on Summary tab.
 
 12. You can explore further by clicking on caret-right ![Caret-right](images/cis-caret-search.png " ") icon to explore each main category controls' **Violations**.
 
@@ -513,7 +513,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     ![Compliance Report](images/cis-standard-report3.png " ")
     ![Compliance Report](images/cis-standard-report4.png " ")
 
-    ***This completes the Automated Database Patching at Scale with Fleet Maintenance HUB and Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database benchmark Rule Violation Remediation by corrective Action.***
+    This completes the Automated Database Patching at Scale with Fleet Maintenance HUB and Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS benchmark using Unified Auditing for Oracle Pluggable Database benchmark Rule Violation Remediation by corrective Action.
 
     ![Compliance Dashboard](images/dashboard-setup-logout.png " ")
 
