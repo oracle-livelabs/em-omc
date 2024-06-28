@@ -237,47 +237,47 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 1. From the Enterprise menu, select **Compliance, then select Library**.
 
-    ![Navigate to Library](images/enterprise-compliance-library.png " ")
+   ![Navigate to Library](images/enterprise-compliance-library.png " ")
 
 2. Click the **Compliance Standards** tab.
 
-    You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
+   You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
 
-    Search for "Oracle 19c Database CIS".
+   Search for "Oracle 19c Database CIS".
 
-    In the **Applicable To** dropdown, select **Pluggable Database**.
+   In the **Applicable To** dropdown, select **Pluggable Database**.
 
-    Click **Search**.
+   Click **Search**.
 
-    ![Search CIS](images/search-cis-pluggable-std.png "  ")
+   ![Search CIS](images/search-cis-pluggable-std.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
+   Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
 
-    ![Target associate](images/cis-compliance-associate-target.png " ")
+   ![Target associate](images/cis-compliance-associate-target.png " ")
 
 3. Click **Add** and Select **hr.subnet.vcn.oraclevcn.com_FINANCE** PDB you wish to associate.
 
-    In the **Target name**, type **_FINANCE** and click **Search**.
+   In the **Target name**, type **_FINANCE** and click **Search**.
 
-    ![Add PDB](images/add-cis-search-pdb.png " ")
+   ![Add PDB](images/add-cis-search-pdb.png " ")
 
-    Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
+   Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
-    Click Select.
+   Click Select.
 
-    ![Add PDB](images/select-cis-pdb-target.png " ")
+   ![Add PDB](images/select-cis-pdb-target.png " ")
 
 4. Verify the PDB selected and click **OK**.
 
-    ![Enable CIS](images/enable-status-pdb.png " ")
+   ![Enable CIS](images/enable-status-pdb.png " ")
 
-    In the Save Association dialog box, click **Yes**.
+   In the Save Association dialog box, click **Yes**.
 
-    ![Confirm Association ](images/save-association-pdb.png "")
+   ![Confirm Association ](images/save-association-pdb.png "")
 
 5. Click **OK** on the Information pop-up window.
 
-    ![Confirm Association ](images/compliance-std-target-process.png " ")
+   ![Confirm Association ](images/compliance-std-target-process.png " ")
 
 6. Compliance Results Analysis
 
@@ -287,37 +287,37 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
-    ![Navigate to result](images/navigated-dashboard.png " ")
+   ![Navigate to result](images/navigated-dashboard.png " ")
 
    At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
    Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
-    ![Navigate to result](images/navigated-to-dashboard.png  " ")
+   ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
    In this dashboard, you can explore each dashlet:
 
-   **Targets Evaluated:** Summarizes the number of databases, hosts, and Exdata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
+    **Targets Evaluated:** Summarizes the number of databases, hosts, and Exdata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
 
-   **Violation and Errors:**  A pie chart showing compliant, warning, and non-compliant statuses, highlighting the proportion of violations and errors for quick identification of areas needing attention.
+    **Violation and Errors:**  A pie chart showing compliant, warning, and non-compliant statuses, highlighting the proportion of violations and errors for quick identification of areas needing attention.
 
-   **Open Security Incidents numbers:** Displays current open security incidents, including affected targets, severity, and remediation status for timely resolution and prioritization.
+    **Open Security Incidents numbers:** Displays current open security incidents, including affected targets, severity, and remediation status for timely resolution and prioritization.
 
-   **Compliance Standard score Distribution:** Shows the distribution of compliance scores across different targets or policies, highlighting overall compliance health and areas needing improvement.
+    **Compliance Standard score Distribution:** Shows the distribution of compliance scores across different targets or policies, highlighting overall compliance health and areas needing improvement.
 
-   **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
+    **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
 
-   **Compliance Summary:** Provides an overview of system compliance, summarizing compliance standards, key metrics like average compliance scores, violation counts, and remediation status, facilitating targeted efforts to meet compliance standards and enhance IT governance.
+    **Compliance Summary:** Provides an overview of system compliance, summarizing compliance standards, key metrics like average compliance scores, violation counts, and remediation status, facilitating targeted efforts to meet compliance standards and enhance IT governance.
 
 7. You will see Compliance Summary, Standards tab
 
-    ![Compliance Summary](images/compliance-summary.png  " ")
+   ![Compliance Summary](images/compliance-summary.png  " ")
 
    Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
    Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
-    ![Compliance Summary](images/non-compliant-target.png " ")
+   ![Compliance Summary](images/non-compliant-target.png " ")
 
    Click on 'x' to close.
 
@@ -325,7 +325,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Click on **Critical** number, you will see unique violations for this target.
 
-    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
+   ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
    Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
 
@@ -333,7 +333,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    You will get the comprehensive view of the violation.
 
-    ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
+   ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
    Click on 'x' to close.
 
@@ -345,7 +345,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    You will see "97" violations number going down to "96".
 
-    ![Navigate to result](images/compliance-standard-summary-violation.png " ")
+   ![Navigate to result](images/compliance-standard-summary-violation.png " ")
 
    You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
 
@@ -355,23 +355,23 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
 
-    ![Validations](images/cis-compliance-pdb-controls.png " ")
+   ![Validations](images/cis-compliance-pdb-controls.png " ")
 
    Results by Target tab shows number of violations occurred, score and latest target evaluated date.
 
-    ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
+   ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
    Let us click on Violations number.
-
+   
 10. In the **Violations** window, you will find failed Compliance Standard rule description along with the Violation Count.
 
-    ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
+   ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
 
-    Click on Violation Count.
+   Click on Violation Count.
 
-    You can export to Excel for off line Analysis.
+   You can export to Excel for off line Analysis.
 
-    ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
+   ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
 
    Click on 'Back'
 
@@ -381,7 +381,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 11. Let us select **Violations** tab, you'll find the table with comprehensive details for each rule violations for the target and severity of the violation.
 
-    ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
+   ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
     Click on Summary tab.
 
