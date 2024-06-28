@@ -383,7 +383,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
-   Click on Summary tab.
+    Click on Summary tab.
 
 12. You can explore further by clicking on caret-right ![Caret-right](images/cis-caret-search.png " ") icon to explore each main category controls' **Violations**.
 
