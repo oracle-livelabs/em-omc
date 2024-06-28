@@ -297,7 +297,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    In this dashboard, you can explore each dashlet:
 
-    **Targets Evaluated:** Summarizes the number of databases, hosts, and Exdata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
+    **Targets Evaluated:** Summarizes the number of databases, hosts, and Exadata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
 
     **Violation and Errors:**  A pie chart showing compliant, warning, and non-compliant statuses, highlighting the proportion of violations and errors for quick identification of areas needing attention.
 
@@ -307,7 +307,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
 
-    **Compliance Summary:** Provides an overview of Targets Compliance status, key metrics about  violations, average compliance scores and comprehensive Report, facilitating targeted efforts to meet compliance standards.
+    **Compliance Summary:** Provides an overview of Targets Compliance status, key metrics about violations, average compliance scores, and comprehensive Report, facilitating targeted efforts to meet compliance standards.
 
 7. You will see Compliance Summary, Standards tab
 
@@ -327,7 +327,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
-   Expand the name hr.subnet.vcn.Oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
+   Expand the name hr.subnet.vcn.oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
 
    You will see the details of the evaluation.
 
@@ -528,6 +528,7 @@ You may now proceed to the next lab.
   - [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/lifecycle.html)
   - [Database Cloud Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/cloud.html)
   - [Oracle Critical Patch Updates, Security Alerts and Bulletins](https://www.oracle.com/in/security-alerts/)
+  - [Enterprise Manager: How to automate corrective actions to remediate CIS Compliance rule violations](https://www.youtube.com/watch?v=gskVyH0oNeg)
 
 ## Acknowledgements
   - **Authors**
