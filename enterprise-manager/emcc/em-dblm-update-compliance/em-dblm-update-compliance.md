@@ -307,7 +307,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Violations by Target type:** Breaks down violations by target type (e.g., databases, hosts, Exadata), identifying problematic areas and pinpointing systems prone to compliance issues.
 
-    **Compliance Summary:** Provides an overview of system compliance, summarizing compliance standards, key metrics like average compliance scores, violation counts, and remediation status, facilitating targeted efforts to meet compliance standards and enhance IT governance.
+    **Compliance Summary:** Provides an overview of Targets Compliance status, key metrics about  violations, average compliance scores and comprehensive Report, facilitating targeted efforts to meet compliance standards.
 
 7. You will see Compliance Summary, Standards tab
 
