@@ -199,11 +199,11 @@ In this step, you will compare two database targets to determine configuration d
 
     ![one-time-comparison-result-page](images/one-time-comparison-result.png " one-time-comparison-result-page ")
 
-16. Export the comparison results into an excel report for further reviews and offline analysis. On the     One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
+16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
     ![export-one-time-comparison-result-page](images/export-one-time-comparison-result.png " export-one-time-comparison-result-page ")
 
-  After Exporting, Click **Cancel** to exit. The zip file will be created, downloadable, and available to open in excel format on your system to do offline verification.
+  After Exporting, Click **Cancel** to exit. The zip ECM002-Compare-Demo - One time Comparison_comparisonresult.zip file will be created, downloadable, and available to open in excel format on your system to do offline verification.
 
 17. One-time Database comparison results excel file format as shown here.
 
