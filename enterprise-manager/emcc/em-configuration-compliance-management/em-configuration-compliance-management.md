@@ -136,6 +136,8 @@ In this step, you will compare two database targets to determine configuration d
 
     To begin with, filter ‘Target Type’ to Database Instance.
 
+    Click Search.
+
     ![select-targets-type-page](images/select-targets-type.png " select-targets-type-page ")
 
 7.  Select **emrep.us.oracle.com** as the reference target.
