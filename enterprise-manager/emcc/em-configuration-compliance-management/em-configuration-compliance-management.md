@@ -338,7 +338,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![comparison-&-drift-management-dashboard-page](images/comparison-&-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
 
-21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
+    Click on the Drift Results tab on the left panel (2nd tab from the top).
+
+21. This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
     ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
 
