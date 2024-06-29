@@ -227,9 +227,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     Choose Templates left side of the panel of the Dashboard.
 
-    ![comparison-and-driftmanagement-page](images/comparison-and-driftmanagement.png " comparison-and-driftmanagement-page ")
+    ![cocomparison-and-driftmanagement.pngmparison-and-driftmanagement-page](images/comparison-and-driftmanagement.png " comparison-and-driftmanagement-page ")
 
-3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
+3.  Click on Templates on the left panel will navigate to Comparison Templates Page.
 
     ![comparison-template-page](images/comparison-template.png " comparison-template-page ")
 
