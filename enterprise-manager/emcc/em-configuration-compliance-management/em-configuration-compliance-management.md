@@ -359,15 +359,15 @@ In this workshop, you will learn about continuous configuration drift monitoring
     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-23. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page, Click on **Drift Results**
+23. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page.
 
-    ![comparison-&-drift-management-dashboard-page](images/comparison-&-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
+    ![comparison-&-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
 
-24. Click on **Click to refresh**  as shown here:
+    Click on Click on **Drift Results**.
 
-    ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
+    ![config-drift-dashboard-page](images/config-drift-dashboard.png " cconfig-drift-dashboard-page ")
 
-    On the Drift Results page, highlight the definition and choose **Export Results**.
+24. On the Drift Results page, highlight the definition and choose **Export Results**.
 
     ![export-results-for-created-drift-page](images/export-results-for-created-drift.png " export-results-for-created-drift-page ")
 
