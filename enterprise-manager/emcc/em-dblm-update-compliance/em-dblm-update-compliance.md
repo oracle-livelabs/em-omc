@@ -149,12 +149,15 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
 9. In this screen, select the two patches that we have already downloaded and uploaded in the software library.
 
     ![](images/rec-patches.png "rec-patches")
+
     Click ***Next***.
 
 10. In the next page, review the selections that we made on the previous screen. Then, click on ***Submit*** to initiate the operation to create a new version.
+
     ![](images/submit-version.png "submit-version")
 
 11. Once you submit, a new Deployment Procedure (DP) is initiated. Click on the DP name to review the steps.
+
     ![](images/DP.png "DP")
 
     lets stay on the DP page for 2 minutes.
@@ -198,6 +201,7 @@ In this task, we will perform Pluggable Database patching.
     Upon completion, click on ***Close***.
 
 3. Navigate to Tile 3 - ***Target Patch Compliance*** in the Fleet Maintenance Hub.
+
     ![](images/tile3.png "tile3")
 
     In tile 3, we see that the sales CDB is associated with goldimage ***19cDB-Linux-x64-APPS***.
@@ -206,7 +210,9 @@ In this task, we will perform Pluggable Database patching.
     Click on the menu under Actions for the sales CDB, and select ***Update Pluggable Database***. This will launch the operator UI of Fleet Maintenance.
 
 4. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
+
     ![](images/patching-ui1.png "patching-ui1")
+
     Select Finance pdb and click ***Next***.
 
 5. In this page, we will select relevant options and enter values wherever required.
@@ -226,7 +232,9 @@ In this task, we will perform Pluggable Database patching.
     Click ***Next***.
 
 6. Click on ***Validate*** and then select ***Quick Validation***.
+
     ![](images/patching-ui3.png "patching-ui3")
+
     Once you receive the successful validation message, click ***Close*** and then hit ***Submit***.
 
 7. A new dialogue box will ask for the name of the deployment procedure.
@@ -245,13 +253,17 @@ In this task, we will perform Pluggable Database patching.
     - Update PDB
 
     Click on ***Monitor Progress***, which will open a new window.
+
     ![](images/patching-ui5.png "patching-ui5")
 
 9. In the new page, under search, enter ***Demo*** so that you only see the two Deployment procedures associated with this lab.
+
     ![](images/patching-ui6.png "patching-ui6")
 
     We see that the Deployment procedure with the name "Attach" has completed successfully.
+
     Let's click on the Deployment procedure with the name "Update" and review the steps performed.
+
     ![](images/patching-ui7.png "patching-ui7")
 
 9. With both Deployment procedures completed successfully, let's go back to the databases homepage by navigating to ***Targets -> Databases***.
@@ -285,65 +297,65 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 1. From the Enterprise menu, select **Compliance, then select Library**.
 
-   ![Navigate to Library](images/enterprise-compliance-library.png " ")
+    ![Navigate to Library](images/enterprise-compliance-library.png " ")
 
 2. Click the **Compliance Standards** tab.
 
-   You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
+    You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
 
-   Search for "Oracle 19c Database CIS".
+    Search for "Oracle 19c Database CIS".
 
-   In the **Applicable To** dropdown, select **Pluggable Database**.
+    In the **Applicable To** dropdown, select **Pluggable Database**.
 
-   Click **Search**.
+    Click **Search**.
 
-   ![Search CIS](images/search-cis-pluggable-std.png "  ")
+    ![Search CIS](images/search-cis-pluggable-std.png "  ")
 
-   Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
+    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
 
-   ![Target associate](images/cis-compliance-associate-target.png " ")
+    ![Target associate](images/cis-compliance-associate-target.png " ")
 
 3. Click **Add** and Select **hr.subnet.vcn.oraclevcn.com_FINANCE** PDB you wish to associate.
 
-   In the **Target name**, type **_FINANCE** and click **Search**.
+    In the **Target name**, type **_FINANCE** and click **Search**.
 
-   ![Add PDB](images/add-cis-search-pdb.png " ")
+    ![Add PDB](images/add-cis-search-pdb.png " ")
 
-   Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
+    Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
-   Click Select.
+    Click Select.
 
-   ![Add PDB](images/select-cis-pdb-target.png " ")
+    ![Add PDB](images/select-cis-pdb-target.png " ")
 
 4. Verify the PDB selected and click **OK**.
 
-   ![Enable CIS](images/enable-status-pdb.png " ")
+    ![Enable CIS](images/enable-status-pdb.png " ")
 
-   In the Save Association dialog box, click **Yes**.
+    In the Save Association dialog box, click **Yes**.
 
-   ![Confirm Association ](images/save-association-pdb.png "")
+    ![Confirm Association ](images/save-association-pdb.png "")
 
 5. Click **OK** on the Information pop-up window.
 
-   ![Confirm Association ](images/compliance-std-target-process.png " ")
+    ![Confirm Association ](images/compliance-std-target-process.png " ")
 
 6. Compliance Results Analysis
 
-   You have completed one-time setup process.
+    You have completed one-time setup process.
 
-   Lets' analyze the results.
+    Lets' analyze the results.
 
-   Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
+    Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
-   ![Navigate to result](images/navigated-dashboard.png " ")
+    ![Navigate to result](images/navigated-dashboard.png " ")
 
-   At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
+    At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
-   Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
+    Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
-   ![Navigate to result](images/navigated-to-dashboard.png  " ")
+    ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
-   In this dashboard, you can explore each dashlet:
+    In this dashboard, you can explore each dashlet:
 
     **Targets Evaluated:** Summarizes the number of databases, hosts, and Exadata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
 
@@ -359,85 +371,87 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 7. You will see Compliance Summary, Standards tab
 
-   ![Compliance Summary](images/compliance-summary.png  " ")
+    ![Compliance Summary](images/compliance-summary.png  " ")
 
-   Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
+    Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
-   Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
+    Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
-   ![Compliance Summary](images/non-compliant-target.png " ")
+    ![Compliance Summary](images/non-compliant-target.png " ")
 
-   Click on 'x' to close.
+    Click on 'x' to close.
 
 8. Let us analyze the severity
 
-   Click on **Critical** number, you will see unique violations for this target.
+    Click on **Critical** number, you will see unique violations for this target.
 
-   ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
+    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
-   Expand the name hr.subnet.vcn.oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
+    Expand the name hr.subnet.vcn.oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
 
-   You will see the details of the evaluation.
+    You will see the details of the evaluation.
 
-   You will get the comprehensive view of the violation.
+    You will get the comprehensive view of the violation.
 
-   ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
+    ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
-   Click on 'x' to close.
+    Click on 'x' to close.
 
-   Similarly, we can explore Warning and Minor Warning violations if they exist.
+    Similarly, we can explore Warning and Minor Warning violations if they exist.
 
 9. Let us drill down to results.
 
-   Click on **Standards >> Name** and let us remediate one of the solution.
+    Click on **Standards >> Name** and let us remediate one of the solution.
 
-   You will see "97" violations number going down to "96".
+    You will see "97" violations number going down to "96".
 
-   ![Navigate to result](images/compliance-standard-summary-violation.png " ")
+    ![Navigate to result](images/compliance-standard-summary-violation.png " ")
 
-   You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
+    You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
 
-   You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
+    You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
 
-   The Target Scorecard pie chart displays the overall compliance evaluation status of the monitored target, summarizing its adherence to defined CIS benchmark security policies.
+    The Target Scorecard pie chart displays the overall compliance evaluation status of the monitored target, summarizing its adherence to defined CIS benchmark security policies.
 
-   The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
+    The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
 
-   ![Validations](images/cis-compliance-pdb-controls.png " ")
+    ![Validations](images/cis-compliance-pdb-controls.png " ")
 
-   Results by Target tab shows number of violations occurred, score and latest target evaluated date.
+    Results by Target tab shows number of violations occurred, score and latest target evaluated date.
 
-   ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
+    ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
-   Let us click on Violations number.
+    Let us click on Violations number.
 
 10. In the **Violations** window, you will find failed Compliance Standard rule description along with the Violation Count.
 
-   ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
+    ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
 
-   Click on Violation Count.
+    Click on Violation Count.
 
-   You can export to Excel for off line Analysis.
+    You can export to Excel for off line Analysis.
 
-   ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
+    ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
 
-   Click on 'Back'
+    Click on 'Back'
 
-   ![Validate CIS](images/cis-violations-close.png " ")
+    ![Validate CIS](images/cis-violations-close.png " ")
 
-   Click on 'Close'
+    Click on 'Close'
 
 11. Let us select **Violations** tab, you'll find the table with comprehensive details for each rule violations for the target and severity of the violation.
 
-   ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
+    ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
     Click on Summary tab.
 
-12. You can explore further by clicking on caret-right ![Caret-right](images/cis-caret-search.png " ") icon to explore each main category controls' **Violations**.
+12. Click on caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
+
+    Explore each main category controls' **Violations**.
 
     Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
 
-   ![Check for violations](images/cis-rule-violation.png " ")
+    ![Check for violations](images/cis-rule-violation.png " ")
 
 13. You will notice that the "Unauthorized user 'IX' has been assigned the DBA role".
 
