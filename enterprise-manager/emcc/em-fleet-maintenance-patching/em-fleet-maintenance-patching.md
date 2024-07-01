@@ -145,16 +145,17 @@ The Software Standardization Advisor enables administrators to understand variou
 ### **Database Fleet Maintenance**
 
 Enterprise Manager Database Fleet Maintenance is a Gold Image Target subscription based out of place patching solution. Gold Image(s) are software library entities storing archive of a patched software home. Targets, to be patched, subscribe to a relevant Gold Image. Target subscription persists through the lifecycle of the Target or Gold Image unless modified by an administrator.
-
     ![](images/new-db-fleet-patching.png "new interface")
+
 ### **Patching with Fleet Maintenance**
 
 We will go through steps for update(patching) database target ***finance.subnet.vcn.oraclevcn.com***, currently at 19.17.0.0.0 version to 19.23.0.0.0.
 
 1.  Return to the browser page with the Oracle Enterprise Manager Console (log back in if needed) and from the EM home page, select the ***Targets*** drop-down menu. Then, choose ***Databases*** to review the status and version of database targets.
+
     ![](images/Target-Databases-Navig.png "Target-Databases-Navigation")
 
-Review version of ***finance.subnet.vcn.oraclevcn.com***
+Review version of ***finance.subnet.vcn.oraclevcn.com***.
     ![](images/patch-db-layout.png "finance-db-version")
 
 ## Task 4: Review Gold Image [Step Already Performed, Read-Only Step]
