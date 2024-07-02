@@ -274,7 +274,7 @@ Database Management now supports the monitoring of Data Guard environments and p
 - Ensure Fast-start failover is enabled
 - Verify redo logs are being applied consistently
 
-1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **PRODCRM** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **PRODCRM** database.
 
      ![SQL Text](./images/prodcrm-database.png " ")
 
@@ -282,6 +282,29 @@ Database Management now supports the monitoring of Data Guard environments and p
 
      ![Users](./images/prodcrm-dg.png " ")
 
+On the Managed database details page, you can perform the following tasks for primary databases:
+
+- View the **Database role** in the **Managed database information** section. You can also click **More details** to view whether Flashback is enabled or not.
+- Review the charts that provide an overview of the performance of the primary and standby databases for the time period selected in the Time period drop-down list.
+
+     - Primary database: The charts in this section display the following performance metrics for the primary database:
+          - Committed: The number of committed transactions.
+          - Rollback: The number of rolled back transactions.
+          - Redo generation rate: The amount of redo that was generated.
+
+     ![Primary Database](./images/primary-database.png " ")
+
+     - Standby databases: The charts in this section display the following performance metrics for all the standby databases in the selected compartment:
+          - Apply lag: The number of seconds the standby databases are behind the primary database.
+          - Transport lag: The number of seconds of redo not yet available on the standby databases.
+          - Redo apply rate: The amount of redo applied on the standby databases.
+
+     ![Standby Database](./images/standby-database.png " ")
+
+- Below the performance charts, the list of standby databases for the primary database, along with the mean values of their performance metrics is displayed. 
+
+     ![Standby Database](./images/list-of-dbs.png " ")
+     
 ## Task 9: Custom and Out-of-the-box Dashboards
 
 Dashboards are built upon a powerful data visualization framework that gathers real-time data and displays it in customizable widgets. You can either use the pre-configured, out-of-the-box dashboards or build customizable dashboards for specific operational and business requirements.
