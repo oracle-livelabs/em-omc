@@ -21,7 +21,7 @@ In this lab you will perform the following steps:
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | 1                    | Assess patch recommendation and create gold image                             | 15 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Experience the benefits of using these recommendations, which automate traditionally manual and time-consuming tasks to produce highly accurate results.                  |
 | 2                    | Secure databases by updating with new gold image | 25 minutes  | Update databases using Gold image | Effortlessly update your pluggable database, saving time and ensuring seamless operations.                   |
-| 3                    | Elevate security posture by auditing for compliance | 25  minutes  | CIS Oracle Database 19c Benchmark - using Unified Auditing for Oracle Pluggable Database to secure configuration of provisioned database. | Enhances operational efficiencies and security through centralized monitoring, auditing, and automated corrective actions.
+| 3                    | Elevate security posture by auditing for compliance | 25  minutes  | Review CIS Oracle Database 19c Benchmark - using Unified Auditing for Oracle Pluggable Database to secure provisioned database. | Enhances operational efficiencies and security through centralized monitoring, auditing, and automated corrective actions.
 
 
 ### Prerequisites
