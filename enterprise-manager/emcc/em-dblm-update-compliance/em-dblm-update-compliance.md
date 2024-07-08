@@ -8,7 +8,7 @@ Learn how to secure and ensure compliance of your enterprise databases in this w
 
 ### Secure database assets using Fleet Maintenance Hub in Oracle Enterprise Manager
 
-Starting with Enterprise Manager 13.5 RU16, the new Fleet Maintenance Hub simplifies automated database updates and upgrades. This hub identifies security risks, provides patch recommendations, guided workflow for image creation and enables efficient scheduling and monitoring of patching and upgrade operations. It manages all database types, ensures compliance with patch policies, and centralizes database maintenance for enhanced security and stability.
+Starting with Enterprise Manager 13.5 RU16, the new Fleet Maintenance Hub simplifies automated database updates and upgrades. This hub identifies security risks, provides patch recommendations, offers guided workflows for image creation, and enables efficient scheduling and monitoring of patching and upgrade operations. It manages all database types, ensures compliance with patch policies, and centralizes database maintenance for enhanced security and stability.
 
 ### Compliance check of your database assets using Oracle Enterprise Manager
 <<Data from Shiva>>
@@ -16,7 +16,7 @@ Starting with Enterprise Manager 13.5 RU16, the new Fleet Maintenance Hub simpli
 
 ### Objectives
 
-In this lab you will perform the following steps:
+In this lab, you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
 | 1                    | Assess patch recommendation and create gold image                             | 15 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Experience the benefits of using these recommendations, which automate traditionally manual and time-consuming tasks to produce highly accurate results.                  |
