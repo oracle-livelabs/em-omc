@@ -85,7 +85,9 @@ This lab assumes you have completed the following labs:
       On the **Wait Events** tab, you can also:
 
            1.  Add new charts to display more wait events. To do so, select a wait event in the **Wait Event** drop-down list and click **Add Wait Event Chart**.
-           2.  View a histogram of the wait event with a breakdown of the percentage of waits by their duration, within a selected snapshot range. To do so, click the **Show Histogram** option available for each wait event chart. Note that you can also click on the chart to navigate to the **Show Histogram** dialog.
+           2.  View a histogram of the wait event with a breakdown of the percentage of waits by their duration, within a selected snapshot range. To view a histogram, click the **Show histogram** option available for each wait event chart or click on the chart.
+
+      ![Left Pane](./images/awr-hub-show-histogram.png " ")
 
       * **Activity**: This tab enables you to view the performance trend of the database by selecting an Average Active Sessions dimension and viewing the top activity for that dimension in the selected time range. You can also scroll down to view the top activity by additional dimensions based on the dimension selected in the **Average Active Sessions** chart.
 

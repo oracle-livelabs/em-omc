@@ -43,7 +43,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
       ![SQL Explorer](./images/sql-explorer-main.png " ")
 
-4. Enter the following SQL in the SQL query section
+4. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
 
       ```
       <copy>SELECT DISPLAY_NAME,SQL_ID,sum(CPU_TIME)
@@ -95,14 +95,14 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
       ![SQL Explorer](./images/sql-explorer-main.png " ")
 
-13. Enter the following SQL in the SQL query section
+13. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
 
       ```
       <copy>SELECT DISPLAY_NAME,SQL_ID,sum(ELAPSED_TIME)
             WHERE
             ​GROUP BY DISPLAY_NAME,SQL_ID
             HAVING sum(ELAPSED_TIME)>70000000
-            ORDER BYDISPLAY_NAME,sum(ELAPSED_TIME)desc</copy>
+            ORDER BY DISPLAY_NAME,sum(ELAPSED_TIME)desc</copy>
       ```
 
       ![SQL Query](./images/sql-query1.png " ")
@@ -160,4 +160,4 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Apr 2024
+- **Last Updated By/Date** - Vivek Verma, July 2024

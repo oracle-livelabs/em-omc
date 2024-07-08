@@ -40,7 +40,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/filter-ocw.png " ")
 
-4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
+4.  Review the top section on the page. This section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
 
       ![Left Pane](./images/inventory-ocw.png " ")
 
@@ -112,8 +112,6 @@ This lab assumes you have completed the following labs:
 12.  The value **77.07** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Max usage of CPU.
 
     **Key Insight**: Traditionally, capacity is allocated to accommodate the maximum demand and represents your spend for the resource. Average usage represents the real value obtained from resource. The difference between the maximum and average can be considered the cost of having to over-allocate resources to meet peak demand. We call this the opportunity cost of workload variability.
-
-    **Autonomous Database Auto-scale** option is designed specifically to help mitigate over-spending for highly variable workloads.
 
 13.  The trending and forecast chart facilitates:
 
