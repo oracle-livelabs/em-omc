@@ -4,14 +4,14 @@
 
 Learn how to secure and ensure compliance of your enterprise databases in this workshop. Discover methods to monitor their security, validate configurations, and automate compliance with company, industry, and regulatory standards like CIS and STIG. Explore using Oracle Enterprise Manager to automate inventory and baseline all database targets, including various versions and instances deployed over time.
 
-*Estimated Time*: 60 minutes
+*Estimated Time*: 65 minutes
 
-### Secure database assets using Fleet Maintenance Hub in Oracle Enterprise Manager
+### Safeguard Database assets with Fleet Maintenance Hub
 
-Starting with Enterprise Manager 13.5 RU16, the new Fleet Maintenance Hub simplifies automated database updates and upgrades. This hub identifies security risks, provides patch recommendations, offers guided workflows for image creation, and enables efficient scheduling and monitoring of patching and upgrade operations. It manages all database types, ensures compliance with patch policies, and centralizes database maintenance for enhanced security and stability.
+***Fleet Maintenance Hub*** is a new, all-in-one User Interface (UI) for upgrading and updating Oracle Databases and Grid Infrastructure. It detects vulnerabilities and offers precise patch recommendations through an intelligent, and guided workflow. You can create a gold image with these recommended patches to secure your assets. Additionally, Fleet Maintenance Hub provides flexible scheduling options for near-zero downtime during upgrade and patching operations. After patching, it delivers compliance insights to help you assess alignment with your patching policies, enhancing your security posture.
 
-### Compliance check of your database assets using Oracle Enterprise Manager
-Enhance security posture and ensure robust compliance by diving into the Compliance Standards Libraries in Oracle Enterprise Manager. Associate the relevant  CIS 19c Database benchmark to your target pluggable database (PDB). With the compliance results dashboard, explore in-depth evaluations, detailed violation breakdowns, and precise compliance scores, and pinpoint critical areas. Take decisive corrective actions, track the reduction in violations, and confirm the transformation in your security controls.
+### Securing Databases with Industry Standards and Best Practices
+***Audit for Compliance*** - protecting your customer data is the most critical goal. Implement security controls that restrict access according to your policies, whether based on industry security standards or custom best practices. Achieve a comprehensive view of overall security compliance across all managed database targets to ensure these controls are effectively enforced and managed for compliance.
 
 
 ### Objectives
@@ -19,9 +19,9 @@ Enhance security posture and ensure robust compliance by diving into the Complia
 In this lab, you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Assess patch recommendation and create gold image                             | 15 minutes  | Review the patch recommendations for existing gold images                                                                                                                 | Experience the benefits of using these recommendations, which automate traditionally manual and time-consuming tasks to produce highly accurate results.                  |
-| 2                    | Secure databases by updating with new gold image | 25 minutes  | Update databases using Gold image | Effortlessly update your pluggable database, saving time and ensuring seamless operations.                   |
-| 3                    | Elevate security posture by auditing for compliance | 25  minutes  | Review CIS Oracle Database 19c Benchmark - using Unified Auditing for Oracle Pluggable Database to secure provisioned database. | Enhances operational efficiencies and security through centralized monitoring, auditing, and automated corrective actions.
+| 1                    | Assess patch recommendation and create gold image                             | 15 minutes  | Assess patch recommendations for affected databases                                                                                                                 | Fortify against vulnerabilities with precise Patch Recommendations.                  |
+| 2                    | Secure databases by updating with new gold image | 25 minutes  | Intuitive workflow to update and secure your databases | Update Databases with new gold image for Enhanced Security.                   |
+| 3                    | Elevate security posture by auditing for compliance | 25  minutes  | Leverage CIS Benchmark for Oracle Database 19c to secure Pluggable Databases | Drive continuous improvements with insightful Compliance Audits.
 
 
 ### Prerequisites
@@ -59,7 +59,7 @@ In this task, you will review patch recommendations for existing gold images and
 
    ![](images/em-navig2.png "em-navig2")
 
-3. Fleet Maintenance Hub is one stop place for end to end patch assessment and performing patching operation.
+3. Fleet Maintenance Hub is your one-stop solution for end-to-end patch assessment and operations.
 
     ![](images/em-hub.png "em-hub")
 
@@ -75,19 +75,17 @@ To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.o
 -->
 
 
-4. Click on Tile 2 of the Fleet Maintenance Hub, referred to as Patch Recommendations for Images.
+4. Click on Tile 2 in labeled as Patch Recommendations for Images.
 
-    In this tile, you can review the health of your gold images. If a gold image is shown green ( listed under up to date ), then that particular gold image is healthy and contains all recommended patches. This image should be used for patching or upgrade operation.
+    The donut chart in this tile indicates the health of your gold images. Green indicates, the number of gold images have all the recommended patches, and these images can be used for upgrade or update operations.
 
-    Similarly, if a gold image is shown red ( listed under Images with patch recommendations ), then that suggests that the particular gold image lacks critical recommended patches and should not be used for patching or upgrade operation.
-
-    Administrator should create a new version for such images.
+    Red indicates, the number of gold images are missing critical recommended patches and must refreshed before using it for upgrade or update operations. You should reach out your Administrator to refresh the image with all recommended patches.
 
     ![](images/tile2.png "hub-tile2")
 
-    Here, we see that goldimages - ***19cDB-Linux-x64-ERP*** has two patch recommendations, while ***19cDB-Linux-x64-APPS*** has a green checkmark.
+    As an example, ***19cDB-Linux-x64-ERP*** gold image has two patch recommendations. This indicates ***19cDB-Linux-x64-ERP*** image must be refreshed to a new version that includes two recommended patches.
 
-    This indicates that 19cDB-Linux-x64-ERP should have a new version that includes the two recommended patches, whereas 19cDB-Linux-x64-APPS is up to date and can be used for patching.
+    Similarly, ***19cDB-Linux-x64-APPS*** has a green checkmark. This indicates ***19cDB-Linux-x64-APPS*** image is up to date and can be used for patch operations
 
     For this lab, we will use the ***19cDB-Linux-x64-APPS*** image to perform pdb patching.
 
@@ -97,7 +95,7 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
 
 5. In the next few steps, we will use the Fleet Maintenance Hub to refresh gold image ***19cDB-Linux-x64-ERP***.
 
-    While the refresh process is running, to complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases.
+    While the image refresh process is running, to complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases.
 
 6. Let's refresh the gold image - ***19cDB-Linux-x64-ERP***
 
@@ -165,7 +163,7 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
     Note: The submitted Deployment Procedure above may fail. If you encounter the error below, click on "Ignore" and select "OK" in the confirmation window.
     ![](images/error-DP.png "error-DP")
 
-    However, to complete this lab, we will proceed to the next step.
+    However, to complete this lab, as mentioned earlier, we shall use ***19cDB-Linux-x64-APPS*** image to update a pluggable database. Let’s proceed to the next step.
 
 ## Task 2: Secure databases by updating with new gold image
 
@@ -175,8 +173,7 @@ In this task, we will perform Pluggable Database patching.
 
    ![](images/em-navig11.png "em-navig1")
 
-    In this scenario, we will unplug the ***Finance PDB*** (associated with the Container database - ***sales.subnet.vcn.oraclevcn.com***) and plug it into a higher version CDB, ***hr.subnet.vcn.oraclevcn.com***.
-    Currently, Finance is at version 19.17, while HR is at version 19.23.
+    You see ***Finance PDB*** under sales.subnet.vcn.oraclevcn.com CDB is at 19.17 version level. You will patch this to version 19.23. As part of this update, you need to choose a CDB at 19.23 version level. For this lab, we will use ***hr.subnet.vcn.oraclevcn.com***. After update is completed, Finance PDB will reside in this new CDB at 19.23 version level.
 
     ![](images/pre-update.png "pre-update")
 
@@ -187,6 +184,8 @@ In this task, we will perform Pluggable Database patching.
     Navigate to Fleet Maintenance Hub, by clicking on ***Administration >> Fleet Maintenance Hub***
 
     ![](images/em-navig2.png "em-navig2")
+
+    To patch a database, you must subscribe the target database to a gold image. You can subscribe a database to one image only, but an image can have multiple databases subscribed to it.
 
     In the Fleet Maintenance Hub, under the "Target Subscription" tab in Tile 1, follow these steps:
 
@@ -209,7 +208,7 @@ In this task, we will perform Pluggable Database patching.
 
     Click on the menu under Actions for the sales CDB, and select ***Update Pluggable Database***. This will launch the operator UI of Fleet Maintenance.
 
-4. We are now at the operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
+4. We are now at the Operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
 
     ![](images/patching-ui1.png "patching-ui1")
 
@@ -218,8 +217,8 @@ In this task, we will perform Pluggable Database patching.
 5. In this page, we will select relevant options and enter values wherever required.
 
     - Under Maintenance Task, select ***Attach Existing CDB***.
-    - Under Attach Existing CDB, review the source CDB, which is sales.
-    - Under Destination CDB, select HR.
+    - Under Attach Existing CDB, review the source CDB, which is ***sales.subnet.vcn.oraclevcn.com*** (19.17).
+    - Under Destination CDB, select ***hr.subnet.vcn.oraclevcn.com*** (19.23).
     - Under credentials, select values from the drop-down menu as per the image.
         - Normal Host Credentials as ***ORACLE***
         - Privileged Host Credentials as ***ROOT***
@@ -271,9 +270,8 @@ In this task, we will perform Pluggable Database patching.
 
     We see that the Finance PDB has moved out of the sales CDB and is now plugged into the HR CDB, running at version 19.23
 
-Now that you have patched PDB with recommended patches, it is also important to elevate the security posture by putting in relevant security control and audit for compliance. The next step will help you gain understanding on how to complete the relevant steps.
 
-## Task 3: Elevate security posture by auditing for compliance or Compliance Management for Pluggable Database
+## Task 3: Securing Databases with Industry Standards and Best Practices
 
 Now that you have applied security patches to your pluggable database, you want to ensure the configuration, access and user privileges are secure and audit for compliance with CIS Benchmarks which is the industry standard.
 
@@ -283,13 +281,13 @@ Enterprise Manager provides solution to secure and ensure compliance with securi
 
 For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, Department of Defense (DoD) Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
 
-For underlying Linux hosts, built-in SCAP engine enables security standards like STIG, PCI-DSS, HIPAA are available.
+Leverage the built-in SCAP engine on Linux hosts to meet security standards like STIG, PCI-DSS, and HIPAA.
 
 Finally, for Exadata family of Engineered Systems, compliance standards tied to Autonomous Health Framework (AHF) Exachk is available out-of-box.
 
 In this lab, you will get hands-on experience with ***Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database*** to secure configuration of provisioned database.
 
-Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyber threats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
+Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyberthreats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
 
 Lets start the lab.
 
@@ -311,7 +309,9 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Search CIS](images/search-cis-pluggable-std.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
+    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**.
+
+    Click **Associate Targets**.
 
     ![Target associate](images/cis-compliance-associate-target.png " ")
 
@@ -351,7 +351,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
-    Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
+    Refresh the icon ![Refresh](images/refresh-icon.png "  ")  ***in top right of Compliance Dashboard page***.
 
     ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
@@ -369,11 +369,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Summary:** Provides an overview of Targets Compliance status, key metrics about violations, average compliance scores, and comprehensive Report, facilitating targeted efforts to meet compliance standards.
 
-7. You will see Compliance Summary, Standards tab
+7. At the bottom of the page, you will see Compliance Summary section.
+
+    Click on Standards tab to see the results of CIS Benchmark assessment.
 
     ![Compliance Summary](images/compliance-summary.png  " ")
 
-    Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
+    You will see details of the assessment like number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
     Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
