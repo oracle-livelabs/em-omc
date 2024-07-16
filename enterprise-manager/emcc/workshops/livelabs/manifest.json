@@ -25,16 +25,16 @@
       "filename": "./../../em-find-fix-validate/em-find-fix-validate.md"
     },
     {
-      "title": "Lab 4: Automated Database Patching at Scale with Fleet Maintenance",
-      "description": "This lab walks you through the steps needed with Fleet Maintenance to automate patching of wide range of DB Configurations including Oracle RAC environments with Data Guard Standby",
-      "publisheddate": "7/16/2020",
-      "filename": "./../../em-fleet-maintenance-patching/em-fleet-maintenance-patching.md"
+      "title": "Lab 4: Automated Database Patching at Scale with Fleet Maintenance UI",
+      "description": "This lab walks you through the UI needed with Fleet Maintenance to automate patching of wide range of DB Configurations including Oracle RAC environments with Data Guard Standby",
+      "publisheddate": "1/25/2022",
+      "filename": "./../../em-fleet-maintenance-patching-ui/em-fleet-maintenance-patching-ui.md"
     },
     {
-      "title": "Lab 5: Automated Database Upgrade at Scale with Fleet Maintenance",
-      "description": "This lab walks you through the steps needed with Fleet Maintenance to automate upgrade of wide range of DB Configurations including Oracle RAC environments with Data Guard Standby",
-      "publisheddate": "7/16/2020",
-      "filename": "./../../em-fleet-maintenance-upgrade/em-fleet-maintenance-upgrade.md"
+      "title": "Lab 5: Automated Database Upgrade at Scale with Fleet Maintenance UI",
+      "description": "This lab walks you through the UI needed with Fleet Maintenance to automate upgrade of wide range of DB Configurations including Oracle RAC environments with Data Guard Standby",
+      "publisheddate": "1/25/2022",
+      "filename": "./../../em-fleet-maintenance-upgrade-ui/em-fleet-maintenance-upgrade-ui.md"
     },
     {
       "title": "Lab 6: Database Configuration and Compliance Management",

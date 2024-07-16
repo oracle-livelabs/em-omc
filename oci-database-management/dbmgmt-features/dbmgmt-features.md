@@ -40,9 +40,9 @@ This lab assumes you have already completed the following:
 
 ## Task 2: Monitoring a Fleet of Databases
 
-1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. The dbmgmt-demo compartment is selected by default in the Compartment field.
+1.  On the left pane, click **Oracle Database** to navigate to the **Oracle Database Fleet Summary** page. The dbmgmt-demo compartment is selected by default in the Compartment field.
 
-     ![Fleet Summary](./images/fleet-summary.png "Fleet Summary")
+     ![Fleet Summary](./images/oracle-fleet-summary.png "Fleet Summary")
 
 2.  The following tiles are available on the **Fleet Summary** page:
 
@@ -160,6 +160,18 @@ In the Create Job dialog:
 
 1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **HRSTAGE** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
+     **Note** : Performance Hub requires granting of appropriate user privileges. Grant the required privileges to db\_monitoring\_user whereas db\_monitoring\_user is the user selected to register pluggable database.
+
+          GRANT CREATE PROCEDURE to db_monitoring_user;
+
+          GRANT SELECT ANY DICTIONARY, SELECT_CATALOG_ROLE to db_monitoring_user;
+          
+          GRANT ALTER SYSTEM to db_monitoring_user;
+          
+          GRANT ADVISOR to db_monitoring_user;
+          
+          GRANT EXECUTE ON DBMS_WORKLOAD_REPOSITORY to db_monitoring_user;
+
      ![Performance Hub](./images/perfhub.png "Performance Hub")
 
 2.  This will launch the **Performance Hub** page. Performance Hub provides a single view of the database’s performance and enables you to perform the rapid diagnosis of its issues.
@@ -207,4 +219,4 @@ In the Create Job dialog:
 
 - **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, September 2021
+- **Last Updated By/Date** - Vivek Verma, December 2023

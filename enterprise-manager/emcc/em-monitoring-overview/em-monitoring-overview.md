@@ -30,7 +30,7 @@ This lab assumes you have:
 - All previous labs successfully completed
 
 
-*Estimated Time*: 85 minutes
+*Estimated Time*: 108 minutes
 
 
 ### Lab Timing (Estimated)
@@ -38,9 +38,9 @@ This lab assumes you have:
   | **Step No.** | **Feature**                                   | **Approx. Time** | **Details**                                                                                                                                                                                                                    | **Value proposition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**  | Enterprise Summary                              | 5 minutes       | Explore Enterprise Summary page and drill down to see a list of down targets. View the list of critical incidents created for the down targets. Filter the Status pane to display a list of Database Instance targets.                         | Enterprise Summary enables you to get complete visibility into the overall status and health of your managed environment.                                                                                                                                                                                                                                            |
-  | **2**  | Incident Manager                                | 5 minutes       | Triage unassigned incidents from Incident Manager and acknowledge then assign an incident.                                                 | Incident Manager enables IT Staff to manage, track, and resolve actionable incidents in a collaborative way.|                                                                                                                                        
-  | **3A**  | Dynamic Runbooks                               | 5 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
-  | **3B**  | Dynamic Runbooks                               | 7 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
+  | **2**  | Incident Manager                                | 10 minutes       | Triage unassigned incidents from Incident Manager and acknowledge then assign an incident.                                                 | Incident Manager enables IT Staff to manage, track, and resolve actionable incidents in a collaborative way.|                                                                                                                                        
+  | **3A**  | Dynamic Runbooks                               | 10 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
+  | **3B**  | Dynamic Runbooks                               | 20 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
   | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
   | **5**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **6**  | Metric Extensions                          | 5 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -145,7 +145,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
       - Incident Details contains information about the incident such as target name, creation date, type, and summary.
       - Metric Data shows the warning and critical thresholds and the last known value of this metric alert event.
-      - Tracking provides the priority, status, and ability to manage the incident.
+      - Tracking provides the priority, status, and ability to manage the lifecycle of the incident.
       - Guided Resolution provides the ability to diagnose and take action to resolve the incident.
       - Runbook Sessions provides options to start, create, or view a runbook session against the incident.
 
@@ -177,7 +177,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
 13.	Incident Dashboard provides a holistic view of your incidents. It contains 3 sections.
 
-       - Summary: Instant count of incidents that are open, fatal, escalated, unassigned, and unacknowledged. These are the incidents that need to be triaged or worked on immediately. Fatal and Escalated count are highlighted in Red by default.
+       - Summary: Count of incidents that are open, fatal, escalated, unassigned, and unacknowledged. These are the incidents that need to be triaged or worked on immediately. Fatal and Escalated count are highlighted in Red by default.
        - Charts: Provides an easy-to-understand look at the current incident distribution and management status for each incident. Drill down capability with stackable filters to slice and dice data any way you like. Customize to add/update/remove charts to provide a personalized view in Incident Manager.
        - Incident List: Shows the open incidents listed in reverse chronological order by last updated time stamp. From this list, you can perform requisite incident lifecycle actions such as escalating, prioritizing, acknowledging, assigning owners, and adding comments to the incident. The incident list will reflect any filters applied.
 
@@ -262,17 +262,17 @@ For this task, a Dynamic Runbook has already been published for you to use. You 
 
      ![Identify filesystem - Step 3](images/runbooks/fra-step4-highlighted-not-run.png " ")
 
-16. A table appears with the FRA filesystem path. Highlight the filesystem with your mouse and copy it (Ctrl + C). You will need this for the next step. 
+16. A table appears with the FRA filesystem path. Make a note of this filesystem path. You will need this for the next Runbook step. 
 
      ![FRA filesystem path - Step 4](images/runbooks/fra-step4-filesystem-highlighted.png " ")
 
-17. Now that you have copied the filesystem path, let’s move on to Step 5. Remember in previous steps we determined that the FRA size was below the minimum threshold (i.e., it was 13GB but should be at least 50GB). Before we can increase to meet the requirements, we should check that the filesystem has enough space to increase the FRA size. 
+17. Let's move on to Step 5. Remember in previous steps we determined that the FRA size was below the minimum threshold (i.e., it was 13GB but should be at least 50GB). Before we can increase to meet the requirements, we should check that the filesystem has enough space to increase the FRA size. 
 
-18. Notice for Step 5 a gear icon is displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step.  Click the gear icon.
+18. Notice for Step 5 a gear icon is displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step. Click the gear icon.
 
      ![Check filesystem space - Step 5](images/runbooks/fra-step5-unlock.png " ")
 
-19. A pop-up will appear. Step 5 requires you to specify a value before you can run the step. Paste the filesystem path that you copied from Step 4 into the text field to enable the step. Click Save.
+19. A pop-up will appear. Step 5 requires you to specify a value before you can run the step. To enable the step, enter the following filesystem path into the text field: "/u01/app/cdb186/fast\_recovery\_area" or copy it from Step 4. Click Save.
 
      ![Specify value - Step 5](images/runbooks/fra-step5-specify-values-blank.png " ")
 
@@ -321,7 +321,8 @@ Runbooks are documented procedures that IT staff follow to resolve an issue. In 
 
 For this task, a Dynamic Runbook draft has already been created. You will go through the process of modifying the Runbook and later publishing it to be used by others.  
 
-**Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager.**
+**Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager or Task 3A: Dynamic Runbooks.**
+
 
 1. Open a new terminal in your remote desktop.
 
@@ -375,13 +376,13 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
 
      ![Step 1 Scroll to Target Name Placeholder - New Runbook](images/runbooks/new-runbook-step1-target-name.png " ") 
 
-11. View the "Oracle Provided Variables" on the right side of the screen. Scroll until you see the field for "Target Name".
+11. View the "Oracle Provided" section under the "Variables" section on the right side of the screen. Scroll until you see the field for "Target Name".
 
      ![Step 1 Oracle Variable for Target Name - New Runbook](images/runbooks/new-runbook-step1-variable-target-name.png " ")     
 
 12. Replace the "[target name]" placeholder in the text box with the value displayed in the Variables table for Target Name: **$ora\_target\_name**. This will now replace the original "[target name]" placeholder text with the target name pulled from the context of the incident.
 
-     **Note:** The list of Variables table can be used in runbook steps. The built-in variables contain the incident context such as target name, metric name, etc. Note you can also create your own variables for use in other steps.  
+     **Note:** The list of Variables table can be used in runbook steps. The built-in variables contain the incident context such as target name, metric name, etc. You can also create your own variables for use in other steps.  
 
      ![Step 1 Target Name Placeholder Replacement - New Runbook](images/runbooks/new-runbook-target-name-replaced.png " ")  
 
@@ -401,7 +402,7 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
 
      ![Edit Step 2 - New Runbook](images/runbooks/new-runbook-step2-edit.png " ") 
 
-17. To specify the metric name, edit the “[metric name]” placeholder to use the value **$ora\_metric\_name**. This will populate the value with the text in the Metric Name field (e.g., FRAPercentUsed).
+17. To specify the metric name, edit the “[metric name]” placeholder to use the value "**$ora\_metric\_name**". This will populate the value with the text in the Metric Name field (e.g., FRAPercentUsed).
 
      ![Step 2 Specify Metric Name - New Runbook](images/runbooks/new-runbook-step2-metric-name.png " ")
 
@@ -438,7 +439,7 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
      ![Add Variable Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable.png " ")
 
 24. You will see a pop-up box labeled Add a Runbook Variable. 
-     - In the Name field, enter "user_flash". 
+     - In the Name field, enter "user\_flash". 
      - In the Display Name field enter "Flash like statement". 
      - In the Value used in the Draft field, enter "%flash%" without the quotes. 
      - And for the Value used in a Runbook Session field, you have the options to select the "User who runs the Runbook Session specify the value" or "Same value used in the draft". Select "Same value used in the draft".
@@ -454,7 +455,7 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
 
      ![Variable Defined Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-variable-defined.png " ")
 
-27. The current SQL query needs to be replaced to check for flashback retention usage. Replace the current SQL query with the following: "select name, value from v$parameter where name LIKE:$user\_flash".
+27. The current SQL query needs to be replaced to check for flashback retention usage. Replace the current SQL query with the following: "select name, value from v$parameter where name LIKE:$user\_flash"
 
      ![Replace Query Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-replace-query.png " ")
 
@@ -523,7 +524,7 @@ Metric and Collection Settings page is where we can view and configure threshold
 
      ![Database target home page](images/emmonlab3step4.png " ")
 
-5. Oracle ships with default OOTB Metrics and settings. This includes Metrics, Thresholds, and Collection Schedules. This aims to cover generic use cases to get you started. We recommend that you customize the monitoring settings of your targets according to your requirements.
+5. Oracle ships with default out-of-box Metrics and settings. This includes Metrics, Thresholds, and Collection Schedules. This aims to cover generic use cases to get you started. We recommend that you customize the monitoring settings of your targets according to your requirements.
 What we’re looking at right now are database metrics with default settings. These are recommended settings; however, you can modify anything to suit your needs.
 As Best Practice:
       - Disable collection for metrics you don’t care about.
@@ -584,7 +585,7 @@ As Best Practice:
 
      ![Database target home page, all metric](images/metric-settings/show-thresholds.png " ")
 
-18. The Warning and Critical thresholds for the metric will now be shown with the chart as yellow and red lines respectively.  As you review the metric, you can also visually see how close the metric values are to its Warning and Critical thresholds. Notice the metric has passed the Warning threshold of 85.
+18. The Warning and Critical thresholds for the metric will now be shown with the chart as yellow and red lines respectively.  As you review the metric, you can also visually see how close the metric values are to its Warning and Critical thresholds. Notice the metric has passed the new Warning threshold of 85. When the next metric collection occurs, the metric will be evaluated against the new Warning threshold of 85 and should generate a Warning alert. (Note: You do not have to wait for the alert, you can move on to the next lab).
 
      ![Database target home page, all metric](images/metric-settings/warning-and-critical-shown.png " ")
 
@@ -708,7 +709,7 @@ For this lab, a metric extension has already been created and is in Editable sta
 
     ![Enterprise Monitoring, metric extensions page](images/emmonlab5step8.png " ")
 
-9. The Test Results section shows the results of running the Metric Extension on the selected targets.
+9. The Test Results section shows the results of running the Metric Extension on the selected targets. Note: The Test Results may vary based on your lab environment.
 
     ![Enterprise Monitoring, metric extensions page](images/emmonlab5step9.png " ")
 
@@ -1148,7 +1149,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
      ![enter policy name and description](images/event-compression/create-new-policy-name.png " ")
 
 17. Now let’s move on to the Event Compression Logic sub-section. 
-     - First you need to specify the type of events that will be compressed. You can choose the events from an event rule or manually select the event types. 
+     - First you need to specify the type of events that will be compressed. You can choose the events from an event rule or manually select the event types. For this lab, you will manually select the events:
           - This policy is for target availability events so under the field “Events of type”, search for “Target Availability” and choose it. 
           - We are also interested in coherence targets so under the field “On targets of type” search the following: “Oracle Coherence Cache”, “Oracle Coherence Cluster” and “Oracle Coherence Node” and choose them. 
           - And finally, for the “With event severity” field, click “Fatal” and “Critical” as these will map to target down and target error events which fall under the target availability umbrella.
@@ -1161,7 +1162,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![enter compression logic part two](images/event-compression/create-new-policy-logic-part2.png " ")
 
-19. We provide default incident messages based on your selection for the event compression logic. However, you may modify the default messages as you desire. The default variables will be replaced by the corresponding values once the incident is created. For example, the %EVENT_COUNT% variable would be replaced by the number of events in the incident. Let’s keep the default message and click Save.
+19. We provide default incident messages based on your selection for the event compression logic. However, you may modify the default messages as you desire. The default variables will be replaced by the corresponding values once the incident is created. For example, the %EVENT\_COUNT% variable would be replaced by the number of events in the incident. Let’s keep the default message and click Save.
 
      ![enter incident message](images/event-compression/create-new-policy-incident-message.png " ")
 

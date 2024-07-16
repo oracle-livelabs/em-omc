@@ -17,7 +17,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Capacity Planning - Databases
 
-1.  On the **Operations Insights Overview** page, from the left pane click on **Capacity Planning**.
+1.  On the **Ops Insights Overview** page, from the left pane click on **Capacity Planning**.
 
       ![Left Pane](./images/capacity-planning.png " ")
 
@@ -32,13 +32,17 @@ This lab assumes you have completed the following labs:
     * Identify top-5 databases by CPU, Storage, and Memory growth over the period
     * See aggregated historical usage trends for CPU, Storage, and Memory over the period
 
-3.  From **Time Range** on the left pane select **Last 90 days** and ensure that the **Compartment** is set to **OperationsInsights**.
+3.  From **Time Range** on the left pane select **Last 90 days**.
 
-      ![Left Pane](./images/time-range.png " ")
+      ![Left Pane](./images/time-range-ocw.png " ")
 
-4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Operations Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and UsageTrend) by these database targets.
+      You can filter based on **Time range**, **Database type** or **Tags**. This let’s you customize the fleet of database of your choice by using combination of one of these.
 
-      ![Left Pane](./images/inventory.png " ")
+      ![Left Pane](./images/filter-ocw.png " ")
+
+4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
+
+      ![Left Pane](./images/inventory-ocw.png " ")
 
 5.  **CPU Insights** - Database utilization percentage for the 90th percentile value of the daily average CPU Usage over the selected time period. These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of CPU.
 
@@ -56,7 +60,7 @@ This lab assumes you have completed the following labs:
 
 1.  On the **Database Capacity Planning** page, from the left pane click on **CPU**.
 
-      ![Left Pane](./images/database-cpu.png " ")
+      ![Left Pane](./images/database-cpu-ocw.png " ")
 
 2.  **Database CPU** page has a master-detail design with three primary components:
 
@@ -64,7 +68,7 @@ This lab assumes you have completed the following labs:
     * Aggregate – treemap of CPU utilization over all databases in the compartment
     * Trend & Forecast – time series charts of CPU usage trends and forecasts for individual or groups of databases
 
-      ![Left Pane](./images/database-cpu1.png " ")
+      ![Left Pane](./images/database-cpu2-ocw.png " ")
 
 3.  On the **Database CPU** page, under **Insights** tab, select **30 Day High Utilization Forecast** against **Databases**, to view database CPU utilization forecast for next 30 days.
 
@@ -118,9 +122,9 @@ This lab assumes you have completed the following labs:
 
 1.  Click on the **Storage** menu on the left panel.
 
-      ![Left Pane](./images/storage-menu.png " ")
+      ![Left Pane](./images/storage-menu-ocw.png " ")
 
-2.  You get a complete view of storage usage across all Operations Insights enabled databases
+2.  You get a complete view of storage usage across all Ops Insights enabled databases
 
       ![Left Pane](./images/database-storage.png " ")
 
@@ -149,5 +153,5 @@ This lab assumes you have completed the following labs:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, May 2022
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
+- **Last Updated By/Date** - Vivek Verma, Apr 2024
