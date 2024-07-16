@@ -401,11 +401,11 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     You can see
 
-             -  Specific rule that has violated
-             -  Date when it was last evaluated
-             -  Name of the rule
-             -  Rationale for the violation
-             -  And recommended remediation
+    - Specific rule that has violated
+    -  Date when it was last evaluated
+    -  Name of the rule
+    -  Rationale for the violation
+    -  And recommended remediation
 
     ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
