@@ -285,9 +285,9 @@ Leverage the built-in SCAP engine on Linux hosts to meet security standards like
 
 Finally, for Exadata family of Engineered Systems, compliance standards tied to Autonomous Health Framework (AHF) Exachk is available out-of-box.
 
-In this lab, you will get hands-on experience with ***Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database*** to secure configuration of provisioned database.
+In this lab, you will get hands-on experience with ***Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database*** to secure configuration of database.
 
-Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyberthreats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
+Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyber threats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
 
 Lets start the lab.
 
@@ -379,6 +379,10 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
+    This indicates **hr.subnet.vcn.oraclevcn.com_FINANCE** target Compliance score is only 39% against the CIS benchmark baseline.
+
+    Next step is to analyze the violation and remediate to make this a compliant target.
+
     ![Compliance Summary](images/non-compliant-target.png " ")
 
     Click on 'x' to close.
@@ -394,6 +398,14 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     You will see the details of the evaluation.
 
     You will get the comprehensive view of the violation.
+
+    You can see
+
+             -  Specific rule that has violated
+             -  Date when it was last evaluated
+             -  Name of the rule
+             -  Rationale for the violation
+             -  And recommended remediation
 
     ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
@@ -411,11 +423,13 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
 
-    You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
+    Next, click on 'Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing' in the navigation tree.
+
+    You will see the main CIS categories along with their corresponding CIS control rules and any violations.
 
     The Target Scorecard pie chart displays the overall compliance evaluation status of the monitored target, summarizing its adherence to defined CIS benchmark security policies.
 
-    The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
+    The Rule Evaluations pie chart represents a summary of each rule evaluation status — compliant, critical, warning, minor warning, and error in terms of the percentage of rules.
 
     ![Validations](images/cis-compliance-pdb-controls.png " ")
 
@@ -431,7 +445,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click on Violation Count.
 
-    You can export to Excel for off line Analysis.
+    You can export to Excel for offline analysis.
 
     ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
 
@@ -441,7 +455,11 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click on 'Close'
 
-11. Let us select **Violations** tab, you'll find the table with comprehensive details for each rule violations for the target and severity of the violation.
+11. Let us select **Violations** tab.
+
+    This table provides comprehensive details for each rule, target name, applicable pluggable database, and violation severity with keywords.
+
+    You can select an individual violation to view its detailed statement and recommended actions for quick remediation.
 
     ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
@@ -452,6 +470,10 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     Explore each main category controls' **Violations**.
 
     Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
+
+    Corrective Actions enable immediate responses to events like incidents.
+
+    This corrective action minimizes the need for manual intervention and maintains consistent compliance with established CIS benchmark.
 
     ![Check for violations](images/cis-rule-violation.png " ")
 
@@ -505,7 +527,9 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
-20. Now, Navigate to ***Targets >> Databases***.
+20. You will view the remediated status for the pluggable database.
+
+    Now, Navigate to ***Targets >> Databases***.
 
     ![Navigate to result](images/target-databases.png  " ")
 
@@ -546,6 +570,8 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     Verify the selected violation: **Ensure that 'DBA' is revoked from unauthorized 'GRANTEE'**.
 
     The violation count is currently "0".
+
+    This means there are no violations for this rule in this database **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
     ![Compliance Results](images/cis-pdb-compliance-remeidiated.png  " ")
 
@@ -600,4 +626,4 @@ You may now proceed to the next lab.
   - **Authors**
     - Romit Acharya, Oracle Enterprise Manager Product Management
     - Shiva Prasad, Oracle Enterprise Manager Product Management
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, May 2024
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, July 2024
