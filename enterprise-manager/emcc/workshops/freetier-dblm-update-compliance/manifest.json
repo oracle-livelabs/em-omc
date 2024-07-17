@@ -1,10 +1,10 @@
 {
-  "workshoptitle": "Assess and Assure Security Posture Across Your Fleet of Databases",
+  "workshoptitle": "Oracle Enterprise Manager - Assess and Assure Security Posture Across Your Fleet of Databases",
   "help": "livelabs-help-mgmt_us@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "Introduction to Multitenant Database Lifecycle Management Workshop",
+      "description": "Introduction Oracle Enterprise Manager - Assess and Assure Security Posture Across Your Fleet of Databases",
       "filename": "./../../intro/intro-lifecycle.md"
     },
     {
@@ -17,7 +17,7 @@
       "description": "How to download your ORM stack and update security rules for an existing VCN",
       "publisheddate": "09/28/2020",
       "filename": "../../prepare-setup/prepare-setup.md",
-      "type": "lifecycle"
+      "type": "fleet-upgrade"
     },
     {
       "title": "Lab 2: Environment Setup",
@@ -28,7 +28,7 @@
     {
       "title": "Lab 3: Assess and Assure Security Posture Across Your Fleet of Databases",
       "description": "The objective of this workshop is to highlight the Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities around securing Databases",
-      "publisheddate": "7/16/2024",
+      "publisheddate": "7/17/2024",
       "filename": "./../../em-dblm-update-compliance/em-dblm-update-compliance.md"
     },
     {
@@ -42,6 +42,11 @@
       "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
       "publisheddate": "8/12/2020",
       "filename": "./../../faq/faq.md"
+    },
+    {
+      "title": "Environment Cleanup",
+      "description": "Cleanly dispose of all OCI resources created by ORM for the workshop, and delete the stack",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cleanup-stack/cleanup-stack.md"
     },
     {
       "title": "Need Help?",
