@@ -699,6 +699,7 @@ A compliance standard rule is a specific test to determine if a configuration da
   - [SCAP Standards](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emdbc/scap-supported-standards.html)
 
 ## Acknowledgements
+
   - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
   - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, June 21st,2023.
