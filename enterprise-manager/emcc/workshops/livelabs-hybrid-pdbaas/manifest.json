@@ -1,0 +1,39 @@
+{
+  "workshoptitle": "Oracle Enterprise Manager - Hybrid Pluggable Database-as-a-Service",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Hybrid Pluggable Database-as-a-Service Workshop",
+      "filename": "./../../intro/intro-hybrid-pdbaas.md"
+    },
+    {
+      "title": "Lab 1: Environment Setup",
+      "description": "Verify Setup of compute instance",
+      "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
+    },
+    {
+      "title": "Lab 2: Hybrid Pluggable Database-as-a-Service",
+      "description": "This lab provides an overview of Hybrid Pluggable database-as-a-service features in Enterprise Manager. It is intended solely to help you assess the business benefits identify the value proposition of using EM Hybrid PDBaaS",
+      "publisheddate": "6/19/2024",
+      "filename": "./../../em-hybrid-pdbaas/em-hybrid-pdbaas.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Appendix: Frequently Asked Questions (FAQ)",
+      "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
+      "publisheddate": "8/12/2020",
+      "filename": "./../../faq/faq.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}
