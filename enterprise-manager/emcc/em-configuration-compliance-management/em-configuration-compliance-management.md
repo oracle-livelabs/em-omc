@@ -80,8 +80,6 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 6. Click on Table View, further details to explore.
 
-    ![em-inventory-usage-detail-table-select-page](images/test.png " em-inventory-usage-detail-table-select-page ")  
-
     ![em-inventory-usage-detail-table-select-page](images/em-inventory-usage-detail-table-select.png " em-inventory-usage-detail-table-select-page ")  
 
     Click **Close**.
