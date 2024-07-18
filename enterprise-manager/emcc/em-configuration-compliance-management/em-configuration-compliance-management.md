@@ -700,6 +700,5 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 ## Acknowledgements
 
-  - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
-  - **Contributors** -  Rene Fontcha
-  - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, June 21st,2023.
+  - **Author/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, July 18th,2024.
+  
