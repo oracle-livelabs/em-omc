@@ -5,7 +5,7 @@
     {
       "title": "Introduction",
       "description": "Introduction to Multitenant Database Lifecycle Management Workshop",
-      "filename": "./../../intro/intro-lifecycle.md"
+      "filename": "./../../intro/intro-dblm-update-compliance.md"
     },
     {
       "title": "Lab 1: Environment Setup",
