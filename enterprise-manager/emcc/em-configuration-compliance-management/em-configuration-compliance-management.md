@@ -260,9 +260,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
     ![edit-comparison-template-configuration-items-page](images/edit-comparison-template-configuration-items.png " edit-comparison-template-configuration-items-page ")
 
     To begin with, uncheck all configuration items.
-
-    ![comparison-uncheck-compare-template-page](images/comparison-uncheck-compare-template.png " comparison-uncheck-compare-template-page ")
     
+    ![comparison-uncheck-compare-template-page](images/comparison-uncheck-compare-template.png " comparison-uncheck-compare-template-page ")
+
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
     Select the following three configuration items only:
