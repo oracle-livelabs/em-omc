@@ -379,7 +379,9 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
    Click on 'Close'
 
-11. Let us select **Violations** tab, you'll find the table with comprehensive details for each rule violations for the target and severity of the violation.
+11. Let us select **Violations** tab.
+
+    You will see the table with comprehensive details for each rule, target name, Applicable to Pluggable Database, violation  severity  with keywords.
 
    ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
@@ -387,9 +389,17 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 12. You can explore further by clicking on caret-right ![Caret-right](images/cis-caret-search.png " ") icon to explore each main category controls' **Violations**.
 
-    Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
+    Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**. 
+
+    Corrective Actions enable immediate responses to events like incidents.
+
+    This corrective action significantly reduce the manual work required when violation happens.
+    
 
    ![Check for violations](images/cis-rule-violation.png " ")
+
+   
+   Corrective action to Revoke 'DBA' role from unathorized grantee 
 
 13. You will notice that the "Unauthorized user 'IX' has been assigned the DBA role".
 
@@ -442,6 +452,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
     ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
 20. Now, Navigate to ***Targets >> Databases***.
+
 
     ![Navigate to result](images/target-databases.png  " ")
 
