@@ -480,15 +480,15 @@ Click the **Cancel** button.
 
     ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
 
-16. Go to the **Compliance >> dashboard ** page to check the CIS compliance posture. It takes about few minutes to show up in compliance dashboard results.
+ 16. Go to the **Compliance >> dashboard ** page to check the CIS compliance posture. It takes about few minutes to show up in compliance dashboard results.
+ 
+        ![compliance-results-dashboard-page](images/compliance-results-dashboard.png " compliance-results-dashboard-page ")
+       
+     Under the Compliance Summary panel at the bottom below page:
 
-    ![compliance-dashboard-page](images/compliance-results-dashboard.png" compliance-dashboard-page ")
-
-  Under the Compliance Summary panel at the bottom below page:
-
-    - Explore various tabs to get an understanding of Frameworks, Standards, and target-level compliance
-    - For any given standard, if there are Critical, Warning, or Minor Warnings
-    - Click on the violation number to see more details of the violationS by clicking the numbers below each column's names
+     - Explore various tabs to get an understanding of Frameworks, Standards, and target-level compliance
+     - For any given standard, if there are Critical, Warning, or Minor Warnings
+     - Click on the violation number to see more details of the violationS by clicking the numbers below each column's names
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
