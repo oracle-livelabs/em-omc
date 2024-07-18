@@ -350,12 +350,11 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![comparison-results-ecm003-drift-demodrift-page](images/comparison-results-ecm003-drift-demodrift.png " ccomparison-results-ecm003-drift-demodrift-page ")
 
-  Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
-
-    - Equal sign means parameter properties are the same across the reference and target compared
-    - Not equal sign indicates parameter properties are different across the reference and target compared
-    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
-    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+    Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
+     - Equal sign means parameter properties are the same across the reference and target compared
+     - Not equal sign indicates parameter properties are different across the reference and target compared
+     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
+     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
 23. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page.
 
