@@ -2,17 +2,21 @@
 ## Introduction
 Oracle Enterprise Manager enables you to get complete monitoring visibility into your IT infrastructure, applications stack and applications that are critical to running your business.
 
-- Single pane of glass monitoring for on-premises, hybrid, and Oracle Cloud Platform
+- Single pane of glass to monitor and discover targets, such as Oracle Database, that are running on-premises or in the cloud
 
 - Comprehensive set of predefined performance and health metrics that enables lights-out monitoring of critical components in your environment, such as applications, application servers, databases, as well as the back-end components on which they rely, such as hosts and storage
 
 - Rich set of alerting, incident management and notification capabilities to notify IT staff and integrate with your corporate ticketing systems
 
+- Dynamic Runbooks to triage and resolve your incidents  
+
 - Corrective Actions to auto-correct alerts and minimize service disruption
 
 - Metric Extensions to monitor conditions specific to your environment
 
-- Dynamic Runbooks to triage and resolve your incidents  
+- Monitoring Templates to standardize monitoring settings across your fleet
+
+- Administration Groups and Template Collections to enforce monitoring standards and automate monitoring setup in a scalable way  
 
 - Event Compression Policies to reduce your volume of incidents
 
@@ -30,7 +34,7 @@ This lab assumes you have:
 - All previous labs successfully completed
 
 
-*Estimated Time*: 108 minutes
+*Estimated Time*: 118 minutes
 
 
 ### Lab Timing (Estimated)
@@ -41,7 +45,8 @@ This lab assumes you have:
   | **2**  | Incident Manager                                | 10 minutes       | Triage unassigned incidents from Incident Manager and acknowledge then assign an incident.                                                 | Incident Manager enables IT Staff to manage, track, and resolve actionable incidents in a collaborative way.|                                                                                                                                        
   | **3A**  | Dynamic Runbooks                               | 10 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
   | **3B**  | Dynamic Runbooks                               | 20 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
-  | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
+   | **3C**  | Dynamic Runbooks                               | 10 minutes       | Start a Dynamic Runbook session against a metric in the All Metrics page.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
+   | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
   | **5**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **6**  | Metric Extensions                          | 5 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **7**  | Monitoring Templates                          | 5 minutes       | Create a Monitoring Template from a Database Instance target. Deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise. | Monitoring Templates enable you to define and implement monitoring standards across all targets in your environment.                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -108,18 +113,6 @@ The Overview pane shows the Target Status of your IT estate. The Status section 
 ## Task 2: Incident Manager
 
 Incident Manager provides in one location the ability to search, view, manage, and resolve events, incidents and problems impacting your environment.
-
-1. Open a new terminal in your remote desktop.
-
-     ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
-
-2. Execute the following script "./scripts/livelabs/update-incidents.sh".
-
-     ![Execute a script](images/incident-manager/execute-script.png " ")
-
-     ![Execute script results](images/incident-manager/execute-script-results.png " ")
-
-3. Close out of the terminal.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
@@ -194,23 +187,9 @@ Incident Manager provides in one location the ability to search, view, manage, a
      
 ## Task 3A: Dynamic Runbooks
 
-Runbooks are documented best practice procedures that IT staff follow to resolve an issue. In Enterprise Manager, you can create Dynamic Runbooks to encapsulate your best practice procedures in the form of steps that your ITOps teams can execute inside Enterprise Manager in context of an incident. To use Dynamic Runbooks, you start a Runbook Session against an incident, choose a Dynamic Runbook, and then follow the steps in the runbook.
+For this task, an Incident-Based Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated **INCIDENT**.
 
-For this task, a Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated incident.
-
-**Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager.**
-
-1. Open a new terminal in your remote desktop.
-
-     ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
-
-2. Execute the following script "./scripts/livelabs/update-incidents.sh".
-
-     ![Execute a script](images/incident-manager/execute-script.png " ")
-
-     ![Execute script results](images/incident-manager/execute-script-results.png " ")
-
-3. Close out of the terminal.
+Dynamic Runbooks are documented best practice procedures that IT staff follow to prevent or resolve an issue. In Enterprise Manager, you can create Dynamic Runbooks to encapsulate your best practice procedures in the form of steps that your ITOps teams can execute inside Enterprise Manager in context of a metric or incident. To use runbooks, you choose a runbook, start a Runbook session against a metric or incident, and then follow the steps in the runbook.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
@@ -218,123 +197,134 @@ For this task, a Dynamic Runbook has already been published for you to use. You 
 
 2. Navigate to "Enterprise >> Monitoring >> Incident Manager".
      
-     ![Navigate to Incident Manager](images/enterprise-monitoring-incident-manager-3a.png " ")
+     ![Navigate to Incident Manager](images/start-runbook-incident/enterprise-mon-incident-manager.png " ")
 
-3. In Incident Manager, the “All open incidents” view is displayed by default. In this view, highlight the incident with Summary text “The value of the Fast Recovery Area % Used is 83.446”. Details of the incident will be displayed in the bottom pane.
+3. In Incident Manager, the “All open incidents” view is displayed by default. 
+
+     Click the incident with Summary text “The value of Fast Recovery Area % Used is 70.467”. Details of the incident will be displayed in the bottom pane.
 
      **Note**: The Fast Recovery Area (FRA) is a unified storage location for all Oracle Database files related to recovery.  
 
-     ![Highlighted Incident](images/runbooks/fra-incident-highlighted-with-details.png " ")
+     ![Highlighted Incident](images/start-runbook-incident/fra-in-incident-manager.png " ")
 
-4. In the bottom pane, you should see a section called "Runbook Sessions".
+4. In the middle pane on the right, you should see a section called "Runbook Sessions".
 
-     ![Runbook Sessions section in Incident Manager](images/runbooks/fra-incident-details-runbook-sessions.png " ")
+     Under "Start Runbook Session", select the runbook named “Fast Recovery Area Triage”.
 
-5. Under "Start Runbook Session", select the runbook named “Fast Recovery Area Triage”.
+     ![Runbook Sessions section in Incident Manager](images/start-runbook-incident/runbook-sessions-pane.png " ")
 
-     ![Start Runbook Session](images/runbooks/fra-start-runbook-session.png " ")
+5. You have now started a Runbook session, opened in a new browser tab. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Notice incident details are carried over. Also, there is a chat icon next to each step where you can leave comments that can later be accessed by your team.
 
-5. You have now started a Runbook session, opened in a new browser tab. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Notice the incident details are carried over.
+     ![Incident details carried over to runbook session](images/start-runbook-incident/runbook-session-incident-details.png " ")
 
-     ![Incident details carried over to runbook session](images/runbooks/fra-incident-details-highlighted.png " ")
+11. The Overview & Prerequisites step describes what the Runbook does, and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the named credentials: **CDB186\_SYS**, for the target database and **ORACLE**, for the host of the target. 
 
-11. The Overview & Prerequisites step describes what the Runbook does and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the Named Credential, **CDB186\_SYS**, for the target database. Access to this Named Credential will allow you to successfully run through all the steps.
+     Check the checkbox to indicate you have read and completed the step.  
 
-     ![Overview & Prerequisites Step](images/runbooks/fra-step1-highlighted.png " ")
+     ![Overview & Prerequisites Step - Part 2](images/start-runbook-incident/overview-prereqs-step-completed.png " ")
 
 12. Click the play icon in Step 2 to review the metric that triggered the incident. The red vertical dotted line indicates when the incident happened. 
 
-     ![Review the Metric - Step 2](images/runbooks/fra-step2-highlighted.png " ") 
+     ![Review the Metric - Step 2](images/start-runbook-incident/review-metric-step.png " ") 
 
-13. Next, go to Step 3 and click the hyperlink for “What’s FRA”. This will open another browser tab to official Oracle documentation on Fast Recovery Area. Runbooks support hyperlinks to external sites to allow you to provide further context for a step that is needed to triage an incident.
+13. Notice Step 3 has gear icon displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step. 
 
-     ![What's FRA](images/runbooks/fra-step3-whats-fra-highlighted.png " ")
+     Click the gear icon.
 
-     ![What's FRA link opened](images/runbooks/fra-whats-new-oradocs.png " ")
+     ![Gear Icon - Step 3](images/start-runbook-incident/check-fra-size-gear-icon.png " ") 
+
+14. Step 3 requires you to specify the named credential for the target database before you can run the step. 
+
+     To enable the step, enter the following credential: **CDB186\_SYS**. Click Save.
+
+     ![Specify Credentials - Step 3](images/start-runbook-incident/specify-db-cred-pt1.png " ")     
+
+15. Before running the step, click the hyperlink for “What’s FRA?”. This will open another tab to documentation on Fast Recovery Area. You can add links to external resources or to other EM pages to assist users with additional diagnostic or contextual information.
+
+     ![What's FRA](images/start-runbook-incident/whats-fra-link.png " ")
+
+     ![What's FRA link opened](images/start-runbook-incident/whats-fra-doc.png " ")
 
 14. Close out of the Oracle documentation tab.
 
-14. In Step 3, click the play icon to check the FRA size of the database. A table appears, displaying the FRA size for the database. It is 13 Gigabytes (GB). However, based on the Runbook instructions, the FRA size must be set to at least 50GB to comply with the company’s database standards. Therefore, you will need to increase the FRA size.
+14. In Step 3, click the play icon to check the FRA size of the database. 
 
-     ![Check FRA Size - Step 3](images/runbooks/fra-step3-highlighted.png " ")
+     It is 8 Gigabytes (GB). However, the FRA size must be set to at least 50GB. Therefore, you will need to increase the FRA size.
 
-15. Before increasing the size, first identify the filesystem used by the FRA. Click the play icon in Step 4.
+     ![Check FRA Size - Step 3](images/start-runbook-incident/check-fra-size-ran.png " ")
 
-     ![Identify filesystem - Step 3](images/runbooks/fra-step4-highlighted-not-run.png " ")
+15. Before increasing the size, first identify the filesystem used by the FRA. 
 
-16. A table appears with the FRA filesystem path. Make a note of this filesystem path. You will need this for the next Runbook step. 
+     Click the play icon in Step 4.
 
-     ![FRA filesystem path - Step 4](images/runbooks/fra-step4-filesystem-highlighted.png " ")
+     ![Identify filesystem - Step 4](images/start-runbook-incident/check-fra-location-before.png " ")
 
-17. Let's move on to Step 5. Remember in previous steps we determined that the FRA size was below the minimum threshold (i.e., it was 13GB but should be at least 50GB). Before we can increase to meet the requirements, we should check that the filesystem has enough space to increase the FRA size. 
+16. A table appears with the FRA filesystem path. This filesystem path will be used in the next Runbook step. 
 
-18. Notice for Step 5 a gear icon is displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step. Click the gear icon.
+     ![FRA filesystem path - Step 4](images/start-runbook-incident/check-fra-location-after.png " ")
 
-     ![Check filesystem space - Step 5](images/runbooks/fra-step5-unlock.png " ")
+17. Let's move on to Step 5. Before we can increase to meet the requirements, we should check that the filesystem has enough space to increase the FRA size.
 
-19. A pop-up will appear. Step 5 requires you to specify a value before you can run the step. To enable the step, enter the following filesystem path into the text field: "/u01/app/cdb186/fast\_recovery\_area" or copy it from Step 4. Click Save.
+18. Notice another gear icon is displayed instead of the play icon for Step 5. 
 
-     ![Specify value - Step 5](images/runbooks/fra-step5-specify-values-blank.png " ")
+     Click the gear icon.
 
-     ![Specify value complete - Step 5](images/runbooks/fra-step5-specify-values-complete.png " ")
+     ![Check filesystem space - Step 5](images/start-runbook-incident/check-filesystem-gear-icon.png " ")
 
-20. The gear icon switches to a play icon indicating that you may now run the step. Click the play icon. 
+19. Step 5 requires you to specify host credentials before you can run the step. 
 
-     ![Run Step 5](images/runbooks/fra-step5-highlighted.png " ")
+     To enable the step, enter the following credentials: **ORACLE**. Click Save.
 
-18. There is 70GB available in the filesystem where the FRA is located. This shows that there is enough space for us to increase the FRA size.
+     ![Specify value complete - Step 5](images/start-runbook-incident/specify-host-cred-pt1.png " ")
 
-     ![70GB available in the filesystem  - Step 5](images/runbooks/fra-step5-ran.png " ")
+20. Click the play icon. 
 
-22. To change the FRA size to 50GB, click the play icon in Step 6. You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRA percent used to decrease.
+     ![Run Step 5](images/start-runbook-incident/check-filesystem-play-icon-before.png " ")
 
-     ![Change FRA  - Step 6](images/runbooks/fra-step6-ran.png " ")
+18. There are 342GB available in the filesystem where the FRA is located. This shows that there is enough space for us to increase the FRA size.
+
+     ![342GB available in the filesystem  - Step 5](images/start-runbook-incident/check-filesystem-play-icon-after.png " ")
+
+22. To change the FRA size to 50GB, click the play icon in Step 6. 
+
+     You should see a table that indicates that you have successfully increased the FRA size. Increasing the FRA size allows the FRA percent used to decrease.
+
+     ![Change FRA  - Step 6](images/start-runbook-incident/change-fra-size.png " ")
 
 23. Run Step 7 to view the updated FRA size and to confirm that it has been set to at least 50GB which meets the FRA size required for the database.
 
-     ![Double check FRA size](images/runbooks/fra-step7-highlighted-and-ran.png " ")
+     ![Double check FRA size](images/start-runbook-incident/recheck-fra-size.png " ")
 
-19. Step 8 describes the success criteria: once you have performed all the Runbook steps and the FRA size is sized appropriately, then this should have eventually resolved the issue. 
+19. Step 8 describes the success criteria: once you have completed all the Runbook steps and the FRA is sized appropriately, then this should eventually resolve the issue. 
 
      **Note:** For the purpose of this lab, the metric incident was simulated and therefore may still remain in Incident Manager after these steps have been run.
 
-     ![Success Criteria - Step 8](images/runbooks/fra-step8-highlighted.png " ")
+     ![Success Criteria - Step 8](images/start-runbook-incident/success-criteria-before.png " ")
+
+20. Check the checkbox in Step 8 to indicate that you have read and completed all the runbook steps. 
+
+     ![Checkbox selected for Success Criteria - Step 8](images/start-runbook-incident/success-criteria-step.png " ")
 
 20. The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and run (or rerun) your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later.
 
-21. Click “Mark as Done” to indicate that you have finished all the steps. Once you Mark as Done, you can no longer re-run any steps but you can continue to view the session in read-only mode. This will allow your team to do any post-mortem analysis of the incident and its triage steps. 
+21. Click ‘Mark as Done’ to indicate that you have finished all the steps. Once you Mark as Done, you can no longer re-run any steps, but you can continue to view the session in read-only in order to do any post-mortem analysis.
 
-     ![Mark as Done](images/runbooks/fra-mark-as-done-highlighted.png " ")
+     ![Mark as Done](images/start-runbook-incident/mark-as-done.png " ")
 
 22. Click OK.
 
-     ![Mark as Done - OK](images/runbooks/fra-mark-as-done-ok-highlighted.png " ")
+     ![Mark as Done - OK](images/start-runbook-incident/mark-as-done-pop-up.png " ")
 
-23. A page with all the Runbook Sessions that you have ran will appear. Click the arrow under the Actions column for the "Fast Recovery Area Triage" session to see the actions you can take after a session is complete. In the Actions menu that pops up, you can open the session to have a read-only view, extend the expiration of the session, or delete the session.
+23. A page with all the Runbook Sessions will appear. Click the Actions column to see the actions: open the session in a read-only, extend expiration, or delete the session.
 
-     ![Actions - Complete Runbook Session](images/runbooks/fra-runbook-sessions-page.png " ")
+     ![Actions - Complete Runbook Session](images/start-runbook-incident/runbook-sessions.png " ")
      
 
 ## Task 3B: Dynamic Runbooks
 
-Runbooks are documented procedures that IT staff follow to resolve an issue. In Enterprise Manager, Dynamic Runbooks consist of a set of ordered steps that users execute to resolve an incident. To create a Dynamic Runbook, you create it in context of an incident. This runbook in development is called a runbook draft. The runbook draft will contain the incident context that includes the target, metric of the incident, etc. against which you can develop and test the runbook steps. Once runbook creation and testing is complete, it can be published for general use.  
+For this task, a Dynamic Runbook *draft* has already been created in the context of an incident. You will go through the process of modifying the Runbook and later publishing it to be used by others.
 
-For this task, a Dynamic Runbook draft has already been created. You will go through the process of modifying the Runbook and later publishing it to be used by others.  
-
-**Note: Only complete steps 1-3 if you did not complete them in Task 2: Incident Manager or Task 3A: Dynamic Runbooks.**
-
-
-1. Open a new terminal in your remote desktop.
-
-     ![Open a new terminal](images/incident-manager/open-new-terminal.png " ")
-
-2. Execute the following script "./scripts/livelabs/update-incidents.sh".
-
-     ![Execute a script](images/incident-manager/execute-script.png " ")
-
-     ![Execute script results](images/incident-manager/execute-script-results.png " ")
-
-3. Close out of the terminal.
+Runbooks are documented best practice procedures in the form of ordered steps that IT staff follow to prevent or resolve an issue. To create a Dynamic Runbook, you can create it in context of an incident or metric. This runbook in development is called a runbook draft. The runbook draft will contain the incident or metric context against which you can develop and test the runbook steps. Once runbook creation and testing are completed, the runbook can be published for general use.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
@@ -342,166 +332,350 @@ For this task, a Dynamic Runbook draft has already been created. You will go thr
 
 2. Navigate to "Enterprise >> Monitoring >> Runbooks".
 
-     ![Navigate to Runbooks](images/enterprise-monitoring-runbooks.png " ")
+     ![Navigate to Runbooks](images/create-runbook-incident/runbooks-menu.png " ")
 
-3. The Runbooks page has Draft Runbooks and Published Runbooks. By default, the Drafts tab is opened. You can create a Runbook through this Runbooks page or directly against an incident in the Incident Manager page. Under the Drafts tab, select the "**New Runbook**" link. This is the Runbook draft that was created for you and that you will modify.
+3. The Runbooks page has Draft Runbooks and Published Runbooks. By default, the Drafts tab is opened. You can create a Runbook through this Runbooks page, directly against an incident in the Incident Manager page, or directly against a metric in the All Metrics page. 
+
+4. Under the Drafts tab, select the "**New Runbook**" link. This is the Runbook draft that was created for you and that you will modify.
      
-     ![Select New Runbook Draft](images/runbooks-page-new-runbook.png " ")
+     ![Select New Runbook Draft](images/create-runbook-incident/runbook-drafts.png " ")
 
-4. At the top of the page, the previous incident details are carried over. This is the incident that was selected to create a Runbook draft on. You can optionally edit the Runbook name and Description using the pencil icons next to them. 
+4. At the top of the page, the previous incident details are carried over. This is the incident that was selected to create a Runbook draft on. 
 
-     ![New Runbook Draft Page](images/runbooks/new-runbook-details.png " ")
+     You can optionally edit the Runbook name and Description using the pencil icons next to them.
+
+     ![New Runbook Draft Page](images/create-runbook-incident/runbook-incident-details.png " ")
 
 5. There is an ‘Add a Step’ drop-down menu, where you can select the desired step type you want to define. There are five step types: Note, Metric Data, Repository SQL, Target SQL and OS Command. We have already added the steps for you in this Runbook draft.
 
-     ![Add Step - New Runbook](images/runbooks/new-runbook-add-a-step-highlighted.png " ")
+     ![Add Step - New Runbook](images/create-runbook-incident/add-a-step.png " ")
 
-6. To begin modifying the Runbook Draft steps, select the pencil icon to edit Step 1 (Overview and Prerequisites). This step is a special step where you can specify the overall purpose of the runbook and any prerequisites that the user needs to have in order to successfully execute the steps. This step uses the Note step type. The Note step is used for any type of text meant to provide information or instructions. The Note can be plain text but can also accommodate simple formatting via markdown language.
+6. In the Overview and Prerequisites step you can specify the purpose of the Runbook, and any prerequisites needed to successfully execute the steps. You can include simple formatting via markdown language.
 
-     ![Step 1 Overview and Prereq - New Runbook](images/runbooks/new-runbook-edit-step1.png " ")  
+     Select the pencil icon to edit Step 1 (Overview and Prerequisites).
 
-7. In the text box, add 3 hash signs (###) followed by a space to the beginning of the first sentence, “This runbook can be used to triage and resolve FRA incidents,” to make it header 3.
+     ![Step 1 Overview and Prereq - New Runbook](images/create-runbook-incident/edit-overview.png " ")  
 
-     ![Step 1 H3 - New Runbook](images/runbooks/new-runbook-step1-hashes.png " ")  
+7. In Step 1, you are going to make the first sentence a header, add a line underneath it and then add a variable to the text. 
 
-8. Next, place three dashes (---) on their own line under the first sentence to create a horizontal line.
+     Copy the following and replace the current text in Step 1: 
 
-     ![Step 1 Horizontal Line - New Runbook](images/runbooks/new-runbook-step1-lines.png " ")  
-
-9. Put two asterisks (**) on both sides of the “Prior to Beginning” text to make it bold. 
-
-     ![Step 1 Asterisks - New Runbook](images/runbooks/new-runbook-step1-asteriks.png " ") 
-
-10. Scroll down in the text box until you see the following sentence: “Make sure you have been granted access to the named credential for the target database **[target name]** on which the FRA Incident has occurred”.
-
-     ![Step 1 Scroll to Target Name Placeholder - New Runbook](images/runbooks/new-runbook-step1-target-name.png " ") 
-
-11. View the "Oracle Provided" section under the "Variables" section on the right side of the screen. Scroll until you see the field for "Target Name".
-
-     ![Step 1 Oracle Variable for Target Name - New Runbook](images/runbooks/new-runbook-step1-variable-target-name.png " ")     
-
-12. Replace the "[target name]" placeholder in the text box with the value displayed in the Variables table for Target Name: **$ora\_target\_name**. This will now replace the original "[target name]" placeholder text with the target name pulled from the context of the incident.
-
-     **Note:** The list of Variables table can be used in runbook steps. The built-in variables contain the incident context such as target name, metric name, etc. You can also create your own variables for use in other steps.  
-
-     ![Step 1 Target Name Placeholder Replacement - New Runbook](images/runbooks/new-runbook-target-name-replaced.png " ")  
-
-13. Select Save Step to view the modifications to the text.
-
-14. Your Overview and Prerequisites step should now look like this:
+     **\### This runbook can be used to triage and resolve FRA incidents.**
      
-     ![New Step 1 - New Runbook](images/runbooks/new-runbook-step1-highlighted-complete.png " ") 
+     **\---**
 
-     The first sentence is now a header 3 with a horizontal line under it. The Prior to Beginning text is bolded. And the original [target name] placeholder text is populated by the name of the target from the incident.
+     **Prior to beginning:**\
+     **1. Make sure you have been granted access to the named credentials for the target database $ora\_target\_name on which the FRA incident has occurred and for the host of the target**\
+     **2. Use that named credential values for the steps that require DB named credentials and host named credentials**
 
-15. Step 2 is a Metric Data step which is used to show the time series chart for the specified metric. Notice the instruction text of the step does not specify the actual metric name to review. Also, there is no graph displayed.
+     ![Step 1 Final Edits - New Runbook](images/create-runbook-incident/overview-prereq-edits.png " ")  
 
-     ![Step 2 - New Runbook](images/runbooks/new-runbook-step2-highlighted.png " ") 
+13. Select Save Step. Step 1 should now look like this:
+     
+     ![New Step 1 - New Runbook](images/create-runbook-incident/overview-after.png " ") 
 
-16. Click the pencil icon to make edits to Step 2. 
+15. Step 2 is a Metric Data step which is used to show the metric time series chart. 
 
-     ![Edit Step 2 - New Runbook](images/runbooks/new-runbook-step2-edit.png " ") 
+     Click the pencil icon.
 
-17. To specify the metric name, edit the “[metric name]” placeholder to use the value "**$ora\_metric\_name**". This will populate the value with the text in the Metric Name field (e.g., FRAPercentUsed).
+     ![Step 2 - New Runbook](images/create-runbook-incident/step-2-before.png " ") 
 
-     ![Step 2 Specify Metric Name - New Runbook](images/runbooks/new-runbook-step2-metric-name.png " ")
+18. In this step you are going to modify the time range of the metric data in the chart. 
 
-18. Click on the Time Range field to modify the times shown in the graph. Change the Start Time field to "evt\_time – 169d" and the End Time field to "evt\_time + 14d". evt\_time represents the time when the event (and its incident) was triggered, and you can specify a range of time relative to this event time.
+     Click on the Time Range field. 
+     
+     Leave the Start Time as "**evt\_time – 1d**" 
+     
+     Change the End Time to "**evt\_time + 1d**". 
+     
+     **Note:** evt\_time represents the time when the event (and its incident) was triggered, and you are changing it to show the day before and after the event was triggered. 
+     
+     Select Done.
 
-     ![Step 2 Change Time Range - New Runbook](images/runbooks/new-runbook-step2-time-range.png " ")
+     ![Step 2 Change Time Range - New Runbook](images/create-runbook-incident/time-range.png " ")
 
-19.  Select Done. 
+20. Click the Run button to preview the metric graph. This should now show the graph and display the trend of the metric before and after it triggered the incident.
 
-     ![Step 2 Time Range - Done](images/runbooks/new-runbook-step2-time-range-done.png " ")
-
-20. Click the Run button to preview the metric graph. This should now show the graph and display the trend of the metric before and after it triggered the incident. 
-
-     ![Step 2 Run to view Graph](images/runbooks/new-runbook-step2-run.png " ")
+     ![Step 2 Run to view Graph](images/create-runbook-incident/graph-preview.png " ")
 
 19. Click Save Step to save your changes for Step 2.
 
-     ![Save step 2](images/runbooks/new-runbook-step2-save-step.png " ")
+     ![Save step 2](images/create-runbook-incident/step-2-save.png " ")
 
-20. The metric name value should populate to "FRAPercentUsed", and a graph displays with a red vertical dotted line to indicate when the incident was triggered.
+20. A graph now displays with a red vertical dotted line to indicate when the incident was triggered.
 
-     ![New Step 2 - New Runbook](images/runbooks/new-runbook-step2-results.png " ")
+     ![New Step 2 - New Runbook](images/create-runbook-incident/step-2-after.png " ")
 
-21. Step 3 is a Target SQL Step. It allows you to execute SQL against any database target in Enterprise Manager. In our example, the current SQL query will need to be updated to properly check for flashback retention usage.
+21. Step 3 is a Target SQL Step. It allows you to execute SQL against any database target. 
 
-     ![Step 3 - New Runbook](images/runbooks/new-runbook-step3-highlighted.png " ")
+     Select the pencil icon.
 
-22. Select the pencil icon to edit Step 3.
+     ![Step 3 - New Runbook](images/create-runbook-incident/step-3-before.png " ")
 
-     ![Edit Step 3 - New Runbook](images/runbooks/new-runbook-step3-edit.png " ")
+22. You can add links to external resources or to other EM pages to assist users with additional diagnostic or contextual information. In this step we will add a link to an external FRA doc.
 
-23. Under the Variables section, select the Add Variable button. 
+     Add the following to the instruction text in Step 3: 
 
-     ![Add Variable Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable.png " ")
+     **\[What's FRA?](https://docs.oracle.com/en/database/oracle/oracle-database/19/admin/creating-and-configuring-an-oracle-database.html#GUID-CE434293-0956-4E62-8D3F-CD92CE66B7D8)**
 
-24. You will see a pop-up box labeled Add a Runbook Variable. 
-     - In the Name field, enter "user\_flash". 
-     - In the Display Name field enter "Flash like statement". 
-     - In the Value used in the Draft field, enter "%flash%" without the quotes. 
-     - And for the Value used in a Runbook Session field, you have the options to select the "User who runs the Runbook Session specify the value" or "Same value used in the draft". Select "Same value used in the draft".
+     ![Step 3 - What's FRA After](images/create-runbook-incident/whats-fra-after.png " ")
 
-     ![Add Variable Pop-up Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable-popup.png " ")
+23. A SQL query has already been added to check the FRA size. 
+
+     Scroll to the bottom of the page and click Run to test the query. 
+
+     ![Step 3 - Run SQL Query](images/create-runbook-incident/step-3-run.png " ")
+
+24. Select Save Step. The "What’s FRA?" text is now hyperlinked to the FRA doc and the SQL output is displayed.
+
+25. Step 4 is another Target SQL step. Data from this step will be saved to a variable for use in another step. You will go through the process of saving the SQL query output into an author-defined variable that was previously created. 
+
+     Select the pencil icon.
+
+     ![Step 4 - Check FRA Location on Filesystem](images/create-runbook-incident/step-4-before.png " ")
+
+26. Scroll to the bottom of the step and click the Run button to preview the SQL query results.
+
+     ![Step 4 - Preview Query Output Pt.2](images/create-runbook-incident/step-4-run-after.png " ")
+
+27. Select the "Save to Variables" tab.
+
+     ![Step 4 - Save to Var](images/create-runbook-incident/save-to-var-tab.png " ")
+
+28. Click on the cell under the Filesystem header. 
+
+     ![Step 4 - Select Cell to Save Var](images/create-runbook-incident/filesystem-header.png " ")
+
+29. Under the dropdown for "Runbook Variable", select the pre-defined variable named "FRA Destination (user\_fra\_dest)". Select "Save".
+
+     ![Step 4 - Select FRA Destination Var](images/create-runbook-incident/fra-dest-var.png " ")
+
+30. Now whenever this step is run the Runbook variable, FRA Destination (user-fra-dest), will be populated with the value from the selected cell (i.e., the output of the SQL query). 
+
+     Select Save Step.
+
+     ![Step 4 - Save Step](images/create-runbook-incident/save-step-4.png " ")
+
+31. Step 5 is an OS Command Step. This step type allows you to execute a single operation or execute a script as a part of the step definition. 
+
+     Select the pencil icon.
+
+     ![Step 5 - Edit Step](images/create-runbook-incident/step-5-before.png " ")
+
+32. Let’s create a variable that will contain the credentials that will need to be specified by the runbook session user when running this step. 
+
+     **Note:** Notice that the FRA Destination variable from Step 4 is used in both the instruction text and script for Step 5.
+
+32. Navigate to the Variables section on the right. In the "Author Defined" section select the "Add Variable" button. 
+
+     ![Step 5 - Scroll to Author Defined Var Pt.2](images/create-runbook-incident/scroll-up-after.png " ")
+
+35. You will see a pop-up box labeled Add a Runbook Variable. 
+     - In the Name field, enter "**user\_host\_credential**".
+     - In the Display Name field enter "**Host Credential**".
+     - In the Value used in the Draft field, enter "**ORACLE**".
+     - And for the Value used in a Runbook Session field, select the dropdown option "**Specified by the session user or by running a step**". 
+
+     ![Step 5 - Add a Var Pop-Up](images/create-runbook-incident/add-a-var-popup.png " ") 
+
+36. Click OK to save the variable. 
+
+37. Once the variable is saved, it should appear in the Variables section under ‘Author Defined’.
+
+     ![Step 5 - Var Saved](images/create-runbook-incident/new-var.png " ") 
+
+38. Currently, the "Named Credential" field is hardcoded to always use the name credential value **ORACLE** to run the step. 
+
+     Select the ‘Named Credential’ field.
+
+     ![Step 5 - Hardocded Var](images/create-runbook-incident/hardcoded-cred.png " ") 
+
+39. Select the option to ‘Use existing value from variable’.
+
+     ![Step 5 - Use existing value from Variable](images/create-runbook-incident/use-existing.png " ") 
+
+40. Using the dropdown options, select the variable you just created that is labeled ‘user\_host\_credential’. Select Done.
+
+     ![Step 5 - Selected Host Cred](images/create-runbook-incident/user-host-cred.png " ") 
+
+41. Now this step will require the session user to specify the host credentials, **ORACLE**, before they are permitted to run this step. 
+
+     ![Step 5 - New Var Saved and Used](images/create-runbook-incident/var-saved.png " ")
+
+42. Scroll down to the Run preview section. Run the step to preview the script output and then select Save Step.
+
+     ![Step 5 - Run to Preview](images/create-runbook-incident/step-5-run.png " ")
+
+41. You have now finished making edits to the Runbook and can publish it so that it can be used by others. Your edits are automatically saved. 
+
+     At the top of the Runbook draft page click on the “Runbooks” link to go back to the Runbooks page.
+
+     ![Link back to Runbooks Drafts](images/create-runbook-incident/runbooks-link.png " ")
+
+42. The Runbook draft that you modified will be displayed in the Drafts tab and will have your updates.
+
+     ![Runbooks Page with Updated Draft - New Runbook](images/create-runbook-incident/runbook-draft-after.png " ")
+
+43. Select the arrow under the Actions column to publish the Runbook for use.
+
+     ![Publish Runbook Draft - New Runbook](images/create-runbook-incident/publish-button.png " ")
+
+44. When publishing the runbook, you have the option to also keep a draft version in addition to the published version. 
+
+     Select the checkbox to Keep Draft and click OK.
+
+     ![Select Ok to Publish Runbook Draft - New Runbook](images/create-runbook-incident/keep-draft.png " ")
+
+45. The "New Runbook" that you made modifications to has now been published and can now be used by other EM users. 
+
+     ![Published Runbook - New Runbook](images/create-runbook-incident/published.png " ")
+
+46. Select the arrow under the Actions column for the "New Runbook". You have the options to create a like version, create a new version, export the runbook, hide it or delete.
+
+     ![Actions on Published Runbook - New Runbook](images/create-runbook-incident/actions.png " ")
 
 
-25. Click OK to save the variable.
+## Task 3C: Dynamic Runbooks
 
-     ![Save Variable Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-add-variable-popup-save.png " ")
+For this task, a Metric-Based Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated **METRIC**.
 
-26. Once the variable is saved, it should appear in the Variables section under "Author Defined". You will use this variable for the SQL query. 
+Runbooks are documented best practice procedures that IT staff follow to prevent or resolve an issue. In Enterprise Manager, you can create Dynamic Runbooks to encapsulate your best practice procedures in the form of steps that your ITOps teams can execute inside Enterprise Manager in context of a metric or incident. To use runbooks, you choose a runbook, start a Runbook session against a metric or incident, and then follow the steps in the runbook.
 
-     ![Variable Defined Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-variable-defined.png " ")
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-27. The current SQL query needs to be replaced to check for flashback retention usage. Replace the current SQL query with the following: "select name, value from v$parameter where name LIKE:$user\_flash"
+     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
 
-     ![Replace Query Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-replace-query.png " ")
+2. Navigate to “Targets >> Databases” to see the list of Database targets.
+     
+     ![Databases Menu Option](images/start-runbook-metric/databases-menu.png " ")
 
-28. To test if the SQL query is correct, scroll to the bottom of the page and click the Run button. The display section should show a table with the flashback retention usage results, which should list 1440 (i.e., the standard value needed).
+3. Once at the Database targets page, locate and expand **cdb186.subnet.vcn.oraclevcn.com** to view its pluggable databases (PDBs). Select the PDB target with the name, **cdb186.subnet.vcn.oraclevcn.com_TESTPDB**.
 
-     ![Test Query Step 3 - New Runbook](images/new-runbook-draft-page-target-sql-step-edit-test-query.png " ")
+     ![PDBs on Database Targets Page](images/start-runbook-metric/databases-page-expanded.png " ")
 
-29. Click Save Step.
+4. This takes you to the target homepage for the PDB target.
 
-30. Run Step 3 to view the new results from the updated query. The new results show that the flashback retention usage meets the standard value needed, 1440.
+     ![PDB Target Homepage](images/start-runbook-metric/testpdb-homepage.png " ")
 
-     ![New Step 3 - New Runbook](images/runbooks/new-runbook-step3-results.png " ")
+5. From the homepage, navigate to ‘Oracle Database >> Monitoring >> All Metrics’.
 
-31. You have now finished making edits to the Runbook and can publish it so that it can be used by others. **Note:** Your edits are automatically saved. At the top of the Runbook draft page click on the “Runbooks” link to go back to the Runbooks page.
+     ![Navigate to All Metrics](images/start-runbook-metric/all-metrics-menu.png " ")
 
-     ![Runbooks Page Link from Step 3 - New Runbook](images/runbooks/new-runbook-go-back-to-runbooks-link.png " ")
+6. Under All Metrics find the "Tablespace Full" metric group and expand it. Select the ‘Tablespace Space Used (%)’ metric.
 
-32. The Runbook draft that you modified will be displayed in the Drafts tab and will have your updates.
+     ![Locate Tablespace Full Metric Group](images/start-runbook-metric/tablespace-space-used-selected.png " ")
 
-     ![Runbooks Page with Updated Draft - New Runbook](images/runbooks/new-runbook-runbook-drafts-page.png " ")
+7. Click on the "DEMO" tablespace row in the Tablespace Space Used (%) table to see its metric data. 
 
-33. Select the arrow under the Actions column to publish the Runbook for use.
+     ![Select DEMO Tablespace](images/start-runbook-metric/demo-tablespace-selected.png " ")
 
-     ![Publish Runbook Draft - New Runbook](images/runbooks/new-runbook-publish-draft.png " ")
+8. Notice that the Last Known Value for the metric is 72% and the warning and critical thresholds are 85% and 97%. With this metric value close to the thresholds, use a runbook to triage this before an alert is triggered and an incident is created. 
 
-34. Click OK. 
+      ![Compare Metric Thresholds](images/start-runbook-metric/last-known-value.png " ")
+      
+9. Navigate to the Runbook Sessions section. For lab purposes, locate the ‘Current Sessions’ section and select the runbook for ‘Database Tablespace Full Triage’ to open an existing runbook session for this metric that has not been ran. 
 
-     ![Select Ok to Publish Runbook Draft - New Runbook](images/runbooks/new-runbook-publish-draft-popup.png " ")
+      ![Current Sessions](images/start-runbook-metric/current-sessions.png " ")
 
-35. The "New Runbook" that you made modifications to has now been published and can now be used by other EM users. 
+10. A runbook session appears in a new browser tab. Here you can see a detailed view of the steps needed to run the runbook to triage a possible tablespace full issue in advance. Notice the metric details are carried over.
 
-     ![Published Runbook - New Runbook](images/runbooks/new-runbook-published-and-highlighted.png " ")
+      ![New Session opened](images/start-runbook-metric/metric-details.png " ")
 
-36. Select the arrow under the Actions column for the "New Runbook". You have the options to create a like version, create a new version, export the runbook, hide it or delete.
+11. The Overview & Prerequisites step describes what the Runbook does, and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the named credentials: **CDB186_PDB**, for the target database and **ORACLE**, for the host of the target. 
 
-     ![Actions on Published Runbook - New Runbook](images/runbooks/new-runbook-published-actions.png " ")
+     Check the checkbox to indicate you have read and completed the step.
 
-37. Also, please note that Oracle provides out-of-the-box Runbooks for use.
+      ![Completed Step 1](images/start-runbook-metric/overview-prereq.png " ")
 
-     ![OOB Runbook](images/runbooks/oob-runbooks-highlighted.png " ")
+12. Click the play icon in Step 2 to review the trend of the tablespace full metric. Note if there is an increasing trend.
 
-38. To preview the Runbook steps for the out-of-the-box Runbook, click on the Runbook name, "Loader Issues causing Agent backoff requests (Oracle)". You can click on the steps to view more details. **Note:** In cases like this where there are multiple Runbooks, the preview can help you decide which Runbook to use.  
+      ![Review Metric Trend](images/start-runbook-metric/review-trend.png " ")
 
-     ![Preview OOB Runbook](images/runbooks/oob-runbooks-steps.png " ")
+13. Notice for Step 3 a gear icon is displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step. 
 
-39. Click close when you are done previewing the steps.
+     Click the gear icon.
+
+      ![Step 3 - Gear Icon](images/start-runbook-metric/step-3-gear-icon.png " ")
+
+14. Step 3 requires you to specify PDB named credentials before you can run the step. 
+
+     To enable the step, enter the following PDB named credential: **CDB186_PDB**. Click Save.
+
+      ![Step 3 - Enter Credentials](images/start-runbook-metric/pdb-cred-after.png " ")
+
+15. Click the play icon to find out which tables in the tablespace are consuming the most space.
+      
+      ![Step 3 - Play icon](images/start-runbook-metric/step-3-play-icon.png " ")
+
+16. A list of tables in the ‘DEMO’ tablespace appears. From the output, the ‘Student’ table appears to be consuming the most space. According to the runbook, review the data in the tables consuming the most space to see if there is any data that can be deleted or if the table itself can be deleted. 
+
+     Assume that all the data in all the tables are necessary and continue to Step 4.
+
+      ![Step 3 - Ran](images/start-runbook-metric/tables-consuming-space.png " ")
+
+17. If you need to increase the tablespace size, first identify the filesystem that is used by the tablespace. 
+
+     Click the play icon in Step 4. The filesystem path output will be used in Step 5.
+
+      ![Identify Filesystem Path](images/start-runbook-metric/identify-filesystem.png " ")
+
+18. Notice for Step 5 another gear icon is displayed instead of the play icon. 
+
+     Click on the gear icon. 
+
+      ![Check Filesystem for available space](images/start-runbook-metric/step-5-gear-icon.png " ")
+
+19. Step 5 requires you to specify host named credentials before you can run the step. 
+     
+     Enter the following host named credential: **ORACLE**. Click Save.
+
+      ![Check Filesystem for available space](images/start-runbook-metric/oracle-credential.png " ")
+
+20. Click the play icon to check the filesystem, that was identified in Step 4, for available space. There are 342G available in the filesystem which means that you have enough space to increase the size of the tablespace if needed.
+
+      ![Output of checking filesystem size](images/start-runbook-metric/step-5-ran.png " ")
+
+22. Run Step 6 to note if there is a decreasing filesystem space available trend that could impact future growth of tablespace. 
+
+      ![Review filesystem space](images/start-runbook-metric/review-filesystem-space.png " ")
+
+23. Scroll to Step 7. If needed and there is space available in the filesystem, add another 100MG datafile from the Tablespace page. Select the hyperlink to navigate to the ‘Tablespace Page’.
+
+     **Note**: Runbooks support navigation links to other Enterprise Manager pages in step instructions for further triaging purposes.
+
+      ![Select hyperlink to Tablespace page](images/start-runbook-metric/step-7-add-datafile.png " ")
+
+24. A new browser tab opens with a database login screen. 
+     
+     Log into the database using the PDB named credential: **CDB186_PDB**.
+
+      ![Database Login Page](images/start-runbook-metric/database-login.png " ")
+
+25. This is the Tablespace page where you can add new datafiles to the tablespace. For lab purposes, we will not go through the workflow to add a new datafile to the tablespace so assume one has been added for the sequential steps. 
+
+     **Optional**: Select the tablespace for ‘DEMO’ and select ‘Go’ to add a new datafile.
+
+      ![Tablespace Page](images/start-runbook-metric/tablespace-page.png " ")
+
+26. Close out of the current tab to return to the Runbook steps.
+
+27. Check the checkbox to indicate you completed the step.
+
+      ![Completed Step 7](images/start-runbook-metric/step-7-checked.png " ")
+
+28.	The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and run (or rerun) your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later.
+
+29.	Click “Mark as Done” to indicate that you have gone through all the steps. Once you Mark as Done, you can no longer re-run any steps, but you can view the session in read-only to complete a post-mortem analysis.
+
+      ![Click Mark as Done](images/start-runbook-metric/mark-as-done.png " ")
+
+30. Click OK.
+
+      ![Mark as Done - OK](images/start-runbook-metric/mark-as-done-popup.png " ")
+
+31. A page with all the Runbook Sessions will appear. Click the Actions column to see the actions: open the session in a read-only, extend expiration, or delete the session.
+
+      ![Runbook Sessions](images/start-runbook-metric/runbook-sessions.png " ")
 
 
 ## Task 4: Metric and Collection Settings
@@ -549,17 +723,11 @@ As Best Practice:
 
      ![Database target home page, metric and collection settings](images/emmonlab3step9.png " ")
 
-10.	Scroll down to Dump Area Used (%) metric again. Click on the Edit icon to change the Warning and Critical thresholds.
+10.	Scroll down to Dump Area Used (%) metric again. Currently the Warning threshold is set to > 95%. Change the Warning threshold to 85% and Critical threshold to 95%.
 
-     ![Database target home page, metric and collection settings](images/emmonlab3step10.png " ")
+     ![Database target home page, metric and collection settings](images/metric-settings/edit-thresholds.png " ")
 
-11.	Currently the Warning threshold is set to > 95%. Change the Warning threshold to 85% and Critical threshold to 95% and click Continue.
-
-     ![Database target home page, metric and collection settings](images/emmonlab3step11.png " ")
-
-     The new thresholds should appear in the main Metric and Collection settings page.
-
-12.	Click OK to save changes, then you should see a Confirmation message . Click OK.
+12.	Click OK to save changes, then you should see a Confirmation message. Click OK.
 
      ![Database target home page, metric and collection settings](images/emmonlab3step12pt1.png " ")
 
@@ -588,6 +756,7 @@ As Best Practice:
 18. The Warning and Critical thresholds for the metric will now be shown with the chart as yellow and red lines respectively.  As you review the metric, you can also visually see how close the metric values are to its Warning and Critical thresholds. Notice the metric has passed the new Warning threshold of 85. When the next metric collection occurs, the metric will be evaluated against the new Warning threshold of 85 and should generate a Warning alert. (Note: You do not have to wait for the alert, you can move on to the next lab).
 
      ![Database target home page, all metric](images/metric-settings/warning-and-critical-shown.png " ")
+
 
 ## Task 5: Corrective Actions
 
@@ -970,19 +1139,6 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
      ![incident rules page](images/emmonlab8step6.png " ")
 
-7. Scroll down and expand "Compress Related Events into a Single Incident" rule set.
-
-     ![incident rules page](images/emmonlab8step7.png " ")
-
-8. The “Compress Related Events into a Single Incident” rule set is a rule set that we created to showcase the rule-based event compression feature in EM 13c. Here we have 4 common use cases which are independent from one another. For each of these use cases, Enterprise Manager will compress the related events into a single incident. From a manageability standpoint, it will be much easier for the Administrator to manage one incident containing multiple related events as a logical unit, as opposed to managing these individually. The Rule set covers the use cases of creating ONE incident when:
-
-      - One or more members of cluster database targets go down.
-      - One or more targets with different target types on the same host go down.
-      - One or more members of WebLogic Domain target cross the metric threshold.
-      - One or more hosts or entire site goes down (e.g., Site wide outage).
-
-     ![incident rules page](images/emmonlab8step8.png " ")
-
 9. In this lab, we will create a new rule set and add a rule to notify the DBA when there is a critical DB alert. Click on “Create Rule Set”.
 
      ![incident rules page](images/emmonlab8step9.png " ")
@@ -1018,13 +1174,13 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
         - Keep the default of “Always execute the actions”
     - Create Incident or Update Incident  
         - Click on option “Create incident (if not associated with one)”   
-        - Select “Each event creates a new incident”
+        - Select “Use Event Compression Policies (Recommended)”
 
-     ![incident rules, create rule set add actions page](images/incident-rules/add-actions-incident-rules.png " ")
+     ![incident rules, create rule set add actions page](images/incident-rules/enable-compression.png " ")
 
 16.	Click Next.
 
-     ![incident rules, create rule set add actions page](images/emmonlab8step16.png " ")
+     ![incident rules, create rule set add actions page](images/incident-rules/add-actions-next.png " ")
 
 17.	Enter a name for the Rule and click Next.
 
@@ -1032,11 +1188,11 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 18.	Click Continue.
 
-     ![incident rules, create rule set review page](images/emmonlab8step18.png " ")
+     ![incident rules, create rule set review page](images/incident-rules/review-rule.png " ")
 
 19.	You’ll be brought back to the main page for Create Rule Set.  Scroll down to the Rules section and click on ‘Create’.
 
-     ![incident rules, create rule set page](images/emmonlab8step19.png " ")  
+     ![incident rules, create rule set page](images/incident-rules/create-new-rule.png " ")  
 
 20.	Choose the option “Newly created incidents or updates to incidents” and click Continue.
 
@@ -1050,7 +1206,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
      ![incident rules, create rule set add actions page](images/emmonlab8step22.png " ")
 
-23.	In the ‘Email To” field,  specify DB TARGET USER.       Then click Continue.
+23.	In the "Email To” field,  specify DB TARGET USER.       Then click Continue.
 
      ![incident rules, create rule set add actions page](images/emmonlab8step23.png " ")
 
@@ -1072,7 +1228,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 28.	The new rule set now appears at the bottom of the Incident Rules page.
 
-     ![incident rules page](images/emmonlab8step28.png " ")
+     ![incident rules page](images/incident-rules/rule-saved.png " ")
 
     **Note:**  Rule Sets are evaluated and executed in the order specified under the Order column.  When you create your own rule set that has an action to create an incident, you typically want to reorder it such that its order is ahead of the out-of-box rule sets.  This is to ensure that your rule set that creates the incident will be used instead of the out-of-box rule set.   However, for this lab exercise, we can skip this step.
 
@@ -1098,9 +1254,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
 5. From here you can take a closer look at the incident details. 
 
-     ![compressed incident opened in new tab](images/event-compression/incident-manager-compressed-incident-opened-in-new-tab.png " ")
-
-6. The incident details display the information about the events that were grouped into this incident. Details include the number of events in the incident, the Event Compression Policy used to compress the events into the incident, the Incident Rule used to create the incident and the list of compressed events in the bottom pane. 
+     The incident details display the information about the events that were grouped into this incident. Details include the number of events in the incident, the Event Compression Policy used to compress the events into the incident, the Incident Rule used to create the incident and the list of compressed events in the bottom pane. 
 
      **Note:** You can ignore any differences between the Last Comment field in the screenshot vs. what you see in your lab environment. The Last Comment was updated for lab purposes.
 
@@ -1114,19 +1268,25 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![latest events in the compressed incident](images/event-compression/events-tab.png " ")
 
-9. Now let’s take a look at how to use and create these Event Compression Policies. At the top menu, click Setup > Incidents > Event Compression Policies.
+9. Now let’s take a look at how to use and create these Event Compression Policies. 
+
+     At the top menu, click Setup > Incidents > Event Compression Policies.
 
      ![navigate to event compression policies page](images/event-compression/incidents-to-event-compression-policies.png " ")
 
-10. Here is the Event Compression Policies page with all the policies available. There are seven out-of-box policies that collectively represent recommended ways in which related events should be compressed together into a single incident. For example, there is a policy for target down events for a cluster database and its members. Click on any policy name to view more details on the compression. You also have the option to author your own policy if the out of the box policies do not satisfy your use cases. 
+10. Here is the Event Compression Policies page. There are seven out-of-box policies that represent recommended ways to group related events together into a single incident. Click on any policy name to view more details on the compression. You also have the option to author your own custom policies. 
 
      ![event compression policies page](images/event-compression/event-compression-policies-page.png " ")
 
-11. Let’s now take a look at the policy that created the compressed events we previously viewed. Click the policy with the name “Target down events for a database system and its members”. **Note:** This is not one of the seven out-of-box policies. It is a user-defined policy. You can differentiate between a user-defined policy and an out-of-box policy from the ‘Created By’ column.
+11. Let’s take a look at the custom policy that created the compressed events we previously viewed. 
+
+     Click the policy with the name “Target down events for a database system and its members”. 
 
      ![target down policy for database system and its members](images/event-compression/target-down-db-policy-highlighted.png " ")
 
-12. A screen slides out that has the compression policy information. Here you can view the Event Compression Logic for how the events were grouped together. For this example, the logic groups target availability events for a database system and its members into one incident if the events occurred within a 60 minute time frame. These events were compressed based on the ancestor (i.e., parent) target. Notice it also displays the incident message that will be displayed when the incident is created and cleared.
+12. Here you can view the Event Compression Logic for how the events were grouped together. 
+
+     For this example, the logic groups target availability events for a database system and its members into one incident if the events occurred within a 60 minute time frame. These events were compressed based on the ancestor (i.e., parent) target. 
 
      ![details of target down policy for database system and its members](images/event-compression/target-down-db-details.png " ")
 
@@ -1134,7 +1294,9 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![exit from details of target down policy](images/event-compression/target-down-db-close.png " ")
 
-14. Now that you have seen an example of an incident with compressed events and the compression logic for one of the policies, we will walk through the steps of creating your own policy. To begin, click the “Create New Policy” icon.
+14. Now that you have seen an example of an incident with compressed events and the compression logic for one of the policies, we will walk through the steps of creating your own policy. 
+
+     To begin, click the “Create New Policy” icon.
 
      ![create new policy](images/event-compression/create-new-policy.png " ")
 
@@ -1142,31 +1304,46 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![create new policy page](images/event-compression/create-new-policy-details-blank.png " ")
 
-16. For our example, you will be creating a compression policy related to target availability events for coherence targets (i.e., Coherence Cluster, Coherence Node, and Coherence Cache). Let’s add a name to the policy such as “Target availability events for a coherence cluster and its members”. We recommend adding a description for your policy to further distinguish what is does. For instance, you can use the following description: “Compress target availability events for a coherence cluster, coherence node and coherence cache occurring within the 60-minute time window”.
+16. For our example, you will be creating a compression policy related to target availability events for coherence targets (i.e., Coherence Cluster, Coherence Node, and Coherence Cache). 
+
+     Add the following polciy name: “**Target availability events for a coherence cluster and its member**”. 
+     
+     Add the following description: “**Compress target availability events for a coherence cluster, coherence node and coherence cache occurring within the 60-minute time window**”.
 
      **Note:** An Oracle Coherence Cluster enables organizations to predictably scale mission-critical applications by providing fast and reliable access to frequently used data.
 
      ![enter policy name and description](images/event-compression/create-new-policy-name.png " ")
 
 17. Now let’s move on to the Event Compression Logic sub-section. 
-     - First you need to specify the type of events that will be compressed. You can choose the events from an event rule or manually select the event types. For this lab, you will manually select the events:
-          - This policy is for target availability events so under the field “Events of type”, search for “Target Availability” and choose it. 
-          - We are also interested in coherence targets so under the field “On targets of type” search the following: “Oracle Coherence Cache”, “Oracle Coherence Cluster” and “Oracle Coherence Node” and choose them. 
-          - And finally, for the “With event severity” field, click “Fatal” and “Critical” as these will map to target down and target error events which fall under the target availability umbrella.
+     - First, specify the type of events that will be compressed. You can choose the events from an event rule or manually select the event types. You can also specify your policy to compress single event types together (e.g., all target availability events) or multiple event types together (e.g., target availability and metric alert events). For this lab, you will manually select the events:
+
+          - For "Events of type", search for and select **Target Availability**.  
+               
+               - **Note**: This is also where you could specify multiple event types if needed for your policy.
+
+          - For "On targets of type", search for and select: **Oracle Coherence Cache**, **Oracle Coherence Cluster**, and **Oracle Coherence Node**. 
+
+          - For "With event severity", select **Fatal** and **Critical**. 
 
      ![enter compression logic part one](images/event-compression/create-new-policy-logic-part1.png " ")
 
-18. Now add a time window for these events. Change the current time window of 45 minutes to 60 minutes. After this, determine the criteria for grouping or compressing the events. 
+18. Now add a time window for these events. Change the current time window of 45 minutes to 60 minutes. 
 
-     The Coherence Cluster target is the parent to the Coherence Cache and Node targets. So you may want to compress together the events from Coherence Cache and Coherence Node targets that are part of the same Coherence Cluster into one incident. Hence, in the “Compress into One incident by” field, choose "same ancestor target type", and in the “select Group type” choose "Oracle Coherence Cluster". 
+     After this, determine the criteria for grouping or compressing the events. The Coherence Cluster target is the parent to the Coherence Cache and Node targets. So you may want to compress together the events from Coherence Cache and Coherence Node targets that are part of the same Coherence Cluster into one incident. 
+     
+     Hence, for "Compress into One incident by", select **same ancestor target type**.
+     
+     For "select Group type", select **Oracle Coherence Cluster**. 
 
      ![enter compression logic part two](images/event-compression/create-new-policy-logic-part2.png " ")
 
-19. We provide default incident messages based on your selection for the event compression logic. However, you may modify the default messages as you desire. The default variables will be replaced by the corresponding values once the incident is created. For example, the %EVENT\_COUNT% variable would be replaced by the number of events in the incident. Let’s keep the default message and click Save.
+19. We provide default incident messages based on your selection for the event compression logic. You may modify the default messages as you desire. 
+
+     Let’s keep the default message and click Save.
 
      ![enter incident message](images/event-compression/create-new-policy-incident-message.png " ")
 
-20. This logic essentially compresses into one incident all target availability events with a fatal or critical severity from the coherence cluster, cache and node targets  if it falls within a 60-minute window.
+20. This logic compresses all target availability events, with a fatal or critical severity from the Coherence Cluster, Coherence Cache and Coherence Node targets if they fall within a 60-minute window, into one incident.
 
 21. The policy you created will now appear on the Event Compression Policies page in a draft state. Notice that the other policies are all under the Published status. The published status allows the policy to be used by other administrators. 
 
@@ -1176,7 +1353,9 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
 Event Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Analysis uses historical monitoring data from your environment to analyze the impact Event Compression Policies would have had on events that generated incidents over a selected time range in the past. **Note:** Please complete Task 10A before completing this task.
 
-1. Before publishing your policy that you created in Task 10A, we recommend testing it out using the Event Compression Analysis tool. To test out the policy, first enable the policy using the toggle button.
+1. Before publishing your policy that you created in Task 10A, test it out using the Event Compression Analysis tool. 
+
+     To test out the policy, first enable the policy using the toggle button.
 
      ![enable policy for testing](images/event-compression/new-policy-disable-button-highlighted.png " ")
 
@@ -1184,7 +1363,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![policy enabled for testing](images/event-compression/new-policy-enable-button-highlighted.png " ")
 
-2.	Now click the Event Compression Analysis link to navigate to its page.
+2.	Click the Event Compression Analysis link.
 
      ![event compression analysis link](images/event-compression/event-compression-analysis-link.png " ")
 
@@ -1197,11 +1376,16 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
      ![start new analysis button](images/event-compression/start-new-analysis.png " ")
 
 5. A pop-up displays: 
-     - Enter a name for the analysis such as “Coherence Targets Policy Analysis” and add an optional description.
-     - Next, select the targets for the analysis. For this, let’s keep the default “Group” selection under the field “Select target type”. 
-     - In the dropdown ‘Select a Group’ list, select “Coherence Targets”. For the purpose of this lab, the group Coherence Targets has been created that contains targets of type Coherence Cluster, Coherence Cache and Coherence Node. 
-     - For the time range of these events, select from April 25, 2023 to May 12, 2023. **Note:** you can specify a time range with a maximum of 31 days. 
-     - And finally, because your policy is still in the draft state, click ‘Include Draft Policy’ so that your policy is used in the analysis. 
+     - Enter a name for the analysis: "**Coherence Targets Policy Analysis**”.
+
+     - Next, select the targets for the analysis. For “Select target type”,  keep the default **Group** selection. 
+
+     - In the dropdown "Select a Group" list, select **Coherence Targets**. 
+          - **Note**: The group Coherence Targets was previously created and contains targets of type Coherence Cluster, Coherence Cache and Coherence Node. 
+
+     - For the time range of these events, enter **04/25/2023** to **05/12/2023**. 
+
+     - Check "**Include Draft Policy**" so that your draft policy is used in the analysis. 
      
      At the end, your analysis criteria should look like the following: 
 
@@ -1231,7 +1415,11 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![analysis details - graph section](images/event-compression/analysis-results-graph-highlighted.png " ")
 
-11. To further analyze how events and incidents are compressed on a specific date, click on the date's corresponding bars to see another representation of the compression. In this visualization, you will see more information on how events are mapped from incidents without compression policies to incidents with compression policies. For example, click any of the bars under May 10th.
+11. To further analyze how events and incidents are compressed on a specific date, click on the date's corresponding bars to see another representation of the compression. 
+
+     In this visualization, you will see more information on how events are mapped from incidents without compression policies to incidents with compression policies. 
+     
+     For example, click any of the bars under May 10th.
 
      ![analysis details - click on bars in graph](images/event-compression/analysis-bars-highlighted.png " ")
 
@@ -1243,7 +1431,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![click on analysis mapping](images/event-compression/analysis-mapping-selected.png " ")
 
-14. The following pop-up appears. Here you can see the individual events that are compressed into the incident based on the policy that you created. It also shows more information of the incident details such as the incident summary, when it was created and the incident rule that created it. 
+14. Here you can see the individual events that are compressed into the incident based on the policy that you created. It also shows more information of the incident details such as the incident summary, when it was created and the incident rule that created it. 
 
      ![analysis mapping details](images/event-compression/analysis-bar-details.png " ")
 
@@ -1259,17 +1447,15 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![exit out of the analysis](images/event-compression/analysis-exit.png " ")
 
-18. Now that you have seen the effect of your policy and know that it is working as expected, you may now publish it for use by other administrators. Navigate to Setup > Incidents > Event Compression Policies.
+18. Now that you have seen the effect of your policy and know that it is working as expected, you may now publish it for use by other administrators. 
+
+     Navigate to Setup > Incidents > Event Compression Policies.
 
      ![navigate back to event compression policies page](images/event-compression/incidents-to-event-compression-policies-from-analysis.png " ")
 
-19. Click the actions icon under your policy. Select Publish. 
+19. Click the actions icon under your policy. You have the option to edit, create a like, reorder, delete or publish your policies. 
 
-     There are other actions you can complete on this policy such as:
-     - Editing the policy when it is in draft state and disabled.
-     - Creating a like policy which creates a separate and editable copy of your policy.
-     - Reordering your policy in the list so it has higher priority when being evaluated by an event rule. 
-     - Deleting your policy.
+     Select Publish. 
 
      ![draft policy actions menu](images/event-compression/new-policy-actions.png " ")
 
@@ -1279,11 +1465,15 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
      ![your policy is published](images/event-compression/new-policy-published.png " ")
 
-21. Remember that Event Compression Policies works hand-in-hand with Incident Rules to create the incidents with compressed events. Now that your policy has been created, tested and published, let’s see how the Incident Rules would work with the policies. Navigate to Setup > Incidents > Incident Rules.
+21. Remember that Event Compression Policies works hand-in-hand with Incident Rules to create the incidents with compressed events. Now that your policy has been created, tested and published, let’s see how the Incident Rules would work with the policies. 
+
+     Navigate to Setup > Incidents > Incident Rules.
 
      ![navigate to incident rules page](images/event-compression/incidents-to-incident-rules-from-policies.png " ")
 
-22. An incident ruleset has already been created for the purpose of this lab. Let’s review it and enable Event Compression Policies to be used. Select the ruleset “Compress Target Availability Events for Coherence” and click Edit.
+22. An incident ruleset has already been created for the purpose of this lab. Let’s review it and enable Event Compression Policies to be used. 
+
+     Select the ruleset “Compress Target Availability Events for Coherence” and click Edit.
 
      ![edit the ruleset “Compress Target Availability Events for Coherence”](images/event-compression/incident-rules-page-new-rule-for-policy-highlighted.png " ")
 
@@ -1337,9 +1527,10 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
   - [Enterprise Monitoring](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmon/enterprise-monitoring.html)
   - [Enterprise Manager Monitoring Overview Video](https://www.youtube.com/watch?v=oAnF38qa4EA)
   - [Strategies for Scalable, Smarter Monitoring using Oracle Enterprise Manager Cloud Control 13c](https://www.oracle.com/a/otn/docs/enterprise-manager/wp_enterprisemanager13c_monitoringstrategies.pdf)
+  - [Monitoring Oracle Databases in AWS with Enterprise Manager](https://blogs.oracle.com/observability/post/monitoring-oracle-databases-in-aws-with-enterprise-manager)
 
 ## Acknowledgements
 - **Author** - Karilyn Loui, Oracle Enterprise Manager Product Management
 - **Contributing Author** - Ana McCollum, Daniel Suherman, Murtaza Husain, Desiree Abrokwa, Oracle Enterprise Manager Product Management
 - **Adapted for Cloud** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [July 2023]
+- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [July 2024]
