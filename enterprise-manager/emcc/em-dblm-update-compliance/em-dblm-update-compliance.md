@@ -156,12 +156,12 @@ Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/en
 
 11. Once you submit, a new Deployment Procedure (DP) is initiated. Click on the DP name to review the steps.
 
-    ![](images/DP.png "DP")
+    ![](images/dp.png "DP")
 
     lets stay on the DP page for 2 minutes.
 
     Note: The submitted Deployment Procedure above may fail. If you encounter the error below, click on "Ignore" and select "OK" in the confirmation window.
-    ![](images/error-DP.png "error-DP")
+    ![](images/error-dp.png "error-DP")
 
     However, to complete this lab, as mentioned earlier, we shall use ***19cDB-Linux-x64-APPS*** image to update a pluggable database. Let’s proceed to the next step.
 
