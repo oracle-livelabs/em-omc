@@ -365,6 +365,7 @@ Runbooks are documented best practice procedures in the form of ordered steps th
      **Prior to beginning:**
      
      **1. Make sure you have been granted access to the named credentials for the target database $ora\_target\_name on which the FRA incident has occurred and for the host of the target**
+     
      **2. Use that named credential values for the steps that require DB named credentials and host named credentials**
 
      ![Step 1 Final Edits - New Runbook](images/create-runbook-incident/overview-prereq-edits.png " ")  
@@ -414,6 +415,7 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 22. You can add links to external resources or to other EM pages to assist users with additional diagnostic or contextual information. In this step we will add a link to an external FRA doc.
 
      Add the following to the instruction text in Step 3: 
+
 
      \[What's FRA?](https://docs.oracle.com/en/database/oracle/oracle-database/19/admin/creating-and-configuring-an-oracle-database.html#GUID-CE434293-0956-4E62-8D3F-CD92CE66B7D8)
 
