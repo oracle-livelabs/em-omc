@@ -1,27 +1,80 @@
 # Assess and Assure Security Posture Across Your Fleet of Databases
 
 ## Introduction
+Awaiting Abstract
 
-Learn how to secure and ensure compliance of your enterprise databases in this workshop. Discover methods to monitor their security, validate configurations, and automate compliance with company, industry, and regulatory standards like CIS and STIG. Explore using Oracle Enterprise Manager to automate inventory and baseline all database targets, including various versions and instances deployed over time.
+*Estimated Time*: 60 minutes
 
-*Estimated Time*: 65 minutes
+You can watch this video below for a quick walk-through of this lab.
+[Video Walk-through](videohub:1_vyyju031)
 
-### Safeguard Database assets with Fleet Maintenance Hub
+### About key features of Fleet Maintenance Hub in Oracle Enterprise Manager
 
-***Fleet Maintenance Hub*** is a new, all-in-one User Interface (UI) for upgrading and updating Oracle Databases and Grid Infrastructure. It detects vulnerabilities and offers precise patch recommendations through an intelligent, and guided workflow. You can create a gold image with these recommended patches to secure your assets. Additionally, Fleet Maintenance Hub provides flexible scheduling options for near-zero downtime during upgrade and patching operations. After patching, it delivers compliance insights to help you assess alignment with your patching policies, enhancing your security posture.
+Fleet Maintenance Hub is a
+- Powerful one-stop place for customers to get insight into vulnerabilities for database assets and apply patches to affected targets, and secure each of those
+- Single pane of glass for vulnerabilities and patch operations
 
-### Securing Databases with Industry Standards and Best Practices
-***Audit for Compliance*** - protecting your customer data is the most critical goal. Implement security controls that restrict access according to your policies, whether based on industry security standards or custom best practices. Achieve a comprehensive view of overall security compliance across all managed database targets to ensure these controls are effectively enforced and managed for compliance.
+
+Starting with Enterprise Manager 13.5 RU16, Enterprise Manager offers a new interface - Fleet Maintenance Hub to ease automated update(patching), and upgrade of your database fleet.
+
+Benefits of using the EM Fleet Maintenance Hub include:
+- Identifying database assets, which are not subscribed to any gold image. Targets not subscribed to any image are ideal candidates for data breach.
+- Patch recommendations for Images. Refresh gold images and apply those to subscribed targets to enhance your security posture.
+- A single pane of glass for monitoring and managing the entire update(patching) and upgrade operations
+- Ability to schedule/retry/suspend/resume operations
+- Patch Oracle Databases across different infrastructure including engineered systems like Oracle ExaCC
+- And make sure your targets are always compliant with your patch policies
+
+![](images/introduction.png " introduction")
+
+Lets review various components of the Fleet Maintenance hub.
+![](images/intro-hub.png " introduction for hub")
+
+Fleet Maintenance works on Subscription based model, i.e. to patch a database or grid infrastructure, it should be subscribed to a gold image. Any database/grid, which is not subscribed to any image can not be patched and thus remains susceptible for any data breach. Its recommended that the databases should be patched with latest patch recommendations from Oracle. You can learn more about these recommendations by following Oracle's Security Alerts and Bulletins.
+
+The first tile, ***Target Subscription*** gives you an insight about your weakest database and grid entities as the tile shows the unsubscribed and subscribed databases and grids.  As a DBA, its paramount that unsubscribed assets and subscribed to relevant gold image.
+
+In the middle section, we see bar graphs. These represents no of database and grid infrastructure based on versions.
+
+The Table below the graphs lists out the databases and grid added in Enterprise Manager. You may choose filters to identify any particular database. Subscribe button allows you to subscribe the database or grid to an image. We will cover the subscription part when we update a database in this lab.
+
+![](images/Intro-tile2.png " introduction for tile2")
+
+Tile 2, ***Patch Recommendations for Images***, lists out the health status of your images with respect to Oracle provided patch recommendations. Lets review the patch recommendation column and understand the actions required by an administrator.
+
+- If you see a green check mark - ✔, it suggests that the gold image has all recommended patches. The image can be used for patching and any databases/grid subscribed to this image will have all the recommended patches post successful completion of update operation.
+- If you see a yellow exclamation  mark - ![](images/yellow.png "exclamation-yellow "), it suggests that a new version in the image has all the recommended patches but it is not marked current. Hence, the updated version can't be used for update operation. Immediate next step for DBA is to mark the latest version as current.
+- If you see a red exclamation  mark - ![](images/red-icon.png "exclamation-red "), it suggests that current version of the image lacks recommended patches. The number of patches is displayed and if you click on the number, a new slide-out will show you the details of the Oracle recommended patches. Immediate next step for DBA is to create a new version and include all the recommended patches and mark this new version as current.
+
+![](images/Intro-tile3.png " introduction for tile3")
+
+Tile 3, ***Target Patch Compliance***, list out the databases or grids that are subscribed to a gold image. If the image is not up-to-date,  a warning icon will be shown. Patch level will show following information.
+- If the target is on current version,  show "Current"
+- If the target is drifted, show 'Drifter'
+- Otherwise,  you will see the image version that the target is on
+
+
+#### Video Preview
+Watch a preview of database patching using Oracle Enterprise Manager Fleet Maintenance:
+
+[](youtube:JlspEvqebHE)
+
+*Note: Interfaces in this video may look different from the interfaces you will see. For updated information, please see steps below.*
 
 
 ### Objectives
 
-In this lab, you will perform the following steps:
+In this lab you will perform the following steps:
 | Step No. | Feature                                                    | Approx. Time | Details                                                                                                                                                                    | Value Proposition |
 |----------------------|------------------------------------------------------------|-------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
-| 1                    | Assess patch recommendation and create gold image                             | 15 minutes  | Assess patch recommendations for affected databases                                                                                                                 | Fortify against vulnerabilities with precise Patch Recommendations.                  |
-| 2                    | Secure databases by updating with new gold image | 25 minutes  | Intuitive workflow to update and secure your databases | Update Databases with new gold image for Enhanced Security.                   |
-| 3                    | Elevate security posture by auditing for compliance | 25  minutes  | Leverage CIS Benchmark for Oracle Database 19c to secure Pluggable Databases | Drive continuous improvements with insightful Compliance Audits.
+| 1                    | Execute Patch Recommendation job                             | 5 minutes  | Review the patch recommendations by uploading patch catalog in offline mode                                                                                                                 | Provides patch recommendations for gold image. Discover the advantages of utilizing patch recommendations, where manual, time-intensive tasks are automated to yield highly precise outcomes.                  |
+| 2                    | Review Image Health Status | 5 minutes  | Refresh Gold image with patch recommendations | Demonstrate with ease to determine which recommended patches are applicable to gold image.                  |
+| 3                    | Refresh Gold Image | 5  minutes  | Refresh a Gold Image based on latest patch recommendation | How to steps to create a new version for a gold image. Latest version will be used to update and upgrade process.
+| 4                    | Subscribe Target | 5  minutes  | Subscribe targets to updated gold image for patching | To ensure database assets are fully secure, they should be patched for any patch vulnerabilities. With updated image as source, review how targets can be patched.
+| 5                    | Launch Update(Patching) operation | 2  minutes  | Launch the patching operation. | Understand how patching can be initiated and explore the options that Fleet Maintenance porvides.
+| 6                    | Patch a Pluggable Database with Fleet Maintenance Maintenance | 5  minutes  | Update(Patch) a PDB using a Gold Image. As part of patching the Pluggable Database, unplug Oracle Pluggable Database in that Container Database and plug it to higher version Container Database. | Demonstrate key capabilities and features of Fleet Maintenance to update(patch) Oracle Pluggable Database.
+| 7                    | Review Pluggable Database in Fleet Maintenance Hub | 3  minutes  | Review post patching results in Hub. | Understand how graphs are updated in Fleet Maintenance Hub post patching and the end state that DBA's should aim to attain for their database estate.
+| 8                    | Secure database configuration and Audit for Compliance | 20  minutes  |  CIS Oracle Database 19c Benchmark v1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database to secure configuration of provisioned database. | Elevate database posture by stringent security measures and achieving regulatory compliance with CIS benchmarks enhances operational efficiencies and security through centralized auditing, monitoring, and automated corrective actions.
 
 
 ### Prerequisites
@@ -33,245 +86,134 @@ In this lab, you will perform the following steps:
 
 *Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository. Workshop activities included in this lab will be executed both locally on the instance using Enterprise Manager Command Line Interface (EMCLI) or Rest APIs, and the Enterprise Manager console (browser)
 
-## Task 1: Assess patch recommendation and create gold image
+## Task 1: Execute Patch Recommendation job
 
-In this task, you will review patch recommendations for existing gold images and create a new version based on those recommendations.
+To complete a patching cycle, it is important that you know the correct set of patches. If the number of targets( databases and grid infrastructure) is high, then patching becomes a challenging assignment. In this lab, we'll review offline mode of uploading patch recommendations in Enterprise Manager. We will also analyze the job that is automatically executed as a part of patch catalog upload.
 
+1. At the bottom of the Enterprise Summary page, you will find ***Patch Recommendations*** section. This section provides both online and offline mode to upload patch catalog. In the interest of the accuracy of this workbook, we'll select *offline mode*. If you select online mode(clicking credentials link), then today's latest patch recommendation will be shown, which would require new set of patches. This will impact the later part of the workbook. Therefore, in order to complete the lab successfully, we strongly recommend that you upload the pre-downloaded catalog by following the instructions given the workbook.
 
-1. Login to Enterprise Manager as user - emadmin. Copy and paste or type in the following username and password credentials into the fields.
+![](images/em-summary.png "em-summary")
 
+Click on ***offline*** hyperlink and in the new window choose file by clicking on the button and upload ***em_catalog.zip*** from the location ***/home/oracle/fleet/patching***.
+![](images/em-summary-upload.png "em-summary-upload")
 
-    ```
-    Username: <copy>emadmin</copy>
-    ```
+Once the upload is successful, you will find the confirmation at the top section of the page. kindly note that this process has automatically executed a job ***Refresh from My Oracle Support***.
+![](images/em-summary-upload-job.png "em-summary-upload-job")
 
-    ```
-    Password: <copy>welcome1</copy>
-    ```
+To know more about this job, click on the job name and it will take you to job activity page. This job will be completed with 5 minutes.
+![](images/em-summary-upload-job-details.png "em-summary-upload-job-details")
 
-   ![](images/em-login.png "em-login")
+## Task 2: Review Image Health Status
 
-2. Once logged in, navigate to ***Targets >> Databases***  
+In this task, we will review the gold images post completion of patch recommendations job. Launch Fleet Maintenance Hub from Targets->Databases and then Administration-> Fleet Maintenance Hub. From Tile 2, ***Patch Recommendations for Images***, you can review the status of gold images. Here, we see that one of the gold images ***Image Name*** has a green tick mark against its name. This suggests that the image is up-to-date and can be used for patching. There is one more image ***Image Name*** which has a red cross against its name, suggesting that it needs to be refreshed before using it to patch databases.
 
-    ![](images/em-navig1.png "em-navig1")
+We see the benefits of using automatic patch recommendations along with Fleet Maintenance Hub. It cuts down all the manual tasks along with scope of error in missing out a recommended patch(es).
 
-    and then ***Administration >> Fleet Maintenance Hub***
+![](images/Intro-tile2.png " introduction for tile2")
 
-   ![](images/em-navig2.png "em-navig2")
+## Task 3: Review Patch Recommendations
 
-3. Fleet Maintenance Hub is your one-stop solution for end-to-end patch assessment and operations.
+Lets review the gold image ***Image Name***. From Hub, we see that there are 2 patch recommendations. To understand more about these patches, click on the numeric value and in the new page, we see the details of these patches.
 
-    ![](images/em-hub.png "em-hub")
+![](images/review-gold-image.png "gold image review")
 
-    In the top right corner, you see the status of ***Last Patch Recommendation Update***. If a date is shown below it, then the patch recommendation was executed on that date.
+To make this gold image at par with Oracle's recommendation, we need to create a new version, which includes these 2 patches and then mark this version as current. Version marked as current is used to deploy Oracle Homes. To create a new version for this image, click on the message - Create new version and follow the workflow. Ensure that the required patches are uploaded with Enterprise Manager's Software Library. In the interest of the time and to complete the lab, please do not proceed with this step. Once you complete the lab, you may revisit this section and follow the workflow to complete the lab.
 
-<!--
-To setup patch recommendation, review [Oracle Enterprise Manager](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/downloading-patch-recommendations-and-patches.html).
--->
+## Task 4: Subscribe Targets *[Which has already been implemented]*
 
+Fleet Maintenance is a subscription based solution. To patch/upgrade a target, you need to subscribe that target to the Gold Image. Gold Image represents a software end state. An Enterprise Manager Software Library Gold Image is a software archive created from a patched oracle home uploaded to EM Software Library.
 
-<!--
-   To successfully complete this lab, do not upload any new patch catalogs or enter your MOS credentials as described in the above documentation. Doing so will generate new recommendations that may differ from those in the upcoming sections.
--->
+Go to tile 1, Target Subscription and click on Subscribe.
+![](images/subscribe-button.png "subscribe")
 
+In this task, we will subscribe ***sales.subnet.vcn.oraclevcn.com*** to gold image ***image name***. In this lab, we are subscribing only target, but you can subscribe as many targets as you want.
+![](images/subscribe-db.png "subscribe-db")
 
-4. Click on Tile 2 in labeled as Patch Recommendations for Images.
+Once you get the successful message, click on Close button at the top right hand corner. This completes the subscription operation.
 
-    The donut chart in this tile indicates the health of your gold images. Green indicates, the number of gold images have all the recommended patches, and these images can be used for upgrade or update operations.
+## Task 5: Launch operation UI from Hub
 
-    Red indicates, the number of gold images are missing critical recommended patches and must refreshed before using it for upgrade or update operations. You should reach out your Administrator to refresh the image with all recommended patches.
+In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
 
-    ![](images/tile2.png "hub-tile2")
+1. From tile 3, ***Target Patch Compliance***, identify the row which has the details of sales.subnet.vcn.oraclevcn.com.
 
-    As an example, ***19cDB-Linux-x64-ERP*** gold image has two patch recommendations. This indicates ***19cDB-Linux-x64-ERP*** image must be refreshed to a new version that includes two recommended patches.
+2. Click the Doner icon on that row, and select update.
 
-    Similarly, ***19cDB-Linux-x64-APPS*** has a green checkmark. This indicates ***19cDB-Linux-x64-APPS*** image is up to date and can be used for patch operations
+## Task 6: PDB Patching
 
-    For this lab, we will use the ***19cDB-Linux-x64-APPS*** image to perform pdb patching.
+1. In this page, we will have pre-select ***Image Name***, ***Target Type*** and ***Operation***.
+      ![](images/New-fm-flow1.png "selection")
+      Where:
+      -  Image = We will select ***19cDB-Linux-x64-Apps***. Desired version of Oracle home, which our target database should run after successful completion of operation.
+      -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
+      -  Operation = we will select ***Update***. Name of the operation, which can be update (patch) or upgrade.
+      -  Type to filter = Optional, can be left blank. Selection criteria to highlight only those targets which qualify the selection, such as database naming.
 
-<!--
-Follow the [Link](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/image-maintenance-ui.html) to understand the steps involved in refreshing a gold image.
--->
+      We will select check box for ***sales.subnet.vcn.oraclevcn.com_FINANCE***, as we want to patch it to higher version and select ***Next***.
 
-5. In the next few steps, we will use the Fleet Maintenance Hub to refresh gold image ***19cDB-Linux-x64-ERP***.
+2. In this page, we will select destination CDB as ***Attach Existing CDB***. Options Software Deployment and Migrate Listener will be greyed out as we already have the desired CDB in place, which is hr.subnet.vcn.oraclevcn.com.
 
-    While the image refresh process is running, to complete the lab within the given timeline, we will use ***19cDB-Linux-x64-APPS*** to secure one of the databases.
+      ![](images/New-fm-flow2.png "selection")
 
-6. Let's refresh the gold image - ***19cDB-Linux-x64-ERP***
+      Under Credentials (We have already created these credentials in Enterprise Manager for this workshop. Please choose Named for all the below three options and from the dropdown menu, you can opt for values as suggested below)    
+      -  Normal Host Credentials as ***ORACLE***
+      -  Privileged Host Credentials as ***ROOT***
+      -  SYSDBA Database Credentials as ***SYS_SALES***     
 
-    As observed in step 4, ***19cDB-Linux-x64-ERP*** has two patch recommendations.
+      Under Options, we can use default value /tmp for Working Directory. This is the location where log files will be created.
 
-    ![](images/patch-recommendation.png "patch-recommendation")
+      Select ***Next***.    
 
-    Click on the numeric value 2.
+3. We can validate our entries (CDB details, log file location, credentials) provided in previous page and validate the desired operation. Validation acts as a precheck before we submit the main operation. Click on ***Validate***. This will open a new screen with two validation modes - Quick and Full. We can select either of these. Full validation mode submits a deployment procedure. In this case choose ***Quick validation mode***
 
-    A new slideout will appear.
+      ![](images/fm-flow3-validate.png "quick and full valdiation modes")
 
-    ![](images/patch-slideout.png "slideout")
+4. Review the validation result.
 
-7. The next step is to create a new version in 19cDB-Linux-x64-ERP that will include the recommended patches.
+      ![](images/fm-flow3-validate-result.png "result of valdiation")
 
-    Close the slideout.
+      Incase of any error, we can fix it and choose revalidate. Select ***Close***.
 
-    ![](images/create-version.png "create version")
+5. ***Submit*** the operation.  We need to provide a name to the task, which will help us to view these tasks under Procedure Activity Page. Lets enter
+      ```
+      <copy>finance_pdb_patching</copy>
+      ```
+      ![](images/fm-flow4-dp-name.png "job name")
+      Here, we can see that we have opted to attach existing CDB and update PDB.
 
-    Click on the ***"Create New Version"*** link under the Patch Recommendation column.
+      ![](images/dp-submit.png "submit operation")    
+      Clicking on Monitor Progress will take us to Procedure Activity Page. Alternate navigation to review the submitted deployment procedures is ***Enterprise >> Provisioning and Patching >> Procedure Activity***  
 
-    Alternatively, click on the menu under Actions and create a new version.
+6. Review the Deployment Procedures (DP).
 
-8. In the new window, we need to provide source details, which act as input for version creation and version details.
+      ![](images/dp-list.png "Deployment Procedures submitted")
 
-    In the left-hand section, we first select the Oracle Home, which will be used as the source Oracle Home.
+      We can see that one of the DP related to Attach operation has already completed. Lets click on it and find out the steps executed by this DP.
 
-    ![](images/version-options.png "options")
+      ![](images/dp1-attach-complete.png "review dp for attach")
+      Lets go back to the Procedure Activity page and review the other DP.
 
-    - Select Oracle Home.
-      1. Click on the ***Select Oracle Home*** button. In the new screen select the Oracle Home ending with ***3383***.
-      2. Select Include Patches.
-      3. Select one of the radio buttons. You can either choose to clone the above selected Oracle Home, apply recommended patches to the cloned Oracle Home, and then use this home to create a new version. Alternatively, you can select the option to patch the Oracle Home and use it to create a new version.
-      We will select the latter option - ***Patch the selected Oracle Home***, as shown in the image.
+7.  We can see that second DP for update operation is running.
+      ![](images/dp-list2.png "Deployment Procedures submitted")
 
-    - Under Work Directory, provide location where logs will be created. You may enter location as ***/tmp/u01***
-    - Credentials - Provide Normal and Privileged Credentials to complete this operation.
+      Lets click on it and find out the steps executed by this DP.
 
-        For Normal Host credentials, from the drop down select ***ORACLE***.
-        For Privileged Host credentials, from the drop down select ***ROOT***.
+      ![](images/dp2-update-running.png "review dp for update")
 
-    In the right hand section, provide
-    - New version name that we are creating. You may enter ***v19.23DBRU***
-    - Select Storage options. This will determine the source and location where the new version will be saved. We will select the default values as shown in the image.
+      We can see that attach DP completed successfully.
+      ![](images/dp2-update-complete.png "review dp for update_completed")
 
+8.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
-    Click ***Next***.
+      ![](images/New-env-list-final.png "new version check")
 
-9. In this screen, select the two patches that we have already downloaded and uploaded in the software library.
+      We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
-    ![](images/rec-patches.png "rec-patches")
+## Task 7: Review PDB in Hub
 
-    Click ***Next***.
+Let go back to Fleet Maintenance Hub, Tile 2. We see that the cigar chart for gold image ***image name*** is green. Similarly, in Tile 3, we see that both gold image and target has a green icon next to it, suggesting that both gold image and target are healthy.
 
-10. In the next page, review the selections that we made on the previous screen. Then, click on ***Submit*** to initiate the operation to create a new version.
-
-    ![](images/submit-version.png "submit-version")
-
-11. Once you submit, a new Deployment Procedure (DP) is initiated. Click on the DP name to review the steps.
-
-    ![](images/DP.png "DP")
-
-    lets stay on the DP page for 2 minutes.
-
-    Note: The submitted Deployment Procedure above may fail. If you encounter the error below, click on "Ignore" and select "OK" in the confirmation window.
-    ![](images/error-DP.png "error-DP")
-
-    However, to complete this lab, as mentioned earlier, we shall use ***19cDB-Linux-x64-APPS*** image to update a pluggable database. Let’s proceed to the next step.
-
-## Task 2: Secure databases by updating with new gold image
-
-In this task, we will perform Pluggable Database patching.
-
-1. Lets navigate to Databases Homepage, by clicking on ***Targets >> Databases***.
-
-   ![](images/em-navig11.png "em-navig1")
-
-    You see ***Finance PDB*** under sales.subnet.vcn.oraclevcn.com CDB is at 19.17 version level. You will patch this to version 19.23. As part of this update, you need to choose a CDB at 19.23 version level. For this lab, we will use ***hr.subnet.vcn.oraclevcn.com***. After update is completed, Finance PDB will reside in this new CDB at 19.23 version level.
-
-    ![](images/pre-update.png "pre-update")
-
-    Lets complete below steps to perform the pdb patching.
-
-2. Subscribe sales CDB to goldimage ***19cDB-Linux-x64-APPS***.
-
-    Navigate to Fleet Maintenance Hub, by clicking on ***Administration >> Fleet Maintenance Hub***
-
-    ![](images/em-navig2.png "em-navig2")
-
-    To patch a database, you must subscribe the target database to a gold image. You can subscribe a database to one image only, but an image can have multiple databases subscribed to it.
-
-    In the Fleet Maintenance Hub, under the "Target Subscription" tab in Tile 1, follow these steps:
-
-    - Click on the ***Subscribe*** button.
-    - Select filter ***19*** under Release.
-    - From the dropdown, select the goldimage - ***19cDB-Linux-x64-APPS***.
-    - From the list of databases, select ***sales.subnet.vcn.oraclevcn.com***.
-    - Click on ***Subscribe*** at the top right corner.
-
-    ![](images/sales-subscribe.png "subscribe")
-
-    Upon completion, click on ***Close***.
-
-3. Navigate to Tile 3 - ***Target Patch Compliance*** in the Fleet Maintenance Hub.
-
-    ![](images/tile3.png "tile3")
-
-    In tile 3, we see that the sales CDB is associated with goldimage ***19cDB-Linux-x64-APPS***.
-    Under Target Compliance columns, we see that the CDB is drifted and needs to be patched. In this lab, we will perform a PDB level patching.
-
-    Click on the menu under Actions for the sales CDB, and select ***Update Pluggable Database***. This will launch the operator UI of Fleet Maintenance.
-
-4. We are now at the Operator UI screen, with pre-selected values for Gold Image, Target Type and Operation.
-
-    ![](images/patching-ui1.png "patching-ui1")
-
-    Select Finance pdb and click ***Next***.
-
-5. In this page, we will select relevant options and enter values wherever required.
-
-    - Under Maintenance Task, select ***Attach Existing CDB***.
-    - Under Attach Existing CDB, review the source CDB, which is ***sales.subnet.vcn.oraclevcn.com*** (19.17).
-    - Under Destination CDB, select ***hr.subnet.vcn.oraclevcn.com*** (19.23).
-    - Under credentials, select values from the drop-down menu as per the image.
-        - Normal Host Credentials as ***ORACLE***
-        - Privileged Host Credentials as ***ROOT***
-        - SYSDBA Database Credentials as ***SYS_SALES***
-    - Under Work Directory, enter ***/u01/tmp***
-    - Under Options section, select ***Yes*** for Skip Cluster Verification Utility Checks.
-
-    ![](images/patching-ui2.png "patching-ui2")
-
-    Click ***Next***.
-
-6. Click on ***Validate*** and then select ***Quick Validation***.
-
-    ![](images/patching-ui3.png "patching-ui3")
-
-    Once you receive the successful validation message, click ***Close*** and then hit ***Submit***.
-
-7. A new dialogue box will ask for the name of the deployment procedure.
-    This unique name will allow you to track the operation. We have provided the name "Demo_update".
-
-    ![](images/patching-ui4.png "patching-ui4")
-
-    Copy and paste or type in the following into the Submission Procedure Name prefix.
-
-        ```
-        <copy>Demo_update</copy>
-        ```
-
-8. There are two Deployment Procedure submitted.
-    - Attach Existing CDB
-    - Update PDB
-
-    Click on ***Monitor Progress***, which will open a new window.
-
-    ![](images/patching-ui5.png "patching-ui5")
-
-9. In the new page, under search, enter ***Demo*** so that you only see the two Deployment procedures associated with this lab.
-
-    ![](images/patching-ui6.png "patching-ui6")
-
-    We see that the Deployment procedure with the name "Attach" has completed successfully.
-
-    Let's click on the Deployment procedure with the name "Update" and review the steps performed.
-
-    ![](images/patching-ui7.png "patching-ui7")
-
-9. With both Deployment procedures completed successfully, let's go back to the databases homepage by navigating to ***Targets -> Databases***.
-    ![](images/patching-ui8.png "patching-ui8")
-
-    We see that the Finance PDB has moved out of the sales CDB and is now plugged into the HR CDB, running at version 19.23
-
-
-## Task 3: Securing Databases with Industry Standards and Best Practices
+## Task 8: Compliance Management for Pluggable Database
 
 Now that you have applied security patches to your pluggable database, you want to ensure the configuration, access and user privileges are secure and audit for compliance with CIS Benchmarks which is the industry standard.
 
@@ -281,11 +223,11 @@ Enterprise Manager provides solution to secure and ensure compliance with securi
 
 For Oracle Databases 12c and 19c, CIS Benchmark is an industry compliance standards that is available out-of-the-box. Besides that, Department of Defense (DoD) Security Technical Implementation Guide (STIG) standard is available out-of-the-box for regulatory requirements.
 
-Leverage the built-in SCAP engine on Linux hosts to meet security standards like STIG, PCI-DSS, and HIPAA.
+For underlying Linux hosts, built-in SCAP engine enables security standards like STIG, PCI-DSS, HIPAA are available.
 
 Finally, for Exadata family of Engineered Systems, compliance standards tied to Autonomous Health Framework (AHF) Exachk is available out-of-box.
 
-In this lab, you will get hands-on experience with ***Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database*** to secure configuration of database.
+In this lab, you will get hands-on experience with ***Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database*** to secure configuration of provisioned database.
 
 Center for Internet Security (CIS) benchmark for Oracle database provides comprehensive set of security controls, and configuration guidelines to secure against cyber threats and data breaches. It enables in keeping your databases security posture at elevated levels and check for compliance with your auditors.
 
@@ -295,67 +237,65 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
 1. From the Enterprise menu, select **Compliance, then select Library**.
 
-    ![Navigate to Library](images/enterprise-compliance-library.png " ")
+   ![Navigate to Library](images/enterprise-compliance-library.png " ")
 
 2. Click the **Compliance Standards** tab.
 
-    You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
+   You will list of out-of-box Compliance Standards. Lets' look for CIS Benchmarks.
 
-    Search for "Oracle 19c Database CIS".
+   Search for "Oracle 19c Database CIS".
 
-    In the **Applicable To** dropdown, select **Pluggable Database**.
+   In the **Applicable To** dropdown, select **Pluggable Database**.
 
-    Click **Search**.
+   Click **Search**.
 
-    ![Search CIS](images/search-cis-pluggable-std.png "  ")
+   ![Search CIS](images/search-cis-pluggable-std.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**.
+   Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, then click **Associate Targets** tab.
 
-    Click **Associate Targets**.
-
-    ![Target associate](images/cis-compliance-associate-target.png " ")
+   ![Target associate](images/cis-compliance-associate-target.png " ")
 
 3. Click **Add** and Select **hr.subnet.vcn.oraclevcn.com_FINANCE** PDB you wish to associate.
 
-    In the **Target name**, type **_FINANCE** and click **Search**.
+   In the **Target name**, type **_FINANCE** and click **Search**.
 
-    ![Add PDB](images/add-cis-search-pdb.png " ")
+   ![Add PDB](images/add-cis-search-pdb.png " ")
 
-    Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
+   Choose  **hr.subnet.vcn.oraclevcn.com_FINANCE**.
 
-    Click Select.
+   Click Select.
 
-    ![Add PDB](images/select-cis-pdb-target.png " ")
+   ![Add PDB](images/select-cis-pdb-target.png " ")
 
 4. Verify the PDB selected and click **OK**.
 
-    ![Enable CIS](images/enable-status-pdb.png " ")
+   ![Enable CIS](images/enable-status-pdb.png " ")
 
-    In the Save Association dialog box, click **Yes**.
+   In the Save Association dialog box, click **Yes**.
 
-    ![Confirm Association ](images/save-association-pdb.png "")
+   ![Confirm Association ](images/save-association-pdb.png "")
 
 5. Click **OK** on the Information pop-up window.
 
-    ![Confirm Association ](images/compliance-std-target-process.png " ")
+   ![Confirm Association ](images/compliance-std-target-process.png " ")
 
 6. Compliance Results Analysis
 
-    You have completed one-time setup process.
+   You have completed one-time setup process.
 
-    Lets' analyze the results.
+   Lets' analyze the results.
 
-    Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
+   Now, Navigate to ***Enterprise >> Compliance >> Dashboard***
 
-    ![Navigate to result](images/navigated-dashboard.png " ")
+   ![Navigate to result](images/navigated-dashboard.png " ")
 
-    At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
+   At this point, all CIS security controls is getting processed, will take approximately few minutes to complete.
 
-    Refresh the icon ![Refresh](images/refresh-icon.png "  ")  ***in top right of Compliance Dashboard page***.
+   Refreshing the icon ![Refresh](images/refresh-icon.png "  ")  ***in Compliance Dashboard page***.
 
-    ![Navigate to result](images/navigated-to-dashboard.png  " ")
+   ![Navigate to result](images/navigated-to-dashboard.png  " ")
 
-    In this dashboard, you can explore each dashlet:
+   In this dashboard, you can explore each dashlet:
 
     **Targets Evaluated:** Summarizes the number of databases, hosts, and Exadata and it components assessed for compliance, highlighting the scope of compliance monitoring across the IT environment.
 
@@ -369,113 +309,97 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     **Compliance Summary:** Provides an overview of Targets Compliance status, key metrics about violations, average compliance scores, and comprehensive Report, facilitating targeted efforts to meet compliance standards.
 
-7. At the bottom of the page, you will see Compliance Summary section.
+7. You will see Compliance Summary, Standards tab
 
-    Click on Standards tab to see the results of CIS Benchmark assessment.
+   ![Compliance Summary](images/compliance-summary.png  " ")
 
-    ![Compliance Summary](images/compliance-summary.png  " ")
+   Displays number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
 
-    You will see details of the assessment like number of Compliant Targets, Non-Compliant Targets, Critical, Warning, Minor Warning and Average Compliance Score.
+   Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
 
-    Click on Non-Compliant Targets number, pop-up window shows Targets showing the Compliance Score.
+   ![Compliance Summary](images/non-compliant-target.png " ")
 
-    This indicates **hr.subnet.vcn.oraclevcn.com_FINANCE** target Compliance score is only 39% against the CIS benchmark baseline.
-
-    Next step is to analyze the violation and remediate to make this a compliant target.
-
-    ![Compliance Summary](images/non-compliant-target.png " ")
-
-    Click on 'x' to close.
+   Click on 'x' to close.
 
 8. Let us analyze the severity
 
-    Click on **Critical** number, you will see unique violations for this target.
+   Click on **Critical** number, you will see unique violations for this target.
 
-    ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
+   ![Compliance Summary](images/non-compliant-target-window-critical.png " ")
 
-    Expand the name hr.subnet.vcn.oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
+   Expand the name hr.subnet.vcn.oraclevcn.com_FINANCE caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
 
-    You will see the details of the evaluation.
+   You will see the details of the evaluation.
 
-    You will get the comprehensive view of the violation.
+   You will get the comprehensive view of the violation.
 
-    You can see
+   ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
 
-    - Specific rule that has violated
-    -  Date when it was last evaluated
-    -  Name of the rule
-    -  Rationale for the violation
-    -  And recommended remediation
+   Click on 'x' to close.
 
-    ![Compliance Summary](images/non-compliant-target-critical-detail-window.png " ")
-
-    Click on 'x' to close.
-
-    Similarly, we can explore Warning and Minor Warning violations if they exist.
+   Similarly, we can explore Warning and Minor Warning violations if they exist.
 
 9. Let us drill down to results.
 
-    Click on **Standards >> Name** and let us remediate one of the solution.
+   Click on **Standards >> Name** and let us remediate one of the solution.
 
-    You will see "97" violations number going down to "96".
+   You will see "97" violations number going down to "96".
 
-    ![Navigate to result](images/compliance-standard-summary-violation.png " ")
+   ![Navigate to result](images/compliance-standard-summary-violation.png " ")
 
-    You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
+   You will be presented with the **Compliance Results**, including the target violations against the selected standard, as well as its score and last evaluation date.
 
-    Next, click on 'Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing' in the navigation tree.
+   You will gain insight into CIS standard main categories, controls, and their corresponding rule violations.
 
-    You will see the main CIS categories along with their corresponding CIS control rules and any violations.
+   The Target Scorecard pie chart displays the overall compliance evaluation status of the monitored target, summarizing its adherence to defined CIS benchmark security policies.
 
-    The Target Scorecard pie chart displays the overall compliance evaluation status of the monitored target, summarizing its adherence to defined CIS benchmark security policies.
+   The Rule Evaluations pie chart represents a summary of each rule's evaluation status—compliant, critical, warning, minor warning, and error—in terms of the percentage of rules.
 
-    The Rule Evaluations pie chart represents a summary of each rule evaluation status — compliant, critical, warning, minor warning, and error in terms of the percentage of rules.
+   ![Validations](images/cis-compliance-pdb-controls.png " ")
 
-    ![Validations](images/cis-compliance-pdb-controls.png " ")
+   Results by Target tab shows number of violations occurred, score and latest target evaluated date.
 
-    Results by Target tab shows number of violations occurred, score and latest target evaluated date.
+   ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
 
-    ![Overview scorecard](images/cis-compliance-pdbresult.png " ")
-
-    Let us click on Violations number.
-
+   Let us click on Violations number.
+   
 10. In the **Violations** window, you will find failed Compliance Standard rule description along with the Violation Count.
 
-    ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
+   ![Validate CIS ](images/cis-compliance-rule-violation-count.png " ")
 
-    Click on Violation Count.
+   Click on Violation Count.
 
-    You can export to Excel for offline analysis.
+   You can export to Excel for off line Analysis.
 
-    ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
+   ![Validate CIS ](images/cis-compliance-rule-violation.png " ")
 
-    Click on 'Back'
+   Click on 'Back'
 
-    ![Validate CIS](images/cis-violations-close.png " ")
+   ![Validate CIS](images/cis-violations-close.png " ")
 
-    Click on 'Close'
+   Click on 'Close'
 
 11. Let us select **Violations** tab.
 
-    This table provides comprehensive details for each rule, target name, applicable pluggable database, and violation severity with keywords.
+    You will see the table with comprehensive details for each rule, target name, Applicable to Pluggable Database, violation  severity  with keywords.
 
-    You can select an individual violation to view its detailed statement and recommended actions for quick remediation.
-
-    ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
+   ![Validate CIS ](images/cis-compliance-pdb-violations.png " ")
 
     Click on Summary tab.
 
-12. Click on caret-right ![Caret-right](images/cis-caret-search.png " ") icon.
+12. You can explore further by clicking on caret-right ![Caret-right](images/cis-caret-search.png " ") icon to explore each main category controls' **Violations**.
 
-    Explore each main category controls' **Violations**.
-
-    Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**.  
+    Let us select violation **Ensure 'DBA' Is Revoked from Unauthorized 'GRANTEE'**. 
 
     Corrective Actions enable immediate responses to events like incidents.
 
-    This corrective action minimizes the need for manual intervention and maintains consistent compliance with established CIS benchmark.
+    This corrective action significantly reduce the manual work required when violation happens.
+    
 
-    ![Check for violations](images/cis-rule-violation.png " ")
+   ![Check for violations](images/cis-rule-violation.png " ")
+
+   
+   Corrective action to Revoke 'DBA' role from unathorized grantee 
 
 13. You will notice that the "Unauthorized user 'IX' has been assigned the DBA role".
 
@@ -527,9 +451,8 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
-20. You will view the remediated status for the pluggable database.
+20. Now, Navigate to ***Targets >> Databases***.
 
-    Now, Navigate to ***Targets >> Databases***.
 
     ![Navigate to result](images/target-databases.png  " ")
 
@@ -571,8 +494,6 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     The violation count is currently "0".
 
-    This means there are no violations for this rule in this database **hr.subnet.vcn.oraclevcn.com_FINANCE**.
-
     ![Compliance Results](images/cis-pdb-compliance-remeidiated.png  " ")
 
     "No data to display" appears when you click on the **Violations Events tab**.
@@ -609,8 +530,6 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click on ***Setup >> Log Out***  
 
-That completes the Database Patching and Compliance lab.
-
 You may now proceed to the next lab.
 
 ## Learn More
@@ -626,4 +545,4 @@ You may now proceed to the next lab.
   - **Authors**
     - Romit Acharya, Oracle Enterprise Manager Product Management
     - Shiva Prasad, Oracle Enterprise Manager Product Management
-  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, July 2024
+  - **Last Updated By/Date** -Romit Acharya, Oracle Enterprise Manager Product Management, April 2024
