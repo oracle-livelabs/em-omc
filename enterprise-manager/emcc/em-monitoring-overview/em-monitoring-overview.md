@@ -33,9 +33,7 @@ This lab assumes you have:
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - All previous labs successfully completed
 
-
 *Estimated Time*: 118 minutes
-
 
 ### Lab Timing (Estimated)
 
