@@ -23,7 +23,7 @@ This lab assumes you have completed the following labs:
 
       * EM Bridge and Object Storage bucket has been set up. See [Adding Enterprise Manager Targets](https://docs.oracle.com/en-us/iaas/operations-insights/doc/get-started-operations-insights.html#GUID-3B9CFE26-976E-4983-8D4F-2909DA327BD0).
 
-      * Enable Exadata Systems for Operations Insights.  Only Exadata Database Machines and Exadata Cloud at Customer deployments monitored by Enterprise Manager are currently supported.
+      * Enable Exadata Systems for Ops Insights.  Only Exadata Database Machines and Exadata Cloud at Customer deployments monitored by Enterprise Manager are currently supported.
 
 2.  Exadata Insights is compatible with the following versions of Enterprise Manager:
       * On-premises (Exadata Database Machine): Enterprise Manager 13c Release 5 Update 1 (13.5.0.1) and greater
@@ -31,11 +31,11 @@ This lab assumes you have completed the following labs:
 
 ## Task 2: Exadata Fleet
 
-1.  On the **Operations Insights Overview** page, from the left pane select the **Exadatas** compartment.
+1.  On the **Ops Insights Overview** page, from the left pane select the **Exadatas** compartment.
 
       ![Left Pane](./images/exadatas-comp.png " ")
 
-2.  On the **Operations Insights Overview** page, from the left pane click on **Administration** and then click on **Exadata Fleet**.
+2.  On the **Ops Insights Overview** page, from the left pane click on **Administration** and then click on **Exadata Fleet**.
 
       ![Left Pane](./images/exadata-fleet.png " ")
 
@@ -51,13 +51,13 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/exadata-hosts.png " ")
 
-6.  Select individual Database and Host and then click **Actions** and **Re-Enable Operations Insights** / **Disable Operations Insights** to manage and remove or enable the OPSI functionality.
+6.  Select individual Database and Host and then click **Actions** and **Re-Enable Ops Insights** / **Disable Ops Insights** to manage and remove or enable the OPSI functionality.
 
       ![Left Pane](./images/db-host-actions.png " ")
 
 ## Task 3: Exadata Insights
 
-1.  Click on **Operations Insights** to go to the Overview Page.
+1.  Click on **Ops Insights** to go to the Overview Page.
 
       ![Left Pane](./images/opsi.png " ")
 
@@ -65,7 +65,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/exadata-insights.png " ")
 
-3.  This will show the Exadata systems registered for Operations Insights.
+3.  This will show the Exadata systems registered for Ops Insights.
 
       ![Left Pane](./images/exadata-systems.png " ")
 
@@ -132,4 +132,4 @@ In Conclusion, OPSI Exadata Insights provides comprehensive capacity analysis to
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, May 2022
+- **Last Updated By/Date** - Vivek Verma, Apr 2024

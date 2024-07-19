@@ -4,7 +4,7 @@
 
 In this lab, you will go through the process to navigate through **AWR Hub**.
 
-The Operations Insights AWR Hub lets you consolidate and store detailed performance data from the Automatic Workload Repository (AWR) of your important Oracle Databases. This consolidated AWR Hub allows you to view and analyze historical performance data beyond the AWR retention period of the source database.
+The Ops Insights AWR Hub lets you consolidate and store detailed performance data from the Automatic Workload Repository (AWR) of your important Oracle Databases. This consolidated AWR Hub allows you to view and analyze historical performance data beyond the AWR retention period of the source database.
 
 An AWR report contains performance statistics on database activity between two points in time – two snapshots. This can be used for problem detection and self-tuning purposes. For example, you can compare database statistics captured during a period of poor performance and compare it with normal baseline performance to identify and diagnose problems. Because AWR Hub stores AWR snapshots for multiple databases, you can easily compare performance statistics across your database fleet.
 
@@ -21,7 +21,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: AWR Hub
 
-1.  On the **Operations Insights Overview** page, from the left pane click **AWR-Hub**.
+1.  On the **Ops Insights Overview** page, from the left pane click **AWR-Hub**.
 
       ![Left Pane](./images/awr-hub.png " ")
 
@@ -43,7 +43,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 2: AWR Explorer
 
-1.  On the **Operations Insights Overview** page, from the left pane click **AWR-Hub**.
+1.  On the **Ops Insights Overview** page, from the left pane click **AWR-Hub**.
 
       ![Left Pane](./images/awr-hub.png " ")
 
@@ -85,7 +85,9 @@ This lab assumes you have completed the following labs:
       On the **Wait Events** tab, you can also:
 
            1.  Add new charts to display more wait events. To do so, select a wait event in the **Wait Event** drop-down list and click **Add Wait Event Chart**.
-           2.  View a histogram of the wait event with a breakdown of the percentage of waits by their duration, within a selected snapshot range. To do so, click the **Show Histogram** option available for each wait event chart. Note that you can also click on the chart to navigate to the **Show Histogram** dialog.
+           2.  View a histogram of the wait event with a breakdown of the percentage of waits by their duration, within a selected snapshot range. To view a histogram, click the **Show histogram** option available for each wait event chart or click on the chart.
+
+      ![Left Pane](./images/awr-hub-show-histogram.png " ")
 
       * **Activity**: This tab enables you to view the performance trend of the database by selecting an Average Active Sessions dimension and viewing the top activity for that dimension in the selected time range. You can also scroll down to view the top activity by additional dimensions based on the dimension selected in the **Average Active Sessions** chart.
 

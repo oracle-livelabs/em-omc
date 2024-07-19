@@ -41,7 +41,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>sudo yum install -y ansible</copy>
     ```
 
-    ![](../em-devops-automation/images/install-ansible.png " ")
+    ![Install Ansible](../em-devops-automation/images/install-ansible.png " ")
 
     Then hit the **Enter** key on your keyboard.
 
@@ -58,7 +58,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     emcc.marketplace.com</copy>
     ```
 
-    ![](../em-devops-automation/images/edit-ansible-config.png " ")
+    ![Edit Ansible Configuration](../em-devops-automation/images/edit-ansible-config.png " ")
 
     Save the changes by hitting the **Esc** key on your keyboard, type **:wq** then hit **Enter**.
 
@@ -74,7 +74,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     Are you sure you want to continue connecting (yes/no)? yes
     ```
 
-    ![](../em-devops-automation/images/test-ansible-connect.png " ")
+    ![Test Ansible Connectivity](../em-devops-automation/images/test-ansible-connect.png " ")
 
     Verify that you receive the **pong** response from Ansible.
 
@@ -85,7 +85,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     cd /home/oracle/ansible/yml</copy>
     ```
 
-    ![](../em-devops-automation/images/create-ansible-dirs.png " ")
+    ![Create Ansible Directories](../em-devops-automation/images/create-ansible-dirs.png " ")
 
 
 ## Task 2: Verify DBaaS Setup and Integration with Ansible
@@ -94,13 +94,13 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
 
     **cyrus/welcome1**
 
-    ![](../em-devops-automation/images/em-cyrus-login.png " ")
+    ![EM Cyrus Login](../em-devops-automation/images/em-cyrus-login.png " ")
 
 2. Oracle EM will then show the DBaaS Self Service Portal. Click the **Create Instance** button and verify the offerings from the catalog.
 
-    ![](../em-devops-automation/images/em-self-service-create-instance.png " ")
+    ![EM Self Service Create Instance](../em-devops-automation/images/em-self-service-create-instance.png " ")
 
-    ![](../em-devops-automation/images/em-request-new-service.png " ")
+    ![EM Request](../em-devops-automation/images/em-request-new-service.png " ")
 
 3. From the catalog, we can see that we have two offerings to request a Pluggable Database (PDB). We are going to use the first offering **Provision New Empty Pluggable Database** with Ansible.
 
@@ -157,86 +157,86 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     TASK [Print returned json dictionary] ******************************************
     ok: [emcc.marketplace.com] => {
     "results.json": {
-        "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud",
-        "description": "This represents the Cloud resource of the Oracle Enterprise Manager Cloud Management solution",
-        "media_type": "application/oracle.com.cloud.common.Cloud+json",
-        "name": "Oracle Cloud by Enterprise Manager",
+        "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud", 
+        "description": "This represents the Cloud resource of the Oracle Enterprise Manager Cloud Management solution", 
+        "media_type": "application/oracle.com.cloud.common.Cloud+json", 
+        "name": "Oracle Cloud by Enterprise Manager", 
         "resource_state": {
-             "state": "READY"
-        },
+            "state": "READY"
+        }, 
         "service_family_types": {
-             "elements": [
+            "elements": [
                 {
-                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/service_family_type/opc",
-                    "media_type": "application/oracle.com.cloud.common.ServiceFamilyType+json",
-                    "name": "opc",
-                    "type": "opc",
+                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/service_family_type/opc", 
+                    "media_type": "application/oracle.com.cloud.common.ServiceFamilyType+json", 
+                    "name": "opc", 
+                    "type": "opc", 
                     "uri": "/em/cloud/service_family_type/opc"
-                },
+                }, 
                 {
-                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/service_family_type/dbaas",
-                    "media_type": "application/oracle.com.cloud.common.ServiceFamilyType+json",
-                    "name": "dbaas",
-                    "type": "dbaas",
+                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/service_family_type/dbaas", 
+                    "media_type": "application/oracle.com.cloud.common.ServiceFamilyType+json", 
+                    "name": "dbaas", 
+                    "type": "dbaas", 
                     "uri": "/em/cloud/service_family_type/dbaas"
-                },
+                }, 
                 {
-                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/service_family_type/iaas",
-                    "media_type": "application/oracle.com.cloud.iaas.IaasServiceFamilyType+json",
-                    "name": "iaas",
-                    "type": "iaas",
+                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/service_family_type/iaas", 
+                    "media_type": "application/oracle.com.cloud.iaas.IaasServiceFamilyType+json", 
+                    "name": "iaas", 
+                    "type": "iaas", 
                     "uri": "/em/cloud/service_family_type/iaas"
                 }
-            ],
-            "media_type": "application/oracle.com.cloud.common.ServiceFamilyType+json",
+            ], 
+            "media_type": "application/oracle.com.cloud.common.ServiceFamilyType+json", 
             "total": "3"
-        },
+        }, 
         "service_requests": {
-            "elements": [],
-            "media_type": "application/oracle.com.cloud.common.Request+json",
+            "elements": [], 
+            "media_type": "application/oracle.com.cloud.common.Request+json", 
             "total": "0"
-        },
+        }, 
         "service_templates": {
             "elements": [
                 {
-                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/1",
-                    "description": "Create a new enterprise Pluggable Database",
-                    "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json",
-                    "name": "Provision New Empty Pluggable Database",
-                    "service_family_type": "dbaas",
-                    "type": "dbaas",
-                    "uri": "/em/cloud/dbaas/pluggabledbplatformtemplate/1"
-                },
+                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/62", 
+                    "description": "Creates a new PDB with data from non-container database", 
+                    "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json", 
+                    "name": "Provision Pluggable Database with Data", 
+                    "service_family_type": "dbaas", 
+                    "type": "dbaas", 
+                    "uri": "/em/cloud/dbaas/pluggabledbplatformtemplate/62"
+                }, 
                 {
-                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/21",
-                    "description": "Creates a new PDB with data from non-container database",
-                    "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json",
-                    "name": "Provision Pluggable Database with Data",
-                    "service_family_type": "dbaas",
-                    "type": "dbaas",
-                    "uri": "/em/cloud/dbaas/pluggabledbplatformtemplate/21"
+                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/61", 
+                    "description": "Create a new enterprise Pluggable Database", 
+                    "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json", 
+                    "name": "Provision New Empty Pluggable Database", 
+                    "service_family_type": "dbaas", 
+                    "type": "dbaas", 
+                    "uri": "/em/cloud/dbaas/pluggabledbplatformtemplate/61"
                 }
-            ],
-            "media_type": "application/oracle.com.cloud.common.ServiceTemplate+json",
+            ], 
+            "media_type": "application/oracle.com.cloud.common.ServiceTemplate+json", 
             "total": "2"
-        },
-        "uri": "/em/cloud",
+        }, 
+        "uri": "/em/cloud", 
         "zones": {
             "elements": [
                 {
-                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/zone/BE3E75753F97FDB6976A229AA7C1D2E3",
-                    "description": "",
-                    "media_type": "application/oracle.com.cloud.common.DbZone+json",
-                    "name": "Sales Infra  Z one",
-                    "service_family_type": "dbaas",
-                    "type": "self_service_zone",
+                    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/zone/BE3E75753F97FDB6976A229AA7C1D2E3", 
+                    "description": "", 
+                    "media_type": "application/oracle.com.cloud.common.DbZone+json", 
+                    "name": "Sales Infra  Z one", 
+                    "service_family_type": "dbaas", 
+                    "type": "self_service_zone", 
                     "uri": "/em/cloud/dbaas/zone/BE3E75753F97FDB6976A229AA7C1D2E3"
                 }
-            ],
-            "media_type": "application/oracle.com.cloud.common.Zone+json",
+            ], 
+            "media_type": "application/oracle.com.cloud.common.Zone+json", 
             "total": "1"
-        }
-      }
+          }
+       }
     }
     PLAY RECAP *********************************************************************
     emcc.marketplace.com       : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
@@ -246,7 +246,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     In this output there are two elements in our service catalog.
 
     ```
-    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/1",
+    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/61",
     "description": "Create a new enterprise Pluggable Database",
     "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json",
     "name": "Provision New Empty Pluggable Database",
@@ -256,18 +256,18 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     ```
 
     ```
-    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/21",
-    "description": "Creates a new PDB with data from non-container database",
-    "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json",
-    "name": "Provision Pluggable Database with Data",
-    "service_family_type": "dbaas",
-    "type": "dbaas",
-    "uri": "/em/cloud/dbaas/pluggabledbplatformtemplate/21"
+    "canonicalLink": "/em/websvcs/restful/extws/cloudservices/service/v0/ssa/em/cloud/dbaas/pluggabledbplatformtemplate/62", 
+    "description": "Creates a new PDB with data from non-container database", 
+    "media_type": "application/oracle.com.cloud.common.PluggableDbPlatformTemplate+json", 
+    "name": "Provision Pluggable Database with Data", 
+    "service_family_type": "dbaas", 
+    "type": "dbaas", 
+    "uri": "/em/cloud/dbaas/pluggabledbplatformtemplate/62"
     ```
 
     These 2 elements represent the same service offerings from the Web console.
 
-    ![](../em-devops-automation/images/em-request-new-service.png " ")
+    ![EM Request New Service](../em-devops-automation/images/em-request-new-service.png " ")
 
     In order to request an empty Pluggable database (PDB) we need the **uri** of that specific offering. In this case is.
 
@@ -344,7 +344,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
                Accept: application/oracle.com.cloud.common.PluggableDbPlatformInstance+json
             body:
               {
-                 "based_on": "/em/cloud/dbaas/pluggabledbplatformtemplate/1",
+                 "based_on": "/em/cloud/dbaas/pluggabledbplatformtemplate/61",
                  "name": "API_Request_PDB",
                  "end_date": "{{ nextdate }}",
                  "params":
@@ -393,7 +393,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/request_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-request-pdb.png " ")
+    ![Ansible Request PDB](../em-devops-automation/images/ansible-request-pdb.png " ")
 
 
 4. Review the status of the provisioning request. Review the output of the previous request and find the **uri**.
@@ -445,11 +445,11 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-get-pdb-status-ready.png " ")
+    ![Ansible Get Status PDB Ready](../em-devops-automation/images/ansible-get-pdb-status-ready.png " ")
 
 5. Go back to the Oracle Enterprise Manager web console and refresh the screen. Verify that you can see the newly created PDB in the Self Service Portal.
 
-    ![](../em-devops-automation/images/em-self-service-pdb-ready.png " ")
+    ![EM Self Service PDB Status](../em-devops-automation/images/em-self-service-pdb-ready.png " ")
 
 
 ## Task 4: PDB Life Cycle Management using DBaaS and Ansible
@@ -504,7 +504,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/resize_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-resize-pdb.png " ")
+    ![Ansible Resize PDB](../em-devops-automation/images/ansible-resize-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -512,7 +512,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-resize-pdb-completed.png " ")
+    ![Ansible Resize Completed](../em-devops-automation/images/ansible-resize-pdb-completed.png " ")
 
 3. In this step, we are going to shutdown the recently created PDB. Go back to the SSH terminal and create a new YAML (.yml) file.
 
@@ -561,7 +561,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/shutdown_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-shutdown-pdb.png " ")
+    ![Ansible Shutdown PDB](../em-devops-automation/images/ansible-shutdown-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -569,7 +569,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-get-pdb-status-shutdown.png " ")
+    ![Ansible Shutdown Completed](../em-devops-automation/images/ansible-get-pdb-status-shutdown.png " ")
 
 4. Start the recently created PDB. Go back to the SSH terminal and create a new YAML (.yml) file.
 
@@ -618,7 +618,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/start_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-start-pdb.png " ")
+    ![Ansible Start PDB](../em-devops-automation/images/ansible-start-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -626,7 +626,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-get-pdb-status-start.png " ")
+    ![Ansible Start Completed](../em-devops-automation/images/ansible-get-pdb-status-start.png " ")
 
 
 ## Task 5: Delete a PDB using DBaaS and Ansible
@@ -673,7 +673,7 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/delete_pdb.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-delete-pdb.png " ")
+    ![Ansible Delete PDB](../em-devops-automation/images/ansible-delete-pdb.png " ")
 
     Execute the previously created YAML file to get the status of the PDB.
 
@@ -681,11 +681,11 @@ Is highly recommended to execute the **Database Lifecycle Automation** workshop 
     <copy>ansible-playbook /home/oracle/ansible/yml/get_pdb_status.yml -u oracle --private-key=~/.ssh/rsa_id</copy>
     ```
 
-    ![](../em-devops-automation/images/ansible-get-pdb-status-delete.png " ")
+    ![Ansible Delete Completed](../em-devops-automation/images/ansible-get-pdb-status-delete.png " ")
 
 2. Go back to the Oracle Enterprise Manager web console. Click on Requests (located on the left panel) and verify all the requests submitted through Ansible.
 
-    ![](../em-devops-automation/images/em-self-service-requests.png " ")
+    ![EM Review Requests](../em-devops-automation/images/em-self-service-requests.png " ")
 
 This completes the Lab!
 
