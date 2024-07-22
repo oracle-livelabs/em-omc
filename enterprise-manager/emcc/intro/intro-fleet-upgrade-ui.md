@@ -2,7 +2,7 @@
 ## About this Workshop
 
 This workshop provides a fully configured and functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
-- The VM for this workshop comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.3, 18.8, 18.10, 19.3 and 19.10
+- The VM for this workshop comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.8, 19.17, 19.18 and 19.23
 - The environment deploys and starts up automatically in ~20 minutes
 - In this workshop, you will experience using the Fleet UI to upgrade multiple Oracle targets using the Oracle Enterprise Manager. This new UI was introduced in Enterprise Manager 13.5 RU1
 

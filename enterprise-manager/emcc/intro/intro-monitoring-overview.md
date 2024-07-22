@@ -53,7 +53,8 @@ Labs under this workshop do not need any additional Management Pack and are a co
 The following are covered in this workshop:
 - Explore Enterprise Summary page and drill down to see a list of down targets
 - Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
-- Start a Runbook session against an incident from Incident Manager then modify and publish a Runbook draft
+- Start Runbook sessions against an incident from Incident Manager and a metric in All Metrics 
+- Modify and publish a Runbook draft
 - Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
 - Create a new Corrective Action and associate it with a metric
 - Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
