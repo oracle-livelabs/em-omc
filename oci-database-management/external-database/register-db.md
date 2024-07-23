@@ -272,35 +272,35 @@ When using Resource Manager to deploy an environment, execute a terraform **Appl
 
      ![PDB](./images/pluggabledatabases.png "PDB")
 
-2.  Click the database registered under External pluggable databases to display **External Pluggable Database** Details.
-
-     ![External Pluggable Database](./images/pluggabledbdetails.png "External Pluggable Database")
-
-3.  Click on **Enable** against Database Management.
-
-     ![External Pluggable Database](./images/enableplugdbmgmt.png "External Pluggable Database")
-
-4.  Select an external database connector  and click **Enable**.
-
-     ![External Pluggable Database](./images/enableplugdbmgmt1.png "External Pluggable Database")
-
-5.  Perform steps 4-6 for all pluggable databases registered under External pluggable databases.
-
-6.  Under **External Databases**, click on **Container Databases** and verify container database is registered under External Container Databases.
+2.  Under **External Databases**, click on **Container Databases** and verify container database is registered under External Container Databases.
 
      ![Container Databases](./images/containerdatabases.png "Container Databases")
 
-7.  Click on the database registered under External Container Databases to display External Container Database Details.
+3.  Click on the database registered under External Container Databases to display External Container Database Details.
 
      ![Container Databases](./images/containerdatabasedetails.png "Container Databases")
 
-8. Click on **Enable** against Database Management.
+4. Click on **Enable** against Database Management.
 
      ![Container Databases](./images/enabledatabasemgmt.png "Container Databases")
 
-9. Select **external database connector** and **choose a license type** - **Bring Your Own License (BYOL)**. Click **Enable**.
+5. Select **external database connector** and **choose a license type** - **Bring Your Own License (BYOL)**. Click **Enable**.
 
      ![external database connector](./images/enabledbmgmt1.png "external database connector")
+
+6.  Click the database registered under External pluggable databases to display **External Pluggable Database** Details.
+
+     ![External Pluggable Database](./images/pluggabledbdetails.png "External Pluggable Database")
+
+7.  Click on **Enable** against Database Management.
+
+     ![External Pluggable Database](./images/enableplugdbmgmt.png "External Pluggable Database")
+
+8.  Select an external database connector  and click **Enable**.
+
+     ![External Pluggable Database](./images/enableplugdbmgmt1.png "External Pluggable Database")
+
+9.  Perform steps 6-8 for all pluggable databases registered under External pluggable databases.
 
 10. Now that we have some databases defined and the service configured, from the Cloud Console go back to the navigation menu and select the **Database Management** selection to monitor and manage the databases.
 
@@ -312,4 +312,4 @@ When using Resource Manager to deploy an environment, execute a terraform **Appl
 
 - **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, September 2021
+- **Last Updated By/Date** - Vivek Verma, December 2023

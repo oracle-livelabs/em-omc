@@ -62,25 +62,25 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
     Once, Inventory and  Usage Details is chosen, it appears as below with Linux OS with Hostname.
 
-    ![inventory-and-usage-detail-page](images/inventory-and-usage-detail-page.png " inventory-and-usage-detail-page ")
+    ![inventory-and-usage-details-page](images/inventory-and-usage-details-page.png " inventory-and-usage-details-page ")
 
 3.  In the **Show** filter menu, select **Databases** to see all database instances managed by Enterprise Manager.
 
-    ![em-compliance-configs-alldb-page](images/em-compliance-configs-alldb.png " em-compliance-configs-alldb-page ")
+    ![em-compliance-config-alldbs-page](images/em-compliance-config-alldbs.png " em-compliance-config-alldbs-page ")
 
 4.  Analyze various database versions and the number of instances for each version or you can choose PDBs 19c highlighted above page.
 
 5.  **Table View** can be visible by selecting and adjusting the grid line on the page as shown below.
 
-    ![table-view-grid-line-selects-page](images/table-view-grid-line-selects.png " table-view-grid-line-selects-page ")
+    ![table-review-grid-line-page](images/table-review-grid-line.png " table-review-grid-line-page ")
 
     Explore the pie chart to see the breakdown of database inventory by color-code percentages. Also, in the **Graphical View**, choose the **Trend** radio button to see the growth of a given database instance over a period of time.
 
-    ![em-inventory-usage-detail-page](images/em-inventory-usage-detail.png " em-inventory-usage-detail-page ")
+    ![inventory-usage-detail-page](images/inventory-usage-detail.png " inventory-usage-detail-page ")
 
 6. Click on Table View, further details to explore.
 
-    ![em-inventory-usage-detail-table_select-page](images/em-inventory-usage-detail-table_select.png " em-inventory-usage-detail-table_select-page ")  
+    ![em-inventory-usage-detail-table-select-page](images/em-inventory-usage-detail-table-select.png " em-inventory-usage-detail-table-select-page ")  
 
     Click **Close**.
 
@@ -96,11 +96,11 @@ All the items in this step are read-only, the primary goal is to learn about inv
 
 8.  Inventory usage and Details can be exported for offline further reviews and analysis.
 
-    ![em-inventory-usage-detail-export-summary-page](images/em-inventory-usage-detail-export-summary.png " em-inventory-usage-detail-export-summary-page ")
+    ![em-inventory-detail-export-summary-page](images/em-inventory-detail-export-summary.png " em-inventory-detail-export-summary-page ")
 
     These details can be exported to an excel file and shared the report with management. With the excel report, you can filter based on the properties you are using to show department or line of business-specific assets allocation and usage, excel file format as shown here.
 
-    ![em-ecm-inv-usage-detail-excel-file](images/em-ecm-inv-usage-detail-excel-file.png " em-ecm-inv-usage-detail-excel-file ")  
+    ![em-ecm-inv-usage-detail-page](images/em-ecm-inv-usage-detail.png " em-ecm-inv-usage-detail ")  
 
 ## Task 2: One-Time Database Comparison
 
@@ -133,6 +133,8 @@ In this step, you will compare two database targets to determine configuration d
     ![select-targets-page](images/select-targets.png " select-targets-page ")
 
     To begin with, filter ‘Target Type’ to Database Instance.
+
+    Click Search.
 
     ![select-targets-type-page](images/select-targets-type.png " select-targets-type-page ")
 
@@ -195,11 +197,11 @@ In this step, you will compare two database targets to determine configuration d
 
     ![one-time-comparison-result-page](images/one-time-comparison-result.png " one-time-comparison-result-page ")
 
-16. Export the comparison results into an excel report for further reviews and offline analysis. On the     One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
+16. Export the comparison results into an excel report for further reviews and offline analysis. On the One-Time Comparison Results page, highlight the definition and choose Export Results, You can choose the specific results to export.
 
     ![export-one-time-comparison-result-page](images/export-one-time-comparison-result.png " export-one-time-comparison-result-page ")
 
-  After Exporting, Click **Cancel** to exit. The zip file will be created, downloadable, and available to open in excel format on your system to do offline verification.
+  After Exporting, Click **Cancel** to exit. The zip ECM002-Compare-Demo - One time Comparison_comparisonresult.zip file will be created, downloadable, and available to open in excel format on your system to do offline verification.
 
 17. One-time Database comparison results excel file format as shown here.
 
@@ -223,9 +225,9 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     Choose Templates left side of the panel of the Dashboard.
 
-    ![comparison-and-driftmanagement-page](images/comparison-and-driftmanagement.png " comparison-and-driftmanagement-page ")
+    ![cocomparison-and-driftmanagement.pngmparison-and-driftmanagement-page](images/comparison-and-driftmanagement.png " comparison-and-driftmanagement-page ")
 
-3.  Go to the Templates library on the left panel, Clicking on Templates will navigate to Comparison Templates Page.
+3.  Click on Templates on the left panel will navigate to Comparison Templates Page.
 
     ![comparison-template-page](images/comparison-template.png " comparison-template-page ")
 
@@ -256,8 +258,8 @@ In this workshop, you will learn about continuous configuration drift monitoring
     ![edit-comparison-template-configuration-items-page](images/edit-comparison-template-configuration-items.png " edit-comparison-template-configuration-items-page ")
 
     To begin with, uncheck all configuration items.
-
-    ![comparison-Uncheck-compare-template-page](images/comparison-Uncheck-compare-template.png " comparison-Uncheck-compare-template-page ")
+    
+    ![comparison-uncheck-compare-template-page](images/comparison-uncheck-compare-template.png " comparison-uncheck-compare-template-page ")
 
 7.  In this lab, we will customize this template and monitor configuration drift for two configuration items.
 
@@ -334,34 +336,35 @@ In this workshop, you will learn about continuous configuration drift monitoring
 
     ![comparison-&-drift-management-dashboard-page](images/comparison-&-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
 
-21. Click on the Drift Results tab on the left panel (2nd tab from the top). This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
+    Click on the Drift Results tab on the left panel (2nd tab from the top).
+
+21. This page will show results for all drift definitions managed by this instance of Enterprise Manager. Identify the drift definition you created for further analysis of configuration drift results.
 
     ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
 
 22. Review the drift details. Click on the **Drift Definition** (ECM003-Drift-Demo – Drift)
 
-    ![comparison-review-ecm003-drift-demo-drift-page](images/comparison-review-ecm003-drift-demo-drift.png " comparison-review-ecm003-drift-demo-drift-page ")
+    ![comparison-review-ecm003-drift-demo-drift-page](images/compared-drift-management-results-select.png " comparison-review-ecm003-drift-demo-drift-page ")
 
     For a detailed analysis of configuration drift. You can see the differences in the Initialization Parameters between the two targets.
 
     ![comparison-results-ecm003-drift-demodrift-page](images/comparison-results-ecm003-drift-demodrift.png " ccomparison-results-ecm003-drift-demodrift-page ")
 
-  Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
+    Under the target compared column, you will see a few icons. The icons that appear in the view are mostly intuitive:
+     - Equal sign means parameter properties are the same across the reference and target compared
+     - Not equal sign indicates parameter properties are different across the reference and target compared
+     - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
+     - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
 
-    - Equal sign means parameter properties are the same across the reference and target compared
-    - Not equal sign indicates parameter properties are different across the reference and target compared
-    - A red box with 1 (left only) means that the comparison did not find a matching item to compare, this means 2nd target doesn’t have a property configured to compare
-    - A red box 2 (right only) means that the comparison did not find a matching item to compare to the second configuration
+23. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page.
 
-23. Go to **Enterprise --> Configuration --> Comparison & Drift Management** Dashboard page, Click on **Drift Results**
+    ![comparison-&-drift-management-dashboard-page](images/comparison-and-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
 
-    ![comparison-&-drift-management-dashboard-page](images/comparison-&-drift-management-dashboard.png " comparison-&-drift-management-dashboard-page ")
+    Click on Click on **Drift Results**.
 
-24. Click on **Click to refresh**  as shown here:
+    ![config-drift-dashboard-page](images/config-drift-dashboard.png " cconfig-drift-dashboard-page ")
 
-    ![compared-drift-management-results-page](images/compared-drift-management-results.png " compared-drift-management-results-page ")
-
-    On the Drift Results page, highlight the definition and choose **Export Results**.
+24. On the Drift Results page, highlight the definition and choose **Export Results**.
 
     ![export-results-for-created-drift-page](images/export-results-for-created-drift.png " export-results-for-created-drift-page ")
 
@@ -405,16 +408,23 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
-    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
+    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " all_compliance-library-standards-page ")
+
+    Click on Caret Right Icon  ![caret](images/caret-search.png " ") search
 
 4.  In the Compliance Standards tab, search for Compliance Standard by entering **CIS**
 and Applicate To drop down column choose **Database Instance** and click on **Search**.
 
     ![search-compliance-library-database-instance-page](images/search-compliance-library-database-instance.png " search-compliance-library-database-instance-page ")
 
-5.  Select the **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
+    Click on collapsable icon ![collapse](images/collapsed-search.png " ") search
+
+    ![library-page](images/compliance-library.png " compliance-library-page ")
+
+5.  Select the **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Traditional Auditing for Oracle Database** for Oracle Database standard.
 
     ![choose-cis-compliance-library-page](images/choose-cis-compliance-library.png " choose-cis-compliance-library-page ")
+
 
 6.  Create a copy of this database standard by clicking on **Create Like**. Give a unique name to the new standard.
 
@@ -469,15 +479,15 @@ Click the **Cancel** button.
 
     ![cis-compliance-standard-target-success-page](images/cis-compliance-standard-target-success.png " cis-compliance-standard-target-success-page ")
 
-16. Go to the **Compliance Dashboard** page to check the CIS compliance posture. It takes about 5 minutes to show up in compliance dashboard results.
+ 16. Go to the **Compliance >> dashboard ** page to check the CIS compliance posture. It takes about few minutes to show up in compliance dashboard results.
+ 
+        ![compliance-results-dashboard-page](images/compliance-results-dashboard.png " compliance-results-dashboard-page ")
+       
+     Under the Compliance Summary panel at the bottom below page:
 
-    ![ccompliance-dashboard-page](images/compliance-dashboard.png " compliance-dashboard-page ")
-
-  Under the Compliance Summary panel at the bottom below page:
-
-    - Explore various tabs to get an understanding of Frameworks, Standards, and target-level compliance
-    - For any given standard, if there are Critical, Warning, or Minor Warnings
-    - Click on the violation number to see more details of the violationS by clicking the numbers below each column's names
+     - Explore various tabs to get an understanding of Frameworks, Standards, and target-level compliance
+     - For any given standard, if there are Critical, Warning, or Minor Warnings
+     - Click on the violation number to see more details of the violationS by clicking the numbers below each column's names
 
 17. By Clicking on the Critical column number, you will see details like each violation, and the last evaluation date.
 
@@ -499,13 +509,13 @@ Click the **Cancel** button.
 
     ![cis-demo-compliance-report2-page](images/cis-demo-compliance-report2.png " cis-demo-compliance-report2-page ")
     ![cis-demo-compliance-report3-page](images/cis-demo-compliance-report3.png " cis-demo-compliance-report3-page ")
-    ![cis-demo-compliance-report4-page](images/cis-demo-compliance-report4.png " cis-demo-compliance-report4-page ")
+    
 
 19. Click **X** to close Critical Violations window
 
     ![close-evaluate-cis-critical-violations-page](images/close-evaluate-cis-critical-violations.png " close-evaluate-cis-critical-violations-page ")  
 
-20. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations.
+20. By going back to the **Compliance Dashboard** page,  click on the standard that you created **CIS_DEMO** in the previous steps to review further evaluations of results.
 
     ![compliance-dashboard-cis-compliance-summary-page](images/compliance-dashboard-cis-compliance-summary.png " compliance-dashboard-cis-compliance-summary-page ")
 
@@ -513,15 +523,22 @@ Click the **Cancel** button.
 
     ![cis-compliance-results-by-standard-rules-page](images/cis-compliance-results-by-standard-rules.png " cis-compliance-results-by-standard-rules-page ")
 
-    By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
+21. By clicking on **Violations**, each CIS compliance Standard Rules Violations can be seen as follows
 
     ![cis-compliance-results-by-standard-rules1-page](images/cis-compliance-results-by-standard-rules1.png " cis-compliance-results-by-standard-rules1-page ")
 
+    Click **Close**
+    
     Further, each violations event details, recommendations and remediations could be explored
 
     ![cis-compliance-results-by-standard-rules2-page](images/cis-compliance-results-by-standard-rules2.png " cis-compliance-results-by-standard-rules2-page ")
 
-  All of these will give you a CIS Compliance security posture of database target.
+    Click **Logout**
+
+    ![cis-compliance-results-logout-page](images/cis-compliance-results-logout-page.png " cis-compliance-results-logout-page ")  
+
+    <!-- All of these steps will give you a CIS Compliance security posture of database target. -->  
+    
 
 ## Task 5: Host Security Compliance
 
@@ -553,23 +570,23 @@ A compliance standard rule is a specific test to determine if a configuration da
 
 3.  The compliance Standards tab contains all standards for various supported targets.
 
-    ![all_compliance-library-standards-page](images/all_compliance-library-standards.png " call_compliance-library-standards-page ")
+    ![all_compliance-library-standards-page](images/all-compliance-library-standards.png " call_compliance-library-standards-page ")
 
 4.  In the Compliance Standards tab, search for the Keywords column for the word **HIPAA**
 
-    ![hipaa-compliance-library-search-page](images/hipaa-compliance-library-search.png " hipaa-compliance-library-search-page")
+    ![hipaa-compliance-lib-search-page](images/hipaa-compliance-lib-search.png " hipaa-compliance-lib-search-page")
 
 5.  Select Health Insurance Portability and Accountability Act (HIPAA) OL-7 standard, Click on Show Details.
 
-    ![hipaa-compliance-library-show-details-page](images/hipaa-compliance-library-show-details.png " hipaa-compliance-library-show-details-page ")
+    ![hipaa-compliance-library-show-detail-page](images/hipaa-compliance-library-show-detail.png " hipaa-compliance-library-show-detail-page ")
 
 6. After Selecting  **Show Details** Review Quickly scan various rules available for HIPAA out-of-box, Click on **Done**
 
-    ![compliance-standard-hipaa-ol-7-detail-page](images/compliance-standard-hipaa-ol-7-detail.png " compliance-standard-hipaa-ol-7-detail-page ")
+    ![compliance-standard-hipaa-ol-7-details-page](images/compliance-standard-hipaa-ol-7-details.png " compliance-standard-hipaa-ol-7-details-page ")
 
 7. Click on **Associate Targets** to associate a database target for this selected standard.
 
-    ![hipaa-compliance-library-associate-target-page](images/hipaa-compliance-library-associate-target.png " hipaa-compliance-library-associate-target-page ")
+    ![hipaa-compliance-lib-associate-target-page](images/hipaa-compliance-lib-associate-target.png " hipaa-compliance-lib-associate-target-page ")
 
 8. When the Associate Target option is chosen, you will be taken to a page to add host's targets.
 
@@ -679,6 +696,6 @@ A compliance standard rule is a specific test to determine if a configuration da
   - [SCAP Standards](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emdbc/scap-supported-standards.html)
 
 ## Acknowledgements
-  - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
-  - **Contributors** -  Rene Fontcha
-  - **Last Updated By/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, June 21st,2023.
+
+  - **Author/Date** - Shiva Prasad, Oracle Enterprise Manager Product Management, July 18th,2024.
+  

@@ -17,49 +17,49 @@ This lab assumes you have:
 1.  Click on the link below to download the Resource Manager zip file you need to build your environment:
 
 <if type="config-compliance">
-    - [emcc-mkplc-config-compliance.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/bitQwycuNAjsM8n7C1ugjbrsRUuceS2TWkfARO3xf-sUX11EsaEg2ug_iLBPCeKF/n/natdsecurity/b/stack/o/emcc-mkplc-config-compliance.zip)
+    - [emcc-mkplc-config-compliance.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-config-compliance.zip)
 </if>
 <if type="devops-automation">
-    - [emcc-mkplc-devops-automation.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/BxNLU4NQeb7Y1_j3beNyqJx5Yf4ZosZS16cgdr_ClnhHS_S9vDZwLWCK7dE8uPlZ/n/natdsecurity/b/stack/o/emcc-mkplc-devops-automation.zip)
+    - [emcc-mkplc-devops-automation.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-devops-automation.zip)
 </if>
 <if type="devops-patching">
-    - [emcc-mkplc-devops-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/jWhIypO2ggUpXPmYguVGVT5mS2O2MhV1wU6Xce3i6-WTib12dO8sEu1IP4iLOckQ/n/natdsecurity/b/stack/o/emcc-mkplc-devops-patching.zip)
+    - [emcc-mkplc-devops-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/0kq1pND_WCBBYLXCDnpxD3iR-h1ZRo4pwEydk0g_IydMXOCenJZl65oFtsADn9_e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-patching.zip)
 </if>
 <if type="find-fix-validate">
-    - [emcc-mkplc-find-fix-validate.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/e8Kxwmy0-2vSr9xL5je98lkZ-D4AbwsUl28tMDM-rSVex5FqJ1wAkx3Z4uFUv6Zv/n/natdsecurity/b/stack/o/emcc-mkplc-find-fix-validate.zip)
+    - [emcc-mkplc-find-fix-validate.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-find-fix-validate.zip)
 </if>
 <if type="fleet-patching">
-    - [emcc-mkplc-fleet-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/xyTG8q5fsPm229Z_U79K_B0LBVsvkoDzbhTtCsBz81En5Cywa_oKfqdldaBM7w4s/n/natdsecurity/b/stack/o/emcc-mkplc-fleet-patching.zip)
+    - [emcc-mkplc-fleet-patching.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-patching.zip)
 </if>
 <if type="fleet-patching-ui">
-    - [emcc-mkplc-fleet-patching-ui.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/DHOkdjs81xqiB0Mf0K41Wd2IJ-b57rZ7Y_UTgRluPK5mKhoG6LIqk35YpieAExUJ/n/natdsecurity/b/stack/o/emcc-mkplc-fleet-patching-ui.zip)
+    - [emcc-mkplc-fleet-patching-ui.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-patching-ui.zip)
 </if>
 <if type="fleet-upgrade">
-    - [emcc-mkplc-fleet-upgrade.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/kCQ0PJKMtZV-GWdi_iUbZ17CFbna4BGlIW5Q2ge5hzSJOyi6FkuqKXoN0NA2BQnf/n/natdsecurity/b/stack/o/emcc-mkplc-fleet-upgrade.zip)
+    - [emcc-mkplc-fleet-upgrade.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-upgrade.zip)
 </if>
 <if type="fleet-upgrade-ui">
-    - [emcc-mkplc-fleet-upgrade-ui.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/rfjx3xAgK_IoKEo243_VrNSQTRjZF-WiqaT1jNXyECQwOM7m8pqH7O-5PXavM5i2/n/natdsecurity/b/stack/o/emcc-mkplc-fleet-upgrade-ui.zip)
+    - [emcc-mkplc-fleet-upgrade-ui.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-upgrade-ui.zip)
 </if>
 <if type="fundamentals">
-    - [emcc-mkplc-fundamentals.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/QoRUvKiBlbpcynvexte9UE76FQOVd42HzF8ec2T70wNFjFkdlEwMMp4kDUIKxVxF/n/natdsecurity/b/stack/o/emcc-mkplc-fundamentals.zip)
+    - [emcc-mkplc-fundamentals.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fundamentals.zip)
 </if>
 <if type="job-system-automation">
-    - [emcc-mkplc-job-system-automation.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/kJkOSpPDsfVDdbfMYOYZC3vAfjkZz1OKkaThBZcL4Myzxz6tbvVLGSF88nODa-nZ/n/natdsecurity/b/stack/o/emcc-mkplc-job-system-automation.zip)
+    - [emcc-mkplc-job-system-automation.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-job-system-automation.zip)
 </if>
 <if type="lifecycle">
-    - [emcc-mkplc-lifecycle.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/2Yl1NWUCGCOuI4zbDcg7VF46DJXaGo_ZNUd3C0cE8TNRuJe3-lkYe4Ll806eIzbd/n/natdsecurity/b/stack/o/emcc-mkplc-lifecycle.zip)
+    - [emcc-mkplc-lifecycle.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-lifecycle.zip)
 </if>
 <if type="migration-workbench">
-    - [emcc-mkplc-migration-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/Q6veHpp9MXq--zR-YNkyRZHsUe1hww9cYdV2u9Ucc-K1loj_iWcSmpIbuUaFhM3k/n/natdsecurity/b/stack/o/emcc-mkplc-migration-workbench.zip)
+    - [emcc-mkplc-migration-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/tIfVdCiZsEO9_8FwmL6GZrXpViDWF7K5VBvwsIMXkadmSnZXWhVCIN6iut2z3oEV/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench.zip)
 </if>
 <if type="migration-workbench-adb">
-    - [emcc-mkplc-migration-workbench-adb.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/iG4N8I6m7YWxlMoNbbu30t66Iyc94B_lZKeVeitGRc4ZNZYk61Srv84xPTpxcttp/n/natdsecurity/b/stack/o/emcc-mkplc-migration-workbench-adb.zip)
+    - [emcc-mkplc-migration-workbench-adb.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/zqv4ccIzpSf1XX2xm50vy6buPjOjKa-ABMWyuPeh96N7WIJWqx4wMAPSP-8UXt9e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench-adb.zip)
 </if>
 <if type="monitoring-overview">
-    - [emcc-mkplc-monitoring-overview.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/64Q5ADtxQEomxRjI2HmRirUwFOqa1SJoplWLiwEhIrIoR83nvlgzRhN6AI19wGPU/n/natdsecurity/b/stack/o/emcc-mkplc-monitoring-overview.zip)
+    - [emcc-mkplc-monitoring-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-monitoring-overview.zip)
 </if>
 <if type="rat-overview">
-    - [emcc-mkplc-rat-overview.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/SKVYcQm9QiL9ifHuVDbgdJ51s57zUy9VnF3YwXUPRaellpLxuU-IbtHmAZIEYtL8/n/natdsecurity/b/stack/o/emcc-mkplc-rat-overview.zip)
+    - [emcc-mkplc-rat-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-rat-overview.zip)
 </if>
 
 2.  Save in your downloads folder.
@@ -72,17 +72,17 @@ This workshop requires a certain number of ports to be available, a requirement 
 
 ### **(1) Ingress Rules**
 
-|Stateless          |Source Type	|Source CIDR	|IP Protocol	|Source Port Range	|Destination Port Range	|Description                |
-| :-----------      |  :--------:   |  :--------:   | :----------:  | :------------:    | :-----------------:   | :------------------------ |
-|False (unchecked)  |CIDR           |0.0.0.0/0      |TCP            |All                |22                     |SSH                        |
-|False (unchecked)  |CIDR           |0.0.0.0/0      |TCP            |All                |80                     |Remote Desktop using noVNC |
+| Stateless         | Source Type | Source CIDR | IP Protocol | Source Port Range | Destination Port Range | Description                |
+| :---------------- | :---------: | :---------: | :---------: | :---------------: | :--------------------: | :------------------------- |
+| False (unchecked) |    CIDR     |  0.0.0.0/0  |     TCP     |        All        |           22           | SSH                        |
+| False (unchecked) |    CIDR     |  0.0.0.0/0  |     TCP     |        All        |           80           | Remote Desktop using noVNC |
 {: title="List of Required Network Security Rules (Ingress)"}
 
 <!-- **Notes**: This next table is for reference and should be adapted for the workshop. If optional rules are needed as shown in the example below, then uncomment it and add those optional rules. The first entry is just for illustration and may not fit your workshop -->
 
-|Stateless          |Source Type	|Source CIDR	|IP Protocol	|Source Port Range	|Destination Port Range	|Description                            |
-| :-----------      |:-----------   |  :--------:   | :----------:  | :------------:    | :-----------------:   | :------------------------             |
-|False (unchecked)  |CIDR           |0.0.0.0/0      |TCP            |All                |7803                   |e.g. Remote access for web EM Console  |
+| Stateless         | Source Type | Source CIDR | IP Protocol | Source Port Range | Destination Port Range | Description                           |
+| :---------------- | :---------- | :---------: | :---------: | :---------------: | :--------------------: | :------------------------------------ |
+| False (unchecked) | CIDR        |  0.0.0.0/0  |     TCP     |        All        |          7803          | e.g. Remote access for web EM Console |
 {: title="List of Optional Network Security Rules (Ingress)"}
 
 1.  Go to *Networking >> Virtual Cloud Networks*
@@ -103,19 +103,19 @@ This workshop requires a certain number of ports to be available, a requirement 
 
 ### **(2) Egress Rules**
 
-|Stateless          |Source Type	|Destination CIDR	|IP Protocol	|Source Port Range	|Destination Port Range	|Description                |
-| :-----------      |  :--------:   |  :--------:       | :----------:  | :------------:    | :-----------------:   | :------------------------ |
-|False (unchecked)  |CIDR           |0.0.0.0/0          |TCP            |All                |80                     |Outbound HTTP access       |
-|False (unchecked)  |CIDR           |0.0.0.0/0          |TCP            |All                |443                    |Outbound HTTPS access      |
+| Stateless         | Source Type | Destination CIDR | IP Protocol | Source Port Range | Destination Port Range | Description           |
+| :---------------- | :---------: | :--------------: | :---------: | :---------------: | :--------------------: | :-------------------- |
+| False (unchecked) |    CIDR     |    0.0.0.0/0     |     TCP     |        All        |           80           | Outbound HTTP access  |
+| False (unchecked) |    CIDR     |    0.0.0.0/0     |     TCP     |        All        |          443           | Outbound HTTPS access |
 {: title="List of Required Network Security Rules (Egress)"}
 
 <!-- **Notes**: This next table is for reference and should be adapted for the workshop. If optional rules are needed as shown in the example below, then uncomment it and add those optional rules. The first entry is just for illustration and may not fit your workshop -->
 
 <!--
-|Stateless          |Source Type	|Destination CIDR	|IP Protocol	|Source Port Range	|Destination Port Range	|Description                                        |
-| :-----------      | :-----------  |  :--------:       | :----------:  | :------------:    | :-----------------:   | :------------------------                         |
-|False (unchecked)  |CIDR           |0.0.0.0/0          |TCP            |All                |1521                   |e.g. Remote oracle DB Listener anywhere            |
-|False (unchecked)  |CIDR           |130.129.10.45/32   |TCP            |All                |1525                   |e.g. Remote oracle DB Listener at IP 130.129.10.45 |
+| Stateless         | Source Type | Destination CIDR | IP Protocol | Source Port Range | Destination Port Range | Description                                        |
+| :---------------- | :---------- | :--------------: | :---------: | :---------------: | :--------------------: | :------------------------------------------------- |
+| False (unchecked) | CIDR        |    0.0.0.0/0     |     TCP     |        All        |          1521          | e.g. Remote oracle DB Listener anywhere            |
+| False (unchecked) | CIDR        | 130.129.10.45/32 |     TCP     |        All        |          1525          | e.g. Remote oracle DB Listener at IP 130.129.10.45 |
 {: title="List of Optional Network Security Rules (Egress)"}
 -->
 

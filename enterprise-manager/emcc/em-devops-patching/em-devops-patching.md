@@ -378,7 +378,7 @@ In this lab you will learn:
 
     ```
     <copy>cd ~
-    wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/oRaI83p8c3Iak4hcqzVmCewOi_NmBXfwNkCWD6Mm8aNXlWMMjyEaOnRgWr3rtLfy/n/natdsecurity/b/labs-files/o/19.14ExportGoldImage.zip</copy>
+    wget https://objectstorage.us-ashburn-1.oraclecloud.com/p/CpvtkUEJdI1a_GzfejR4R4XVbM7aA6y0khXfcajSZi-n10bddFwkEnuHp0TjQ3tD/n/c4u02/b/hosted_workshops/o/stacks/19.14ExportGoldImage.zip</copy>
     ```
 
     ![Fleet Get Image](../em-devops-patching/images/fleet-get-image.png " ")

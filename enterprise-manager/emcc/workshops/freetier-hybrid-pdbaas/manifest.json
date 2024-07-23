@@ -1,0 +1,57 @@
+{
+  "workshoptitle": "Oracle Enterprise Manager - Hybrid Pluggable Database-as-a-Service",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Hybrid Pluggable Database-as-a-Service Workshop",
+      "filename": "./../../intro/intro-hybrid-pdbaas.md"
+    },
+    {
+      "title": "Get Started",
+      "description": "Get a Free Trial",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+    },
+    {
+      "title": "Lab 1: Prepare Setup",
+      "description": "How to download your ORM stack and update security rules for an existing VCN",
+      "publisheddate": "06/19/2024",
+      "filename": "../../prepare-setup/prepare-setup.md",
+      "type": "hybrid-pdbaas"
+    },
+    {
+      "title": "Lab 2: Environment Setup",
+      "description": "How to provision the workshop environment and connect to it",
+      "publisheddate": "06/30/2020",
+      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+    },
+    {
+      "title": "Lab 3: Hybrid Pluggable Database-as-a-Service",
+      "description": "This lab provides an overview of Hybrid Pluggable database-as-a-service features in Enterprise Manager. It is intended solely to help you assess the business benefits identify the value proposition of using EM Hybrid PDBaaS",
+      "publisheddate": "06/30/2020",
+      "filename": "../../em-hybrid-pdbaas/em-hybrid-pdbaas.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Appendix: Frequently Asked Questions (FAQ)",
+      "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
+      "publisheddate": "8/12/2020",
+      "filename": "../../faq/faq.md"
+    },
+    {
+      "title": "Environment Cleanup",
+      "description": "Cleanly dispose of all OCI resources created by ORM for the workshop, and delete the stack",
+      "filename": "https://oracle-livelabs.github.io/common/labs/cleanup-stack/cleanup-stack.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    }
+  ]
+}

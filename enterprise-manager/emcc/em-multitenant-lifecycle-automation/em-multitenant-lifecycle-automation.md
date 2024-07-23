@@ -6,7 +6,7 @@ This workshop will help you understand how one can utilize Enterprise Manager to
 *Estimated Lab Time: 60 minutes*
 
 Watch the video below for a quick walk-through of the lab.
-[Hybrid Multitenant Database Lifecycle Management](videohub:1_1yzsbufd)
+[Hybrid Multitenant Database Lifecycle Management](videohub:1_fls378ro)
 
 ### About Hybrid Multitenant Database Lifecycle Management
 
@@ -71,7 +71,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 4.  On the Provision Pluggable Database Console, in the *Container   Database* section, click on the magnifier to select  **cdb186.subnet.vcn.oraclevcn.com** within which you want to create new PDBs.
 
     ![](images/select-cdb-main-flow-helper.png " select cdb page")
-    ![](images/select-cdb-main-flow.png " choose cdb page  ")
+    ![](images/select-cdb-main-flow-1.png " choose cdb page  ")
 
 
 
@@ -178,7 +178,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
     Click on drop down arrow next to **CDB186** and click on the pluggable database drop down arrow, you will see the newly created PDB
 
-    ![](images/create-pdb-validation.png " new pdb validation")
+    ![](images/create-pdb-validation-1.png " new pdb validation")
 
 ## Task 2: Unplug/Plug an existing Pluggable Database (PDB)
 
@@ -192,7 +192,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 3.  In the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the CDB (**cdb186.subnet.vcn.oraclevcn.com**) within which you want to Unplug PDBs.
     ![](images/select-cdb-main-flow-helper.png " cdb selection")
-    ![](images/select-cdb-main-flow.png " choose the pdb")
+    ![](images/select-cdb-main-flow-1.png " choose the pdb")
 
 4.  In the PDB Operations section, select **Unplug Pluggable Databases**, then Click **Launch**
 
@@ -252,7 +252,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
      Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB you unplugged is no longer in the list.
 
 
-    ![](images/unplug-pdb-validation.png " unplug validation ")
+    ![](images/unplug-pdb-validation-1.png " unplug validation ")
 
 9.  Let us continue to the next steps and plug the same PDB back into the container database.
 
@@ -267,7 +267,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 11. On the Provision Pluggable Database Console, in the Container Database section, click on the magnifier to select the **CDB** (**cdb186.subnet.vcn.oraclevcn.com186**) within which you want to Plug the PDBs.
 
     ![](images/select-cdb-main-flow-helper.png " choose cdb ")
-      ![](images/select-cdb-main-flow.png " cdb select ")
+      ![](images/select-cdb-main-flow-1.png " cdb select ")
 
 12. In the PDB Operations section, select **Create New Pluggable Databases** and click **Launch**.
 
@@ -353,7 +353,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     Click on drop down arrow next to CDB186 and click on the pluggable database drop down arrow,you will see the PDB which was recently plugged.
 
 
-    ![](images/create-pdb-validation.png " plug pdb validation")
+    ![](images/create-pdb-validation-1.png " plug pdb validation")
 
     *Note*: You do not have to wait until the steps complete and move on to the next section.
 
@@ -372,11 +372,11 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
     **Click** on the **hr.subnet.vcn.oraclevcn.com_HRPDB** PDB as highlighted
 
 
-    ![](images/cloning-show-existing-pdb.png " cloning-show-existing-pdb ")
+    ![](images/cloning-show-existing-pdb-1.png " cloning-show-existing-pdb ")
 
 3.  This will open up the PDB Home page
 
-    ![](images/clone-pdb-home-page.png " HR PDB Home page")
+    ![](images/clone-pdb-home-page-1.png " HR PDB Home page")
 
 
 4.  Navigate from **Oracle Database >> Cloning >> Create Full Clone**  
@@ -443,14 +443,14 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 10. Click on the **hr.subnet.vcn.oraclevcn.com** CDB dropdown to see the pluggable    databases.
 
     We now see the **HR_CLONE** PDB is now available under **hr.subnet.vcn.oraclevcn.com** CDB
-![](images/clone-validation.png "pdb clone validation success ")
+![](images/clone-validation-1.png "pdb clone validation success ")
 
 
 ## Task 4: Patch (Update) an existing Pluggable Database (PDB)
 
-1. In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.8, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
+1. In this lab, we will patch (update) Finance PDB - sales.subnet.vcn.oraclevcn.com_FINANCE, currently plugged to CDB sales.subnet.vcn.oraclevcn.com. Our goal is to patch Finance PDB to 19.23, by relocating it to Container database hr.subnet.vcn.oraclevcn.com.
 
-      ![](images/current-env-details.png "current-configuration")        
+      ![](images/patching-current-config.png "current-configuration")        
 
 2. From the Enterprise Manager menu bar, navigate to the ***Targets*** drop-down menu and then select ***Databases***
 
@@ -458,13 +458,31 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
       and, then from ***Administration*** drop-down menu select ***Fleet Maintenance***
 
-      ![](images/admin-fm.png "navigation")
+      ![](images/navigation1.png "navigation")
 
 
-3.  We have already created the gold image (named PDB Image) and subscribed Finance PDB to it. This is a mandatory pre-requisite step.
+3.  Lets complete below steps to perform the pdb patching. Subscribe sales CDB to goldimage 19cDB-Linux-x64-APP.
+
+    Under Target Subscription tab in Fleet Maintenance Hub, Click on **Subscribe** button. 
+    
+    Select filter 19 under Release. 
+    
+    From the dropdown select the goldimage - **19cDB-Linux-x64-APPS.** 
+    
+    From the list of databases, select **sales.subnet.vcn.oraclevcn.com.** 
+    
+    Click on subscribe at the top right corner.
+    ![](images/sales-subscribe.png "Subscribe")
+
+    Upon completion, click on close.
+
+4. Navigate to Tile 3 - **Target Patch Compliance** in Fleet Maintenance Hub.
+    Click on doner icon under Actions for sales CDB and select Update Pluggable Database. This will launch the operator UI of Fleet Maintenance.
+
+    ![](images/deploy-operator-ui.png "Subscribe")
 
 4.   In this page, we will select relevant ***Image Name***, ***Target Type*** and ***Operation***.
-      ![](images/fm-flow1.png "selection")
+      ![](images/fm-flow1-new.png "selection")
       Where:
       -  Image = We will select ***19cDB-Linux-x64-Apps***. Desired version of Oracle home, which our target database should run after successful completion of operation.
       -  Target Type = we will select ***Pluggable Database***. Desired target type, which can be Grid, RAC or SIDB.
@@ -527,7 +545,7 @@ The objective of this workshop is to highlight Oracle Enterprise Manager 13c Lif
 
 11.  Lets validate the location of ***finance*** pdb. In the upper toolbar, locate the ***Targets*** icon and click the drop-down menu and then select ***Databases***.
 
-      ![](images/env-list-final.png "new version check")
+      ![](images/env-list-final-new.png "new version check")
 
       We can see that Finance pdb is relocated to a new CDB - hr.subnet.vcn.oraclevcn.com.
 
@@ -549,11 +567,11 @@ A compliance standard is mapped to one or more compliance standard rules and is 
     In the Compliance Standard section type  "Oracle 19c Database CIS" as the key word and
     Applicable To section Drop down select **Pluggable Database** hit search.
 
-    ![Search CIS](images/compliance-search-pluggable.png "  ")
+    ![Search CIS](images/compliance-search-pluggable-1.png "  ")
 
-    Select the row **Oracle 19c Database CIS V1.0.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
+    Select the row **Oracle 19c Database CIS V1.1.0 - Level 1 - RDBMS using Unified Auditing for Oracle Pluggable Database**, and then Click the **Associate Targets** tab.
 
-    ![Target associate](images/associate-cis-targets.png " ")
+    ![Target associate](images/associate-cis-targets-1.png " ")
 
 3.  Click Add and choose the row with your PDB you wish to associate. Choose _HRPDB, click **Select**.
 
@@ -977,10 +995,10 @@ You may now [proceed to the next lab](#next).
 ## Learn More
 - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
 - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-- [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/lifecycle.html)
-- [Database Cloud Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.4/cloud.html)
+- [Database Lifecycle Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/lifecycle.html)
+- [Database Cloud Management](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/cloud.html)
 
 ## Acknowledgements
   - **Author** - Harish Niddagatta, Oracle Enterprise Manager Product Management
   - **Contributors** -  Rene Fontcha
-  - **Last Updated By/Date** - Sravanth Mouli, Oracle Enterprise Manager Product Management -  June 2022
+  - **Last Updated By/Date** - Sravanth Mouli, Oracle Enterprise Manager Product Management -  May 2024

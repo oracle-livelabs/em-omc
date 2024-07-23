@@ -3,7 +3,7 @@
 ## About this Workshop
 This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
 
-*Estimated Workshop Time*: 105 minutes
+*Estimated Workshop Time*: 118 minutes
 
 ### About Oracle Enterprise Manager
 Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
@@ -53,14 +53,15 @@ Labs under this workshop do not need any additional Management Pack and are a co
 The following are covered in this workshop:
 - Explore Enterprise Summary page and drill down to see a list of down targets
 - Triage unassigned incidents from Incident Manager and acknowledge then assign an incident
-- Start a Runbook session against an incident from Incident Manager then modify and publish a Runbook draft
+- Start Runbook sessions against an incident from Incident Manager and a metric in All Metrics 
+- Modify and publish a Runbook draft
 - Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds
 - Create a new Corrective Action and associate it with a metric
 - Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets
 - Create a Monitoring Template from a Database Instance target and deploy the Monitoring Template to other Database Instance targets to standardize monitoring settings across the enterprise
 - View the hierarchy of an existing Administrator Group
 - Review out-of-the-box incident rules shipped with Enterprise Manager
-- Creating and testing an Event Compression Policy to reduce your volume of incidents
+- Create and test an Event Compression Policy to reduce your volume of incidents
 
 
 ### Additional Workshop Supported Use Cases

@@ -48,7 +48,7 @@ This lab assumes you have:
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/em-login.png " ")
+    ![Login to enterprise manager](images/em-login.png " ")
 
     If the login page is not functioning properly (Please note that it takes up to 15 minutes after instance provisioning for all processes to fully start), open a terminal session and restart Enterprise Manager Services (OMS and emagent).
 
@@ -61,7 +61,7 @@ This lab assumes you have:
 
 3. Confirm successful login. Please note that it takes up to 15 minutes after instance provisioning for all processes to fully start.
 
-    ![](images/em-landing-new.png " ")
+    ![Enterprise Summary page in EM UI](images/em-landing-new.png " ")
 
     If successful, the page above is displayed and as a result your environment is now ready.
     You should see 5 databases down in the EM Page. If you see more databases down, then follow step 4 to bring them up.
@@ -76,8 +76,8 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![](images/db-service-status.png " ")
-    ![](images/db-service-status2.png " ")
+    ![Database services (All databases and Standard Listener) status](images/db-service-status.png " ")
+    ![Database services (All databases and Standard Listener) status](images/db-service-status2.png " ")
 
     - Listener Service (Non-Standard)
 
@@ -87,7 +87,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![](images/listener-service-status.png " ")
+    ![Listener service status](images/listener-service-status.png " ")
 
     - Enterprise Manager Services (OMS and emagent)
 
@@ -97,7 +97,7 @@ This lab assumes you have:
     </copy>
     ```
 
-    ![](images/em-service-status.png " ")
+    ![Enterprise Manager Services status](images/em-service-status.png " ")
 
 5. If you see questionable output(s), failure or down component(s), restart the corresponding service(s) accordingly
 
@@ -228,8 +228,8 @@ If for any reason you want to login from a location that is external to your rem
 
     *Note:* You may see an error on the browser while accessing the Web Console - “*Your connection is not private*” as shown below. Ignore and add the exception to proceed.
 
-    ![](images/login-em-external-1.png " ")
-    ![](images/login-em-external-2.png " ")
+    ![Browser error - your connection is not private](images/login-em-external-1.png " ")
+    ![Login to EM on external browser](images/login-em-external-2.png " ")
 
 <!-- ## Appendix 3: External Terminal Access (using SSH Key Based Authentication)
 
