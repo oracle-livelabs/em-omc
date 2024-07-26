@@ -89,10 +89,6 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/awr-hub-show-histogram.png " ")
 
-      * **Activity**: This tab enables you to view the performance trend of the database by selecting an Average Active Sessions dimension and viewing the top activity for that dimension in the selected time range. You can also scroll down to view the top activity by additional dimensions based on the dimension selected in the **Average Active Sessions** chart.
-
-      ![Left Pane](./images/awr-hub06.png " ")
-
       * **Database Parameters**: This tab displays all the database parameters that were changed and you can click the link in the **Changed** column to view change history. The change history information includes details such as the ID of the snapshot when the database parameter was changed, the start and end time of the snapshot, and the changed value.
       On this tab, you can also view all the database parameters, including those that were not changed. To do so, deselect the **Hide Unchanged Parameters** check box.
 
@@ -114,4 +110,4 @@ This lab assumes you have completed the following labs:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Jul 2024
