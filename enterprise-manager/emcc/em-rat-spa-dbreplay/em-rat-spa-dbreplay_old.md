@@ -15,12 +15,10 @@ Watch the video below for a quick walk-through of the lab.
 | **Step No.** | **Feature**                                   | **Approx. Time** | **Details**                                                                                                                                                                                                                    | **Value proposition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 | **Scenario:**    You've been asked to validate SQL performance before upgrade Database from 18.3 to 19.10. How each SQLs in the application's workload (Sales History) performs in new 19.10 upgrade. Sales History workload SQLs gathered in SQL Tuning Set SHSTS.                                                                                                                                                                                                                                                                                            |
-| **2**  | Workload Analysis        | 15 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create One-Time Analysis task by using two SQL Tuning Sets(STS) and compare them using different comparison metrics to view any plan changes that is impacting the database performance.                                                                                                                                                                                                                                                                                             |
-
-| **3**  | Database Workload Replay - Capture Workload                          | 10 minutes       | The objective of this activity is to demonstrate how to performs  Workload Capture for Real Application Testing   Database Replay.                                                                                                         | **Scenario:**    You've been asked to Capture of  Database Workload before upgrade Database from 18.3 to 19.10 for Database Replay. The Workload simulated using SwingBench for 40 Concurrent Database Users.                                                                                                                                                                                                                                                                                                                                |
-| **4**  | Database Workload Replay - Replay Workload                          | 15 minutes       | The objective of this activity is to demonstrate how to performs  Workload Capture for Real Application Testing   Database Replay.                                                                                                         | **Scenario:**    You've been asked to Replay of  Database Workload before upgrade Database from 18.3 to 19.10 for Database Replay. The Workload captured from previous Step*2 from 40 concurrent users workload.                                                                                                                                                                                                                                                                                                                                |
-| **5**  | Database Workload Replay - API, import to Enterprise Manager (Optional)                      | 15 minutes       | The objective of this activity is to demonstrate and use the Database Replay functionality of Real Application Testing capabilities using API PLSQL mode and import Capture and Replay into Enterprise Manager.                                                                                                           | **Scenario:**    You've been asked to validate Database performance before upgrade Database from 18.3 to 19.10. How the application's workload (Order Entry) performs in new 19.3 upgrade. Database Replay enables realistic testing of system changes by essentially re-creating the production workload environment on a test system.                                                                                                                                                                                                                                                                                                                                 |
-| **6**  | Database Replay - Consolidation Replay (EM) (Optional) | 20 minutes       | The objective of this activity is to demonstrate and use the Consolidation Database Replay using Enterprise Manager UI. | **Scenario:**    You've been asked to validate Database performance before upgrade Database from 18.3 to 19.10. The plan is also consolidation a couple of application workload from 2 different Database Captures (Order Entry and Sales History) from 18.3 into a single Database Replay in 19.10.                                                                                                                                         |
+| **2**  | Database Workload Replay - Capture Workload                          | 10 minutes       | The objective of this activity is to demonstrate how to performs  Workload Capture for Real Application Testing   Database Replay.                                                                                                         | **Scenario:**    You've been asked to Capture of  Database Workload before upgrade Database from 18.3 to 19.10 for Database Replay. The Workload simulated using SwingBench for 40 Concurrent Database Users.                                                                                                                                                                                                                                                                                                                                |
+| **3**  | Database Workload Replay - Replay Workload                          | 15 minutes       | The objective of this activity is to demonstrate how to performs  Workload Capture for Real Application Testing   Database Replay.                                                                                                         | **Scenario:**    You've been asked to Replay of  Database Workload before upgrade Database from 18.3 to 19.10 for Database Replay. The Workload captured from previous Step*2 from 40 concurrent users workload.                                                                                                                                                                                                                                                                                                                                |
+| **4**  | Database Workload Replay - API, import to Enterprise Manager (Optional)                      | 15 minutes       | The objective of this activity is to demonstrate and use the Database Replay functionality of Real Application Testing capabilities using API PLSQL mode and import Capture and Replay into Enterprise Manager.                                                                                                           | **Scenario:**    You've been asked to validate Database performance before upgrade Database from 18.3 to 19.10. How the application's workload (Order Entry) performs in new 19.3 upgrade. Database Replay enables realistic testing of system changes by essentially re-creating the production workload environment on a test system.                                                                                                                                                                                                                                                                                                                                 |
+| **5**  | Database Replay - Consolidation Replay (EM) (Optional) | 20 minutes       | The objective of this activity is to demonstrate and use the Consolidation Database Replay using Enterprise Manager UI. | **Scenario:**    You've been asked to validate Database performance before upgrade Database from 18.3 to 19.10. The plan is also consolidation a couple of application workload from 2 different Database Captures (Order Entry and Sales History) from 18.3 into a single Database Replay in 19.10.                                                                                                                                         |
 ### Prerequisites
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 - You have completed:
@@ -210,63 +208,8 @@ Watch the video below for a quick walk-through of the lab.
 
     ![](images/emratlab1step15c.png " ")
 
-## Task 2: Workload Analysis
 
-1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
-
-    ![DB list](images/emffvlab2step2.png " ")
-
-    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
-    
-2. Navigate to Workload Analysis from the Performance Menu or from Database home page. you can schedule Automated workload analysis by configuring automated   analysis task. In this lab, we will run One-Time analysis task, go to One-Time Analysis tab and click on Create Analysis Task.
-
-    ![Workload Analysis](images/wladbhomepage.png " ") 
-
-    ![One-Time Analysis tab](images/wlacreatetask.png " ") 
-
-3. Create task with the following inputs
-   
-       - Enter task Name : **WLA\_Test**
-       - Enter Description : Comparing two workloads using Workload Analysis
-
-   ![Choose from the search icon](images/wlasearchicon.png " ")
-       
-4. Under Reference Workload, click on search icon to choose WLA\_STS1 from the dropdown menu. Later choose WLA\_STS2 from the Compared Workload search
-
-    ![Choose from the search icon](images/wlasearchicon1.png " ") 
-
-5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time. Click on submit to submit the task. 
-
-    ![All Inputs for comparison](images/wlaallinputs.png " ") 
-    
-    ![All Inputs for comparison](images/wlaallinputs1.png " ") 
-
-6. Refresh the page, to see the reports and click on any report to analyze, let's view **Elapsed Time Workload Analysis Report**.
-    
-    ![Comparison reports](images/wlacomparisonreports.png " ") 
-    
-    ![Comparison reports](images/wlacomparisonreports1.png " ") 
-
-    ![Comparison reports](images/wlacomparisonreports2.png " ") 
-
-
-7. Report shows regressed, improved, missing, new and plan changed SQLs, which helps in analyzing the workload.
-
-    ![Sample report with Comparison metric](images/wlareport.png " ") 
-
-8. Click on the New Plan in  SQL statements by Plan Change, to see the plans changed SQLs which are impacting the overall performance of the workload. Click on the SQLID which is regressed and has plan changed column "Yes"
-
-    ![Plan change in the report](images/wlanewplanreport.png " ") 
-
-    ![SQLID for the plan change](images/wlanewplanreport1.png " ") 
-
-    ![SQLID for the plan change](images/wlanewplanreport2.png " ") 
-
-9. Look for the plan changes and notice there is a index that is missing which is the root cause of the regression, hence the workload performance is regressed. Workload Analysis helps in analyzing the performance of the SQL by providing granular level details.
-
-    ![SQLID for the plan change](images/wlanewplanreport3.png " ")
-
-## Task 3: Database Workload Replay - Capture Workload
+## Task 2: Database Workload Replay - Capture Workload
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -391,7 +334,7 @@ Watch the video below for a quick walk-through of the lab.
 
     ![](images/emratlab2step17f.png " ")
 
-## Task 4: Database Workload Replay - DB Replay
+## Task 3: Database Workload Replay - DB Replay
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -582,7 +525,7 @@ Watch the video below for a quick walk-through of the lab.
       ![](images/emratlab3step32f.png " ")
 
 
-## Task 5: Database Workload Replay - API
+## Task 4: Database Workload Replay - API
 
 ### Login to Host using SSH Key based authentication
 In this lab, we are going to use a pre-captured workload of Sales History. The workload located in directory **/home/oracle/scripts/CAPTURE/lab4con/lab4SH**
@@ -770,7 +713,7 @@ In this lab, we are going to use a pre-captured workload of Sales History. The w
   The cause is the Replay with **Free Trial Credit** use lesser number of CPUs and Memory resource.
 
 
-## Task 6: Database Consolidation Replay
+## Task 5: Database Consolidation Replay
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -957,4 +900,4 @@ Thank You!
 ## Acknowledgements
 - **Author** - Daniel Suherman, Oracle Enterprise Manager Product Management
 - **Adapted for Cloud by** -  Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** - Anusha Vojjola - Enterprise Manager Product Management, August 2024
+- **Last Updated By/Date** - Daniel Suherman - Enterprise Manager Product Management, August 2021
