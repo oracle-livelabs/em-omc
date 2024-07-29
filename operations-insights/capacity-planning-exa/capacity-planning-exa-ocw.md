@@ -29,7 +29,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/aggregate-view-ocw.png " ")
 
-4.  Also, the current and forecast utilization of the Exadata system will be shown in the bottom section. Click on an Exadata system to evaluate more insights. Click on the Full Rack.
+4.  Also, the current and forecast utilization of the Exadata system will be shown in the bottom section. Click on an Exadata system to evaluate more insights. Click on the Full Rack **X8-2\_Full_DBM08.us.oracle.com**.
 
       ![Left Pane](./images/current-forecast-ocw.png " ")
 
@@ -41,7 +41,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/metrics-by-database-ocw.png " ")
 
-7.  Select the **CPU** tab and choose the **Host** under Grouping.
+7.  Select the **CPU** tab and choose **Host** under Grouping.
 
       ![Left Pane](./images/metrics-by-database-host-ocw.png " ")
 
@@ -59,7 +59,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/trend-host-database-ocw.png " ")
 
-11.  To view **Unused CPU capacity** within your database resources navigate to **Metrics by database**. Under **Grouping** select either **VM cluster** or **Host**. Choose **Usage (avg. active CPU)** under **Size** and **Utilization (%)** under **Color**.
+11.  To view **Unused CPU capacity** within your database resources navigate to **Metrics by database**. Under **Grouping** select **Host**. Choose **Usage (avg. active CPU)** under **Size** and **Utilization (%)** under **Color**.
 
       Selecting one of these will allow you to checkmark the **Show Unused Capacity** check.
       Once the **Show Unused Capacity** has been checked, a gray bar will appear on the treemap showing the unused space. 
@@ -67,6 +67,8 @@ This lab assumes you have completed the following labs:
       You can additionally expand the treemap for a better visualization, as well as view the treemap squarified, vertical, or horiziontal. Unused capacity will be grouped by vertically default.
 
       ![Left Pane](./images/exa-unused-host.png " ")
+
+      Under **Grouping** select **VM cluster**.
 
       ![Left Pane](./images/exa-unused-vmcluster.png " ")
 
@@ -97,4 +99,4 @@ In Conclusion, OPSI Exadata Insights provides comprehensive capacity analysis to
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Apr 2024
+- **Last Updated By/Date** - Vivek Verma, Jul 2024
