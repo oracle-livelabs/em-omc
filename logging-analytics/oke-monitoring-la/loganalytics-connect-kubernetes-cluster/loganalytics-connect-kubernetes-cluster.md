@@ -15,13 +15,15 @@ In this lab, you will see step-by-step instructions to:
   - Visualizing the data in different views Cluster, Workload,  Node & Pod 
 
 
-## Task 1: Navigate to Logging Analytics Solution Page
+## Task 1: Navigating to cluster
 
+## Task 2: Understanding current state of the cluster from summary panel: Namespaces, Nodes, Workloads and types, pods
 
-## Task 2: Understanding the current state of the Kubernetes Cluster
+## Task 3: Using topologies to understand logical and network relationships 
 
+## Task 4: Using filters on four tabs and understand changes on telemetry data
 
-## Task 3: Visualizing the data in different views Cluster, Workload,  Node & Pod 
+## Task 5: Understanding and using key log widgets from panel: events widget, k8s platform, nodes, compute, LB, VCN
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
@@ -32,6 +34,6 @@ In this lab, you will see step-by-step instructions to:
   You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Vikram Reddy, OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
+* **Author** - Heena Rahangdale, OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Heena Heena Rahangdale , OCI Logging Analytics
 * **Last Updated By/Date** - Vikram Reddy, Jul, 2024

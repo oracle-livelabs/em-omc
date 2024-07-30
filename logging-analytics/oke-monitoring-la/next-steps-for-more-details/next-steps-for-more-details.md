@@ -1,4 +1,4 @@
-# Interactive Analytics and Troubleshooting
+# Next Steps for more Insights
 
 ## Introduction
 
@@ -10,23 +10,20 @@ Estimated Time: 15 minutes
 
 In this lab, you will see step-by-step instructions to:
 
-  - Troubleshoot Kubernetes Workload specific issues
-  - Troubleshoot Kuberntetes Scheduling issues 
-  - Troubleshoot Container specific issues 
+   - Visualize Pre-imported dashboards
+   - Visualize data in the Log Explorer
 
 
-## Task 1: Understanding and troubleshooting ‘issues’ in workloads: in view logs/insights
+## Task 1: Pre-imported dashboards
 
-## Task 2: Understanding and troubleshooting ‘pod/application’ issues: Pod logs 
 
-## Task 3: Understanding and correlating metrics in ‘analyze’ view
+## Task 2: Drill-down to log explorer 
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
-  - Troubleshooted Kubernetes Workload specific issues
-  - Troubleshooted Kuberntetes Scheduling issues 
-  - Troubleshooted Container specific issues 
-
+  - Visualized Pre-imported dashboards
+  - Visualized data in the Log Explorer
+  
   You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
