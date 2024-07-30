@@ -19,41 +19,41 @@
             "filename": "../../loganalytics-connect-kubernetes-cluster/loganalytics-connect-kubernetes-cluster.md"
         },
         {
-            "title": "Lab 3: Interactive Analytics and Troubleshooting",
+            "title": "Lab 2: Interactive Analytics and Troubleshooting",
             "description": "This live lab outlines the steps required to troubleshoot the issues occuring in the Kubernetes Cluster",
             "filename": "../../loganalytics-connect-kubernetes-cluster/interactive-analytics-and-troubleshooting.md"
         },
         
         {
-            "title": "(ocw-23) Lab 4: Logging Analytics Overview (Optional Study)",
+            "title": "(ocw-23) Lab 3: Logging Analytics Overview (Optional Study)",
             "description": "Logging Analytics Overview",
             "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
         },
         {
-            "title": "(ocw-23) Lab 5: Management Agent Overview",
+            "title": "(ocw-23) Lab 4: Management Agent Overview",
             "description": "This live lab outlines the overview of the Management Agent",
             "filename": "../../management-agent-overview/management-agent-overview.md"
         },
         {
-            "title": "(ocw-23) Lab 6: Kubernetes Solution Installation",
+            "title": "(ocw-23) Lab 5: Kubernetes Solution Installation",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../kubernetes-solution-installation/kubernetes-solution-installation.md"
         },
         {
-            "title": "(ocw-23) Lab 7: Analyzing Logs",
+            "title": "(ocw-23) Lab 6: Analyzing Logs",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../analyzing-logs/analyzing-logs.md"
         },
         {
-            "title": "(ocw-23) Lab 8: Designing Dashboards",
+            "title": "(ocw-23) Lab 7: Designing Dashboards",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../designing-dashboards/designing-dashboards.md"
         },
         {
-            "title": "(ocw-23) Lab 9: Advanced Analytics with Drill Downs",
+            "title": "(ocw-23) Lab 8: Advanced Analytics with Drill Downs",
             "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
             "filename": "../../advanced-analytics/advanced-analytics.md"
-        },    
+        }, 
         {
 
             "title": "Need Help?",
