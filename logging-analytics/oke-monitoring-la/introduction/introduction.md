@@ -1,6 +1,8 @@
 # Logging Analytics Overview
 ## Introduction
 
+> Note : To be updated with ocw-24 introduction.
+
 Kubernetes provides a highly robust and extremely customizable platform for managing, automatically deploying and scaling containerized workloads. Building a monitoring and troubleshooting system for this entire environment is a very challenging task. Oracle Cloud Infrastructure (OCI) Logging Analytics bridges this monitoring gap by providing a one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud-native applications.
 
 This live lab will cover setting up end-to-end monitoring solution for a sample Kubernetes cluster (OKE cluster) which has [MuShop] (https://oracle-quickstart.github.io/oci-cloudnative/) (a cloud-native reference application of several Oracle Cloud services) deployed. It also takes you through various visualizations and perform analytics over the collected data from different perspectives.
