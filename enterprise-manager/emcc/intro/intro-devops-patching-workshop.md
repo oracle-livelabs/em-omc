@@ -2,7 +2,7 @@
 ## About this Workshop
 
 DevOps adoption helps customers to automate and standardize processes, accelerate software delivery while keeping control of the operations, monitoring and lifecycle management of the environment. One thing to consider while implementing DevOps is the fact that the DevOps tool or toolchain is selected to support the desired business goal, however these tools alone do not equate to DevOps adoption. DevOps tools require deeper automation from specialized management tools like Oracle Enterprise Manager 13c (EM 13c).
-- This Workshop VM comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.3, 18.8, 18.10, 19.3 and 19.10
+- This Workshop VM comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.8, 19.17, 19.18 and 19.23
 - It's easy and quick to deploy with everything starting automatically in under 20 minutes
 
 *Estimated Time:* 120 minutes

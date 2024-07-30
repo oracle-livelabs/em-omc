@@ -2,7 +2,7 @@
 
 ## About this Workshop
 The EM Workshop is a fully functional Oracle Enterprise Manager environment configured to run predefined use cases against multiple Oracle Database targets:
-- This Workshop VM comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.3, 18.8, 18.10, 19.3 and 19.10
+- This Workshop VM comes preinstalled with Enterprise Manager 13.5 and Oracle Database targets - 18.8, 19.17, 19.18 and 19.23
 - Easy and quick to deploy - Everything starts automatically in under 20 minutes
 - The EM Workshop comes with step-by-step instructions that walks the user through multiple use cases for the areas summarized below and further detailed for each lab listed on the right:
 
