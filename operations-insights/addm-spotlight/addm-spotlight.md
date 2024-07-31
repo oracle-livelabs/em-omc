@@ -1,4 +1,4 @@
-# ADDM Spotlight in Operations Insights
+# ADDM Spotlight in Ops Insights
 
 ## Introduction
 
@@ -6,7 +6,7 @@ In this lab, you will go through the process to navigate through **ADDM Spotligh
 
 **Automatic Database Diagnostic Monitor** (ADDM) is an expert system that analyzes data captured in the Automatic Workload Repository (AWR) snapshots to review performance analysis.
 
-Operations Insights harvests ADDM data from your source databases and highlights these findings and recommendations. Operations insights harvests and stores ADDM data for a duration longer than the event itself, providing you with the ability to analyze ADDM findings and recommendations for a collection of events into the past which may no longer exist in the source database.
+Ops Insights harvests ADDM data from your source databases and highlights these findings and recommendations. Ops Insights harvests and stores ADDM data for a duration longer than the event itself, providing you with the ability to analyze ADDM findings and recommendations for a collection of events into the past which may no longer exist in the source database.
 
 ADDM Spotlight supports Virtual Machine, Bare Metal, databases managed by Management Agent, and non PDB databases version 18c and above.
 
@@ -23,7 +23,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Using ADDM Spotlight
 
-1.  To access and view ADDM Spotlight, click on the Oracle Cloud menu, select **Observability and Management** and then under **Operations Insights** click on **ADDM Spotlight**.
+1.  To access and view ADDM Spotlight, click on the Oracle Cloud menu, select **Observability and Management** and then under **Ops Insights** click on **ADDM Spotlight**.
 
       ![ADDM Spotlight](./images/addm-spot01.png " ")
 
@@ -40,7 +40,7 @@ This lab assumes you have completed the following labs:
       
       A search bar is located on the upper right hand side, allowing you to search by database name.
 
-      On the left hand side, beneath the **Operations Insights** menu, **Filters** section is displayed to further refine your search. **Filters** allows you to further refine the Time Range. By default it will be set to Last 30 days, but can be set to Last day, Last 7 days, Last 90 days, Last 6 months, or a user defined Custom time range.
+      On the left hand side, beneath the **Ops Insights** menu, **Filters** section is displayed to further refine your search. **Filters** allows you to further refine the Time Range. By default it will be set to Last 30 days, but can be set to Last day, Last 7 days, Last 90 days, Last 6 months, or a user defined Custom time range.
 
 
 2.  Review ADDM Findings for a Specific Database
@@ -71,4 +71,4 @@ This lab assumes you have completed the following labs:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Jul 2024

@@ -2,20 +2,20 @@
 
 ## About this Workshop
 
-In this workshop, there are six lab exercises. They have been organized to help you become familiar with Operations Insights and the use of this service's key capabilities. With the new demo mode for Operations Insights, you can experience the service's value with minimal effort.
+In this workshop, there are six lab exercises. They have been organized to help you become familiar with Ops Insights and the use of this service's key capabilities. With the new demo mode for Ops Insights, you can experience the service's value with minimal effort.
 
 Estimated Workshop Time: 1 hour
 
 Watch the video below for a quick walk-through of the lab.
 [Exploring Oracle Cloud Infrastructure Operation Insights](videohub:1_fuoh53zk)
 
-### About Operations Insights
+### About Ops Insights
 
-Oracle Cloud Infrastructure Operations Insights is an Oracle Cloud Infrastructure (OCI) native service that provides holistic insight into database and host resource utilization and capacity.  Operations Insights (OPSI) provides capacity planning, long-term SQL analysis, and historical performance reports for your Oracle databases. The service has a full offering of features to improve performance and reduce overhead for your resources. The ability to quickly and easily ingest valuable metric data allows administrators, engineers, and executives to make informed decisions on allocating resources to prevent major issues and reduce overhead for managing their infrastructure resources.
+Oracle Cloud Infrastructure Ops Insights is an Oracle Cloud Infrastructure (OCI) native service that provides holistic insight into database and host resource utilization and capacity.  Ops Insights (OPSI) provides capacity planning, long-term SQL analysis, and historical performance reports for your Oracle databases. The service has a full offering of features to improve performance and reduce overhead for your resources. The ability to quickly and easily ingest valuable metric data allows administrators, engineers, and executives to make informed decisions on allocating resources to prevent major issues and reduce overhead for managing their infrastructure resources.
 
-Oracle Cloud Infrastructure (OCI) Operations Insights enables administrators to uncover performance issues, forecast consumption, and plan capacity using machine-learning-based analytics on historical and SQL data. Organizations can use these capabilities to make data-driven decisions to optimize resource use, proactively avoid outages, and improve performance.
+Oracle Cloud Infrastructure (OCI) Ops Insights enables administrators to uncover performance issues, forecast consumption, and plan capacity using machine-learning-based analytics on historical and SQL data. Organizations can use these capabilities to make data-driven decisions to optimize resource use, proactively avoid outages, and improve performance.
 
-Operations Insights consists of the following integrated applications:
+Ops Insights consists of the following integrated applications:
 
 Capacity Planning
 
@@ -50,25 +50,25 @@ AWR Explorer
 
 SQL Explorer
 
-* Interactively explore and visualize detailed performance statistics stored in Operations Insights SQL Warehouse.
+* Interactively explore and visualize detailed performance statistics stored in Ops Insights SQL Warehouse.
 * Explore performance statistics via a SQL query to extract the data with which to create an intuitive visualization.
 
 ### Objectives
 
 In this workshop, you will:
-* Enable Demo Mode for Operations Insights.
+* Enable Demo Mode for Ops Insights.
 * Capacity Planning of Oracle Autonomous Databases.
 * Capacity Planning of Oracle Exadata.
 * Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance.
 
 ## Learn More
 
-- [Operations Insights]( https://www.oracle.com/manageability/operations-insights/)
-- [Oracle Operations Insights Documentation]( https://docs.oracle.com/en-us/iaas/operations-insights/index.html)
+- [Ops Insights]( https://www.oracle.com/manageability/operations-insights/)
+- [Oracle Ops Insights Documentation]( https://docs.oracle.com/en-us/iaas/operations-insights/index.html)
 - [Oracle Database 19c]( https://www.oracle.com/database/)
 
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, July 2024

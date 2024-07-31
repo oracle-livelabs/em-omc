@@ -1,0 +1,43 @@
+{
+  "workshoptitle": "Assess and Assure Security Posture Across Your Fleet of Databases",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Multitenant Database Lifecycle Management Workshop",
+      "filename": "./../../intro/intro-dblm-update-compliance.md"
+    },
+    {
+      "title": "Lab 1: Environment Setup",
+      "description": "Verify Setup of compute instance",
+      "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
+    },
+    {
+      "title": "Lab 2: Assess and Assure Security Posture Across Your Fleet of Databases",
+      "description": "The objective of this workshop is to highlight the Oracle Enterprise Manager Cloud Control 13c’s Lifecycle Management capabilities around securing Databases",
+      "publisheddate": "7/16/2024",
+      "filename": "./../../em-dblm-update-compliance/em-dblm-update-compliance.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Appendix: Frequently Asked Questions (FAQ)",
+      "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
+      "publisheddate": "8/12/2020",
+      "filename": "./../../faq/faq.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+    },
+    {
+        "title": "Oracle CloudWorld 2023 - Support",
+        "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
+    }
+  ]
+}

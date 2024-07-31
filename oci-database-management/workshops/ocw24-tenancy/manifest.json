@@ -1,0 +1,66 @@
+{
+    "workshoptitle": "Get started with Oracle Cloud Infrastructure Database Management",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Generate SSH Keys",
+            "description": "Generate SSH Keys",
+            "filename": "https://oracle-livelabs.github.io/common/labs/generate-ssh-key-cloud-shell/generate-ssh-keys-cloud-shell.md"
+        },
+        {
+            "title": "Lab 2: Setup On-Premises Environment",
+            "description": "Setup compute instance running 19c using Terraform script and Resource Manager",
+            "filename": "../../setup-on-premises-environment/setup-environment.md"
+        },
+        {
+            "title": "Lab 3: Setup Pluggable Databases and workload",
+            "description": "Setup Pluggable Databases and workload to be used in exploring Database Management",
+            "filename": "../../setup-pluggable-databases-workload/setup-workload_original.md"
+        },
+        {
+            "title": "Lab 4: Prerequisite: Create a dynamic group and policies for agent communication",
+            "description": "Create a dynamic group and policies and set up required prerequisites for the management communication",
+            "filename": "../../prerequisites/agent-prereq.md"
+        },
+        {
+            "title": "Lab 5: Download and Install the Management Agent Software",
+            "description": "Steps to download and install the Management Agent Software",
+            "filename": "../../agent-install/agent-install.md"
+        },
+        {
+            "title": "Lab 6: Register On-Premises Database with External Database Service",
+            "description": "Register On-Premises Database with External Database Service",
+            "filename": "../../external-database/register-db.md"
+        },
+        {
+            "title": "Lab 7: Exploring Oracle Cloud Infrastructure Database Management",
+            "description": "Exploring Oracle Cloud Infrastructure Database Management",
+            "filename": "../../dbmgmt-features/dbmgmt-features.md"
+        },
+        {
+            "title": "Lab 8: Setup Database Management for Oracle Cloud Databases",
+            "description": "Setup Database Management for Oracle Cloud Databases",
+            "filename": "../../cloud-databases/cloud-databases.md"
+        },
+        {
+            "title": "Lab 9: Setup Database Management for Oracle Autonomous Databases",
+            "description": "Setup Database Management for Oracle Autonomous Databases",
+            "filename": "../../autonomous-database/autonomous-database.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

@@ -15,120 +15,34 @@ Estimated Time: 10 minutes
 This lab assumes you have completed the following labs:
 * Lab: Enable Demo Mode
 
-## Task 1: Analyze SQL Performance
+## Task 1: SQL Insights
 
-1.  On the **Operations Insights Overview** page, from the left pane click on **Oracle SQL Warehouse**.
-
-      ![Left Pane](./images/sql-warehouse-ocw.png " ")
-
-2.  On the **Oracle SQL Warehouse** page, you can Identify SQL performance trends across enterprise-wide databases.
-
-      ![Left Pane](./images/sql-warehouse1.png " ")
-
-    From this page you can perform the following tasks :
-
-    * View the degrading SQL, variant SQL, inefficient SQL, and SQL with plan changes.
-    * View the SQL statements with the highest CPU and I/O usage.
-    * Analyze the performance of SQL based on these categories – degrading, inefficient, variant, and with plan changes.
-
-3.  Click on the **Degradation**.
-
-      ![Left Pane](./images/sql-warehouse1-1.png " ")
-
-4.  This will bring up SQL Insights for degrading SQLs in the last 7 days.
-
-      ![Left Pane](./images/sql-warehouse2.png " ")
-
-    * The heat map shows the degrading SQLs across databases. This page analyzes the SQL insights using the **Master** and **Details** way. The heatmap is the **Master** and the below bar chart is the **Details** chart.
-    * The size of the box represents **Average response Time** and colour represents the change % of **Average Response Time**.
-      
-      You can customize the heat map based on the following:
-      * **Size**: Customizes the size of the heat map segments based on Average Active Sessions, Average Response Time, Executions/Hour, I/O Time, and CPU Time.
-      * **Color**: Customizes the colour-coding of the heat map based on percentage change value or absolute value of Average Active Sessions, Average Response Time, Executions/Hour, I/O Time, and CPU Time.
-
-5.  Here SQL_ID **02bhunw0vgg2j** in database **INVCP** is degrading the most.
-
-6.  The details bar chart shows the time series view of the sql_id **02bhunw0vgg2j** for the last 7 days.
-
-      You can see how the Average SQL Response time of SQL has been increasing consistently for database **INVCP**. You can customize the bar chart display based on the following:
-
-      * Avg. Active Sessions
-      * Avg. Average Response Time
-      * Executions Per Hour
-      * I/O Time
-      * CPU Time
-      * Inefficient Wait Time
-
-7.  Click the sql_id beside **Selected SQL**.
-
-      ![Left Pane](./images/sql-warehouse22.png " ")
-
-8.  This page shows the SQL Details of our most degrading SQL **02bhunw0vgg2j** for database **INVCP**. You can review its SQL Text and database location as well as its key performance metrics under: **Performance Statistics** and **Execution Plan Insights**.
-
-      ![Left Pane](./images/sql-warehouse3.png " ")
-
-      **Performance Statistics**: This chart helps you view the trend in the SQL Statement performance for the current time, based on
-
-      * The Average Response time in seconds.
-      * The number of SQL Statements that were executed per hour.
-      * The variability value of the SQL Statement, which indicates the extent of variance in the SQL Statement's performance in the current period.
-      * The inefficiency percentage is based on the idle wait time of the SQL Statement.
-      * The time range within which the maximum executions of the SQL Statement occurred.
-
-      **Execution Plan Insights** provides:
-
-      * Plans Used
-      * The best and worst-performing plans
-      * Plans with the most CPU and I/O usage
-      * The most executed SQL Plan  
-
-      In the **Metrics** section **Performance Trend** chart, we can see that the average Response of the SQL started to increase.
-      
-      The **Activity** chart displays the session activity of the SQL Statement, for the current time. It also shows how the SQL Statement activity is categorized into different wait classes indicated by the colour, as described in the legend on the chart.
-
-9.  Click on **Execution Plans** from the left pane.
-
-      ![Left Pane](./images/sql-warehouse4.png " ")
-
-      The **Execution Plan** shows the plan lines by operation.
-      
-      You can analyze the Operation Cost, Estimated Rows and Estimated bytes of each operation; allowing you to locate problematic operations.  The higher the operation cost, the more problematic the operation can be.  The current operations cost of this plan hash is 22.9 million and this is the best performing plan.     
-
-10.  Click on the plan hash value besides **Worst Performer**.
-
-      ![Left Pane](./images/sql-warehouse5.png " ")
-
-      You can see that the execution plan is different and much more expensive because the Operations Cost of the SQL is now 329 million.
-
-11.  Click on **Comparison** from the left pane. This will show the comparison of performance trends of the two plans based on the **Average Response Time**.
-
-      ![Left Pane](./images/sql-warehouse6.png " ")
-
-12.  We can further compare and analyze the two plans by:
-
-    * Average Active Sessions
-      ![Left Pane](./images/sql-warehouse7.png " ")
-    * Executions Per Hour
-      ![Left Pane](./images/sql-warehouse8.png " ")
-    * I/O Time
-      ![Left Pane](./images/sql-warehouse9.png " ")
-    * CPU Time
-      ![Left Pane](./images/sql-warehouse10.png " ")
-
-
-## Task 2: SQL Insights
-
-1. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
+1. On the **Ops Insights Overview** page, from the left pane click **SQL Insights**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
 
       ![Left Pane](./images/sql-insights.png " ")
 
 2. Click **DB time treemap** to view the tree map.
 
-      ![Left Pane](./images/sql-insights-treemap.png " ")      
+      ![Left Pane](./images/sql-insights-treemap.png " ")   
 
-## Task 3: SQL Explorer
+3. Click the database **SALES-WT** to view **SQL Insights - Database: For database level insights**
 
-SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Operations Insights SQL Warehouse.
+      ![Left Pane](./images/sales-wt-db.png " ")
+      ![Left Pane](./images/sales-wt-db-insights.png " ")
+
+      The Database analysis dashboard is designed to give a broad overview of the SQL workload executing in the database. This includes basic properties of the database and the SQL collected from it, including breakdowns of total time by command and module, and the ratio of time in SQL or PL/SQL. Insight tiles with counts of SQL with SQL having level insights quantify those issues at the database level. SQL activity is shown by day broken down by command type, exposing changes in workload over time. Execute to parse ratio and SQL count and invalidation charts expose important application properties over time.
+
+4. Click the SQL ID **4g97w9wwspvq0** to view **SQL Insights - SQL analysis: For SQL level insights**
+
+      ![Left Pane](./images/sql-id-sql-insights.png " ")
+
+      ![Left Pane](./images/sql-insights-sql-analysis.png " ")
+
+      This is the most granular level for SQL insights, at this level you can view a full picture of the performance properties of given SQL\_ID on a given database. This includes basic properties like the command type and text of the statement as well as average latency and execution frequency, and numerous other metrics from V$SQLSTATS. Insight tiles indicate whether the SQL level insights were true of the SQL_ID over the time period. Daily charts of total database time, average latency, and I/O enable deeper examination of the relationship of SQL plans to resource usage.
+
+## Task 2: SQL Explorer
+
+SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Ops Insights SQL Warehouse.
 
 With SQL Explorer, you can explore performance statistics via a SQL query to extract the data with which to create an intuitive visualization. This provides interactive data exploration and visualization for deep exploration of application SQL performance statistics. The user interface is designed to simplify and streamline query development.
 
@@ -136,7 +50,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 1. In this example we will sum up all the CPU time per SQL ID for one specific DB and then sort them by descending order.
 
-2. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+2. On the **Ops Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
 
       ![SQL Explorer](./images/sql-explorer.png " ")
 
@@ -144,7 +58,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
       ![SQL Explorer](./images/sql-explorer-main.png " ")
 
-4. Enter the following SQL in the SQL query section
+4. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
 
       ```
       <copy>SELECT DISPLAY_NAME,SQL_ID,sum(CPU_TIME)
@@ -188,35 +102,31 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 10. In the second use case we will sum up all the Elapsed time per SQL ID across the fleet of Databases and then sort that in descending order.
 
-11. On the **Operations Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+11. Click on **Clear** to clear the query section.
 
-      ![SQL Explorer](./images/sql-explorer.png " ")
+      ![SQL Visualization](./images/sql-explorer-clear.png " ")
 
-12. This will take you to the **SQL Explorer** page.
-
-      ![SQL Explorer](./images/sql-explorer-main.png " ")
-
-13. Enter the following SQL in the SQL query section
+12. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
 
       ```
       <copy>SELECT DISPLAY_NAME,SQL_ID,sum(ELAPSED_TIME)
             WHERE
             ​GROUP BY DISPLAY_NAME,SQL_ID
             HAVING sum(ELAPSED_TIME)>70000000
-            ORDER BYDISPLAY_NAME,sum(ELAPSED_TIME)desc</copy>
+            ORDER BY DISPLAY_NAME,sum(ELAPSED_TIME)desc</copy>
       ```
 
       ![SQL Query](./images/sql-query1.png " ")
 
-14. Enter **1000** for **LIMIT** to limit 1000 records per page.
+13. Enter **1000** for **LIMIT** to limit 1000 records per page.
 
-15. Click **Run** to execute the query.
+14. Click **Run** to execute the query.
 
-16. This will display the query result in a tabular format.
+15. This will display the query result in a tabular format.
 
       ![SQL Output](./images/sql-query-table1.png " ")
 
-17. Under the **Visualization** tab on the right pane, select the following -
+16. Under the **Visualization** tab on the right pane, select the following -
 
       **Chart type** : **Bar Chart**
 
@@ -236,8 +146,29 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 9. This will display the visualization as a Stacked Bar Chart.
 
+10. Click on **Advanced** Mode to view **SQL Explorer** in advanced mode. The advanced mode give you more control over the SQL queries that you are running against your database to view database performance.
+
+      ![SQL Visualization](./images/sql-explorer-advanced.png " ")
+
+11. This will take you to the **SQL Explorer Advanced** Mode page. Advanced mode can be used to execute your own custom queries and obtain more information above the SQLs running in the database.
+
+      ![SQL Visualization](./images/sql-explorer-advanced-main.png " ")
+
+12. Click **Views & columns and sample queries** to view available views and columns which can be used in the explorer.
+
+      ![SQL Visualization](./images/sql-explorer-view-queries.png " ")
+
+13. **View & columns and sample queries** shows **View and columns** and **Sample query** that can be used in the explorer.
+
+      ![SQL Visualization](./images/view-queries.png " ")
+
+13. Click on a View to see the underlying columns that can be used to fetch desired data.
+
+      ![SQL Visualization](./images/sql-column-details.png " ")
+
+
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, December 2023
+- **Last Updated By/Date** - Vivek Verma, July 2024

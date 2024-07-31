@@ -17,13 +17,13 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Capacity Planning - Databases
 
-1.  On the **Operations Insights Overview** page, from the left pane click on **Capacity Planning**.
+1.  On the **Ops Insights Overview** page, from the left pane click on **Capacity Planning**.
 
-      ![Left Pane](./images/capacity-planning-ocw.png " ")
+      ![Left Pane](./images/capacity-planning.png " ")
 
 2.  On the **Database Capacity Planning** page, you will obtain a fleet-wide overview of your resource consumption and trends.  CPU insights, storage insights, and memory insights give a quick view into top resource consumers now and forecast potential resource bottlenecks over the selected period.
 
-      ![Left Pane](./images/database-capacity-planning-ocw.png " ")
+      ![Left Pane](./images/database-capacity-planning.png " ")
 
     From this page you can perform the following tasks in support of the Capacity Planning use case goals:
 
@@ -40,7 +40,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/filter-ocw.png " ")
 
-4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Operations Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
+4.  Review the top section on the page. This section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
 
       ![Left Pane](./images/inventory-ocw.png " ")
 
@@ -113,8 +113,6 @@ This lab assumes you have completed the following labs:
 
     **Key Insight**: Traditionally, capacity is allocated to accommodate the maximum demand and represents your spend for the resource. Average usage represents the real value obtained from resource. The difference between the maximum and average can be considered the cost of having to over-allocate resources to meet peak demand. We call this the opportunity cost of workload variability.
 
-    **Autonomous Database Auto-scale** option is designed specifically to help mitigate over-spending for highly variable workloads.
-
 13.  The trending and forecast chart facilitates:
 
      * Forecast future maximum and average demand for CPU resources
@@ -156,9 +154,9 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/storage-menu-ocw.png " ")
 
-2.  You get a complete view of storage usage across all Operations Insights enabled databases
+2.  You get a complete view of storage usage across all Ops Insights enabled databases
 
-      ![Left Pane](./images/database-storage-ocw.png " ")
+      ![Left Pane](./images/database-storage.png " ")
 
     From here we can identify servers with underused or overused storage and also compare storage utilization between databases.
 
@@ -173,8 +171,9 @@ This lab assumes you have completed the following labs:
 5.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 
       ![Left Pane](./images/storage-trend-forecast-ml-ocw.png " ")
+      ![Left Pane](./images/storage-trend-forecast-auto-ml.png " ")
 
-6.  From the drop-down on the top select **All** and search for **PAYD** database. Select **PAYD** database.
+6.  Click **Close** to go back to the **Database Storage** page. Set **Time Range** from the left pane to **Last 30 days**. From the drop-down on the top select **All** and search for **PAYD** database. Select **PAYD** database.
 
       ![Left Pane](./images/storage-menu-payd-ocw.png " ")
 
@@ -194,4 +193,4 @@ This lab assumes you have completed the following labs:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, July 2024
