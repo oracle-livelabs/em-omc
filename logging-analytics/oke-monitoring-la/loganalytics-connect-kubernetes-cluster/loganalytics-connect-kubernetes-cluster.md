@@ -35,5 +35,5 @@ In this lab, you will see step-by-step instructions to:
 
 ## Acknowledgements
 * **Author** - Heena Rahangdale, OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Heena Heena Rahangdale , OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Heena Rahangdale , OCI Logging Analytics
 * **Last Updated By/Date** - Vikram Reddy, Jul, 2024
