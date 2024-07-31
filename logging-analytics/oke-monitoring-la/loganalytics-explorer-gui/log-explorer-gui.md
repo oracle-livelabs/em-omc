@@ -22,6 +22,8 @@ To navigate to Log Explorer, follow one of the below two methods.
 
 1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Log Explorer**.
 ![log-explorer-navigation](./images/log-explorer-navigation.gif " ")
+![navigate-to-solution-page](./images/navigate-to-solution-page.gif " ")
+
 
 2. You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
     ```
