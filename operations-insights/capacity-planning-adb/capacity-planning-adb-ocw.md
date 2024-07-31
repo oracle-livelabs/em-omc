@@ -148,15 +148,6 @@ This lab assumes you have completed the following labs:
 
      The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types. This also lets you review the problem across fleet of databases. The databases with dark color are critical and are high on utilization. The size of the box displayed on the treemap shows usage in terms of active CPU.
 
-16.  To view **Unused CPU capacity** within your database resources navigate to **Capacity Planning**, then **Databases**, and select **CPU**. In the Database CPU screen select the **Aggregate** tab, under **Grouping** select either **Exadata**, **VM cluster** or **Host**. 
-
-      Selecting one of these will allow you to checkmark the **Show Unused Capacity** check.
-      Once the **Show Unused Capacity** has been checked, a gray bar will appear on the treemap showing the unused space. 
-      
-      You can additionally expand the treemap for a better visualization, as well as view the treemap squarified, vertical, or horiziontal. Unused capacity will be grouped by vertically default.
-
-      ![Left Pane](./images/db-unused-capacity.png " ")
-
 ## Task 3: Capacity Planning - Storage
 
 1.  Click on the **Storage** menu on the left panel.
@@ -180,8 +171,9 @@ This lab assumes you have completed the following labs:
 5.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 
       ![Left Pane](./images/storage-trend-forecast-ml-ocw.png " ")
+      ![Left Pane](./images/storage-trend-forecast-auto-ml.png " ")
 
-6.  From the drop-down on the top select **All** and search for **PAYD** database. Select **PAYD** database.
+6.  Click **Close** to go back to the **Database Storage** page. Set **Time Range** from the left pane to **Last 30 days**. From the drop-down on the top select **All** and search for **PAYD** database. Select **PAYD** database.
 
       ![Left Pane](./images/storage-menu-payd-ocw.png " ")
 
@@ -201,4 +193,4 @@ This lab assumes you have completed the following labs:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Apr 2024
+- **Last Updated By/Date** - Vivek Verma, July 2024

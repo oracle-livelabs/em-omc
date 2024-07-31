@@ -509,7 +509,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     ![Event Details](images/corrective-actions-pop-up-window.png  " ")
 
-    Don't forget to select the row labeled **CORRECTIVE_ACTION_REVOKE_DBA_ROLE_PRIVILEGE**.
+    Don't forget to select the row labeled **CORRECTIVE\_ACTION\_REVOKE\_DBA\_ROLE\_PRIVILEGE**.
 
 17. You will find the **Database Credentials** and **Host Credentials**.
 
@@ -523,7 +523,7 @@ To begin, lets take a look at available CIS Benchmarks and choose one of them fo
 
     Click to view execution details.  
 
-19. You will notice that the DBA role job was successfully revoked upon refreshing the icon![Refresh](images/refresh-icon.png "  ")  ***in Jobs page***
+19. You will notice that the DBA role job was successfully revoked upon refreshing the icon![Refresh](images/refresh-icon.png "  ")  in Jobs page.
 
     ![Event Details](images/dba_grantee_revoke_job.png  " ")
 
