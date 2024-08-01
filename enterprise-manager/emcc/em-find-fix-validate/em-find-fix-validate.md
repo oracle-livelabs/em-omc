@@ -114,6 +114,11 @@ Select between *Task 1A* and *Task 1B*
 6. Select the SQL ID dimension from the list of available dimensions (Under Top Dimensions) using the dropdown box that is currently displaying Wait Class. Top Dimensions SQL ID. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see SQL text of this SQL. Now using the same list of filters you can choose multiple dimensions.
 
     ![Dimensions list on Performance Hub page](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
+	
+    You have an option to save the performance hub report for offline analysis
+
+    ![Save Report on Performance Hub page](images/perfhubsavereport.png " ")
+
 
 7. Click on the SQL Monitoring Tab
 
