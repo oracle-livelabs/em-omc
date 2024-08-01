@@ -51,7 +51,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/awr-hub01.png " ")
 
-3.  Click More (vertical ellipses) in the last column to display the pop-up menu and select **Launch AWR Explorer**.
+3.  Click More (vertical ellipses) in the last column for **SRC1** database to display the pop-up menu and select **Launch AWR Explorer**.
 
       ![Left Pane](./images/awr-hub03.png " ")
 
