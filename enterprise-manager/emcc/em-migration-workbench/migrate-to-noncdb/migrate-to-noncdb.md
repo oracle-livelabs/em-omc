@@ -103,11 +103,12 @@ We'll use the Data Pump migration method in this task.
     - Migrate: Select "Full Database" from the drop-down list
 
         Migration Workbench allows you to migrate full database, schemas, or tablespaces. We'll migrate full database in this lab
-        ![Migrate Options](images/migrate-options.png " ")
+        ![Migrate Options](images/migrate-options_1.png " ")
     - Select Source Database:  Click inside the field and select "orcl.subnet.vcn.oraclevcn.com" from the drop-down list
     - Select Destination Database:  Click inside the field and select "orcl19c.subnet.vcn.oraclevcn.com" from the drop-down list
     - Notice the checkmark for "Tools Validation". For this lab, CPAT tool was uploaded to Enterprise Manager in advance
-      ![Create Migration Activity](images/create-migration-activity.png " ")
+    - Select Migration Method: Data Pum from the drop-down list
+      ![Create Migration Activity](images/create-migration_activity.png " ")
     - Click Continue
 5. On the Add Details screen, enter:
     - Source:
@@ -117,9 +118,7 @@ We'll use the Data Pump migration method in this task.
         - Database Credential: IMP_USER (Named Credential)
         - Agent Host Credential: ORACLE (Named Credential)
     - Action:
-        - Migration Method: Data Pump (default)
         - Recompile Invalid Objects After Migration: Unchecked (default)
-        - Compare Performance After Migration: Checked (default)
         - Source Data Pump Directory: MWB_DIR
         - Destination Data Pump Directory: MWB_DIR
         - Encryption Password:
@@ -151,33 +150,32 @@ We'll use the Data Pump migration method in this task.
     - Click Review
 7. On the "Review & Submit" screen:
     - Review your entries to make sure everything is correct
-    ![customize](images/analyze-source.png " ")
-    - Click "Analyze Source" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
-    - When the analysis is complete review CPAT Results. The warnings shown can be ignored for the purpose of this lab. When you run this activity in your environment ensure you address any issues identified on a case by case basis
-    ![CPAT Results](images/cpat-results.png " ")
+    ![customize](images/analyze_source.png " ")
+    - Click "Check Migration Readiness" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
+    - When the analysis is complete review Migration Readiness Report. The warnings shown can be ignored for the purpose of this lab. When you run this activity in your environment ensure you address any issues identified on a case by case basis
+    ![CPAT Results](images/cpat_results.png " ")
     - Click on the previous tab to continue with the migration process
-    ![Validate](images/validate.png " ")
+    ![Validate](images/validate1.png " ")
     - Click Validate
 8. On the Validation screen:
     - Validation checks run for a few minutes and all checks should pass. If your results are different check your previous steps, fix the error and revalidate
-    ![Validate Activity](images/validate-activity.png " ")
-    - Click "Close & Submit"
+    ![Validate Activity](images/validate_activity.png " ")
+    - Click "Submit"
 9. On the Submit Activity screen:
     - Choose Schedule: Start Immediately (default)
 
         Examine the JSON file. Notice you can copy the generated JSON file to use it with with DevOps tools and REST APIs. For this lab however, we'll complete the migration using the Enterprise Manager graphical console
-    ![Submit Activity](images/submit-activity.png " ")
+    ![Submit Activity](images/submit_activity.png " ")
     - Click Submit
     - You should receive the message: "Migration activity submitted successfully."
-    ![Close](images/close.png " ")
-    - Click "Close and Go Back to Activities Page"
+    ![Close](images/close1.png " ")
+    - Click "Go Back to Activities Page"
 10. On the Migration Activities screen:
     - The activity status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute
     ![Migration Activities](images/migration-activities.png " ")
     - Click on the "Running" link under Status to go to the Procedure Activity screen
 11. On the Procedure Activity screen::
     - Click on the "Running" link under Status to go to the procedure activity screen. Choose Show: "Steps Not Skipped". The procedure should take about 5 minutes to complete
-    ![Procedure Activity](images/procedure-activity.png " ")
     - When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration
     ![Procedure Activity Completed](images/procedure-activity-completed.png " ")
     - From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to go back to the Migration Activities screen
@@ -190,20 +188,22 @@ We'll use the Data Pump migration method in this task.
     Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Validation, Export, and Import.
     - On the summary dashboard, review information and statistics for the validation activity, export phase, and import phase
     - In the details section:
-        - Click the Validation tab to review validation checks that passed, failed, or skipped
+        - Click the Input Validation tab to review validation checks that passed, failed, or skipped
         - Click the Export tab to review details on object errors encountered during export, export options, and export files
         - Click on the Import tab to review details on object errors encountered during import, import options, and import files
         - For further details on the errors review the log file using the Procedure Activity page shown earlier. On that page, you can check the checkbox for any step to display the log file on the screen. You can also download the file for offline viewing
         - In your environment, you may need to take actions such as granting specific object privileges to fix the errors. However, for this lab, the errors shown can be ignored
 
-        ![Analysis](images/analysis.png " ")
+        ![Analysis](images/analysis1.png " ")
 
     When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
 14. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
     ![Compare Performance](images/compare-performance.png " ")
-    - Click on Compare Performance
-15. On the Compare Performance screen:
+    - Click on View Performance
+    ![LoginCompperf](images/Logincompareperf.png " ")
+    - Click Login
+15. On the SQL Performance Analyzer Report screen:
 
     Examine the Performance Comparison report to analyze the database performance before and after the migration. The report has 3 sections:
     - General Information: Contains information about the task, workload, execution, and analysis before and after migration. The  comparison metric used is "Elapsed Time"
@@ -215,16 +215,16 @@ We'll use the Data Pump migration method in this task.
             Check regressed SQLs to see execution statistics, before and after migration change analysis. Understand findings provided for each query to see which factors impacted the regressed SQLs. You can then take action based on findings provided in the Report Details section to improve SQL performance
     - Report Details: Contains detailed execution details for each SQL statement in the STS, including the SQL test, execution frequency, executions statistics, notes, findings, and execution plan before and after the migration
 
-        ![Performance Comparison](images/performance-comparison.png " ")
+        ![Performance Comparison](images/performance_comparison1.png " ")
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
 16. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
-    ![Mark Completed](images/mark-completed.png " ")
+    ![Mark Completed](images/mark-completed1.png " ")
     - Click Mark as Completed
     - Examine the guidelines on the Confirmation pop-up window, enter any comments as appropriate
-    ![Confirmation](images/confirmation.png " ")
+    ![Confirmation](images/confirmation1.png " ")
     - Click Yes
-     ![Marked Completed](images/marked-completed.png " ")
+     ![Marked Completed](images/marked-completed1.png " ")
     - Activity is marked completed
 
 This completes the Lab!

@@ -123,6 +123,7 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
 
           ![Create Migration Activity](images/create-migration-activity.png " ")
         - Click OK
+        - Select Migration Method "Transportable Tablespace" from drop down list
     - Click Continue
 5. On the Add Details screen, enter:
     - Source:
@@ -131,10 +132,18 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     - Destination:
         - Database Credential: SYS (Named). Ignore the error message since we will choose Transportable Tablespace for migration method
         - Agent Host Credential: ORACLE (Named)
-    - Action:
-        - Migration Method: Transportable Tablespace
-        - Compare Performance After Migration: Checked (default)
+    - Action: Transportable Tablespace
         - Keep the next 3 fields at default values
+        - Encryption Password:
+
+            ```text
+            <copy>welcome1</copy>
+            ```
+        - Confirm Password:
+
+                ```text
+                <copy>welcome1</copy>
+                ```
     ![Add Details](images/add-details.png " ")
     - Click Next
 6. On the Customize screen, enter:
@@ -144,16 +153,21 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
             Migration Workbench allows you to do the migration in phases, where you create an RMAN backup in the first phase, update the backup with incremental backups as needed, then complete the migration in the final phase. This allows you to do the migration with minimal downtime. For this workshop however, we'll do the migration in a single phase
     - Compare Performance After Migration:
         - SQL Tuning Set (STS): Select "Use Existing" then choose "EXP_USER -- SH2STS"
+    - Custom Scripts:
+        - To run custom scripts, upload them to software library and use it here
     ![Customize](images/customize.png " ")
     - Click Review
 7. On the "Review & Submit" screen:
+    - Click Check Migration Readiness.  Migration Readiness Report will open in a new browser tab and will take a few minutes to complete
+      When the Migration Readiness Report is complete review results. The warnings shown can be ignored for the purpose of this lab. When you run this activity in your environment ensure you address any issues identified on a case by case basis
+    ![TTSSourceReadiness](images/TTSSourceReadiness.png " ")
     - Review your entries to make sure everything is correct
     ![Validate](images/validate.png " ")
     - Click Validate
 8. On the Validation screen:
     - Validation checks run for a few minutes. The result shows all checks passed and 2 were skipped as they don't apply to this migration. If your results are different check your previous steps, fix the error and revalidate
     ![Validate Activity](images/validate-activity.png " ")
-    - Click "Close & Submit"
+    - Click "Submit"
 9. On the Submit Activity screen:
     - Choose Schedule: Start Immediately (default)
 
@@ -162,8 +176,11 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     - Click Submit
     - You should receive the message: "Migration activity submitted successfully."
     ![Close](images/close.png " ")
-    - Click "Close and Go Back to Activities Page"
+    - Click "Go Back to Activities Page"
 10. On the Migration Activities screen:
+    - The activity status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Action Required".
+      On the Procedure Activity screen, Choose Show: "Steps Not Skipped", select "Confirm Migration Readiness Action" step and "Confirm" that you fixed Migration Readiness report findings.
+    ![Action Required](images/ConfirmMigrationReadinessActionTaken.png " ")
     - The activity status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute
     ![Migration Activities](images/migration-activities.png " ")
     - Click on the "Running" link under Status to go to the Procedure Activity screen
@@ -178,23 +195,27 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
     ![View Analysis](images/view-analysis.png " ")
     - Click View Analysis
 13. On the View Analysis screen:
-
-    Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Validation, Export, and Import.
+    - Examine the analysis report. The report has 2 sections: A summary dashboard at the top, and a detail section with 3 tabs: Validation, Export, and Import.
     - On the summary dashboard, review information and statistics for the validation activity, export phase, and import phase
     - In the details section:
-        - Click the Validation tab to review validation checks that passed, failed, or skipped
-        - Click the Export tab to review details on object errors encountered during export, export options, and export files
-        - Click on the Import tab to review details on object errors encountered during import, import options, and import files
-        - For further details on the errors review the log file using the Procedure Activity page shown earlier. On that page, you can check the checkbox for any step to display the log file on the screen. You can also download the file for offline viewing
-        - In your environment, you may need to take actions such as granting specific object privileges to fix the errors. However, for this lab, the errors shown can be ignored
+        - Click the Input Validation tab to review validation checks executed during validation or run time phase of migration
+        - Click the Pre-Migration tab to review Migration Readiness Report with severity wise result breakdown
+        - Click the Post-Migration tab to review pre and post migration analysis of objects with severity wise result breakdown
 
-        ![Analysis](images/analysis.png " ")
+        ![Analysis](images/vanalysis.png " ")
 
-    When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
+    - When you are done analyzing the migration, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
+
 14. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
+
     ![Compare Performance](images/compare-performance.png " ")
-    - Click Compare Performance
+
+    - Click View Performance
+
+    ![Compare Performance Login](images/cperflogin.png " ")
+   - Click Login
+
 15. On the Compare Performance screen:
 
     Examine the Performance Comparison report to analyze the database performance before and after the migration. The report has 3 sections:
@@ -207,7 +228,7 @@ We'll use the Transportable Tablespace (TTS) migration method in this task.
             Check regressed SQLs to see execution statistics, before and after migration change analysis. Understand findings provided for each query to see which factors impacted the regressed SQLs. You can then take action based on findings provided in the Report Details section to improve SQL performance
     - Report Details: Contains detailed execution details for each SQL statement in the STS, including the SQL test, execution frequency, executions statistics, notes, findings, and execution plan before and after the migration
 
-        ![Performance Comparison](images/performance-comparison.png " ")
+        ![Performance Comparison](images/perfcomparison.png " ")
     - When you are done with performance comparison, click on "Migration Activities" in the top left of the report to navigate back to the Migration Activities screen
 16. On the Migration Activities screen:
     - Expand the drop-down menu on the right of the activity row
