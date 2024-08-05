@@ -20,8 +20,9 @@ In this lab you will learn:
 | **2**  | Top Activity Lite                               | 5 minutes       | Top Activity Lite is a new feature introduced in 13c RU 15 to provide optimal response time for real-time monitoring for performance monitoring.                                                                                           | Top Activity Lite feature is a simplified version of Performance Hub, optimized for quick response under heavy loads while providing key performance diagnostics information through simple and effective  visualization. This feature helps DBAs monitor their database using a Network Operations Center (NOC) like screen.                                                                                                                                                                                                                                                                      |
 | **3**  | Real-time Database Operation Monitoring       | 10 minutes       | Real-Time Database Operations Monitoring, introduced in Oracle Database 12c, enables an administrator to monitor long running database tasks as a composite business operation.                                                | Developers and DBAs can define business operations for monitoring by explicitly specifying the start and end of an operation or implicitly with tags that identify the operation.                                                                                                                                                                                                                                                                                                                                                                                              |
 | **4**  | Tuning a SQL in a Pluggable Database (PDB)                         | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
-| **5**  | SQL Performance Analyzer Optimizer Statistics | 10 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c with Oracle Database 18c. | SQL Performance Analyzer gathers Oracle Database Optimizer statistics for validation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **6**  | Database Workload Replay                      | 10 minutes       | The objective of this activity is to is to demonstrate and use the Database Replay functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c and Oracle Database 18c.                | **Scenario:** You've been asked to add three new indexes for an application, but before adding, you want proof that database performance is improved. Use of SQL Performance Analyzer (SPA) isn't enough because there is also the cost of maintaining the indexes. Replay will be performed against the **Sales** Container Database and changes need to be performed in the OLTP Container against the **DWH\_TEST** schema. The database version is 18c so the capture and replay are performed using a CDB. |
+| **5**  | SQL Performance Analyzer Optimizer Statistics | 10 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c with Oracle Database 19c. | SQL Performance Analyzer gathers Oracle Database Optimizer statistics for validation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **6**  | Database Workload Replay                      | 10 minutes       | The objective of this activity is to demonstrate and use the Database Replay functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c and Oracle Database 19c.                | **Scenario:** You've been asked to add three new indexes for an application, but before adding, you want proof that database performance is improved. Use of SQL Performance Analyzer (SPA) isn't enough because there is also the cost of maintaining the indexes. Replay will be performed against the **Sales** Container Database and changes need to be performed in the OLTP Container against the **DWH\_TEST** schema. The database version is 18c so the capture and replay are performed using a CDB. |
+| **7**  | ADDM Spotlight (Read-only)                     | 10 minutes       | The objective of this activity is to demonstrate the steps to use ADDM Spotlight in Oracle Enterprise Manager Cloud Control 13c               | ADDM Spotlight is a great tool to use when the data is more than an hour, ideally a week of ADDM findings and recommendations to find out the most common recommendations along with their impact and benefits. Enables DBAs to have confidence in implementing the recommendations mentioned by ADDM Spotlight |
 
 
 ### Prerequisites
@@ -598,6 +599,65 @@ Now switch back to *session 1*. You should already be connected as user oracle
 
   We have seen how you can use Real Application Testing Database Replay to validate changes that may impact performance on both SQL statements and DML statements. We have also seen the extensive reporting that will help you find and analyze bottlenecks or peaks during certain workloads.
 
+## Task 8: ADDM Spotlight (Read-only)
+
+Please note: This is a read-only task. ADDM Spotlight aggregates the ADDM findings and recommendations over a longer period of time, since this lab is limited to 3-4 hours, it cannot produce better results in this lab. Hence, try this on your Enterprise Manager Cloud Control environment.
+
+1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![Navigating to databases](images/emffvlab2step1.png " ")
+
+2. Click on the database, you wish to get the findings and recommendations. 
+
+    ![Select the database](images/emffvlab2step2.png " ")
+
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+
+3.  Navigate to ADDM Spotlight either from the performance menu -> ADDM Spotlight or from DB home -> Recommendation tile -> ADDM Spotlight.
+
+    ![ADDM Spotlight Navigation](images/addmnavigate1.png " ")
+
+    ![ADDM Spotlight Navigation](images/addmnavigate2.png " ")
+
+4.  Select desired time from the quick select or from the time range, to view the list of ADDM findings and recommendations. On the Finding page, you can search by category to view only specific category findings.
+
+    ![Findings and recommendations](images/findingpage.png " ")
+
+5.  Click on **Include Event Annotations** to view any database changes that impacts the overall performance such as parameter changes. You can zoom in and out with the help of zoom in and out icons.
+
+    ![Include Event and Zoom in and Out](images/annotationsandzoom.png " ")
+
+    You can Expand the summary page by clicking at the expand icon
+
+    ![Expand summary page](images/expand.png " ")
+
+6. Finding pages shows frequency, impact and overall impact of the finding category during the selected time period. You can go to the recommendations page directly from the link mentioned in the recommendations column.
+
+    ![Overall impact](images/overallimpact.png " ")
+
+7. Click on recommendations tab, to view all the recommendations or a specific recommendation such as Database Parameters, SQL, Schema Objects. Click on **SQL** for SQL recommendations, along with their SQL ID and the rationale for the recommendation. 
+
+    ![Recommendations page](images/recommendationspage.png " ")
+
+8. Click on the Tag cloud, a cloud like icon on the right side of the summary page, to view the SQLID with the maximum benefit, bigger the SQLID, higher the benefit. Each SQLID is color coded for easy visualization.
+  
+    ![Recommendations page tag cloud](images/tagcloud.png " ")
+
+
+9. In the Overall Benefit column, click to view the actions associated to the each SQL ID
+
+    ![Recommendations page](images/recommendationspageactions.png " ")
+
+10. Run SQL Tuning Advisor to view the recommendations for that particular SQL ID and submit the task. You can tune the SQL accordingly.
+
+    ![Recommendations page](images/recommendationspagesqltuning.png " ")
+
+
+11. Go to Database Parameter tab, to view the parameter that are high-impact, non-default values, changed and recommended parameters.
+
+    ![Database Parameter page](images/dbparameters.png " ")
+
+
 This completes the Lab!
 
 You may now [proceed to the next lab](#next).
@@ -610,4 +670,4 @@ You may now [proceed to the next lab](#next).
 ## Acknowledgements
 - **Author** - Björn Bolltoft, Oracle Enterprise Manager Product Management
 * **Contributors** -  Shefali Bhargava, Rene Fontcha
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, July 2021
+* **Last Updated By/Date** - Anusha Vojjola, Product Management team, August 2024
