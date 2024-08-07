@@ -56,13 +56,13 @@ In this lab, you will be guided through the following tasks:
 
 2. Enter Email Id and Password used during registration to login to the portal 
 
-   ![Registration Link](./images/04RegistrationPage.png "Click Sign In")
+   ![Registration Link](./images/04registrationpages.png "Click Sign In")
     
 3. Access the environment details in the portal and download the private key required to make DB connection over SSH 
    
    For SSH Private Key file click on **Download SSH Key file**
 
-   ![Registration Link](./images/05RegistrationPage.png "Download keys")
+   ![Registration Link](./images/05registrationpages.png "Download keys")
 
    **Note for Mac and Linux Users: Ensure File Permissions of key file set to 400 as shown below**
    ![CONNECT](./images/06connect.png "Ensure File Permissions are set correctly")
