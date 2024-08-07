@@ -1,6 +1,6 @@
 # Introduction
 
-This workshop is based on [MySQL HeatWave User Guide: Iris Data Set Machine Learning Quickstart](https://dev.mysql.com/doc/heatwave/en/hwml-iris-example.html)
+This workshop is based on [MySQL HeatWave User Guide: Iris Data Set Machine Learning Quickstart](https://dev.mysql.com/doc/heatwave/en/mys-hwaml-iris-quickstart.html)
 
 HeatWave is a massively parallel, high-performance, in-memory query accelerator that accelerates MySQL performance by orders of magnitude for analytics workloads, mixed workloads, and machine learning. A HeatWave Cluster consists of a MySQL DB System and HeatWave nodes that store data in memory and process analytics and machine learning queries.
 
@@ -41,13 +41,10 @@ HeatWave ML makes it easy to use machine learning, whether you are a novice user
 
 In this lab, you will be guided through the following steps:
 
-- Create SSH Key on Oracle Cloud Infrastructure Cloud Shell
-- Create MySQL Database for HeatWave (DB System) instance
-- Setup Compute instance
-- Connect to DB System using MySQL Shell through Compute Instance / Cloud Shell
-- Add HeatWave cluster to DB System
-- Prepare and load training and test data.
-- Train the machine learning model.
+- Get HeatWave MySQL environment details
+- Connect to DB System using MySQL Workbench 
+- Prepare and load training and test data
+- Train the machine learning model
 - Make predictions with test data using a trained model
 - Run explanations on test data using a trained model
 - Score your machine learning model to assess its reliability
@@ -55,14 +52,10 @@ In this lab, you will be guided through the following steps:
 
 ### Prerequisites
 
-- An Oracle Free Tier, Paid or LiveLabs Cloud Account
-- Some Experience with MySQL Shell - [MySQL shell] (https://dev.MySQL.com/doc/MySQL-shell/8.0/en/)
+- Some Experience with MySQL Workbench - [MySQL Workbench] (https://www.mysql.com/products/workbench/)
 
 
 ## Acknowledgements
 
-- **Author** - Perside Foster, MySQL Solution Engineering
-
-- **Contributors** - Salil Pradhan, Principal Product Manager,
-Nick Mader, MySQL Global Channel Enablement & Strategy Manager
-- **Last Updated By/Date** - Perside Foster, MySQL Solution Engineering, May 2022
+- **Author** - Anand Prabhu, Principal Member of Technical Staff, MySQL
+- **Last Updated By/Date** - Anand Prabhu, Principal Member of Technical Staff, MySQL, August 2024

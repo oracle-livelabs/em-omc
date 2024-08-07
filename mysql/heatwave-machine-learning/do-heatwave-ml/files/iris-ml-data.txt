@@ -1,7 +1,3 @@
-CREATE SCHEMA ml_data;
-
-USE ml_data;
-
 CREATE TABLE `iris_train` (
   `sepal length` float DEFAULT NULL,
   `sepal width` float DEFAULT NULL,
