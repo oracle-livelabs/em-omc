@@ -157,7 +157,7 @@ In this example, data is assigned to a @row\_input session variable, and the var
     Copy the command below and replace **&lt;schemaname&gt;** with actual schema name from environment details.
 
     ```bash
-    <copy>CALL sys.ML_PREDICT_TABLE('<schemaname>.iris_test', @iris_model,'ml_data.iris_predictions', NULL);</copy>
+    <copy>CALL sys.ML_PREDICT_TABLE('<schemaname>.iris_test', @iris_model,'<schemaname>.iris_predictions', NULL);</copy>
     ```
 
     ![MDS](./images/16mlops.png "iris-ml-build-out ")
@@ -189,7 +189,7 @@ In this example, data is assigned to a @row\_input session variable, and the var
 4. Query the table ML\_EXPLAIN\_TABLE  to view the results
 
     ```bash
-    <copy> SELECT * FROM iris_explanations LIMIT 3\G;</copy>
+    <copy> SELECT * FROM iris_explanations LIMIT 3;</copy>
     ```
 
     ![MDS](./images/20mlops.png "iris-ml-build-out ")
