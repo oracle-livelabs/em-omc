@@ -353,7 +353,7 @@ We'll use the Data Pump migration method in this task.
     ![MWB Menu Item](images/mwb-menu-item.png " ")
 3. On the "Database Migration" screen:
     - Expand the "Getting Started" section if collapsed. Examine the Migration Workbench workflow
-    ![Getting Started](images/getting-started.png " ")
+    ![Getting Started](images/getting-started1.png " ")
     - Click on "Create Migration Activity"
 4. On the Create Migration Activity screen, enter:
     - Activity Name:
@@ -365,11 +365,11 @@ We'll use the Data Pump migration method in this task.
     - Migrate: Select "Full Database" from the drop-down list
 
         Migration Workbench allows you to migrate full database, schemas, or tablespaces. We'll migrate full database in this lab
-        ![Migrate Options](images/migrate-options.png " ")
+        ![Migrate Options](images/migrate-options1.png " ")
     - Select Source Database: orcl.subnet.vcn.oraclevcn.com
     - Select Destination Database: ATP-ORCL
     - Notice the checkmark for "Tools Validation". For this lab, CPAT tool was uploaded to Enterprise Manager in advance
-      ![Create Migration Activity](images/create-migration-activity.png " ")
+      ![Create Migration Activity](images/create-migration-activity1.png " ")
     - Click Continue
 5. On the Add Details screen, enter:
     - Source:
@@ -394,7 +394,7 @@ We'll use the Data Pump migration method in this task.
     - Bucket Name: "Bucket Name" from the "Reservation Information" screen. You can also get this value from the OCI console: Navigate to "Storage"->"Buckets"
     - OCI Credential: OCI
     - Database OCI Auth Credential: ADMIN.MWB_CRED
-      ![Add Details](images/add-details.png " ")
+      ![Add Details](images/add-details1.png " ")
     - Click Next
 6. On the Customize screen, enter:
     - Export Options:
@@ -415,14 +415,14 @@ We'll use the Data Pump migration method in this task.
     - Transfer Options:
         - Source Database Monitoring Agent (default)
 
-        ![Customize](images/customize.png " ")
+        ![Customize](images/customize1.png " ")
     - Click Review
 7. On the "Review & Submit" screen:
     - Review your entries to make sure everything is correct
-    ![Analyze Source](images/analyze-source.png " ")
+    ![Analyze Source](images/analyze-source1.png " ")
     - Click "Analyze Source" in the Source column. The analysis will open in a new browser tab and will take a few minutes to complete
     - When the analysis is complete review CPAT Results. The blockers and warnings in this case are expected as a few objects in the on-prem database are not available in autonomous database. When you run this activity in your environment ensure you address any issues identified on a case by case basis
-    ![CPAT Results](images/cpat-results.png " ")
+    ![CPAT Results](images/cpat-results1.png " ")
     - Click on the previous browser tab to continue with the migration process
     ![Validate](images/validate.png " ")
     - Click "Validate"
@@ -439,14 +439,14 @@ We'll use the Data Pump migration method in this task.
     - Click Submit
     - You should receive the message: "Migration activity submitted successfully."
     ![Close](images/close.png " ")
-    - Click "Close and Go Back to Activities Page"
+    - Click "Go Back to Activities Page"
 10. On the Migration Activities screen:
     - The activity status will show "Scheduled" at first. Refresh the page after a few seconds and it will change to "Running". You can also change the Auto Refresh to every minute
-    ![Migration Activities](images/migration-activities.png " ")
+    ![Migration Activities](images/migration-activities1.png " ")
     - Click on the "Running" link under Status to go to the Procedure Activity screen
 11. On the Procedure Activity screen:
     - Choose Show: "Steps Not Skipped". The procedure should take about 8 minutes to complete
-    ![Procedure Activity](images/procedure-activity.png " ")
+    ![Procedure Activity](images/procedure-activity1.png " ")
     - When the procedure completes, it will most likely show there were some errors. We'll check those when we analyze the migration
     ![Procedure Activity Completed](images/procedure-activity-completed.png " ")
     - From the Enterprise Menu, click "Migration and Consolidation"->"Database Migration Workbench" to go back to the Migration Activities screen
