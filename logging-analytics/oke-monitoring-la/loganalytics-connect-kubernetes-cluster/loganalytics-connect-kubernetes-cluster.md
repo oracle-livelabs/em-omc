@@ -24,10 +24,10 @@ In this lab, you will see step-by-step instructions to:
     - From Navigation Menu > **Observability & Management** > **Logging Analytics** > **Solutions**.
     ![final-navigation-solutions.](images/final-navigation-solutions.gif)
 
-3. Click on the Kubernetes tile.
+2. Click on the Kubernetes tile.
 ![K8s-tile](images/K8s-tile.png)
 
-4. Kubernetes Monitoring Solution page is displayed. You will see three clusters. 
+3. Kubernetes Monitoring Solution page is displayed. You will see three clusters. 
     
     The clusters of interest for this Live Lab are  :
     - ***education-eks-rQNmdNI7*** : An AWS EKS cluster. We support multi-cloud Kubernetes clusters to monitor their logs.
@@ -35,11 +35,11 @@ In this lab, you will see step-by-step instructions to:
 
     ![solutions-table](images/solutions-table.png)
 
-5. In the Kubernetes Monitoring Solution page, click the ***oke-cw24*** cluster.
+4. In the Kubernetes Monitoring Solution page, click the ***oke-cw24*** cluster.
 
-6. The Cluster view of the ***oke-cw24*** cluster will be displayed.
+5. The Cluster view of the ***oke-cw24*** cluster will be displayed.
 
-7. The cluster view has the following important sections :
+6. The cluster view has the following important sections :
 
     ![cluster-full-view](images/cluster-full-view.png)
 
