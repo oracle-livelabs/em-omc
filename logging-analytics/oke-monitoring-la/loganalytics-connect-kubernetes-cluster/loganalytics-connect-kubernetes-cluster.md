@@ -19,10 +19,10 @@ In this lab, you will see step-by-step instructions to:
 
 1. To navigate to Solutions page, follow one of the below two methods.
 
-    - Open url : `https://cloud.oracle.com/loganalytics/solutions?region=us-phoenix-1&tenant=emdemo`
+    - Open url : https://cloud.oracle.com/loganalytics/solutions?region=us-phoenix-1&tenant=emdemo
 
     - From Navigation Menu > **Observability & Management** > **Logging Analytics** > **Solutions**.
-      ![final-navigation-solutions.](images/final-navigation-solutions.gif)
+    ![final-navigation-solutions.](images/final-navigation-solutions.gif)
 
 3. Click on the Kubernetes tile.
 ![K8s-tile](images/K8s-tile.png)
@@ -33,7 +33,6 @@ In this lab, you will see step-by-step instructions to:
     - ***education-eks-rQNmdNI7*** : An AWS EKS cluster. We support multi-cloud Kubernetes clusters to monitor their logs.
     - ***oke-cw24*** : An OCI OKE Cluster.
 
-    
     ![solutions-table](images/solutions-table.png)
 
 5. In the Kubernetes Monitoring Solution page, click the ***oke-cw24*** cluster.
@@ -53,74 +52,77 @@ In this lab, you will see step-by-step instructions to:
     7. ***Telemetry Panel***  help you to monitor the health of the system.
 
 
-    
+
 ## Task 2: Understanding the Cluster View
 
-**Task 2.1 : Understand the data presented in Summary panel**
+### **Task 2.1 : Understand the data presented in Summary panel** ###
 
 1. **Prerequisite** : Change time range to 24 hours in time selector at top right corner.
 
 2. Understand when was the topology updated. 
    
-    i. In Cluster view, observe the first tile in left panel, hover over info icon to see the time when topology was last updated.
+    - In Cluster view, observe the first tile in left panel, hover over info icon to see the time when topology was last updated.
     ![topology-lastupdated](images/topology-lastupdated.png)
 
 3. Understand how many namespaces, workloads, nodes, and pods are in the cluster.
   
-    i. Observe second tile in left summary panel, it displays the number of namespaces in kubernetes cluster. You can check all namespaces in cluster by reviewing the topology view Namespace tier.
+    - Observe second tile in left summary panel, it displays the number of namespaces in kubernetes cluster. You can check all namespaces in cluster by reviewing the topology view Namespace tier.
     ![namespace-tile](images/namespace-tile.png)
-    ii. Third tile shows total number of workloads with the overall percentage of workloads which needs attention. Objects with associated warning events are flagged as Needs Attention. You can also see the breakdown of workload types & percentage of workload type that needs attention.
+    - Third tile shows total number of workloads with the overall percentage of workloads which needs attention. Objects with associated warning events are flagged as Needs Attention. You can also see the breakdown of workload types & percentage of workload type that needs attention.
     ![workload-tile](images/workload-tile.png)
-    iii. Fourth tile shows the number of Nodes along with percentage of nodes that needs attention due to warning events.
+    - Fourth tile shows the number of Nodes along with percentage of nodes that needs attention due to warning events.
     ![nodes-tile](images/nodes-tile.png)
-    iv. Last tile in left panel shows number of Pods along with percentage of problem pods which needs attention. All pods grouped by namespace are displayed in ***Pods by namespace*** section.
+    - Last tile in left panel shows number of Pods along with percentage of problem pods which needs attention. All pods grouped by namespace are displayed in ***Pods by namespace*** section.
     ![pods-tile](images/pods-tile.png)
 
 4. Understand how many objects need attention in cluster.
     
-    i. Topology Summary tile displays count of kubernetes objects in blue which are healthy and red for those objects which needs attention due to any active warning event.
+    - Topology Summary tile displays count of kubernetes objects in blue which are healthy and red for those objects which needs attention due to any active warning event.
     ![topology-summary-needs-attention](images/topology-summary-needs-attention.png)
-    ii. Topology chart shows nodes in red which Needs Attention. The red colour of each object in the topology indicates its status derived from warning events associated with the object or it's children.
+    - Topology chart shows nodes in red which Needs Attention. The red colour of each object in the topology indicates its status derived from warning events associated with the object or it's children.
     ![topology-needs-attention](images/topology-needs-attention.png)
-    iii. In Pods by namespace section, review all the red coloured polygons representing problem pods grouped by namespace.
+    - In Pods by namespace section, review all the red coloured polygons representing problem pods grouped by namespace.
     ![podsByNamesapce-needs-attention](images/podsByNamesapce-needs-attention.png)
 
 
-**Task 2.2:  View and compare metrics**  
+### **Task 2.2:  View and compare metrics** ###
 
 1. Review metrics for the entire cluster (Ensure no filter selection).
 
-    i. Observe the right panel telemetry widgets, these widgets help you to monitor the overall health of the system.
-    ii. View ***CPU cores (used/allocatable)*** widget. This widget displays chart for Total CPU cores used by selected pods divided by total allocatable CPU in the cluster.
+    - Observe the right panel telemetry widgets, these widgets help you to monitor the overall health of the system.
+    
+    - View ***CPU cores (used/allocatable)*** widget. This widget displays chart for Total CPU cores used by selected pods divided by total allocatable CPU in the cluster.
     ![cpucore-metrics](images/cpucore-metrics.png)
-    iii. There are total 17 metrics widgets available in cluster view. For details of each metrics widget refer [here](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/queries-used-kubernetes-solution.html#GUID-E02C7B04-98A2-48A7-B7B1-97DFC0DE5197).
+    - There are total 17 metrics widgets available in cluster view. For details of each metrics widget refer [here](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/queries-used-kubernetes-solution.html#GUID-E02C7B04-98A2-48A7-B7B1-97DFC0DE5197).**REVIEW**
 
 2.  Use scroll up and down to see different telemetry widgets.
 
-    i. To view all metrics widgets available in cluster, use arrow above first widget to move up and arrow below fourth widget to move down.
+    - To view all metrics widgets available in cluster, use arrow above first widget to move up and arrow below fourth widget to move down.
     ![metrics-scrolling](images/metrics-scrolling.gif)
-    ii. **Exercise** : Scroll up/down telemetry widgets panel and view all metrics widgets in cluster view.
+    - **Exercise** : Scroll up/down telemetry widgets panel and view all metrics widgets in cluster view.
 
 3. Expand ***CPU cores (used/allocatable)*** metric widget.
 
-    i. You can expand each widget to view a larger visualization. Hover the over first widget - 
+    - You can expand each widget to view a larger visualization. Hover the over first widget - 
     ***CPU core (used/allocatable)*** and click on expand icon on top right corner.
     ![expand-cpucoreua](images/expand-cpucoreua.png)
-    ii. In expanded widget, hover over the chart to see metrics details.
+    - In expanded widget, hover over the chart to see metrics details.
     ![expand-cpucoreua-chart](images/expand-cpucoreua-chart.png)
 
 4. Add two metric widgets to compare.
 
-    .i In expanded widget, hit Metrics to analyze to open list of all metrics available for comparison with current metrics widget chart.
+    - In expanded widget, hit Metrics to analyze to open list of all metrics available for comparison with current metrics widget chart.
     ![metrics-to-analyze](images/metrics-to-analyze.png)
-    ii. Select any widget for analysis. e.g. - CPU cores used
+    - Select any widget for analysis. e.g. - ***CPU cores used***
     ![metrics-to-analyze-selected](images/metrics-to-analyze-selected.png)
     **Note** - Maximum three metrics can be used for comparison at a time.
-    iii. Hit Close button to close the widget.
-    iv. **Exercise**  - Try selecting different metrics and compare.
+
+    - Hit Close button to close the widget.
+
+    - **Exercise**  - Try selecting different metrics and compare.
 
 
-**Task 2.3: View Kubernetes system logs**
+### **Task 2.3: View Kubernetes system logs** ###
 
 This widget helps you to monitor the trend and distribution of potential issues in Kubernetes component logs (API Server, Controller Manager, CSI Node Driver).
 
@@ -128,154 +130,158 @@ This widget helps you to monitor the trend and distribution of potential issues 
 
 2. Expand ***Kubernetes system*** widget.
 
-    i. In right panel widget scroll down to view ***Kubernetes system*** widget, expand this widget.
+    - In right panel widget scroll down to view ***Kubernetes system*** widget, expand this widget.
     ![kubesys-expand](images/kubesys-expand.png)
 
 3. Review Issue trend and potential issues charts.
 
-    i. Observe All Issues section showing Issue trend chart. This time series chart gives count of Issues detected over given time interval. Hover over data points for details.
+    - Observe All Issues section showing Issue trend chart. This time series chart gives count of Issues detected over given time interval. Hover over data points for details.
     ![kubesys-all-issues](images/kubesys-all-issues.png)
-    ii. Check Potential Issues chart to view Issues count grouped by kubernetes component & error. Hover over different colored data points to view details of components with corresponding error.
+    - Check Potential Issues chart to view Issues count grouped by kubernetes components & error. Hover over different colored data points to view details of components with corresponding error.
     ![kubesys-potential-issues](images/kubesys-potential-issues.png)
 
 4. Review issues table to see kubernetes component logs. 
 
-    i. Move down to view logs table. Check the log records for Error samples and Issue count for different components.
+    - Move down to view logs table. Check the log records for Error samples and Issue count for different components.
     ![kubesys-component-logs](images/kubesys-component-logs.gif)
-    ii. Collapse widget by clicking collapse icon on top right corner.
+    - Collapse widget by clicking collapse icon on top right corner.
 
 
-**Task 2.4: View OS health logs**
+### **Task 2.4: View OS health logs** ###
 
 This widget helps you to monitor the trend and distribution of potential issues identified in compute OS logs.
 
-1. Expand OS health widget.
+1. Expand ***OS health*** widget.
 
-    i. In right telemetry widget panel scroll down to view OS health widget, expand it.
+    - In right telemetry widget panel scroll down to view ***OS health*** widget, expand it.
     ![oshealth-expand](images/oshealth-expand.png)
 
 2. Review trend of issues and specific issues.
 
-    i. Observe All Issues section showing Issue trend chart. This time series chart gives count of Issues detected over given time interval. Hover over data points for details.
+    - Observe All Issues section showing Issue trend chart. This time series chart gives count of Issues detected over given time interval. Hover over data points for details.
     ![oshealth-all-issues](images/oshealth-all-issues.png)
-    ii. Check Issues chart to view Issues count grouped by kubernetes component, Node, Issues count, Label & Error. Hover over the data points to get potential issue details.
+    - Check Issues chart to view Issues count grouped by kubernetes component, Node, Issues count, Label & Error. Hover over the data points to get potential issue details.
     ![oshealth-potential-issues](images/oshealth-potential-issues.png)
-    iii. Move down to view logs table. Check the Cluster sample column records for list of issues and see related details about node, count etc in different columns.
+    - Move down to view logs table. Check the Cluster sample column records for list of issues and see related details about node, count etc in different columns.
     ![oshealth-issues-logs](images/oshealth-issues-logs.gif)
-    iv. Collapse OS health expanded widget.
+    - Collapse OS health expanded widget.
 
 
-**Task 2.5: Review latest kubernetes events**
+### **Task 2.5: Review latest kubernetes events** ###
 
 Events section displays the State changes occurring in Kubernetes Cluster in the form of Events.
 
 1. Expand Events panel.
 
-    i. Hover over top right corner of Events panel to view Expand icon. Click on it, widget will expand.
+    - Hover over top right corner of Events panel to view Expand icon. Click on it, widget will expand.
     ![events-expand](images/events-expand.png)
-    ii. Events grouped by namespace are listed.
+    - Events grouped by namespace are listed.
     ![events-panel](images/events-panel.png)
 
 2. "Expand All" in Events.
 
-    i. Check the Expand All checkbox to expand all event entries grouped by namespace.
-    ii. View details of each event entry shown in columns. Move through pages in table to view all entries.
+    - Check the Expand All checkbox to expand all event entries grouped by namespace.
+    - View details of each event entry shown in columns. Move through pages in table to view all entries.
     ![events-expand-all](images/events-expand-all.png)
 
 3. Filter Warning events only.
 
-    i. Check the Warnings Only checkbox to filter out all warning events.
-    ii. Warning events entries are listed.Type column shows warning. Review more details of this event in other columns.
+    - Check the Warnings Only checkbox to filter out all warning events.
+    - Warning events entries are listed.Type column shows warning. Review more details of this event in other columns.
     ![events-warnings-only](images/events-warnings-only.png)
 
 4. Close the Events panel by clicking collapse icon on top right corner of panel.
 
 
-**Task 2.6: Understand kubernetes cluster namespace and pods topology**
+### **Task 2.6: Understand kubernetes cluster namespace and pods topology** ###
 
 1. Filter ***wpexapp*** namespace from topology to see workloads, nodes and pods for this namespace.
 
-    i. In Topology diagram, in Namespace tier search for node with name - wpexapp and right click on it.
+    - In Topology diagram, in Namespace tier search for node with name -*** wpexapp*** and right click on it.
     ![add-ns-filter](images/add-ns-filter.png)
-    ii. Hit Add to filters,***wpexapp*** be added to Namespace filter in top right corner. Observe the topology view changes to reflect the objects in the namespace which includes workloads and nodes. 
+    - Hit Add to filters option, ***wpexapp*** will be added to Namespace filter in top right corner. Observe the topology view reflecting changes in objects in the namespace which includes workloads and nodes.
     ![ns-filtered-topology](images/ns-filtered-topology.png)
-    iii. Notice Left panel tiles showing object counts corresponding to filtered namespace.
+    - Notice Left panel tiles showing object counts corresponding to filtered namespace.
     Also, Pods by workload section gets updated to show pods grouped by workloads under filtered namespace - ***wpexapp***.
     ![ns-filtered-summary-pods](images/ns-filtered-summary-pods.png)
 
-2. Observe changes in telemetry pqanel and compare metrics.
+2. Observe changes in telemetry panel and compare metrics.
 
-    i. Move to ***CPU core used*** widget in telemetry panel, after applying namespace filter observe the changes in metrics chart.
+    - Move to ***CPU cores used*** widget in telemetry panel, after applying namespace filter observe the changes in metrics chart.
     ![ns-filter](images/ns-filter.gif)
-    ii. **Exercise** : Observe metrics charts changes on applying namespace filter → ***TODO REVIEW*** CPU core used,Memory used, Network: bytes rx,  Network: bytes tx,  Network: Packet Rx Rate, Network: Packet Tx Rate,  Network Packet Rx Dropped Rate,  Network Packet Tx Dropped Rate. 
+    - **Exercise** : Observe metrics charts changes on applying namespace filter for CPU, Memory & Network widgets. → **REVIEW** CPU cores used,Memory used, Network: bytes rx,  Network: bytes tx,  Network: Packet Rx Rate, Network: Packet Tx Rate,  Network Packet Rx Dropped Rate,  Network Packet Tx Dropped Rate. 
 
 3. View logs for different topology nodes including pods.
 
-    i. **Prerequisite** : Update time range to 24 hours.
+    - **Prerequisite** : Update time range to 24 hours.
 
-    ii. View logs for cluster node in topology.
+    - View logs for cluster node in topology.
         
-    1. In topology right click on main cluster node and hit View logs on context menu.
-    ![cluster-viewlogs](images/cluster-viewlogs.png)
-    2. A Visualization pops up which helps identifying new issues in logs in the selected time range, at cluster level.Review errors in table records and corresponding details of log sources, issue counts and others in different columns.
-    ![cluster-viewlogs-panel](images/cluster-viewlogs-panel.png)
-    3. These are the issues found in the selected time range but are not present in the baseline time range specified for the analysis(last 12 hours).Hover info icon for more details.
-    ![cluster-viewlogs-panel-info](images/cluster-viewlogs-panel-info.png)
-    4. Collapse this logs panel using collapse icon at top right corner.
+        - In topology right click on main cluster node and hit View logs on context menu.
+        ![cluster-viewlogs](images/cluster-viewlogs.png)
+        - A Visualization pops up which helps identifying new issues in logs in the selected time range, at cluster level.Review errors in table records and corresponding details of log sources, issue counts and others in different columns.
+        ![cluster-viewlogs-panel](images/cluster-viewlogs-panel.png)
+        - These are the issues found in the selected time range but are not present in the baseline time range specified for the analysis(last 12 hours).Hover info icon for more details.
+        ![cluster-viewlogs-panel-info](images/cluster-viewlogs-panel-info.png)
+        - Collapse this logs panel using collapse icon at top right corner.
+            
 
-    iii. View logs for ***wpexapp*** namespace node in topology.
+    - View logs for ***wpexapp*** namespace node in topology.
 
-    1. In topology view Namespace tier right click on ***wpexapp*** and hit View logs on context menu.
-    ![ns-viewlogs](images/ns-viewlogs.png)
-    2. A panel pops up which helps identifying new issues under ***wpexapp*** namespace in the selected time range. Review errors in records and corresponding details of log sources, issue counts and others in different columns.
-    ![ns-viewlogs-panel](images/ns-viewlogs-panel.png)
-    3. Collapse this logs panel using collapse icon at top right corner.
+        - In topology view Namespace tier right click on ***wpexapp*** and hit View logs on context menu.
+        ![ns-viewlogs](images/ns-viewlogs.png)
+        - A panel pops up which helps identifying new issues under ***wpexapp*** namespace in the selected time range. Review errors in records and corresponding details of log sources, issue counts and others in different columns.
+        ![ns-viewlogs-panel](images/ns-viewlogs-panel.png)
+        - Collapse this logs panel using collapse icon at top right corner.
 
 
-    iv. View logs for ***wordpress*** workload in ***wpexapp*** namespace.
+    - View logs for ***wordpress*** workload in ***wpexapp*** namespace.
 
-    1. In topology in Workloads tier right click on  ***wordpress*** and hit View logs on context menu.
-    ![workload-viewlogs](images/workload-viewlogs.png)
-    2. A panel pops up which helps identifying new issues for ***wordpress*** workload under ***wpexapp*** namespace in the selected time range. Review issues in Cluster Sample column and other columns to view details of error log sources, issue counts, etc.
-    ![workload-viewlogs-panel](images/workload-viewlogs-panel.png)
-    3. Collapse this panel.
+        -  In topology in Workloads tier right click on  ***wordpress*** and hit View logs on context menu.
+        ![workload-viewlogs](images/workload-viewlogs.png)
+        - A panel pops up which helps identifying new issues for ***wordpress*** workload under ***wpexapp*** namespace in the selected time range. Review issues in Cluster Sample column and other columns to view details of error log sources, issue counts, etc.
+        ![workload-viewlogs-panel](images/workload-viewlogs-panel.png)
+        - Collapse this panel.
         
 
-    v. View logs for ***10.0.10.211*** Node in wpexapp namespace.
+    - View logs for ***10.0.10.211*** Node in ***wpexapp*** namespace.
 
-    1. In topology in Node tier right click on ***10.0.10.211*** and hit View logs on context menu.
-    ![node-viewlogs](images/node-viewlogs.png)
-    2. A panel pops up which helps identifying new issues for ***10.0.10.211*** node under ***wpexapp*** namespace in the selected time range. Review table records for issue details.
-    ![node-viewlogs-panel](images/node-viewlogs-panel.png)
-    3. Collapse this panel.
+        - In topology in Node tier right click on ***10.0.10.211*** and hit View logs on context menu.
+        ![node-viewlogs](images/node-viewlogs.png)
+        - A panel pops up which helps identifying new issues for ***10.0.10.211*** node under ***wpexapp*** namespace in the selected time range. Review table records for issue details.
+        ![node-viewlogs-panel](images/node-viewlogs-panel.png)
+        - Collapse this panel.
 
 
-    vi. View logs for pods from Pods by namespace section.
+    - View logs for pods from Pods by namespace section.
 
-    1. Pods by namespace section right click on ***wordpress-5ff998994b-85hh4*** pod and hit View logs on context menu.
-    ![pods-viewlogs](images/pods-viewlogs.png)
-    2. A panel pops up which helps identifying new issues for ***wordpress-5ff998994b-85hh4*** pod in ***wpexapp*** namespace in the selected time range. Review table records for issue details.
-    ![pods-viewlogs-panel](images/pods-viewlogs-panel.png)
-    3. Collapse this panel.
-       
-    vii. **Exercise** : View logs all other workloads, nodes and pods.
+        - Pods by namespace section right click on ***wordpress-5ff998994b-85hh4*** pod and hit View logs on context menu.
+        ![pods-viewlogs](images/pods-viewlogs.png)
+        - A panel pops up which helps identifying new issues for ***wordpress-5ff998994b-85hh4*** pod in ***wpexapp*** namespace in the selected time range. Review table records for issue details.
+        ![pods-viewlogs-panel](images/pods-viewlogs-panel.png)
+        - Collapse this panel.
+
+
+    - **Exercise** : View logs all other workloads, nodes and pods.
+
 
 
 ## Task 3: Understand Workload, Node, Pod View - which workload types, applications are running in "wpexapp"
 
-**Task 3.1: Understand Workload View**
+### **Task 3.1: Understand Workload View** ###
 
 1. Understand Workload tab details with ***wpexapp*** Namespace filter only.
     
-    i. Click on the Workload tab.
+    - Click on the Workload tab.
     ![workload-tab](images/workload-tab.png)
 
-    ii. The workload view in the context of all the Namespaces available in the Kubernetes cluster will be displayed.
-    **Note** : In the workload view Topology section is replaced by Workload Details table, Pods by namespaces by Pods by workload & Topology summary by Workload summary.
+    - The workload view in the context of all the Namespaces available in the Kubernetes cluster will be displayed.
 
-    iii. Click on the Namespaces filter & select the namespace ***wpexapp***. Observe Workloads details panel, all the workloads running in the namespace ***wpexapp*** are listed grouped by workload types.
+    - **Note** : In the workload view Topology section is replaced by Workload Details table, Pods by namespaces by Pods by workload & Topology summary by Workload summary.
 
-    iv. The other sections Pods by workloads , Summary panel, Events and Telemetry Panel are updated in the context of namespace ***wpexapp***.
+    - Click on the Namespaces filter & select the namespace ***wpexapp***. Observe Workloads details panel, all the workloads running in the namespace ***wpexapp*** are listed grouped by workload types.
+
+    - The other sections Pods by workloads , Summary panel, Events and Telemetry Panel are updated in the context of namespace ***wpexapp***.
 
     - Pods by workloads will show all the pods in the namespace ***wpexapp***.
 
@@ -286,17 +292,19 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Events section will not show any events as there are no warning events logged in the ***wpexapp***. **REVIEW - need some events**
 
 
-**Task 3.2: Incrementally add workloads (running in "wpexapp") to workload filter and nodes to nodes filter (in workload tab).**
+### **Task 3.2: Incrementally add workloads (running in "wpexapp") to workload filter and nodes to nodes filter (in workload tab).** ###
     
 1.  Add a workload running in ***wpexapp*** to Workload filter.
-    Click on the Workloads filter. All the workloads running in the namespace ***wpexapp*** namespace will be shown.
+
+    - Click on the Workloads filter. All the workloads running in the namespace ***wpexapp*** namespace will be shown.
     Select the item ***wordpress-mysql***.
 
 2.  Add a node running in ***wpexapp*** to Node filter.
-    Click on the Node filter and select the Node IP from the list - ***10.0.10.114***
+
+    - Click on the Node filter and select the Node IP from the list - ***10.0.10.114***
 
 
-**Task 3.3: Check Workload details and status in Workload Tab**
+### **Task 3.3: Check Workload details and status in Workload Tab** ###
 
 1. Observe the changes in the Workload summary tiles, Metric Widgets & Events section.
 
@@ -304,52 +312,51 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
 
 
-**Task 3.4: Understand Node View - Check Node health and status in Node Tab**
+### **Task 3.4: Understand Node View - Check Node health and status in Node Tab** ###
 
 1. Understand Node details table and Review changes in Events panel.
 
-    i. Click on the Node tab. 
+    - Click on the Node tab. 
+    ![node-tab](images/node-tab.png)
 
-    ii. The node view in the context of the Namespace wpexapp, Workload ***wordpress-mysql*** & Node IP selected in above step i.e ***10.0.10.114***. in the Kubernetes cluster will be displayed.
-    **Note** : In the node view Topology section is replaced by Node Status section, Pods by namespaces section is replaced by Pods by node & & Topology summary by Node summary.
+    - The node view in the context of the Namespace ***wpexapp***, Workload ***wordpress-mysql*** & Node IP selected in above step i.e ***10.0.10.114***. in the Kubernetes cluster will be displayed.
+    - **Note** : In the node view Topology section is replaced by Node Status section, Pods by namespaces section is replaced by Pods by node & & Topology summary by Node summary.
 
-    iii. The Node status section shows all the nodes in which the workload ***wordpress-mysql*** is running.
+    - The Node status section shows all the nodes in which the workload ***wordpress-mysql*** is running.
 
-    iv. Pods by node section shows the pods running in the node for the workload ***wordpress-mysql***.
+    - Pods by node section shows the pods running in the node for the workload ***wordpress-mysql***.
 
-    v. The Node summary tile shows node health.
-    **Note** : Events section,Telemetry Panel section & all other tiles in Summary panel remains same.
+    - The Node summary tile shows node health.
+   
+    - **Note** : Events section,Telemetry Panel section & all other tiles in Summary panel remains same.
 
-    vi. In the Node status section click on the expand icon of the Node IP to view The important details of filtered node such as Status, OS details, CPU, Memory details etc.
+    - In the Node status section click on the expand icon of the Node IP to view The important details of filtered node such as Status, OS details, CPU, Memory details etc.
 
 
 
-**Task 3.5: Understand Pod View - Check Pod details and health in Pod Tab**
+### **Task 3.5: Understand Pod View - Check Pod details and health in Pod Tab** ###
 
 1. Understand Pod details table & Review changes in Events panel
 
-    i. Click on the Pod tab.
+    - Click on the Pod tab.
+    ![pod-tab](images/pod-tab.png)
 
-    ii. The Pod view in the context of the workload ***wordpress-mysql*** & Node IP i.e ***10.0.10.114*** is displayed.
-    **Note** : In the node view Topology section is replaced by Pods status table, Pods by namespaces section is replaced by Pods & Topology summary by Pods summary.
+    - The Pod view in the context of the workload ***wordpress-mysql*** & Node IP i.e ***10.0.10.114*** is displayed
+    
+    - **Note** : In the node view Topology section is replaced by Pods status table, Pods by namespaces section is replaced by Pods & Topology summary by Pods summary.
 
-    iii. Once you land on the Pod page, in the Pods status tab failed status would have been selected by default. 
+    - Once you land on the Pod page, in the Pods status tab failed status would have been selected by default. 
 
-    iv. Change the status to Show All. All the pods in the Namespace wpexapp & node ***10.0.10.114*** in the Kubernetes cluster will be displayed.
+    - Change the status to Show All. All the pods in the Namespace wpexapp & node ***10.0.10.114*** in the Kubernetes cluster will be displayed.
 
-    v. Pods section displays all the pods in the namespace ***wpexapp*** & node ***10.0.10.114***.
+    - Pods section displays all the pods in the namespace ***wpexapp*** & node ***10.0.10.114***.
 
-    vi. The Pod summary tile shows number of pods that needs attention & pods which are normal.
+    - The Pod summary tile shows number of pods that needs attention & pods which are normal.
     **Note** : Events section,Telemetry Panel section & all other tiles in Summary panel remains same.
 
-    vii. In the Pods status section click on the expand icon of one of pods to view the important details such as Status,Node, Pod IP, Controller etc  of the filtered pod will be displayed.
+    - In the Pods status section click on the expand icon of one of pods to view the important details such as Status,Node, Pod IP, Controller etc  of the filtered pod will be displayed.
 
-    viii. **Exercise** : View the details of the pods based on their current status like running, failed, succeeded, and pending in Pods status table
-
-
-## Task 4: Using filters on four tabs and understand changes on telemetry data
-
-## Task 5: Understanding and using key log widgets from panel: events widget, k8s platform, nodes, compute, LB, VCN
+    - **Exercise** : View the details of the pods based on their current status like running, failed, succeeded, and pending in Pods status table.
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
