@@ -657,6 +657,10 @@ Please note: This is a read-only task. ADDM Spotlight aggregates the ADDM findin
 
     ![Database Parameter page](images/dbparameters.png " ")
 
+12. Watch ADDM Spotlight video
+
+     [ADDM Spotlight video](https://youtu.be/7y7ivjgFEYw)
+
 
 This completes the Lab!
 
