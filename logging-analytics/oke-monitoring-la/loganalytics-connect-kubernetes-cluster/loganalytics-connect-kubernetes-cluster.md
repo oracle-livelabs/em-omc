@@ -209,7 +209,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - Move to ***CPU cores used*** widget in telemetry panel, after applying namespace filter observe the changes in metrics chart.
     ![ns-filter](images/ns-filter.gif)
-    - **Exercise** : Observe metrics charts changes on applying namespace filter for CPU, Memory & Network widgets. → **REVIEW** CPU cores used,Memory used, Network: bytes rx,  Network: bytes tx,  Network: Packet Rx Rate, Network: Packet Tx Rate,  Network Packet Rx Dropped Rate,  Network Packet Tx Dropped Rate. 
+    - **Exercise** : Observe metrics charts changes on applying namespace filter for CPU cores used, Memory used, Network: bytes rx, Network: bytes tx, Network: Packet Rx Rate, Network: Packet Tx Rate, Network Packet Rx Dropped Rate, Network Packet Tx Dropped Rate.
 
 3. View logs for different topology nodes including pods.
 
