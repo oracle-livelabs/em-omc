@@ -247,7 +247,6 @@ Watch the video below for a quick walk-through of the lab.
 
     ![Comparison reports](images/wlacomparisonreports2.png " ") 
 
-
 7. Report shows regressed, improved, missing, new and plan changed SQLs, which helps in analyzing the workload.
 
     ![Sample report with Comparison metric](images/wlareport.png " ") 
@@ -263,6 +262,12 @@ Watch the video below for a quick walk-through of the lab.
 9. Look for the plan changes and notice there is a index that is missing which is the root cause of the regression, hence the workload performance is regressed. Workload Analysis helps in analyzing the performance of the SQL by providing granular level details.
 
     ![SQLID for the plan change](images/wlanewplanreport3.png " ")
+
+10. Workload Analysis Configure and Report Analysis videos
+
+     [WLA Configure](https://youtu.be/EVqcpEgneWE)
+
+     [WLA Report Analysis](https://youtu.be/HJ7wjl6oXrg)
 
 ## Task 3: Database Workload Replay - Capture Workload
 

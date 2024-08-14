@@ -657,7 +657,11 @@ Please note: This is a read-only task. ADDM Spotlight aggregates the ADDM findin
 
     ![Database Parameter page](images/dbparameters.png " ")
 
-12. Watch ADDM Spotlight video
+12. ADDM Spotlight Blog and video are as follows
+
+     Check out our blog
+     [Blog]
+     (https://blogs.oracle.com/observability/post/addm-spotlight-strategic-advice-optimize-oracle-dbms)
 
      [ADDM Spotlight video](https://youtu.be/7y7ivjgFEYw)
 
