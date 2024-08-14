@@ -18,5 +18,6 @@
         "tablespaces",
         "Tarhini",
         "TCPS"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
