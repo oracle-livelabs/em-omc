@@ -265,9 +265,9 @@ Watch the video below for a quick walk-through of the lab.
 
 10. Click the below listed links to view Workload Analysis configure and Report Analysis videos
 
-     [WLA Configure](https://youtu.be/EVqcpEgneWE)
+     [WLA Configure video](https://youtu.be/EVqcpEgneWE)
 
-     [WLA Report Analysis](https://youtu.be/HJ7wjl6oXrg)
+     [WLA Report Analysis video](https://youtu.be/HJ7wjl6oXrg)
 
 ## Task 3: Database Workload Replay - Capture Workload
 
