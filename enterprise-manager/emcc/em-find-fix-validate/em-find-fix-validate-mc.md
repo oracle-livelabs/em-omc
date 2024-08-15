@@ -19,7 +19,7 @@ In this lab you will learn:
 | **1**  | Performance Hub                               | 15 minutes       | Oracle Enterprise Manager 13c includes a new Jet based unified Performance Hub Jet interface for performance monitoring.                                                                                           | Performance Hub is a single pane of glass view of database performance with access to Active Session History (ASH) Analytics, Real-time SQL Monitoring and SQL Tuning together. The time picker allows the administrator to switch between Real-Time and Historical views of database performance.                                                                                                                                                                                                                                                                      |
 | **2**  | Top Activity Lite                               | 5 minutes       | Top Activity Lite is a new feature introduced in 13c RU 15 to provide optimal response time for real-time monitoring for performance monitoring.                                                                                           | Top Activity Lite feature is a simplified version of Performance Hub, optimized for quick response under heavy loads while providing key performance diagnostics information through simple and effective  visualization. This feature helps DBAs monitor their database using a Network Operations Center (NOC) like screen.                                                                                                                                                                                                                                                                      |
 | **3**  | Workload Analysis        | 10 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create two SQL Tuning Sets(STS) with different workloads and indexes and compare them using different comparison metrics.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate the SQL performance before upgrade Database from 18.3 to 19.10.  You will see how each SQLs in the application's workload (Sales History) performs in new 19.10 upgrade. The Sales History workload SQLs are gathered in SQL Tuning Set SHSTS..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate the SQL performance before upgrade Database.  You will see how each SQLs in the application's workload (Sales History) performs in new upgraded environment. The Sales History workload SQLs are gathered in SQL Tuning Set SHSTS..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **5**  | Tuning a SQL in a Pluggable Database (PDB) - Optional                     | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
 
 
@@ -30,7 +30,7 @@ In this lab you will learn:
     - Lab: Environment Setup
     - Lab: Initialize Environment
 
-*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository.
+*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19c as Oracle Management Repository.
 
 ## Task 1: Prepare Database
 Select between *Task 1A* and *Task 1B*
@@ -345,8 +345,8 @@ Select between *Task 1A* and *Task 1B*
 
     ![Go to the step2](images/emratlab1step10a.png " ")
 
-       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_18C**
-       - Enter Description : Sales History 18C run
+       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_1**
+       - Enter Description : Sales History run
        - Creation Method: **Execute SQLs Remotely**
 
     ![Execute SQLs Remotely](images/emratlab1step10b.png " ")
@@ -389,7 +389,7 @@ Select between *Task 1A* and *Task 1B*
 
     ![Step3 for SPA task](images/emratlab1step12a.png " ")
 
-       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_19C**
+       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_2**
        - Enter Description : Sales History 19C Run
        - Creation Method: **Execute SQLs Locally**
        - Default per-SQL Time Limit
@@ -408,8 +408,8 @@ Select between *Task 1A* and *Task 1B*
 
     ![Step4 of SPA task](images/emratlab1step14a.png " ")
 
-       - Trial 1 Name : **SHSTS\_SQL\_TRIAL\_18C**
-       - Trial 2 Name : **SHSTS\_SQL\_TRIAL\_19C**
+       - Trial 1 Name : **SHSTS\_SQL\_TRIAL\_1**
+       - Trial 2 Name : **SHSTS\_SQL\_TRIAL\_2**
        - Comparison Metric : **Buffer Get**
        - **Click** Submit
 
