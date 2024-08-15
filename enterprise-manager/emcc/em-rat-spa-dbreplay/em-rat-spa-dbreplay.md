@@ -263,7 +263,7 @@ Watch the video below for a quick walk-through of the lab.
 
     ![SQLID for the plan change](images/wlanewplanreport3.png " ")
 
-10. Click the below listed links to view Workload Analysis configure and Report Analysis videos
+10. Click on the below listed links to view Workload Analysis videos
 
      [WLA Configure video](https://youtu.be/EVqcpEgneWE)
 
