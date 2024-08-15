@@ -182,6 +182,7 @@ Select between *Task 1A* and *Task 1B*
 8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
 
 
+
 ## Task 4: Workload Analysis
 
 
