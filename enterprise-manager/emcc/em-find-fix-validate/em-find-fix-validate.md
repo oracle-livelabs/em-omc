@@ -125,7 +125,7 @@ Select between *Task 1A* and *Task 1B*
 
       ![SQL Monitoring](images/sqlmonitoring.jpg " ")
 
-8. You can see all the executed SQL during that time along with different attributes like username,execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
+8. You can see all the executed SQL during that time along with different attributes like username, execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
     ![Plan Statistics](images/planstatisticslatest.png " ")
 
@@ -178,7 +178,6 @@ Select between *Task 1A* and *Task 1B*
     ![Top Activity Lite entry point](images/talentry.jpg " ")
 
 6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen. 
-
 
     ![Auto Refresh option on Top Activity Lite page](images/talautorefresh.jpg " ")
 
