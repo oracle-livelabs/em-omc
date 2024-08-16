@@ -71,7 +71,8 @@ In this lab, you will see step-by-step instructions to:
     ![expand-events-ns-demo-scheduling](images/expand-events-ns-demo-scheduling.png)
 
 ## Task 3: Understanding and correlating metrics in ‘analyze’ view
-
+## Task 4: Excercise
+In the **Workload** tab, click on the **Namespaces** filter and select the namespace **demo-volumemount** & understand the issue.
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
   - Troubleshooted Kubernetes Workload specific issues
