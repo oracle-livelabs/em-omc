@@ -21,7 +21,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/sql-insights.png " ")
 
-2. Click **DB time treemap** to view the tree map.
+2. Click **SQL activity loadmap** to view the tree map.
 
       ![Left Pane](./images/sql-insights-treemap.png " ")   
 
