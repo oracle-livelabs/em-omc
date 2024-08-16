@@ -15,15 +15,20 @@
         {
             "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster",
             "description": "This live lab outlines the steps required to connect to the Kubernetes Cluster for monitoring",
+            "filename": "../../connect-cluster-flow/connect-cluster-flow.md"
+        },
+        {
+            "title": "Lab 2: Understanding the topology of the Kubernetes Cluster",
+            "description": "This live lab outlines the steps for understanding the topology of Kubernetes Cluster",
             "filename": "../../loganalytics-connect-kubernetes-cluster/loganalytics-connect-kubernetes-cluster.md"
         },
         {
-            "title": "Lab 2: Interactive Analytics and Troubleshooting",
+            "title": "Lab 3: Interactive Analytics and Troubleshooting",
             "description": "This live lab outlines the steps required to troubleshoot the issues occuring in the Kubernetes Cluster",
             "filename": "../../interactive-analytics-and-troubleshooting/interactive-analytics-and-troubleshooting.md"
         }, 
         {
-            "title": "Lab 3: Next Steps for more insights",
+            "title": "Lab 4: Next Steps for more insights",
             "description": "This live lab outlines the steps for getting the more insights of the Kubernetes Monitoring",
             "filename": "../../next-steps-for-more-details/next-steps-for-more-details.md"
         },  
