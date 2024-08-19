@@ -84,7 +84,8 @@ In this lab, you will see step-by-step instructions to:
   2. This will take you to the **Pie Chart view** of Log Explorer in context of Kubernetes Cluster Name.
     ![kubernetes-events-logs-pie-chart-view](images/kubernetes-events-logs-pie-chart-view.png)
 
-  3. **Exercise** Explore the different visualizations on Log Explorer page.
+  3. **Exercise** Explore the different visualizations on Log Explorer page. Read more about [how to use Log Explorer for analyzing and visualizing logs in Logging Analytics.] (https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3887)
+
     ![visualization-drop-down](images/visualization-drop-down.png)
   
   4. To navigate back to the Kubernetes Cluster Summary page, click on the **Kubernetes Cluster Summary** as highlighted in the image below.

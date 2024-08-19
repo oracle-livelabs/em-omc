@@ -34,9 +34,9 @@ In this lab, you will see step-by-step instructions to:
 6. An **Events** pop-up window will be displayed. Click on the expand icon next to the **demo-livenessprobe** namespace.
     ![events-popup-ns-demo-livenessprobe](images/events-popup-ns-demo-livenessprobe.png) 
 7. The detailed information of the events will displayed. The information includes,
-    - Type of the event e.g Warning, Normal, Failed etc.
-    - Reason due to which the event is logged. For our use case the container has failed liveness probe and Kubernetes treats it with reason as **unhealty**.
-    - Message of the event which provides the important insight on what caused the liveness probe event failure. For our use case the message states that liveness probe failed as it could not open the directory.
+    - **Type** of the event e.g Warning, Normal, Failed etc.
+    - **Reason** due to which the event is logged. For our use case the container has failed liveness probe and Kubernetes treats it with reason as **unhealty**.
+    - **Message** of the event which provides the important insight on what caused the liveness probe event failure. For our use case the message states that liveness probe failed as it could not open the directory.
 
     ![expand-events-ns-demo-livenessprobe](images/expand-events-ns-demo-livenessprobe.png)
 
@@ -65,9 +65,9 @@ In this lab, you will see step-by-step instructions to:
 8. An **Events** pop-up window will be displayed. Click on the expand icon next to the **demo-scheduling** namespace.
     ![events-popup-ns-demo-scheduling](images/events-popup-ns-demo-scheduling.png) 
 9. The detailed information of the events will displayed. The information includes,
-    - Type of the event e.g Warning, Normal, Failed etc.
-    - Reason due to which the event is logged. For our use case the container has failed to schedule to due to insufficient resources and Kubernetes treats it with reason as **failedscheduling**.
-    - Message of the event which provides the important insight on what prevented the Kuberentes Scheduler from scheduling the pod. For our use case the message states that Kubernetes has failed to schedule a pod due to insufficient cpu.
+    - **Type** of the event e.g Warning, Normal, Failed etc.
+    - **Reason** due to which the event is logged. For our use case the container has failed to schedule to due to insufficient resources and Kubernetes treats it with reason as **failedscheduling**.
+    - **Message** of the event which provides the important insight on what prevented the Kuberentes Scheduler from scheduling the pod. For our use case the message states that Kubernetes has failed to schedule a pod due to insufficient cpu.
     ![expand-events-ns-demo-scheduling](images/expand-events-ns-demo-scheduling.png)
 
 ## Task 3: Understanding and correlating metrics in ‘analyze’ view
