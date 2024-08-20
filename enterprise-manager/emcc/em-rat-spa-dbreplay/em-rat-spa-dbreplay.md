@@ -208,8 +208,68 @@ Watch the video below for a quick walk-through of the lab.
 
     ![](images/emratlab1step15c.png " ")
 
+## Task 2: Workload Analysis
 
-## Task 2: Database Workload Replay - Capture Workload
+1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+
+    ![DB list](images/emffvlab2step2.png " ")
+
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    
+2. Navigate to Workload Analysis from the Performance Menu or from Database home page. you can schedule Automated workload analysis by configuring automated   analysis task. In this lab, we will run One-Time analysis task, go to One-Time Analysis tab and click on Create Analysis Task.
+
+    ![Workload Analysis](images/wladbhomepage.png " ") 
+
+    ![One-Time Analysis tab](images/wlacreatetask.png " ") 
+
+3. Create task with the following inputs
+   
+       - Enter task Name : **WLA\_Test**
+       - Enter Description : Comparing two workloads using Workload Analysis
+
+   ![Choose from the search icon](images/wlasearchicon.png " ")
+       
+4. Under Reference Workload, click on search icon to choose WLA\_STS1 from the dropdown menu. Later choose WLA\_STS2 from the Compared Workload search
+
+    ![Choose from the search icon](images/wlasearchicon1.png " ") 
+
+5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time. Click on submit to submit the task. 
+
+    ![All Inputs for comparison](images/wlaallinputs.png " ") 
+    
+    ![All Inputs for comparison](images/wlaallinputs1.png " ") 
+
+6. Refresh the page, to see the reports and click on any report to analyze, let's view **Elapsed Time Workload Analysis Report**.
+    
+    ![Comparison reports](images/wlacomparisonreports.png " ") 
+    
+    ![Comparison reports](images/wlacomparisonreports1.png " ") 
+
+    ![Comparison reports](images/wlacomparisonreports2.png " ") 
+
+7. Report shows regressed, improved, missing, new and plan changed SQLs, which helps in analyzing the workload.
+
+    ![Sample report with Comparison metric](images/wlareport.png " ") 
+
+8. Click on the New Plan in  SQL statements by Plan Change, to see the plans changed SQLs which are impacting the overall performance of the workload. Click on the SQLID which is regressed and has plan changed column "Yes"
+
+    ![Plan change in the report](images/wlanewplanreport.png " ") 
+
+    ![SQLID for the plan change](images/wlanewplanreport1.png " ") 
+
+    ![SQLID for the plan change](images/wlanewplanreport2.png " ") 
+
+9. Look for the plan changes and notice there is a index that is missing which is the root cause of the regression, hence the workload performance is regressed. Workload Analysis helps in analyzing the performance of the SQL by providing granular level details.
+
+    ![SQLID for the plan change](images/wlanewplanreport3.png " ")
+
+10. Click on the below listed links to view Workload Analysis videos
+
+     [WLA Configure video](https://youtu.be/EVqcpEgneWE)
+
+     [WLA Report Analysis video](https://youtu.be/HJ7wjl6oXrg)
+
+## Task 3: Database Workload Replay - Capture Workload
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -334,7 +394,7 @@ Watch the video below for a quick walk-through of the lab.
 
     ![](images/emratlab2step17f.png " ")
 
-## Task 3: Database Workload Replay - DB Replay
+## Task 4: Database Workload Replay - DB Replay
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -525,7 +585,7 @@ Watch the video below for a quick walk-through of the lab.
       ![](images/emratlab3step32f.png " ")
 
 
-## Task 4: Database Workload Replay - API
+## Task 5: Database Workload Replay - API
 
 ### Login to Host using SSH Key based authentication
 In this lab, we are going to use a pre-captured workload of Sales History. The workload located in directory **/home/oracle/scripts/CAPTURE/lab4con/lab4SH**
@@ -713,7 +773,7 @@ In this lab, we are going to use a pre-captured workload of Sales History. The w
   The cause is the Replay with **Free Trial Credit** use lesser number of CPUs and Memory resource.
 
 
-## Task 5: Database Consolidation Replay
+## Task 6: Database Consolidation Replay
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -900,4 +960,4 @@ Thank You!
 ## Acknowledgements
 - **Author** - Daniel Suherman, Oracle Enterprise Manager Product Management
 - **Adapted for Cloud by** -  Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** - Daniel Suherman - Enterprise Manager Product Management, August 2021
+- **Last Updated By/Date** - Anusha Vojjola - Enterprise Manager Product Management, August 2024
