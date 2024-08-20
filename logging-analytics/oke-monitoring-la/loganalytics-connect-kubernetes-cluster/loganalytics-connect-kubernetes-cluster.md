@@ -23,10 +23,10 @@ In this lab, you will see step-by-step instructions to:
     - Open url : https://cloud.oracle.com/loganalytics/solutions?region=us-phoenix-1&tenant=emdemo
 
     - From Navigation Menu > **Observability & Management** > **Logging Analytics** > **Solutions**.
-    ![final-navigation-solutions.](images/Final-Navigation-Solution.gif)
+    ![final-navigation-solution](images/final-navigation-solution.gif)
 
 2. Click on the Kubernetes tile.
-![K8s-tile](images/K8s-tile.png)
+![K8s-tile](images/k8s-tile.png)
 
 3. Kubernetes Monitoring Solution page is displayed. You will see three clusters. 
     
@@ -83,7 +83,7 @@ In this lab, you will see step-by-step instructions to:
     - Topology chart shows nodes in red which Needs Attention. The red colour of each object in the topology indicates its status derived from warning events associated with the object or it's children.
     ![topology-needs-attention](images/topology-needs-attention.png)
     - In Pods by namespace section, review all the red coloured polygons representing problem pods grouped by namespace.
-    ![podsByNamesapce-needs-attention](images/podsByNamesapce-needs-attention.png)
+    ![podsByNamesapce-needs-attention](images/podsbynamespace-needs-attention.png)
 
 
 ### **Task 2.2:  View and compare metrics** ###
@@ -99,7 +99,7 @@ In this lab, you will see step-by-step instructions to:
 2.  Use scroll up and down to see different telemetry widgets.
 
     - To view all metrics widgets available in cluster, use arrow above first widget to move up and arrow below fourth widget to move down.
-    ![metrics-scrolling](images/Latest_MetricsScrolling.gif)
+    ![metrics-scrolling](images/latest-metrics-scrolling.gif)
     - **Exercise** : Scroll up/down telemetry widgets panel and view all metrics widgets in cluster view.
 
 3. Expand ***CPU cores (used/allocatable)*** metric widget.
@@ -288,7 +288,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Workload summary tile shows health of all workloads under namespace *wpexapp*.
 
     - Observe Workloads details panel, all the workloads running in the namespace *wpexapp* are listed grouped by workload types. Click on the Expand All checkbox, to view important details of filtered workload such as Namespace, Name, Status and Age. 
-    ![expandAll-workload-details](images/expandAll-workload-details.png)
+    ![expandAll-workload-details](images/expandall-workload-details.png)
 
     - Pods by workloads will show all the pods in the namespace *wpexapp*.
 
@@ -348,7 +348,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     ![node-status-table](images/node-status-table.png)
 
     - In the Node status section click on the Expand All checkbox to view the important details of filtered node such as Status, OS details, CPU, Memory details etc. in different columns of table. You may click on expand icon of node IP in table row to expand node details.
-    ![node-status-table-expandAll](images/node-status-table-expandAll.png)
+    ![node-status-table-expandAll](images/node-status-table-expandall.png)
 
     - You may filter out nodes based on status - *Not Ready* and *Has Issues* by selecting given radio buttons.
     ![node-status-table-filters](images/node-status-table-filters.png)
@@ -385,7 +385,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Hit Show All radio button to view all the pods running under filtered workload, node & namespace.
 
     - In the Pods status table check Expand All checkbox to view the important details such as Status, Node, Pod IP, Controller etc for the filtered pod. You may also click on the expand icon of pods in row to view these details. 
-    ![pod-table-expandAll-showAll](images/pod-table-expandAll-showAll.png)
+    ![pod-table-expandAll-showAll](images/pod-table-expandall-showall.png)
 
     - Pods section shows polygons for the pods running under filtered namespace *wpexapp*, workload *bitnami-wordpress* & Node IP *10.0.10.132*.
 
