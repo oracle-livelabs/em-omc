@@ -1,4 +1,4 @@
-# Kubernetes Monitoring Solution Deployment
+# Connect to the Kubernetes Cluster
 
 ## Introduction
 
