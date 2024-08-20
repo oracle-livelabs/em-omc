@@ -347,7 +347,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - The Node status table shows all the nodes in which the filtered workload *bitnami-wordpress* is running. By default Show All radio button is selected.
     ![node-status-table](images/node-status-table.png)
 
-    - In the Node status section click on the Expand All checkbox to view the important details of filtered node such as Status, OS details, CPU, Memory details etc. in different columns of table. You may click on expand icon of node IP in table row to expand node details.
+    - In the Node status section click on the Expand All checkbox to view the important details of filtered node such as Status, OS details, CPU, Memory details etc in different columns of table. You may click on expand icon of node IP in table row to expand node details.
     ![node-status-table-expandAll](images/node-status-table-expandall.png)
 
     - You may filter out nodes based on status - *Not Ready* and *Has Issues* by selecting given radio buttons.
