@@ -81,4 +81,4 @@ In the **Workload** tab, click on the **Namespaces** filter and select the names
 ## Acknowledgements
 * **Author** - Vikram Reddy, OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Heena Rahangdale , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, Jul, 2024
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2024

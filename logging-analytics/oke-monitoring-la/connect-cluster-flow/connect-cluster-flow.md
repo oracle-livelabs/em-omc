@@ -14,7 +14,7 @@ In this lab, you will see step-by-step instructions to:
 
 
 ## Task 1: Connect to the existing Kubernetes Cluster
-    <<<GIF TO BE UPLOADED>>>
+    <<<VIDEO TO BE UPLOADED>>>
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
@@ -23,6 +23,6 @@ In this lab, you will see step-by-step instructions to:
 You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Samarthya Sahu, OCI Logging Analytics
-* **Contributors** -  Vikram Reddy, Santhosh Kumar Vuda , OCI Logging Analytics
-* **Last Updated By/Date** - Samarthya Sahu, Aug, 2023
+* **Author** - Vikram Reddy, OCI Logging Analytics
+* **Contributors** -  Vikram Reddy, Heena Rahangdale , OCI Logging Analytics
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2024
