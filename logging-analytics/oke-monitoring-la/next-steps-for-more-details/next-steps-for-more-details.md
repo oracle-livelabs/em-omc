@@ -23,7 +23,7 @@ In this lab, you will see step-by-step instructions to:
 ## Task 1: Visualize the Pre-imported dashboards
 
   In the connect cluster flow, the solution creates dashboards for the target Kubernetes cluster. These dashboards are available in **CW24\_Logging\_Analytics** compartment for this exercise.
-  > **Note** : For a quick refresher on connect cluster flow [review Lab 1](?lab=log-explorer-gui).
+  > **Note** : For a quick refresher on connect cluster flow [review Lab 1](?lab=connect-cluster-flow).
 
   1. To navigate to the Dashboards page use one of the following method.
     - From Navigation Menu ![navigation-menu](images/navigation-menu.png) > **Observability & Management** > **Logging Analytics** > **Dashboards**.
@@ -102,4 +102,4 @@ In this lab, you will see step-by-step instructions to:
 ## Acknowledgements
 * **Author** - Vikram Reddy, OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Heena Rahangdale , OCI Logging Analytics
-* **Last Updated By/Date** - Vikram Reddy, Jul, 2024
+* **Last Updated By/Date** - Vikram Reddy, Aug, 2024
