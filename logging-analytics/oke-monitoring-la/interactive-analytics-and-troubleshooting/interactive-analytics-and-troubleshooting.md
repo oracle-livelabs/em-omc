@@ -10,12 +10,11 @@ Estimated Time: 15 minutes
 
 In this lab, you will see step-by-step instructions to:
 
-  - Troubleshoot Kubernetes Workload specific issues
-  - Troubleshoot Kuberntetes Scheduling issues 
-  - Troubleshoot Container specific issues 
+  - Troubleshoot Kubernetes Workload specific issues.
+  - Troubleshoot Kuberntetes Scheduling issues in workload.
 
 
-## Task 1: Understanding and troubleshooting ‘issues’ in workloads: in view logs/insights
+## Task 1: Understanding and troubleshooting application specific issue in workload.
    In this task we will review the pod(s) which has logged events due to the failure in the liveness probe.
    A liveness probe in Kubernetes is a diagnostic tool that checks if a container is running and functioning correctly. If a container fails its liveness probe repeatedly, the kubelet restarts the container. You can read more on different types of probe [here] (https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/).
 
@@ -40,7 +39,7 @@ In this lab, you will see step-by-step instructions to:
 
     ![expand-events-ns-demo-livenessprobe](images/expand-events-ns-demo-livenessprobe.png)
 
-## Task 2: Understanding and troubleshooting ‘pod/application’ issues: Pod logs 
+## Task 2: Understanding and troubleshooting scheduling specific issue in workload.
    In this task we will review the pod(s) which has logged events due to the problem in scheduling.
    Kubernetes scheduler selects an optimal node to run newly created or unscheduled pods.
    You can read more on Kubernetes scheduler [here] (https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/).
@@ -70,14 +69,12 @@ In this lab, you will see step-by-step instructions to:
     - **Message** of the event which provides the important insight on what prevented the Kuberentes Scheduler from scheduling the pod. For our use case the message states that Kubernetes has failed to schedule a pod due to insufficient cpu.
     ![expand-events-ns-demo-scheduling](images/expand-events-ns-demo-scheduling.png)
 
-## Task 3: Understanding and correlating metrics in ‘analyze’ view
-## Task 4: Excercise
+## Task 3: Excercise
 In the **Workload** tab, click on the **Namespaces** filter and select the namespace **demo-volumemount** & understand the issue.
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
-  - Troubleshooted Kubernetes Workload specific issues
-  - Troubleshooted Kuberntetes Scheduling issues 
-  - Troubleshooted Container specific issues 
+  - Troubleshooted Kubernetes Workload specific issues.
+  - Troubleshooted Kuberntetes Scheduling issues in workload.
 
   You may now proceed to the [next lab](#next).
 
