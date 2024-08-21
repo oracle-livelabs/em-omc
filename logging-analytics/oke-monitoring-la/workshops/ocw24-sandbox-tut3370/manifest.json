@@ -15,42 +15,42 @@
         {
             "title": "3887: How to use Log Explorer to analyze and visualize logs",
             "description": "This live lab outlines the steps required to use Log Explorer to analyze and visualize logs",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3887"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-log-explorer-for-analytics-and-visualizations/sprint-log-explorer-for-analytics-and-visualizations.md"
         },
         {
             "title": "3891: How to create a user defined Log Source in Logging Analytics",
             "description": "This live lab outlines the steps required to create a user defined Log Source in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3891"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-create-source/sprint-create-source.md"
         },
         {
             "title": "3895: How to create alerts on logs in Logging Analytics",
             "description": "This live lab outlines the steps required to create alerts on logs in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3895"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-alerts-on-logs-with-logging-analytics/sprint-alerts-on-logs-with-logging-analytics.md"
         },
         {
             "title": "3896: How to create an alert for Abnormal Oracle Database Termination events in Logging Analytics",
             "description": "This live lab outlines the steps required to create an alert for Abnormal Oracle Database Termination events in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3896"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-oracle-database-abnormal-termination/sprint-oracle-database-abnormal-termination.md"
         },
         {
             "title": "3899: How to create an alert for Kubernetes events and non-compliance policy in Logging Analytics",
             "description": "This live lab outlines the steps required to create an alert for Kubernetes events and non-compliance policy in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3899"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-container-image-pulled-manually/sprint-container-image-pulled-manually.md"
         },
         {
             "title": "3900: How to create an alert for a Windows DNS exfiltration event in Logging Analytics",
             "description": "This live lab outlines the steps required to create an alert for a Windows DNS exfiltration event in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3900"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-dns-exfiltration-on-windows-systems/sprint-dns-exfiltration-on-windows-systems.md"
         },
         {
             "title": "3901: How to create an alert for sensitive data access from suspicious IPs in Logging Analytics",
             "description": "This live lab outlines the steps required to create an alert for sensitive data access from suspicious IPs in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3901"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-suspicious-activity-and-data-exfiltration/sprint-suspicious-activity-and-data-exfiltration.md"
         },
         {
             "title": "3904: How to collect logs and performance data from Oracle Database tables in Logging Analytics",
             "description": "This live lab outlines the steps required to collect logs and performance data from Oracle Database tables in Logging Analytics",
-            "filename": "https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/view-workshop?wid=3904"
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-logs-from-db-tables/sprint-logs-from-db-tables.md"
         },
         {
             "title": "Need Help?",
