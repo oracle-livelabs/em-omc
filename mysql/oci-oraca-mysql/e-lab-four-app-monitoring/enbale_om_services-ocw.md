@@ -49,6 +49,12 @@ In this lab, you will see step-by-step instructions to:
 
     Total of 8 executions and all 8 executions got failed. This allows us to quickly identify the database query performance issues using OCI Database Management Service. 
 
+    **Note: The following tasks in the lab are optional. Proceed only if you have time left to complete them. If not, please watch the pre-recorded demo below, where we will show how OCI Application Performance Monitoring, Logging Analytics, and Database Management services help achieve end-to-end visibility for the Wine Cellar application**
+
+   Watch a video demonstration of end to end visibility of the application and its stack
+   [](youtube:7FbQWNoOykA)
+
+
 ## Task 2: Create an APM domain
 
 1.	From the OCI menu, select **Observability & Management** -> **Application Performance Monitoring** then **Administration**.
