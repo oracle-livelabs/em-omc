@@ -61,6 +61,10 @@ This lab assumes you have:
 <if type="rat-overview">
     - [emcc-mkplc-rat-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-rat-overview.zip)
 </if>
+<if type="hybrid-pdbaas">
+    - [emcc-mkplc-hybrid-pdbaas.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/-JqErQC8a-AiGJnd9ICNRE9dy8AiA-GEjYLAZEffy9qlGQMl0dOq34LPDhsVy_XS/n/omcinternal/b/EMWorkshopBucket/o/emcc-mkplc-hybrid-pdbaas.zip)
+</if>
+
 
 2.  Save in your downloads folder.
 
