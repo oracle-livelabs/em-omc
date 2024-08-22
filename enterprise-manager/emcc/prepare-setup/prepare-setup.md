@@ -50,7 +50,7 @@ This lab assumes you have:
     - [emcc-mkplc-lifecycle.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-lifecycle.zip)
 </if>
 <if type="migration-workbench">
-    - [emcc-mkplc-migration-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/tIfVdCiZsEO9_8FwmL6GZrXpViDWF7K5VBvwsIMXkadmSnZXWhVCIN6iut2z3oEV/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench.zip)
+    - [emcc-mkplc-migration-workbench.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-migration-workbench-v1.3.zip)
 </if>
 <if type="migration-workbench-adb">
     - [emcc-mkplc-migration-workbench-adb.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/zqv4ccIzpSf1XX2xm50vy6buPjOjKa-ABMWyuPeh96N7WIJWqx4wMAPSP-8UXt9e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench-adb.zip)
