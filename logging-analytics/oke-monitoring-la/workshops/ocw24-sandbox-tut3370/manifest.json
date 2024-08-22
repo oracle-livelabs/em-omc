@@ -1,11 +1,11 @@
 {
-    "workshoptitle": "Kubernetes and OKE Monitoring and Troubleshooting",
+    "workshoptitle": "Proactively Monitor Kubernetes, Oracle Database, and SaaS with Logging Analytics",
     "help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
-            "description": "Introduction to OKE Monitoring through OCI Logging Analytics",
-            "filename": "../../introduction/introduction.md"
+            "description": "Introduction to the OCI Logging Analytics",
+            "filename": "../../introduction-tutorial-3370/introduction-tutorial-3370.md"
         },
         {
             "title": "Get Started",
