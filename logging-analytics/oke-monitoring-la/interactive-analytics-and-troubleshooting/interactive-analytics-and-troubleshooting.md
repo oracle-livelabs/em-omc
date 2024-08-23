@@ -69,7 +69,7 @@ In this lab, you will see step-by-step instructions to:
     - **Message** of the event which provides the important insight on what prevented the Kuberentes Scheduler from scheduling the pod. For our use case the message states that Kubernetes has failed to schedule a pod due to insufficient cpu.
     ![expand-events-ns-demo-scheduling](images/expand-events-ns-demo-scheduling.png)
 
-## Task 3: Excercise
+## Task 3: Exercise
 In the **Workload** tab, click on the **Namespaces** filter and select the namespace **demo-volumemount** & understand the issue.
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:

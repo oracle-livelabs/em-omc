@@ -47,6 +47,7 @@ In this lab, you will see step-by-step instructions to:
 
   4. Click on the **Kubernetes Cluster Summary** dashboard. It will take few seconds for the dashboard widgets to load.
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
+      
       ![kubernetes-cluster-summary](images/kubernetes-cluster-summary.png)
 
   5. Selecting the OKE cluster to visualize the dashboards data. 
@@ -54,11 +55,15 @@ In this lab, you will see step-by-step instructions to:
         ![scope-filter-kubernetes-cluster-summary](images/scope-filter-kubernetes-cluster-summary.png)
       - A scope filter panel will be displayed.
         ![scope-filter-panel-kubernetes-cluster-summary.png](images/scope-filter-panel-kubernetes-cluster-summary.png)
-      - Select **oke-cw24** cluster in the **Kubernetes Cluster** field.
-        ![oke-cw24-kubernetes-cluster-field](images/oke-cw24-kubernetes-cluster-field.png) 
+      - Select **oke-cw24\_creation\_time** cluster in the **Kubernetes Cluster** field. The example cluster name format will be **oke-cw24_2024-07-16t11:18:48z**
+            
+          > **Note:** We add the creation time to the cluster while deploying the solution using [connect cluster flow of Lab 1](?lab=connect-cluster-flow) to uniquely identify the Kubernetes clusters with same name.
+        
+      ![oke-cw24-kubernetes-cluster-field](images/oke-cw24-kubernetes-cluster-field.png) 
          
   6. You should be able to see the all the widgets displaying the data specific to your OKE Cluster.
       > **Important tip** : Observe the dashboard widgets & values once they are loaded. Did you notice the change ?
+      
       ![kubernetes-cluster-summary-widgets](images/kubernetes-cluster-summary-widgets.png)
 
   7. Scroll down to the **Container Logs** widget in the dashboard.

@@ -13,7 +13,7 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster",
+            "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster (Optional Study)",
             "description": "This live lab outlines the steps required to connect to the Kubernetes Cluster for monitoring",
             "filename": "../../connect-cluster-flow/connect-cluster-flow.md"
         },
