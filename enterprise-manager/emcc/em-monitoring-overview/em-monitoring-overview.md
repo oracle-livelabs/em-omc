@@ -364,7 +364,7 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 
      **Prior to beginning:**
      
-     **1. Make sure you have been granted access to the named credentials for the target database $ora\_target\_name on which the FRA incident has occurred and for the host of the target**
+     **1. Make sure you have been granted access to the named credentials for the target database $ora\_target\_name on which the FRA incident has occurred and for the host of the target**\
      **2. Use that named credential values for the steps that require DB named credentials and host named credentials**
 
      ![Step 1 Final Edits - New Runbook](images/create-runbook-incident/overview-prereq-edits.png " ")  
