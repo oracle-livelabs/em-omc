@@ -74,7 +74,7 @@ Estimated time: Up to 10 minutes
      ![Oracle Cloud console, Cloud Shell](images/3-2-3-4-1-admessage.png " ")
 
 
-3. Go to cloud shell and execute and execute the command below to deploy the **AdMessage** application to the cluster.
+2. Go to cloud shell and execute and execute the command below to deploy the **AdMessage** application to the cluster.
 
     ``` bash
     <copy>
@@ -87,7 +87,7 @@ Estimated time: Up to 10 minutes
 
     ![Oracle Cloud console, Cluster details](images/3-2-3-4-admessage.png " ")
 
-4. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
+3. Run the kubectl command below to display the status of the pod creation. Wait until the statuses become 'Running'. This may take a few minutes.
 
     ``` bash
     <copy>
@@ -96,7 +96,7 @@ Estimated time: Up to 10 minutes
     ```
     ![Oracle Cloud console, Cloud Shell](images/3-2-3-5-admessage.png " ")
 
-5. Run the kubectl command below to display the deployed services.
+4. Run the kubectl command below to display the deployed services.
 
     ``` bash
     <copy>

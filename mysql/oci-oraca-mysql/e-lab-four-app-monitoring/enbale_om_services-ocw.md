@@ -63,13 +63,13 @@ In this lab, you will see step-by-step instructions to:
 2. Select the **devlive24** compartment from the dropdown and click Create APM domain 
 	![Oracle Cloud console Menu](images/5-1-2-apmdomain.png " ")
 
-4.	Name your APM domain as **apm-appdev** and select **devlive24** compartment from the dropdown. click **Create**.
+3.	Name your APM domain as **apm-appdev** and select **devlive24** compartment from the dropdown. click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/5-1-3-apmdomain.png " ")
 
-5. Press the refresh button periodically to check the status. This may take a few minutes.
+4. Press the refresh button periodically to check the status. This may take a few minutes.
   ![Oracle Cloud console, Create APM Domain](images/5-1-4-apmdomain.png  " ")
 
-6.	Once the job is completed, the status turns to Active with a green icon.
+5.	Once the job is completed, the status turns to Active with a green icon.
   ![Oracle Cloud console, Create APM Domain](images/5-1-5-apmdomain.png " ")
 
 
