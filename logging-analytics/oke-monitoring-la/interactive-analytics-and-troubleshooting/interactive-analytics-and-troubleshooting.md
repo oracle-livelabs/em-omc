@@ -1,4 +1,4 @@
-# Interactive Analytics and Troubleshooting
+# Lab 3 - Interactive Analytics and Troubleshooting
 
 ## Introduction
 

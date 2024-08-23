@@ -1,4 +1,4 @@
-# Connect to the Kubernetes Cluster (Optional Study)
+# Lab 1 - Connect to the Kubernetes Cluster (Optional Study)
 
 ## Introduction
 
