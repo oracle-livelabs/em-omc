@@ -13,44 +13,29 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Logging Analytics Overview (Optional Study)",
-            "description": "Logging Analytics Overview",
-            "filename": "../../loganalytics-explorer-gui/log-explorer-gui.md"
+            "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster (Optional Study)",
+            "description": "This live lab outlines the steps required to connect to the Kubernetes Cluster for monitoring",
+            "filename": "../../connect-cluster-flow/connect-cluster-flow.md"
         },
         {
-            "title": "Lab 2: Management Agent Overview",
-            "description": "This live lab outlines the overview of the Management Agent",
-            "filename": "../../management-agent-overview/management-agent-overview.md"
+            "title": "Lab 2: Monitor the existing Kubernetes Cluster solution",
+            "description": "This live lab outlines the steps for monitoring the Kubernetes Cluster",
+            "filename": "../../monitor-kubernetes-cluster/monitor-kubernetes-cluster.md"
         },
         {
-            "title": "Lab 3: Kubernetes Solution Installation",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
-            "filename": "../../kubernetes-solution-installation/kubernetes-solution-installation.md"
-        },
+            "title": "Lab 3: Interactive Analytics and Troubleshooting",
+            "description": "This live lab outlines the steps required to troubleshoot the issues occuring in the Kubernetes Cluster",
+            "filename": "../../interactive-analytics-and-troubleshooting/interactive-analytics-and-troubleshooting.md"
+        }, 
         {
-            "title": "Lab 4: Analyzing Logs",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
-            "filename": "../../analyzing-logs/analyzing-logs.md"
-        },
-        {
-            "title": "Lab 5: Designing Dashboards",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
-            "filename": "../../designing-dashboards/designing-dashboards.md"
-        },
-        {
-            "title": "Lab 6: Advanced Analytics with Drill Downs",
-            "description": "This live lab outlines the steps required to set up the data ingestion to Logging Analytics for Custom Application Containers",
-            "filename": "../../advanced-analytics/advanced-analytics.md"
-        },
+            "title": "Lab 4: Next Steps for more insights",
+            "description": "This live lab outlines the steps for getting the more insights of the Kubernetes Monitoring",
+            "filename": "../../next-steps-for-more-details/next-steps-for-more-details.md"
+        },  
         {
 
             "title": "Need Help?",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
-        },
-        {
-
-            "title": "Oracle CloudWorld 2023 - Support",
-            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
     ]
 }

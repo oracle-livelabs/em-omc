@@ -14,11 +14,11 @@ In this lab, you will see step-by-step instructions to:
 
 ## Task 1: Monitor MySQL HeatWave Database 
 
-1. From the OCI menu, select **Observability & Management** -> **Database Management** then **MySQL HeatWave**.
+1. From the OCI menu, select **Observability & Management** -> **Database Management** then **Diagnostics & Management**.
 
     ![Oracle Cloud console Menu](images/4-0-1-dbm.png " ")
 
-2. Select compartment **devliv24** to see the fleet Summary - showing MySQL HeatWave Database systems inventory, monitoring status, resource usage & alarms.
+2. Select compartment **devliv24** and click on "MySQL HeatWave" to see the fleet Summary - showing MySQL HeatWave Database systems inventory, monitoring status, resource usage & alarms.
 
     ![Oracle Cloud console Menu](images/4-0-2-dbm.png " ")
 
@@ -57,13 +57,13 @@ In this lab, you will see step-by-step instructions to:
 2. Select the **devlive24** compartment from the dropdown and click Create APM domain 
 	![Oracle Cloud console Menu](images/5-1-2-apmdomain.png " ")
 
-4.	Name your APM domain as **apm-appdev** and select **devlive24** compartment from the dropdown. click **Create**.
+3.	Name your APM domain as **apm-appdev** and select **devlive24** compartment from the dropdown. click **Create**.
   ![Oracle Cloud console, Create APM Domain](images/5-1-3-apmdomain.png " ")
 
-5. Press the refresh button periodically to check the status. This may take a few minutes.
+4. Press the refresh button periodically to check the status. This may take a few minutes.
   ![Oracle Cloud console, Create APM Domain](images/5-1-4-apmdomain.png  " ")
 
-6.	Once the job is completed, the status turns to Active with a green icon.
+5.	Once the job is completed, the status turns to Active with a green icon.
   ![Oracle Cloud console, Create APM Domain](images/5-1-5-apmdomain.png " ")
 
 

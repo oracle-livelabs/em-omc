@@ -1,0 +1,29 @@
+{
+  "workshoptitle": "Get started with MySQL HeatWave Machine Learning",
+    "help": "livelabs-help-oci_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "The Introduction is always second. The title and contents menu title match for the Introduction.",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1: Register and get HeatWave MySQL Environment Details",
+            "filename": "../../create-dbs/create-dbs.md"
+        },
+
+        {
+          "title": "Lab 2: Connect to MySQL HeatWave Database",
+          "filename": "../../connect-dbs/connect-dbs.md"
+        },
+
+        {
+            "title": "Lab 3: Build HeatWave ML with SQL",
+            "filename": "../../do-heatwave-ml/do-heatwave-ml.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common//labs/need-help/need-help-freetier.md"          }
+    ]
+}

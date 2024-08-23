@@ -21,9 +21,24 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/sql-insights.png " ")
 
-2. Click **DB time treemap** to view the tree map.
+2. Click **SQL activity loadmap** to view the tree map.
 
-      ![Left Pane](./images/sql-insights-treemap.png " ")      
+      ![Left Pane](./images/sql-insights-treemap.png " ")   
+
+3. Click the database **SALES-WT** to view **SQL Insights - Database: For database level insights**
+
+      ![Left Pane](./images/sales-wt-db.png " ")
+      ![Left Pane](./images/sales-wt-db-insights.png " ")
+
+      The Database analysis dashboard is designed to give a broad overview of the SQL workload executing in the database. This includes basic properties of the database and the SQL collected from it, including breakdowns of total time by command and module, and the ratio of time in SQL or PL/SQL. Insight tiles with counts of SQL with SQL having level insights quantify those issues at the database level. SQL activity is shown by day broken down by command type, exposing changes in workload over time. Execute to parse ratio and SQL count and invalidation charts expose important application properties over time.
+
+4. Click the SQL ID **4g97w9wwspvq0** to view **SQL Insights - SQL analysis: For SQL level insights**
+
+      ![Left Pane](./images/sql-id-sql-insights.png " ")
+
+      ![Left Pane](./images/sql-insights-sql-analysis.png " ")
+
+      This is the most granular level for SQL insights, at this level you can view a full picture of the performance properties of given SQL\_ID on a given database. This includes basic properties like the command type and text of the statement as well as average latency and execution frequency, and numerous other metrics from V$SQLSTATS. Insight tiles indicate whether the SQL level insights were true of the SQL_ID over the time period. Daily charts of total database time, average latency, and I/O enable deeper examination of the relationship of SQL plans to resource usage.
 
 ## Task 2: SQL Explorer
 
@@ -87,15 +102,11 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 10. In the second use case we will sum up all the Elapsed time per SQL ID across the fleet of Databases and then sort that in descending order.
 
-11. On the **Ops Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+11. Click on **Clear** to clear the query section.
 
-      ![SQL Explorer](./images/sql-explorer.png " ")
+      ![SQL Visualization](./images/sql-explorer-clear.png " ")
 
-12. This will take you to the **SQL Explorer** page.
-
-      ![SQL Explorer](./images/sql-explorer-main.png " ")
-
-13. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
+12. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
 
       ```
       <copy>SELECT DISPLAY_NAME,SQL_ID,sum(ELAPSED_TIME)
@@ -107,15 +118,15 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
       ![SQL Query](./images/sql-query1.png " ")
 
-14. Enter **1000** for **LIMIT** to limit 1000 records per page.
+13. Enter **1000** for **LIMIT** to limit 1000 records per page.
 
-15. Click **Run** to execute the query.
+14. Click **Run** to execute the query.
 
-16. This will display the query result in a tabular format.
+15. This will display the query result in a tabular format.
 
       ![SQL Output](./images/sql-query-table1.png " ")
 
-17. Under the **Visualization** tab on the right pane, select the following -
+16. Under the **Visualization** tab on the right pane, select the following -
 
       **Chart type** : **Bar Chart**
 

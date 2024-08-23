@@ -51,7 +51,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/awr-hub01.png " ")
 
-3.  Click More (vertical ellipses) in the last column to display the pop-up menu and select **Launch AWR Explorer**.
+3.  Click More (vertical ellipses) in the last column for **SRC1** database to display the pop-up menu and select **Launch AWR Explorer**.
 
       ![Left Pane](./images/awr-hub03.png " ")
 
@@ -89,6 +89,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/awr-hub-show-histogram.png " ")
 
+
       * **Activity**: This tab enables you to view the performance trend of the database by selecting an Average Active Sessions dimension and viewing the top activity for that dimension in the selected time range. You can also scroll down to view the top activity by additional dimensions based on the dimension selected in the **Average Active Sessions** chart.
 
       ![Left Pane](./images/awr-hub06.png " ")
@@ -114,4 +115,4 @@ This lab assumes you have completed the following labs:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, May 2023
+- **Last Updated By/Date** - Vivek Verma, Jul 2024
