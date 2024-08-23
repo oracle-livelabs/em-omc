@@ -41,9 +41,9 @@ This lab assumes you have:
   |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**  | Enterprise Summary                              | 5 minutes       | Explore Enterprise Summary page and drill down to see a list of down targets. View the list of critical incidents created for the down targets. Filter the Status pane to display a list of Database Instance targets.                         | Enterprise Summary enables you to get complete visibility into the overall status and health of your managed environment.                                                                                                                                                                                                                                            |
   | **2**  | Incident Manager                                | 10 minutes       | Triage unassigned incidents from Incident Manager and acknowledge then assign an incident.                                                 | Incident Manager enables IT Staff to manage, track, and resolve actionable incidents in a collaborative way.|                                                                                                                                        
-  | **3A**  | Dynamic Runbooks                               | 10 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
-  | **3B**  | Dynamic Runbooks                               | 20 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
-   | **3C**  | Dynamic Runbooks                               | 10 minutes       | Start a Dynamic Runbook session against a metric in the All Metrics page.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
+  | **3A**  | Use Dynamic Runbooks for Incidents                             | 10 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
+  | **3B**  | Create Dynamic Runbooks for Incidents                              | 20 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
+   | **3C**  | Use Dynamic Runbooks for Metrics                               | 10 minutes       | Start a Dynamic Runbook session against a metric in the All Metrics page.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
    | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
   | **5**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **6**  | Metric Extensions                          | 5 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -183,7 +183,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
      ![Incident Manager, Incident Dashboard](images/incident-manager/incident-fatal-filtered.png " ")
 
      
-## Task 3A: Dynamic Runbooks
+## Task 3A: Use Dynamic Runbooks for Incidents
 
 For this task, an Incident-Based Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated **INCIDENT**.
 
@@ -318,9 +318,9 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
      ![Actions - Complete Runbook Session](images/start-runbook-incident/runbook-sessions.png " ")
      
 
-## Task 3B: Dynamic Runbooks
+## Task 3B: Create Dynamic Runbooks for Incidents
 
-For this task, a Dynamic Runbook *draft* has already been created in the context of an incident. You will go through the process of modifying the Runbook and later publishing it to be used by others.
+For this task, a Dynamic Runbook **draft** has already been created in the context of an incident. You will go through the process of modifying the Runbook and later publishing it to be used by others.
 
 Runbooks are documented best practice procedures in the form of ordered steps that IT staff follow to prevent or resolve an issue. To create a Dynamic Runbook, you can create it in context of an incident or metric. This runbook in development is called a runbook draft. The runbook draft will contain the incident or metric context against which you can develop and test the runbook steps. Once runbook creation and testing are completed, the runbook can be published for general use.
 
@@ -536,7 +536,7 @@ Runbooks are documented best practice procedures in the form of ordered steps th
      ![Actions on Published Runbook - New Runbook](images/create-runbook-incident/actions.png " ")
 
 
-## Task 3C: Dynamic Runbooks
+## Task 3C: Use Dynamic Runbooks for Metrics
 
 For this task, a Metric-Based Dynamic Runbook has already been published for you to use. You will go through the process of starting a Runbook session against a designated **METRIC**.
 
@@ -1534,4 +1534,4 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 - **Author** - Karilyn Loui, Oracle Enterprise Manager Product Management
 - **Contributing Author** - Ana McCollum, Daniel Suherman, Murtaza Husain, Desiree Abrokwa, Oracle Enterprise Manager Product Management
 - **Adapted for Cloud** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [July 2024]
+- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [August 2024]
