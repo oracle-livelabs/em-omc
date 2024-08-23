@@ -1,4 +1,4 @@
-# Monitor the existing Kubernetes Cluster solution
+# Monitor the existing Kubernetes Cluster Solution
 
 ## Introduction
 
@@ -29,12 +29,10 @@ In this lab, you will see step-by-step instructions to:
 2. Click on the Kubernetes tile.
 ![K8s-tile](images/k8s-tile.png)
 
-3. Kubernetes Monitoring Solution page is displayed. You will see three clusters. 
-    
-    The clusters of interest for this Live Lab are  :
+3. Kubernetes Monitoring Solution page is displayed. You will see two clusters -
+
     - ***education-eks-rQNmdNI7*** : An AWS EKS cluster. We support multi-cloud Kubernetes clusters to monitor their logs.
     - ***oke-cw24*** : An OCI OKE Cluster.
-
     ![solutions-table](images/solutions-table.png)
 
 4. In the Kubernetes Monitoring Solution page, click the ***oke-cw24*** cluster.
@@ -70,11 +68,13 @@ In this lab, you will see step-by-step instructions to:
   
     - Observe second tile in left summary panel, it displays the number of namespaces in kubernetes cluster. You can check all namespaces in cluster by reviewing the topology view Namespace tier.
     ![namespace-tile](images/namespace-tile.png)
-    - Third tile shows total number of workloads with the overall percentage of workloads which needs attention. Objects with associated warning events are flagged as Needs Attention. You can also see the breakdown of workload types & percentage of workload type that needs attention.
+    - Third tile shows total number of workloads with the overall percentage of workloads which needs attention. You can also see the breakdown of workload types & percentage of workload type that needs attention.
+    Objects with associated warning events are flagged as Needs Attention.
     ![workload-tile](images/workload-tile.png)
     - Fourth tile shows the number of Nodes along with percentage of nodes that needs attention due to warning events.
     ![nodes-tile](images/nodes-tile.png)
-    - Last tile in left panel shows number of Pods along with percentage of problem pods which needs attention. All pods grouped by namespace are displayed in *Pods by namespace* section.
+    - Last tile in left panel shows number of Pods along with percentage of problem pods which needs attention.
+    - All pods grouped by namespace are displayed in *Pods by namespace* section. This section shows only the namespaces that contain pods, which could be fewer than those shown in left summary panel namespaces tile.
     ![pods-tile](images/pods-tile.png)
 
 4. Understand how many objects need attention in cluster.
@@ -204,7 +204,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Hit Add to filters option, *wpexapp* will be added to Namespace filter in top right corner. Observe the topology view reflecting changes in objects in the namespace which includes workloads and nodes.
     ![ns-filtered-topology](images/ns-filtered-topology.png)
     - Notice Left panel tiles showing object counts corresponding to filtered namespace.
-    Also, Pods by workload section gets updated to show pods grouped by workloads under filtered namespace - *wpexapp*.
+    Also, Pods by namespace section is now changed to Pods by workload section and it shows pods grouped by workloads under filtered namespace - *wpexapp*.
     ![ns-filtered-summary-pods](images/ns-filtered-summary-pods.png)
 
 2. Observe changes in telemetry panel and compare metrics.
@@ -215,16 +215,20 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
 3. View logs for different topology nodes including pods.
 
-    - **Prerequisite** : Update time range to 24 hours.
+    - **Prerequisite** : Update time range to 24 hours and retain the ***wpexapp*** namespace in namespace filter.
 
     - View logs for cluster node in topology.
         
         - In topology right click on main cluster node and hit View logs on context menu.
         ![cluster-viewlogs](images/cluster-viewlogs.png)
-        - A Visualization pops up which helps identifying new issues in logs in the selected time range, at cluster level.Review errors in table records and corresponding details of log sources, issue counts and others in different columns.
-        ![cluster-viewlogs-panel](images/cluster-viewlogs-panel.png)
-        - These are the issues found in the selected time range but are not present in the baseline time range specified for the analysis(last 12 hours).Hover info icon for more details.
+        - A Visualization pops up which helps identifying New issues in logs in the selected time range, at cluster level.
+        - These are the issues found in the selected time range but are not present in the baseline time range specified for the analysis(last 12 hours). Hover info icon for more details.
         ![cluster-viewlogs-panel-info](images/cluster-viewlogs-panel-info.png)
+        - This view also shows New Outliers found in the selected set of logs. Outliers are the log records that occurred only once in the current range and not occurred in the baseline. An outlier may or may not be an issue. This visualization summarizes the number of log records used in the analysis, total number of unique log clusters identified, and the number of log sources in which issues were detected.
+        - Review errors in table records and corresponding details of log sources, issue counts and others in different columns.
+        By default, the Show Issues option is selected for the table. You may select Show Outliers to view the details of the outliers.
+        ![cluster-viewlogs-panel](images/cluster-viewlogs-panel.png)
+       
         - Collapse this logs panel using collapse icon at top right corner.
             
 
@@ -237,29 +241,29 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
         - Collapse this logs panel using collapse icon at top right corner.
 
 
-    - View logs for ***wordpress*** workload in ***wpexapp*** namespace.
+    - View logs for a workload in ***wpexapp*** namespace.
 
-        -  In topology in Workloads tier right click on  *wordpress* and hit View logs on context menu.
+        -  In topology in Workload tier right click on any workload and hit View logs on context menu.
         ![workload-viewlogs](images/workload-viewlogs.png)
-        - A panel pops up which helps identifying new issues for *wordpress* workload under *wpexapp* namespace in the selected time range. Review issues in Cluster Sample column and other columns to view details of error log sources, issue counts, etc.
+        - A panel pops up which helps identifying new issues for this workload under *wpexapp* namespace in the selected time range. Review issues in Cluster Sample column and other columns to view details of error log sources, issue counts, etc.
         ![workload-viewlogs-panel](images/workload-viewlogs-panel.png)
         - Collapse this panel.
         
 
-    - View logs for ***10.0.10.211*** Node in ***wpexapp*** namespace.
+    - View logs for a Node in ***wpexapp*** namespace.
 
-        - In topology in Node tier right click on *10.0.10.211* and hit View logs on context menu.
+        - In topology in Node tier right click on any Node and hit View logs on context menu.
         ![node-viewlogs](images/node-viewlogs.png)
-        - A panel pops up which helps identifying new issues for *10.0.10.211* node under *wpexapp* namespace in the selected time range. Review table records for issue details.
+        - A panel pops up which helps identifying new issues for this Node under *wpexapp* namespace in the selected time range. Review table records for issue details.
         ![node-viewlogs-panel](images/node-viewlogs-panel.png)
         - Collapse this panel.
 
 
-    - View logs for pods from Pods by namespace section.
+    - View logs for pods from Pods by workload section.
 
-        - Pods by namespace section right click on *wordpress-5ff998994b-85hh4* pod and hit View logs on context menu.
+        - In Pods by workload section right click on any pod polygon and hit View logs on context menu.
         ![pods-viewlogs](images/pods-viewlogs.png)
-        - A panel pops up which helps identifying new issues for *wordpress-5ff998994b-85hh4* pod in *wpexapp* namespace in the selected time range. Review table records for issue details.
+        - A panel pops up which helps identifying new issues for this pod in *wpexapp* namespace in the selected time range. Review table records for issue details.
         ![pods-viewlogs-panel](images/pods-viewlogs-panel.png)
         - Collapse this panel.
 
@@ -272,7 +276,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
 ### **Task 3.1: Understand Workload View** ###
 
-1. **Prerequisite** : Retain the ***wpexapp*** namespace in namespace filter from cluster view.
+1. **Prerequisite** : Retain the ***wpexapp*** namespace in namespace filter from cluster view & change time range to 60 min.
 
 2. Understand Workload tab details with ***wpexapp*** Namespace filter only.
     
@@ -281,7 +285,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - The workload view in the context of the filtered namespace *wpexapp* is displayed.
 
-    - Observe in the Workload view Topology panel is replaced by Workload details table & Topology summary by Workload summary, other section remains same as cluster view.
+    - Observe in the Workload view Topology panel is replaced by Workload details table & Topology summary by Workload summary, other sections remains same as cluster view.
      ![workload-view](images/workload-view.png)
 
     - Notice left summary panel is updated and each tile will show details specific to the namespace *wpexapp*.
@@ -291,12 +295,13 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Observe Workloads details panel, all the workloads running in the namespace *wpexapp* are listed grouped by workload types. Click on the Expand All checkbox, to view important details of filtered workload such as Namespace, Name, Status and Age. 
     ![expandAll-workload-details](images/expandall-workload-details.png)
 
-    - Pods by workloads will show all the pods in the namespace *wpexapp*.
+    - Pods by workloads will show all the pods grouped by all workloads in the namespace *wpexapp*.
 
     - Telemetry Panel will show the data now in the context of the namespace *wpexapp*. Use the arrows above first & below the fourth widget to view all the widgets.
 
-    - Events section will now show all events logged under *wpexapp* namespace.
+    - Events section will now show all events logged under *wpexapp* namespace. If no events visible for last 60 minutes, try adjusting the time range to 24 hrs.
       ![workload-view-events](images/workload-view-events.png)
+
 
 ### **Task 3.2: Incrementally add workloads (running in "wpexapp") to workload filter and nodes to nodes filter in workload tab.** ###
     
@@ -305,7 +310,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Click on the Workloads filter.
     ![workload-filter-list](images/workload-filter-list.png)
     
-    - Select the item *bitnami-wordpress*.
+    - Select a workload from the list.
      ![workload-filter-wordpress](images/workload-filter-wordpress.png)
 
 2.  Add a node running in ***wpexapp*** to Node filter.
@@ -313,7 +318,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Click on the Node filter, node associated with filtered workload will be listed. 
       ![node-filter-list](images/node-filter-list.png) 
 
-    - Select the Node IP from the list - *10.0.10.132*
+    - Select a Node IP from the list.
       ![node-filter-selected](images/node-filter-selected.png)
 
 ### **Task 3.3: Check Workload details and status in Workload Tab** ###
@@ -322,12 +327,12 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - Observe left summary panel tiles updated as per applied namespace, workload & node filter.
 
-    - Observe Workloads details table, filtered workload *bitnami-wordpress* running in the namespace *wpexapp* is listed grouped by workload type. 
+    - Observe Workloads details table, filtered workload running in the namespace *wpexapp* is listed grouped by workload type. 
 
     - Click on the Expand All checkbox, to view important details of filtered workload such as Namespace, Name, Status and Age.
     ![workload-tab-all-filters](images/workload-tab-all-filters.png)
     
-    - Pods by workload section now shows pods associated with filtered workload  *bitnami-wordpress*.
+    - Pods by workload section now shows pods associated with filtered workload.
     
     - Observe changes in Metric widgets in telemetry panel on applying workload filter. Use the arrows in widget panel to view all the widgets.
 
@@ -341,20 +346,20 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Click on the Node tab. 
       ![node-tab](images/node-tab.png)
 
-    - The node view in the context of the Namespace *wpexapp*, Workload *bitnami-wordpress* & Node IP *10.0.10.132* in the cluster will be displayed.
+    - The Node view in the context of the filtered namespace, workload & node will be displayed.
 
-    - In the Node view Workload details panel is replaced by Node status panel, Pods by workload section is replaced by Pods by node & Workload summary by Node summary.
+    - In the Node view, Workload details panel is replaced by Node status panel, Pods by workload section is replaced by Pods by node & Workload summary by Node summary.
 
-    - The Node status table shows all the nodes in which the filtered workload *bitnami-wordpress* is running. By default Show All radio button is selected.
+    - The Node status table shows all the nodes in which the filtered workload is running. By default Show All radio button is selected.
     ![node-status-table](images/node-status-table.png)
 
-    - In the Node status section click on the Expand All checkbox to view the important details of filtered node such as Status, OS details, CPU, Memory details etc in different columns of table. You may click on expand icon of node IP in table row to expand node details.
+    - In the Node status section, click on the Expand All checkbox to view the important details of filtered node such as Status, OS details, CPU, Memory details etc in different columns of table. You may click on expand icon of node IP in table row to expand node details.
     ![node-status-table-expandAll](images/node-status-table-expandall.png)
 
     - You may filter out nodes based on status - *Not Ready* and *Has Issues* by selecting given radio buttons.
     ![node-status-table-filters](images/node-status-table-filters.png)
 
-    - Pods by node section shows the pods running in the node  *10.0.10.132*
+    - Pods by node section shows the pods running in the filtered node.
     ![pods-by-node](images/pods-by-node.png)
 
     - Observe the changes in telemetry panel on applying filter on node.
@@ -373,22 +378,22 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
     - Click on the Pod tab.
     ![pod-tab](images/pod-tab.png)
 
-    - The Pod view in the context of the the namespace *wpexapp*, workload *bitnami-wordpress* & Node IP *10.0.10.132* is displayed.
+    - The Pod view in the context of the filtered namespace, workload & node will be displayed.
     
-    - In the Pod view Node status panel is replaced by Pods status panel, Pods by node section is replaced by Pods &  Node summary by Pod summary. 
+    - In the Pod view, Node status panel is replaced by Pods status panel, Pods by node section is replaced by Pods &  Node summary by Pod summary. 
     ![pod-view-details](images/pod-view-details.png)
 
-    - The Pod status table shows all the pods associated with filtered workload *bitnami-wordpress*.
+    - The Pod status table shows all the pods associated with filtered workload.
     You may filter the pods based on status by selecting given radio buttons - *Failed*, *Succeeded*, *Pending* & *Running*.
     By default, all pods with Failed status are shown. 
     ![pods-status-filters](images/pods-status-filters.png)
 
     - Hit Show All radio button to view all the pods running under filtered workload, node & namespace.
 
-    - In the Pods status table check Expand All checkbox to view the important details such as Status, Node, Pod IP, Controller etc for the filtered pod. You may also click on the expand icon of pods in row to view these details. 
+    - In the Pods status table, check Expand All checkbox to view the important details such as Status, Node, Pod IP, Controller etc for the filtered pod. You may also click on the expand icon of pods in row to view these details. 
     ![pod-table-expandAll-showAll](images/pod-table-expandall-showall.png)
 
-    - Pods section shows polygons for the pods running under filtered namespace *wpexapp*, workload *bitnami-wordpress* & Node IP *10.0.10.132*.
+    - Pods section shows polygons for the pods running under filtered namespace, workload & corresponding node.Hover over pod polygon to view details.
 
     - Observe the changes in telemetry panel on applying filters.
 
