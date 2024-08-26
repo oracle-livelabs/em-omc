@@ -96,11 +96,16 @@ In this lab, you will see step-by-step instructions to:
 
   4. Similarly you can explore other widgets in the Kubernetes Cluster Summary and other dashboards. 
 
+
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
   - Visualized Pre-imported dashboards
   - Visualized data in the Log Explorer
   
   This concludes the workshop.
+
+## Learn More
+  * [How to use Log Explorer to analyze and visualize logs](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3887)  
+
 
 ## Acknowledgements
 * **Author** - Vikram Reddy, OCI Logging Analytics
