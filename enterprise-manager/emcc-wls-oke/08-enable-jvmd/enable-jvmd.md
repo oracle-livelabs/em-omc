@@ -20,7 +20,7 @@ A limitation deploying a JVMD agent to a WebLogic Server, which is already provi
 
 Estimated time: 25 minutes
 
-* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
+* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
 * Completion of the preceding tutorials in this workshop
 
 
@@ -419,7 +419,7 @@ In this workshop you’ve learned how to add Kubernetes load balancer services t
 
 Oracle Enterprise Manager Cloud Control is an on-premises based solution that can provide a monitoring solution for Oracle WebLogic Servers deployed either on on-premises, or in a Kubernetes cluster in the Oracle Cloud or in other cloud platforms.
 
-Additionally, you can configure **Oracle Cloud Infrastructure Application Performance Monitoring (APM)** Java Agent and monitor traces and spans of the WebLogic based application runs on Kubernetes. Refer to **[Oracle LiveLabs Use OpenTracing for WebLogic on Kubernetes utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** workshop for details.
+Additionally, you can configure **Oracle Cloud Infrastructure Application Performance Monitoring (APM)** Java Agent and monitor traces and spans of the WebLogic based application runs on Kubernetes. Refer to **[Oracle LiveLabs Use OpenTracing for WebLogic on Kubernetes utilizing Oracle Application Performance Monitoring](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** workshop for details.
 
 
 
