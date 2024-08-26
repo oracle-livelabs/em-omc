@@ -21,7 +21,7 @@ In this lab, you will see step-by-step instructions to:
 
 1. To navigate to Solutions page, follow one of the below two methods.
 
-    - **Method 1** - Open url : https://cloud.oracle.com/loganalytics/solutions?region=us-phoenix-1&tenant=emdemo
+    - **Method 1** - Direct url : https://cloud.oracle.com/loganalytics/solutions?region=us-phoenix-1&tenant=emdemo
 
     - **Method 2** - From Navigation Menu > **Observability & Management** > **Logging Analytics** > **Solutions**.
     ![final-navigation-solution](images/final-navigation-solution.gif)
@@ -97,7 +97,7 @@ In this lab, you will see step-by-step instructions to:
     ![cpucore-metrics](images/cpucore-metrics.png)
     - There are total 17 metrics widgets available in cluster view. For details of metrics widgets refer [here](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/kubernetes-solution.html).
 
-2.  Scroll Metrics widgets in Telemetry panel using arrow buttons
+2.  Scroll Metrics widgets in Telemetry panel using arrow buttons.
 
     - To view all metrics widgets available in cluster, use arrow above first widget to move up and arrow below fourth widget to move down.
     ![metrics-scrolling](images/latest-metrics-scrolling.gif)
@@ -199,7 +199,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
 1. Filter ***wpexapp*** namespace from topology to see workloads, nodes and pods for this namespace.
 
-    - In Topology diagram, in Namespace tier search for node with name - *wpexapp* and right click on it.
+    - In Topology diagram, in Namespace tier search for node with name - *wpexapp* and **right click** on it.
     ![add-ns-filter](images/add-ns-filter.png)
     - Hit Add to filters option, *wpexapp* will be added to Namespace filter in top right corner. Observe the topology view reflecting changes in objects in the namespace which includes workloads and nodes.
     ![ns-filtered-topology](images/ns-filtered-topology.png)
@@ -219,7 +219,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - View logs for cluster node in topology.
         
-        - In topology **right click** on main cluster node and hit View logs on context menu.
+        - In topology **right click** on main cluster node and hit **View logs** on context menu.
         ![cluster-viewlogs](images/cluster-viewlogs.png)
         - A Visualization pops up which helps identifying New issues in logs in the selected time range, at cluster level.
         - These are the issues found in the selected time range but are not present in the baseline time range specified for the analysis(last 12 hours). Hover info icon for more details.
@@ -234,7 +234,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - View logs for ***wpexapp*** namespace node in topology.
 
-        - In topology view Namespace tier right click on *wpexapp* and hit View logs on context menu.
+        - In topology view Namespace tier **right click** on *wpexapp* and hit **View logs** on context menu.
         ![ns-viewlogs](images/ns-viewlogs.png)
         - A panel pops up which helps identifying new issues under *wpexapp* namespace in the selected time range. Review errors in records and corresponding details of log sources, issue counts and others in different columns.
         ![ns-viewlogs-panel](images/ns-viewlogs-panel.png)
@@ -243,7 +243,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - View logs for a workload in ***wpexapp*** namespace.
 
-        -  In topology in Workload tier right click on any workload and hit View logs on context menu.
+        -  In topology in Workload tier **right click** on any workload and hit **View logs** on context menu.
         ![workload-viewlogs](images/workload-viewlogs.png)
         - A panel pops up which helps identifying new issues for this workload under *wpexapp* namespace in the selected time range. Review issues in Cluster Sample column and other columns to view details of error log sources, issue counts, etc.
         ![workload-viewlogs-panel](images/workload-viewlogs-panel.png)
@@ -252,7 +252,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - View logs for a Node in ***wpexapp*** namespace.
 
-        - In topology in Node tier right click on any Node and hit View logs on context menu.
+        - In topology in Node tier **right click** on any Node and hit **View logs** on context menu.
         ![node-viewlogs](images/node-viewlogs.png)
         - A panel pops up which helps identifying new issues for this Node under *wpexapp* namespace in the selected time range. Review table records for issue details.
         ![node-viewlogs-panel](images/node-viewlogs-panel.png)
@@ -261,7 +261,7 @@ Events section displays the State changes occurring in Kubernetes Cluster in the
 
     - View logs for pods from Pods by workload section.
 
-        - In Pods by workload section right click on any pod polygon and hit View logs on context menu.
+        - In Pods by workload section **right click** on any pod polygon and hit **View logs** on context menu.
         ![pods-viewlogs](images/pods-viewlogs.png)
         - A panel pops up which helps identifying new issues for this pod in *wpexapp* namespace in the selected time range. Review table records for issue details.
         ![pods-viewlogs-panel](images/pods-viewlogs-panel.png)
