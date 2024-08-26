@@ -17,10 +17,12 @@ In this lab you will learn:
 | **Step No.** | **Feature**                                   | **Approx. Time** | **Details**                                                                                                                                                                                                                    | **Value proposition**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1**  | Performance Hub                               | 15 minutes       | Oracle Enterprise Manager 13c includes a new Jet based unified Performance Hub Jet interface for performance monitoring.                                                                                           | Performance Hub is a single pane of glass view of database performance with access to Active Session History (ASH) Analytics, Real-time SQL Monitoring and SQL Tuning together. The time picker allows the administrator to switch between Real-Time and Historical views of database performance.                                                                                                                                                                                                                                                                      |
-| **2**  | Real-time Database Operation Monitoring       | 10 minutes       | Real-Time Database Operations Monitoring, introduced in Oracle Database 12c, enables an administrator to monitor long running database tasks as a composite business operation.                                                | Developers and DBAs can define business operations for monitoring by explicitly specifying the start and end of an operation or implicitly with tags that identify the operation.                                                                                                                                                                                                                                                                                                                                                                                              |
-| **3**  | Tuning a SQL in a Pluggable Database (PDB)                         | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
-| **4**  | SQL Performance Analyzer Optimizer Statistics | 10 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c with Oracle Database 18c. | SQL Performance Analyzer gathers Oracle Database Optimizer statistics for validation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| **5**  | Database Workload Replay                      | 10 minutes       | The objective of this activity is to is to demonstrate and use the Database Replay functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c and Oracle Database 18c.                | **Scenario:** You've been asked to add three new indexes for an application, but before adding, you want proof that database performance is improved. Use of SQL Performance Analyzer (SPA) isn't enough because there is also the cost of maintaining the indexes. Replay will be performed against the **Sales** Container Database and changes need to be performed in the OLTP Container against the **DWH\_TEST** schema. The database version is 18c so the capture and replay are performed using a CDB. |
+| **2**  | Top Activity Lite                               | 5 minutes       | Top Activity Lite is a new feature introduced in 13c RU 15 to provide optimal response time for real-time monitoring for performance monitoring.                                                                                           | Top Activity Lite feature is a simplified version of Performance Hub, optimized for quick response under heavy loads while providing key performance diagnostics information through simple and effective  visualization. This feature helps DBAs monitor their database using a Network Operations Center (NOC) like screen.                                                                                                                                                                                                                                                                      |
+| **3**  | Real-time Database Operation Monitoring       | 10 minutes       | Real-Time Database Operations Monitoring, introduced in Oracle Database 12c, enables an administrator to monitor long running database tasks as a composite business operation.                                                | Developers and DBAs can define business operations for monitoring by explicitly specifying the start and end of an operation or implicitly with tags that identify the operation.                                                                                                                                                                                                                                                                                                                                                                                              |
+| **4**  | Tuning a SQL in a Pluggable Database (PDB)                         | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
+| **5**  | SQL Performance Analyzer Optimizer Statistics | 10 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c with Oracle Database 19c. | SQL Performance Analyzer gathers Oracle Database Optimizer statistics for validation.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **6**  | Database Workload Replay                      | 10 minutes       | The objective of this activity is to demonstrate and use the Database Replay functionality of Real Application Testing capabilities in Oracle Enterprise Manager Cloud Control 13c and Oracle Database 19c.                | **Scenario:** You've been asked to add three new indexes for an application, but before adding, you want proof that database performance is improved. Use of SQL Performance Analyzer (SPA) isn't enough because there is also the cost of maintaining the indexes. Replay will be performed against the **Sales** Container Database and changes need to be performed in the OLTP Container against the **DWH\_TEST** schema. The database version is 18c so the capture and replay are performed using a CDB. |
+| **7**  | ADDM Spotlight (Read-only)                     | 10 minutes       | The objective of this activity is to demonstrate the steps to use ADDM Spotlight in Oracle Enterprise Manager Cloud Control 13c               | ADDM Spotlight is a great tool to use when the data is more than an hour, ideally a week of ADDM findings and recommendations to find out the most common recommendations along with their impact and benefits. Enables DBAs to have confidence in implementing the recommendations mentioned by ADDM Spotlight |
 
 
 ### Prerequisites
@@ -84,25 +86,25 @@ Select between *Task 1A* and *Task 1B*
 
 1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
 
-    ![](images/emffvlab2step1.png " ")
+    ![Navigating to the Databases](images/emffvlab2step1.png " ")
 
 2. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
-    ![](images/emffvlab2step2.png " ")
+    ![Select the database](images/emffvlab2step2.png " ")
 
-    ![](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+    ![EM DB Home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
 
 3.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
 
-    ![](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
+    ![Containers tab on DB Home page](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
 
 4.  Notice that the PSALES database is the busiest. We focus our attention to this PDB. Let us now navigate to Performance Hub. Select Performance Hub from the Performance Menu and Click on ASH Analytics and use the sales\_system credential name from the database login screen.
 
-    ![](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
+    ![Navigate to ASH Analytics](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
 
-    ![](images/d4ec276ea05aceb2ff86f5b7ea71c36e.jpg " ")
+    ![DB Login page](images/d4ec276ea05aceb2ff86f5b7ea71c36e.jpg " ")
 
-    ![](images/58e81976fa9957ee57f89139a06c4841.jpg " ")
+    ![Performance Hub page](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
 
 5. Make sure to slide the time picker on an area of high usage (e.g., CPU, IO or Waits). Notice how the corresponding selected time window also changes in the summary section. You can also resize the slider to entirely cover the time period of your interest.
 
@@ -110,39 +112,82 @@ Select between *Task 1A* and *Task 1B*
 
     Wait class isn’t the only dimension you can drill into the performance issue by. Let us say you wanted to identify the SQL that was causing the biggest performance impact. You can do that by Clicking the drop down list and changing the top dimension from wait class to SQL ID.
 
-6. Select the SQL ID dimension from the list of available dimensions (Under Top Dimensions) using the dropdown box that is currently displaying Wait Class. Top Dimensions SQL ID
+6. Select the SQL ID dimension from the list of available dimensions (Under Top Dimensions) using the dropdown box that is currently displaying Wait Class. Top Dimensions SQL ID. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see SQL text of this SQL. Now using the same list of filters you can choose multiple dimensions.
 
-    ![](images/32b079f89c002058721d0c8a3e41f993.jpg " ")
+    ![Dimensions list on Performance Hub page](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
+	
+    You have an option to save the performance hub report for offline analysis
 
-7. Hover your mouse on top of the SQL (one at the bottom) and you will be able to see how much activity is consumed by this SQL. Now using the same list of filters select the PDB dimension. Session Identifiers PDB.
+    ![Save Report on Performance Hub page](images/perfhubsavereport.png " ")
 
-    ![](images/95cce3b331aa85fc893b8eecc9a6c0a6.jpg " ")
 
-8. What do you see? The chart changes to activity by the different pluggable databases created in this Container database.Click on the **PSALES** pluggable database on the list to add it to the filter by list and drilldown to activity by this PDB on the same page.
+7. Click on the SQL Monitoring Tab
 
-    ![](images/384fdb12e234cbc0d60df1639079dc3e.jpg " ")
+      ![SQL Monitoring](images/sqlmonitoring.jpg " ")
 
-    ![](images/07dcb138dcb6773ee6b560681a62ec5f.jpg " ")
+8. You can see all the executed SQL during that time along with different attributes like username, execution start and end time etc. The text next to the @ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
 
-9. Click on the SQL Monitoring Tab
+    ![Plan Statistics](images/planstatisticslatest.png " ")
 
-      ![](images/6e47bf2703c3c1e4adffd39d2202045f.jpg " ")
+9. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hours time period to identify the historical SQL that was monitored.
 
-10. You can see all the executed SQL during that time along with different attributes like ‘user’,’Start’,’Ended’ etc. The test next to the \@ sign indicates the name of the PDB. Click on any SQL of your choice (e.g. 6kd5jj7kr8swv).
+    1.  Tabular view, helps in navigating through a big plan and customize the columns
+    
+    ![Tabular View on SQL Monitoring](images/pswithtablularviewhl.png " ")
 
-    ![](images/533523dca8453a0ce246ac933fdb639c.jpg " ")
+    2.  Graphical view is color coded and darker the color more the data flow 
 
-11. It will navigate you to show the details of this particular query. You can see the plan, parallelism and activity of the query. **Plan Statistics** tab is selected by default. You can see the plan of this query in graphical mode. In some cases, the Monitored SQL may have aged out and no rows are displayed, in this case try using the time-picker and pick last 24 hrs. time period to identify the historical SQL that was monitored.
+    ![Graphical View](images/psgraphicalview.png " ")
 
-12. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
+10. Select **Parallel** tab. This will give details about parallel coordinator and parallel slaves.
 
-13. Click on the **SQL Text** tab. You can see the query text which has been executed.
+11. Click on the **SQL Text** tab. You can see the query text which has been executed along with the bind variables.
 
-14. Click on the **activity** tab to understand about the activity breakdown for this SQL.
+    ![SQL Bind variables list](images/sqlbind.jpg " ")
 
-16. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
+12. Click on the **Activity** tab to understand about the activity breakdown for this SQL.
 
-## Task 3: Real-Time Database Operations Monitoring
+13. Click on the **Optimizer Environment** tab to view the values of the main parameters used by the Oracle optimizer when building the execution plan of a SQL statement.
+
+14. Click on the **Outline** tab is useful for reproducing the execution plan.
+
+15. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
+
+## Task 3: Top Activity Lite
+
+1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![Navigating to databases](images/emffvlab2step1.png " ")
+
+2. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
+
+    ![Select the database](images/emffvlab2step2.png " ")
+
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+
+3.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
+
+    ![Containers tab](images/c6bc11e91d6db9627a146b3e79d0ce19.jpg " ")
+
+4.  Notice that the PSALES database is the busiest. We focus our attention to this PDB. Let us now navigate to Performance Hub. Select Performance Hub from the Performance Menu and Click on ASH Analytics and use the sales\_system credential name from the database login screen.
+
+    ![Navigate to ASH Analytics](images/e131e1ce965ab5bb248d5439529fc921.jpg " ")
+
+5.  Navigate to **Top Activity Lite**, this page is a simplified version of Performance Hub, which contains **ASH Analytics** and **SQL Monitoring** tabs
+
+    ![Top Activity Lite entry point](images/talentry.jpg " ")
+
+6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen. 
+
+    ![Auto Refresh option on Top Activity Lite page](images/talautorefresh.jpg " ")
+
+7. By default, the Time viewport updates to latest five minutes of data. However, if moved, it will remain fixed in absolute terms (ex: 1:00 - 1:05 PM) as the chart updates to show the last hour of data, If the viewport reaches the left side of the chart and rolls over, it should be auto-pinned again to the right side of the chart.
+
+    ![Tabs on Top Activity Lite](images/talend.jpg " ")
+
+8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
+
+## Task 4: Real-Time Database Operations Monitoring
 
 1. From the terminal session on your remote desktop, run as user *oracle*
 
@@ -176,7 +221,7 @@ Now execute the file \@DBOP.sql
 
     ![](images/1a32fbdd89e519c2b8401e7dd0626890.jpg " ")
 
-## Task 4: Tuning a SQL in a PDB
+## Task 5: Tuning a SQL in a PDB
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
 
@@ -238,7 +283,7 @@ Now execute the file \@DBOP.sql
 
 <!-- This concludes the Database Performance Management lab activity. You can now move on to Real Application Testing lab activity. -->
 
-## Task 5: SQL Performance Analyzer Optimizer Statistics
+## Task 6: SQL Performance Analyzer Optimizer Statistics
 
 In this step we need to configure the database to set up optimizer statistics to be stale. So the first step is to create and submit a job that will configure the statistics to be stale.
 
@@ -346,7 +391,7 @@ In this step we need to configure the database to set up optimizer statistics to
 
 Details about newly published statistics can be found if you navigate **Schema** , to **Database Object** , to **Tables** , and Select tables for schema ‘STAT1’
 
-## Task 6: Database Workload Replay
+## Task 7: Database Workload Replay
 
 1. Create a Replay Task. You need to open two terminal sessions as user *oracle*.  
 
@@ -553,6 +598,71 @@ Now switch back to *session 1*. You should already be connected as user oracle
 
   We have seen how you can use Real Application Testing Database Replay to validate changes that may impact performance on both SQL statements and DML statements. We have also seen the extensive reporting that will help you find and analyze bottlenecks or peaks during certain workloads.
 
+## Task 8: ADDM Spotlight (Read-only)
+
+Please note: This is a read-only task. ADDM Spotlight aggregates the ADDM findings and recommendations over a longer period of time, since this lab is limited to 3-4 hours, it cannot produce better results in this lab. Hence, try this on your Enterprise Manager Cloud Control environment.
+
+1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
+
+    ![Navigating to databases](images/emffvlab2step1.png " ")
+
+2. Click on the database, you wish to get the findings and recommendations. 
+
+    ![Select the database](images/emffvlab2step2.png " ")
+
+    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
+
+3.  Navigate to ADDM Spotlight either from the performance menu -> ADDM Spotlight or from DB home -> Recommendation tile -> ADDM Spotlight.
+
+    ![ADDM Spotlight Navigation](images/addmnavigate1.png " ")
+
+    ![ADDM Spotlight Navigation](images/addmnavigate2.png " ")
+
+4.  Select desired time from the quick select or from the time range, to view the list of ADDM findings and recommendations. On the Finding page, you can search by category to view only specific category findings.
+
+    ![Findings and recommendations](images/findingpage.png " ")
+
+5.  Click on **Include Event Annotations** to view any database changes that impacts the overall performance such as parameter changes. You can zoom in and out with the help of zoom in and out icons.
+
+    ![Include Event and Zoom in and Out](images/annotationsandzoom.png " ")
+
+    You can Expand the summary page by clicking at the expand icon
+
+    ![Expand summary page](images/expand.png " ")
+
+6. Finding pages shows frequency, impact and overall impact of the finding category during the selected time period. You can go to the recommendations page directly from the link mentioned in the recommendations column.
+
+    ![Overall impact](images/overallimpact.png " ")
+
+7. Click on recommendations tab, to view all the recommendations or a specific recommendation such as Database Parameters, SQL, Schema Objects. Click on **SQL** for SQL recommendations, along with their SQL ID and the rationale for the recommendation. 
+
+    ![Recommendations page](images/recommendationspage.png " ")
+
+8. Click on the Tag cloud, a cloud like icon on the right side of the summary page, to view the SQLID with the maximum benefit, bigger the SQLID, higher the benefit. Each SQLID is color coded for easy visualization.
+  
+    ![Recommendations page tag cloud](images/tagcloud.png " ")
+
+
+9. In the Overall Benefit column, click to view the actions associated to the each SQL ID
+
+    ![Recommendations page](images/recommendationspageactions.png " ")
+
+10. Run SQL Tuning Advisor to view the recommendations for that particular SQL ID and submit the task. You can tune the SQL accordingly.
+
+    ![Recommendations page](images/recommendationspagesqltuning.png " ")
+
+
+11. Go to Database Parameter tab, to view the parameter that are high-impact, non-default values, changed and recommended parameters.
+
+    ![Database Parameter page](images/dbparameters.png " ")
+
+12. Click on the below listed links to view ADDM Spotlight blog and video
+
+     [ADDM Spotlight blog](https://blogs.oracle.com/observability/post/addm-spotlight-strategic-advice-optimize-oracle-dbms)
+
+     [ADDM Spotlight video](https://youtu.be/7y7ivjgFEYw)
+
+
 This completes the Lab!
 
 You may now [proceed to the next lab](#next).
@@ -565,4 +675,4 @@ You may now [proceed to the next lab](#next).
 ## Acknowledgements
 - **Author** - Björn Bolltoft, Oracle Enterprise Manager Product Management
 * **Contributors** -  Shefali Bhargava, Rene Fontcha
-* **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, July 2021
+* **Last Updated By/Date** - Anusha Vojjola, Product Management team, August 2024
