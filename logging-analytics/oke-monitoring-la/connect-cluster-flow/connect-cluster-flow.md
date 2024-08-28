@@ -1,4 +1,4 @@
-# Connect to the Kubernetes Cluster (Optional Study)
+# Lab 1 - Connect to the Kubernetes Cluster (Optional Study)
 
 ## Introduction
 
@@ -14,9 +14,8 @@ In this lab, you will see step-by-step instructions to:
 
 
 ## (Viewing Excercise Only) Task 1: Connect to the existing Kubernetes Cluster
-  > **Note** : **No action is needed from the user as this is only reading excercise.**
-  
-    <<<VIDEO TO BE UPLOADED>>>
+  > **Note** : **No action is needed from the user as this is only viewing excercise.**
+
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
