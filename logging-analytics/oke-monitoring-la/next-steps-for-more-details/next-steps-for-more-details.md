@@ -104,7 +104,7 @@ In this lab, you will see step-by-step instructions to:
   This concludes the workshop.
 
 ## Learn More
-  * [How to use Log Explorer to analyze and visualize logs](https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3887)  
+  * [How to use Log Explorer to analyze and visualize logs](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3887)  
 
 
 ## Acknowledgements
