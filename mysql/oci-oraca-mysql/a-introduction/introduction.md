@@ -52,4 +52,4 @@ In this workshop, you will:
 - **Contributors** -
 Yutaka Takatsu, Senior Principal Product Manager,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Anand Prabhu, January 2024
+* **Last Updated By/Date** - Sindhuja Banka, October 2024
