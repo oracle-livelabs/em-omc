@@ -1,0 +1,8 @@
+<!--
+    {
+        "name":"EM Introduction - About this workshop",
+        "description":"EM Introduction - About this workshop",
+        "date":"Sep/09/2024"
+    }
+-->
+Manage the initialization parameters to perform critical tasks on your Oracle Database, such as administering the database instance and adjusting the size of memory components, to improve the database's performance.

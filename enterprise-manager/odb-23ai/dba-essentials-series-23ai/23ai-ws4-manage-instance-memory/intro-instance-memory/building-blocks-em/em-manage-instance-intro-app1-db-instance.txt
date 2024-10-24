@@ -1,0 +1,8 @@
+<!--
+    {
+        "name":"EM Introduction - Appendix 1: The Oracle Database Instance",
+        "description":"EM Introduction - Appendix 1: The Oracle Database Instance",
+        "date":"Sep/09/2024"
+    }
+-->
+A host can have multiple Oracle Databases, each with its own set of data files. A database instance has a unique ID known as an *Oracle System ID (`ORACLE_SID`)*. An `ORACLE_SID` helps you identify the instance to which you want to connect. To connect with a database instance on your host, you identify the instance by setting the environment variables `ORACLE_SID` and `ORACLE_HOME`.
