@@ -15,23 +15,24 @@ Estimated time: 15 minutes
 
 This lab assumes you have:
 -   An Oracle Cloud account
+-   Installed Oracle Database and Oracle Enterprise Manager Cloud Control
 -   Completed all previous labs successfully
 
 ## Task 1: Login to Oracle Database Storage Administration
 
 1.  On the Oracle Enterprise Manager Cloud Control home page, go to the Targets menu and select Databases.
 
-    ![emcc home](./images/L2_T1_S1_emcc_home.png " ")
+    ![emcc home](./images/t1_s1_emcc_home.png " ")
 
 2.  The Databases page lists the Oracle Databases added to Oracle Enterprise Manager Cloud Control as managed targets. 
 
     Select the database instance for which you want to view the details. In this example, `orcl.us.oracle.com`, a Container Database instance, is selected.
 
-    ![emcc targets databases](./images/L2_T1_S2_emcc_targets_databases.png " ")
+    ![emcc targets databases](./images/t1_s2_emcc_targets_databases.png " ")
 
 3.  The database instance home page displays various details about the selected database.
 
-    ![emcc database home](./images/L2_T1_S3_emcc_database_home.png " ")
+    ![emcc database home](./images/t1_s3_emcc_database_home.png " ")
 
 ## Task 2: Monitor the state and workload of your database
 
@@ -48,7 +49,7 @@ This lab assumes you have:
 
     >   **Note:** The Database home page refreshes automatically every 60 seconds. To prevent the page from refreshing automatically, select Off in the Auto Refresh option.
 
-    ![emcc database home](./images/L2_T2_S1_emcc_database_home.png " ")
+    ![emcc database home](./images/t2_s1_emcc_database_home.png " ")
 
 2.  In the **Load and Capacity** section, expand **Performance** to view the active session information. It displays graphical information about the active session for the past hour.
 
@@ -56,7 +57,7 @@ This lab assumes you have:
     -   **Services:** Displays the average number of database sessions active for the past hour for database services.
     -   **Containers:** Displays the average number of Container and Pluggable Database sessions active for the past hour.
 
-    ![db performance activity](./images/L2_T2_S2_db_performance_activity.png " ")
+    ![db performance activity](./images/t2_s2_db_performance_activity.png " ")
 
 3.  In the **Load and Capacity** section, expand **Resources** to view the resource usage for the latest data point in the last minute.
 
@@ -68,7 +69,7 @@ This lab assumes you have:
     -   **Memory (GB):** Displays the current memory usage (as of the latest refresh time) shared among the database shared pool, Java pool, buffer cache, PGA, and other SGA components.
     -   **Data Storage (GB):** Displays the current space usage (as of the latest refresh time) shared among the user data, database log files, undo, temporary, SYSAUX, and SYSTEM tablespaces.
 
-    ![db resource instance](./images/L2_T2_S3_db_resources_instance.png " ")
+    ![db resource instance](./images/t2_s3_db_resources_instance.png " ")
 
 4.  In the **Load and Capacity** section, expand **SQL Monitor - Last Hour** to monitor SQL statements. Each row on this page displays an instance of an SQL execution that the database has monitored or is monitoring, in descending order.
 
@@ -80,7 +81,7 @@ This lab assumes you have:
     -   **Database Time:** Displays the duration of database time that the SQL execution takes as well as the time taken by other operations.
     -   **Container:** Displays the container in which the database executes the SQL statement.
 
-    ![db sql monitor](./images/L2_T2_S4_db_sql-monitor.png " ")
+    ![db sql monitor](./images/t2_s4_db_sql-monitor.png " ")
 
 5.  The **Incidents and Compliance** section displays information about the incidents occurring in the database.
 
@@ -88,7 +89,7 @@ This lab assumes you have:
     -   **Compliance Summary:** Compliance evaluation generates a score for the target database on the basis of how much the target is compliant with the standard. A 100% compliance score means that all checks of the compliance standard passed on the target.
     -   **Configuration Changes in the Last 7 Days:** Lists the changes made in the database configuration in the last seven days.
 
-    ![db incidents compliance](./images/L2_T2_S5_db_incidents_compliance.png " ")
+    ![db incidents compliance](./images/t2_s5_db_incidents_compliance.png " ")
 
 6.  The **Recommendations** section displays the result of the performance analysis run by the Automatic Database Diagnostic Monitor (ADDM). The ADDM analyzes data, identifies errors, and lists those errors occurring in the database.
 
@@ -96,15 +97,15 @@ This lab assumes you have:
 
     For example, a finding with Occurrences listed as 10 of 43 has occurred in 10 of the last 43 snapshots. It also provides recommendations to resolve the errors.
 
-    ![db recommendations](./images/L2_T2_S6_db_recommendations.png " ")
+    ![db recommendations](./images/t2_s6_db_recommendations.png " ")
 
 7.  The **High Availability** section displays details about the backup and recovery details of the database, the Fast Recovery Area usage statistics, and a summary of the Data Guard association.
 
-    ![db high availability](./images/L2_T2_S7_db_high-availability.png " ")
+    ![db high availability](./images/t2_s7_db_high-availability.png " ")
 
 8.  The **Jobs** section displays a table with the jobs that are currently running in the database. It also displays the number of jobs that were not successful.
 
-    ![db jobs](./images/L2_T2_S8_db_jobs.png " ")
+    ![db jobs](./images/t2_s8_db_jobs.png " ")
 
 
 
