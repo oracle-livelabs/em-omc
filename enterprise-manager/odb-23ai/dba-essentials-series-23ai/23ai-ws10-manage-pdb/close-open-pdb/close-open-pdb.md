@@ -20,7 +20,7 @@ This lab assumes you have -
  -   Completed all previous labs successfully
  -   Logged in to Oracle Enterprise Manager in a web browser as *sysman*
 
-> **Note:** This lab contains system-specific values and paths. These details might vary depending on the system you are using.
+> **Note**: [](include:example-values)
 
 ## Task 1: Close PDBs in CDB
 
@@ -34,9 +34,9 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
 	 ![Databases home page](./../intro-pdb-mgmt-db/images/manage-pdb-17-view-pdbs-db-list-05.png " ")
 
-    The green upward arrows in the **Status** field indicate that the database instance and the PDBs are up and running.
+    The green upward arrows in the **Status** field indicate that the database instances and the PDBs are up and running.
 
-	[](include:n-db-page)
+	> **Note**: [](include:n-db-page)
 
 1.  From the **Oracle Database** menu on the instance home page, select **Control** &gt; **Open/Close Pluggable Database**.
 
@@ -62,13 +62,13 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
 	 ![PDB state open](./images/manage-pdb-04-pdb-open.png " ")
 
-     > **Note:** With the **Open Read Only** option, users can run queries on a PDB to view information but cannot perform transactions in the database, such as create, insert, update, or delete operations. For this lab, do not use this option.
+     > **Note**: With the **Open Read Only** option, users can run queries on a PDB to view information but cannot perform transactions in the database, such as create, insert, update, or delete operations. For this lab, do not use this option.
 
-1.  Select the PDB, *ORCL1PDB*, and click **Close** to start the close operation.
+1.  Click the PDB name, *ORCL1PDB*, to select it and click **Close** to start the close operation.
 
 	 ![Close ORCLPDB](./images/manage-pdb-05-close-orcl1pdb.png " ")
 
-     > **Note:** The Open and Close PDB page supports multiselect. Use the **Shift** or **Ctrl** button to select more than one PDB. You can also click the PDB table and press **Ctrl** + **A** to select all PDBs.
+     > **Note**: The Open and Close PDB page supports multiselect. Use the **Shift** or **Ctrl** button to select more than one PDB. You can also click the PDB table and press **Ctrl** + **A** to select all PDBs.
 
 1.  Oracle Enterprise Manager displays a window to confirm this activity. Click **Yes** to close the PDB.
 
@@ -80,7 +80,7 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
     You have closed the PDB *ORCL1PDB* but the other PDB, *PDB3*, is still open.
 
-     > **Note:** If you try closing a PDB which is already in *Close* state, then the **Result** column displays an icon indicating that EM did not perform the task.
+     > **Note**: If you try closing a PDB which is already in *Close* state, then the **Result** column displays an icon indicating that EM did not perform the task.
 
 1.  Now close the other PDB. Select *PDB3* and click **Close**.
 
@@ -108,7 +108,7 @@ In this task, you will open the PDBs, namely *ORCL1PDB* and *PDB3*, in the CDB. 
 
 	 ![Databases home - PDBs down](./images/manage-pdb-12-db-list-pdb-down.png " ")
 
-     > **Note:** If you have additional PDBs in your database, then you might have green upward arrows in the **Status** column. However, for *ORCLPDB* and *PDB3*, **Status** shows red downward arrows indicating that the PDBs are currently *close*.
+     > **Note**: If you have additional PDBs in your database, then you might have green upward arrows in the **Status** column. However, for the PDBs you closed in the previous task, that is *ORCLPDB* and *PDB3*, **Status** shows red downward arrows indicating that the PDBs are currently *close*.
 
     Now proceed with opening the PDBs. Click the database instance name, *orcl1.us.oracle.com*, to open the instance home page.
 
@@ -116,11 +116,11 @@ In this task, you will open the PDBs, namely *ORCL1PDB* and *PDB3*, in the CDB. 
 
 	 ![Control menu - Open/Close PDBs](./images/manage-pdb-13-control-menu-down.png " ")
 
-	[](include:n-db-login-opt)
+	> **Note**: [](include:n-db-login-opt)
 
 	 Oracle Enterprise Manager opens the Open and Close PDB page.
 
-1.  Press the **Ctrl** button on your keyboard, select both PDBs, *ORCL1PDB* and *PDB3*, and click **Open**.
+1.  Keep the **Ctrl** button on your keyboard pressed, click each PDB, *ORCL1PDB* and *PDB3*, to select them both, and click **Open**.
 
 	 ![Open PDBs](./images/manage-pdb-14-open-pdbs.png " ")
 
@@ -130,7 +130,7 @@ In this task, you will open the PDBs, namely *ORCL1PDB* and *PDB3*, in the CDB. 
 
 	 ![PDBs opened](./images/manage-pdb-15-pdbs-opened-succeeded.png " ")
 
-     > **Note:** If you try opening a PDB which is already in *Open* state, then the **Result** column displays an icon indicating that EM did not perform the task.
+     > **Note**: If you try opening a PDB which is already in *Open* state, then the **Result** column displays an icon indicating that EM did not perform the task.
 
 1.  From the **Targets** menu, select **Databases** to open the Databases page.
 
@@ -150,6 +150,6 @@ In this workshop, you learned how to manage PDBs, such as different ways of crea
 
 ## Acknowledgments
 
- -   **Author**: Manish Garodia, Database User Assistance Development team
- -   **Contributors**: <if type="hidden">Suresh Rajan, Ashwini R, Jayaprakash Subramanian</if>
- -   **Last Updated By/Date**: Manish Garodia, October 2023
+ - **Author** - Manish Garodia, Database User Assistance Development
+ - **Contributors** - Ashwini R, Jayaprakash Subramanian, Aayushi Arora, Manisha Mati
+ - **Last Updated By/Date** - Manish Garodia, October 2024

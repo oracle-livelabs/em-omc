@@ -4,7 +4,7 @@
 
 This lab walks you through the steps for removing Pluggable Databases (PDBs) from a Container Database (CDB) using Oracle Enterprise Manager Cloud Control (EM).
 
-You have two options to remove a PDB from a CDB:
+To remove a PDB from a CDB, you have two options:
  -   Delete the PDB
  -   Unplug the PDB
 
@@ -25,7 +25,7 @@ This lab assumes you have -
  -   Completed all previous labs successfully
  -   Logged in to Oracle Enterprise Manager in a web browser as *sysman*
 
-> **Note:** This lab contains system-specific values and paths. These details might vary depending on the system you are using.
+> **Note**: [](include:example-values)
 
 ## Task 1: Delete a PDB from the root container
 
@@ -37,13 +37,13 @@ In this task, you will delete the PDB, namely *PDB1*, from the root container us
 
 	 ![Databases home page](./../intro-pdb-mgmt-db/images/manage-pdb-16-view-pdbs-db-list-02.png " ")
 
-    The green upward arrows in the **Status** field indicate that the database instance and the PDBs are up and running.
+    The green upward arrows in the **Status** field indicate that the database instances and the PDBs are up and running.
 
-	[](include:n-db-page)
+	> **Note**: [](include:n-db-page)
 
 1.  From the **Oracle Database** menu on the instance home page, select **Provisioning** &gt; **Provision Pluggable Databases**.
 
-	 ![Provision PDBs](./images/delete-pdb-01-provision-pdb.png " ")
+	 ![Provision PDBs menu](./images/delete-pdb-01-provision-pdb.png " ")
 
 1.  The Provision Pluggable Databases Console opens and displays the options for various PDB operations.  
     Scroll down and select **Delete Pluggable Databases**.
@@ -60,7 +60,7 @@ In this task, you will delete the PDB, namely *PDB1*, from the root container us
 
 	 ![Select PDBs](./images/delete-pdb-03-add-pdb.png " ")
 
-	[](include:n-buttons)
+	> **Note**: [](include:n-buttons)
 
 1. 	Oracle Enterprise Manager opens a Search and Select window. Select the target PDB that you want to delete.
 
@@ -68,16 +68,16 @@ In this task, you will delete the PDB, namely *PDB1*, from the root container us
 
      This window supports multiselect, which means you can add more than one PDBs to the delete list. The green upward arrows in the **Status** field indicate that the PDBs are up and running.
 
-     > **Note:** To delete multiple PDBs simultaneously, you can either select the PDBs in this window or repeat this step to add each PDB individually.
+     > **Note**: To delete multiple PDBs simultaneously, you can either select the PDBs in this window or repeat this step to add each PDB individually.
 
-    For this lab, select *PDB1* from the target PDB list and click **Select** to add the PDB to the delete list. The window goes back to the Select PDBs page.
+    For this lab, click *PDB1* in the target PDB list to select it and click **Select** to add the PDB to the delete list. The window goes back to the Select PDBs page.
 
 1.  Verify that **Target Name** and **PDB Name** displays the PDB you selected.  
     The snap clone information may show blank or n/a because it is not applicable for this lab.
 
 	 ![PDB1 Selected](./images/delete-pdb-05-pdb1-selected.png " ")
 
-     > **Note:** If the PDB you selected for deletion is wrong, then select the PDB and click **Remove**. This does not delete the PDB but clears it from the delete list and leaves the PDB intact. Ignore this note if you have selected the correct PDB for deletion.
+     > **Note**: If the PDB you selected for deletion is wrong, then click the PDB target name to select it and click **Remove**. This does not delete the PDB but clears it from the delete list and leaves the PDB intact. Ignore this note if you have selected the correct PDB for deletion.
 
     You can also click **Add** to select more PDBs for deletion. For this lab, delete only one PDB, *PDB1*.
 
@@ -85,11 +85,11 @@ In this task, you will delete the PDB, namely *PDB1*, from the root container us
 
 	 ![CDB Host Credentials](./images/delete-pdb-06-host-credentials.png " ")
 
-	[](include:n-host-creds)
+	> **Note**: [](include:n-host-creds)
 
     Leave the default value for **Temporary Working Directory** and click **Next** to proceed.
 
-1.  Oracle Enterprise Manager takes a while to validate and prompts to schedule the delete operation.
+1.  Oracle Enterprise Manager takes a while to validate and provides options to schedule the delete operation.
 
 	 ![Schedule PDB1 Delete Operation](./images/delete-pdb-07-pdb1-schedule.png " ")
 
@@ -98,7 +98,7 @@ In this task, you will delete the PDB, namely *PDB1*, from the root container us
 	 -  **Deployment Instance** - Delete the default text and enter a unique name, *delete pdb1*.  
     The instance name you enter helps you identify and track the progress of this procedure on the Procedure Activity page.
 
-		> **Note:** If the instance name already exists, then Oracle Enterprise Manager returns a validation error. You cannot create procedures in EM with duplicate names.
+		> **Note**: If the instance name already exists, then Oracle Enterprise Manager returns a validation error. You cannot create procedures in EM with duplicate names.
 
 	 - **Start** - Leave the default, *Immediately*, to run the procedure now.
 
@@ -129,7 +129,7 @@ You have deleted *PDB1* from the root container. Now, try unplugging a PDB from
 
 ## Task 2: Unplug a PDB from the root container
 
-Oracle Enterprise Manager provides an option to unplug PDBs from the database instance home page. This option is not available on the CDB or PDB home page.
+Oracle Enterprise Manager provides an option to manage PDBs from the database instance home page. This option is not available on the CDB or PDB home page.
 
 In this task, you will unplug the PDB, namely *PDB2*, from the root container using Oracle Enterprise Manager.
 
@@ -143,7 +143,7 @@ In this task, you will unplug the PDB, namely *PDB2*, from the root container u
 
 1.  From the **Oracle Database** menu, select **Provisioning** &gt; **Provision Pluggable Databases**.
 
-	 ![Provision PDBs](./../intro-pdb-mgmt-db/images/manage-pdb-14-provision-pdb2.png " ")
+	 ![Provision PDB menu](./../intro-pdb-mgmt-db/images/manage-pdb-14-provision-pdb2.png " ")
 
 1.  Under PDB Operations select **Unplug Pluggable Databases**.
 
@@ -151,20 +151,20 @@ In this task, you will unplug the PDB, namely *PDB2*, from the root container u
 
     Click **Launch** to start the PDB unplug operation.
 
-	[](include:n-db-login-opt)
+	> **Note**: [](include:n-db-login-opt)
 
 1.  Select the PDB that you want to unplug. Click the magnifier icon next to the **Pluggable Database** field to search for the target PDB.
 
 	 ![Select PDB](./images/unplug-pdb-03-select-pdb.png " ")
 
-     > **Note:** Though you can type the PDB name in this field, Oracle recommends that you use the Search and Select PDB option.
+     > **Note**: Though you can type the PDB name in this field, Oracle recommends that you use the Search and Select PDB option.
 
 1.  Oracle Enterprise Manager opens a window to search and select the PDB that you want to unplug.
 
 	 ![Search PDB2](./images/unplug-pdb-04-search-pdb2.png " ")
 
     This window supports single select, which means you can select only one target PDB.   
-    For this task, select *PDB2* and click **Select** to proceed. The window goes back to the Select PDB page.
+    For this task, click *PDB2* to select it and click **Select** to proceed. The window goes back to the Select PDB page.
 
 1.  Verify that the **Pluggable Database** field displays the PDB name you selected.
 
@@ -172,7 +172,7 @@ In this task, you will unplug the PDB, namely *PDB2*, from the root container u
 
     Scroll down the page. Under **Container Database Host Credentials**, select the *Named* Credential option, if not already selected. Click **Next** to proceed.
 
-1.  In the Unplug PDB Destination page, select the type of PDB template you want to generate for unplugging the PDB, and the location where you want to store it. The PDB template consists of all data files and the metadata XML file.
+1.  On the Unplug PDB Destination page, select the type of PDB template you want to generate for unplugging the PDB, and the location where you want to store it. The PDB template consists of all data files and the metadata XML file.
 
 	 ![PDB Template Location](./images/unplug-pdb-06-template-location.png " ")
 
@@ -185,7 +185,7 @@ In this task, you will unplug the PDB, namely *PDB2*, from the root container u
 
 	 ![PDB Temporary Storage Location](./images/unplug-pdb-07-tmp-dir.png " ")
 
-     > **Note:** The PDB unplug operation generates a PDB template, which can be a PDB archive, a PDB file set, or a PDB metadata file. You can select the location to store the PDB template as File System or Software Library. The Software Library option helps plug in PDBs from a central location.
+     > **Note**: The PDB unplug operation generates a PDB template, which can be a PDB archive, a PDB file set, or a PDB metadata file. You can select the location to store the PDB template as File System or Software Library. The Software Library option helps plug in PDBs from a central location.
 
 1.  Oracle Enterprise Manager prompts to schedule the unplug operation.
 
@@ -236,7 +236,7 @@ In this task, you will verify that you have removed the PDBs, namely *PDB1* an
 
 	 ![Databases home page](./images/remove-pdb-01-view-pdbs-db-list.png " ")
 
-    Note that the database instance does not display *PDB1* and *PDB2* that you removed. The list now displays only one PDB, *ORCLPDB*.
+    Note that the database instance, *orcl*, does not display *PDB1* and *PDB2* that you removed. The list now displays only one PDB, *ORCLPDB*.
 
 In this lab, you learned how to remove PDBs from your Oracle Database. You deleted a PDB and unplugged another PDB from the root container. You also verified that you removed these PDBs from the Oracle Database.
 
@@ -244,6 +244,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
- -   **Author**: Manish Garodia, Database User Assistance Development team
- -   **Contributors**: <if type="hidden">Suresh Rajan, Ashwini R, Jayaprakash Subramanian</if>
- -   **Last Updated By/Date**: Manish Garodia, September 2023
+ - **Author** - Manish Garodia, Database User Assistance Development
+ - **Contributors** - Ashwini R, Jayaprakash Subramanian, Aayushi Arora, Manisha Mati
+ - **Last Updated By/Date** - Manish Garodia, October 2024

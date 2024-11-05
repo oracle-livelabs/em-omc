@@ -2,7 +2,7 @@
 
 ## About this workshop
 
-This workshop guides you how to manage *Pluggable Databases (PDBs)* in a multitenant Container Database (CDB) from Oracle Enterprise Manager Cloud Control (EM). Database administrators (DBAs) can manage a CDB and its underlying PDBs and perform administrative tasks, such as creating and removing PDBs from Oracle Database and administering the PDBs.
+This workshop guides you how to manage *Pluggable Databases (PDBs)* in a multitenant Container Database (CDB) from Oracle Enterprise Manager Cloud Control (EM). A database administrator (DBA) can manage a CDB and its underlying PDBs and perform administrative tasks, such as creating and removing PDBs from Oracle Database and administering the PDBs.
 
 The labs in this workshop will help you learn about the sequence of actions you must perform to complete these tasks successfully.
 
@@ -22,11 +22,11 @@ In this workshop, you will learn how to:
 
  - Create PDBs
     - *from the seed* 
-    - *by cloning another local PDB*
-    - *by* *plugging an unplugged PDB*
+    - *by cloning an existing PDB*
+    - *by plugging an unplugged PDB*
  - Remove PDBs from the root container
-    - *by deleting PDBs*
-    - *by unplugging PDBs*
+    - *by deleting the PDB*
+    - *by unplugging the PDB*
  - Perform administrative tasks, such as -
     - *closing PDBs*
     - *opening PDBs*
@@ -95,7 +95,7 @@ Before cloning a local PDB from Oracle Enterprise Manager, ensure that:
  - The destination CDB, where you want to create the clone, exists and Oracle Enterprise Manager has access to it as a managed target.
  - The host user (for this workshop it is *oracle*) is the owner of the Oracle home where the target CDB resides.
 
- > **Note:** The location of the source PDB can be a CDB on the same (local) system, a CDB on a remote system, or an application container on the local or a remote system. If a database, a CDB, or a PDB resides on the local host, then it is termed as a local database, a local CDB, or a local PDB respectively. 
+ > **Note**: The location of the source PDB can be a CDB on the same (local) system, a CDB on a remote system, or an application container on the local or a remote system. If a database, a CDB, or a PDB resides on the local host, then it is termed as a local database, a local CDB, or a local PDB respectively. 
 
 See [Cloning a PDB](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/managing-pluggable-databases-using-enterprise-manager.html#GUID-ECEBA8A8-7BC3-4B70-B11F-D3035C195AD9) for more information about the prerequisites for cloning PDBs.
 
@@ -107,7 +107,7 @@ You can clone a PDB in Oracle Database using the following methods:
  - **Snap Clone**  
 	Users often require clones of production databases for development and testing purposes. It can be difficult and time-consuming to create clones, especially if the databases are huge. With this method, you can create thin clones of large databases with little space in less time.
 
-	> **Note:** Snap Clone is a storage agnostic approach for creating quick and space-efficient clones of huge production databases. This method is ideal for functional testing and is useful for short-term purposes. The cloning process is quick and the clone PDB occupies less space. 
+	> **Note**: Snap Clone is a storage agnostic approach for creating quick and space-efficient clones of huge production databases. This method is ideal for functional testing and is useful for short-term purposes. The cloning process is quick and the clone PDB occupies less space. 
 
 **Plug an unplugged PDB**
 
@@ -165,7 +165,7 @@ Before unplugging a PDB from the CDB in Oracle Enterprise Manager, ensure that:
 
 See [Unplugging a PDB](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emlcm/managing-pluggable-databases-using-enterprise-manager.html#GUID-12FCF4D2-B76D-4A7B-8EF2-0843B8251CC5) for more information about the prerequisites for unplugging PDBs.
 
- > **Note:** You can create a new PDB by plugging in an unplugged PDB either back to the same container or into another container.
+ > **Note**: You can create a new PDB by plugging in an unplugged PDB either back to the same container or into another container.
 
 Another way of removing a PDB is to delete the PDB. 
 
@@ -230,6 +230,6 @@ Click the next lab to **Get started**. 
 
 ## Acknowledgments
 
- - **Author** - Manish Garodia, Database User Assistance Development team
- - **Contributors** - <if type="hidden">Suresh Rajan</if>
- - **Last Updated By/Date** - Manish Garodia, October 2023
+ - **Author** - Manish Garodia, Database User Assistance Development
+ - **Contributors** - Ashwini R, Jayaprakash Subramanian, Manisha Mati, Aayushi Arora
+ - **Last Updated By/Date** - Manish Garodia, October 2024
