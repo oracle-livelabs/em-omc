@@ -2,7 +2,9 @@
 
 ## Introduction
 
-This lab shows how to create a new Pluggable Database (PDB) in a Container Database (CDB) by plugging in an unplugged PDB from Oracle Enterprise Manager Cloud Control (EM).
+This lab shows how to create a new Pluggable Database (PDB) in a Container Database (CDB) by plugging in an unplugged PDB using Oracle Enterprise Manager Cloud Control (EM).
+
+ > **Note**: You can create a new PDB by plugging in an unplugged PDB either back to the same container or into another container.
 
 Estimated time: 15 minutes
 
@@ -20,9 +22,9 @@ This lab assumes you have -
  -   Completed all previous labs successfully
  -   Logged in to Oracle Enterprise Manager in a web browser as *sysman*
 
-> **Note:** This lab contains system-specific values and paths. These details might vary depending on the system you are using.
+> **Note**: [](include:example-values)
 
-## Task 1: Plug an unplugged PDB into the root container
+## Task 1: Plug an unplugged PDB into a root container
 
 Before plugging in the PDB, ensure that you have a PDB that is unplugged. You can plug the unplugged PDB into the same or another container.
 
@@ -30,13 +32,13 @@ In this task, you will plug the unplugged PDB, namely *PDB2*, into another root 
 
 You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
-1.  On the Database pages, click the Database Instance name, for example *orcl1.us.oracle.com*, to open the instance home page.
+1.  On the Database pages, click the database instance name, for example *orcl1.us.oracle.com*, to open the instance home page.
 
 	 ![Databases home page](./../intro-pdb-mgmt-db/images/manage-pdb-11-dbhome1.png " ")
 
-    The green upward arrows in the **Status** field indicates that the database instances are up and running.
+    The green upward arrows in the **Status** field indicate that the database instances and the PDBs are up and running.
 
-	[](include:n-db-page)
+	> **Note**: [](include:n-db-page)
 
 1.  From the **Oracle Database** menu on the instance home page, select **Provisioning** &gt; **Provision Pluggable Databases**.
 
@@ -56,13 +58,13 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
     The PDB Creation page has other options also for creating a PDB. For this task, leave the other options.
 
-	[](include:n-buttons)
+	> **Note**: [](include:n-buttons)
 
 1.  Scroll down the page. Under **Container Database Host Credentials**, select the *Named* Credential option, if not already selected.
 
 	 ![CDB Host Named Credentials](./images/plug-pdb-04-host-credentials.png " ")
 
-	 [](include:n-host-creds)
+	> **Note**: [](include:n-host-creds)
 
     Click **Next** to proceed.
 
@@ -74,16 +76,17 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
      - **PDB Name** - Delete the default text and enter a unique name for the PDB you are plugging. For this task, enter *PDB3*.
 
-		 [](include:n-pdb-name)
+		> **Note**: [](include:n-pdb-name)
 
-     - **Create as Clone** - Select this check box.   
+     - **Create as Clone** - Select this option.   
     This option ensures that Oracle Database generates a unique DBID, GUID, and other identifiers for the new PDB.
 
-     - **Create Multiple Copies** - Do not select this check box and create only one PDB in the database.   
+     - **Create Multiple Copies** - Do not select this option. For this lab, create only one PDB in the database.   
     You can create up to *252* PDBs in a CDB.
 
-1.  Select the **Create PDB Administrator** option to create a new administrative user account for the PDB.   
-    If you want to use the administrative user account of the source PDB, then do not select this option.
+1.  Select the **Create PDB Administrator** option to create a new administrative user account for the PDB.
+
+    > If you want to use the administrative user account of the source PDB, then do not select this option.
 
 	 ![PDB3 Administrator Credentials](./images/plug-pdb-06-pdb3admin.png " ")
 
@@ -92,9 +95,9 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
     - **Password** - Set a password, for example, *mypassword*   
 	Ensure to note the password because you will require it when you log in to the PDB as *PDB3ADMIN*.
 
-	 [](include:n-pdbadmin)
+	> **Note**: [](include:n-pdbadmin)
 
-	Oracle Enterprise Manager provides a check box **Lock All Existing PDB Users** to lock and expire all users in the newly created PDB, except the PDB administrator. For this lab, do not select this check box.
+	Oracle Enterprise Manager provides an option **Lock All Existing PDB Users** to lock and expire all users in the newly created PDB, except the PDB administrator. For this lab, do not select this option.
 
 1.  Scroll down the page. In the PDB Template Location section, select the location of the source PDB template and the type of template.
 
@@ -108,9 +111,9 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
     For this lab, the page displays the default options *Target Host File System* and *Create the PDB from PDB Archive* selected. Use these options because you unplugged the PDB in the previous lab with the same options.
 
-	For creating the PDB, you must select **PDB Archive Location**. Click the magnifier icon next to this field to browse the PDB archive file.
+	For creating the PDB, you must specify **PDB Archive Location**. Click the magnifier icon next to this field to browse the PDB archive file.
 
-     > **Note:** Though you can type the template file name and location in this field, Oracle recommends that you use the file browser.
+     > **Note**: Though you can type the template file name and location in this field, Oracle recommends that you use the file browser.
 
 	 ![PDB Template Location](./images/plug-pdb-07-template-location.png " ")
 
@@ -121,12 +124,12 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 	In the text box next to **Path**, enter the following and click the arrow next to the text box or press **Enter** to navigate to Oracle home 1 location.
 
 	```
-	<copy>/u01/app/oracle/product/23.0.0/dbhome_1/assistants/dbca/templates</copy>
+	<copy>/u01/app/oracle/product/23.4.0/dbhome_1/assistants/dbca/templates</copy>
 	```
 
 	 ![Select PDB2 Archive](./images/plug-pdb-08-select-pdb2-archive.png " ")
 
-	Select the PDB archive file, *PDB2.tar.gz*. This window supports single select, which means you can select only one file. 
+	Click the PDB archive file name, *PDB2.tar.gz*, to select it. This window supports single select, which means you can select only one file. 
 
 	Under the **Properties** column, click **Show** to view the details of the selected PDB template.
 
@@ -138,7 +141,7 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
 	 ![PDB Archive Selected](./images/plug-pdb-10-pdb2-archive-selected.png " ")
 
-    Notice that Oracle Enterprise Manager points to PDB archive file in Oracle home 1. Click **Next** to proceed.
+    > Notice that Oracle Enterprise Manager points to PDB archive file in Oracle home 1. Click **Next** to proceed.
 
 	Oracle Enterprise Manager performs validation for PDB identification and the metadata, such as disk space, file validity, administrative user, and so on. On successful validation, Oracle Enterprise Manager goes to the PDB storage options.
 
@@ -154,7 +157,7 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
 
     Click **Next** to proceed.
 
-1.  Oracle Enterprise Manager takes a while to validate and prompts to schedule the plug operation.
+1.  Oracle Enterprise Manager takes a while to validate and provides options to schedule the plug operation.
 
 	 ![Schedule PDB2 Plug Operation](./images/plug-pdb-13-pdb3-schedule.png " ")
 
@@ -163,7 +166,7 @@ You can open the Databases page from the menu **Targets** &gt; **Databases**.
      - **Deployment Instance** - Delete the default text and enter a unique name, *plug pdb2*.  
 		[](include:deploy-name)
 
-		 > **Note:** If the instance name already exists, then Oracle Enterprise Manager returns a validation error. You cannot create procedures in EM with duplicate names.
+		 > **Note**: If the instance name already exists, then Oracle Enterprise Manager returns a validation error. You cannot create procedures in EM with duplicate names.
 
      - **Start** - Leave the default, *Immediately*, to run the procedure now.
 
@@ -212,7 +215,7 @@ In this task, you will view the new PDB, namely *PDB3*, in your database.
 
 	 ![Databases home page](./../intro-pdb-mgmt-db/images/manage-pdb-17-view-pdbs-db-list-05.png " ")
 
-    The Databases page displays the new PDB, *PDB3*, in the database instance along with the existing PDB, *ORCL1PDB*. The green upward arrows in the **Status** field indicate that the database instances and the PDBs are up and running.
+    The Databases page displays the new PDB, *PDB3*, in the database instance, *orcl1*, along with the existing PDB, *ORCL1PDB*. The green upward arrows in the **Status** field indicate that the database instances and the PDBs are up and running.
 
 In this lab, you learned how to plug an unplugged PDB into another root container. Similarly, you can plug PDBs into the same or a remote container.
 
@@ -220,15 +223,6 @@ You may now **proceed to the next lab**.
 
 ## Acknowledgments
 
- -   **Author**: Manish Garodia, Database User Assistance Development team
- -   **Contributors**: <if type="hidden">Suresh Rajan, Ashwini R, Jayaprakash Subramanian</if>
- -   **Last Updated By/Date**: Manish Garodia, September 2023
-
-<!--
-
-	[](include:db-login)
-
-	 ![Database Login](./../intro-pdb-mgmt-db/images/manage-pdb-13-dblogin.png " ")
-
-
--->
+ - **Author** - Manish Garodia, Database User Assistance Development
+ - **Contributors** - Ashwini R, Jayaprakash Subramanian, Aayushi Arora, Manisha Mati
+ - **Last Updated By/Date** - Manish Garodia, October 2024
