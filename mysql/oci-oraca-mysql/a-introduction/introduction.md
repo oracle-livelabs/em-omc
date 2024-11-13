@@ -5,7 +5,7 @@
 This workshop guides you through the process of provisioning a MySQL HeatWave database on OCI, enhancing a Spring Boot application, incorporating OpenTelemetry instrumentation, and deploying the application on an Oracle Kubernetes cluster. You will learn how to monitor the application using the Oracle Application Performance Management Service, leveraging traces and metrics for comprehensive end-to-end monitoring and diagnostics. Additionally, the workshop covers the utilization of Oracle Cloud Infrastructure (OCI) Database Management to monitor the MySQL HeatWave database, Ops Insights  for capacity planning & SQL Insights and Logging Analytics for Kubernetes and application logs.
 
 
-Estimated Time: 140 minutes
+Estimated Time: 150 minutes
 
 *MySQL Heatwave Database*
 
@@ -50,6 +50,6 @@ In this workshop, you will:
 
 * **Author** - Anand Prabhu, Principal Member of Technical Staff, Enterprise and Cloud Manageability
 - **Contributors** -
-Yutaka Takatsu, Senior Principal Product Manager,  
+Yutaka Takatsu, Senior Principal Product Manager,
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Sindhuja Banka, October 2024
+* **Last Updated By/Date** - Sindhuja Banka, November 2024
