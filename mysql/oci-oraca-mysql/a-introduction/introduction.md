@@ -50,6 +50,6 @@ In this workshop, you will:
 
 * **Author** - Anand Prabhu, Principal Member of Technical Staff, Enterprise and Cloud Manageability
 - **Contributors** -
-Yutaka Takatsu, Senior Principal Product Manager,  
+Yutaka Takatsu, Senior Principal Product Manager,
 Avi Huber, Vice President, Product Management
 * **Last Updated By/Date** - Sindhuja Banka, November 2024
