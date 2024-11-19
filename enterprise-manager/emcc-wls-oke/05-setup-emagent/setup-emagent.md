@@ -7,7 +7,7 @@ In this tutorial, you will create a compute instance using the public subnet cre
 
 Estimated time: 15 minutes
 
-* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
+* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
 * Completion of the preceding tutorials in this workshop
 
 

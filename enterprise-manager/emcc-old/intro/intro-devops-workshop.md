@@ -28,7 +28,7 @@ The following are covered in this workshop:
 
 ### Additional Workshop Supported Use Cases
 
-For additional Enterprise Manager use cases, see below and visit [LiveLabs](http://developer.oracle.com/livelabs) for the details.
+For additional Enterprise Manager use cases, see below and visit [LiveLabs](http://livelabs.oracle.com) for the details.
 #### 1. Database Lifecycle Automation
 -	Create a Pluggable Database (PDB)
 -	Un-plug/Plug an existing Pluggable Database

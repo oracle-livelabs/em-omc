@@ -6,7 +6,7 @@ Now you have the kubernetes load balance services configured for the WebLogic Se
 
 Estimated time: 5 minutes
 
-* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
+* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
 * Completion of the preceding tutorials in this workshop
 
 
@@ -20,7 +20,7 @@ Estimated time: 5 minutes
 
    ![Oracle Cloud console, Navigation Menu](images/1-1-menu.png " ")
 
-2. Locate the compartment you created the Kubernetes cluster when you performed the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Then click the name of the VCN.
+2. Locate the compartment you created the Kubernetes cluster when you performed the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Then click the name of the VCN.
 
    ![Oracle Cloud console, Compartments](images/1-2-compartment.png " ")
 

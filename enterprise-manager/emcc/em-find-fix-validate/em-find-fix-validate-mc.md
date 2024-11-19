@@ -18,8 +18,8 @@ In this lab you will learn:
 |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **1**  | Performance Hub                               | 15 minutes       | Oracle Enterprise Manager 13c includes a new Jet based unified Performance Hub Jet interface for performance monitoring.                                                                                           | Performance Hub is a single pane of glass view of database performance with access to Active Session History (ASH) Analytics, Real-time SQL Monitoring and SQL Tuning together. The time picker allows the administrator to switch between Real-Time and Historical views of database performance.                                                                                                                                                                                                                                                                      |
 | **2**  | Top Activity Lite                               | 5 minutes       | Top Activity Lite is a new feature introduced in 13c RU 15 to provide optimal response time for real-time monitoring for performance monitoring.                                                                                           | Top Activity Lite feature is a simplified version of Performance Hub, optimized for quick response under heavy loads while providing key performance diagnostics information through simple and effective  visualization. This feature helps DBAs monitor their database using a Network Operations Center (NOC) like screen.                                                                                                                                                                                                                                                                      |
-| **3**  | Workload Analysis        | 15 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create two SQL Tuning Sets(STS) with different workloads and indexes and compare them using different comparison metrics.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate the SQL performance before upgrade Database from 18.3 to 19.10.  You will see how each SQLs in the application's workload (Sales History) performs in new 19.10 upgrade. The Sales History workload SQLs are gathered in SQL Tuning Set SHSTS..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **3**  | Workload Analysis        | 10 minutes       | This a new feature to analyze workload that is running on a database using Enterprise Manager UI.                                                 | In this activity you create two SQL Tuning Sets(STS) with different workloads and indexes and compare them using different comparison metrics.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| **4**  | SQL Performance Analyzer        | 15 minutes       | The objective of this activity is to demonstrate and use the SQL Performance Analyzer functionality of Real Application Testing capabilities using Enterprise Manager UI.                                                 |  You've been asked to validate the SQL performance before upgrade Database.  You will see how each SQLs in the application's workload (Sales History) performs in new upgraded environment. The Sales History workload SQLs are gathered in SQL Tuning Set SHSTS..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **5**  | Tuning a SQL in a Pluggable Database (PDB) - Optional                     | 10 minutes       | In this activity see how a pluggable database administrator can tune queries in a PDB.                                                                                                                                        | The DBA for the PDB will not have access to the Container so their view is restricted to the queries running in the PDB assigned to them. This activity identifies a Top SQL in a PDB and then tunes it using SQL Tuning Advisor.                                                                                                                                                                                                                                                                                                                                  |
 
 
@@ -30,7 +30,7 @@ In this lab you will learn:
     - Lab: Environment Setup
     - Lab: Initialize Environment
 
-*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19.10 as Oracle Management Repository.
+*Note*: This lab environment is setup with Enterprise Manager Cloud Control Release 13.5 and Database 19c as Oracle Management Repository.
 
 ## Task 1: Prepare Database
 Select between *Task 1A* and *Task 1B*
@@ -146,6 +146,7 @@ Select between *Task 1A* and *Task 1B*
 
 15. Click on **Save Report** button on the top right corner of the page. This will help you to save this monitored execution in “.html” format, which can be used to share or to diagnose offline.
 
+
 ## Task 3: Top Activity Lite
 
 1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
@@ -172,7 +173,6 @@ Select between *Task 1A* and *Task 1B*
 
 6. Click on **Auto Refresh** and choose one of the refresh options, the tables below gets refreshed, which helps DBAs monitor their database using a Network Operations Center (NOC) like screen. 
 
-
     ![Auto Refresh option on Top Activity Lite page](images/talautorefresh.jpg " ")
 
 7. By default, the Time viewport updates to latest five minutes of data. However, if moved, it will remain fixed in absolute terms (ex: 1:00 - 1:05 PM) as the chart updates to show the last hour of data, If the viewport reaches the left side of the chart and rolls over, it should be auto-pinned again to the right side of the chart.
@@ -182,176 +182,9 @@ Select between *Task 1A* and *Task 1B*
 8. One can notice the differences between Performance Hub and Top Activity Lite in terms of Time viewport, Summary timeline and Dimensions such as Time view port is fixed to 5 min and provides limited dimension with the goal of scable and near-time monitoring under high load.
 
 
+
 ## Task 4: Workload Analysis
 
-**Create SQL Tuning Set - 1**
-
-1. Download this file 
-
-    [Click here to download file.](./files/SOE_Client_Side_2_NCPFalse.xml?download=1)
-
-2. Login to the terminal and run the following commands which is creating a backup of xml file and replacing it with another xml file
-
-    ```
-    <copy>
-    cp /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2_backup.xml
-    cp /home/oracle/Downloads/SOE_Client_Side_2_NCPFalse.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml
-    </copy>
-    ```
-3. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “sysman/welcome1”.
-
-      ![EM login](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
-
-4. Go to Enterprise - Job - Library
-
-      ![Job library](images/emratlab2step2.png " ")
-
-5. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
-
-      ![Start Swingbench](images/emratlab2step3.png " ")
-
-6. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
-
-     ![Submit Job](images/emratlab2step4.png " ")
-
-7.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
-
-    ![Navigating to the databases](images/emffvlab2step1.png " ")
-
-8. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
-
-    ![Select the database](images/emffvlab2step2.png " ")
-
-    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
-
-9.  Click on the **Containers** tab. It is located at the upper right-hand corner of the page, underneath the Performance tile. This will show the list of pluggable databases in the CDB and their activity.
-
-10. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
-    
-    ![Login into the database](images/loginsalessystem.png " ")
-
-11. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
-
-    ![SQL Tuning Set](images/wlasts.png " ")
-
-    ![Create SQL Tuning Sets](images/wlastscreate.png " ")
-
-    Enter the name as WLA\_MC\_STS\_1, choose Cursor Cache radio button.
-
-    ![STS Name](images/wlastsname.png " ")
-
-    ![Option to create STS](images/wlastscursorcache.png " ")
-
-    Choose the SOE as filter as shown in the image below and click on Finish.
-
-    ![Enter SOE in schema](images/wlastsfilter.png " ")
-    
-12. Refresh the page and you could see the count (for example: 29)
-
-    ![STS is created](images/wlasts1done.png " ")
-
-13. Go to Enterprise - Job - Library
-
-      ![Job Library](images/emratlab2step2.png " ")
-
-14. Pick Job Name **STOP\_SWINGBENCH\_WORKLOAD** then click Submit
-
-    ![Stop Swingbench](images/wlastsswstop.png " ") 
-
-**Create SQL Tuning Set - 2**
-
-1. Download this file 
-
-    [Click here to download file.](./files/SOE_Client_Side_2_NOPFalse.xml?download=1)
-
-2. Login to the terminal and run the following commands which is creating a backup of xml file and replacing it with another xml file
-
-    ```
-    <copy>
-        cp /home/oracle/Downloads/SOE_Client_Side_2_NOPFalse.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml
-    </copy>
-    ```
-
-3. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database. Click on the expandable arrow and choose OLTP pluggable database.
-
-    ![Choosing OLTP Database](images/wlaoltpdbselection.png " ")
-
-4. Go to SQL under Performance menu and choose SQL Worksheet and run the following commands to make an index invisble and flush the cache.
-
-    ![SQL Worksheet](images/wlasqlws.png " ")  
-    
-5. Connect to OLTP pluggable database and make an index invisible to view the plan changes in the Workload Analysis. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
-    
-    ```
-    <copy>
-        Alter index SOE.ORDER_PK invisible
-    </copy>
-    ```	
-   ![Index invisible query](images/wlaindexinvisible.png " ")                        
-
-6. In the same SQL Worksheet that connects to OLTP pluggable database, let's flush the shared_pool. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
-
-    ```
-    <copy>
-        Alter system flush shared_pool
-    </copy>
-    ```	
-    
-    ![Flush shared pool query](images/wlaflush.png " ")
-
-7. Go to Enterprise - Job - Library
-
-      ![Job Library](images/emratlab2step2.png " ")
-
-8. Pick Job Name **START\_SWINGBENCH\_LOAD** then click Submit
-
-      ![Start Swingbench](images/emratlab2step3.png " ")
-
-9. Click Submit, Swingbench workload starts with 40 concurrent users to Pluggable Database OLTP in **sales.subnet.vcn.oraclevcn.com**
-
-     ![Submit Job](images/emratlab2step4.png " ")
-
-10.  Click on the Targets, then Databases. You will be directed to the list of Databases in EM.
-
-    ![Navigating to the Databases](images/emffvlab2step1.png " ")
-
-11. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
-
-    ![Database list](images/emffvlab2step2.png " ")
-
-    ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
-
-12. Let us now navigate to Workload Analysis. Select Workload Analysis from the Performance Menu and use the sales\_system credential name from the database login screen.
-
-13. Under Performance Menu, go to SQL and choose SQL Tuning Set (STS) to create STS as follows
-
-    ![SQL Tuning Set](images/wlasts.png " ")
-
-    ![Create STS](images/wlastscreate.png " ")
-
-    Enter the name as WLA\_MC\_STS\_2, choose Cursor Cache radio button.
-
-    ![Enter name](images/wlasts2create.png " ")
-
-    ![Choose cursor Cache](images/wlastscursorcache.png " ")
-
-    Choose the SOE as filter as shown in the image below and click on Finish.
-
-    ![Choose SOE in schema](images/wlastsfilter.png " ")
-
-14. Refresh the page and you could see the count (for example: 27)
-
-    ![Refresh STS](images/wlasts2withrefresh.png " ")
-
-15. Go to Enterprise - Job - Library
-
-    ![Job Library](images/emratlab2step2.png " ")
-
-16. Pick Job Name **STOP\_SWINGBENCH\_LOAD** then click Submit
-
-    ![Stop Swingbench](images/wlastsswstop.png " ") 
-
-**Compare STS1 to STS2**
 
 1. Click on the Targets, then Databases. You will be directed to the list of Databases in EM. Here you will notice different databases listed, such as SALES, HR etc. We will work the sales container database. Select the **Sales** database from the list and this will take you to the DB home page for this database.
 
@@ -359,54 +192,59 @@ Select between *Task 1A* and *Task 1B*
 
     ![DB home page](images/89801010273a62f99a3da10de8bf5c71.jpg " ")
     
-2. Navigate to Workload Analysis from the Performance Menu. Go to One-Time Analysis tab and click on Create Analysis Task.
+2. Navigate to Workload Analysis from the Performance Menu or from Database home page. you can schedule Automated workload analysis by configuring automated   analysis task. In this lab, we will run One-Time analysis task, go to One-Time Analysis tab and click on Create Analysis Task.
+
+    ![Workload Analysis](images/wladbhomepage.png " ") 
 
     ![One-Time Analysis tab](images/wlacreatetask.png " ") 
 
-3. Enter Name: Compare\_WLA\_MC\_STS1\_2
+3. Create task with the following inputs
+   
+       - Enter task Name : **WLA\_Test**
+       - Enter Description : Comparing two workloads using Workload Analysis
 
-4. Under Reference Workload, click on search icon to choose WLA\_MC\_STS\_1 from the dropdown menu. Later choose WLA\_MC\_STS\_2 from the Compared Workload search
+   ![Choose from the search icon](images/wlasearchicon.png " ")
+       
+4. Under Reference Workload, click on search icon to choose WLA\_STS1 from the dropdown menu. Later choose WLA\_STS2 from the Compared Workload search
 
-    ![Choose from the search icon](images/wlasearchicon.png " ") 
+    ![Choose from the search icon](images/wlasearchicon1.png " ") 
 
-5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time.
+5. In Comparison Metric, you can choose multiple options for the comparison report like Buffer Gets, Elapsed Time, CPU Time and Disk Reads. For now, let's choose Buffer Gets and Elapsed Time. Click on submit to submit the task. 
 
     ![All Inputs for comparison](images/wlaallinputs.png " ") 
+    
+    ![All Inputs for comparison](images/wlaallinputs1.png " ") 
 
-6. Click on submit and refresh. You should see both the reports and click on those reports.
+6. Refresh the page, to see the reports and click on any report to analyze, let's view **Elapsed Time Workload Analysis Report**.
     
     ![Comparison reports](images/wlacomparisonreports.png " ") 
+    
+    ![Comparison reports](images/wlacomparisonreports1.png " ") 
 
-7. You should be able to view the missing, new SQL and plan SQLs which would help in analysing the workload.
+    ![Comparison reports](images/wlacomparisonreports2.png " ") 
 
-    ![Sample report with Buffer Gets Comparison metric](images/wlasamplebuffergetsreport.png " ") 
+7. Report shows regressed, improved, missing, new and plan changed SQLs, which helps in analyzing the workload.
 
-8. Click on the new plan block, you could see the plans changed for the index we made invisible.
+    ![Sample report with Comparison metric](images/wlareport.png " ") 
+
+8. Click on the New Plan in  SQL statements by Plan Change, to see the plans changed SQLs which are impacting the overall performance of the workload. Click on the SQLID which is regressed and has plan changed column "Yes"
 
     ![Plan change in the report](images/wlanewplanreport.png " ") 
 
-9. Click on the SQLID and you could see the plan changed
+    ![SQLID for the plan change](images/wlanewplanreport1.png " ") 
 
-    ![SQLID for the plan change](images/wlaplanchangereport.png " ") 
+    ![SQLID for the plan change](images/wlanewplanreport2.png " ") 
 
-**Revert Changes**
+9. Look for the plan changes and notice there is a index that is missing which is the root cause of the regression, hence the workload performance is regressed. Workload Analysis helps in analyzing the performance of the SQL by providing granular level details.
 
-1. Connect to OLTP pluggable database and make an index invisible to view the plan changes in the Workload Analysis. Ensure to (check) Auto-commit and (uncheck) Allow only SELECT statement before executing the query.
-    
-    ```
-    <copy>
-        Alter index SOE.ORDER_PK visible
-    </copy>
-    ```	
-   ![Make index visible](images/wlaindexvisible.png " ")     
+    ![SQLID for the plan change](images/wlanewplanreport3.png " ")
 
-2.  Copy the parameter back to original with the following command in terminal
+10. Click on the below listed links to view Workload Analysis videos
 
-    ```
-    <copy>
-    cp /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2_backup.xml /home/oracle/scripts/swingbench/swingbench/configs/SOE_Client_Side_2.xml
-    </copy>
-    ```
+     [WLA Configure video](https://youtu.be/EVqcpEgneWE)
+
+     [WLA Report Analysis video](https://youtu.be/HJ7wjl6oXrg)
+
 
 ## Task 5: SQL Performance Analyzer
 
@@ -415,7 +253,6 @@ Select between *Task 1A* and *Task 1B*
     ![EM login](images/1876be1823ca17d9ab7e663e128859c4.jpg " ")
 
     ![Navigate to the Databases](images/emratlab1step2.png " ")
-
 
 
 2. Shutdown Databases cdb186.subnet.vcn.oraclevcn.com, finance.subnet.vcn.oraclevcn.com, hr.subnet.vcn.oraclevcn.com.
@@ -509,8 +346,8 @@ Select between *Task 1A* and *Task 1B*
 
     ![Go to the step2](images/emratlab1step10a.png " ")
 
-       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_18C**
-       - Enter Description : Sales History 18C run
+       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_1**
+       - Enter Description : Sales History run
        - Creation Method: **Execute SQLs Remotely**
 
     ![Execute SQLs Remotely](images/emratlab1step10b.png " ")
@@ -518,7 +355,7 @@ Select between *Task 1A* and *Task 1B*
        - Default per-SQL Time Limit
        - Click Create Database Link button
 
-    ![Create Databse link](images/emratlab1step10e.png " ")
+    ![Create Database link](images/emratlab1step10e.png " ")
 
        - Enter Name :  **PSALES.SUBNET.VCN.ORACLEVCN.COM**
        - Enter Net Service Name :
@@ -553,7 +390,7 @@ Select between *Task 1A* and *Task 1B*
 
     ![Step3 for SPA task](images/emratlab1step12a.png " ")
 
-       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_19C**
+       - Enter SQL Trial Name : **SHSTS\_SQL\_TRIAL\_2**
        - Enter Description : Sales History 19C Run
        - Creation Method: **Execute SQLs Locally**
        - Default per-SQL Time Limit
@@ -572,8 +409,8 @@ Select between *Task 1A* and *Task 1B*
 
     ![Step4 of SPA task](images/emratlab1step14a.png " ")
 
-       - Trial 1 Name : **SHSTS\_SQL\_TRIAL\_18C**
-       - Trial 2 Name : **SHSTS\_SQL\_TRIAL\_19C**
+       - Trial 1 Name : **SHSTS\_SQL\_TRIAL\_1**
+       - Trial 2 Name : **SHSTS\_SQL\_TRIAL\_2**
        - Comparison Metric : **Buffer Get**
        - **Click** Submit
 

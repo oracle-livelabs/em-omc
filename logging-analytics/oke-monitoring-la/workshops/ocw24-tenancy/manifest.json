@@ -1,0 +1,42 @@
+{
+    "workshoptitle": "Kubernetes Monitoring and Troubleshooting",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to OKE Monitoring through OCI Logging Analytics",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster (Optional Study)",
+            "description": "This live lab outlines the steps required to connect to the Kubernetes Cluster for monitoring",
+            "filename": "../../connect-cluster-flow/connect-cluster-flow.md"
+        },
+        {
+            "title": "Lab 2: Monitor the existing Kubernetes Cluster solution",
+            "description": "This live lab outlines the steps for monitoring the Kubernetes Cluster",
+            "filename": "../../monitor-kubernetes-cluster/monitor-kubernetes-cluster.md"
+        },
+        {
+            "title": "Lab 3: Interactive Analytics and Troubleshooting",
+            "description": "This live lab outlines the steps required to troubleshoot the issues occuring in the Kubernetes Cluster",
+            "filename": "../../interactive-analytics-and-troubleshooting/interactive-analytics-and-troubleshooting.md"
+        }, 
+        {
+            "title": "Lab 4: Next Steps for more insights",
+            "description": "This live lab outlines the steps for getting the more insights of the Kubernetes Monitoring",
+            "filename": "../../next-steps-for-more-details/next-steps-for-more-details.md"
+        },
+        {
+
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
