@@ -1,0 +1,1 @@
+The host credentials belong to the user that owns the Oracle home where the target CDB resides. You must specify host credentials to authorize Oracle Enterprise Manager to log into the host and perform operations on your database. If you do not select this option, then Oracle Enterprise Manager may return an error indicating invalid host credentials.

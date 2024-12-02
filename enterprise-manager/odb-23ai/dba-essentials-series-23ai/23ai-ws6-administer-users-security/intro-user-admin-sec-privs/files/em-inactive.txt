@@ -1,0 +1,1 @@
+If the Oracle Enterprise Manager console remains inactive for 15 minutes or more while performing a database operation, then you must restart the operation.

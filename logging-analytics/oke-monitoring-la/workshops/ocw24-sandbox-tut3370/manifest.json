@@ -1,0 +1,61 @@
+{
+    "workshoptitle": "Proactively Monitor Kubernetes, Oracle Database, and SaaS with Logging Analytics",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to the OCI Logging Analytics",
+            "filename": "../../introduction-tutorial-3370/introduction-tutorial-3370.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "3887: How to use Log Explorer to analyze and visualize logs",
+            "description": "This live lab outlines the steps required to use Log Explorer to analyze and visualize logs",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-log-explorer-for-analytics-and-visualizations/sprint-log-explorer-for-analytics-and-visualizations.md"
+        },
+        {
+            "title": "3891: How to create a user defined Log Source in Logging Analytics",
+            "description": "This live lab outlines the steps required to create a user defined Log Source in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-create-source/sprint-create-source.md"
+        },
+        {
+            "title": "3895: How to create alerts on logs in Logging Analytics",
+            "description": "This live lab outlines the steps required to create alerts on logs in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-alerts-on-logs-with-logging-analytics/sprint-alerts-on-logs-with-logging-analytics.md"
+        },
+        {
+            "title": "3896: How to create an alert for Abnormal Oracle Database Termination events in Logging Analytics",
+            "description": "This live lab outlines the steps required to create an alert for Abnormal Oracle Database Termination events in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-oracle-database-abnormal-termination/sprint-oracle-database-abnormal-termination.md"
+        },
+        {
+            "title": "3899: How to create an alert for Kubernetes events and non-compliance policy in Logging Analytics",
+            "description": "This live lab outlines the steps required to create an alert for Kubernetes events and non-compliance policy in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-container-image-pulled-manually/sprint-container-image-pulled-manually.md"
+        },
+        {
+            "title": "3900: How to create an alert for a Windows DNS exfiltration event in Logging Analytics",
+            "description": "This live lab outlines the steps required to create an alert for a Windows DNS exfiltration event in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-dns-exfiltration-on-windows-systems/sprint-dns-exfiltration-on-windows-systems.md"
+        },
+        {
+            "title": "3901: How to create an alert for sensitive data access from suspicious IPs in Logging Analytics",
+            "description": "This live lab outlines the steps required to create an alert for sensitive data access from suspicious IPs in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-suspicious-activity-and-data-exfiltration/sprint-suspicious-activity-and-data-exfiltration.md"
+        },
+        {
+            "title": "3904: How to collect logs and performance data from Oracle Database tables in Logging Analytics",
+            "description": "This live lab outlines the steps required to collect logs and performance data from Oracle Database tables in Logging Analytics",
+            "filename": "https://oracle-livelabs.github.io/sprints/oandm/sprint-logs-from-db-tables/sprint-logs-from-db-tables.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+        }
+    ]
+}

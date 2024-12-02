@@ -2,14 +2,14 @@
 
 ## Introduction
 
-The tutorials in this workshop assume you have performed the prerequisite tasks detailed in the Introduction section of this workshop.  You’ve already created an OKE cluster in the Oracle Cloud and provisioned a WebLogic domain using the WebLogic Kubernetes Operator. If you have not done that yet, please complete **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop prior to starting Tutorial 1. The tutorials also assume you have set up EM in the Oracle Cloud, in a separate VCN.
+The tutorials in this workshop assume you have performed the prerequisite tasks detailed in the Introduction section of this workshop.  You’ve already created an OKE cluster in the Oracle Cloud and provisioned a WebLogic domain using the WebLogic Kubernetes Operator. If you have not done that yet, please complete **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop prior to starting Tutorial 1. The tutorials also assume you have set up EM in the Oracle Cloud, in a separate VCN.
 
 Estimated time: 5 minutes
 
 
 ### Prerequisites
 
-* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
+* Completion of the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, labs 1, 2, 3 and 4.
 
 ### Objectives
 * Verify WebLogic Administration Console is running
@@ -22,7 +22,7 @@ Estimated time: 5 minutes
 
    ![Oracle Cloud console, Navigation Menu](images/1-1-menu.png " ")
 
-2. Locate the compartment you created the Kubernetes cluster when you performed the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Then click the name of the cluster.
+2. Locate the compartment you created the Kubernetes cluster when you performed the prerequisite **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop. Then click the name of the cluster.
 
    ![Oracle Cloud console, Compartment](images/1-2-compartment.png " ")
 
@@ -81,14 +81,14 @@ Estimated time: 5 minutes
      </copy>
      ```
      * Username: weblogic
-     * Password: Password generated in the  **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, Lab 4, Step 1
+     * Password: Password generated in the  **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, Lab 4, Step 1
 
      Make sure the WebLogic Administration console login page launches in the new browser tab like the image below.
 
      ![WLS Admin Console](images/1-10-demoapp.png " ")
 
 
-      >**NOTE:** If you can’t start the application, return to the prerequisite workshop, **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** and validate Lab 1 through Lab 4 were performed.
+      >**NOTE:** If you can’t start the application, return to the prerequisite workshop, **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** and validate Lab 1 through Lab 4 were performed.
 
 
 

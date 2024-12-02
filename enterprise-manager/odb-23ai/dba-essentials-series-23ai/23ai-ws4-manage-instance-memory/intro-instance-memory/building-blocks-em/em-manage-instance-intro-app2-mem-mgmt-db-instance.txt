@@ -1,0 +1,16 @@
+<!--
+    {
+        "name":"EM Introduction - Appendix 2: Memory Management of Database Instance",
+        "description":"EM Introduction - Appendix 2: Memory Management of Database Instance",
+        "date":"Sep/09/2024"
+    }
+-->
+The size of the instance memory structures affects the performance of the Oracle Database and is controlled by initialization parameters. When you create a database with DBCA, the memory parameters are automatically set to optimal values based on the database workload, such as data warehouse, general purpose, or transaction processing. However, as your database usage expands, you can alter the settings of the memory parameters.
+
+The basic memory structures associated with Oracle Database include:
+
+-   **System Global Area (SGA)**   
+	The SGA is a group of shared memory structures, known as SGA components, that contain data and control information for one Oracle database instance. The SGA is shared by all server and background processes. Examples of data stored in the SGA include cached data blocks and shared SQL areas.
+
+-   **Program Global Area (PGA)**   
+	The PGA is a memory region that contains data and control information for a server process. It is nonshared memory created by Oracle Database when a server process is started. Access to the PGA is exclusive to the server process. There is one PGA for each server process. Background processes also allocate their own PGAs. 
