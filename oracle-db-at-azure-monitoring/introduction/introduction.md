@@ -13,7 +13,7 @@ Get ready to enhance your cloud database management skills and discover the seam
 
 Estimated Workshop Time: 2 Hours 30 Minutes
 
-### About Oracle Cloud Infrastructure Database Management (OCI Database Management)
+## About Oracle Cloud Infrastructure Database Management (OCI Database Management)
 
 As a DevOps user or Database Administrator, you can use the OCI Database Management service to monitor and manage your Oracle Databases. The Database Management service supports Oracle Databases located on-premises and connected to a resource in the Oracle Cloud Infrastructure External Database service (referred to as External Oracle Databases). Database Management service also supports Oracle Autonomous Databases and Oracle Cloud Databases, which are Oracle Databases on the following Co-managed Oracle Database Cloud solutions:
 -	Bare Metal and Virtual Machine DB Systems
@@ -26,7 +26,7 @@ Database Management supports Oracle Database versions 11.2.0.4 and later. Using 
 * Group your most important or production Oracle Databases together, or group together databases that reside across compartments into a Database Group, and monitor them.
 * Create SQL jobs to perform administrative operations on a single Oracle Database or a Database Group.
 
-### About Ops Insights
+## About Ops Insights
 
 Oracle Cloud Infrastructure Ops Insights is an Oracle Cloud Infrastructure (OCI) native service that provides holistic insight into database and host resource utilization and capacity.  Ops Insights (OPSI) provides capacity planning, long-term SQL analysis, and historical performance reports for your Oracle databases. The service has a full offering of features to improve performance and reduce overhead for your resources. The ability to quickly and easily ingest valuable metric data allows administrators, engineers, and executives to make informed decisions on allocating resources to prevent major issues and reduce overhead for managing their infrastructure resources.
 
@@ -52,7 +52,7 @@ SQL Insights
 * Proactively identify and mitigate SQL issues.
 * Find common patterns in SQL behaviour across databases and applications.
 
-### Workshop Objectives
+## Workshop Objectives
 In this workshop, you will learn how to:
 * Step 1. Explore and understand the limitation of the Oracle Database@Azure Monitoring in Azure Cloud
 * Step 2. Enable the Database Management service for Oracle Database@Azure Autonomous Database and Exadata Dedicated Infrastructure Container/Pluggable Database.
@@ -62,7 +62,7 @@ In this workshop, you will learn how to:
 * Step 6. Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance.
 
 
-### Prerequisites
+## Prerequisites
 * An Oracle Free Tier, Always Free, Paid or LiveLabs Cloud Account
 * Familiarity with Oracle Cloud Infrastructure (OCI) is helpful
 * Basic knowledge about DB @Azure concepts is helpful

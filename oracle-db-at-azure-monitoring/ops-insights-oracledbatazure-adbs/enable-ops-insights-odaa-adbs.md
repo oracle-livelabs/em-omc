@@ -27,8 +27,6 @@ Estimated Time: 60 minutes
 * Compare SQL Performance across databases and identify common patterns
 * Identify SQL performance trends across enterprise-wide databases
 
-### Prerequisites
-
 ## Task 1: Setting Up IAM Policies
 
 Ops Insights requires specific permissions:
@@ -70,7 +68,7 @@ The **private endpoint** is a representation of Ops Insights in the VCN in which
 Refer to Database Management Service Create Private Endpoint for detailed steps: 
     ![Create Ops Insights Private Endpoint](./images/odaa-ops-insights-private-endpoint.png " ")
 
-### Enable Network Communication between Ops Insights and the Databases
+## Task 3: Enable Network Communication between Ops Insights and the Databases
 
 You must enable communication between Ops Insights and the Oracle Cloud Database by adding the ingress and egress security rules to an NSG or a Security List in the VCN in which the Oracle Database@Azure Cloud Databases can be accessed.
 
@@ -84,7 +82,7 @@ Add security rules to a Security List to enable communication between an Ops Ins
 * Egress rule for the Ops Insights private endpoint: The Ops Insights private IP address (from any port) can send requests to the Oracle Database@Azure primary subnet (10.0.0.0/16) on port 1521.
     ![Ops Insights Security List Egress](./images/odaa-securitylistEgress.png " ")
 
-## Task 3: Enable Ops Insights for Autonomous Databases
+## Task 4: Enable Ops Insights for Autonomous Databases
 
 To enable one or more Autonomous Databases for Ops Insights, log in to OCI Console and do the following:
 * Open the **Navigation Menu** and click **Observability and Management**. Under **Ops Insights**, click **Administration** and then **Database Fleet**.

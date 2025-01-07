@@ -8,13 +8,13 @@ In this lab, you will go through the steps to set up Database Management for **O
 
 Estimated Time: 60 minutes
 
-## Objectives
+### Objectives
 
 Set up Database Management to monitor and manage **Oracle Database@Azure Autonomous Database**.
 
 ## Task 1: Enable Database Management for Oracle Database@Azure Autonomous Database
 
-#### Prerequisites:
+### Prerequisites:
 Assign proper IAM permissions
 * From **Navigation Menu**, click **Identity & Security**, click **Policies**
 * Click the existing policy MulticloudLink_ODBAA_20240227_DBM_Policy

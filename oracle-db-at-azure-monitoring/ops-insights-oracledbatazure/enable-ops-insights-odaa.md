@@ -26,8 +26,6 @@ Estimated Time: 60 minutes
 * Compare SQL Performance across databases and identify common patterns
 * Identify SQL performance trends across enterprise-wide databases
 
-### Prerequisites
-
 ## Task 1: Setting Up IAM Policies
 
 Ops Insights requires specific permissions:
@@ -59,7 +57,7 @@ Ops Insights lets you create a private endpoint for Oracle Cloud Databases. You 
 Refer to Database Management Service Create Private Endpoint for detailed steps: 
     ![Create Ops Insights Private Endpoint](./images/odaa-ops-insights-private-endpoint.png " ")
 
-### Enable Network Communication between Ops Insights and the Databases
+## Task 3: Enable Network Communication between Ops Insights and the Databases
 
 You must enable communication between Ops Insights and the Oracle Cloud Database by adding the ingress and egress security rules to an NSG or a Security List in the VCN in which the Oracle Database@Azure Cloud Databases can be accessed.
 
@@ -76,7 +74,7 @@ Add security rules to a Security List to enable communication between an Ops Ins
 
     ![Ops Insights Security List Egress](./images/odaa-securitylistEgress.png " ")
 
-### Enabling Ops Insights for Oracle Database@Azure Exadata fleet 
+## Task 4: Enabling Ops Insights for Oracle Database@Azure Exadata fleet 
 
 With a private endpoint defined, you’re ready to add an Exadata Database Service on Dedicated Infrastructure that uses that endpoint. You can add Exadata Database Service on Dedicated Infrastructures from the Private Endpoint Details page or from the Exadata Fleet Administration page.
 

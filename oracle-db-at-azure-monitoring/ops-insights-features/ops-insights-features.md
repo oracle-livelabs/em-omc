@@ -31,72 +31,72 @@ Estimated Time: 60 minutes
 
 *  On the **Ops Insights Overview** page, from the left pane select the **Exadata Insights**.
 
-      ![Left Pane](./images/odaa-exadata-insights.png " ")
+      ![Exadata Insights](./images/odaa-exadata-insights.png "Exadata Insights")
 
 *  On the **Overview** page, click on **Exadata Insights** from the left pane.
 
-      ![Left Pane](./images/odaa-exadata-insights.png " ")
+      ![Exadata Insights](./images/odaa-exadata-insights.png "Exadata Insights")
 
 *  This will show the Exadata systems registered for Ops Insights.
 
-      ![Left Pane](./images/odaa-exadata-system.png " ")
+      ![Exadata System](./images/odaa-exadata-system.png "Exadata System")
 
 *  On this page, the aggregate view of all the discovered Exadata systems will be shown.
 
-      ![Left Pane](./images/odaa-aggregate-view.png " ")
+      ![Aggregate View](./images/odaa-aggregate-view.png "Aggregate View")
 
 *  Also, the current and forecast utilization of the Exadata system will be shown in the bottom section. Click on the Oracle Database@Azure Exadata system to evaluate more insights. 
 
-      ![Left Pane](./images/odaa-current-forecast.png " ")
+      ![Current Forecast](./images/odaa-current-forecast.png "Current Forecast")
 
 *  On the **Exadata System Details** page, you can view **Rack and Key Metrics**. The page displays Software and Hardware Summary.
 
-      ![Left Pane](./images/odaa-rack-and-key-metrics.png " ")
+      ![Rack and Key Metrics](./images/odaa-rack-and-key-metrics.png "Rack and Key Metrics")
 
 *  Navigate to **Metrics by Database** on the left pane.
 
-      ![Left Pane](./images/odaa-metrics-by-database.png " ")
+      ![Metrics by Database](./images/odaa-metrics-by-database.png "Metrics by Database")
 
 *  Click **Metrics by Host** on the left pane.
 
 *  On the **Metrics by Host** page, click on the **CPU** tab, select Grouping **None** to see the aggregate trend & forecast for All Hosts. 
 
-      ![Left Pane](./images/odaa-metrics-by-host.png " ")
+      ![Metrics by Host](./images/odaa-metrics-by-host.png "Metrics by Host")
 
 
 *  Now choose **Allocation(CPU)** under **Size** and **Usage Change (%)** under **Color**.Select the **Seasonality aware** radio button. 
 
-      ![Left Pane](./images/odaa-metrics-by-host-seasonality.png " ")
+      ![Metrics by Host Seasonality](./images/odaa-metrics-by-host-seasonality.png "Metrics by Host Seasonality")
 
 *  Click the **Exadata Storage Server** option on the left pane.
 
-      ![Left Pane](./images/odaa-exadata-storage-server.png " ")
+      ![Exadata Storage Server](./images/odaa-exadata-storage-server.png "Exadata Storage Server")
 
 * Select **Aggregate data series and forecast** on the top right pane to show total individual storage utilization.
-      ![Left Pane](./images/odaa-exadata-storage-server1.png " ")
+      ![Exadata Storage Server](./images/odaa-exadata-storage-server1.png "Exadata Storage Server")
 
 
 ## Task 3: SQL Insights
 
 *  On the **Ops Insights Overview** page, from the left pane select the **Database Insights**.
 
-      ![Left Pane](./images/odaa-sql-insights.png " ")
+      ![Ops Insights SQL Insights](./images/odaa-sql-insights.png "Ops Insights SQL Insights")
 
 *  On the **SQL Insights** page, from the left pane select the **Database Analysis** page.
 
-      ![Left Pane](./images/odaa-database-insights-analysis.png " ")
+      ![Database Insights Analysis](./images/odaa-database-insights-analysis.png "Database Insights Analysis")
 
 *  On the **Insights** section, to look at the Degraded SQL due to the plan changes, click the number under **Degraded plan changes**.
 
-      ![Left Pane](./images/odaa-degraded-sql.png " ")
+      ![Degraded SQL](./images/odaa-degraded-sql.png "Degraded SQL")
 
 *  It will bring up the page for the **Top 50 degraded plan changes**.
 
-      ![Left Pane](./images/odaa-top-50-degraded-plan-changes.png " ")
+      ![Top 50 Degraded Plan Changes](./images/odaa-top-50-degraded-plan-changes.png "Top 50 Degraded Plan Changes")
 
 *  Click on the **SQL ID: cu05sdu975cnh** to see the details of the SQL.
 
-      ![Left Pane](./images/odaa-sql-plan-details.png " ")
+      ![SQL Plan Details](./images/odaa-sql-plan-details.png "SQL Plan Details")
 
 ## Conclusion
 
