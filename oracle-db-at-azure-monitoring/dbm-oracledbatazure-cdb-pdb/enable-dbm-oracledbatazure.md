@@ -15,11 +15,11 @@ Estimated Time: 60 minutes
 Set up Database Management to monitor and manage Oracle Database@Azure Cloud Databases.
 
 Here are some of the important tasks you can perform using Diagnostics & Management features:
-* Monitor the key performance and configuration metrics of your fleet of Oracle Databases. You can also compare and analyze database metrics over a selected period of time.
-* Use Performance Hub for a single-pane-of-glass view of database performance, which enables you to quickly diagnose performance issues.
-* Use AWR Explorer to visualize historical performance data from AWR snapshots in easy-to-interpret charts.
-* Use the other available Diagnostics & Management features to monitor, manage, and administer a single Oracle Database.
-* Use dashboards to visualize, explore and analyze database performance metrics.
+- Monitor the key performance and configuration metrics of your fleet of Oracle Databases. You can also compare and analyze database metrics over a selected period of time.
+- Use Performance Hub for a single-pane-of-glass view of database performance, which enables you to quickly diagnose performance issues.
+- Use AWR Explorer to visualize historical performance data from AWR snapshots in easy-to-interpret charts.
+- Use the other available Diagnostics & Management features to monitor, manage, and administer a single Oracle Database.
+- Use dashboards to visualize, explore and analyze database performance metrics.
 
 ## Prerequisites
 
