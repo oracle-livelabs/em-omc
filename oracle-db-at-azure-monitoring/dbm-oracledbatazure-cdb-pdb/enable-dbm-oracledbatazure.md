@@ -32,7 +32,7 @@ Oracle Database@Azure Exadata Infrastructure is created in the auto-generated co
 
 - From the **Oracle Cloud console navigation menu** located in the upper left, click **Identity & Security**. Under **Identity**, click **Policies**.
 - Click **Create Policy**. In the **Create Policy** dialog :
-- **Name**: Enter MulticloudLink_ODBAA_20240227_DBM_Policy
+- **Name**: Enter MulticloudLink\_ODBAA\_20240227\_DBM\_Policy
 - **Description**: Enter Multicloud ODBAA Database Management Service Policy
 - **Compartment**: Select root.
 - Enable **Show manual editor**.
@@ -92,7 +92,7 @@ The database user password checks in Database Management require the password to
 - On the **Create Key** page, select all the defaults
 - Enter **Name** : **OnM_key**.
 
-![Multicloud Vault Key](./images/odaa-vaultkey1.png "Multicloud Vault Key")
+     ![Multicloud Vault Key](./images/odaa-vaultkey1.png "Multicloud Vault Key")
 
 * On the **Vault Details** page, confirm the State of key is Enabled. 
 * In the left pane, click **Secrets**.

@@ -12,7 +12,7 @@ Estimated Time: 60 minutes
 
 Set up Database Management to monitor and manage **Oracle Database@Azure Autonomous Database**.
 
-## Prerequisites:
+## Prerequisites
 
 Assign proper IAM permissions
 
@@ -85,7 +85,7 @@ In the Enable Database Management panel, provide the information:
 - **Workload type**: Select the Autonomous Database workload type.
 - **Deployment type**: Select the deployment type: Autonomous Serverless 
 - **Autonomous Database**: Select the Autonomous Database. 
-- **Service name**: The predefined connection profiles for the Autonomous Database are automatically displayed in the dbname_\<service name\> (TLS or Mutual TLS) format. 
+- **Service name**: The predefined connection profiles for the Autonomous Database are automatically displayed in the dbname\_<service name\> (TLS or Mutual TLS) format. 
 - **Protocol**: The TCP or TCPS protocol used to connect to the Autonomous Database 
 - **Port**: 1521(TCP) or 1522(TCPS)
 - **Database wallet secret**: Select the secret that contains the wallet from the drop-down list. This field is only displayed if mTLS is appended to the service name. If an existing secret that contains the wallet is not available, then select Create new secret... in the drop-down list and save the cwallet.sso file in a secret.
