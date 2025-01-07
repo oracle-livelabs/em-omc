@@ -105,6 +105,6 @@ OCI Ops Insights enables administrators to uncover performance issues, forecast 
 ## Acknowledgements
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
-- **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain,Sriram Vrinda
+- **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
 - **Last Updated By/Date** - Royce Fu, December 2024
 
