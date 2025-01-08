@@ -63,6 +63,6 @@ If you've signed out of the Oracle Cloud, use these steps to sign back in.
 You may now **proceed to the next lab**.
 
 ## Acknowledgements
-- **Created By/Date** - Kay Malcolm, Database Product Management, March 2020
-- **Contributors** - John Peach, Kamryn Vinson, Rene Fontcha, Madhusudhan Rao, Arabella Yao
-- **Last Updated By** - Ana Coman, July 2024
+- **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure and Engineering
+- **Contributors** -  Derik Harlow, Murtaza Husain, Sriram Vrinda
+- **Last Updated By/Date** - Royce Fu, October 2024
