@@ -10,7 +10,7 @@ Throughout this workshop, you will gain practical experience in utilizing OCI Da
 
 Get ready to enhance your cloud database management skills and discover the seamless integration of Oracle and Azure through this comprehensive LiveLab experience.
 
-Estimated Workshop Time: 2 Hours 30 Minutes
+Estimated Workshop Time: 3 Hours 30 Minutes
 
 ## About Oracle Cloud Infrastructure Database Management (OCI Database Management)
 

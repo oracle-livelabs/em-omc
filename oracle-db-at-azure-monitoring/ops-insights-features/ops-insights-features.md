@@ -4,7 +4,7 @@
 
 Oracle Cloud Infrastructure Ops Insights is an Oracle Cloud Infrastructure (OCI) native service that provides holistic insight into database and host resource utilization and capacity. Ops Insights (OPSI) provides capacity planning, long-term SQL analysis, and historical performance reports for your Oracle databases. The service has a full offering of features to improve performance and reduce overhead for your resources. The ability to quickly and easily ingest valuable metric data allows administrators, engineers, and executives to make informed decisions on allocating resources to prevent major issues and reduce overhead for managing their infrastructure resources.
 
-Estimated Time: 60 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 

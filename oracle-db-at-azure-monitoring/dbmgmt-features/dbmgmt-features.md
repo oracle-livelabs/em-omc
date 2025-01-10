@@ -4,7 +4,7 @@
 
 Multicloud adoption allows businesses to harness the strengths of different cloud platforms while mitigating risks. However, monitoring and managing databases in a multicloud environment introduces unique challenges, requiring specialized approaches and solutions. You can use Diagnostics & Management features to monitor and manage Oracle Database@Azure. 
 
-Estimated Time: 60 minutes
+Estimated Time: 15 minutes
 
 ### Objectives
 

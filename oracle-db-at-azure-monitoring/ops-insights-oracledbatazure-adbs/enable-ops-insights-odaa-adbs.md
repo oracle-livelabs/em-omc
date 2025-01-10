@@ -18,7 +18,7 @@ In this lab, you will go through the steps to enable Ops Insights for Oracle Dat
 
 ![Ops Insights Technical Architecture](./images/odaa-ops-insights-architecture.png "Ops Insights Technical Architecture")
 
-Estimated Time: 60 minutes
+Estimated Time: 30 minutes
 
 ### Objectives
 
