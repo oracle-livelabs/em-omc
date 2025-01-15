@@ -51,6 +51,10 @@ Oracle Database@Azure Exadata Infrastructure is created in the auto-generated co
     Allow group odaa_dbmgmt-group to use security-lists in tenancy 
     Allow group odaa_dbmgmt-group to manage secret-family in compartment MulticloudLink_ODBAA_20240105042431 
     Allow group odaa_dbmgmt-group to read buckets in compartment MulticloudLink_ODBAA_20240105042431
+    Allow group odaa_dbmgmt-group to read metrics in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to manage alarms in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to manage ons-topics in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to manage management-dashboard-family in compartment MulticloudLink_ODBAA_20240105042431 
     </copy>
     ```
 

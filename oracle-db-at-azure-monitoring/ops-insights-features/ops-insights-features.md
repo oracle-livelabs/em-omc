@@ -78,7 +78,7 @@ Estimated Time: 15 minutes
 
 ## Task 3: SQL Insights
 
-*  On the **Ops Insights Overview** page, from the left pane select the **Database Insights**.
+*  On the **Ops Insights Overview** page, from the left pane select the **Database Insights** which will take you to **SQL Insights** landing page.
 
       ![Ops Insights SQL Insights](./images/odaa-sql-insights.png "Ops Insights SQL Insights")
 

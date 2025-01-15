@@ -21,7 +21,22 @@ Assign proper IAM permissions
 - Add the following **Policy Statement** to the policy
 
     ```
+    <copy>
+    Allow service dpd to read secret-family in compartment MulticloudLink_ODBAA_20240105042431
+    Allow service dpd to manage objects in compartment MulticloudLink_ODBAA_20240105042431
+    Allow group odaa_dbmgmt-group to manage dbmgmt-family in tenancy 
     Allow group odaa_dbmgmt-group to manage autonomous-database-family in tenancy
+    Allow group odaa_dbmgmt-group to read database-family in tenancy 
+    Allow group odaa_dbmgmt-group to manage vnics in tenancy 
+    Allow group odaa_dbmgmt-group to use subnets in tenancy 
+    Allow group odaa_dbmgmt-group to use network-security-groups in tenancy 
+    Allow group odaa_dbmgmt-group to use security-lists in tenancy 
+    Allow group odaa_dbmgmt-group to manage secret-family in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to read metrics in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to manage alarms in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to manage ons-topics in compartment MulticloudLink_ODBAA_20240105042431 
+    Allow group odaa_dbmgmt-group to manage management-dashboard-family in compartment MulticloudLink_ODBAA_20240105042431 
+    </copy>
     ```
 
 - Click **Save changes**
