@@ -25,7 +25,7 @@ Estimated Time: 15 minutes
 *  Click **View** for Ops Insights.
 
      ![Ops Insights](./images/odaa-associated-service-dbm-opsi.png "Ops Insights")
-     ![Ops Insights Overview](./images/odaa-exadatas-overview.png "Ops Insights")
+     ![Ops Insights Overview](./images/odaa-exadata-overview.png "Ops Insights Overview")
 
 ## Task 2: Exadata Insights
 
