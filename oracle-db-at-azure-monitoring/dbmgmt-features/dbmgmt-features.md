@@ -145,7 +145,7 @@ Performance Diagnostics
 
      ![Exadata Perf Hub](./images/odaa-dbm-exadata-perf-hub.png "Exadata Perf Hub")
 
-     The **Exadata** tab provides a unified view of Oracle Exadata hard disk and flash performance statistics.
+     The **Exadata** tab provides a unified view of Oracle Exadata hard disk and flash performance statistics. *Note*: **Exadata** tab is only available for when launching **Performance Hub** from a CDB.
 
      It gives a deep insight into the health and performance of system components including the databases, Exadata storage cells, and Automatic Storage Management (ASM). You can use the Exadata tab for enhanced performance diagnostics for Exadata databases.
 
