@@ -114,4 +114,4 @@ To enable one or more Autonomous Databases for Ops Insights, log in to OCI Conso
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, December 2024
+- **Last Updated By/Date** - Royce Fu, January 2025
