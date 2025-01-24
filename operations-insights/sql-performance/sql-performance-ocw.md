@@ -17,7 +17,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: SQL Insights
 
-1. On the **Ops Insights Overview** page, from the left pane click **SQL Insights**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
+1. On the **Ops Insights Overview** page, from the left pane click **Database Insights**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
 
       ![Left Pane](./images/sql-insights.png " ")
 
