@@ -49,16 +49,16 @@
       "filename": "./../../em-job-system-automation/em-job-system-automation.md"
     },
     {
-      "title": "Lab 8: Get Started with Real Application Testing",
-      "description": "This lab provides an overview of Real Application Testing and how to use it to simulate Workload and review Performance before Database Upgrade.",
-      "publisheddate": "7/16/2020",
-      "filename": "./../../em-rat-spa-dbreplay/em-rat-spa-dbreplay.md"
-    },
-    {
-      "title": "Lab 9: Enterprise Monitoring Quick Tour",
+      "title": "Lab 8: Enterprise Monitoring Quick Tour",
       "description": "This lab provides an overview of Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c",
       "publisheddate": "9/15/2021",
       "filename": "./../../em-monitoring-overview/em-monitoring-overview.md"
+    },
+    {
+      "title": "Lab 9: Get Started with Real Application Testing",
+      "description": "This lab provides an overview of Real Application Testing and how to use it to simulate Workload and review Performance before Database Upgrade.",
+      "publisheddate": "7/16/2020",
+      "filename": "./../../em-rat-spa-dbreplay/em-rat-spa-dbreplay.md"
     },
     {
       "title": "Lab 10: Deploy and Manage Oracle Databases with Ansible and Enterprise Manager",
