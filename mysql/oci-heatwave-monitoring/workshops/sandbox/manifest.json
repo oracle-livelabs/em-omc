@@ -1,0 +1,16 @@
+{
+  "workshoptitle": "Observability and Management of HeatWave MySQL using OCI O&M Services",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
