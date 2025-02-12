@@ -1,0 +1,51 @@
+{
+    "workshoptitle": "Get started with Oracle Database@Azure Databases Monitoring and Management",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "This is the prerequisite lab to check the Oracle Database@Azure subscription in Microsoft Azure Portal and log in to Oracle Cloud Console",
+            "filename": "../../getstarted/getstarted.md"
+        },
+        {
+            "title": "Lab 1: Enable Database Management for Oracle Database@Azure Cloud Databases",
+            "description": "Required steps to enable Database Management Diagnostic & Management for Oracle Database@Azure Cloud Databases",
+            "filename": "../../dbm-oracledbatazure-cdb-pdb/enable-dbm-oracledbatazure.md"
+        },
+        {
+            "title": "Lab 2: Enable Database Management for Oracle Database@Azure Autonomous Databases",
+            "description": "Required steps to enable Database Management Diagnostic & Management for Oracle Database@Azure Autonomous Databases",
+            "filename": "../../dbm-oracledbatazure-adbs/enable-dbm-oracledbatazure-adbs.md"
+        },
+        {
+            "title": "Lab 3: Exploring Oracle Cloud Infrastructure Database Management Diagnostic & Management",
+            "description": "Exploring Oracle Cloud Infrastructure Database Management Diagnostic & Management",
+            "filename": "../../dbmgmt-features/dbmgmt-features.md"
+        },
+        {
+            "title": "Lab 4: Enable Ops Insights for Oracle Database@Azure Cloud Databases",
+            "description": "Required steps to enable Ops Insights for Oracle Database@Azure Cloud Databases",
+            "filename": "../../ops-insights-oracledbatazure/enable-ops-insights-odaa.md"
+        },
+        {
+            "title": "Lab 5: Enable Ops Insights for Oracle Database@Azure Autonomous Databases",
+            "description": "Required steps to enable Ops Insights for Oracle Database@Azure Autonomous Databases",
+            "filename": "../../ops-insights-oracledbatazure-adbs/enable-ops-insights-odaa-adbs.md"
+        },
+        {
+            "title": "Lab 6: Exploring Oracle Cloud Infrastructure Ops Insights",
+            "description": "Exploring Oracle Cloud Infrastructure Ops Insights",
+            "filename": "../../ops-insights-features/ops-insights-features.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
