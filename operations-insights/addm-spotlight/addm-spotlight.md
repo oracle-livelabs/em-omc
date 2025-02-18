@@ -23,7 +23,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Using ADDM Spotlight
 
-1.  To access and view ADDM Spotlight, click on the Oracle Cloud menu, select **Observability and Management** and then under **Ops Insights** click on **ADDM Spotlight**.
+1.  On the left menu **Ops Insights**, click **Database Insights** and then click **ADDM Spotlight** to access and view ADDM Spotlight .
 
       ![ADDM Spotlight](./images/addm-spot01.png " ")
 
