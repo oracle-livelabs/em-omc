@@ -27,8 +27,9 @@ Download sample logs file for [Squid Proxy Access Logs](./files/squid-access.log
 ## **Task 2:**  Open Map Visualization
  
 1. From the upper left of the OCI Console select the navigation icon  ![navigation-menu](images/navigation-menu.jpg =2%x*) ,  and navigate to **Logging Analytics** and then the **Log Explorer**.</br> 
+![navigation-menu](images/logging-landing-page.jpg)
 
-2. First you will set the log search range. From the upper right of the Log Explorer page (to the left of Actions), drop down the menu to Quick Select the time range as per logs uploaded and click the **Apply** button.
+2. First you will set the log search range. From the upper right of the Log Explorer page (to the left of Actions), drop down the menu to Select the time range as per logs uploaded and click the **Apply** button.
 ![](./images/search-visual-time-filter.jpg " ")
 
 3. On the Log Explorer page, select the upload name and view the logs.

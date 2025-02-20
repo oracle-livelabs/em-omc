@@ -23,10 +23,10 @@ In this lab, you will see step-by-step instructions to:
 Now we will walk through configuring a substitution function for a source.
 
 ## **Task 1:**  Configure Log Source
-In this task, you will configure a Log Source to add Field Enrichment for substitution function.
+In this task, you will configure a Log Source to add Field Enrichment - Substitution Function.
 
 1. Open the navigation menu and click **Observability & Management**. Under **Logging Analytics** click **Administration**.
-![](./images/oci-console-menu-la-admin.jpg " ")  TO DO
+![](./images/oci-console-menu-la-admin.jpg " ")
 
 2. The administration resources are listed in the left hand navigation pane under **Resources**. Click **Sources** to open source listing page. In the **Sources** page in the upper right, type `Squid Proxy Access Logs` into the search field and enter. Squid Proxy Access Logs source will be displayed under Name.
 ![](./images/admin-source-search.jpg " ")
