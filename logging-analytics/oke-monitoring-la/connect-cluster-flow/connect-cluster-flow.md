@@ -27,4 +27,3 @@ You may now proceed to the [next lab](#next).
 * **Author** - Vikram Reddy, OCI Logging Analytics
 * **Contributors** -  Vikram Reddy, Heena Rahangdale , OCI Logging Analytics
 * **Last Updated By/Date** - Vikram Reddy, Aug, 2024
-Supriya
