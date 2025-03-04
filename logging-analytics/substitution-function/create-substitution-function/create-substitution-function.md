@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this Lab, you will set up and configure a Logging Analytics source and use substitution function as a field enrichment option.
+In this Lab, you will configure a Logging Analytics out of the box source and use substitution function as a field enrichment option.
 
 Estimated Time: 30 minutes
 
@@ -42,7 +42,7 @@ In this task, you will configure a Log Source to add Field Enrichment - Substitu
          field that must be replaced say **(https:\/\/)([a-zA-Z0-9.-]+)(\/product\/)(\d+)**.</br>
       e. Specify **Replacement string/expression** , that should be  substituted in place of the original 
          value of the input field say  **$1$2$3productcategory** in this case</br>
-      f. For multiple occurrences of the string to be replaced, enable **Substitute all matches** 
+      f. For multiple occurrences of the string to be replaced within a field, enable **Substitute all matches** 
          check box.</br> 
       g. In **Output Field** section, select the field that must store the new value of the input field after 
          the original value is replaced with the substitution value say **Security Destination Endpoint URL**.</br>
@@ -56,9 +56,9 @@ In this task, you will configure a Log Source to add Field Enrichment - Substitu
 
 This completes the Administration changes for Substitution Function Enrichment.
 
-You may now proceed to the [next lab](#next).
+You may now **proceed to the [next lab](#next)**.
 
 ## Acknowledgements
 * **Author** - Supriya Joshi, Logging Analytics Development Team
 * **Contributors** -  Jolly Kundu, Logging Analytics Development Team
-* **Last Updated By/Date** - Feb 2025
+* **Last Updated By/Date** - Mar 2025

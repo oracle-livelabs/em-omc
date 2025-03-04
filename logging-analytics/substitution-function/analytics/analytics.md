@@ -1,10 +1,9 @@
-# View and Analyze Logs enriched using substitution function
-
+# Ingest, View and Analyze Logs enriched using substitution function
 
 ## Introduction
 You will learn how to use the Log Explorer to view log records grouped by the field substituted using substitution function.
 
-Estimated Lab Time: 10 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -24,7 +23,7 @@ Download sample logs file for [Squid Proxy Access Logs](./files/squid-access.log
 
     > **Note:** To understand more about how log ingestion works see the Logging Analytics [documentation](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/ingest-logs.html).
 
-## **Task 2:**  Open Map Visualization
+## **Task 2:**  Viewing enriched logs on Log Explorer
  
 1. From the upper left of the OCI Console select the navigation icon  ![navigation-menu](images/navigation-menu.jpg =2%x*) ,  and navigate to **Logging Analytics** and then the **Log Explorer**.</br> 
 ![navigation-menu](images/logging-landing-page.jpg)
@@ -47,4 +46,4 @@ In such cases, you can substitute the value of **ID** in the field of each log r
 ## Acknowledgements
 * **Author** - Supriya Joshi, Logging Analytics Development Team
 * **Contributors** -  Jolly Kundu, Logging Analytics Development Team
-* **Last Updated By/Date** - Feb 2025
+* **Last Updated By/Date** - Mar 2025

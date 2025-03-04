@@ -36,4 +36,4 @@ This lab assumes you have:
 ## Acknowledgements
 * **Author** - Supriya Joshi , OCI Logging Analytics
 * **Contributors** -  Supriya Joshi , OCI Logging Analytics
-* **Last Updated By/Date** - Supriya Joshi, Feb, 2025
+* **Last Updated By/Date** - Supriya Joshi, Mar, 2025
