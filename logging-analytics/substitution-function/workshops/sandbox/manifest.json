@@ -13,12 +13,13 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Using a substitution function to Replace an Expression in a Field ",
+            "title": "Lab 1: Configure field enrichment - Substitution Function",
             "description": "This live lab outlines the steps required to create a substitution function",
             "filename": "../../create-substitution-function/create-substitution-function.md"
         },
         {
-            "title": "Lab 2: Exploring Logging Analytics Visualization",
+            "title": "Lab 2: Ingest, View and Analyze enriched logs",
+            "description": "This live lab outlines the steps required to upload and view enriched logs",
             "filename": "../../analytics/analytics.md"
         },
         {

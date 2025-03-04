@@ -1,4 +1,4 @@
-# Ingest, View and Analyze Logs enriched using substitution function
+# Ingest, View and Analyze enriched logs
 
 ## Introduction
 You will learn how to use the Log Explorer to view log records grouped by the field substituted using substitution function.
@@ -29,13 +29,13 @@ Download sample logs file for [Squid Proxy Access Logs](./files/squid-access.log
 ![navigation-menu](images/logging-landing-page.jpg)
 
 2. First you will set the log search range. From the upper right of the Log Explorer page (to the left of Actions), drop down the menu to Select the time range as per logs uploaded and click the **Apply** button.
-![](./images/search-visual-time-filter.jpg " ")
+![time-filter](./images/search-visual-time-filter.jpg " ")
 
 3. On the Log Explorer page, select the upload name and view the logs.
-![](./images/search-uploadname.jpg " ")
+![search-upload](./images/search-uploadname.jpg " ")
 
 4. Drill down further using input field **Destination URL** and output field  **Security Destination Endpoint URL** used in Lab1 while creating substitution function.
-![](./images/substituted-field.jpg " ")
+![substituted-field](./images/substituted-field.jpg " ")
 
 
 There are many business reasons to use substitution function such as in aforementioned case you want to extract all the log records that have the field **Destination URL** with the content of the format **`https://example.com/product/<ID>`** , and the value of ID varies with each log record. 

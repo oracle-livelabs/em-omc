@@ -1,4 +1,4 @@
-# Configuring field enrichment - Substitution Function
+# Configure field enrichment - Substitution Function
 
 ## Introduction
 
@@ -26,13 +26,13 @@ Now we will walk through configuring a substitution function for a source.
 In this task, you will configure a Log Source to add Field Enrichment - Substitution Function.
 
 1. Open the navigation menu and click **Observability & Management**. Under **Logging Analytics** click **Administration**.
-![](./images/oci-console-menu-la-admin.jpg " ")
+![adminla-console](./images/oci-console-menu-la-admin.jpg " ")
 
 2. The administration resources are listed in the left hand navigation pane under **Resources**. Click **Sources** to open source listing page. In the **Sources** page in the upper right, type `Squid Proxy Access Logs` into the search field and enter. Squid Proxy Access Logs source will be displayed under Name.
-![](./images/admin-source-search.jpg " ")
+![source-search](./images/admin-source-search.jpg " ")
 
 3. In the Source row, look to the right of `Squid Proxy Access Logs`, then click the three dots and select **Edit** menu to be brought to the **Edit Source** page.
-![](./images/admin-source-edit.jpg " ")
+![source-edit](./images/admin-source-edit.jpg " ")
 
 4. Click the **Field Enrichment** tab and add Substitution Function.</br>
       a. Click **Add** button to open Field Enrichment dialog box.</br>
@@ -47,10 +47,10 @@ In this task, you will configure a Log Source to add Field Enrichment - Substitu
       g. In **Output Field** section, select the field that must store the new value of the input field after 
          the original value is replaced with the substitution value say **Security Destination Endpoint URL**.</br>
       h. Click **Add field enrichment**. 
-      ![](./images/admin-source-edit-field-enrichment.jpg " ")
+      ![field-enriched](./images/admin-source-edit-field-enrichment.jpg " ")
 
 5. Observe new row that appear under the **Field Enrichment** tab.
-![](./images/admin-source-edit-field-enrichment-final.jpg " ")
+![source-updated](./images/admin-source-edit-field-enrichment-final.jpg " ")
 
 6. Click the **Save Changes** button to save the Source.
 
