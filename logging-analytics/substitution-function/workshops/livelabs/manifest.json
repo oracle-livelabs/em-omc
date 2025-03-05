@@ -18,11 +18,6 @@
             "filename": "../../create-substitution-function/create-substitution-function.md"
         },
         {
-            "title": "Lab 2: Ingest, View and Analyze enriched logs",
-            "description": "This live lab outlines the steps required to upload and view enriched logs",
-            "filename": "../../analytics/analytics.md"
-        },
-        {
             "title": "Need Help?",
             "description": "Solutions to Common Problems and Directions for Receiving Live Help",
             "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
