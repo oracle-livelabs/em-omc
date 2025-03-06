@@ -1,0 +1,39 @@
+{
+  "workshoptitle": "DBA Essentials - Monitor and tune Oracle Database 23ai",
+  "help": "livelabs-help-em_us_grp@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction.",
+      "filename": "./../../intro-optimize-db-performance/intro-optimize-db-performance.md"
+    },
+    {
+      "title": "Lab 1: Verify compute instance setup",
+      "description": "Verify setup of compute instance",
+      "publisheddate": "05/06/2024",
+      "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-novnc.md"
+    },
+    {
+      "title": "Lab 2: Initialize environment",
+      "description": "How to initialize and start all the workshop components.",
+      "publisheddate": "05/23/2023",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 3: Monitor general state of Oracle Database",
+      "description": "How to monitor the state of the database from Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
+      "filename": "./../../monitor-general-state-database/monitor-general-state-database.md"
+    },
+    {
+      "title": "Lab 4: Diagnose problems and improve performance using SQL Tuning Advisor",
+      "description": "How to improve the performance of the database using Automatic SQL Tuning Advisor from Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
+      "filename": "./../../improve-db-performance-using-sql-tuning-advisor/improve-db-performance-using-sql-tuning-advisor.md"
+    },
+    {
+      "title": "Need help?",
+      "description": "Solutions to common problems and directions for receiving live help",
+      "publisheddate": "05/24/2024",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

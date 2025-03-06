@@ -13,17 +13,22 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster",
+            "title": "Lab 1: Logging Analytics Connect Kubernetes Cluster (Optional Study)",
             "description": "This live lab outlines the steps required to connect to the Kubernetes Cluster for monitoring",
-            "filename": "../../loganalytics-connect-kubernetes-cluster/loganalytics-connect-kubernetes-cluster.md"
+            "filename": "../../connect-cluster-flow/connect-cluster-flow.md"
         },
         {
-            "title": "Lab 2: Interactive Analytics and Troubleshooting",
+            "title": "Lab 2: Monitor the existing Kubernetes Cluster solution",
+            "description": "This live lab outlines the steps for monitoring the Kubernetes Cluster",
+            "filename": "../../monitor-kubernetes-cluster/monitor-kubernetes-cluster.md"
+        },
+        {
+            "title": "Lab 3: Interactive Analytics and Troubleshooting",
             "description": "This live lab outlines the steps required to troubleshoot the issues occuring in the Kubernetes Cluster",
             "filename": "../../interactive-analytics-and-troubleshooting/interactive-analytics-and-troubleshooting.md"
         }, 
         {
-            "title": "Lab 3: Next Steps for more insights",
+            "title": "Lab 4: Next Steps for more insights",
             "description": "This live lab outlines the steps for getting the more insights of the Kubernetes Monitoring",
             "filename": "../../next-steps-for-more-details/next-steps-for-more-details.md"
         },   
@@ -31,11 +36,6 @@
 
             "title": "Need Help?",
             "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
-        },
-        {
-
-            "title": "Oracle CloudWorld 2023 - Support",
-            "filename": "https://oracle-livelabs.github.io/common/support/ocwsupportlab/ocwsupportlab.md"
         }
     ]
 }

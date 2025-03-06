@@ -1,0 +1,1 @@
+On the Databases page, you can add and remove PDBs in Oracle Enterprise Manager as managed targets. This page does not create new PDBs or delete PDBs from a database instance.

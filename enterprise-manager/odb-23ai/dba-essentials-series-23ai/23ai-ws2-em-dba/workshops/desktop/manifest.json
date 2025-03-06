@@ -1,0 +1,51 @@
+{
+  "workshoptitle": "DBA Essentials - Administer Oracle Database 23ai with Oracle Enterprise Manager",
+  "help": "livelabs-help-em_us_grp@oracle.com",
+  "include": {
+        "set-env-var": "./../../intro-em/files/set-env-var.txt"
+    },
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "The workshop on administering Oracle Database from Oracle Enterprise Manager (EM).",
+      "publisheddate": "10/14/2024",
+      "filename": "./../../intro-em/intro-em.md"
+    },
+    {
+      "title": "Use noVNC remote desktop",
+      "description": "Use noVNC Remote Desktop",
+      "publisheddate": "03/22/2024",
+      "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+    },
+    {
+      "title": "Lab 1: Initialize environment",
+      "description": "How to initialize and start all the workshop components.",
+      "publisheddate": "05/23/2023",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Lab 2: View database details from SQL command line",
+      "description": "How to view database details from SQL command line.",
+      "publisheddate": "10/14/2024",
+      "filename": "./../../view-db-details/view-db-details.md"
+    },
+    {
+      "title": "Lab 3: Manage targets - Oracle Database and Listener",
+      "description": "How to manage targets, Oracle Database and Listener, using EM.",
+      "publisheddate": "10/14/2024",
+      "filename": "./../../manage-targets/manage-targets.md"
+    },
+    {
+      "title": "Lab 4: Access container home page",
+      "description": "How to access container home page from EM.",
+      "publisheddate": "10/14/2024",
+      "filename": "./../../access-homepage/access-homepage.md"
+    },
+    {
+      "title": "Need help?",
+      "description": "Solutions to common problems and directions for receiving live help",
+      "publisheddate": "05/24/2024",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

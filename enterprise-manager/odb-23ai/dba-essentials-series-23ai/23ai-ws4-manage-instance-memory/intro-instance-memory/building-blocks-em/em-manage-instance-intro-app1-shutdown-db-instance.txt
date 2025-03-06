@@ -1,0 +1,25 @@
+<!--
+    {
+        "name":"EM Introduction - Appendix 1: Shutting down the Database Instance",
+        "description":"EM Introduction - Appendix 1: Shutting down the Database Instance",
+        "date":"Sep/09/2024"
+    }
+-->
+The process of shutting down the instance is the reverse of starting it. It includes the following stages.
+
+1.  Shut down the database using [](var:prod_em) or SQL Plus command. Data files and log files are closed. Users can no longer access the database after it is shut down.
+
+1.  The Oracle instance dismounts the database and updates relevant entries in the control file to record a clean shutdown. The control file is closed. The database is now closed and only the instance remains.
+
+1.  The Oracle instance stops the background processes of the instance and deallocates the shared memory used by the SGA.
+
+You can shut down an instance in the following modes.
+
+-   `NORMAL` — The default shutdown mode. It takes long time to shut down.
+-   `IMMEDIATE` — Shuts down the database quickly.
+-   `TRANSACTIONAL` — Completes the active transaction and then shuts down the database.
+-   `ABORT` — Shuts down the database instantaneously without waiting for the transactions to complete.
+
+	> **Note**: Use it in emergency situations only because it can cause loss of data.
+
+-   `TIMEOUT` — Waits for active users to disconnect or for the transactions to complete within a limited waiting period. If all events blocking the shutdown do not occur within one hour, the database cancels the `SHUTDOWN` operation.

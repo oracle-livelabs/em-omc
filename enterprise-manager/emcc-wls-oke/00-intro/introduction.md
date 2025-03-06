@@ -21,7 +21,7 @@ Although OKE is used as the example in this workshop, the approach of using the 
 
 ### Prerequisites
 
-* This workshop uses a simple WebLogic web application running on a Kubernetes cluster as the target application to trace the user transactions. Before starting this workshop, you need to first complete Labs 1-4 in the  **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop.
+* This workshop uses a simple WebLogic web application running on a Kubernetes cluster as the target application to trace the user transactions. Before starting this workshop, you need to first complete Labs 1-4 in the  **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop.
 * The workshop assumes you have set up Oracle Enterprise Manager Cloud Control 13c in the Oracle Cloud. You can either manually install EM to a compute instance, or provision **[Oracle Enterprise Manager App](https://blogs.oracle.com/observability/post/oracle-enterprise-manager-is-now-available-on-oracle-cloud-marketplace)** from the **[Oracle Cloud Marketplace](https://cloudmarketplace.oracle.com/marketplace)**.
 * An Oracle Free Tier with 30-day free trial or Paid Cloud Account - Please view this workshop's LiveLabs landing page to see which environments are supported. 
 >**Note:** If you have a **Free Trial** account, when your Free Trial expires, your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available.
@@ -32,7 +32,7 @@ Although OKE is used as the example in this workshop, the approach of using the 
 
 Two types of use cases are considered.
 
-1. Complete the tutorials as hands-on lab exercise. In this use case, you will first need to go to the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, and create a lab environment with a sample WebLogic domain deployed on OKE. You will then follow the tutorials in this workshop to configure the lab environment to enable the monitoring of the sample WebLogic Servers using your EM.
+1. Complete the tutorials as hands-on lab exercise. In this use case, you will first need to go to the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop, and create a lab environment with a sample WebLogic domain deployed on OKE. You will then follow the tutorials in this workshop to configure the lab environment to enable the monitoring of the sample WebLogic Servers using your EM.
 
 2. Use as reference documentation for an existing setup of WebLogic on Kubernetes. In this use case, you have a WebLogic domain deployed on a hosted Kubernetes service, and want to monitor it with EM. You can refer to the instructions in the workshop as needed, and learn about the general approach in order to use EM to monitor WebLogic Servers on Kubernetes.
 
@@ -44,7 +44,7 @@ Estimated Workshop Time: 100 minutes
 
 ## Setup Details
 
-The WebLogic domain was provisioned in OKE following the steps described in the **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop. Access to the WebLogic pods is restricted in the private subnet.
+The WebLogic domain was provisioned in OKE following the steps described in the **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=567)** workshop. Access to the WebLogic pods is restricted in the private subnet.
 
 To enable the communication between the WebLogic Servers and the EM Agent in the VCN, the Kubernetes load balancer service was set up in a private subnet and connected to each WebLogic Server pod. Each load balancer service has an external IP (private IP), allowing access from the same VCN. Ports (7001 for admin server, and the port 8001 for managed servers) were opened in the load balancers to bridge the communication between the WebLogic Server services and the EM Agent.
 
@@ -74,12 +74,12 @@ In short, using this model, most of the WebLogic Server target metrics are avail
 
 ## Learn More
 ### Reference
-*  Oracle LiveLabs **[Migrating WebLogic Server to Kubernetes on OCI](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop
+*  Oracle LiveLabs **[Migrating WebLogic Server to Kubernetes on OCI](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/workshop-attendee-2?p210_workshop_id=567&p210_type=2&session=102696148940850)** workshop
 
 ### Oracle Cloud APM Workshops
--	**[Monitor Traces for Oracle WebLogic Server on Kubernetes Using Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
--	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=917&clear=180&session=14244965892057)**  Workshop
--	**[Trace a Native Cloud App Utilizing Oracle Application Performance Monitoring](https://apexapps.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=916&clear=180&session=101657907800993)** Workshop
+-	**[Monitor Traces for Oracle WebLogic Server on Kubernetes Using Oracle Application Performance Monitoring](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=932)** Workshop
+-	**[Use OpenTracing for Microservices with Helidon Utilizing Oracle Application Performance Monitoring](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=917&clear=180&session=14244965892057)**  Workshop
+-	**[Trace a Native Cloud App Utilizing Oracle Application Performance Monitoring](https://livelabs.oracle.com/pls/apex/dbpm/r/livelabs/view-workshop?wid=916&clear=180&session=101657907800993)** Workshop
 
 
 

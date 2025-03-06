@@ -35,17 +35,25 @@ This lab assumes you have already completed the following:
 
 ## Task 1: Getting Started with Database Management
 
-1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
+1.  Login to the Oracle Cloud Console, change the OCI Region to **US East (Ashburn)** and then click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
+
+     ![Database Management](./images/dbmgmt_region.png " ")
 
      ![Database Management](./images/dbmgmt_ocw.png " ")
 
-     ![Database Management Overview](./images/dbmgmt-overview-ocw.png " ")
+**Note** : You will see an error due to insufficient privileges granted on the root compartment.
+     ![Database Management Overview](./images/dbmgmt-overview-ocw2.png " ")
 
-2.  The **Oracle databases** tile (on the **Overview** page) displays the total number of Oracle Databases in the compartment and the number of Oracle Databases for which Database Management is enabled.
+2.  Change the compartment to **dbmgmt** in the compartment field. The **Oracle databases** tile (on the **Overview** page) displays the total number of Oracle Databases in the compartment and the number of Oracle Databases for which Database Management is enabled.
+
+     ![Compartment](./images/compartment-select.png " ")
+
+     ![Database Management Overview](./images/dbmgmt-overview-ocw4.png " ")
+
 
 ## Task 2: Monitoring a Fleet of Databases
 
-1.  On the left pane, click **Oracle Database** to navigate to the **Fleet Summary** page. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation -
+1.  On the left pane, click **Diagnostics & Management** to navigate to the **Fleet Summary** page. The **dbmgmt** compartment is selected by default in the Compartment field. To set the **compartment** to **dbmgmt** follow the  compartment hierarchy as shown below
 
      ![Compartment](./images/compartment-select.png " ")
      

@@ -2,10 +2,10 @@
 
 ## About this Workshop
 
-This workshop guides you through the process of provisioning a MySQL HeatWave database on OCI, enhancing a Spring Boot application, incorporating OpenTelemetry instrumentation, and deploying the application on an Oracle Kubernetes cluster. You will learn how to monitor the application using the Oracle Application Performance Management Service, leveraging traces and metrics for comprehensive end-to-end monitoring and diagnostics. Additionally, the workshop covers the utilization of Oracle Cloud Infrastructure (OCI) Database Management to monitor the MySQL HeatWave database and Logging Analytics for Kubernetes and application logs.
+This workshop guides you through the process of provisioning a MySQL HeatWave database on OCI, enhancing a Spring Boot application, incorporating OpenTelemetry instrumentation, and deploying the application on an Oracle Kubernetes cluster. You will learn how to monitor the application using the Oracle Application Performance Management Service, leveraging traces and metrics for comprehensive end-to-end monitoring and diagnostics. Additionally, the workshop covers the utilization of Oracle Cloud Infrastructure (OCI) Database Management to monitor the MySQL HeatWave database, Ops Insights  for capacity planning & SQL Insights and Logging Analytics for Kubernetes and application logs.
 
 
-Estimated Time: 120 minutes
+Estimated Time: 150 minutes
 
 *MySQL Heatwave Database*
 
@@ -27,6 +27,10 @@ Monitor, analyze, and manage multicloud applications and infrastructure environm
 
     Cloud Infrastructure (OCI) Logging Analytics lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor all log data from your applications and system infrastructure on cloud or on-premises. Oracle Logging Analytics provides a one-click end-to-end Kubernetes monitoring solution for the underlying infrastructure, Kubernetes platform and cloud native applications. For more information on Logging Analytics and log Explorer please refer to Observability and Management > **[Use Logging Analytics to monitor Kubernetes](https://docs.oracle.com/en/solutions/kubernetes-oke-logging-analytics/index.html)**.
 
+- Ops Insights
+
+    OCI Ops Insights, (OPSI) service, part of the Oracle Cloud Observability and Management platform, is a cloud native-solution that helps gather, analyze telemetry data from various resources, and plan for enterprise growth. It helps perform data-driven capacity planning and performance management, thereby reducing enterprise capital expenditure and improving application throughput. This new HeatWave MySQL DB system support in the Ops Insights service brings the best of ML-based resource usage trending and capacity planning, Data Explorer based performance analysis, and dashboard capabilities into Oracle Cloud. For more information on Ops Insights for HeatWave MySQL please refer to Ops Insights > **[Use Ops Insights for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/operations-insights/doc/mysql-insights.html)**.
+
 
 ### Objectives
 
@@ -36,6 +40,7 @@ In this workshop, you will:
 * Use APM Trace Explorer to view traces, spans, and span dimensions 
 * Use Database Management to review query performances 
 * Use Logging analytics to analyze Kubernetes logs 
+* Use Ops Insights for capacity planning and SQL Insights
 
 ### Prerequisites
 
@@ -47,4 +52,4 @@ In this workshop, you will:
 - **Contributors** -
 Yutaka Takatsu, Senior Principal Product Manager,  
 Avi Huber, Vice President, Product Management
-* **Last Updated By/Date** - Anand Prabhu, January 2024
+* **Last Updated By/Date** - Sindhuja Banka, November 2024

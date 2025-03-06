@@ -1,0 +1,1 @@
+The role *APPDEV* is a local role, which means it exists only in this PDB. Hence, this role is not **Common Across All Containers**. In other words, this role is not available to other containers in your database.

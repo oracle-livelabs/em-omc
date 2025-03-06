@@ -30,7 +30,7 @@ The objective of this workshop is to learn about Oracle Database Lifecycle and C
 
 ### Additional Workshop Supported Use Cases
 
-For additional Enterprise Manager use cases, see below and visit [LiveLabs](http://developer.oracle.com/livelabs) for the details.
+For additional Enterprise Manager use cases, see below and visit [LiveLabs](http://livelabs.oracle.com) for the details.
 #### 1. Find, Fix, Validate
 - View unified Database Performance via Performance Hub
 - Use Real-time Database Operations Monitoring to view long running database tasks
