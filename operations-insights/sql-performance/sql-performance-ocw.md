@@ -17,7 +17,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: SQL Insights
 
-1. On the **Ops Insights Overview** page, from the left pane click **Database Insights**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
+1. On the **Ops Insights Overview** page, from the left pane click **Database Insights** and that will select **SQL Insights** and **Fleet Analysis**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
 
       ![Left Pane](./images/sql-insights.png " ")
 
@@ -171,4 +171,4 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, July 2024
+- **Last Updated By/Date** - Vivek Verma, Mar 2025
