@@ -1,8 +1,8 @@
 ## Introduction
 
-In this lab, you will go through the steps to explore Ops Insights for HeatWave MySQL DB System which includes ML based resource usage trending, capacity planning, and SQL Insights.
+In this lab, you will go through the steps to explore Ops Insights for External MySQL DB System which includes ML based resource usage trending, capacity planning, and SQL Insights.
 
-Estimated time: 30 minutes
+Estimated time: 20 minutes
 
 ### Objectives
 
@@ -115,27 +115,15 @@ Estimated time: 30 minutes
 
       ![Left Pane](./images/trend-and-forecast.png " ")
 
-7.  Historical CPU Usage (dark solid green line) is the Avg Usage - average value of daily (hourly) CPU usage data.
+      * Historical CPU Usage (dark solid green line) is the Avg Usage - average value of daily (hourly) CPU usage data.
 
-      ![Left Pane](./images/trend-and-forecast-green-solid.png " ")
+      * Avg Usage Forecast - forecast of Avg Usage data using linear forecast model (dashed green line) and the Max Allocation - maximum allocation of CPU for the database.
 
-8.  Avg Usage Forecast - forecast of Avg Usage data using linear forecast model (dashed green line) and the Max Allocation - maximum allocation of CPU for the database.
+      * The value **0.08** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Avg usage of CPU.
 
-      ![Left Pane](./images/trend-and-forecast-green-dashed.png " ")
+      * The red line is **Max Usage** - maximum value of daily (hourly) CPU usage data for database **employeesdb**.
 
-9.  The value **0.17** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Avg usage of CPU.
-
-      ![Left Pane](./images/trend-and-forecast-value.png " ")
-
-10.  Select **Max Usage** from the legend on the right side. The red line is **Max Usage** - maximum value of daily (hourly) CPU usage data for database **employeesdb**.
-
-      ![Left Pane](./images/max-usage-cpu.png " ")
-
-11.  Select **Max Usage Forecast** from the legend on the right side.
-
-      ![Left Pane](./images/max-usage-forecast.png " ")
-
-12.  The value **1.33** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Max usage of CPU.
+      * The value **1.1** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Max usage Forecast of CPU.
 
     You can see the difference in average forecasted value v/s Max forecasted value. If the workload is critical and cannot tolerate any performance issues then the database must be allocated the max forecasted value. If the workload is not so critical and can tolerate deviations in performance then it is ok to allocate CPU based on average forecasted value and save money.
 
@@ -158,7 +146,7 @@ Estimated time: 30 minutes
 
      * **AutoML forecasting**: The AutoML forecasting option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
      
-     On the **Database CPU** page, under **Insights** tab, select **All** against **Databases** and choose database **departmentsdb**. Within the **Trend & Forecast** chart, click **AutoML forecasting**
+     Within the **Trend & Forecast** chart, click **AutoML forecasting**
 
       ![Left Pane](./images/auto-ml.png " ")
 
@@ -178,7 +166,7 @@ Estimated time: 30 minutes
 
 1.  Click on the **Storage** menu on the left panel.
 
-      ![Left Pane](./images/storage-menu-ocw.png " ")
+      ![Left Pane](./images/storage-menu.png " ")
 
 2.  You get a complete view of storage usage across all Ops Insights enabled databases.
 
@@ -194,7 +182,7 @@ Estimated time: 30 minutes
 
       ![Left Pane](./images/storage-trend-max.png " ")
 
-      You can see the average forecasted value v/s Max forecasted value for storage. **Max Usage Forecast** for this database is 0.01 TB, whereas **Allocation** shows that total storage allocated to this database is 2 TB. Since, allocation is more but storage used or forecasted is less, it is ok release some storage for this database and save money on storage.
+      You can see the average forecasted value v/s Max forecasted value for storage. **Max Usage Forecast** for this database is 0.008 TB, whereas **Allocation** shows that total storage allocated to this database is 2 TB. Since, allocation is more but storage used or forecasted is less, it is ok release some storage for this database and save money on storage.
 
 6.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 

@@ -17,10 +17,15 @@
             "description": "Ops Insights",
             "filename": "../../c-lab-two-opsi/opsi.md"
         },
-          {
+        {
             "title": "Logging Analytics",
             "description": "Logging Analytics",
             "filename": "../../d-lab-three-logging-analytics/logginganalytics.md"
+        },
+        {
+            "title": "Create Dashboards",
+            "description": "Logging Analytics",
+            "filename": "../../e-lab-five-create-dashboards/createdashboards.md"
         },
           {
               "title": "Need Help?",
