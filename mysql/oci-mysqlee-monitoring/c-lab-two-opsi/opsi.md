@@ -205,7 +205,7 @@ Estimated time: 20 minutes
 
 ## Task 5: SQL Insights
 
-1. On the **Ops Insights Overview** page, from the left pane click **SQL Insights**. On the **SQL Insights - Fleet analysis** page and filter by database type as **MySQL**. Now you can view insights and analysis for HeatWave MySQL databases enabled in the compartment.
+1. On the **Ops Insights Overview** page, from the left pane click **SQL Insights**. On the **SQL Insights - Fleet analysis** page and filter by database type as **MySQL**. Now you can view insights and analysis for External MySQL databases enabled in the compartment.
 
       ![Left Pane](./images/sql-insights.png " ")
 
@@ -213,7 +213,7 @@ Estimated time: 20 minutes
 
       ![Left Pane](./images/sql-departments-db.png " ")
 
-4. HeatWave MySQL DB system dashboard provides a broad overview of the SQL workload executing in the database. This includes basic properties of the database and the SQL collected from it. SQL activity is shown by day broken down by command type and database, exposing changes in the workload over time. Average Active Session (AAS) by database schemas, latency type and Top SQLs additionally provide workload characteristics over time.
+4. External MySQL DB system dashboard provides a broad overview of the SQL workload executing in the database. This includes basic properties of the database and the SQL collected from it. SQL activity is shown by day broken down by command type and database, exposing changes in the workload over time. Average Active Session (AAS) by database schemas, latency type and Top SQLs additionally provide workload characteristics over time.
 
       ![Left Pane](./images/departments-db-insights.png " ")
 
