@@ -8,7 +8,7 @@ Estimated time: 20 minutes
 
 - Use Oracle Cloud Infrastructure Database Management to manage a fleet of MySQL Databases and drill down to a single database for further investigation.
 - Explore Database Management Summary.
-- Explore all Metrics of HeatWave MySQL DB system.
+- Explore all Metrics of External MySQL DB system.
 - Explore Configuration variables of External MySQL DB system.
 - Explore Alarm definitions of External MySQL DB system.
 - Diagnose database performance issues quickly with Performance Hub.
@@ -19,7 +19,7 @@ Estimated time: 20 minutes
 
      ![Database Management](./images/dbmgmt.png " ")
 
-2. The **MySQL databases** tile (on the **Overview** page) displays the total number of external MySQL DB systems and HeatWave MySQL Databases in the compartment and region for which Database Management is enabled.
+2. The **MySQL databases** tile (on the **Overview** page) displays the total number of External MySQL DB systems and HeatWave MySQL Databases in the compartment and region for which Database Management is enabled.
 
      ![Database Management Overview](./images/overview.png " ")
 
@@ -111,13 +111,13 @@ Estimated time: 20 minutes
 
 ## Task 6: Set Up Alarm Definitions for External MySQL
 
-1. In the **Resources** page, click on the **Alarm definitions** section. You can set up alarm definitions to simplify the process of creating and managing alarms for HeatWave MySQL DB systems in Database Management.
+1. In the **Resources** page, click on the **Alarm definitions** section. You can set up alarm definitions to simplify the process of creating and managing alarms for External MySQL DB systems in Database Management.
 
      ![Operation Stats](./images/alarms-home-view.png " ")
 
 2. In the Alarm definitions section, you can:
 
-- Create Oracle recommended alarms that are preconfigured for common operational scenarios for your HeatWave DB system.
+- Create Oracle recommended alarms that are preconfigured for common operational scenarios for your External MySQL DB system.
 
      ![Operation Stats](./images/recommended-alarms.png " ")
 
@@ -168,7 +168,7 @@ Estimated time: 20 minutes
 
      - **Average statement latency (seconds)**: Displays the average latency (in seconds) for the SQL statements executed against the DB system.
 
-     - Click **Select charts** in the upper-right corner and select Statement count to view the Statement count chart. This chart displays the total number of SQL statements executed against the DB system, during the selected time period. For a HeatWave DB system, the Statement count chart also displays the number of SQL statements offloaded to HeatWave for execution.
+     - Click **Select charts** in the upper-right corner and select Statement count to view the Statement count chart. This chart displays the total number of SQL statements executed against the DB system, during the selected time period. For an External DB system, the Statement count chart also displays the number of SQL statements executed.
 
      ![Operation Stats](./images/perf-hub-selected-charts.png " ")
 
