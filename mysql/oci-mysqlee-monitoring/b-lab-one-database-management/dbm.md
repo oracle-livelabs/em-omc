@@ -130,9 +130,9 @@ Estimated time: 20 minutes
      ![Operation Stats](./images/view-alarm.png " ")
 
 - Use the **Search** field and the filter drop-down lists above the list of alarms to filter the alarms:
-     - Severity filter: View the alarms of a particular severity type (Critical, Error, Warning, Information).
-     - Scope filter: View the alarms specified for all the DB systems in a compartment or the alarms specified for the DB system. By default, all the alarms are displayed.
-     - Origin filter: View the Oracle-recommended alarms or the custom alarms created in the Monitoring service, for the DB system. By default, all the alarms are displayed.
+     - **Severity filter**: View the alarms of a particular severity type (Critical, Error, Warning, Information).
+     - **Scope filter**: View the alarms specified for all the DB systems in a compartment or the alarms specified for the DB system. By default, all the alarms are displayed.
+     - **Origin filter**: View the Oracle-recommended alarms or the custom alarms created in the Monitoring service, for the DB system. By default, all the alarms are displayed.
 
      ![Operation Stats](./images/search-alarm.png " ")
 
