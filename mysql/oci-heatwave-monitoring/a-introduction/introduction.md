@@ -6,7 +6,7 @@
 
  You'll learn how to:
  * Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the MySQL HeatWave databases
- * Use Ops Insights for capacity planning & SQL Insights
+ * Use Ops Insights for Capacity Planning & SQL Insights
  * Use Logging Analytics to collect and analyze application logs
 
 Estimated Time: 60 minutes

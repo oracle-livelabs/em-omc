@@ -1,6 +1,6 @@
 ## Introduction
 
-In this lab, you will go through the steps to explore Ops Insights for External MySQL DB System which includes ML based resource usage trending, capacity planning, and SQL Insights.
+In this lab, you will go through the steps to explore Ops Insights for HeatWave MySQL DB system which includes ML based resource usage trending, Capacity Planning, and SQL Insights.
 
 Estimated time: 20 minutes
 
@@ -162,34 +162,34 @@ Estimated time: 20 minutes
 
      The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types.
 
-## Task 4: Capacity Planning - Storage
+## Task 4: Capacity Planning - Memory
 
-1.  Click on the **Storage** menu on the left panel.
+1.  Click on the **Memory** menu on the left panel.
 
-      ![Left Pane](./images/storage-menu.png " ")
+      ![Left Pane](./images/memory-menu.png " ")
 
-2.  You get a complete view of storage usage across all Ops Insights enabled databases.
+2.  You get a complete view of memory usage across all Ops Insights enabled databases.
 
-      ![Left Pane](./images/database-storage.png " ")
+      ![Left Pane](./images/database-memory.png " ")
 
-    From here we can identify servers with underused or overused storage and also compare storage utilization between databases.
+    From here we can identify servers with underused or overused memory and also compare memory utilization between databases.
 
-3.  From the drop-down on the top select **30 Days Low Utilization Forecast**.
+3.  From the drop-down on the top select **30 Days High Utilization Forecast**.
 
       ![Left Pane](./images/utilization-forecast.png " ")
 
-4.  In the **Trend & Forecast** chart view the storage trend and usage forecast for the selected database. View **Max usage** and **Max usage forecast** from the right panel.
+4.  In the **Trend & Forecast** chart view the memory trend and usage forecast for the selected database. View **Max usage** and **Max usage forecast** from the right panel.
 
-      ![Left Pane](./images/storage-trend-max.png " ")
+      ![Left Pane](./images/memory-trend-max.png " ")
 
-      You can see the average forecasted value v/s Max forecasted value for storage. **Max Usage Forecast** for this database is 0.008 TB, whereas **Allocation** shows that total storage allocated to this database is 2 TB. Since, allocation is more but storage used or forecasted is less, it is ok release some storage for this database and save money on storage.
+      You can compare the average forecasted memory usage with the maximum forecasted value. In this case, **Max Usage Forecast** is 27.33 GB, while the database has only 16 GB **allocated**. Since the forecasted usage exceeds the allocated memory, it is important to increase the allocation to avoid any potential issues.
 
 6.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 
-      ![Left Pane](./images/storage-trend-forecast-ml.png " ")
-      ![Left Pane](./images/storage-trend-forecast-auto-ml.png " ")
+      ![Left Pane](./images/memory-trend-forecast-ml.png " ")
+      ![Left Pane](./images/memory-trend-forecast-auto-ml.png " ")
 
-      Click **Close** to go back to the **Database Storage** page.
+      Click **Close** to go back to the **Database Memory** page.
 
 ## Task 5: SQL Insights
 
@@ -213,31 +213,31 @@ Estimated time: 20 minutes
 
 ## Task 6: SQL Explorer
 
-SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Ops Insights SQL Warehouse.
+1. SQL Explorer provides an easy-to-use interface that lets you interactively explore and visualize detailed performance statistics stored in Ops Insights SQL Warehouse.
 
-With SQL Explorer, you can explore performance statistics via a SQL query to extract the data with which to create an intuitive visualization. This provides interactive data exploration and visualization for deep exploration of application SQL performance statistics. The user interface is designed to simplify and streamline query development.
+2. With SQL Explorer, you can explore performance statistics via a SQL query to extract the data with which to create an intuitive visualization. This provides interactive data exploration and visualization for deep exploration of application SQL performance statistics. The user interface is designed to simplify and streamline query development.
 
-In this lab create visualizations using pre-existing performance statistics via a SQL query.
+3. In this lab create visualizations using pre-existing performance statistics via a SQL query.
 
-1. In this example we will calculate the average latency per execution to analyze the performance of operations over time.
+4. In this example we will calculate the average latency per execution to analyze the performance of operations over time.
 
-2. On the **Ops Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
+5. On the **Ops Insights Overview** page, from the left pane click **SQL Insights** and then click **SQL Explorer**.
 
       ![SQL Explorer](./images/sql-explorer.png " ")
 
-3. This will take you to the **SQL Explorer** page.
+6. This will take you to the **SQL Explorer** page.
 
       ![SQL Explorer](./images/sql-explorer-main.png " ")
 
-4. Select **Resource type** as **MySQL**.
+7. Select **Resource type** as **MySQL**.
 
       ![SQL Explorer](./images/sql-explorer-database.png " ")
 
-5. Remove default **\*** from SELECT statement line.
+8. Remove default **\*** from SELECT statement line.
 
       ![SQL Explorer](./images/sql-explorer-remove-select.png " ")
 
-6. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
+9. Enter the following SQL in the SQL query section (copy & paste the statement line by line)
 
       ```
             SELECT <copy> ROLLUP_TIME_UTC, AVG(TOTAL_LATENCY/EXEC_COUNT)/1000000000 as AVG_LATENCY_SEC
@@ -263,13 +263,13 @@ In this lab create visualizations using pre-existing performance statistics via 
 
       ![SQL Query](./images/sql-query.png " ")
 
-7. Click **Run** to execute the query.
+10. Click **Run** to execute the query.
 
-8. This will display the query result in a tabular format.
+11. This will display the query result in a tabular format.
 
       ![SQL Output](./images/sql-query-table.png " ")
 
-9. Under the **Visualization** tab on the right pane, select the following -
+12. Under the **Visualization** tab on the right pane, select the following -
 
       **Chart type** : **Area Chart**
 
@@ -281,17 +281,17 @@ In this lab create visualizations using pre-existing performance statistics via 
 
       ![SQL Visualization](./images/sql-query-visual.png " ")
 
-10. This will display the visualization as an **Area Chart**.
+13. This will display the visualization as an **Area Chart**.
 
-11. Click on **Clear** to clear the query section.
+14. Click on **Clear** to clear the query section.
 
       ![SQL Visualization](./images/sql-explorer-clear.png " ")
 
-12. Click on **Advanced** Mode to view **SQL Explorer** in advanced mode. The advanced mode give you more control over the SQL queries that you are running against your database to view database performance.
+15. Click on **Advanced** Mode to view **SQL Explorer** in advanced mode. The advanced mode give you more control over the SQL queries that you are running against your database to view database performance.
 
       ![SQL Visualization](./images/sql-explorer-advanced.png " ")
 
-13. This will take you to the **SQL Explorer Advanced** Mode page. Advanced mode can be used to execute your own custom queries and obtain more information above the SQLs running in the database.
+16. This will take you to the **SQL Explorer Advanced** Mode page. Advanced mode can be used to execute your own custom queries and obtain more information above the SQLs running in the database.
 
       ![SQL Visualization](./images/sql-explorer-advanced-main.png " ")
 

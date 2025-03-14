@@ -1,6 +1,6 @@
 ## Introduction
 
-In this lab, you will explore Database Management for HeatWave MySQL DB System. Database Management provides a single-pane-of-glass view of your fleet of cloud and on-premises databases in OCI, and enables you to detect issues. Here are some of the tasks you can perform using Database Management, which are categorized under database monitoring and management areas.
+In this lab, you will explore Database Management for HeatWave MySQL DB system. Database Management provides a single-pane-of-glass view of your fleet of cloud and on-premises databases in OCI, and enables you to detect issues. Here are some of the tasks you can perform using Database Management, which are categorized under database monitoring and management areas.
 
 Estimated time: 20 minutes
 
@@ -25,7 +25,7 @@ Estimated time: 20 minutes
 
 ## Task 2: Monitoring a Fleet of MySQL Databases
 
-1. On the left pane, click **Diagnostics & Management** to navigate to the **HeatWave & MySQL fleet summary** page. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation -
+1. On the left pane, click **Diagnostics & Management** to navigate to the **HeatWave & MySQL fleet summary** page. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation.
 
      ![Compartment](./images/navigation.png " ")
 
@@ -134,9 +134,9 @@ Estimated time: 20 minutes
      ![Operation Stats](./images/view-alarm.png " ")
 
 - Use the **Search** field and the filter drop-down lists above the list of alarms to filter the alarms:
-     - Severity filter: View the alarms of a particular severity type (Critical, Error, Warning, Information).
-     - Scope filter: View the alarms specified for all the DB systems in a compartment or the alarms specified for the DB system. By default, all the alarms are displayed.
-     - Origin filter: View the Oracle-recommended alarms or the custom alarms created in the Monitoring service, for the DB system. By default, all the alarms are displayed.
+     - **Severity filter**: View the alarms of a particular severity type (Critical, Error, Warning, Information).
+     - **Scope filter**: View the alarms specified for all the DB systems in a compartment or the alarms specified for the DB system. By default, all the alarms are displayed.
+    - **Origin filter**: View the Oracle-recommended alarms or the custom alarms created in the Monitoring service, for the DB system. By default, all the alarms are displayed.
 
      ![Operation Stats](./images/search-alarm.png " ")
 
