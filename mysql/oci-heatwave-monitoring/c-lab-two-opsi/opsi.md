@@ -7,7 +7,7 @@ Estimated time: 20 minutes
 ### Objectives
 
 - Enable Ops Insights Demo Mode.
-- Explore capacity planning and SQL Insights.
+- Explore Capacity Planning and SQL Insights.
 
 ## Task 1: Enable Demo Mode
 
@@ -98,7 +98,7 @@ Estimated time: 20 minutes
 
 3.  On the **Database CPU** page, under **Insights** tab, select **30 Day Low Utilization Forecast** against **Databases**, to view database CPU utilization forecast for next 30 days.
 
-      ![Left Pane](./images/utilization-forecast.png " ")
+      ![Left Pane](./images/utilization-low-forecast.png " ")
 
 4.  Under the **Database Display Name** column, select the row corresponding to the **employeesdb** database.
 
@@ -178,7 +178,11 @@ Estimated time: 20 minutes
 
       ![Left Pane](./images/utilization-forecast.png " ")
 
-4.  In the **Trend & Forecast** chart view the memory trend and usage forecast for the selected database. View **Max usage** and **Max usage forecast** from the right panel.
+4. Under the **Database Display Name** column, select the row corresponding to the **departmentsdb** database.
+
+      ![Left Pane](./images/departments-db.png " ")
+
+5.  In the **Trend & Forecast** chart view the memory trend and usage forecast for the selected database. View **Max usage** and **Max usage forecast** from the right panel.
 
       ![Left Pane](./images/memory-trend-max.png " ")
 
@@ -190,6 +194,8 @@ Estimated time: 20 minutes
       ![Left Pane](./images/memory-trend-forecast-auto-ml.png " ")
 
       Click **Close** to go back to the **Database Memory** page.
+
+7. You can similarly check the **Storage utilization forecast** for all Ops Insights enabled databases. The **Trend & Forecast** chart lets you compare allocated storage with forecasted storage, helping you plan ahead and prevent potential storage issues.
 
 ## Task 5: SQL Insights
 
