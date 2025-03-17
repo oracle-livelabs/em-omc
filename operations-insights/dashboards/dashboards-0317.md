@@ -17,11 +17,15 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Dashboards
 
-1.  On the **Ops Insights** main page, click **Dashboards** from the left pane.
+1.  Click the hamburger menu on the left on the Cloud Console and click **Ops Insights Overview** and then click **Dashboards**.
 
-      ![Left Pane](./images/opsi-dash-main.png " ")
+      ![Left Pane](./images/opsi-dash-nav.png " ")
 
-3. On the **Dashboards** page you can view the list of Ops Insights dashboards.
+2.  This will take you to the **Management Dashboard** page that lists all the Ops Insights dashboards.
+
+      ![Left Pane](./images/opsi-man-dash.png " ")
+
+3. On the left pane select **Ops Insights** for **Services** and **OPSI Demo** for **Created by** to list the dashboards created for demo.
 
       ![Left Pane](./images/opsi-left-dash.png " ")
 
