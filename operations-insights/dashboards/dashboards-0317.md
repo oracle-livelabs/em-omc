@@ -17,33 +17,37 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Dashboards
 
-1.  On the **Ops Insights** main page, click **Dashboards** from the left pane.
+1.  Click the hamburger menu on the left on the Cloud Console and click **Ops Insights Overview** and then click **Dashboards**.
 
-      ![Left Pane](./images/opsi-dash-main.png " ")
+      ![Left Pane](./images/opsi-dash-nav.png " ")
 
-2. On the **Dashboards** page you can view the list of Ops Insights dashboards.
+2.  This will take you to the **Management Dashboard** page that lists all the Ops Insights dashboards.
+
+      ![Left Pane](./images/opsi-man-dash.png " ")
+
+3. On the left pane select **Ops Insights** for **Services** and **OPSI Demo** for **Created by** to list the dashboards created for demo.
 
       ![Left Pane](./images/opsi-left-dash.png " ")
 
-3. From the list of dashboards click **(Demo) SQL Insights - Fleet Analysis** to launch the **(Demo) SQL Insights - Fleet Analysis** page.
+4. From the list of dashboards click **(Demo) SQL Insights - Fleet Analysis** to launch the **(Demo) SQL Insights - Fleet Analysis** page.
 
       ![Left Pane](./images/opsi-demo-insights-fleet-analysis.png " ")
 
-4. Click **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
+5. Click **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
 
       ![Left Pane](./images/opsi-degrading-sql.png " ")
 
-5. Click the database name **SALES-WT** from the list of databases to launch the **Databae Analysis** page.
+6. Click the database name **SALES-WT** from the list of databases to launch the **Databae Analysis** page.
 
       ![Left Pane](./images/opsi-db-with-degraded-sql.png " ")
 
       ![Left Pane](./images/opsi-db-analysis.png " ")
 
-6. Click **Degraded plan changes** to list the **Top 50 degraded plan changes**.
+7. Click **Degraded plan changes** to list the **Top 50 degraded plan changes**.
 
       ![Left Pane](./images/opsi-degraded-plan.png " ")
 
-7. Click SQL ID **4g7w9wwspvq0** from the list of SQL IDs to launch the **SQL Analysis** page.
+8. Click SQL ID **4g7w9wwspvq0** from the list of SQL IDs to launch the **SQL Analysis** page.
 
       ![Left Pane](./images/opsi-sql-id-analysis.png " ")
 
