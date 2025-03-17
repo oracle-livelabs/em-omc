@@ -21,29 +21,29 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/opsi-dash-main.png " ")
 
-3. On the **Dashboards** page you can view the list of Ops Insights dashboards.
+2. On the **Dashboards** page you can view the list of Ops Insights dashboards.
 
       ![Left Pane](./images/opsi-left-dash.png " ")
 
-4. From the list of dashboards click **(Demo) SQL Insights - Fleet Analysis** to launch the **(Demo) SQL Insights - Fleet Analysis** page.
+3. From the list of dashboards click **(Demo) SQL Insights - Fleet Analysis** to launch the **(Demo) SQL Insights - Fleet Analysis** page.
 
       ![Left Pane](./images/opsi-demo-insights-fleet-analysis.png " ")
 
-5. Click **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
+4. Click **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
 
       ![Left Pane](./images/opsi-degrading-sql.png " ")
 
-6. Click the database name **SALES-WT** from the list of databases to launch the **Databae Analysis** page.
+5. Click the database name **SALES-WT** from the list of databases to launch the **Databae Analysis** page.
 
       ![Left Pane](./images/opsi-db-with-degraded-sql.png " ")
 
       ![Left Pane](./images/opsi-db-analysis.png " ")
 
-7. Click **Degraded plan changes** to list the **Top 50 degraded plan changes**.
+6. Click **Degraded plan changes** to list the **Top 50 degraded plan changes**.
 
       ![Left Pane](./images/opsi-degraded-plan.png " ")
 
-8. Click SQL ID **4g7w9wwspvq0** from the list of SQL IDs to launch the **SQL Analysis** page.
+7. Click SQL ID **4g7w9wwspvq0** from the list of SQL IDs to launch the **SQL Analysis** page.
 
       ![Left Pane](./images/opsi-sql-id-analysis.png " ")
 
