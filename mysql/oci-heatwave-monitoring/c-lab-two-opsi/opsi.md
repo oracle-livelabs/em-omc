@@ -1,13 +1,13 @@
 ## Introduction
 
-In this lab, you will go through the steps to explore Ops Insights for HeatWave MySQL DB system which includes ML based resource usage trending, Capacity Planning, and SQL Insights.
+In this lab, you will go through the steps to explore Ops Insights for HeatWave MySQL DB system which includes ML based resource usage trending, Capacity Planning, and Database Insights.
 
 Estimated time: 20 minutes
 
 ### Objectives
 
 - Enable Ops Insights Demo Mode.
-- Explore Capacity Planning and SQL Insights.
+- Explore Capacity Planning and Database Insights.
 
 ## Task 1: Enable Demo Mode
 
@@ -29,7 +29,7 @@ Estimated time: 20 minutes
 
       ![Apply Policy](./images/opsi-apply-policy.png " ")
 
-5.  Once the mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
+5.  Once the demo mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
 
       ![Demo Mode ON](./images/opsi-demo-mode-on.png " ")
 
@@ -197,13 +197,13 @@ Estimated time: 20 minutes
 
 7. You can similarly check the **Storage utilization forecast** for all Ops Insights enabled databases. The **Trend & Forecast** chart lets you compare allocated storage with forecasted storage, helping you plan ahead and prevent potential storage issues.
 
-## Task 5: SQL Insights
+## Task 5: Database Insights
 
-1. On the **Ops Insights Overview** page, from the left pane click **Database Insights**. On the **SQL Insights - Fleet analysis** page and filter by database type as **MySQL**. Now you can view insights and analysis for HeatWave and External MySQL databases enabled in the compartment.
+1. On the **Ops Insights Overview** page, from the left pane click **Database Insights**. On the **SQL Insights - Fleet analysis** page and filter by database type as **MySQL**. Now you can view insights and analysis for HeatWave and External MySQL DB system enabled in the compartment.
 
       ![Left Pane](./images/sql-insights.png " ")
 
-3. Click the database **departmentsdb** to view **SQL Insights - Database: For database level insights**
+3. Click the database **departmentsdb** to view **SQL Insights - Database Analysis**
 
       ![Left Pane](./images/sql-departments-db.png " ")
 

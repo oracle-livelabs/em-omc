@@ -1,13 +1,14 @@
 ## Introduction
 
-In this lab, you will learn how to use the Oracle Cloud Logging Analytics service to enrich the log data collected based on the SQL query provided in the log configuration from the world's most popular open source database - MySQL.
+In this lab, you will learn how to use the Oracle Cloud Logging Analytics service to enrich the log data collected based on the SQL query provided in the log configuration from the world's most popular open source database-MySQL.
 
 Estimated Lab Time: 20 minutes
 
 ### Objectives
 
-- Learn OCI Logging Analytics fundamentals in the context of log collection from an Application architecture hosted on top of MySQL Database
+- Learn OCI Logging Analytics fundamentals in the context of log collection from an Application architecture hosted on top of MySQL DB system
 - Learn to analyse, monitor, troubleshoot, and derive knowledge from the collected log data using Logging Analytics' Machine Learning features such as Cluster and Link
+- Real-Time Monitoring and Alerting for Database Events
 - Learn to create and use monitoring dashboards
 
 ## Task 1: Getting Familiar with Log Explorer
@@ -134,7 +135,7 @@ Estimated Lab Time: 20 minutes
 
       ![Fleet Summary](./images/cluster-comparison.png " ")
 
-3. This is the default option available with the cluster compare utility. You can modify the baseline time range upto maximum of 7 days.
+3. This is the default option available with the cluster compare utility. Click on **Options** where you can modify the baseline time range upto maximum of 7 days.
 
       ![Fleet Summary](./images/cluster-default.png " ")
 
@@ -148,7 +149,7 @@ Estimated Lab Time: 20 minutes
 
       ![Fleet Summary](./images/alarm-setup.png " ")
 
-2. In this example, alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
+2. In this example, an alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
 
       ![Fleet Summary](./images/drop-db.png " ")
 

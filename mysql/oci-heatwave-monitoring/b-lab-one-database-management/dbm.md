@@ -1,17 +1,19 @@
 ## Introduction
 
-In this lab, you will explore Database Management for HeatWave MySQL DB system. Database Management provides a single-pane-of-glass view of your fleet of cloud and on-premises databases in OCI, and enables you to detect issues. Here are some of the tasks you can perform using Database Management, which are categorized under database monitoring and management areas.
+In this lab, you will explore Database Management for a HeatWave MySQL DB system. Database Management provides a single-pane-of-glass view of your cloud and on-premises databases in OCI, helping you monitor and detect issues efficiently.
+
+Below are some of the key tasks you will, categorized under database monitoring and management.
 
 Estimated time: 20 minutes
 
 ### Objectives
 
-- Use Oracle Cloud Infrastructure Database Management to manage a fleet of MySQL Databases and drill down to a single database for further investigation.
-- Explore Database Management Summary.
-- Explore all Metrics of HeatWave MySQL DB system.
-- Explore Configuration variables of HeatWave MySQL DB system.
-- Explore Alarm definitions of HeatWave MySQL DB system.
-- Diagnose database performance issues quickly with Performance Hub.
+- Use Oracle Cloud Infrastructure Database Management to manage a fleet of MySQL databases and drill down into a single database for further investigation
+- Explore Database Management Summary
+- Analyze all Metrics of a HeatWave MySQL DB system
+- Review Configuration Variables of a HeatWave MySQL DB system
+- Explore Alarm definitions of HeatWave MySQL DB system
+- Diagnose database performance issues quickly using Performance Hub
 
 ## Task 1: Getting Started with Database Management
 
@@ -19,26 +21,29 @@ Estimated time: 20 minutes
 
      ![Database Management](./images/dbmgmt.png " ")
 
+2. The **MySQL databases** tile (on the **Overview** page) displays the total number of HeatWave MySQL Databases and External MySQL DB systems in the compartment and region for which Database Management is enabled.
+
      ![Database Management Overview](./images/overview.png " ")
 
-2. The **MySQL databases** tile (on the **Overview** page) displays the total number of HeatWave MySQL Databases and external MySQL DB systems in the compartment and region for which Database Management is enabled.
+## Task 2: Monitoring a Fleet of MySQL DB systems
 
-## Task 2: Monitoring a Fleet of MySQL Databases
+1. On the left pane, click **Diagnostics & Management** to navigate to the **HeatWave & MySQL fleet summary** page.
 
-1. On the left pane, click **Diagnostics & Management** to navigate to the **HeatWave & MySQL fleet summary** page. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation.
+     ![Compartment](./images/nav.png " ")
 
+2. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation.
      ![Compartment](./images/navigation.png " ")
 
-     ![Fleet Summary](./images/fleet-summary.png " ")
+3. The following tiles are available on the **Fleet Summary** page:
 
-2. The following tiles are available on the **Fleet Summary** page:
-
-    - **Inventory**: Displays the number of MySQL Databases in the compartment.
-    - **Monitoring Status**: Displays the availability status of the managed MySQL Databases in the compartment.
+    - **Inventory**: Displays the number of MySQL DB systems in the compartment.
+    - **Monitoring Status**: Displays the availability status of the managed MySQL DB systems in the compartment.
     - **Resource Usage**: Displays a summary of the overall CPU utilization, Storage and Memory allocation for the selected time period on the top-left corner of the page.
     - **Alarms**: Displays the total number of open database alarms in the compartment and the number of alarms by severity.
 
-    Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
+     ![Fleet Summary](./images/fleet-summary.png " ")
+
+4. Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
     - **DB system name**: Name of the DB system.
     - **Monitoring status**: Monitoring status of the DB system.
     - **HeatWave**: HeatWave enablement status. Indicates whether a HeatWave cluster is attached to the HeatWave DB system. This information is only displayed for HeatWave DB systems.
@@ -75,7 +80,7 @@ Estimated time: 20 minutes
 
      ![Operation Stats](./images/single-mysql-metrics.png " ")
 
-2. You can select or unselect whatever metrics you wish to see in the Metrics page
+2. You can select or deselect specific metrics on the Metrics page and choose a time period from the last **60 minutes, 24 hours, or 7 days**.
 
      ![Operation Stats](./images/select-more-charts.png " ")
 
@@ -119,38 +124,38 @@ Estimated time: 20 minutes
 
      ![Operation Stats](./images/alarms-home-view.png " ")
 
-2. In the Alarm definitions section, you can:
-
-- Create Oracle recommended alarms that are preconfigured for common operational scenarios for your HeatWave DB system.
+2. In the Alarm definitions section, you can create Oracle recommended alarms that are preconfigured for common operational scenarios for your HeatWave DB system.
 
      ![Operation Stats](./images/recommended-alarms.png " ")
 
+3. In this case, I have already set up and configured alarms.
+
      ![Operation Stats](./images/oracle-alarms.png " ")
 
-- Click the alarm to view the alarm details on the Alarm Definitions page in the Monitoring service. ?check (For Oracle-recommended alarms, the provider: DBM free-form tag is added by default during the creation process and is displayed in the Tags section.)
+4. Click the alarm to view the alarm details on the Alarm Definitions page in the Monitoring service. ?check (For Oracle-recommended alarms, the provider: DBM free-form tag is added by default during the creation process and is displayed in the Tags section.)
 
      ![Operation Stats](./images/click-view-alarm.png " ")
 
      ![Operation Stats](./images/view-alarm.png " ")
 
-- Use the **Search** field and the filter drop-down lists above the list of alarms to filter the alarms:
+5. Use the **Search** field and the filter drop-down lists above the list of alarms to filter the alarms:
      - **Severity filter**: View the alarms of a particular severity type (Critical, Error, Warning, Information).
      - **Scope filter**: View the alarms specified for all the DB systems in a compartment or the alarms specified for the DB system. By default, all the alarms are displayed.
     - **Origin filter**: View the Oracle-recommended alarms or the custom alarms created in the Monitoring service, for the DB system. By default, all the alarms are displayed.
 
      ![Operation Stats](./images/search-alarm.png " ")
 
-- Optionally, you can click the Actions icon (Actions) available for each recommended alarm and click **Edit threshold** to edit the basic alarm values in Database Management or click **Edit alarm** to view and edit the complete set of values specified for the alarm in the Monitoring service. For information on the fields displayed in the Edit alarm panel, see [Edit Alarms](https://docs.oracle.com/en-us/iaas/database-management/doc/set-alarm-definitions_mysql.html#GUID-E8FF0501-4B5C-4508-A9D2-17692591B4B2).
+6. Optionally, you can click the Actions icon (Actions) available for each recommended alarm and click **Edit threshold** to edit the basic alarm values in Database Management or click **Edit alarm** to view and edit the complete set of values specified for the alarm in the Monitoring service. For information on the fields displayed in the Edit alarm panel, see [Edit Alarms](https://docs.oracle.com/en-us/iaas/database-management/doc/set-alarm-definitions_mysql.html#GUID-E8FF0501-4B5C-4508-A9D2-17692591B4B2).
 
      ![Operation Stats](./images/edit-alarm.png " ")
 
      ![Operation Stats](./images/edit-alarm-window.png " ")
 
-- Select alarms and click **Clone** to clone the alarms. You can clone existing Oracle-recommended or custom alarms and apply them to specific DB systems or all the DB systems in a compartment. The cloning capability reduces the effort required to create multiple alarms, and allows you to standardize alarm settings across multiple DB systems. For information, see [Clone Alarms](https://docs.oracle.com/en-us/iaas/database-management/doc/set-alarm-definitions_mysql.html#GUID-682C254A-EB5F-424B-B713-7D90737F9DDA).
+7. Select alarms and click **Clone** to clone the alarms. You can clone existing Oracle-recommended or custom alarms and apply them to specific DB systems or all the DB systems in a compartment. The cloning capability reduces the effort required to create multiple alarms, and allows you to standardize alarm settings across multiple DB systems. For information, see [Clone Alarms](https://docs.oracle.com/en-us/iaas/database-management/doc/set-alarm-definitions_mysql.html#GUID-682C254A-EB5F-424B-B713-7D90737F9DDA).
 
      ![Operation Stats](./images/clone-alarm.png " ")
 
-- Select alarms and click Delete to delete the alarms.
+8. Select alarms and click Delete to delete the alarms.
 
      ![Operation Stats](./images/delete-alarm.png " ")
 
@@ -192,5 +197,5 @@ Estimated time: 20 minutes
 ## Acknowledgements
 
 - **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
-- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda, Ryan Lemos
+- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda
 - **Last Updated By/Date** - Sindhuja Banka, March 2025
