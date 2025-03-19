@@ -79,7 +79,7 @@ This lab assumes you have already completed the following:
 
 ## Task 3: Parameter Change - Validate New Indexes
 
-1. Let's now review validating adding new indexes report. Click on saved report - **Validate_New_Indexes** 
+1. Let's now review validating adding new indexes report. Click on saved report - **Validate/_New/_Indexes** 
 
      ![Parameter Change Report](./images/validatingnewindexreport.png " ")
 
@@ -89,7 +89,7 @@ This lab assumes you have already completed the following:
 
 3. Click on the SQL to review the SQL performance by analyzing the metrics and the plan changes.
 
-4. To do it on your own, please choose change type as **Parameter Change** and make sure the indexes are invisible while adding, and choose the parameter as **optimizer_use_invisible_indexes** and change the value to **True**
+4. To do it on your own, please choose change type as **Parameter Change** and make sure the indexes are invisible while adding, and choose the parameter as **optimizer/_use/_invisible/_indexes** and change the value to **True**
  
      ![Invisible Index](./images/invisibleindex.png " ")
 
