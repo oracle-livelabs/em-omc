@@ -21,7 +21,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: AWR Hub
 
-1.  On the **Ops Insights Overview** page, from the left pane click **AWR-Hub**.
+1.  On the **Ops Insights Overview** page, from the left pane click **Database Insights** and then click **AWR-Hub**.
 
       ![Left Pane](./images/awr-hub.png " ")
 
