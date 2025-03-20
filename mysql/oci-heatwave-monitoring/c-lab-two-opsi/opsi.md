@@ -306,5 +306,5 @@ Estimated time: 20 minutes
 ## Acknowledgements
 
 - **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
-- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda, Murtaza Husain
+- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda
 - **Last Updated By/Date** - Sindhuja Banka, March 2025

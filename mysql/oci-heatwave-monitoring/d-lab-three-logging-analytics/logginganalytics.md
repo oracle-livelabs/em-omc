@@ -99,7 +99,7 @@ Estimated Lab Time: 20 minutes
 
    **Trend**: Number of unique trends during the time period. Many clusters may have the same trend. These are log cluster patterns that are correlated in time.
 
-   Click on the **Trends** tab in the Cluster Visualization,
+   Click on the **Trends** tab in the Cluster Visualization.
 
       ![Fleet Summary](./images/trends.png " ")
 

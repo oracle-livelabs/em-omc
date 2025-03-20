@@ -2,11 +2,11 @@
 
 ## About this Workshop
 
- This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated HeatWave MySQL databases, so you don't need to set up or use one from your cloud account.
+ This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated HeatWave MySQL DB systems, so you don't need to set up or use one from your cloud account.
 
  You'll learn how to:
  * Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the HeatWave MySQL DB systems
- * Use Ops Insights for Capacity Planning & Database Insights
+ * Use Ops Insights for Capacity Planning and Database Insights
  * Use Logging Analytics to collect and analyze application logs
 
 Estimated Time: 60 minutes
@@ -23,7 +23,7 @@ Oracle Cloud **Observability and Management Platform** provides full-stack visib
 
     Database management provides a unified console for managing both cloud and on-premises databases. It includes lifecycle database management capabilities for monitoring, performance tuning, and administration. With Performance Hub, developers can optimize SQL code during active development and continuously monitor and tune queries in production.
 
-    *For more information on MySQL HeatWave Database Management > **[Use Database Management for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/database-management/doc/database-management-mysql-heatwave.html)***
+    *For more information on HeatWave MySQL Database Management > **[Use Database Management for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/database-management/doc/database-management-mysql-heatwave.html)***
 
 - Ops Insights
 

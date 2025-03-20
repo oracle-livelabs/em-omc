@@ -1,13 +1,13 @@
 ## Introduction
 
-In this lab, you will go through the steps to explore Ops Insights for External MySQL DB system which includes ML based resource usage trending, Capacity Planning, and SQL Insights.
+In this lab, you will go through the steps to explore Ops Insights for External MySQL DB system which includes ML based resource usage trending, Capacity Planning, and Database Insights.
 
 Estimated time: 20 minutes
 
 ### Objectives
 
 - Enable Ops Insights Demo Mode.
-- Explore Capacity Planning and SQL Insights.
+- Explore Capacity Planning and Database Insights.
 
 ## Task 1: Enable Demo Mode
 
@@ -29,7 +29,7 @@ Estimated time: 20 minutes
 
       ![Apply Policy](./images/opsi-apply-policy.png " ")
 
-5.  Once the mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
+5.  Once the demo mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
 
       ![Demo Mode ON](./images/opsi-demo-mode-on.png " ")
 
@@ -306,5 +306,5 @@ Estimated time: 20 minutes
 ## Acknowledgements
 
 - **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
-- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda, Murtaza Husain
+- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda
 - **Last Updated By/Date** - Sindhuja Banka, March 2025

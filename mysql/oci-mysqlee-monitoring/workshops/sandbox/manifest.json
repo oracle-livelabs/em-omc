@@ -22,10 +22,15 @@
             "description": "Logging Analytics",
             "filename": "../../d-lab-three-logging-analytics/logginganalytics.md"
         },
-          {
+        {
+            "title": "Application Performance Monitoring",
+            "description": "Application Performance Monitoring",
+            "filename": "../../e-lab-four-application-performance-monitoring/apm.md"
+        },
+        {
               "title": "Need Help?",
               "description": "Solutions to Common Problems and Directions for Receiving Live Help",
               "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
-          }
+        }
       ]
   }
