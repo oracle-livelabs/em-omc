@@ -1,88 +1,186 @@
 ## Introduction
 
-In this lab, you will explore Database Management for External MySQL DB System. Database Management provides a single-pane-of-glass view of your cloud and on-premises databases in OCI, helping you monitor and detect issues efficiently.
+In this lab, you will use the APM Trace Explorer to analyze traces and spans collected from the monitor run. You will explore the Query view to see how the parameters are carried over from the monitor page, use the Topology and Waterfall views to analyze traces and spans, and examine span dimensions to identify the root cause of the performance issues. You will also work with predefined and saved queries to analyze trends and behaviors of spans that may be impacting performance.
 
-Below are some of the key tasks you will, categorized under database monitoring and management.
+APM Trace Explorer allows you to run queries and visualize APM data, including:
+
+- Traces (full transactions)
+- Spans (individual units of work that make up a trace)
 
 Estimated time: 20 minutes
 
 ### Objectives
 
-- Use Oracle Cloud Infrastructure Database Management to manage a fleet of MySQL Databases and drill down to a single database for further investigation
-- Explore Database Management Summary
-- Analyze all Metrics of an External MySQL DB system
-- Review Configuration variables of an External MySQL DB system
-- Explore Alarm definitions of an External MySQL DB system
-- Diagnose database performance issues quickly with Performance Hub
+- Examine pre-configured queries in Trace Explorer
+- Drill down into trace Details
+- Inspect the SQL spans by executions
+- Understand the importance of APM in diagnosing performance issues
 
-## Task 1: Getting Started with Database Management
+## Task 1: Examine the pre-configured query in Trace Explorer
 
-1. Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
+1. From the OCI menu, click **Observability & Management**. Under **Application Performance Monitoring**, click **Trace Explorer**.
 
-     ![Database Management](./images/dbmgmt.png " ")
+     ![Database Management](./images/navigation.png " ")
 
-2. The **MySQL databases** tile (on the **Overview** page) displays the total number of External MySQL DB systems and HeatWave MySQL Databases in the compartment and region for which Database Management is enabled.
+2. On the top right of the Trace Explorer page, select the compartment **dbmgmt** and **Otel-Domain** for the APM Domain. Optionally, you can change the default time period (Last 60 minutes) to view all the traces with spans that started within the selected time range.
 
-     ![Database Management Overview](./images/overview.png " ")
+     ![Database Management Overview](./images/trace-explorer.png " ")
 
-## Task 2: Monitoring a Fleet of MySQL Databases
+3. For example, here is the out-of-the-box query in the Traces quick pick, which uses clauses and out-of-the-box dimensions to display information pertaining to traces. Click on the 3 dots and then select **Open** using window navigation.
 
-1. On the left pane, click **Diagnostics & Management** to navigate to the **HeatWave & MySQL fleet summary** page.
+     ![Database Management Overview](./images/open-traces.png " ")
 
-     ![Compartment](./images/nav.png " ")
+4. Select the **Otel-NoMySQLTraceEnabled** query where traces are not enabled.
 
-2. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation -
-     ![Compartment](./images/navigation.png " ")
+     ![Database Management Overview](./images/no-trace-enabled.png " ")
 
-3. The following tiles are available on the **Fleet Summary** page:
+5. Click on **Run** to execute the query.
 
-    - **Inventory**: Displays the number of MySQL Databases in the compartment.
-    - **Monitoring Status**: Displays the availability status of the managed MySQL Databases in the compartment.
-    - **Resource Usage**: Displays a summary of the overall CPU utilization, Storage and Memory allocation for the selected time period on the top-left corner of the page.
-    - **Alarms**: Displays the total number of open database alarms in the compartment and the number of alarms by severity.
+     ![Database Management Overview](./images/run.png " ")
 
-     ![Fleet Summary](./images/fleet-summary.png " ")
+6. Provides an overview of the Trace Explorer, displaying detailed insights into traces and span related to your query.
 
-4. Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
-    - **DB system name**: Name of the DB system.
-    - **Monitoring status**: Monitoring status of the DB system.
-    - **HeatWave**: HeatWave enablement status. Indicates whether a HeatWave cluster is attached to the HeatWave DB system. This information is only displayed for HeatWave DB systems.
-    - **HeatWave nodes**: Number of HeatWave nodes in the HeatWave cluster. This information is only displayed for HeatWave DB systems.
-    - **Average statements**: Displays the Average number of SQL statements executed per minute.
-    - **Average statement latency**: Displays the Average latency (in milliseconds) for the executed SQL statements.
-    - **CPU utilization**: Displays the Percentage of CPU utilized by the DB system.
-    - **Storage utilization**: Displays the Percentage of storage utilized by the DB system.
-    - **Memory utilization**: Displays the Percentage of memory utilized by the DB system.
+     ![Database Management Overview](./images/no-trace-overview.png " ")
 
-## Task 3: Monitor a Single External MySQL DB system - Configuration variables
+## Task 2: Limited Visibility and Analysis without traces enabled
 
-1. In the **Resources** page, click on the **Configuration variables** section. You can monitor the configuration variables that are currently used by running instances.
+1. By default, traces are displayed in the order by the start time. Right mouse click on the **Duration column**, select Sort **Descending** to show the traces by duration in descending order. This will bring the slowest trace to the top of the list.
 
-2. Configuration variables are the user, system, initialization, or service-specific variables that define the operation of the DB system.
+     ![Database Management Overview](./images/sort-descending.png " ")
 
-     ![Operation Stats](./images/configuration-variables-home.png " ")
+2. Look at the transactions (traces) executed by the monitor, and locate the slow trace that is taking more than 20 seconds. Click on the trace **Standalone_JavaApp: OTelDemo.listorders** under Service:Operation name column.
 
-3. In the Configuration variables section, you can use filters on the left pane to filter the configuration variables.
+     ![Database Management Overview](./images/sort-descending-overview.png " ")
 
-     ![Operation Stats](./images/config-variables-filters.png " ")
+3. The Trace detail page opens and displays flow of action for the specific transaction in Topology and Waterfall views.
 
-4. Deselect the Hide unmodified variables check box to view the variables that were not modified. This check box is selected by default.
+     ![Database Management Overview](./images/trace-details.png " ")
 
-     ![Operation Stats](./images/configuration.png " ")
+     *Note: The operations in the topology are the spans that are seen in the waterfall view.*
 
-5. View the following configuration variable information:
+4. Examine the diagram by hovering over arrows which shows the connection details between the services. Notice that the thicker the arrow, the longer the connection time. So the diagram helps you to identify where in the services the slowness has occurred. Hover the mouse over the arrow between the last operation and the database. A floating window shows information about the slow SQL executed. But here since traces are not enabled it does not show the information. It shows as unknown.
 
-    - **Name**: Name of the configuration variable.
-     Click the Arrow icon adjacent to the name of the configuration variable to view the default and current value.
+     ![Database Management Overview](./images/query-details.png " ")
 
-    - **Value**: Value of the configuration variable.
-    - **Modified**: Check mark to indicate if the configuration variable was modified.
-    - **Dynamic**: Check mark to indicate if the configuration variable is a dynamic variable, which means changing the variable does not require restarting the DB system.
-    - **Configurable**: Check mark to indicate if the configuration variable is configurable.
-    - **Source**: Source from which the configuration variable was most recently set. For information on the various types of sources, see Performance Schema variables_info Table.
-    - **Time set**: Date and time the configuration variable was most recently set.
+5. Click the triangle icon next to the Topology label, to **minimize** the topology region.
 
-    ![Operation Stats](./images/view-config-variables.png " ")
+     ![Database Management Overview](./images/collapse.png " ")
+
+6. The waterfall view shows the spans invoked in the transaction. If the trace is spread across multiple services, review each of the following.
+
+     ![Database Management Overview](./images/collapsed-view.png " ")
+
+     - The view visualizes the workflow of the trace and the relation between the spans.
+
+     - Each bar represents a span, and the time length goes from left to right.
+
+     - The longer the bar, the more time was consumed to complete the operation.
+
+     - The bar at the top is a root span, and child spans are nested below.
+
+     - Spans may wait for the next span to complete, or may not if it is an async call.
+
+7. Try to identify the slow span. For example, here, **Standalone\_JavaApp\_NoMySQLTrace: Execute statement** is the bottleneck. Click the link or the bar of the span.
+
+     ![Database Management Overview](./images/db-trace-details.png " ")
+
+8. Span details page opens. On this page, span details are provided in the list of dimensions. Here, you cannot see the full query and other dimensions because traces are not enabled.
+
+     ![Database Management Overview](./images/span-details.png " ")
+
+9. The key challenges here is that there is no clear view of how queries are executed across services and becomes to correlate application and database performance issues.
+
+10. Click on Close to exit the **Span Details** window.
+
+     ![Database Management Overview](./images/span-details-extended.png " ")
+
+11. Click on Close to exit the **Trace Details** window.
+
+     ![Database Management Overview](./images/span-details-close.png " ")
+
+## Task 3: Examine traces in APM Trace Explorer
+
+1. Until now, we've explored the scenario without traces enabled. Now, to fully understand the advantage of enabling traces with all the additonal details, let's look at the out-of-the-box query in the Traces quick pick, which uses clauses and out-of-the-box dimensions to display information pertaining to traces. Click on the 3 dots and open the query using the window navigation.
+
+     ![Database Management Overview](./images/otel-open.png " ")
+
+     ![Database Management Overview](./images/traces-enabled.png " ")
+
+2. Select the **Otel-WithMySQLTraceEnabled** query where traces are enabled for particular query.
+
+     ![Database Management Overview](./images/traces-enabled.png " ")
+
+3. Click on **Run** to execute the query.
+
+     ![Database Management Overview](./images/run.png " ")
+
+4. Provides an overview of the Trace Explorer, displaying detailed insights into traces and span related to your query.
+
+     ![Database Management Overview](./images/otel-trace-overview.png " ")
+
+5. By default, traces are displayed in the order by the start time. Right mouse click on the **Duration column**, select Sort **Descending** to show the traces by duration in descending order. This will bring the slowest trace to the top of the list.
+
+     ![Database Management Overview](./images/otel-sort-descending.png " ")
+
+6. Look at the transactions (traces) executed by the monitor, and locate the slow trace that is taking more than 20 seconds. Click on the trace **Standalone_JavaApp: OTelDemo.listOrders** under Service:Operation name column.
+
+     ![Database Management Overview](./images/otel-sort-descending-overview.png " ")
+
+## Task 4: Drill down to the trace Details
+
+1. The Trace detail page opens and displays the flow of action for the specific transaction in Topology and Waterfall views.
+
+     ![Database Management Overview](./images/otel-trace-details.png " ")
+
+     *Note: The operations in the topology are the spans that are seen in the waterfall view.*
+
+2. Examine the diagram by hovering the mouse over arrows which shows the connection details between the services. Notice that the thicker the arrow, the longer the connection time. So the diagram helps you to identify where in the services the slowness has occurred. Hover the mouse over the arrow between the last operation and the database. A floating window shows information about the slow SQL executed.
+
+     ![Database Management Overview](./images/otel-query-details.png " ")
+
+3. Click the triangle icon next to the Topology label, to **minimize** the topology region.
+
+     ![Database Management Overview](./images/otel-collapse.png " ")
+
+4. The waterfall view shows the spans invoked in the transaction. If the trace is spread across multiple services, spans in each service appear in a different color. Review the following.
+
+     ![Database Management Overview](./images/otel-collapsed-view.png " ")
+
+     - The view visualizes the workflow of the trace and the relation between the spans.
+
+     - Each bar represents a span, and the time length goes from left to right.
+
+     - The longer the bar, the more time was consumed to complete the operation.
+
+     - The bar at the top is a root span, and child spans are nested below.
+
+     - Spans may wait for the next span to complete, or may not if it is an async call.
+
+5. Try to identify the slow span. For example, here, **Standalone\_JavaApp\_NoStandalone\_JavaApp: Execute statement > mysqld: stmt** is the bottleneck. Click the link or the bar of the span.
+
+     ![Database Management Overview](./images/otel-db-trace-details.png " ")
+
+6. Span details page opens. On this page, span details are provided in the list of dimensions. Scroll down the list, and review the information of the span. These dimensions are provided out-of-the-box and can help you investigate a problem.
+
+     ![Database Management Overview](./images/otel-span-details.png " ")
+
+7. As scrolling down, locate the dimensions related to the database. In this case, you identified that the problem is a slow SQL. The dimensions provide the actual SQL, the time it took to execute and other additonal database metrics.
+
+     ![Database Management Overview](./images/otel-span-details-extended.png " ")
+
+8. The root cause here is that query executed a **JOIN** without using an **index**, leading to inefficient processing. Since **mysql.no\_index\_used = 1** and **mysql.no\_good\_index\_used =0**, it indicates that MySQL performed a full table scan instead of levering an index for optimization. Additionally mysql.select\_full\_join = 1 and mysql.select\_scan=1 confirm that a **full join** scan occured, meaning every row in the **Orders** and **Customers** tables had to be checked. This results in high rows examined 2,000,000 compared to rows sent 1,000,000, increasing CPU usage and execution time. The absence of an index significantly slowed down the query, making it inefficient.
+
+     ![Database Management Overview](./images/otel-span-details-extended-1.png " ")
+
+9. You can analyze trends, detect recurring performance issues, and ensure efficient query execution over time.
+
+10. Click on Close to exit the **Span Details** window.
+
+     ![Database Management Overview](./images/otel-span-details-close.png " ")
+
+11. Click on Close to exit the **Trace Details** window.
+
+     ![Database Management Overview](./images/otel-span-details-close.png " ")
 
 ## Acknowledgements
 

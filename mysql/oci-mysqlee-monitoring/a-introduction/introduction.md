@@ -4,12 +4,16 @@
 
  This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated an External MySQL DB system, so you don't need to set up or use one from your cloud account.
 
- You'll learn how to:
- * Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the External MySQL DB systems
- * Use Ops Insights for capacity planning and Database Insights
- * Use Logging Analytics to collect and analyze application logs
+### Objectives
 
-Estimated Time: 60 minutes
+In this workshop, you will:
+
+* Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the External MySQL DB systems
+* Use Ops Insights for capacity planning and Database Insights
+* Use Logging Analytics to collect and analyze application logs
+* Use APM Trace Explorer to view traces, spans, and span dimensions
+
+Estimated Time: 80 minutes
 
 **Observability and Management Services**
 
@@ -33,13 +37,11 @@ Oracle Cloud **Observability and Management Platform** provides full-stack visib
 
     *For more information on Logging Analytics and log Explorer please refer to Logging Analytics > **[Use Logging Analytics for External MySQL](https://docs.oracle.com/en-us/iaas/logging-analytics/home.htm)***
 
-### Objectives ??(check)
+- Application Performance Management
 
-In this workshop, you will:
-* Use Database Management to monitor the key performance and configuration metrics of your fleet of External MySQL DB systems and review query performances
-* Use Ops Insights for capacity planning and Database Insights
-* Use OCI Logging Analytics to collect logs, analyze and troubleshoot using Machine Learning features like Cluster and Link, and create Monitoring dashboards
+    OCI Application Performance Monitoring includes an implementation of a Distributed Tracing system. It collects and processes transaction trace data (spans) from the monitored application and makes it available for viewing, dashboarding, exploration, alerts, etc. You can use Trace Explorer to view traces and spans and identify performance issues and bottlenecks in your monitored application, from browser to database.
 
+    *For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer for External MySQL](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)***
 
 ### Acknowledgements
 
