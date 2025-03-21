@@ -161,29 +161,21 @@ Estimated Lab Time: 20 minutes
 
       ![Fleet Summary](./images/general-logs-heatmap.png " ")
 
-5. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
+6. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
 
       ![Fleet Summary](./images/alarm-setup.png " ")
 
-6. In this example, alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
+7. In this example, alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
 
       ![Fleet Summary](./images/drop-db.png " ")
 
-7. To access OCI Monitoring, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left corner. Under **Observability & Management**, navigate to **OCI Monitoring** to check active alarms, review recent triggers, and modify alarm conditions if needed.
-
-      ![Fleet Summary](./images/oci-monitoring.png " ")
-
-      ![Fleet Summary](./images/oci-monitoring-drop-alarm.png " ")
-
 8. When a DROP DATABASE event occurs, OCI sends alarms via configured channels like Email or Slack, allowing users to take immediate actions.
 
-9. These alarms can also be expanded to monitor other SQL queries, such as DROP TABLE, DELETE FROM, or ALTER DATABASE, for enhanced security.
+9. Here is an example of an alarm sent to email when a database DROP occurs.
 
-10. By adjusting the Time Interval in OCI Monitoring, you can track past alerts, analyize trends, and refine detection rules to improve database monitoring and security.
+      ![Fleet Summary](./images/alarm.png " ")
 
-      ![Fleet Summary](./images/alarm-screen.png " ")
-
-      ![Fleet Summary](./images/alarm-view.png " ")
+10. These alarms can also be expanded to monitor other SQL queries, such as DROP TABLE, DELETE FROM, or ALTER DATABASE, for enhanced security.
 
 ## Acknowledgements
 
