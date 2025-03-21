@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
- This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated an External MySQL DB system, so you don't need to set up or use one from your cloud account.
+ This workshop consists of four lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated an External MySQL DB system, so you don't need to set up or use one from your cloud account.
 
 ### Objectives
 
