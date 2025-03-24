@@ -21,7 +21,7 @@ Estimated Lab Time: 20 minutes
 
      ![Database Management](./images/home-view.png " ")
 
-3. From the Resources Menu, click on **Sources** to navigate to the Source that I have already created for visualization purposes.
+3. From the Resources Menu, click on **Sources** to navigate to the Source that we have already created for visualization purposes.
 
       ![Database Management](./images/resources.png " ")
 
@@ -45,7 +45,7 @@ Estimated Lab Time: 20 minutes
 
       - **Main panel** - where the visualization outputs appear above the results of the query.
 
-*Note: You are working with live logs so it may take a few minutes for logs to show up in your Log Explorer view. Click the **Run** button to re-run the query.*
+    *Note: You are working with live logs so it may take a few minutes for logs to show up in your Log Explorer view. Click the **Run** button to re-run the query.*
 
 ## Task 2: Visualize Data Using Charts and Controls
 
@@ -141,7 +141,7 @@ Estimated Lab Time: 20 minutes
 
 4. Using this data, you can identify the unique potential issue in the current week, and find a root-cause. Narrow down your selection of log records to those are the cause for the potential issue.
 
-*Note: The time shift value is subtracted from the start and end of the current time. If the time shift is less than the duration of the current time, there will be an overlap. This will show all the common (duplicate) clusters from that overlap period. A message will be shown when this is detected. In such a case, the baseline query is the same as the current query.*
+    *Note: The time shift value is subtracted from the start and end of the current time. If the time shift is less than the duration of the current time, there will be an overlap. This will show all the common (duplicate) clusters from that overlap period. A message will be shown when this is detected. In such a case, the baseline query is the same as the current query.*
 
 ## Task 5: Real-Time Monitoring and Alerting for Database Events
 
