@@ -13,9 +13,6 @@ SQL Performance Watch
 
 Estimated Time: 30 minutes
 
-Watch the video below for a quick walk-through of the lab.
-[Exploring Oracle Cloud Infrastructure SQL Performance Watch](videohub:1_mpf7rizz)
-
 ### Objectives
 
 -   Use Oracle Cloud Infrastructure SQL Performance Watch to identify the regression by proactively testing the changes before implementing on the production database.
