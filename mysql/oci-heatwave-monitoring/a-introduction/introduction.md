@@ -38,15 +38,6 @@ Oracle Cloud **Observability and Management Platform** provides full-stack visib
 
     *For more information on Logging Analytics and log Explorer please refer to Logging Analytics > **[Use Logging Analytics for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/oracle-defined-sources.html)***
 
-
-### Objectives
-
-In this workshop, you will:
-* Use Database Management to monitor the key performance and configuration metrics of your fleet of HeatWave MySQL and review query performances
-* Use Ops Insights for capacity planning and Database Insights
-* Use OCI Logging Analytics to collect logs, analyze and troubleshoot using Machine Learning features like Cluster and Link, and create Monitoring dashboards
-
-
 ### Acknowledgements
 
 - **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
