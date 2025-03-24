@@ -24,46 +24,58 @@ This lab assumes you have already completed the following:
 
 ## Task 1: Getting Started with SQL Performance Watch
 
-1. Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **SQL Performance Watch** service.
+1. Login to the Oracle Cloud Console, ensure you are in **US West (San Jose)** region. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **SQL Performance Watch** service.
 
      ![SQL Performance Watch](./images/oandm-sqlwatch.png " ")
 
-2.  Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment
+2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective database. You can view the databases that have SQL Performance Watch enabled under SQL Performance Watch column. 
 
-     ![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
-
-3.  Navigate to Administration page and choose external database.
-
+     ![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
+ 	
      ![Administration page](./images/sqlwatch-admin.png " ")
 
      ![External DB administration page](./images/sqlwatch-external.png " ")
 
-4. Go to SQL Performance Watch summary page, and click on one of the listed databases
+3. Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. You can view the list of external databases that have SQL Performance Watch enabled. Summary page gives you fleet of databases that have enabled SQL Performance Watch.
+
+     ![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
+
+     ![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
+
+4. Go to SQL Performance Watch summary page, and click on one of the listed databases.
 
      ![Database list](./images/sqlwatch-dblist.png " ")
 
 
 ## Task 2: Test the upgrade from 19.3 to 19.26 DB version
 
-1. Go to SQL Performance Watch summary page, and click on **mfg\_sales** database. Review the highlighted sections.
+1. Go to SQL Performance Watch summary page, and click on **mfg\_sales** database. Review the highlighted sections:
+	- Latest Comparison report: shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set(STS).
+	- Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here.
+	- Tasks by change type: Tasks that are created by various **change type** menus that are performed on the database can be viewed in this section
+	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks.
+	- You can create the task by clicking on the **Create** button
+	- Workload(STS) column highlights the SQL Tuning Set (STS) that is used as an input while creating the task.
 
      ![Landing page](./images/sqlwatchlandingpage.png " ")
 
-2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade and parameter change. To view the reports, go to SQL Performance Watch summary page, and click on one of the saved reports. You can view all the saved reports of any task in the summary page.
+2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade and parameter change. You can save the report after running the task and the saved reports are listed in the summary page. To view the reports, go to SQL Performance Watch summary page, and click on one of the saved reports.
 
      ![Saved Reports](./images/savedreports.png " ")
 
-3.  There are two saved reports - One is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets** or **Upgrade\_ElapsedTime\_Report**. Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26.
+3.  The saved reports are - One is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets** or **Upgrade\_ElapsedTime\_Report**.
 
      ![Upgrade Reports](./images/upgrade-reports.png " ")
 
+4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**
+
      ![Buffer Gets report](./images/upgrade-report-buffergets.png " ")
 
-4. Review the regressed SQLs and look for plan change **Yes**, indicating that there is a SQL plan change for that specific SQL.    
+5. Review the regressed SQLs and look for plan change **Yes**, indicating that there is a SQL plan change for that specific SQL.    
 
      ![Regressed SQLs](./images/regressedsqls.png " ")
 
-5. Click on the SQL to review the SQL performance by analyzing the metrics and the plan changes.
+6. Click on the SQL to review the SQL performance by analyzing the metrics and the plan changes.
  
      ![Regressed SQLs](./images/metrics.png " ")
 
@@ -71,7 +83,7 @@ This lab assumes you have already completed the following:
 
      ![Regressed SQLs](./images/indexchanges.png " ")
 
-6. To do it your own tenancy, please choose change type as **Upgrade** and make sure there are DB links available to run the SPA trials remotely. [Refer to video](https://youtu.be/C9qkLNqj5x4) on how to test the upgrade using SQL Performance Watch.
+7. To do it your own tenancy, please choose change type as **Upgrade** and make sure there are DB links available to run the SPA trials remotely. [Refer to video](https://youtu.be/C9qkLNqj5x4) on how to test the upgrade using SQL Performance Watch.
 
 
 ## Task 3: Parameter Change - Validate New Indexes
