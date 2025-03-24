@@ -30,7 +30,7 @@ Estimated time: 20 minutes
 
      ![Database Management Overview](./images/open-traces.png " ")
 
-4. Select the **Otel-NoMySQLTraceEnabled** query where traces are not enabled.
+4. Select the **Otel-NoMySQLTraceEnabled** query for which the traces are not enabled in the MySQL DB.
 
      ![Database Management Overview](./images/no-trace-enabled.png " ")
 
@@ -42,7 +42,7 @@ Estimated time: 20 minutes
 
      ![Database Management Overview](./images/no-trace-overview.png " ")
 
-## Task 2: Limited Visibility and Analysis without traces enabled
+## Task 2: Limited Visibility and Analysis without MySQL Database traces enabled
 
 1. By default, traces are displayed in the order by the start time. Right mouse click on the **Duration column**, select Sort **Descending** to show the traces by duration in descending order. This will bring the slowest trace to the top of the list.
 
@@ -88,7 +88,7 @@ Estimated time: 20 minutes
 
      ![Database Management Overview](./images/span-details.png " ")
 
-9. The key challenges here is that there is no clear view of how queries are executed across services and becomes to correlate application and database performance issues.
+9. The key challenges here is that there is no clear view of how queries are executed across services and becomes difficult to correlate application and database performance issues.
 
 10. Click on Close to exit the **Span Details** window.
 
@@ -126,23 +126,21 @@ Estimated time: 20 minutes
 
      ![Database Management Overview](./images/otel-sort-descending-overview.png " ")
 
-## Task 4: Drill down to the trace Details
-
-1. The Trace detail page opens and displays the flow of action for the specific transaction in Topology and Waterfall views.
+7. The Trace detail page opens and displays the flow of action for the specific transaction in Topology and Waterfall views.
 
      ![Database Management Overview](./images/otel-trace-details.png " ")
 
      *Note: The operations in the topology are the spans that are seen in the waterfall view.*
 
-2. Examine the diagram by hovering the mouse over arrows which shows the connection details between the services. Notice that the thicker the arrow, the longer the connection time. So the diagram helps you to identify where in the services the slowness has occurred. Hover the mouse over the arrow between the last operation and the database. A floating window shows information about the slow SQL executed.
+8. Examine the diagram by hovering the mouse over arrows which shows the connection details between the services. Notice that the thicker the arrow, the longer the connection time. So the diagram helps you to identify where in the services the slowness has occurred. Hover the mouse over the arrow between the last operation and the database. A floating window shows information about the slow SQL executed.
 
      ![Database Management Overview](./images/otel-query-details.png " ")
 
-3. Click the triangle icon next to the Topology label, to **minimize** the topology region.
+9. Click the triangle icon next to the Topology label, to **minimize** the topology region.
 
      ![Database Management Overview](./images/otel-collapse.png " ")
 
-4. The waterfall view shows the spans invoked in the transaction. If the trace is spread across multiple services, spans in each service appear in a different color. Review the following.
+10. The waterfall view shows the spans invoked in the transaction. If the trace is spread across multiple services, spans in each service appear in a different color. Review the following.
 
      ![Database Management Overview](./images/otel-collapsed-view.png " ")
 
@@ -156,31 +154,39 @@ Estimated time: 20 minutes
 
      - Spans may wait for the next span to complete, or may not if it is an async call.
 
-5. Try to identify the slow span. For example, here, **Standalone\_JavaApp\_NoStandalone\_JavaApp: Execute statement > mysqld: stmt** is the bottleneck. Click the link or the bar of the span.
+11. Try to identify the slow span. For example, here, **Standalone\_JavaApp\_NoStandalone\_JavaApp: Execute statement > mysqld: stmt** is the bottleneck. Click the link or the bar of the span.
 
      ![Database Management Overview](./images/otel-db-trace-details.png " ")
 
-6. Span details page opens. On this page, span details are provided in the list of dimensions. Scroll down the list, and review the information of the span. These dimensions are provided out-of-the-box and can help you investigate a problem.
+12. Span details page opens. On this page, span details are provided in the list of dimensions. Scroll down the list, and review the information of the span. These dimensions are provided out-of-the-box and can help you investigate a problem.
 
      ![Database Management Overview](./images/otel-span-details.png " ")
 
-7. As scrolling down, locate the dimensions related to the database. In this case, you identified that the problem is a slow SQL. The dimensions provide the actual SQL, the time it took to execute and other additonal database metrics.
+13. As scrolling down, locate the dimensions related to the database. In this case, you identified that the problem is a slow SQL. The dimensions provide the actual SQL, the time it took to execute and other additonal database metrics.
 
      ![Database Management Overview](./images/otel-span-details-extended.png " ")
 
-8. The root cause here is that query executed a **JOIN** without using an **index**, leading to inefficient processing. Since **mysql.no\_index\_used = 1** and **mysql.no\_good\_index\_used =0**, it indicates that MySQL performed a full table scan instead of levering an index for optimization. Additionally mysql.select\_full\_join = 1 and mysql.select\_scan=1 confirm that a **full join** scan occured, meaning every row in the **Orders** and **Customers** tables had to be checked. This results in high rows examined 2,000,000 compared to rows sent 1,000,000, increasing CPU usage and execution time. The absence of an index significantly slowed down the query, making it inefficient.
+14. The root cause here is that query executed a **JOIN** without using an **index**, leading to inefficient processing. Since **mysql.no\_index\_used = 1** and **mysql.no\_good\_index\_used =0**, it indicates that MySQL performed a full table scan instead of levering an index for optimization. Additionally mysql.select\_full\_join = 1 and mysql.select\_scan=1 confirm that a **full join** scan occured, meaning every row in the **Orders** and **Customers** tables had to be checked. This results in high rows examined 2,000,000 compared to rows sent 1,000,000, increasing CPU usage and execution time. The absence of an index significantly slowed down the query, making it inefficient.
 
      ![Database Management Overview](./images/otel-span-details-extended-1.png " ")
 
-9. You can analyze trends, detect recurring performance issues, and ensure efficient query execution over time.
+15. You can analyze trends, detect recurring performance issues, and ensure efficient query execution over time.
 
-10. Click on Close to exit the **Span Details** window.
+16. You can also add a drill down feature in APM to quickly navigate to Logging Analytics or Database Management.
+
+     ![Database Management Overview](./images/span-navigation.png " ")
+
+     ![Database Management Overview](./images/span-dbm.png " ")
+
+     ![Database Management Overview](./images/span-la.png " ")
+
+17. Click on Close to exit the **Span Details** window.
 
      ![Database Management Overview](./images/otel-span-details-close.png " ")
 
-11. Click on Close to exit the **Trace Details** window.
+18. Click on Close to exit the **Trace Details** window.
 
-     ![Database Management Overview](./images/otel-span-details-close.png " ")
+     ![Database Management Overview](./images/otel-trace-details-close.png " ")
 
 ## Acknowledgements
 

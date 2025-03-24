@@ -2,7 +2,7 @@
 
 In this lab, you will explore Database Management for External MySQL DB System. Database Management provides a single-pane-of-glass view of your cloud and on-premises databases in OCI, helping you monitor and detect issues efficiently.
 
-Below are some of the key tasks you will, categorized under database monitoring and management.
+Below are some of the key tasks you will perform which are categorized under database monitoring and management.
 
 Estimated time: 20 minutes
 
@@ -21,7 +21,13 @@ Estimated time: 20 minutes
 
      ![Database Management](./images/dbmgmt.png " ")
 
-2. The **MySQL databases** tile (on the **Overview** page) displays the total number of External MySQL DB systems and HeatWave MySQL Databases in the compartment and region for which Database Management is enabled.
+2. The **dbmgmt** compartment is selected by default in the Compartment field. Otherwise, set the **Compartment** to **dbmgmt** following the navigation.
+
+     ![Compartment](./images/navigation-compartment.png " ")
+
+     ![Compartment](./images/navigation.png " ")
+
+3. The **MySQL databases** tile (on the **Overview** page) displays the total number of External MySQL DB systems and HeatWave MySQL Databases in the compartment and region for which Database Management is enabled.
 
      ![Database Management Overview](./images/overview.png " ")
 
@@ -31,10 +37,7 @@ Estimated time: 20 minutes
 
      ![Compartment](./images/nav.png " ")
 
-2. The dbmgmt compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation -
-     ![Compartment](./images/navigation.png " ")
-
-3. The following tiles are available on the **Fleet Summary** page:
+2. The following tiles are available on the **Fleet Summary** page:
 
     - **Inventory**: Displays the number of MySQL Databases in the compartment.
     - **Monitoring Status**: Displays the availability status of the managed MySQL Databases in the compartment.
@@ -43,7 +46,7 @@ Estimated time: 20 minutes
 
      ![Fleet Summary](./images/fleet-summary.png " ")
 
-4. Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
+3. Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
     - **DB system name**: Name of the DB system.
     - **Monitoring status**: Monitoring status of the DB system.
     - **HeatWave**: HeatWave enablement status. Indicates whether a HeatWave cluster is attached to the HeatWave DB system. This information is only displayed for HeatWave DB systems.
@@ -124,11 +127,13 @@ Estimated time: 20 minutes
 
      ![Operation Stats](./images/recommended-alarms.png " ")
 
-3. In this case, I have already set up and configured alarms.
+3. In this case, we have already set up and configured alarms.
 
      ![Operation Stats](./images/oracle-alarms.png " ")
 
-4. Click the alarm to view the alarm details on the Alarm Definitions page in the Monitoring service. ?check (For Oracle-recommended alarms, the provider: DBM free-form tag is added by default during the creation process and is displayed in the Tags section.)
+4. Click the alarm to view the alarm details on the Alarm Definitions page in the Monitoring service.
+
+     *For Oracle-recommended alarms, the provider: DBM free-form tag is added by default during the creation process and is displayed in the Tags section.*
 
      ![Operation Stats](./images/click-view-alarm.png " ")
 

@@ -1,6 +1,6 @@
 ## Introduction
 
-In this lab, you will learn how to use the Oracle Cloud Logging Analytics service to enrich the log data collected based on the SQL query provided in the log configuration from the world's most popular open source database-MySQL.
+In this lab, you will learn how to use the Oracle Cloud Logging Analytics service to collect and analyze log data directly from the MySQL log files such as the General Query log and Error log to gain deeper insights into database activity.
 
 Estimated Lab Time: 20 minutes
 
@@ -21,7 +21,7 @@ Estimated Lab Time: 20 minutes
 
      ![Database Management](./images/home-view.png " ")
 
-3. From the Resources Menu, click on **Sources** to navigate to the Source that is already created for visualization purposes.
+3. From the Resources Menu, click on **Sources** to navigate to the Source that we have already created for visualization purposes.
 
       ![Database Management](./images/resources.png " ")
 
@@ -45,7 +45,7 @@ Estimated Lab Time: 20 minutes
 
       - **Main panel** - where the visualization outputs appear above the results of the query.
 
-*Note: You are working with live logs so it may take a few minutes for logs to show up in your Log Explorer view. Click the **Run** button to re-run the query.*
+   *Note: You are working with live logs so it may take a few minutes for logs to show up in your Log Explorer view. Click the **Run** button to re-run the query.*
 
 ## Task 2: Visualize Data Using Charts and Controls
 

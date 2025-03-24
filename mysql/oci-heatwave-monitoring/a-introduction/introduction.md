@@ -4,10 +4,11 @@
 
  This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated HeatWave MySQL DB systems, so you don't need to set up or use one from your cloud account.
 
- You'll learn how to:
- * Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the HeatWave MySQL DB systems
- * Use Ops Insights for Capacity Planning and Database Insights
- * Use Logging Analytics to collect and analyze application logs
+In this workshop, you will:
+
+* Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the HeatWave MySQL DB systems
+* Use Ops Insights for Capacity Planning and Database Insights
+* Use Logging Analytics to collect and analyze database logs, such as the General Query log, Audit log, and others
 
 Estimated Time: 60 minutes
 
@@ -35,7 +36,7 @@ Oracle Cloud **Observability and Management Platform** provides full-stack visib
 
     Oracle Cloud Infrastructure (OCI) Logging Analytics is a cloud solution that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor log data from applications and system infrastructure-both in the cloud and on-premises. It can extract database instance records based on SQL queries provided in the log source configuration. In this lab, you'll learn how to use the Oracle Cloud Logging Analytics to enrich log data collected from the world's most popular open source database-MySQL.
 
-    *For more information on Logging Analytics and log Explorer please refer to Logging Analytics > **[Use Logging Analytics for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/logging-analytics/home.htm)***
+    *For more information on Logging Analytics and log Explorer please refer to Logging Analytics > **[Use Logging Analytics for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/oracle-defined-sources.html)***
 
 
 ### Objectives
