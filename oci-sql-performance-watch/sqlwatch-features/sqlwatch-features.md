@@ -24,11 +24,11 @@ This lab assumes you have already completed the following:
 
 ## Task 1: Getting Started with SQL Performance Watch
 
-1. Login to the Oracle Cloud Console, ensure you are in **US West (San Jose)** region. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and within the **SQL Performance Watch** service.
+1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
 
      ![SQL Performance Watch](./images/oandm-sqlwatch.png " ")
 
-2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective database. You can view the databases that have SQL Performance Watch enabled under SQL Performance Watch column. 
+2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column. 
 
      ![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
  	
@@ -49,13 +49,15 @@ This lab assumes you have already completed the following:
 
 ## Task 2: Test the upgrade from 19.3 to 19.26 DB version
 
-1. Go to SQL Performance Watch summary page, and click on **mfg\_sales** database. Review the highlighted sections:
+1. Go to SQL Performance Watch summary page, and click on **mfg\_salespdb** database. The page shows the summary of last 7 days, if no tasks are run in last 7 days the page shows empty, so ensure you have changed **View data** in right corner value to **ALL** from the drop down menu. Review the highlighted sections:
+	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks.
 	- Latest Comparison report: shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set(STS).
 	- Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here.
 	- Tasks by change type: Tasks that are created by various **change type** menus that are performed on the database can be viewed in this section
-	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks.
 	- You can create the task by clicking on the **Create** button
 	- Workload(STS) column highlights the SQL Tuning Set (STS) that is used as an input while creating the task.
+
+     ![View data ALL](./images/viewdataall.png " ")
 
      ![Landing page](./images/sqlwatchlandingpage.png " ")
 
