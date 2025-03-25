@@ -65,7 +65,7 @@ This lab assumes you have already completed the following:
 
      ![Saved Reports](./images/savedreports.png " ")
 
-3.  The saved reports are - One is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets** or **Upgrade\_ElapsedTime\_Report**.
+3.  One of the saved reports is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets**.
 
      ![Upgrade Reports](./images/upgrade-reports.png " ")
 
@@ -77,7 +77,7 @@ This lab assumes you have already completed the following:
 
      ![Regressed SQLs](./images/regressedsqls.png " ")
 
-6. Click on the SQL to review the SQL performance by analyzing the metrics and the plan changes.
+6. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes.
  
      ![Regressed SQLs](./images/metrics.png " ")
 
@@ -90,7 +90,7 @@ This lab assumes you have already completed the following:
 
 ## Task 3: Parameter Change - Validate New Indexes
 
-1. Let's now review validating adding new indexes report. Click on saved report - **Validate\_New\_Indexes** 
+1. Go back to SQL Performance Watch summary page and view the other saved report of validating new indexes. Let's open the report to review how to validate adding new indexes report. Click on saved report - **Validate\_New\_Indexes** 
 
      ![Parameter Change Report](./images/validatingnewindexreport.png " ")
 
@@ -98,14 +98,14 @@ This lab assumes you have already completed the following:
 
      ![Parameter Change Report](./images/improvedsqls.png " ")
 
-3. Click on the SQL to review the SQL performance by analyzing the metrics and the plan changes.
+3. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes.
 
 4. To do it on your own, please choose change type as **Parameter Change** and make sure the indexes are invisible while adding, and choose the parameter as **optimizer\_use\_invisible\_indexes** and change the value to **True**
  
      ![Invisible Index](./images/invisibleindex.png " ")
 
 
-Finally, you can follow the same steps to go back and check out the **Cloud DB Infrastructure Performance** dashboard.  This dashboard provides various infrastructure and host metrics to monitor a database system in a single location.  Included metric widgets are **Node Status**, **OCPU allocation**, **CPU utilization**, **Memory utilization** and storage metrics such as **File System utilization** and **ASM Disk Group utilization**.
+Finally, you can follow the same steps to go back on your own tenancy.
 
 ## Learn More
 
