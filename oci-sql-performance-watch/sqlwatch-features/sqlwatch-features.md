@@ -105,7 +105,7 @@ This lab assumes you have already completed the following:
      ![Invisible Index](./images/invisibleindex.png " ")
 
 
-Finally, you can follow the same steps to go back on your own tenancy.
+Finally, you can follow the same steps to go back on your own tenancy to explore the features, to know more about the other use cases, please refer to the videos below.
 
 ## Learn More
 
