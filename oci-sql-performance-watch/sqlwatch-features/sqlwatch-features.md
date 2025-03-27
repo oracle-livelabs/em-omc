@@ -24,30 +24,33 @@ This lab assumes you have already completed the following:
 
 ## Task 1: Getting Started with SQL Performance Watch
 
-1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region on the top right corner, refer to Image1. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
+1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region on the top right corner, refer to Image. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
 
 	![SQL Performance Watch](./images/region.png " ")
-	Image1: Region selection
+	Image- Region selection
    
 	![SQL Performance Watch](./images/oandm-sqlwatch.png " ")
-	Image2: Choose SQL Performance Watch
+	Image- Choose SQL Performance Watch
 
 
 2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column. 
 
-Refer to the images below: Image1 - selecting **dbmgmt** compartment, Image2 - once compartment is selected, we can see the databases in the compartment on the table. Image3 navigate to administration page and select deployment type **External**.
+Refer to the images below: Image1 - selecting **dbmgmt** compartment, Image2 - once compartment is selected, we can see the databases in the compartment on the table. Image3 - navigate to administration page and select deployment type **External**.
 
-     ![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
+
+	![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
+	Image- selecting dbmgmt compartment
  	
-     ![Administration page](./images/sqlwatch-admin.png " ")
+	![Administration page](./images/sqlwatch-admin.png " ")
+	Image- Once compartment is selected, we can see the databases in the compartment on the table.
 
-     ![External DB administration page](./images/sqlwatch-external.png " ")
+	![External DB administration page](./images/sqlwatch-external.png " ")
+	Image- Navigate to administration page and select deployment type -External
 
-3. Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. You can view the list of external databases that have SQL Performance Watch enabled. Summary page gives you fleet of databases that have enabled SQL Performance Watch.
+3. Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). Hence, summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch.
 
-     ![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
-
-     ![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
+     
+ 	![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
 
 4. Go to SQL Performance Watch summary page, and click on one of the listed databases.
 
@@ -64,21 +67,27 @@ Refer to the images below: Image1 - selecting **dbmgmt** compartment, Image2 - o
 	- You can create the task by clicking on the **Create** button
 	- Workload(STS) column highlights the SQL Tuning Set (STS) that is used as an input while creating the task.
 
-     ![View data ALL](./images/viewdataall.png " ")
+	![View data ALL](./images/viewdataall.png " ")
 
-     ![Landing page](./images/sqlwatchlandingpage.png " ")
+	![Landing page](./images/sqlwatchlandingpage.png " ")
 
 2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade and parameter change. You can save the report after running the task and the saved reports are listed in the summary page. To view the reports, go to SQL Performance Watch summary page, and click on one of the saved reports.
 
-     ![Saved Reports](./images/savedreports.png " ")
+	![Saved Reports](./images/savedreports.png " ")
 
 3.  One of the saved reports is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets**.
 
-     ![Upgrade Reports](./images/upgrade-reports.png " ")
+	![Upgrade Reports](./images/upgrade-reports.png " ")
 
-4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**
+4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**.
 
-     ![Buffer Gets report](./images/upgrade-report-buffergets.png " ")
+You can view the breakdown of SQL execution under **Breakdown** section. There are four section each divided based on the SQL statements. 
+	- Buffer Gets (i.e Comparison metrics): Is showing the performance of SQLs pre-change and post-change trial.
+	- SQL Statements by Performance: Is showing the SQLs that are improved, regressed, unchanged, new and missing in pre and post change trails.
+	- SQL Statements by Plan Change: Is showing the number of SQLs that are New Plans or Same Plans in pre and post change trials
+	- SQL Statements by Problems: Is showing number of Errors, Timeouts and Unsupported SQL statements.
+
+	![Buffer Gets report](./images/upgrade-report-buffergets.png " ")
 
 5. Review the regressed SQLs and look for plan change **Yes**, indicating that there is a SQL plan change for that specific SQL.    
 
