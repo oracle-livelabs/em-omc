@@ -24,11 +24,18 @@ This lab assumes you have already completed the following:
 
 ## Task 1: Getting Started with SQL Performance Watch
 
-1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
+1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region on the top right corner, refer to Image1. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
 
-     ![SQL Performance Watch](./images/oandm-sqlwatch.png " ")
+	![SQL Performance Watch](./images/region.png " ")
+	Image1: Region selection
+   
+	![SQL Performance Watch](./images/oandm-sqlwatch.png " ")
+	Image2: Choose SQL Performance Watch
+
 
 2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column. 
+
+Refer to the images below: Image1 - selecting **dbmgmt** compartment, Image2 - once compartment is selected, we can see the databases in the compartment on the table. Image3 navigate to administration page and select deployment type **External**.
 
      ![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
  	
