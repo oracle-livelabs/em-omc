@@ -11,7 +11,7 @@ In this workshop, you will:
 * Use Logging Analytics to collect and analyze database logs, such as the General Query log, Audit log, and others
 * Use APM Trace Explorer to view traces, spans, and span dimensions
 
-Estimated Time: 80 minutes
+Estimated Time: 1 hours 20 minutes
 
 **Observability and Management Services**
 
