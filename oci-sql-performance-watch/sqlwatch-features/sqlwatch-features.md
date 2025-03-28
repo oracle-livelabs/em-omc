@@ -80,9 +80,9 @@ This lab assumes you have already completed the following:
 	![Upgrade Reports](./images/upgrade-reports.png " ")
 
 4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**. You can view the breakdown of SQL execution under **Breakdown** section. There are four section each divided based on the SQL statements: 
-	- Buffer Gets (i.e Comparison metrics): Is showing the performance of SQLs pre-change and post-change trial.
+	- Buffer Gets (i.e Comparison metrics): Is showing the performance of SQLs pre-change and post-change trials.
 	- SQL Statements by Performance: Is showing the SQLs that are improved, regressed, unchanged, new and missing in pre and post change trails.
-	- SQL Statements by Plan Change: Is showing the number of SQLs that are New Plans or Same Plans in pre and post change trials
+	- SQL Statements by Plan Change: Is showing the number of SQLs that are New Plans or Same Plans in pre and post change trials.
 	- SQL Statements by Problems: Is showing number of Errors, Timeouts and Unsupported SQL statements.
 
 	![Buffer Gets report](./images/upgrade-report-buffergets.png " ")
@@ -91,7 +91,7 @@ This lab assumes you have already completed the following:
 
      ![Regressed SQLs](./images/regressedsqls.png " ")
 
-6. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes.
+6. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes. In this report, you can analyze each metric for pre-change and post-change trials. You can view that in the column **Metric Change (Before/After)** where the bars indicating before and after the change for each metric and the respective impact on SQL and on Workload. As you go scroll down, you can see two Plans - Plan Before and Plan After, which shows the execution plan for the SQLID before and after the change.
  
      ![Regressed SQLs](./images/metrics.png " ")
 
