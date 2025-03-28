@@ -45,12 +45,10 @@ This lab assumes you have already completed the following:
 	![External DB administration page](./images/sqlwatch-external.png " ")
 	Image- Navigate to administration page and select deployment type -External
 
-3. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). 
+3. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. Summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch.
 
 	![External DB administration page](./images/sqlwatch-external.png " ")
 	Image- Navigate to administration page and select deployment type -External
-
-Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. Summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch.
      
  	![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
 
