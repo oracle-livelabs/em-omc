@@ -53,7 +53,6 @@ This lab assumes you have already completed the following:
 	Below Image- Navigate to administration page and select deployment type -External
 	![External DB administration page](./images/sqlwatch-external.png " ")
 
-     	Below Image - SQL Performance Watch Summary page
  	![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
 
 5. Go to SQL Performance Watch summary page, and click on one of the listed databases.
@@ -66,7 +65,7 @@ This lab assumes you have already completed the following:
 
 1. On SQL Performance Watch summary page, click on **mfg\_salespdb** database. The page shows the summary of last 7 days, if no tasks are run in last 7 days the page shows empty, so ensure you have changed **View data** in right corner value to **ALL** from the drop down menu. Review the highlighted sections:
 	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks
-	- Latest Comparison report: Shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set(STS)
+	- Latest Comparison report: Shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set (STS)
 	- Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here
 	- Tasks by change type: Tasks that are created by various **change type** menus that are performed on the database can be viewed in this section
 	- You can create the task by clicking on the **Create** button
@@ -99,7 +98,7 @@ This lab assumes you have already completed the following:
 	Below Image - Task Creation Type
 	![Task name and STS](./images/taskcreationtype.png " ") 
 
-5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks.
+5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly, choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks.
 
 	Below Image - Advanced setting
 	![Task name and STS](./images/advanced.png " ") 
@@ -110,7 +109,7 @@ This lab assumes you have already completed the following:
 	Below Image - Post Change trial 
 	![Task name and STS](./images/postchangetrial.png " ") 
 
-	Below Image - Comparison Metric and submit 
+	Below Image - Comparison metric and submit 
 	![Task name and STS](./images/comparisonmetric.png " ") 
 
 	Below Image - Expected submission error
@@ -147,13 +146,13 @@ This lab assumes you have already completed the following:
 6. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes. In this report, you can analyze each metric for pre-change and post-change trials. You can view that in the column **Metric Change (Before/After)** where the bars indicating before and after the change for each metric and the respective impact on SQL and on Workload. As you go scroll down, you can see two Plans - Plan Before and Plan After, which shows the execution plan for the SQL before and after the change.
  
 
-	Below Image - Regressed SQLs
+	Below Image - Regressed SQL report
 	![Regressed SQLs](./images/metrics.png " ")
 
-	Below Image - View before and after SQL plans
+	Below Image - View before and after SQLID plans
 	![Regressed SQLs](./images/beforeandafterplan.png " ")
 
-	Below Image - Index change SQL plan
+	Below Image - Index change in the plan
 	![Regressed SQLs](./images/indexchanges.png " ")
 
 7. To do it your own tenancy, please choose change type as **Upgrade** and make sure there are DB links available to run the SPA trials remotely. [Refer to video](https://youtu.be/C9qkLNqj5x4) on how to test the upgrade using SQL Performance Watch.
