@@ -25,11 +25,15 @@ Estimated Lab Time: 20 minutes
 
       ![Database Management](./images/resources.png " ")
 
+4. If you don't find MySQL Error Logs - LiveLabs in the list, you can **search** for it using the search lab location in the top left corner. Once you find MySource, click on it for a detailed view.
+
       ![Database Management](./images/mysource.png " ")
+
+5. Click on **View In Log Explorer** from the source.
 
       ![Database Management](./images/view-log-explorer.png " ")
 
-4. Here are the main parts of the user interface that will be used throughout this lab.
+6. Here are the main parts of the user interface that will be used throughout this lab.
 
       ![Database Management](./images/log-explorer.png " ")
 
@@ -59,7 +63,7 @@ Estimated Lab Time: 20 minutes
 
       ![Compartment](./images/visualizations-heatmap-view.png " ")
 
-2. Select any other visualization like **Line** (table with histogram icon). The data is represented in the form of a Line.
+3. Select any other visualization like **Line** (table with histogram icon). The data is represented in the form of a Line.
 
       ![Compartment](./images/visualizations-line.png " ")
 
@@ -111,16 +115,6 @@ Estimated Lab Time: 20 minutes
 
    These are the clusters that had the same shape (i.e. occuring at the same time) to as the selected cluster pattern in time. In this case these are the messages issued by Concurrent Manager for a failing job.
 
-6. You can use **Link Visualization** to analyze log records by grouping related logs from different sources based on selected fields. This helps in identifying patterns and detecting anomalies.
-
-   ![Fleet Summary](./images/link.png " ")
-
-7. In this example, the **Compact Layout** is used, which consists of one row, one column, packed cards, and vertical separators to present data in a clear and organized manner.
-
-      *For more information on Link Visualization > **[Link Visualization](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/link-visualization.html)***
-
-       ![Fleet Summary](./images/final-summary.png " ")
-
 ## Task 4: Explore Logs using Issues Visualization
 
 1. Click on the **Issues** Visualization from the Visualizations panel.
@@ -149,11 +143,17 @@ Estimated Lab Time: 20 minutes
 
 4. For example, this External MySQL DB system is configured to capture both **error logs** and **general logs**, which are stored in log files.
 
-5. Using the same process as above, Click on Sources to navigate to the Source that I have already created for visualization purposes.
+5. Using the same process as above, Click on Sources to navigate to the Source that we have already created for visualization purposes. If you don't find MySQL Error Logs - GeneralLogs in the list, you can **search** for it using the search lab location in the top left corner. Once you find MySource, click on it for a detailed view.
 
       ![Fleet Summary](./images/general-logs.png " ")
 
+6. Click on **View In Log Explorer** from the source.
+
       ![Fleet Summary](./images/general-logs-explorer.png " ")
+
+7. Click on the **Records with Histogram** Visualization from the Visualizations panel.
+
+      ![Fleet Summary](./images/visualizations-histogram.png " ")
 
       ![Fleet Summary](./images/general-logs-collection.png " ")
 
@@ -161,21 +161,21 @@ Estimated Lab Time: 20 minutes
 
       ![Fleet Summary](./images/general-logs-heatmap.png " ")
 
-6. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
+8. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
 
       ![Fleet Summary](./images/alarm-setup.png " ")
 
-7. In this example, alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
+9. In this example, alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
 
       ![Fleet Summary](./images/drop-db.png " ")
 
-8. When a DROP DATABASE event occurs, OCI sends alarms via configured channels like Email or Slack, allowing users to take immediate actions.
+10. When a DROP DATABASE event occurs, OCI sends alarms via configured channels like Email or Slack, allowing users to take immediate actions.
 
-9. Here is an example of an alarm sent to email when a database DROP occurs.
+11. Here is an example of an alarm sent to email when a database DROP occurs.
 
       ![Fleet Summary](./images/alarm.png " ")
 
-10. These alarms can also be expanded to monitor other SQL queries, such as DROP TABLE, DELETE FROM, or ALTER DATABASE, for enhanced security.
+12. These alarms can also be expanded to monitor other SQL queries, such as DROP TABLE, DELETE FROM, or ALTER DATABASE, for enhanced security.
 
 ## Acknowledgements
 

@@ -19,21 +19,11 @@ Estimated time: 20 minutes
 
       ![Enable Demo Mode](./images/opsi-enable-demo.png " ")
 
-      **Note:** Steps 3-4 is a one-time setup that ensures data access across the tenancy. If you are re-enabling **Demo Mode** and do not see these prompts, it means the policy has already been applied.
-
-3.  On the **Complete prerequisites** pop-up click on **Apply**. When enabling demo mode, a policy is created to allow read-only access to the demo tenancy's data. It may take up to 1 or 2 minutes for the policy to allow data access across the tenancies.  If you are receiving authorization errors you may need to refresh the page until they have cleared, or you will need to engage an administrator or user with elevated privileges to create the policy.
-
-      ![Complete Prereqs](./images/opsi-complete-prereqs.png " ")
-
-4.  Click **Close** after the policy has been created.
-
-      ![Apply Policy](./images/opsi-apply-policy.png " ")
-
-5.  Once the demo mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
+3.  Once the demo mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
 
       ![Demo Mode ON](./images/opsi-demo-mode-on.png " ")
 
-6.  On the left-hand pane you will find links to quickly navigate to Ops Insights offerings for HeatWave MySQL which includes Capacity Planning, SQL Insights and Dashboards.
+4.  On the left-hand pane you will find links to quickly navigate to Ops Insights offerings for HeatWave MySQL which includes Capacity Planning, SQL Insights and Dashboards.
 
       ![Left Pane](./images/opsi-left-pane.png " ")
 

@@ -17,36 +17,48 @@ Estimated time: 20 minutes
 
 ## Task 1: Getting Started with Database Management
 
-1. Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
+1. Login to the Oracle Cloud Console and change the selected region to **US West (San Jose)** region as shown.
+
+     ![Database Management](./images/heatwave-region.png " ")
+
+2. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**.
 
      ![Database Management](./images/dbmgmt.png " ")
 
-2. The **dbmgmt** compartment is selected by default in the Compartment field. Otherwise, set the **Compartment** to **dbmgmt** following the navigation.
+3. The error appears due to the default root compartment, but it can be ignored as we only enabled policies for the **dbmgmt** compartment.
 
-     ![Compartment](./images/navigation-compartment.png " ")
+     ![Compartment](./images/navigation-error.png " ")
+
+4. The **root** compartment is selected by default in the Compartment field. Set the **Compartment** to **dbmgmt** following the navigation.
 
      ![Compartment](./images/navigation.png " ")
 
-3. The **MySQL databases** tile (on the **Overview** page) displays the total number of HeatWave MySQL Databases and External MySQL DB systems in the compartment and region for which Database Management is enabled.
+     ![Compartment](./images/navigation-compartment.png " ")
+
+5. The **MySQL databases** tile (on the **Overview** page) displays the total number of HeatWave MySQL Databases and External MySQL DB systems in the compartment and region for which Database Management is enabled.
 
      ![Database Management Overview](./images/overview.png " ")
 
 ## Task 2: Monitoring a Fleet of MySQL DB systems
 
-1. On the left pane, click **Diagnostics & Management** to navigate to the **HeatWave & MySQL fleet summary** page.
+1. On the left pane, click on **Diagnostics & Management**.
 
      ![Compartment](./images/nav.png " ")
 
-2. The following tiles are available on the **Fleet Summary** page:
+2. Navigate to the **HeatWave & MySQL fleet summary** page.
+
+     ![Compartment](./images/nav-heatwave-mysql.png " ")
+
+3. The following tiles are available on the **Fleet Summary** page:
 
     - **Inventory**: Displays the number of MySQL DB systems in the compartment.
     - **Monitoring Status**: Displays the availability status of the managed MySQL DB systems in the compartment.
     - **Resource Usage**: Displays a summary of the overall CPU utilization, Storage and Memory allocation for the selected time period on the top-left corner of the page.
     - **Alarms**: Displays the total number of open database alarms in the compartment and the number of alarms by severity.
 
-     ![Fleet Summary](./images/fleet-summary.png " ")
+    ![Fleet Summary](./images/fleet-summary.png " ")
 
-3. Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
+4. Below the tiles, the list of HeatWave and External MySQL DB systems for which Database Management is enabled is displayed along with the following information:
     - **DB system name**: Name of the DB system.
     - **Monitoring status**: Monitoring status of the DB system.
     - **HeatWave**: HeatWave enablement status. Indicates whether a HeatWave cluster is attached to the HeatWave DB system. This information is only displayed for HeatWave DB systems.
@@ -57,57 +69,63 @@ Estimated time: 20 minutes
     - **Storage utilization**: Displays the Percentage of storage utilized by the DB system.
     - **Memory utilization**: Displays the Percentage of memory utilized by the DB system.
 
+     ![Fleet Summary](./images/fleet-summary-db-systems.png " ")
+
 ## Task 3: Monitor a Single HeatWave MySQL DB system - Summary
 
-1. In the **Fleet Summary** page, select **employee-db**.
+1. In the **Fleet Summary** page, click on the **employee-db** database.
 
      ![Fleet Summary](./images/fleet-summary-selection.png " ")
 
-2. Click the **employee-db** database. In the **Resources** page you will get to the **Summary** section.
+2. In the **Resources** page you will get to the **Summary** section. We can monitor database performance attributes in the **Summary** section, for the time period selected in the **Time Period** menu on the top of this page. Last 60 min is the default time period, and the visual representations or charts provide a quick insight into the health of the database during the selected time period.
 
      ![Operation Stats](./images/single-mysql-summary.png " ")
 
+3. **Monitoring status timeline** displays the availability of the database during the selected period of time. The color of the blocks denotes the status and the number of blocks denotes the time slots within the selected time period over which availability is checked. For example, if the default time period, Last 60 min, is selected, then each block represents a period of two minutes.
+
+     ![Operation Stats](./images/timeline.png " ")
+
+4. **Metric charts such as Average statement latency (seconds) and CPU (%)** monitor the visual representation of DB system metrics or metric charts in the Summary section to obtain a quick insight into the performance and core resource utilization of your DB system. These charts enable you to analyze data better by monitoring different parameters such as active connections, disk operations and throughput. You can hover the mouse on the charts to view additional details such as the metric name (Series), date and time, and value; filter the data in the charts by clicking the options displayed in the legend. For descriptions of the metric charts, see [HeatWave and External MySQL DB System Metric Charts](https://docs.oracle.com/en-us/iaas/database-management/doc/mysql-heatwave-metric-charts.html#GUID-758BB559-01FF-4EEC-9CF9-266B94A2604F).
+
      ![Operation Stats](./images/single-mysql-summary-metrics.png " ")
 
-3. We can monitor database performance attributes in the **Summary** section, for the time period selected in the **Time Period** menu on the top of this page. Last 60 min is the default time period, and the visual representations or charts provide a quick insight into the health of the database during the selected time period.
-
-     **Monitoring status timeline**: Displays the availability of the database during the selected period of time. The color of the blocks denotes the status and the number of blocks denotes the time slots within the selected time period over which availability is checked. For example, if the default time period, Last 60 min, is selected, then each block represents a period of two minutes.
-
-     **Metric charts such as Average statement latency (seconds) and CPU (%)**: Monitor the visual representation of DB system metrics or metric charts in the Summary section to obtain a quick insight into the performance and core resource utilization of your DB system. These charts enable you to analyze data better by monitoring different parameters such as active connections, disk operations and throughput. You can hover the mouse on the charts to view additional details such as the metric name (Series), date and time, and value; filter the data in the charts by clicking the options displayed in the legend. For descriptions of the metric charts, see [HeatWave and External MySQL DB System Metric Charts](https://docs.oracle.com/en-us/iaas/database-management/doc/mysql-heatwave-metric-charts.html#GUID-758BB559-01FF-4EEC-9CF9-266B94A2604F).
-
-     The Summary section is displayed by default on the MySQL database details page, however, you can click one of the other options on the left pane under Resources.
+5. The Summary section is displayed by default on the MySQL database details page, however, you can click one of the other options on the left pane under Resources.
 
 ## Task 4: Monitor a Single HeatWave MySQL DB system - Metrics
 
-1. In the **Resources** page, click on the **Metrics** section.  In the summary page, only a couple of metrics are shown. To view all the metrics you can see them in the Metrics page.
+1. In the **Resources** page, click on the **Metrics** section. The **Summary** page shows only a couple of metrics. To view all metrics, go to the **Metrics** page.
 
      ![Operation Stats](./images/single-mysql-metrics.png " ")
 
-2. You can select or deselect specific metrics on the Metrics page and choose a time period from the last **60 minutes, 24 hours, or 7 days**.
+2. You can **select** or **deselect** specific metrics on the Metrics page.
 
      ![Operation Stats](./images/select-more-charts.png " ")
+
+3. You can also choose a time period from the last **60 minutes, 24 hours, or 7 days** to view the metrics.
+
+     ![Operation Stats](./images/select-more-time.png " ")
 
 ## Task 5: Monitor a Single HeatWave MySQL DB system - Configuration variables
 
 1. In the **Resources** page, click on the **Configuration variables** section. You can monitor the configuration variables that are currently used by running instances.
 
-2. Configuration variables are the user, system, initialization, or service-specific variables that define the operation of the DB system.
+     *Configuration variables are the user, system, initialization, or service-specific variables that define the operation of the DB system.*
 
      ![Operation Stats](./images/configuration-variables-home.png " ")
 
-3. In the Configuration variables section, you can use filters on the left pane to filter the configuration variables.
+2. In the Configuration variables section, you can use filters on the left pane to filter the configuration variables.
 
      ![Operation Stats](./images/config-variables-filters.png " ")
 
-4. Click the **MDS configuration** link to go to the Configuration details page in the HeatWave service and view the MySQL configuration used by the HeatWave DB system.
+3. Right-click the **MDS configuration** link and select **open link in new tab** to go to the Configuration details page in the HeatWave service. This will allow you to view the MySQL configuration used by the HeatWave DB system without leaving the current page.
 
      *Note that the MDS configuration link is only displayed for a HeatWave DB system and you must have the required MySQL HeatWave service permissions to go to the Configuration details page.*
 
-5. Deselect the Hide unmodified variables check box to view the variables that were not modified. This check box is selected by default.
+4. Deselect the Hide unmodified variables check box to view the variables that were not modified. This check box is selected by default.
 
      ![Operation Stats](./images/configuration.png " ")
 
-6. View the following configuration variable information:
+5. View the following configuration variable information:
 
     - **Name**: Name of the configuration variable.
      Click the Arrow icon adjacent to the name of the configuration variable to view the default and current value.
@@ -127,19 +145,15 @@ Estimated time: 20 minutes
 
      ![Operation Stats](./images/alarms-home-view.png " ")
 
-2. In the Alarm definitions section, you can create Oracle recommended alarms that are preconfigured for common operational scenarios for your HeatWave DB system.
+2. In the Alarm definitions section, you can create Oracle recommended alarms that are preconfigured for common operational scenarios for your HeatWave DB system. In this case, we have already set up and configured alarms.
 
-     ![Operation Stats](./images/recommended-alarms.png " ")
-
-3. In this case, we have already set up and configured alarms.
-
-     ![Operation Stats](./images/oracle-alarms.png " ")
-
-4. Click the alarm to view the alarm details on the Alarm Definitions page in the Monitoring service.
+3. Click the alarm to view the alarm details on the Alarm Definitions page in the Monitoring service.
 
      *For Oracle-recommended alarms, the provider: DBM free-form tag is added by default during the creation process and is displayed in the Tags section.*
 
      ![Operation Stats](./images/click-view-alarm.png " ")
+
+4. It opens the alarm on a new page.
 
      ![Operation Stats](./images/view-alarm.png " ")
 
@@ -198,6 +212,10 @@ Estimated time: 20 minutes
      - For information on statement digests, see [Performance Schema Statement Digests and Sampling](https://dev.mysql.com/doc/refman/8.0/en/performance-schema-statement-digests.html#statement-digests-general).
 
      ![Operation Stats](./images/statement-digest.png " ")
+
+7. Click **Close** to exit the SQL details panel.
+
+8. Click **Close** on Performance Hub to return to the main Database Management page for the HeatWave MySQL DB system.
 
 ## Acknowledgements
 

@@ -21,15 +21,19 @@ Estimated Lab Time: 20 minutes
 
      ![Database Management](./images/home-view.png " ")
 
-3. From the Resources Menu, click on **Sources** to navigate to the Source that we have already created for visualization purposes.
+3. From the Resources Menu, click on **Sources** to navigate to the source we have already created for visualization purposes. Ensure that the compartment selected is **dbmgmt**.
 
       ![Database Management](./images/resources.png " ")
 
+4. If you don't find **MySource** in the list, you can **search** for it using the search lab location in the top left corner. Once you find MySource, click on it for a detailed view.
+
       ![Database Management](./images/mysource.png " ")
+
+5. Click on **View In Log Explorer** from MySource.
 
       ![Database Management](./images/view-log-explorer.png " ")
 
-4. Here are the main parts of the user interface that will be used throughout this lab.
+6. Here are the main parts of the user interface that will be used throughout this lab.
 
       ![Database Management](./images/log-explorer.png " ")
 
@@ -115,16 +119,6 @@ Estimated Lab Time: 20 minutes
 
    These are the clusters that had the same shape (i.e. occuring at the same time) to as the selected cluster pattern in time. In this case these are the messages issued by Concurrent Manager for a failing job.
 
-6. You can use **Link Visualization** to analyze log records by grouping related logs from different sources based on selected fields. This helps in identifying patterns and detecting anomalies.
-
-   ![Fleet Summary](./images/link.png " ")
-
-7. In this example, the **Compact Layout** is used, which consists of one row, one column, packed cards, and vertical separators to present data in a clear and organized manner.
-
-      *For more information on Link Visualization > **[Link Visualization](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/link-visualization.html)***
-
-       ![Fleet Summary](./images/final-summary.png " ")
-
 ## Task 4: Explore Logs using Issues Visualization
 
 1. Click on the **Issues** Visualization from the Visualizations panel.
@@ -145,29 +139,37 @@ Estimated Lab Time: 20 minutes
 
 ## Task 5: Real-Time Monitoring and Alerting for Database Events
 
-1. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
+1. Click on the **Records with Histogram** Visualization from the Visualizations panel.
+
+      ![Fleet Summary](./images/visualizations-histogram.png " ")
+
+2. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
 
       ![Fleet Summary](./images/alarm-setup.png " ")
 
-2. In this example, an alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
+3. In this example, an alarm has been already setup to detect **DROP DATABASE** events, ensuring proactive monitoring of the database changes.
 
       ![Fleet Summary](./images/drop-db.png " ")
 
-3. To access OCI Monitoring, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left corner. Under **Observability & Management**, navigate to **OCI Monitoring** to check active alarms, review recent triggers, and modify alarm conditions if needed.
+4. To access OCI Monitoring, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left corner. Under **Observability & Management**, navigate to **OCI Monitoring** to check active alarms, review recent triggers, and modify alarm conditions if needed.
 
       ![Fleet Summary](./images/oci-monitoring.png " ")
 
       ![Fleet Summary](./images/oci-monitoring-drop-alarm.png " ")
 
-4. When a DROP DATABASE event occurs, OCI sends alarms via configured channels like Email or Slack, allowing users to take immediate actions.
+5. When a DROP DATABASE event occurs, OCI sends alarms via configured channels like Email or Slack, allowing users to take immediate actions.
 
-5. These alarms can also be expanded to monitor other SQL queries, such as DROP TABLE, DELETE FROM, or ALTER DATABASE, for enhanced security.
+6. These alarms can also be expanded to monitor other SQL queries, such as DROP TABLE, DELETE FROM, or ALTER DATABASE, for enhanced security.
 
-6. By adjusting the Time Interval in OCI Monitoring, you can track past alerts, analyize trends, and refine detection rules to improve database monitoring and security.
+7. By adjusting the Time Interval in OCI Monitoring, you can track past alerts, analyize trends, and refine detection rules to improve database monitoring and security.
 
       ![Fleet Summary](./images/alarm-screen.png " ")
 
-      ![Fleet Summary](./images/alarm-view.png " ")
+      ![Fleet Summary](./images/alarm-history.png " ")
+
+8. Here is an example of an alarm sent to email when a database DROP occurs.
+
+      ![Fleet Summary](./images/alarm.png " ")
 
 ## Acknowledgements
 
