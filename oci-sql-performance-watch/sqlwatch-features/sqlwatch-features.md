@@ -1,4 +1,4 @@
-# Exploring Oracle Cloud Infrastructure SQL Performance Watch
+# Explore Oracle Cloud Infrastructure SQL Performance Watch
 
 ## Introduction
 
