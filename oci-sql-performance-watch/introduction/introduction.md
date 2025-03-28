@@ -1,8 +1,8 @@
 ﻿# Introduction
 
-## "About this workshop" 
+**About this workshop**
 
-In this workshop there are 2 tasks. They have been organized to help you become familiar with the use of this service's key capabilities: performing Oracle Cloud Infrastructure SQL Performance Watch tasks. In this lab, we have simulated a hybrid environment, with external pluggable databases, so you do not have to setup or use one of your own databases.
+In this workshop there are four tasks. They have been organized to help you become familiar with the use of this service's key capabilities: performing Oracle Cloud Infrastructure SQL Performance Watch tasks. In this lab, we have simulated a hybrid environment, with external pluggable databases, so you do not have to setup or use one of your own databases.
 
 Estimated Workshop Time: 30 minutes
 
