@@ -112,7 +112,7 @@ This lab assumes you have already completed the following:
 
      ![Parameter Change Report](./images/improvedsqls.png " ")
 
-3. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes.
+3. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes as you have done in the previous task.
 
 4. To do it on your own, please choose change type as **Parameter Change** and make sure the indexes are invisible while adding, and choose the parameter as **optimizer\_use\_invisible\_indexes** and change the value to **True**
  
