@@ -32,7 +32,7 @@ In this workshop, you will:
 
 **Note**: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
-## Learn More
+### Learn More
 
 - [Oracle Cloud Infrastructure SQL Performance Watch]( https://blogs.oracle.com/observability/post/take-charge-of-your-oracle-database-23ai-upgrade-and-performance-with-sql-performance-watch/)
 
