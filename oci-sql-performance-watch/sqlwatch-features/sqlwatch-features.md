@@ -61,7 +61,7 @@ This lab assumes you have already completed the following:
 
 1. Go to SQL Performance Watch summary page, and click on **mfg\_salespdb** database. The page shows the summary of last 7 days, if no tasks are run in last 7 days the page shows empty, so ensure you have changed **View data** in right corner value to **ALL** from the drop down menu. Review the highlighted sections:
 	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks.
-	- Latest Comparison report: shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set(STS).
+	- Latest Comparison report: Shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set(STS).
 	- Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here.
 	- Tasks by change type: Tasks that are created by various **change type** menus that are performed on the database can be viewed in this section
 	- You can create the task by clicking on the **Create** button
@@ -79,9 +79,7 @@ This lab assumes you have already completed the following:
 
 	![Upgrade Reports](./images/upgrade-reports.png " ")
 
-4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**.
-
-You can view the breakdown of SQL execution under **Breakdown** section. There are four section each divided based on the SQL statements. 
+4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**. You can view the breakdown of SQL execution under **Breakdown** section. There are four section each divided based on the SQL statements: 
 	- Buffer Gets (i.e Comparison metrics): Is showing the performance of SQLs pre-change and post-change trial.
 	- SQL Statements by Performance: Is showing the SQLs that are improved, regressed, unchanged, new and missing in pre and post change trails.
 	- SQL Statements by Plan Change: Is showing the number of SQLs that are New Plans or Same Plans in pre and post change trials
