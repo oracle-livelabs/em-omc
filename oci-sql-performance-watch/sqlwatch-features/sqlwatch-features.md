@@ -33,22 +33,24 @@ This lab assumes you have already completed the following:
 	Image- Choose SQL Performance Watch
 
 
-2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column. 
-
-Refer to the images below: Image1 - selecting **dbmgmt** compartment, Image2 - once compartment is selected, we can see the databases in the compartment on the table. Image3 - navigate to administration page and select deployment type **External**.
+2. Choose **dbmgmt** compartment. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column. Refer to the images below: Image1 - selecting **dbmgmt** compartment, Image2 - once compartment is selected, we can see the databases in the compartment on the table. Image3 - navigate to administration page and select deployment type **External**.
 
 
 	![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
 	Image- selecting dbmgmt compartment
  	
 	![Administration page](./images/sqlwatch-admin.png " ")
-	Image- Once compartment is selected, we can see the databases in the compartment on the table.
+	Image- Once compartment is selected, we can see the databases in the compartment on the table
 
 	![External DB administration page](./images/sqlwatch-external.png " ")
 	Image- Navigate to administration page and select deployment type -External
 
-3. Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). Hence, summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch.
+3. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). 
 
+	![External DB administration page](./images/sqlwatch-external.png " ")
+	Image- Navigate to administration page and select deployment type -External
+
+Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. Summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch.
      
  	![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
 
