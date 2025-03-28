@@ -36,7 +36,7 @@ In this workshop, you will:
 
 - [Oracle Cloud Infrastructure SQL Performance Watch]( https://blogs.oracle.com/observability/post/take-charge-of-your-oracle-database-23ai-upgrade-and-performance-with-sql-performance-watch/)
 
-## Acknowledgements
+### Acknowledgements
 
 - **Author** - Anusha Vojjola, Senior Product Manager, Observability and Management
 - **Contributors** - Anusha Vojjola, Anand Prabhu
