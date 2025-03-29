@@ -41,7 +41,7 @@ Oracle Cloud **Observability and Management Platform** provides full-stack visib
 
     *For more information on APM and Trace Explorer please refer to Application Performance Monitoring > **[Use Trace Explorer for External MySQL](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)***
 
-### Acknowledgements
+## Acknowledgements
 
 * **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
