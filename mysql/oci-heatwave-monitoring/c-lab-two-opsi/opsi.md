@@ -1,3 +1,5 @@
+# Ops Insights
+
 ## Introduction
 
 In this lab, you will go through the steps to explore Ops Insights for HeatWave MySQL DB system which includes ML based resource usage trending, Capacity Planning, and Database Insights.
@@ -6,36 +8,36 @@ Estimated time: 20 minutes
 
 ### Objectives
 
-- Enable Ops Insights Demo Mode.
-- Explore Capacity Planning and Database Insights.
+* Enable Ops Insights Demo Mode
+* Explore Capacity Planning and Database Insights
 
 ## Task 1: Enable Demo Mode
 
-1.  To access Ops Insights, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Observability & Management**, go to **Ops Insights** and click **Overview**.
+1. To access Ops Insights, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Observability & Management**, go to **Ops Insights** and click **Overview**.
 
-      ![Ops Insights](./images/opsi-main.png " ")
+      ![Selecting Ops Insights](./images/opsi-main.png " ")
 
-2.  Click on **Enable Demo Mode** to enable Demo Mode.
+2. Click on **Enable Demo Mode** to enable Demo Mode.
 
       ![Enable Demo Mode](./images/opsi-enable-demo.png " ")
 
-3.  Once the demo mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
+3. Once the demo mode is enabled the overview page will now show resource information for the OperationsInsights compartment, notice the upper-right hand corner will show Demo Mode is now ON for your session.  When you would like to exit demo mode you can either click the disable link in the corner or click the **Disable Demo Mode** button where you initially enabled it on the overview page.
 
       ![Demo Mode ON](./images/opsi-demo-mode-on.png " ")
 
-4.  On the left-hand pane you will find links to quickly navigate to Ops Insights offerings for HeatWave MySQL which includes Capacity Planning, SQL Insights and Dashboards.
+4. On the left-hand pane you will find links to quickly navigate to Ops Insights offerings for HeatWave MySQL which includes Capacity Planning, SQL Insights and Dashboards.
 
       ![Left Pane](./images/opsi-left-pane.png " ")
 
 ## Task 2: Capacity Planning - Databases
 
-1.  On the **Ops Insights Overview** page, from the left pane click on **Capacity Planning**.
+1. On the **Ops Insights Overview** page, from the left pane click on **Capacity Planning**.
 
-      ![Left Pane](./images/capacity-planning.png " ")
+      ![Capacity Planning](./images/capacity-planning.png " ")
 
-2.  On the **Database Capacity Planning** page, you will obtain a fleet-wide overview of your resource consumption and trends.  CPU insights, storage insights, and memory insights give a quick view into top resource consumers now and forecast potential resource bottlenecks over the selected period.
+2. On the **Database Capacity Planning** page, you will obtain a fleet-wide overview of your resource consumption and trends.  CPU insights, storage insights, and memory insights give a quick view into top resource consumers now and forecast potential resource bottlenecks over the selected period.
 
-      ![Left Pane](./images/database-capacity-planning.png " ")
+      ![Database Capacity Planning](./images/database-capacity-planning.png " ")
 
     From this page you can perform the following tasks in support of the Capacity Planning use case goals:
 
@@ -44,41 +46,41 @@ Estimated time: 20 minutes
     * Identify top-5 databases by CPU, Storage, and Memory growth over the period
     * See aggregated historical usage trends for CPU, Storage, and Memory over the period
 
-3.  From **Database type** on the left pane select **HeatWave MySQL**.
+3. From **Database type** on the left pane select **HeatWave MySQL**.
 
-      ![Left Pane](./images/database-capacity-planning-mysql.png " ")
+      ![Database Type as MySQL](./images/database-capacity-planning-mysql.png " ")
 
-4.  From **Time Range** on the left pane select **Last 90 days**.
+4. From **Time Range** on the left pane select **Last 90 days**.
 
-      ![Left Pane](./images/time-range.png " ")
+      ![Time range selection](./images/time-range.png " ")
 
       You can filter based on **Time range**, **Database type** or **Tags**. This let’s you customize the fleet of database of your choice by using combination of one of these.
 
-      ![Left Pane](./images/filter.png " ")
+      ![Filter view](./images/filter.png " ")
 
-5.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
+5. Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
 
-      ![Left Pane](./images/inventory.png " ")
+      ![Inventory](./images/inventory.png " ")
 
-6.  **CPU Insights** - Database utilization percentage for the 90th percentile value of the daily average CPU Usage over the selected time period. These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of CPU.
+6. **CPU Insights** - Database utilization percentage for the 90th percentile value of the daily average CPU Usage over the selected time period. These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of CPU.
 
-      ![Left Pane](./images/cpu-insights.png " ")
+      ![CPU Insights](./images/cpu-insights.png " ")
 
-7.  **Storage Insights** - Database utilization percentage for the 90th percentile value of the daily average Storage Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of storage.
+7. **Storage Insights** - Database utilization percentage for the 90th percentile value of the daily average Storage Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of storage.
 
-      ![Left Pane](./images/storage-insights.png " ")
+      ![Storage Insights](./images/storage-insights.png " ")
 
-8.  **Memory Insights** - Database utilization percentage for the 90th percentile value of the daily average Memory Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of memory.
+8. **Memory Insights** - Database utilization percentage for the 90th percentile value of the daily average Memory Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of memory.
 
-      ![Left Pane](./images/memory-insights.png " ")
+      ![Memory Insights](./images/memory-insights.png " ")
 
 ## Task 3: Capacity Planning - CPU
 
-1.  On the **Database Capacity Planning** page, from the left pane click on **CPU**.
+1. On the **Database Capacity Planning** page, from the left pane click on **CPU**.
 
-      ![Left Pane](./images/database-cpu.png " ")
+      ![Database CPU Planning](./images/database-cpu.png " ")
 
-2.  **Database CPU** page has a master-detail design with three primary components:
+2. **Database CPU** page has a master-detail design with three primary components:
 
     * Insights – table of databases flagged for CPU utilization insights
     * Aggregate – treemap of CPU utilization over all databases in the compartment
@@ -86,24 +88,24 @@ Estimated time: 20 minutes
 
       ![Left Pane](./images/database-cpu2.png " ")
 
-3.  On the **Database CPU** page, under **Insights** tab, select **30 Day Low Utilization Forecast** against **Databases**, to view database CPU utilization forecast for next 30 days.
+3. On the **Database CPU** page, under **Insights** tab, select **30 Day Low Utilization Forecast** against **Databases**, to view database CPU utilization forecast for next 30 days.
 
-      ![Left Pane](./images/utilization-low-forecast.png " ")
+      ![30 Day Low Utilization Forecast](./images/utilization-low-forecast.png " ")
 
-4.  Under the **Database Display Name** column, select the row corresponding to the **employeesdb** database.
+4. Under the **Database Display Name** column, select the row corresponding to the **employeesdb** database.
 
-      ![Left Pane](./images/employees-database.png " ")
+      ![Employees Database](./images/employees-database.png " ")
 
-5.  Check the **Utilization (%)** and **Usage Change (%)** for database **employeesdb**.
-    
+5. Check the **Utilization (%)** and **Usage Change (%)** for database **employeesdb**.
+
     * Utilization (%) -  Utilization percentage for the 90th percentile value of the daily average storage usage over the selected time period
     * Usage Change (%): Percentage change in the linear trend of storage usage over the selected time
 
-    ![Left Pane](./images/employeesdb-database.png " ")
+    ![Percentage Change in Employees Database](./images/employeesdb-database.png " ")
 
-6.  The **Trend and Forecast** chart displays historical time series plots related to CPU allocation and usage for the selected database **employeesdb**.
+6. The **Trend and Forecast** chart displays historical time series plots related to CPU allocation and usage for the selected database **employeesdb**.
 
-      ![Left Pane](./images/trend-and-forecast.png " ")
+      ![Trend and Forecast](./images/trend-and-forecast.png " ")
 
       * Historical CPU Usage (dark solid green line) is the Avg Usage - average value of daily (hourly) CPU usage data.
 
@@ -117,71 +119,71 @@ Estimated time: 20 minutes
 
     You can see the difference in average forecasted value v/s Max forecasted value. If the workload is critical and cannot tolerate any performance issues then the database must be allocated the max forecasted value. If the workload is not so critical and can tolerate deviations in performance then it is ok to allocate CPU based on average forecasted value and save money.
 
-13.  The trending and forecast chart facilitates:
+7. The trending and forecast chart facilitates:
 
      * Forecast future maximum and average demand for CPU resources
      * Compare current usage to allocation to detect over-provisioning
      * Compare maximum to average usage and trends to assess demand volatility
      * Forecast difference between the maximum and average daily CPU usage to estimate potential savings from workload smoothing
 
-14.  The following models can be selected for display on the upper right of the Trend and Forecast chart:
+8. The following models can be selected for display on the upper right of the Trend and Forecast chart:
 
      * **Linear regression**: The linear regression model assumes a linear relationship across variables to predict the future resource usage.
 
-      ![Left Pane](./images/forecast-linear.png " ")
+      ![Linear Forecast](./images/forecast-linear.png " ")
 
      * **Seasonality aware**: The seasonal option combines a simple model that detects basic seasonality with dynamic, user-selectable data.
 
-      ![Left Pane](./images/forecast-seasonality.png " ")
+      ![Seasonality Forecast](./images/forecast-seasonality.png " ")
 
      * **AutoML forecasting**: The AutoML forecasting option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
-     
+
      Within the **Trend & Forecast** chart, click **AutoML forecasting**
 
-      ![Left Pane](./images/auto-ml.png " ")
+      ![Auto ML Forecasting](./images/auto-ml.png " ")
 
       A new pop up will appear with the AutoML forecasting charts loaded. It will state the training period and the selected forecast algorithms for maximum usage and average usage. The maximum and average confidence channels are also displayed within the chart. The confidence interval for these are 95%, meaning that 95% of future points are expected to fall within this radius from the forecast.
 
-      ![Left Pane](./images/automl-database.png " ")
+      ![Auto ML View](./images/automl-database.png " ")
 
       Click **Close** to close the **AutoML forecasting** pop-up and return to **Database CPU** page.
 
-15.  Click **Aggregate** on the top and from **Grouping** select **Database Type**.
+9. Click **Aggregate** on the top and from **Grouping** select **Database Type**.
 
-      ![Left Pane](./images/aggregate-database.png " ")
+      ![Aggregate View](./images/aggregate-database.png " ")
 
      The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types.
 
 ## Task 4: Capacity Planning - Memory
 
-1.  Click on the **Memory** menu on the left panel.
+1. Click on the **Memory** menu on the left panel.
 
-      ![Left Pane](./images/memory-menu.png " ")
+      ![Select Memory Menu](./images/memory-menu.png " ")
 
-2.  You get a complete view of memory usage across all Ops Insights enabled databases.
+2. You get a complete view of memory usage across all Ops Insights enabled databases.
 
-      ![Left Pane](./images/database-memory.png " ")
+      ![Memory Usage](./images/database-memory.png " ")
 
     From here we can identify servers with underused or overused memory and also compare memory utilization between databases.
 
-3.  From the drop-down on the top select **30 Days High Utilization Forecast**.
+3. From the drop-down on the top select **30 Days High Utilization Forecast**.
 
-      ![Left Pane](./images/utilization-forecast.png " ")
+      ![30 Day High Utilization](./images/utilization-forecast.png " ")
 
 4. Under the **Database Display Name** column, select the row corresponding to the **departmentsdb** database.
 
-      ![Left Pane](./images/departments-db.png " ")
+      ![Departments Database](./images/departments-db.png " ")
 
-5.  In the **Trend & Forecast** chart view the memory trend and usage forecast for the selected database. View **Max usage** and **Max usage forecast** from the right panel.
+5. In the **Trend & Forecast** chart view the memory trend and usage forecast for the selected database. View **Max usage** and **Max usage forecast** from the right panel.
 
-      ![Left Pane](./images/memory-trend-max.png " ")
+      ![Trend and Forecast](./images/memory-trend-max.png " ")
 
       You can compare the average forecasted memory usage with the maximum forecasted value. In this case, **Max Usage Forecast** is 27.33 GB, while the database has only 16 GB **allocated**. Since the forecasted usage exceeds the allocated memory, it is important to increase the allocation to avoid any potential issues.
 
-6.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
+6. In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 
-      ![Left Pane](./images/memory-trend-forecast-ml.png " ")
-      ![Left Pane](./images/memory-trend-forecast-auto-ml.png " ")
+      ![Auto ML Forecast](./images/memory-trend-forecast-ml.png " ")
+      ![Auto ML](./images/memory-trend-forecast-auto-ml.png " ")
 
       Click **Close** to go back to the **Database Memory** page.
 
@@ -191,21 +193,21 @@ Estimated time: 20 minutes
 
 1. On the **Ops Insights Overview** page, from the left pane click **Database Insights**. On the **SQL Insights - Fleet analysis** page and filter by database type as **MySQL**. Now you can view insights and analysis for HeatWave and External MySQL DB system enabled in the compartment.
 
-      ![Left Pane](./images/sql-insights.png " ")
+      ![SQL Insights](./images/sql-insights.png " ")
 
-3. Click the database **departmentsdb** to view **SQL Insights - Database Analysis**
+2. Click the database **departmentsdb** to view **SQL Insights - Database Analysis**
 
-      ![Left Pane](./images/sql-departments-db.png " ")
+      ![Database Analysis](./images/sql-departments-db.png " ")
 
-4. HeatWave MySQL DB system dashboard provides a broad overview of the SQL workload executing in the database. This includes basic properties of the database and the SQL collected from it. SQL activity is shown by day broken down by command type and database, exposing changes in the workload over time. Average Active Session (AAS) by database schemas, latency type and Top SQLs additionally provide workload characteristics over time.
+3. HeatWave MySQL DB system dashboard provides a broad overview of the SQL workload executing in the database. This includes basic properties of the database and the SQL collected from it. SQL activity is shown by day broken down by command type and database, exposing changes in the workload over time. Average Active Session (AAS) by database schemas, latency type and Top SQLs additionally provide workload characteristics over time.
 
-      ![Left Pane](./images/departments-db-insights.png " ")
+      ![DB Insights for Department Database](./images/departments-db-insights.png " ")
 
-      ![Left Pane](./images/top-sqls.png " ")
+      ![Top SQLs](./images/top-sqls.png " ")
 
-5. Click on **SQL activity by latency type**.
+4. Click on **SQL activity by latency type**.
 
-      ![Left Pane](./images/sql-latency-insights.png " ")
+      ![SQL activity by latency type](./images/sql-latency-insights.png " ")
 
       The Database analysis dashboard is designed to give a broad overview of the SQL workload executing in the database.
 
@@ -225,7 +227,7 @@ Estimated time: 20 minutes
 
 6. This will take you to the **SQL Explorer** page.
 
-      ![SQL Explorer](./images/sql-explorer-main.png " ")
+      ![SQL Explorer View](./images/sql-explorer-main.png " ")
 
 7. Select **Resource type** as **MySQL**.
 
@@ -295,6 +297,6 @@ Estimated time: 20 minutes
 
 ## Acknowledgements
 
-- **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
-- **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda
-- **Last Updated By/Date** - Sindhuja Banka, March 2025
+* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Contributors** - Sindhuja Banka, Anand Prabhu, Sriram Vrinda
+* **Last Updated By/Date** - Sindhuja Banka, March 2025
