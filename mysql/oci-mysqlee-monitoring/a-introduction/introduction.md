@@ -4,7 +4,7 @@
 
 This workshop consists of four lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights, Logging Analytics and Application Performance Management. We have simulated an External MySQL DB system, so you don't need to set up or use one from your cloud account.
 
-Estimated Time: 1 hours 20 minutes
+Estimated Time: 1 hour 20 minutes
 
 ### Objectives
 
