@@ -1,6 +1,6 @@
 # Explore Oracle Cloud Infrastructure SQL Performance Watch
 
-## Introduction
+### Introduction
 
 SQL Performance Watch helps users predict the impact of system changes on SQL workload and generate the granular level details of a SQL performance. Here are some of the tasks you can perform using SQL Performance Watch, which gives you a glimpse into how to identify the regressions from the SQL Performance Analyzer report.
 
