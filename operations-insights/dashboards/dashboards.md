@@ -17,30 +17,38 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Dashboards
 
-1.  On the **Ops Insights Overview** page, from the left pane click on **Dashboards**.
+1.  On the **Ops Insights** main page, click **Dashboards** from the left pane.
 
-      ![Left Pane](./images/opsi-dashboards.png " ")
+      ![Left Pane](./images/opsi-dash-main.png " ")
 
-2.  This will list all the Ops Insights dashboards.
+2. On the **Dashboards** page you can view the list of Ops Insights dashboards.
 
-      ![Left Pane](./images/dashboards.png " ")
+      ![Left Pane](./images/opsi-left-dash.png " ")
 
-3. In addition to creating dashboards, Ops Insights also provides the following predefined dashboards which can be access by clicking on the "Dashboard Name" from "Dashboard Listing":
+3. From the list of dashboards click **(Demo) SQL Insights - Fleet Analysis** to launch the **(Demo) SQL Insights - Fleet Analysis** page.
 
-    Database performance - Performance Insights and ADDM Insights for all databases enabled in the compartment. Autonomous databases must be enabled for full features to appear within Database performance dashboard.
+      ![Left Pane](./images/opsi-demo-insights-fleet-analysis.png " ")
 
-      ![Left Pane](./images/database-performance-dashboard.png " ")
+4. Click **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
 
-    Exadata Database Dashboard	- Dashboard to demonstrate some of the Operations Insights database widgets releated to Exadata Database Systems.
+      ![Left Pane](./images/opsi-degrading-sql.png " ")
 
-      ![Left Pane](./images/exadata-database-dashboard.png " ")
+5. Click the database name **SALES-WT** from the list of databases to launch the **Databae Analysis** page.
 
-    SQL Insights - Fleet analysis - Fleet-wide view of configurations and Insights and analytics over all SQLs, across the Ops Insights enabled databases. Autonomous databases must be enabled for full features to appear within SQL Insights.
+      ![Left Pane](./images/opsi-db-with-degraded-sql.png " ")
 
-      ![Left Pane](./images/sql-insights-fleet-analysis.png " ")
+      ![Left Pane](./images/opsi-db-analysis.png " ")
+
+6. Click **Degraded plan changes** to list the **Top 50 degraded plan changes**.
+
+      ![Left Pane](./images/opsi-degraded-plan.png " ")
+
+7. Click SQL ID **4g7w9wwspvq0** from the list of SQL IDs to launch the **SQL Analysis** page.
+
+      ![Left Pane](./images/opsi-sql-id-analysis.png " ")
 
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, July 2024
+- **Last Updated By/Date** - Vivek Verma, Mar 2025

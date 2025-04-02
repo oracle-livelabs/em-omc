@@ -1,0 +1,31 @@
+{
+    "workshoptitle": "Logging Analytics Advanced Series: Field Substitution",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction to OKE Monitoring through OCI Logging Analytics",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+        },
+        {
+            "title": "Lab 1: Configure field enrichment - Substitution Function",
+            "description": "This live lab outlines the steps required to create a substitution function",
+            "filename": "../../create-substitution-function/create-substitution-function.md"
+        },
+        {
+            "title": "Lab 2: Ingest, View and Analyze enriched logs",
+            "description": "This live lab outlines the steps required to upload and view enriched logs",
+            "filename": "../../analytics/analytics.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename":"https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
