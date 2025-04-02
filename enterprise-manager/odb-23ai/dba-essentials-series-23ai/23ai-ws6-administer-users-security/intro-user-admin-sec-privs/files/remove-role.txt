@@ -1,0 +1,1 @@
+If you erroneously added a role to **Selected Roles**, then click the selected role and click **Remove** to move it back to **Available Roles**.

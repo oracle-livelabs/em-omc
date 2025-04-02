@@ -1,0 +1,23 @@
+<!--
+    {
+        "name":"EM Introduction - Appendix 1: Starting the Database Instance",
+        "description":"EM Introduction - Appendix 1: Starting the Database Instance",
+        "date":"Sep/09/2024"
+    }
+-->
+You can start up or shut down a database instance as the `SYS` user with SYSDBA privileges.
+
+The process of starting the instance is as follows.
+
+1.  **Start** the instance using [](var:prod_em) or SQL command line. The database reads the initialization parameter file, allocates the *System Global Area (SGA)* memory, and starts the background processes for the instance.
+
+1.  The database is then in the **mount** state. This state enables the administrators to perform certain functions which they cannot perform when other users are accessing the database.
+
+1.  After mounting the database, the instance **opens** the redo log files and data files for the database. The database is now open and available for all user access.
+
+The default startup mode for the database is `OPEN` which completes the earlier three stages in sequence. You can start the instance in the following modes.
+
+-   `NOMOUNT`— Starts up the instance without mounting the database.
+-   `MOUNT`— Starts up the instance and mounts the database, but leaves it closed. This state allows certain DBA activities but does not allow general access to the database.
+-   `OPEN` — Starts up the instance, mounts and opens the database. You can do this in unrestricted mode, allowing access to all users, or in restricted mode, allowing access for database administrators only.
+-   `FORCE`— Forces the instance to start up after a startup problem.

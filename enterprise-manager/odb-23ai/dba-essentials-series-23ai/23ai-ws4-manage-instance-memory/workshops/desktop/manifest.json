@@ -1,0 +1,57 @@
+{
+  "workshoptitle": "DBA Essentials - Manage database instance and memory for Oracle Database 23ai",
+  "include": {
+        "em-intro-about": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-intro-about-this-workshop.txt", 
+        "em-intro-db-instance": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-intro-app1-db-instance.txt", 
+        "em-intro-shutdown-db": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-intro-app1-shutdown-db-instance.txt", 
+        "em-intro-start-db": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-intro-app1-start-db-instance.txt", 
+        "em-intro-auto-mem-mgmt": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-intro-app2-auto-mem-mgmt.txt",
+        "em-intro-db-mem-mgmt": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-intro-app2-mem-mgmt-db-instance.txt",
+        "em-manage-instance-task-set-env-var": "./../../intro-instance-memory/building-blocks-em/em-manage-instance-task-set-env-var.txt"
+    },
+  "variables": ["./../tenancy/variables.json"],
+  "help": "livelabs-help-em_us_grp@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction.",
+      "publisheddate": "9/12/2024",
+      "filename": "./../../intro-instance-memory/intro-instance-memory.md",
+      "type": "emcc"
+    },
+    {
+      "title": "Using noVNC Remote Desktop",
+      "description": "Using noVNC Remote Desktop",
+      "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
+    },
+    {
+      "title": "Lab 1: Initialize environment",
+      "description": "How to initialize and start all the workshop components.",
+      "publisheddate": "9/12/2024",
+      "filename": "./../../initialize-environment/initialize-environment.md",
+      "type": "emcc"
+    },
+    {
+      "title": "Lab 2: Shut down and start up database instance",
+      "description": "How to shut down and start up an Oracle instance using SQL commands and Oracle Enterprise Manager Cloud Control (EM)",
+      "filename": "./../../shutdown-startup-instance/shutdown-startup-instance.md"
+    },
+    {
+      "title": "Lab 3: Manage initialization parameters",
+      "description": "How to to view and modify initialization parameters in Oracle Enterprise Manager Cloud Control (EM) to specify the properties of the database instance.",
+      "publisheddate": "9/12/2024",
+      "filename": "./../../manage-initialization-parameters/manage-initialization-parameters.md",
+      "type": "emcc"
+    },
+    {
+      "title": "Lab 4: Automatic Memory Management",
+      "description": "How to enable Automatic Memory Management for Oracle Database from Oracle Enterprise Manager Cloud Control (EM) and SQL command line.",
+      "filename": "./../../administer-auto-memory-management/administer-auto-memory-management.md"
+    },
+    {
+      "title": "Need help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

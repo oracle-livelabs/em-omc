@@ -33,9 +33,14 @@
             "filename": "../../e-lab-four-app-monitoring/enbale_om_services.md"
         },
         {
-            "title": "Lab 5: Clean up the workshop environment",
+            "title": "Lab 5: Enable and explore Ops Insights for HeatWave MySQL",
+            "description": "Enable and explore Ops Insights for HeatWave MySQL",
+            "filename": "../../f-lab-five-opsi/enableopsi.md"
+        },
+        {
+            "title": "Lab 6: Clean up the workshop environment",
             "description": "Clean up the workshop environment",
-            "filename": "../../f-lab-five-cleanup/cleanup.md"
+            "filename": "../../g-lab-six-cleanup/cleanup.md"
         },
         {
             "title": "Need Help?",
