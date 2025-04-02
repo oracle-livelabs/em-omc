@@ -1,6 +1,6 @@
 # Explore Oracle Cloud Infrastructure SQL Performance Watch
 
-### Introduction
+## Introduction
 
 SQL Performance Watch helps users predict the impact of system changes on SQL workload and generate the granular level details of a SQL performance. Here are some of the tasks you can perform using SQL Performance Watch, which gives you a glimpse into how to identify the regressions from the SQL Performance Analyzer report.
 
@@ -23,7 +23,8 @@ Estimated Time: 30 minutes
 This lab assumes you have already completed the following:
 - An Oracle Free Tier, Always Free, Paid or LiveLabs Cloud Account
 
-## Task 1: Getting Started with SQL Performance Watch
+
+## Task 1: Getting started with SQL Performance Watch
 
 1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region on the top right corner, refer to Image. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
 	
@@ -180,6 +181,7 @@ This lab assumes you have already completed the following:
 
 Finally, you can follow the same steps to go back on your own tenancy to explore the features, to know more about the other use cases, please refer to the videos below.
 
+
 ## Learn More
 
 - [Test the upgrade using SQL Performance Watch](https://youtu.be/C9qkLNqj5x4)
@@ -191,4 +193,4 @@ Finally, you can follow the same steps to go back on your own tenancy to explore
 
 - **Author** - Anusha Vojjola, Senior Product Manager, Observability and Management
 - **Contributors** - Anusha Vojjola, Anand Prabhu
-- **Last Updated By/Date** - Anusha Vojjola, March 2025
+- **Last Updated By/Date** - Anusha Vojjola, April 2025

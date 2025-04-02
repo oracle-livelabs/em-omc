@@ -1,6 +1,6 @@
 ﻿# Introduction
 
-**About this workshop**
+## About this workshop
 
 In this workshop there are four tasks. They have been organized to help you become familiar with the use of this service's key capabilities: performing Oracle Cloud Infrastructure SQL Performance Watch tasks. In this lab, we have simulated a hybrid environment, with external pluggable databases, so you do not have to setup or use one of your own databases.
 
@@ -32,12 +32,13 @@ In this workshop, you will:
 
 **Note**: If you have a **Free Trial** account, when your Free Trial expires your account will be converted to an **Always Free** account. You will not be able to conduct Free Tier workshops unless the Always Free environment is available. **[Click here for the Free Tier FAQ page.](https://www.oracle.com/cloud/free/faq.html)**
 
-### Learn More
+## Learn More
 
-- [Oracle Cloud Infrastructure SQL Performance Watch]( https://blogs.oracle.com/observability/post/take-charge-of-your-oracle-database-23ai-upgrade-and-performance-with-sql-performance-watch/)
+- [Oracle Cloud Infrastructure SQL Performance Watch blog](https://blogs.oracle.com/observability/post/take-charge-of-your-oracle-database-23ai-upgrade-and-performance-with-sql-performance-watch/)
+
 
 ## Acknowledgements
 
 - **Author** - Anusha Vojjola, Senior Product Manager, Observability and Management
 - **Contributors** - Anusha Vojjola, Anand Prabhu
-- **Last Updated By/Date** - Anusha Vojjola, March 2025
+- **Last Updated By/Date** - Anusha Vojjola, April 2025
