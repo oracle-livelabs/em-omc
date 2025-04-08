@@ -1,11 +1,11 @@
 {
-  "workshoptitle": "Enterprise Manager Fundamentals: Monitoring Quick Tour",
+  "workshoptitle": "Monitor MySQL using Oracle Enterprise Manager",
   "help": "livelabs-help-em_us_grp@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "Introduction to Enterprise Monitoring workshop",
-      "filename": "./../../intro/intro-monitoring-overview.md"
+      "description": "Introduction to Monitor MySQL using Oracle Enterprise Manager workshop",
+      "filename": "./../../intro/intro-monitoring-mysqlee.md"
     },
     {
       "title": "Get Started with noVNC Remote Desktop",
@@ -13,10 +13,10 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/remote-desktop/using-novnc-remote-desktop.md"
     },
     {
-      "title": "Lab 1: Enterprise Monitoring Quick Tour",
+      "title": "Lab 1: Monitor MySQL using Oracle Enterprise Manager",
       "description": "The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.",
-      "publisheddate": "9/16/2021",
-      "filename": "./../../em-monitoring-overview/em-monitoring-overview.md"
+      "publisheddate": "4/16/2025",
+      "filename": "./../../em-monitoring-mysqlee/em-monitoring-mysqlee.md"
     },
     {
       "title": "Troubleshoot Enterprise Manager Environment",
