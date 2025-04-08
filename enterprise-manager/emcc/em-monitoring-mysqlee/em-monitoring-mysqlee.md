@@ -368,12 +368,8 @@ Compliance Standards can be used to evaluate the compliance of your MySQL Databa
     ![Audit Log Accounts Excluded rule - Rule Details tab](images/compliance/rule-details.png " ")
 
 ## Learn More
-Webcast Video - Enterprise Manager for MySQL
-[](youtube:U5VvgjFvLNs)
-
-Demo Video - Enterprise Manager for MySQL
-[](youtube:Bre3MJ0P1cQ)
-
+- [Webcast Video - Enterprise Manager for MySQL](https://www.youtube.com/watch?v=U5VvgjFvLNs)
+- [Demo Video - Enterprise Manager for MySQL](https://www.youtube.com/watch?v=Bre3MJ0P1cQ)
 - [Enterprise Manager for MySQL User's Guide](https://dev.mysql.com/doc/mysql-em-plugin/en/)
 - [Overview Blog - Comprehensive Monitoring and Compliance Management for MySQL Databases using Enterprise Manager](https://blogs.oracle.com/observability/post/comprehensive-monitoring-and-compliance-management-for-mysql-databases-using-enterprise-manager)
 - [Customer Blog - Enterprise Manager: How Comcast enhanced monitoring for MySQL InnoDB Clusters](https://blogs.oracle.com/observability/post/enterprise-manager-how-comcast-enhanced-monitoring-for-mysql-innodb-clusters)
