@@ -4,7 +4,7 @@
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "Introduction to Monitor MySQL using Oracle Enterprise Manager workshop",
+      "description": "Introduction to the Monitor MySQL using Oracle Enterprise Manager workshop",
       "filename": "./../../intro/intro-monitoring-mysqlee.md"
     },
     {
