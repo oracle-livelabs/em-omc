@@ -573,7 +573,7 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
       ![Compare Metric Thresholds](images/start-runbook-metric/last-known-value.png " ")
       
-9. Navigate to the Runbook Sessions section. For lab purposes, locate the ‘Current Sessions’ section and select the runbook for ‘Database Tablespace Full Triage’ to open an existing runbook session for this metric that has not been ran. 
+9. Navigate to the Runbook Sessions section. For lab purposes, locate the **Current Sessions** section and select the runbook for **Database Tablespace Full Triage: 2024-06-17 07:18:50** to open an existing runbook session. 
 
       ![Current Sessions](images/start-runbook-metric/current-sessions.png " ")
 
@@ -651,9 +651,7 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
       ![Database Login Page](images/start-runbook-metric/database-login.png " ")
 
-25. This is the Tablespace page where you can add new datafiles to the tablespace. For lab purposes, we will not go through the workflow to add a new datafile to the tablespace so assume one has been added for the sequential steps. 
-
-     **Optional**: Select the tablespace for ‘DEMO’ and select ‘Go’ to add a new datafile.
+25. This is the Tablespace page where you can add new datafiles to the tablespace. For lab purposes, we will **NOT** go through the workflow to add a new datafile to the tablespace. 
 
       ![Tablespace Page](images/start-runbook-metric/tablespace-page.png " ")
 
@@ -1306,9 +1304,9 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
 16. For our example, you will be creating a compression policy related to target availability events for coherence targets (i.e., Coherence Cluster, Coherence Node, and Coherence Cache). 
 
-     Add the following polciy name: “**Target availability events for a coherence cluster and its member**”. 
+     Add the following polciy name: **Target availability events for a coherence cluster and its member**. 
      
-     Add the following description: “**Compress target availability events for a coherence cluster, coherence node and coherence cache occurring within the 60-minute time window**”.
+     Add the following description: **Compress target availability events for a coherence cluster, coherence node and coherence cache occurring within the 60-minute time window**.
 
      **Note:** An Oracle Coherence Cluster enables organizations to predictably scale mission-critical applications by providing fast and reliable access to frequently used data.
 
@@ -1376,7 +1374,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
      ![start new analysis button](images/event-compression/start-new-analysis.png " ")
 
 5. A pop-up displays: 
-     - Enter a name for the analysis: "**Coherence Targets Policy Analysis**”.
+     - Enter a name for the analysis: **Coherence Targets Policy Analysis**.
 
      - Next, select the targets for the analysis. For “Select target type”,  keep the default **Group** selection. 
 
