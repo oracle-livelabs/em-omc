@@ -140,7 +140,7 @@ Query Analyzer identifies your worst performing queries based on highest executi
 
 10.	In the **Query Text** field, replace the existing text with the following normalized query: 
 
-     **SELECT \`product_name\`, COUNT(*) AS \`total_orders\` FROM SalesDB.\`Orders\` GROUP BY \`product_name\` ORDER BY \`total_orders\` DESC**
+     **SELECT \`product\_name\`, COUNT(*) AS \`total\_orders\` FROM SalesDB.\`Orders\` GROUP BY \`product\_name\` ORDER BY \`total\_orders\` DESC**
 
      ![Enter query text](images/query/replace-query.png " ")
 
