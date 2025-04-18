@@ -19,38 +19,19 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
-      "title": "Lab 1: Prepare setup",
-      "description": "How to download your ORM stack and update security rules for an existing VCN.",
-      "publisheddate": "05/23/2023",
-      "filename": "./../../prepare-setup/prepare-setup.md",
-      "type": "default"
-    },
-    {
-      "title": "Lab 2: Set up compute instance",
-      "description": "How to provision the workshop environment and connect to it",
-      "publisheddate": "03/22/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc.md"
-    },
-    {
-      "title": "Lab 3: Initialize environment",
-      "description": "How to initialize and start all the workshop components.",
-      "publisheddate": "05/23/2023",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: View database details from SQL command line",
+      "title": "Lab 1: View database details from SQL command line",
       "description": "How to view database details from SQL command line.",
       "publisheddate": "10/14/2024",
       "filename": "./../../view-db-details/view-db-details.md"
     },
     {
-      "title": "Lab 5: Manage targets - Oracle Database and Listener",
+      "title": "Lab 2: Manage targets - Oracle Database and Listener",
       "description": "How to manage targets, Oracle Database and Listener, using EM.",
       "publisheddate": "10/14/2024",
       "filename": "./../../manage-targets/manage-targets.md"
     },
     {
-      "title": "Lab 6: Access container home page",
+      "title": "Lab 3: Access container home page",
       "description": "How to access container home page from EM.",
       "publisheddate": "10/14/2024",
       "filename": "./../../access-homepage/access-homepage.md"
