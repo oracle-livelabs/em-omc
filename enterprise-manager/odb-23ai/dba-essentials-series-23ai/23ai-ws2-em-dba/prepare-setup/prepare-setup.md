@@ -35,6 +35,7 @@ This workshop requires a certain number of ports to be available, a requirement 
 | 22             | SSH                                   |
 | 7803           | Enterprise Manager 13c Server         |
 | 6080           | noVNC Remote Desktop                  |
+{: title="Enable ports"}
 
 1.  Go to **Networking** &gt; **Virtual Cloud Networks**
 1.  Choose your network
