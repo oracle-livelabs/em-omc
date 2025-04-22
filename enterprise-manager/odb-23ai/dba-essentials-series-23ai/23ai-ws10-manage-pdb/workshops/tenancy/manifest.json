@@ -29,44 +29,25 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
-      "title": "Lab 1: Prepare setup",
-      "description": "How to download your ORM stack and update security rules for an existing VCN.",
-      "publisheddate": "11/24/2022",
-      "filename": "./../../prepare-setup/prepare-setup.md",
-      "type": "default"
-    },
-    {
-      "title": "Lab 2: Setup compute instance",
-      "description": "How to provision the workshop environment and connect to it",
-      "publisheddate": "06/30/2022",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc.md"
-    },
-    {
-      "title": "Lab 3: Initialize environment",
-      "description": "How to initialize and start all the workshop components.",
-      "publisheddate": "10/05/2024",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: Provision a Pluggable Database (PDB)",
+      "title": "Lab 1: Provision a Pluggable Database (PDB)",
       "description": "How to provision PDBs in a CDB using Oracle Enterprise Manager.",
       "publisheddate": "10/25/2024",
       "filename": "./../../provision-pdb/provision-pdb.md"
     },
     {
-      "title": "Lab 5: Remove PDBs from CDB",
+      "title": "Lab 2: Remove PDBs from CDB",
       "description": "How to remove PDBs from a CDB using Oracle Enterprise Manager.",
       "publisheddate": "10/25/2024",
       "filename": "../../remove-pdb/remove-pdb.md"
     },
     {
-      "title": "Lab 6: Plug PDBs into CDB",
+      "title": "Lab 3: Plug PDBs into CDB",
       "description": "How to plug an unplugged PDB into another CDB using Oracle Enterprise Manager.",
       "publisheddate": "10/25/2024",
       "filename": "../../plug-pdb/plug-pdb.md"
     },
     {
-      "title": "Lab 7: Close and open PDBs",
+      "title": "Lab 4: Close and open PDBs",
       "description": "How to administer PDBs in a CDB from Oracle Enterprise Manager.",
       "publisheddate": "10/25/2024",
       "filename": "../../close-open-pdb/close-open-pdb.md"
