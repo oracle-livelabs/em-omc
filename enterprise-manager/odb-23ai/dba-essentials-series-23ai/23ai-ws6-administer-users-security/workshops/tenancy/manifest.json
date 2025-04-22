@@ -21,34 +21,15 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
-      "title": "Lab 1: Prepare setup",
-      "description": "How to download your ORM stack and update security rules for an existing VCN.",
-      "publisheddate": "11/24/2022",
-      "filename": "./../../prepare-setup/prepare-setup.md",
-      "type": "default"
-    },
-    {
-      "title": "Lab 2: Setup compute instance",
-      "description": "How to provision the workshop environment and connect to it",
-      "publisheddate": "03/22/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc.md"
-    },
-    {
-      "title": "Lab 3: Initialize environment",
-      "description": "How to initialize and start all the workshop components.",
-      "publisheddate": "10/05/2024",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: Manage roles",
+      "title": "Lab 1: Manage roles",
       "description": "How to manage roles and system privileges in a PDB.",
-      "publisheddate": "10/21/2024",
+      "publisheddate": "04/21/2025",
       "filename": "./../../manage-db-roles/manage-db-roles.md"
     },
     {
-      "title": "Lab 5: Manage database user accounts",
+      "title": "Lab 2: Manage database user accounts",
       "description": "How to manage user accounts in a PDB.",
-      "publisheddate": "10/21/2024",
+      "publisheddate": "04/21/2025",
       "filename": "./../../manage-db-users-accounts/manage-db-users-accounts.md"
     },
     {
