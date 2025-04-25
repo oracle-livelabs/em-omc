@@ -13,42 +13,24 @@
       "publisheddate": "03/22/2024",
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
+
     {
-      "title": "Lab 1: Prepare setup",
-      "description": "How to download your ORM stack and update security rules for an existing VCN.",
-      "publisheddate": "05/23/2023",
-      "filename": "./../../prepare-setup/prepare-setup.md",
-      "type": "default"
-    },
-    {
-      "title": "Lab 2: Set up compute instance",
-      "description": "How to provision the workshop environment and connect to it",
-      "publisheddate": "03/22/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc.md"
-    },
-    {
-      "title": "Lab 3: Initialize environment",
-      "description": "How to initialize and start all the workshop components.",
-      "publisheddate": "05/23/2023",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: View the storage structures",
+      "title": "Lab 1: View the storage structures",
       "description": "How to view the storage structures in your Oracle Database using Oracle Enterprise Manager Cloud Control.",
       "filename": "./../../view-storage-structures/view-storage-structures.md"
     },
     {
-      "title": "Lab 5: View and multiplex online redo log file information",
+      "title": "Lab 2: View and multiplex online redo log file information",
       "description": "How to view and multiplex Online Redo Log File information in your Oracle Database using Oracle Enterprise Manager Cloud Control.",
       "filename": "./../../view-multiplex-redo-log/view-multiplex-redo-log.md"
     },
     {
-      "title": "Lab 6: Manage tablespaces",
+      "title": "Lab 3: Manage tablespaces",
       "description": "How to view the tablespaces and create a new tablespace in your Oracle Database using Oracle Enterprise Manager Cloud Control.",
       "filename": "./../../manage-tablespace/manage-tablespace.md"
     },
     {
-      "title": "Lab 7: Manage undo data",
+      "title": "Lab 4: Manage undo data",
       "description": "How to view and manage the undo tablespace in your Oracle Database using Oracle Enterprise Manager Cloud Control.",
       "filename": "./../../manage-undo-data/manage-undo-data.md"
     },
