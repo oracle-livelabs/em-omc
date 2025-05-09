@@ -3,7 +3,7 @@
 
 The Substitution function enrichment plays a crucial role in enhancing log data by dynamically modifying field values during log processing. It allows businesses to replace portions of a field value or standardize data by applying alternative values or expressions. These transformed values can then be stored in a new output field, ensuring consistency and improving data enrichment.
 
-Estimated Workshop Time: 30 minutes
+Estimated Workshop Time: 45 minutes
 
 ### Objectives
 
