@@ -25,38 +25,19 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
-      "title": "Lab 1: Prepare setup",
-      "description": "How to download your ORM stack and update security rules for an existing VCN.",
-      "publisheddate": "12/21/2021",
-      "filename": "./../../prepare-setup/prepare-setup.md"
-    },
-    {
-      "title": "Lab 2: Set up compute instance",
-      "description": "How to provision the workshop environment and connect to it",
-      "publisheddate": "08/31/2021",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
-    },
-    {
-      "title": "Lab 3: Initialize environment",
-      "description": "How to initialize and start all the workshop components.",
-      "publisheddate": "9/12/2024",
-      "filename": "./../../initialize-environment/initialize-environment.md",
-      "type": "emcc"
-    },
-    {
-      "title": "Lab 4: Shut down and start up database instance",
+      "title": "Lab 1: Shut down and start up database instance",
       "description": "How to shut down and start up an Oracle instance using SQL commands and Oracle Enterprise Manager Cloud Control (EM).",
       "filename": "./../../shutdown-startup-instance/shutdown-startup-instance.md"
     },
     {
-      "title": "Lab 5: View and manage initialization parameters",
+      "title": "Lab 2: View and manage initialization parameters",
       "description": "How to to view and modify initialization parameters in Oracle Enterprise Manager Cloud Control (EM) to specify the properties of the database instance.",
       "publisheddate": "9/12/2024",
       "filename": "./../../manage-initialization-parameters/manage-initialization-parameters.md",
       "type": "emcc"
     },
     {
-      "title": "Lab 6: Automatic Memory Management",
+      "title": "Lab 3: Automatic Memory Management",
       "description": "How to enable Automatic Memory Management for Oracle Database from Oracle Enterprise Manager Cloud Control (EM) and SQL command line.",
       "filename": "./../../administer-auto-memory-management/administer-auto-memory-management.md"
     },
