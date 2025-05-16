@@ -53,6 +53,7 @@ This lab assumes you have already completed the following:
 
 Note: Please make sure you have the **dbmgmt** compartment and region selected as mentioned above.
 
+
 	Below Image- Navigate to administration page and select deployment type -External
 	![External DB administration page](./images/sqlwatch-external.png " ")
 
@@ -97,6 +98,7 @@ Note: Please make sure you have the **dbmgmt** compartment and region selected a
 
 Note: You can choose anything as you want as it doesn't matter when you go through the flow in this workshop
 
+
 	Below Image - Choose the Change type
 	![Task name and STS](./images/changetypemenu.png " ") 
 
@@ -106,6 +108,7 @@ Note: You can choose anything as you want as it doesn't matter when you go throu
 5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly, choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks.
 
 Note: Please make sure to choose same settings in both for pre-change and post-change
+
 
 	Below Image - Advanced setting
 	![Task name and STS](./images/advanced.png " ") 
@@ -120,6 +123,7 @@ Note: Please make sure to choose same settings in both for pre-change and post-c
 	![Task name and STS](./images/comparisonmetric.png " ") 
 
 Note: This lab is simulated with read only privileges, thus you cannot submit the task or fetch the DB links.
+
 
 	Below Image - Expected submission error
 	![Task name and STS](./images/couldntcreate.png " ") 
