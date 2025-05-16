@@ -78,7 +78,7 @@ This lab assumes you have already completed the following:
 	Below Image - SQL Performance Watch Single DB landing page
 	![Landing page](./images/sqlwatchlandingpage.png " ")
 
-2. Let's start with creating the task. Please note that this lab is simulated with read only privileges, thus you cannot submit the task or fetch the db links.
+2. Let's start with creating the task. Please note that this lab is simulated with read only privileges, thus you cannot submit the task or fetch the DB links.
 
 	Below Image - Task Creation
 	![Create task](./images/createtask.png " ") 
@@ -91,7 +91,7 @@ This lab assumes you have already completed the following:
 	Below Image - Choose any one from the list of STS
 	![Task name and STS](./images/choosests.png " ") 
 
-4. Depending on what you want to test, choose **Change type** from the drop down menu. There are two types of task creations - one is basic and other is advanced. Basic with basic setting whereas Advanced has customized setting. Note: You can choose anything as you want as it doesn't matter when you go through the flow in this workshop.
+4. Depending on what you want to test, choose **Change type** from the drop down menu. There are two types of task creations - one is basic and other is advanced. Basic with basic setting whereas Advanced has customized setting. Please note that you can choose anything as you want as it doesn't matter when you go through the flow in this workshop.
 
 	Below Image - Choose the Change type
 	![Task name and STS](./images/changetypemenu.png " ") 
@@ -99,7 +99,7 @@ This lab assumes you have already completed the following:
 	Below Image - Task Creation Type
 	![Task name and STS](./images/taskcreationtype.png " ") 
 
-5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly, choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks. Note: Please make sure to choose same settings in both for pre-change and post-change.
+5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly, choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks. Please make sure to choose same settings in both for pre-change and post-change.
 
 	Below Image - Advanced setting
 	![Task name and STS](./images/advanced.png " ") 
