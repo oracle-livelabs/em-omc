@@ -50,6 +50,7 @@ This lab assumes you have already completed the following:
 	
 
 4. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. Summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch.
+
 Note: Please make sure you have the **dbmgmt** compartment and region selected as mentioned above.
 
 	Below Image- Navigate to administration page and select deployment type -External
@@ -93,6 +94,7 @@ Note: Please make sure you have the **dbmgmt** compartment and region selected a
 	![Task name and STS](./images/choosests.png " ") 
 
 4. Depending on what you want to test, choose **Change type** from the drop down menu. There are two types of task creations - one is basic and other is advanced. Basic with basic setting whereas Advanced has customized setting.
+
 Note: You can choose anything as you want as it doesn't matter when you go through the flow in this workshop
 
 	Below Image - Choose the Change type
@@ -102,6 +104,7 @@ Note: You can choose anything as you want as it doesn't matter when you go throu
 	![Task name and STS](./images/taskcreationtype.png " ") 
 
 5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly, choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks.
+
 Note: Please make sure to choose same settings in both for pre-change and post-change
 
 	Below Image - Advanced setting
@@ -151,7 +154,6 @@ Note: This lab is simulated with read only privileges, thus you cannot submit th
 
 6. Click on the SQLID to review the SQL performance by analyzing the metrics and the plan changes. In this report, you can analyze each metric for pre-change and post-change trials. You can view that in the column **Metric Change (Before/After)** where the bars indicating before and after the change for each metric and the respective impact on SQL and on Workload. As you go scroll down, you can see two Plans - Plan Before and Plan After, which shows the execution plan for the SQL before and after the change.
  
-
 	Below Image - Regressed SQL report
 	![Regressed SQLs](./images/metrics.png " ")
 
