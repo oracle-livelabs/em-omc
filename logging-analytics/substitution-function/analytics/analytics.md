@@ -16,7 +16,7 @@ In this lab, you will:
 
 ## **Task 1:**  Ingest Logs for Substitution Function enabled Sources
 1. In Logging Analytics, upload logs on-demand using source **OCI VCN Flow Unified Schema Logs**.</br>
-Download sample logs file for [OCI VCN Flow Unified Schema Logs](./files/vcnFlowLogs.log)</br>
+Download sample logs file for [OCI VCN Flow Unified Schema Logs](./files/vcnflowlogs.log)</br>
 
 
     Additional details on On Demand Upload are available in [blog](https://blogs.oracle.com/observability/post/use-oci-logging-analytics-on-demand-upload-to-easily-figure-out-root-cause-issues).</br>
