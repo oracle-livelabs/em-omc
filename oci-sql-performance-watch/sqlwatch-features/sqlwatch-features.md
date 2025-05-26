@@ -4,13 +4,26 @@
 
 SQL Performance Watch helps users predict the impact of system changes on SQL workload and generate the granular level details of a SQL performance. Here are some of the tasks you can perform using SQL Performance Watch, which gives you a glimpse into how to identify the regressions from the SQL Performance Analyzer report.
 
-SQL Performance Watch
+Business Challenges
+-   Difficult to predict how database upgrades, parameter changes, or migrations will affect SQL performance, potentially leading to regressions in production
+-   Performance issues post-change can disrupt business services, breach SLAs, and impact customer satisfaction
+-   Identifying root causes of SQL slowdowns after deployment often consumes significant DBA time and operational cost
+
+Benefits of SQL Performance Watch
+-   Enables testing and validating SQL performance before making changes, reducing risk and increasing confidence in deployment decisions
+-   Proactively detects performance regressions, ensuring that changes do not negatively affect mission-critical workloads
+-   By catching issues early in a test environment, it reduces the need for reactive troubleshooting in production, saving time and operational expenses
+
+
+SQL Performance Watch Workshop
 -   Obtain an overview of your fleet of databases
 -   View the reports of the SQL Performance Watch to obtain an insight into the overall health of the databases
 -   View how to create the SQL Performance Watch task
 -   Review the report of database upgrade from 19.3 to 19.26
 -   Proactively review the impact of adding a new index in an database by assessing the saved SPA report
 
+
+*This workshop is intended solely as an introduction to SQL Performance Watch within a preconfigured environment. It is a guided walkthrough and does not include any tasks or exercises that allow free interaction or modifications within this environment.*
 
 Estimated Time: 30 minutes
 
@@ -26,45 +39,61 @@ This lab assumes you have already completed the following:
 
 ## Task 1: Getting started with SQL Performance Watch
 
-1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region on the top right corner, refer to Image. Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
+1. Login to the Oracle Cloud Console, change the region to **US West (San Jose)** region, if you are not in the **US West (San Jose)** region on the top right corner, refer to the image below. 
 	
-	Below Image- Region selection
 	![SQL Performance Watch](./images/region.png " ")
    	
-	Below Image- Choose SQL Performance Watch
+   Click the **Navigation Menu** in the upper left, navigate to **Observability & Management** and choose **SQL Performance Watch** service to go the SQL Performance Watch page.
+	
 	![SQL Performance Watch](./images/oandm-sqlwatch.png " ")
+
+   Ignore the error shown on the top right corner *Authorization failed or requested resource not found.* as the policies for the service are set for the compartment **dbmgmt**. Proceed to next step which will guide you on how to change the compartment.
+
+    ![Authorization Error](./images/authorizationerror.png " ")
+
 	
 
-2. Choose **dbmgmt** compartment. Once compartment is selected, you can see the databases in the compartment on the table. Refer to the images below.
+2. Choose **dbmgmt** compartment as shown in the below image
 
-	Below Image- selecting dbmgmt compartment
 	![SQL Performance Watch dbmgmt compartment](./images/compartment.png " ")
 	
- 	Below Image- Once compartment is selected, we can see the databases in the compartment on the table
+ 	Once compartment **dbmgmt** is selected, we can see the databases in the compartment on the table
 	![Administration page](./images/sqlwatch-admin.png " ")
 	
-3. Navigate to Administration page and choose external database to view the external databases. This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column.
+3. Navigate to Administration page as shown in the below image 
 
-	Below Image- Navigate to administration page and select deployment type -External
+	![Administration Page](./images/administrationpage.png " ")
+  
+   Ignore the error shown on the top right corner as the policies for the service are set for the compartment **dbmgmt**. 
+
+    ![Administration Page Error](./images/administrationpageerror.png " ")
+
+   Change the compartment to **dbmgmt** and deployment type as **External** to view the external databases as shown in the below image.
+   *Note: External databases are non-OCI databases discovered using Management Agent. They are monitored through the Management Agent, which collects metrics, performs diagnostics, and enables lifecycle operations.*
+
+	![Compartment and Deployment Type Selection](./images/compartment&deploymenttype.png " ")
+	
+	This page shows all the services in columns and the databases in rows. You can enable or disable any service such as SQL Performance Watch, etc,. by using this page for the respective databases. You can view the databases that have SQL Performance Watch enabled under **SQL Performance Watch** column.
+
 	![External DB administration page](./images/sqlwatch-external.png " ")
 	
 
-4. You can view the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs). Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. Summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch. Please make sure you have the **dbmgmt** compartment and region selected as mentioned above.
+4. Page shows the list of external databases that have SQL Performance Watch enabled. Pluggable Databases (PDBs) can be enabled independent of Container Databases (CDBs).
 
-	Below Image- Navigate to administration page and select deployment type -External
 	![External DB administration page](./images/sqlwatch-external.png " ")
 
+   Go to SQL Performance Watch summary page, and view the databases that have SQL Performance Watch enabled in **US West (San Jose)** region and **dbmgmt** compartment. Summary page gives you fleet of databases including CDBs and PDBs that have enabled SQL Performance Watch. Please make sure you have the **dbmgmt** compartment and region selected as mentioned above.
+
  	![SQL Performance Watch Summary page](./images/sqlwatch-summary.png " ")
-
-5. Go to SQL Performance Watch summary page, and click on one of the listed databases.
-
-	Below Image - List of the SQL Performance Watch enabled databases
-	![Database list](./images/sqlwatch-dblist.png " ")
 
 
 ## Task 2: Create the SQL Performance Watch Task
 
-1. On SQL Performance Watch summary page, click on **mfg\_salespdb** database. The page shows the summary of last 7 days, if no tasks are run in last 7 days the page shows empty, so ensure you have changed **View data** in right corner value to **ALL** from the drop down menu. Review the highlighted sections:
+1. On SQL Performance Watch summary page, click on **mfg\_salespdb** database. The page shows the summary of last 7 days, if no tasks are run in last 7 days the page shows empty, so ensure you have changed **View data** in right corner value to **ALL** from the drop down menu. 
+
+	![View data ALL](./images/viewdataall.png " ")
+
+	Review the highlighted sections:
 	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks
 	- Latest Comparison report: Shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set (STS)
 	- Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here
@@ -72,65 +101,68 @@ This lab assumes you have already completed the following:
 	- You can create the task by clicking on the **Create** button
 	- Workload(STS) column highlights the SQL Tuning Set (STS) that is used as an input while creating the task
 
-	Below Image - View all tasks
-	![View data ALL](./images/viewdataall.png " ")
-
-	Below Image - SQL Performance Watch Single DB landing page
 	![Landing page](./images/sqlwatchlandingpage.png " ")
 
-2. Let's start with creating the task. Please note that this lab is simulated with read only privileges, thus you cannot submit the task or fetch the DB links.
+2. Let's start with creating the task. *Please note that this lab is simulated with read only privileges, thus you cannot submit the task or fetch the DB links.*
 
-	Below Image - Task Creation
 	![Create task](./images/createtask.png " ") 
 
-3. Enter the task name and give the SQL Tuning Set (STS) as an input by clicking on the search icon. Choose one from the list of SQL Tuning Sets.
+3. Enter the task name and select the SQL Tuning Set (STS) by clicking on the search icon.
 
-	Below Image - Enter Task Name and search STS
 	![Task name and STS](./images/tasknameandsts.png " ") 
 
-	Below Image - Choose any one from the list of STS
+	Choose **STS1_SPW** from the list of SQL Tuning Sets.
 	![Task name and STS](./images/choosests.png " ") 
 
-4. Depending on what you want to test, choose **Change type** from the drop down menu. There are two types of task creations - one is basic and other is advanced. Basic with basic setting whereas Advanced has customized setting. Please note that you can choose anything as you want as it doesn't matter when you go through the flow in this workshop.
+4. Choose **Change type** as **Optimizer Statistics** from the drop down menu.
 
-	Below Image - Choose the Change type
+    **Change Type** determines the nature of change being tested for its impact on SQL performance. The available options include:
+    - Parameter Change – Test the effect of modifying initialization parameter values.
+    - Optimizer Statistics – Analyze performance differences between current and pending optimizer statistics
+    - Ignore Optimizer Hints – Compare SQL performance with and without optimizer hints.
+    - Upgrade – Assess SQL performance impact after upgrading the database version.
+    - Migration – Evaluate SQL performance changes when migrating data between source and target databases.
+
+
 	![Task name and STS](./images/changetypemenu.png " ") 
 
-	Below Image - Task Creation Type
+	There are two types of task creations - one is basic and other is advanced. Basic with basic setting whereas Advanced has customized setting.
+
 	![Task name and STS](./images/taskcreationtype.png " ") 
 
-5. Let's explore **Advanced** setting. Choose pre-change trial and post-change trial configurations. Accordingly, choose the comparison metrics such as Elapsed time, Buffer Gets, etc.,. Since, this is simulated for read only privileges, you won't be able to create the tasks. Please make sure to choose same settings in both for pre-change and post-change.
+5. Choose **Advanced** setting.
 
-	Below Image - Advanced setting
 	![Task name and STS](./images/advanced.png " ") 
 
-	Below Image - Pre Change trial 
+	Choose execution method as **Execute SQL** in pre-change trail configurations and leave other fields as default. 
 	![Task name and STS](./images/prechangetrial.png " ") 
 
-	Below Image - Post Change trial 
+	Choose execution method as **Execute SQL** in post-change trail configurations and leave other fields as default. 
 	![Task name and STS](./images/postchangetrial.png " ") 
 
-	Below Image - Comparison metric and submit 
+	Now, choose the different metrics to compare before change and after change in the database to understand the impact on SQL Performance such as ***Elapsed Time, Buffer Gets, Opitimizer Cost** and then click **Submit**
+
 	![Task name and STS](./images/comparisonmetric.png " ") 
 
-	Below Image - Expected submission error
+	Since, this is preconfigured environment with read only privileges, you won't be able to create the tasks. 
 	![Task name and STS](./images/couldntcreate.png " ") 
 
+    *Note: We have created tasks for two use cases:*
+	- *Use Case 1: Upgrade from DB version 19.3 to 19.26 – Check the impact on SQL performance due to the upgrade.*
+	- *Use Case 2: Database parameter change – Check the impact on SQL performance due to this change.*
+	
+	**Proceed to the next task to review the results of these pre-staged use cases.**
 
-Note: This lab is simulated with read only privileges, thus you cannot submit the task or fetch the DB links.
-
-## Task 3: Test the upgrade from 19.3 to 19.26 DB version
+## Task 3: Use Case 1 - Test the upgrade from 19.3 to 19.26 DB version
 
 1. For this demo lab, the tasks are already submitted with Change Type as **Upgrade** and **Parameter Change**. In this task, we will look at the saved reports of Upgrade change type.
 
-2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade and parameter change. You can save the report after running the task and the saved reports are listed in the summary page. To view the reports, go to SQL Performance Watch summary page, and click on one of the saved reports.
+2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade and parameter change. You can save the report after running the task and the saved reports are listed in the summary page. To view the reports, go to SQL Performance Watch summary page, and click on one of the saved reports as shown in the below image.
 
-	Below Image - Saved reports
 	![Saved Reports](./images/savedreports.png " ")
 
 3.  One of the saved reports is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets**.
 
-	Below Image - Upgrade saved report
 	![Upgrade Reports](./images/upgrade-reports.png " ")
 
 4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**. You can view the breakdown of SQL execution under **Breakdown** section. There are four section each divided based on the SQL statements: 
@@ -158,10 +190,10 @@ Note: This lab is simulated with read only privileges, thus you cannot submit th
 	Below Image - Index change in the plan
 	![Regressed SQLs](./images/indexchanges.png " ")
 
-7. To do it your own tenancy, please choose change type as **Upgrade** and make sure there are DB links available to run the SPA trials remotely. [Refer to video](https://youtu.be/C9qkLNqj5x4) on how to test the upgrade using SQL Performance Watch.
+**Note:** To do it in your own tenancy, please choose change type as **Upgrade** and make sure there are DB links available to run the SPA trials remotely. [Refer to video](https://youtu.be/C9qkLNqj5x4) on how to test the upgrade using SQL Performance Watch.
 
 
-## Task 4: Parameter Change - Validate New Indexes
+## Task 4: Use Case 2 - Test the database parameter change
 
 1. Go back to SQL Performance Watch summary page and view the other saved report of validating new indexes. Let's open the report to review how to validate adding new indexes report. Click on saved report - **Validate\_New\_Indexes**.
 
@@ -180,7 +212,7 @@ Note: This lab is simulated with read only privileges, thus you cannot submit th
 	Below Image - View New Indexes
 	![Invisible Index](./images/invisibleindex.png " ")
 
-Finally, you can follow the same steps to go back on your own tenancy to explore the features, to know more about the other use cases, please refer to the videos below.
+Now you can follow the same steps in your own tenancy to explore SQL Performance Watch features, to know more about the other use cases, please refer to the videos below.
 
 
 ## Learn More
