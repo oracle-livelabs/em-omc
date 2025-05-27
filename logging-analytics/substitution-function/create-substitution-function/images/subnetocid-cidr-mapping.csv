@@ -1,0 +1,9 @@
+Subnet_OCID,CIDR
+ocid1.subnet.oc1..subnetA,10.0.0.0/24
+ocid1.subnet.oc1..subnetB,10.0.1.0/24
+ocid1.subnet.oc1..subnetC,10.0.2.0/24
+ocid1.subnet.oc1..subnetD,10.0.3.0/24
+ocid1.subnet.oc1..subnetE,10.0.1.0/24
+ocid1.subnet.oc1..subnetF,10.0.1.0/24
+ocid1.subnet.oc1..subnetG,10.0.2.0/24
+ocid1.subnet.oc1..subnetH,10.0.2.0/24
