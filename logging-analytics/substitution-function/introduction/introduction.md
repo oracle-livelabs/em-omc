@@ -1,20 +1,18 @@
 # Substitution Function Overview
 ## Introduction
 
-Sources define the location of your entity's logs and how to enrich the log entries. You can use the source to start continuous log collection through the OCI management agents. Incase you want to ingest log files into Oracle Logging Analytics without continuously collecting them using the Management Agent, then you can perform an on-demand upload. 
+The Substitution function enrichment plays a crucial role in enhancing log data by dynamically modifying field values during log processing. It allows businesses to replace portions of a field value or standardize data by applying alternative values or expressions. These transformed values can then be stored in a new output field, ensuring consistency and improving data enrichment.
 
-Oracle Logging Analytics lets you configure Field Enrichment options within a source so you can further extract and display meaningful information from your uploaded logs. Substitution option is used to replace a string/expression in a field with an alternative expression and store the result in an output field.
-
-This live lab will cover updating a source with a substitution function as the type of field enrichment option. It will also take you through the steps for visualizing the data in log explorer.
-
-Estimated Workshop Time: 30 minutes
+Estimated Workshop Time: 45 minutes
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
-* Search an out of the box (OOB) source and edit it.
-* Use substitution function to replace an expression in the field.
+* Create a simple lookup.
+* Configure a log source with Lookup enrichment and  Substitution function enrichment.
+* Upload logs 
+* Use Link Visualization to view the substituted data and make use of it to enhance the visulaized data. 
    
 
 ### Prerequisites
@@ -36,4 +34,4 @@ This lab assumes you have:
 ## Acknowledgements
 * **Author** - Supriya Joshi , OCI Logging Analytics
 * **Contributors** -  Supriya Joshi , OCI Logging Analytics
-* **Last Updated By/Date** - Supriya Joshi, Mar, 2025
+* **Last Updated By/Date** - Supriya Joshi, May, 2025
