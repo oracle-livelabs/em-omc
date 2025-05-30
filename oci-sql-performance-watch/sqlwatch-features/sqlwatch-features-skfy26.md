@@ -25,7 +25,7 @@ SQL Performance Watch Workshop
 
 *This workshop is intended solely as an introduction to SQL Performance Watch within a preconfigured environment. It is a guided walkthrough and does not include any tasks or exercises that allow free interaction or modifications within this environment.*
 
-Estimated Time: 30 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
