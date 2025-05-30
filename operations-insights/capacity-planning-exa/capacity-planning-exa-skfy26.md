@@ -4,7 +4,7 @@
 
 In this lab, you will go through the steps to explore the Capacity Planning of Oracle Exadata.
 
-Estimated Time: 15 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 
@@ -17,7 +17,9 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Enable Demo Mode
 
-1.  To access Ops Insights, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Observability & Management**, go to **Ops Insights** and click **Overview**.
+1.  Skip this task and proceed to *Task 2: Exadata Insights* if you have already enabled Demo Mode in Ops Insights.
+    
+    To access Ops Insights, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left. Under **Observability & Management**, go to **Ops Insights** and click **Overview**.
 
       ![Ops Insights](./images/opsi-main-ocw.png " ")
 

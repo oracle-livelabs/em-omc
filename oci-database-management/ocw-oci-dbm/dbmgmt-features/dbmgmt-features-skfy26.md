@@ -50,14 +50,11 @@ This lab assumes you have already completed the following:
 
 ## Task 2: Performing Database Performance Diagnostics
 
-1. On the left pane, click **Diagnostics & Management** to navigate to the **Fleet Summary** page. The **dbmgmt** compartment is selected by default in the Compartment field. To set the **compartment** to **dbmgmt** follow the  compartment hierarchy as shown below
-
-     ![Compartment](./images/compartment-select.png " ")
-     
+1. On the left pane, click **Diagnostics & Management** to navigate to the **Fleet Summary** page. The **dbmgmt** compartment is selected by default in the Compartment field.
      ![Fleet Summary](./images/fleet-summary-ocw.png " ")
 
 
-    Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+     Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
      ![Performance Hub](./images/perf-hub-ocw.png " ")
 
@@ -109,25 +106,21 @@ This lab assumes you have already completed the following:
 
 ## Task 3: Real-time performance monitoring with Top Activity Lite
 
-1.  Go back to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **MFG** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
-
-     ![Performance Hub](./images/perf-hub-ocw.png " ")
-
-2.  Click **Top Activity Lite** .
+1.  Click **Top Activity Lite** .
 
      ![Top Activity Lite](./images/top-activity-lite.png " ")
 
-3.  **Top Activity Lite** provides a less resource intensive view of real-time activity compared to Performance Hub.  This allows for quicker refreshes of current performance even when the database is impacted by a heavier application workload.  You will utilize a familiar time-frame slider to select a window for historic or current performance investigation.  
+2.  **Top Activity Lite** provides a less resource intensive view of real-time activity compared to Performance Hub.  This allows for quicker refreshes of current performance even when the database is impacted by a heavier application workload.  You will utilize a familiar time-frame slider to select a window for historic or current performance investigation.  
 
      ![Top Activity Lite](./images/top-activity-lite-mfg.png " ")
 
      Auto refresh of Top Activity Lite is possible at 15, 30 and 60 second intervals.  Select the **Auto Refresh** drop down menu and select 30 seconds to configure.
 
-4.  The **Data Source** can be changed for the ASH Analytics monitoring.  The two options are **Memory** and **Memory and AWR**.  Select **Memory** from the Data Source drop down menu.  You will likely see a reduction of data in the slider due to historic AWR data being removed from the view.
+3.  The **Data Source** can be changed for the ASH Analytics monitoring.  The two options are **Memory** and **Memory and AWR**.  Select **Memory** from the Data Source drop down menu.  You will likely see a reduction of data in the slider due to historic AWR data being removed from the view.
 
      ![Top Activity Lite](./images/top-activity-lite-mfg-ds.png " ")
 
-5.  Additional information about the activity in the highlighted period of the Average Active Sessions slider can be seen in tables below the chart.  You can adjust the view of information in these tables to focus the performance investigation.  Utilize the **Columns** drop down menu to include **SQL Text** to more easily see which statements are generating the most activity in the databaseand and expand the table.
+4.  Additional information about the activity in the highlighted period of the Average Active Sessions slider can be seen in tables below the chart.  You can adjust the view of information in these tables to focus the performance investigation.  Utilize the **Columns** drop down menu to include **SQL Text** to more easily see which statements are generating the most activity in the databaseand and expand the table.
 
      ![Top Activity Lite Columns](./images/top-activity-lite-mfg-cols.png " ")
 
