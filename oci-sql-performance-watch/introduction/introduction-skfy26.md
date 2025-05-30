@@ -2,9 +2,9 @@
 
 ## About this workshop
 
-In the Database Management Performance Test Drive workshop, test drive four key database management capabilities. Each module is designed to help you become familiar with a key capability of database performance monitoring. The modules cover topics such as identifying performance issues during database changes (e.g., upgrades, migrations, or parameter modifications), analyzing SQL performance, and gaining insights into your Exadata and database fleet.
+In the Database Management Performance Test Drive workshop, try out four key database management capabilities. Each module is designed to help you become familiar with a key capability of database performance monitoring. The modules cover topics such as identifying performance issues during database changes (e.g., upgrades, migrations, or parameter modifications), analyzing SQL performance, and gaining insights into your Exadata and database fleet.
 
-Each module is independent of each other and can be executed in any order. The capability is from the following Oracle Cloud Services: 
+Each module is independent of each other and can be executed in any order. Capabilities are from the following Oracle Cloud Services:
 
 - Module 1 – Database Management Service
 - Module 2 – Operations Insights Service
