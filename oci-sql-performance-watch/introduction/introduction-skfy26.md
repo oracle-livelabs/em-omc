@@ -30,6 +30,6 @@ In this workshop, you will learn:
 
 ## Acknowledgements
 
-- **Author** - Anand Prabhu, Prinipal Memner of Technical Staff, Observability and Management
+- **Author** - Anand Prabhu, Principal Member of Technical Staff, Observability and Management
 - **Contributors** - Anusha Vojjola, Vivek Verma, Sriram Vrinda, Murtaza Husain and Derik Harlow
 - **Last Updated By/Date** - Anand Prabhu, May 2025

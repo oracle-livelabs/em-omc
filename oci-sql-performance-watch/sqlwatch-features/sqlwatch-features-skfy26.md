@@ -94,12 +94,12 @@ This lab assumes you have already completed the following:
 	![View data ALL](./images/viewdataall.png " ")
 
 	Review the highlighted sections:
-	- View data: Please choose **ALL** from the dropdown menu, to view all the tasks
-	- Latest Comparison report: Shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set (STS)
-	- Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here
-	- Tasks by change type: Tasks that are created by various **change type** menus that are performed on the database can be viewed in this section
-	- You can create the task by clicking on the **Create** button
-	- Workload(STS) column highlights the SQL Tuning Set (STS) that is used as an input while creating the task
+	1. View data: Please choose **ALL** from the dropdown menu, to view all the tasks
+	2. Latest Comparison report: Shows the latest report results on the database with the regressed or improved % of the performance of the SQL Tuning Set (STS)
+	3. Tasks by status: All the tasks performed on the database along with status such as completed, failed, canceled, processing etc., can be viewed here
+	4. Tasks by change type: Tasks that are created by various **change type** menus that are performed on the database can be viewed in this section
+	5. You can create the task by clicking on the **Create** button
+	6. Workload(STS) column highlights the SQL Tuning Set (STS) that is used as an input while creating the task
 
 	![Landing page](./images/sqlwatchlandingpage.png " ")
 
