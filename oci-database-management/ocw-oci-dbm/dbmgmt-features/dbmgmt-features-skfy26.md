@@ -58,6 +58,8 @@ This lab assumes you have already completed the following:
 
      ![Performance Hub](./images/perf-hub-ocw.png " ")
 
+     *Note: Since all attendees are accessing the **MFG** database, it may experience high load. If the MFG database is slow to display data in Performance Hub, please switch to the **PRODCRM** database and continue performing the below tasks there.* 
+
 2.  This will launch the **Performance Hub** page. Performance Hub provides a single view of the database’s performance and enables you to perform the rapid diagnosis of its issues.
 
      ![Performance Hub](./images/perf-hub1-ocw.png " ")

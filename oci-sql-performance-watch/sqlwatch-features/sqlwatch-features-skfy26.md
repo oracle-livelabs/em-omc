@@ -68,8 +68,13 @@ This lab assumes you have already completed the following:
 
     ![Administration Page Error](./images/administrationpageerror.png " ")
 
-   Change the compartment to **dbmgmt** and deployment type as **External** to view the external databases as shown in the below image.
-   *Note: External databases are non-OCI databases discovered using Management Agent. They are monitored through the Management Agent, which collects metrics, performs diagnostics, and enables lifecycle operations.*
+       1. Change the compartment to **dbmgmt** 
+       2. Choose deployment type as **External** to view the external databases
+       3. Expand the CDBs as shown to view all the PDBs
+   
+
+       
+	   *Note: External databases are non-OCI databases discovered using Management Agent. They are monitored through the Management Agent, which collects metrics, performs diagnostics, and enables lifecycle operations.*
 
 	![Compartment and Deployment Type Selection](./images/compartment&deploymenttype.png " ")
 	

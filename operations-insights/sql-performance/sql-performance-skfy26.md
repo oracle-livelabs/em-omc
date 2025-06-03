@@ -33,6 +33,10 @@ Estimated Time: 5 minutes
 
 1. On the **Ops Insights Overview** page, from the left pane click **Database Insights** and that will select **SQL Insights** and **Fleet Analysis**. On the **SQL Insights - Fleet analysis** page you can view insights and analysis over all SQL and all databases enabled in the compartment.
 
+  *Note: A warning is shown on the screen **"Autonomous Databases exist that are not yet enabled for full features. Full feature set must be enabled to use SQL Explorer. Learn more".** Close the warning message as shown below and proceed to Task 2*
+
+      ![Left Pane](./images/sql-insights-before.png " ")
+
       ![Left Pane](./images/sql-insights.png " ")
 
 2. Click **SQL activity loadmap** to view the tree map.

@@ -68,9 +68,13 @@ This lab assumes you have completed the following labs:
 
 8.  Now choose **Allocation (CPU)** under **Size** and **Usage Change (%)** under **Color**.
 
-      ![Left Pane](./images/max-allocation-usage-change-ocw.png " ")
+      ![Left Pane](./images/max-allocation-usage-change-ocw-before.png " ")
 
-9.  To show the trend & forecast of CPU for Host and Database, click on the hostname and highlight the trend graph.
+    Heatmap gets updated based on the selection as shown below
+
+      ![Left Pane](./images/max-allocation-usage-change-ocw-after.png " ")
+
+9.  To show the trend & forecast of CPU for Host and Database, click on the hostname **DBM08adm04.us.oracle.com** and highlight the trend graph.
 
       ![Left Pane](./images/trend-host-cpu-ocw.png " ")
 
