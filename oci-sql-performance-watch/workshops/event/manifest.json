@@ -1,11 +1,11 @@
 {
-    "workshoptitle": "Get started with Oracle Cloud Infrastructure Database Management",
+    "workshoptitle": "Database Management Performance Test Drive",
 	"help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
             "title": "Introduction",
             "description": "Introduction",
-            "filename": "../../introduction/introduction.md"
+            "filename": "../../introduction/introduction-skfy26.md"
         },
         {
             "title": "Get Started",
@@ -13,19 +13,24 @@
             "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Explore Oracle Cloud Infrastructure SQL Performance Watch",
-            "description": "Explore Oracle Cloud Infrastructure SQL Performance Watch",
-            "filename": "../../sqlwatch-features/sqlwatch-features.md"
+            "title": "Module 1: Performance Hub - 10 mins",
+            "description": "Explore Database Management's Peformance Hub Feature",
+            "filename": "../../../oci-database-management/ocw-oci-dbm/dbmgmt-features/dbmgmt-features-skfy26.md"
         },
         {
-            "title": "Lab 2 (Optional): Enable Demo Mode for Ops Insights",
+            "title": "Module 2: SQL Insights - 5 mins",
             "description": "Enable Demo Mode for Ops Insights.",
-            "filename": "../../../operations-insights/enable-demo-mode/enable-demo-mode-ocw.md"
+            "filename": "../../../operations-insights/sql-performance/sql-performance-skfy26.md"  
         },
         {
-            "title": "Lab 3 (Optional): Capacity Planning of Oracle Databases",
+            "title": "Module 3: Exadata Insights - 10 mins",
             "description": "Capacity Planning of Oracle Databases",
-            "filename": "../../../operations-insights/capacity-planning-adb/capacity-planning-adb-ocw.md"
+            "filename": "../../../operations-insights/capacity-planning-exa/capacity-planning-exa-skfy26.md"
+        },
+        {
+            "title": "Module 4: SQL Performance Watch - 10 mins",
+            "description": "Explore Oracle Cloud Infrastructure SQL Performance Watch",
+            "filename": "../../sqlwatch-features/sqlwatch-features-skfy26.md"
         },
         {
             "title": "Need Help?",
