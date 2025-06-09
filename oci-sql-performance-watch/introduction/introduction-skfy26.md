@@ -4,13 +4,7 @@
 
 This workshop is divided into four modules, each designed to help you become familiar with key aspects of database performance monitoring. The modules cover topics such as identifying performance issues during database changes (e.g., upgrades, migrations, or parameter modifications), analyzing SQL performance and gaining a unified view of resource usage and spare capacity across all Exadata systems, enabling proactive planning and database consolidation.
 
-Each module is independent of each other and can be executed in any order. Capabilities are from the following Oracle Cloud Services:
-
-- Module 1 – Database Management Service
-- Module 2 – Operations Insights Service
-- Module 3 – Operations Insights Service
-- Module 4 – SQL Performance Watch Service
-
+Each module is independent of each other and can be executed in any order. 
 
 ### Workshop Objectives
 In this workshop, you will learn:
@@ -25,7 +19,7 @@ In this workshop, you will learn:
 
 ### Get Started
 
-*Choose any two modules of your choice to complete during this workshop, and proceed directly to those sections.*
+*These modules are independent and can be executed in any order. Please pick the modules of your choice and get started.*
 
 
 ## Acknowledgements

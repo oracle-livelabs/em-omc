@@ -54,6 +54,9 @@ Estimated Time: 5 minutes
 
       ![Left Pane](./images/sql-id-sql-insights.png " ")
 
+      *Note: The region will default to UK South (London) and is set to demo mode. Please ignore this setting and proceed with the instructions below.*
+
+
       ![Left Pane](./images/sql-insights-sql-analysis.png " ")
 
       This is the most granular level for SQL insights, at this level you can view a full picture of the performance properties of given SQL\_ID on a given database. This includes basic properties like the command type and text of the statement as well as average latency and execution frequency, and numerous other metrics from V$SQLSTATS. Insight tiles indicate whether the SQL level insights were true of the SQL_ID over the time period. Daily charts of total database time, average latency, and I/O enable deeper examination of the relationship of SQL plans to resource usage.
