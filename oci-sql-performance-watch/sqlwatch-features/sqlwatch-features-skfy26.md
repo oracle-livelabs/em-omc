@@ -151,22 +151,29 @@ This lab assumes you have already completed the following:
 	Since, this is preconfigured environment with read only privileges, you won't be able to create the tasks. 
 	![Task name and STS](./images/couldntcreate.png " ") 
 
-    *Note: We have created tasks for a use case:*
+    *Note: We have created task for a use case:*
 	- *Use Case: Upgrade from DB version 19.3 to 19.26 – Check the impact on SQL performance due to the upgrade.*
 		
 	**Proceed to the next task to review the results of these pre-staged use cases.**
 
 ## Task 3: Use Case - Test the upgrade from 19.3 to 19.26 DB version
 
-1. For this demo lab, the tasks are already submitted with Change Type as **Upgrade** and **Parameter Change**. In this task, we will look at the saved reports of Upgrade change type.
+1. For this demo lab, the task is already submitted with Change Type as **Upgrade**. In this task, we will look at the saved reports of Upgrade change type.
 
-2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade and parameter change. You can save the report after running the task and the saved reports are listed in the summary page. To view the reports, go to SQL Performance Watch summary page, and click on one of the saved reports as shown in the below image.
+    *Use Case: Upgrade from DB version 19.3 to 19.26 – Assess the impact of the upgrade on SQL performance. The SQL Performance Watch task has been submitted for this use case, and we will analyze the results saved in the reports to determine whether the upgrade improved or degraded SQL performance. If any SQL statements show regression, they should be fixed before the upgrade to ensure that the application continues to perform consistently post-upgrade.*
 
-	![Saved Reports](./images/savedreports.png " ")
+2. Let's look at the saved reports, to analyze the performance of a SQL during the upgrade. You can save the report after running the task and the latest saved reports are listed in the summary page. To view the latest saved reports, go to SQL Performance Watch summary page, and click on one of the saved reports as shown in the below image.
 
-3.  One of the saved reports is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets**.
+	![Saved Reports](./images/latestsavedreports.png " ")
 
-	![Upgrade Reports](./images/upgrade-reports.png " ")
+    All SQL Performance Watch reports can be accessed by clicking on **Reports** in the left menu as shown below. 
+
+	![History of Reports](./images/historysavedreports.png" ")
+
+
+3.  One of the latest saved reports is testing the upgrade use cases and the other is validating adding the new indexes. First, let's review the upgrade saved reports **Upgrade\_Report\_BufferGets**.
+
+	![Upgrade Reports](./images/upgrade-reports2.png " ")
 
 4.  Click on **Upgrade\_Report\_BufferGets** to review the granular level details of the SQL Performance while testing the upgrade from 19.3 to 19.26. This report is generated to compare **Buffer Gets** with the previous version of the database. Hence the comparison metric is **Buffer Gets**. You can view the breakdown of SQL execution under **Breakdown** section. There are four section each divided based on the SQL statements: 
 	- Buffer Gets (i.e Comparison metrics): Is showing the performance of SQLs pre-change and post-change trials
