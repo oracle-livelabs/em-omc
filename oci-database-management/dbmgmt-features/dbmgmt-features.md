@@ -40,7 +40,7 @@ This lab assumes you have already completed the following:
 
 ## Task 2: Monitoring a Fleet of Databases
 
-1.  On the left pane, click **Oracle Database** to navigate to the **Oracle Database Fleet Summary** page. The dbmgmt-demo compartment is selected by default in the Compartment field.
+1.  On the left pane, click **Diagnostics & Management** and then **Oracle Database** to navigate to the **Oracle Database Fleet Summary** page. The dbmgmt-demo compartment is selected by default in the Compartment field.
 
      ![Fleet Summary](./images/oracle-fleet-summary.png "Fleet Summary")
 
@@ -51,11 +51,9 @@ This lab assumes you have already completed the following:
     -  Resource Usage: Displays a summary of the overall CPU and Storage allocation and utilization and a change percentage that denotes the comparison of resource usage between the selected time and the comparison time period. *Note*: Use the menus at the top-right corner of the page to select two time periods to compare the performance and configuration metrics of the fleet of databases.
     -  Members: Displays a thumbnail view of your Oracle Databases with their name, status, and type. This view is useful if you have a smaller number of databases in your fleet. The **List** view is displayed by default on the Members tab, however, you can select the **Table** option to view the same information in a tabular format.
 
-3.  On **Fleet Summary** page under **Members** tab, by default, you will see only PDBs and non-CDBs in the database fleet.
+3.  On **Fleet Summary** page, **Members** tab has the list all databases in the database fleet.
 
-4.  On **Fleet Summary** page under **Members** tab, select the **Show CDBs Only** check box to view the CDBs in the database fleet.
-
-     ![Show CDBs Only](./images/showcdbs.png "Show CDBs Only")
+     ![Show CDBs Only](./images/member-list.png "Show CDBs Only")
 
     For each database including the CDB, the following metrics are displayed along with the change percentage that denotes the comparison of database metrics between the selected period and the comparison time period:
     - Avg. Active Sessions: Displays the average active sessions broken down by CPU, User I/O, and Others, which includes different categories within wait time such as System I/O and Commit.
@@ -63,15 +61,15 @@ This lab assumes you have already completed the following:
     - Storage: Displays the storage allocation and usage.
     - I/O: Displays the I/O rate and throughput.
 
-5.  On **Fleet Summary** page, click the **Performance** tab. The Performance view displays a tree map of the performance of your Oracle Databases against various database metrics as seen in the **Members** tab. This view is more useful when you have a large number of databases in the fleet. The databases are displayed as a collection of rectangles in different sizes and colors, in which the size of a rectangle indicates the value of the selected metric and the color indicates the change percentage for the selected metric over the selected time period.
+4.  On **Fleet Summary** page, click the **Performance** tab. The Performance view displays a tree map of the performance of your Oracle Databases against various database metrics as seen in the **Members** tab. This view is more useful when you have a large number of databases in the fleet. The databases are displayed as a collection of rectangles in different sizes and colors, in which the size of a rectangle indicates the value of the selected metric and the color indicates the change percentage for the selected metric over the selected time period.
 
 ## Task 3: Working with Database Groups
 
-1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**. Under **Database Management**, click **Database Groups**.
+1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**. Under **Database Management**, click **Diagnostics & Management** and then click **Database Groups**.
 
 2.  Click **Create Database Group**. In the **Create Database Group** dialog, enter the name you want to assign to the new Database Group ex. dbmgmt\_pdbs\_group, optionally add a description, and click **Create Group**.
 
-     ![Create Group](./images/databasegroup.png "Create Group")
+     ![Create Group](./images/create-database-group.png "Create Group")
 
 3.  On the **Database Groups** page, click the group named **dbmgmt\_pdbs\_group**. On the **Database Group Details** page of the **dbmgmt\_pdbs\_group** group, click **Add Managed Database**.
 
@@ -129,9 +127,9 @@ In the Create Job dialog:
 
 ## Task 5: Monitoring and Managing Individual Databases
 
-1.  On the left pane, click **Fleet Summary** to navigate to the Fleet Summary page. Scroll down to the **Members** tab on the Fleet Summary page.
+1.  On the **Oracle Database fleet summary** page, scroll down to the **Members** tab.
 
-     ![Members](./images/members.png "Members")
+     ![Members](./images/member-list.png "Members")
 
 2.  Click the **HRSTAGE** database in the **Members** tab. In the **Managed Database Details** page Scroll down to the **Summary** section.
 
@@ -149,16 +147,33 @@ In the Create Job dialog:
 
      **Storage Usage:** Displays system storage and user data storage in TB. System storage is broken down by usage in system tablespaces and user data, and User Data storage is broken down by usage in the top five user tablespaces. The total storage allocation for the database is denoted by a red line and enables you to monitor storage usage compared to the total allocation.
 
-4.  You can click one of the other options on the left pane under Resources to perform the following tasks:
+4.  On the left pane under **Resources**, you can:
 
-     - Monitor the tablespaces and data files.
-     - View and edit database parameters.
-     - Create and manage Jobs and Job executions for the Managed Database.
-     - View the Database Groups the Managed Database is a part of, if any.
+     - Use **Performance Hub** to analyze and tune the performance of the Managed Database.
+     - Use **ADDM Spotlight** to view findings and recommendations to optimize database and application performance.
+     - Use **AWR Explorer** to explore and analyze AWR data for a Managed Database and use it as a central repository to import, analyze, and compare AWR data from other databases.
+     - Use **SQL Tuning Advisor** to analyze SQL statements and obtain recommendations on how to tune SQL statements, along with the rationale and expected benefit.
+     - Manage **SQL tuning sets** and perform tasks such as creating and monitoring SQL tuning sets and loading SQL statements into SQL tuning sets.
+     - Manage **SQL Plan Management** configuration and monitor SQL plan baselines for a Managed Database.
+     Monitor the tablespaces and data files.
+     - Use **SQL Insights** for detailed SQL performance data, as well as operationally useful insights derived from that data, for the Managed Database.
+     - **Search SQLs**: Specify conditions and filters to search for the SQL statements currently running on the Managed Database or available in retained AWR data.
+     - **Search sessions**: Specify conditions and filters to search for current sessions in the Managed Database.
+     - **Optimizer statistics**: Monitor the optimizer statistics for a Managed Database, analyze the statistics collection tasks and Optimizer Statistics Advisor tasks, and implement Optimizer Statistics Advisor recommendations.
+     - Monitor the tablespaces and datafiles stored in each tablespace in the Managed Database.
+     - View the users created in the Oracle Database.
+     - **Alert logs**: Monitor the alert and attention logs generated for the Managed Database in a selected time period.
+     - View and edit the database parameters for the Managed Database.
+     - View the jobs defined for the Managed Database, if any.
+     - **Capacity Planning**: Use this Ops Insights feature for a summary of database CPU, Storage, Memory, and I/O utilization.
+     - **Credentials**: Set credentials to access, monitor and manage the Managed Database.
+     - **Alarm definitions**: Create Oracle-recommended alarms and perform other alarm-related tasks in Diagnostics & Management.
+     - **Associated Metric Extensions**: View the Metric Extensions associated with the Managed Database.
+     - **Associated database groups**: View the Database Groups the Managed Database is a part of, if any.
 
 ## Task 6: Performing Database Performance Diagnostics
 
-1.  On the left pane, click **Fleet Summary** to navigate to the **Fleet Summary** page. Scroll down to the **Members** tab and click the **HRSTAGE** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
+1.  On the **Oracle Database fleet summary**, scroll down to the **Members** tab and click the **HRSTAGE** database. On the top of the **Managed Database Details** page, click the **Performance Hub** button.
 
      **Note** : Performance Hub requires granting of appropriate user privileges. Grant the required privileges to db\_monitoring\_user whereas db\_monitoring\_user is the user selected to register pluggable database.
 
@@ -217,6 +232,6 @@ In the Create Job dialog:
 
 ## Acknowledgements
 
-- **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
+- **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, December 2023
+- **Last Updated By/Date** - Vivek Verma, June 2025
