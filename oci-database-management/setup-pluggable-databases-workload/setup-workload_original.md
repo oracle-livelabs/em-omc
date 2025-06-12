@@ -27,7 +27,7 @@ This lab assumes you have completed the following labs:
     ```
     <copy>
     cd /home/opc/
-    wget https://orasenatdpltintegration01.objectstorage.us-ashburn-1.oci.customer-oci.com/p/Vq7hfbmeT_SSgJwUmZZmLNLVyrsKR4taqBfLtR3IAl4gX2iHJskfnAagioD6B5ZQ/n/orasenatdpltintegration01/b/database-management-lab/o/labs.zip
+    wget https://objectstorage.us-phoenix-1.oraclecloud.com/p/xUq_3JHnoUJyOnfqFhPZxw_94asntM2HmXMPaFuNkhiIfm6vgtvkc4A2yqr2INdI/n/axxduehrw7lz/b/oci-database-management/o/labs.zip
     sudo mv labs.zip /home/oracle
     sudo chown oracle:oinstall /home/oracle/labs.zip
     sudo su - oracle
@@ -93,6 +93,6 @@ This lab assumes you have completed the following labs:
 
 ## Acknowledgements
 
-- **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
+- **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, September 2021
+- **Last Updated By/Date** - Vivek Verma, June 2025

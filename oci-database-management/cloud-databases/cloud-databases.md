@@ -341,6 +341,6 @@ Egress rule for the Database Management private endpoint: The Database Managemen
 
 ## Acknowledgements
 
-- **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
+- **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, September 2021
+- **Last Updated By/Date** - Vivek Verma, June 2025
