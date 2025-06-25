@@ -4,8 +4,8 @@
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "Introduction to Enterprise Monitoring workshop",
-      "filename": "./../../intro/intro-monitoring-overview.md"
+      "description": "Introduction to the Monitor MySQL using Oracle Enterprise Manager workshop",
+      "filename": "./../../intro/intro-monitoring-mysqlee.md"
     },
     {
       "title": "Get Started",
@@ -17,7 +17,7 @@
       "description": "How to download your ORM stack and update security rules for an existing VCN",
       "publisheddate": "09/28/2020",
       "filename": "../../prepare-setup/prepare-setup.md",
-      "type": "monitoring-overview"
+      "type": "monitoring-mysqlee"
     },
     {
       "title": "Lab 2: Environment Setup",
@@ -26,10 +26,10 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
     },
     {
-      "title": "Lab 3: Enterprise Monitoring Quick Tour",
+      "title": "Lab 3: Monitor MySQL using Oracle Enterprise Manager",
       "description": "The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.",
       "publisheddate": "9/16/2021",
-      "filename": "./../../em-monitoring-overview/em-monitoring-overview.md"
+      "filename": "./../../em-monitoring-mysqlee/em-monitoring-mysqlee.md"
     },
     {
       "title": "Lab 4 (Optional): Environment Cleanup",
