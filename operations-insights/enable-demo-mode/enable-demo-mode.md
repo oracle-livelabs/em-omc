@@ -39,10 +39,10 @@ Estimated time: 10 minutes
 
 6.  On the left-hand pane you will find links to quickly navigate to OPSI offerings including Capacity Planning, Exadata Insights, Oracle SQL Warehouse, AWR Hub, and Dashboards.  
 
-      ![Left Pane](./images/opsi-left-pane-new.png " ")
+      ![Left Pane](./images/opsi-left-pane-main.png " ")
 
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Feb 2025
+- **Last Updated By/Date** - Vivek Verma, June 2025
