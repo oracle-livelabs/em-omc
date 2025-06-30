@@ -1,0 +1,45 @@
+{
+  "workshoptitle": "Oracle Enterprise Manager - Database Migration Workbench",
+  "help": "livelabs-help-mgmt_us@oracle.com",
+  "tutorials": [
+    {
+      "title": "Introduction",
+      "description": "Introduction to Database Migration Workbench Workshop",
+      "filename": "./../../intro/intro-migration-workbench.md"
+    },
+    {
+      "title": "Lab 1: Environment Setup",
+      "description": "Verify Setup of compute instance",
+      "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-ssh-and-novnc.md"
+    },
+    {
+      "title": "Lab 2: Migrate and upgrade 12c database to 19c PDB",
+      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
+      "publisheddate": "7/16/2020",
+      "filename": "./../../migrate-to-pdb/migrate-to-pdb.md"
+    },
+    {
+      "title": "Lab 3: Migrate and upgrade 12c database to 19c in new destination",
+      "description": "This lab provides an overview of Migration Workbench features in Oracle Enterprise Manager 13.5 RU7. It is intended to familiarize you with this tool which can be invaluable in your journey to 19c and multitenant",
+      "publisheddate": "7/16/2020",
+      "filename": "./../../migrate-to-noncdb/migrate-to-noncdb.md"
+    },
+    {
+      "title": "Troubleshoot Enterprise Manager Environment",
+      "description": "How to troubleshoot all the workshop components",
+      "publisheddate": "10/14/2020",
+      "filename": "./../../initialize-environment/initialize-environment.md"
+    },
+    {
+      "title": "Appendix: Frequently Asked Questions (FAQ)",
+      "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
+      "publisheddate": "8/12/2020",
+      "filename": "./../../../faq/faq.md"
+    },
+    {
+      "title": "Need Help?",
+      "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+    }
+  ]
+}

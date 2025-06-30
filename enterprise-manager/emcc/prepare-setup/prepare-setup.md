@@ -64,6 +64,9 @@ This lab assumes you have:
 <if type="hybrid-pdbaas">
     - [emcc-mkplc-hybrid-pdbaas.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/-JqErQC8a-AiGJnd9ICNRE9dy8AiA-GEjYLAZEffy9qlGQMl0dOq34LPDhsVy_XS/n/omcinternal/b/EMWorkshopBucket/o/emcc-mkplc-hybrid-pdbaas.zip)
 </if>
+<if type="monitoring-mysqlee">
+    - [emcc-mkplc-monitoring-mysqlee.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/M4aan-04y661nXmTO89iorCggycd9RHZoD1yih8kWhJdrUjxHxRMsP0V8OZ2wE-u/n/omcinternal/b/EMWorkshopBucket/o/emcc-mkplc-monitoring-mysqlee.zip)
+</if>
 
 
 2.  Save in your downloads folder.

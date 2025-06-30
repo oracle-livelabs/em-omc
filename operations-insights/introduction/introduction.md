@@ -76,4 +76,4 @@ In this workshop, you will:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, July 2024
+- **Last Updated By/Date** - Vivek Verma, Jun 2025

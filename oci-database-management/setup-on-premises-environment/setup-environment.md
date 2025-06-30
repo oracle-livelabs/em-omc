@@ -18,7 +18,7 @@ This lab assumes you have already completed the following:
 
 Click on the link below to download the Resource Manager zip files you need to build your environment.
 
-- [db19c-primary.zip](https://orasenatdpltintegration01.objectstorage.us-ashburn-1.oci.customer-oci.com/p/rNSwJQBzUFcy3nUlT7TzQ7vBRboHPP_HfhQEfldqSmaEA9GHsPMTkS-z5xoRX134/n/orasenatdpltintegration01/b/database-management-lab/o/db19c-primary.zip) - Packaged terraform primary database instance creation script.
+- [db19c-primary.zip](https://objectstorage.us-phoenix-1.oraclecloud.com/p/fCQJeWI5tCfM0No8cXhU2D5-PuXwaM4nDDzD-tBDS2lWGrHzZdPp57IUb3_hUALJ/n/axxduehrw7lz/b/oci-database-management/o/db19c-primary.zip) - Packaged terraform primary database instance creation script.
 
 ## Task 1: Prepare the Primary Database
 
@@ -191,6 +191,6 @@ You now have a fully functional Oracle Database 19c instance **ORCL** running on
 
 ## Acknowledgements
 
-- **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
+- **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, September 2021
+- **Last Updated By/Date** - Vivek Verma, June 2025
