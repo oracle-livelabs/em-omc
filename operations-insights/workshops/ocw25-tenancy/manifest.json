@@ -1,0 +1,56 @@
+{
+    "workshoptitle": "Get started with Oracle Cloud Infrastructure Ops Insights",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Enable Demo Mode for Ops Insights",
+            "description": "Enable Demo Mode for Ops Insights.",
+            "filename": "../../enable-demo-mode/enable-demo-mode.md"
+        },
+        {
+            "title": "Lab 2: Capacity Planning of Oracle Databases",
+            "description": "Capacity Planning of Oracle Databases",
+            "filename": "../../capacity-planning-adb/capacity-planning-adb-ocw.md"
+        },
+        {
+            "title": "Lab 3: Capacity Planning of Oracle Exadata",
+            "description": "Capacity Planning of Oracle Exadata",
+            "filename": "../../capacity-planning-exa/capacity-planning-exa-skfy26.md"
+        },
+        {
+            "title": "Lab 4: Analyze SQL Performance at Fleet level",
+            "description": "Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance",
+            "filename": "../../sql-performance/sql-performance-skfy26.md"
+        },
+        {
+            "title": "Lab 5: AWR Hub",
+            "description": "AWR Hub",
+            "filename": "../../awr-hub/awr-hub-ocw.md"
+        },
+        {
+            "title": "Lab 6: ADDM Spotlight",
+            "description": "ADDM Spotlight",
+            "filename": "../../addm-spotlight/addm-spotlight.md"
+        },        
+        {
+            "title": "Lab 7: Dashboards",
+            "description": "Ops Insights Dashboards",
+            "filename": "../../dashboards/dashboards.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

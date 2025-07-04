@@ -35,9 +35,7 @@ Estimated Time: 5 minutes
 
   *Note: A warning is shown on the screen **"Autonomous Databases exist that are not yet enabled for full features. Full feature set must be enabled to use SQL Explorer. Learn more".** Close the warning message as shown below and proceed to Task 2*
 
-      ![Left Pane](./images/sql-insights-before.png " ")
-
-      ![Left Pane](./images/sql-insights.png " ")
+      ![Left Pane](./images/sql-insights-fleet-analysis.png " ")
 
 2. Click **SQL activity loadmap** to view the tree map.
 
@@ -66,4 +64,4 @@ Estimated Time: 5 minutes
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Mar 2025
+- **Last Updated By/Date** - Vivek Verma, Jul 2025
