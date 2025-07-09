@@ -1,0 +1,12 @@
+{
+    "workshoptitle": "Troubleshoot & Optimize performance of Cloud apps business flows with Log Analytics.",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        
+        {
+            "title": "Lab 2: Monitoring Different Dashboards",
+            "description": "This live lab outlines different dashboards",
+            "filename": "../../dashboards/dashboards.md"
+        }
+    ]
+}
