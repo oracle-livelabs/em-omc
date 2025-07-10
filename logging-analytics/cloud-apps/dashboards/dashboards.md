@@ -72,5 +72,5 @@ In order to view this dashboard one has to search for and click on the **Oracle 
 
 In order to view this dashboard one has to search for and click on the **Oracle Fusion Apps Enterprise Scheduler Service (ESS) Analysis**  dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-fusion-enterprise](images/dashboards-fusion-enterprise.jpg)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
-      ![fusion-enterprisE-dashboard](images/fusion-enterprise-dashboard.jpg)         
+      ![fusion-enterprise-dashboard](images/fusion-enterprise-dashboard.jpg)         
 
