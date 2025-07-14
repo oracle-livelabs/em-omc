@@ -2,11 +2,35 @@
     "workshoptitle": "Troubleshoot & Optimize performance of Cloud apps business flows with Log Analytics.",
     "help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
-        
+       {
+            "title": "Pre Lab",
+            "description": "",
+            "filename": "../../pre-lab/pre-lab.md"
+        },
         {
-            "title": "Lab 2: Monitoring Different Dashboards",
+            "title": "Introduction",
+            "description": "",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Lab 1:  Understanding Lab Flow, Functional, and Technical Architecture",
+            "description": "",
+            "filename": "../../understanding-flow/understanding-flow.md"
+        },
+        {
+            "title": "Lab 2: Monitoring Individual Components",
             "description": "This live lab outlines different dashboards",
-            "filename": "../../dashboards/dashboards.md"
+            "filename": "../../monitoring-individual-components/monitoring-individual-components.md"
+        },
+        {
+            "title": "Lab 3: Stitching it Together – Monitoring E2E PO Flow",
+            "description": "",
+            "filename": "../../monitoring- e2e-po-flow/monitoring- e2e-po-flow.md"
+        },
+        {
+            "title": "Lab 4: Troubleshooting Business Flows",
+            "description": "",
+            "filename": "../../troubleshoot-business-flow/troubleshoot-business-flow.md"
         }
     ]
 }

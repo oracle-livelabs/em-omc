@@ -27,10 +27,10 @@ In this lab, you will get an overview of the different dashboards, including the
 
     > **Note** : You will see an authorization error. It is expected as current user doesn't have permission to the root compartment.
 
-  3. Switch to the compartment **OandM-Demo**.
-    - From the **Compartment** dropdown select the compartment **OandM-Demo**.
+  3. Switch to the compartment **CW25\_Logging\_Analytics**.
+    - From the **Compartment** dropdown select the compartment **CW25\_Logging\_Analytics**.
     - From the **Services** dropdown select the service **Log Analytics**.
-    - All the Dashboards in the Compartment **OandM-Demo** will be displayed.
+    - All the Dashboards in the Compartment **CW25\_Logging\_Analytics** will be displayed.
     ![all-dashboards](images/all-dashboards.jpg)
 
 ## Task 2: Overview of Oracle Integration Insight  dashboard
