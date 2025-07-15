@@ -113,6 +113,6 @@ Perform the following steps to download the agent software:
 
 ## Acknowledgements
 
-- **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
+- **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, December 2023
+- **Last Updated By/Date** - Vivek Verma, June 2025
