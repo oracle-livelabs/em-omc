@@ -67,3 +67,14 @@ After the PO is submitted, the initial status becomes **Pending Approval**. The 
  5. Validate the PO Status. If it's **Open** then the Business Event has occurred.
 
     > **Note:** If PO has another Status, such as <em>Pending Approval</em>, then wait a couple of minutes and refresh the page until the status changes to **Open**. 
+
+
+**Congratulations!** In this lab, you have successfuly completed the following tasks:
+- Monitoring E2E PO Flow
+
+You may now proceed to the [next lab](#next).
+
+## Acknowledgements
+* **Author** - Supriya Joshi, OCI Logging Analytics
+* **Contributors** -  Supriya Joshi, Jolly kundu, Kumar Varun, Royce Fu
+* **Last Updated By/Date** - Supriya Joshi, Jul, 2025

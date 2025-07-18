@@ -74,3 +74,13 @@ In order to view this dashboard one has to search for and click on the **Oracle 
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
       ![fusion-enterprise-dashboard](images/fusion-enterprise-dashboard.jpg)         
 
+
+**Congratulations!** In this lab, you have successfuly completed the following tasks:
+- Monitoring different dashboards
+
+You may now proceed to the [next lab](#next).
+
+## Acknowledgements
+* **Author** - Supriya Joshi, OCI Logging Analytics
+* **Contributors** -  Supriya Joshi, Jolly kundu, Kumar Varun, Royce Fu
+* **Last Updated By/Date** - Supriya Joshi, Jul, 2025
