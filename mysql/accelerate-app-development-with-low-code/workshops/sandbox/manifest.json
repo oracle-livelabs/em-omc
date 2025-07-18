@@ -23,6 +23,16 @@
             "filename": "../../d-lab-three-json-functions/json.md"
         },
         {
+            "title": "Use of Full Text Search in MySQL",
+            "description": "Use of Full Text Search in MySQL",
+            "filename": "../../e-lab-four-text-search/fulltextsearch.md"
+        },
+        {
+            "title": "Encryption and Compression Functions in MySQL ",
+            "description": "Encryption and Compression Functions in MySQL ",
+            "filename": "../../f-lab-five-encryption-compression/encryptioncompression.md"
+        },
+        {
               "title": "Need Help?",
               "description": "Solutions to Common Problems and Directions for Receiving Live Help",
               "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"

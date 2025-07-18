@@ -44,11 +44,12 @@ If you want to use MySQL Enterprise Edition in a production environment, you wil
 
 In this lab, you will be guided through the following steps:
 
-1. A
-2. Install MySQL Enterprise Edition (Developer Download from Oracle Technology Network (OTN))
-3. Install Sample Database Sakila
-4. Create and configure JavaScript stored program  / Function
-5. Deploy Sample application using Sakila data and MySQL JavaScript Function
+1. Connect to MySQL Shell Extension for Visual Studio Code
+2. Create relational databases
+3. Expose data using MySQL Rest Service
+4. Use Javascript stored programs inside MySQL
+5. Encryption and Compression
+6. Run full-text search queries
 
 You may now **proceed to the next lab**
 

@@ -2,32 +2,41 @@
 
 ## Introduction
 
-JavaScript is the most popular programming language among developers.  Besides the simpler syntax and the support for modern language features, a key factor in it's popularity is the rich ecosystem which provides a multitude of reusable code modules.
+In this workshop, we'll explore how MySQL's native JSON data type simplifies flexible schema design and modern application development. MySQL allows storing, querying, and modifying JSON objects efficiently using built-in functions, without needing external parsing logic. With support for indexing JSON keys, developers can achieve fast lokkups and filters on semi-structured data. We'll demonstrate how these capabilities streamline backend logic and help serve frontend ready data directly from the database.
 
-Estimated time: 20 minutes
+Estimated time: 10 minutes
 
 ### Objectives
 
-MySQL-JavaScript unlocks new opportunities in application design that were once constrained by a trade-off. JavaScript stored programs empower developers to sidestep data movement and seamlessly implement advanced data processing logic inside the database with ease.
+* Create products table
+* Insert products with varying specifications
+* Query and update JSON fields
+* Build API Response like JSON
+* Index on JSON keys for performance
 
-## Task 1: Create Products table
+## Task 1: Create products table
 
-1. Use FinanceDB.
-
-      ![Selecting Ops Insights](./images/finance-db.png " ")
-
-2. Create products table using the following query.
+1. In a new connected shell, you can now connect to the database **FinanceDB** using the following command and click on run button on the top navigation bar to execute the query.
 
      ```
-     <copy>CREATE TABLE products (id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(100), price DECIMAL(10, 2), specs JSON);</copy>
+     <copy>use FinanceDB;</copy>
+     ```
+     ![Create Table](./images/finance-db.png " ")
+
+2. Create **products** table with id, name, price and a specs column using the native JSON type using the following query and clicking on run button on the top navigation bar to execute the query.
+
+     ```
+     <copy>CREATE TABLE products (
+          id INT AUTO_INCREMENT PRIMARY KEY, 
+          name VARCHAR(100), 
+          price DECIMAL(10, 2), 
+          specs JSON);</copy>
      ```
      ![Create Table](./images/products-table.png " ")
 
-3. Developer Productivity Benefit: No need to ALTER TABLE when specs change.
+## Task 2: Insert products with Varying Specs
 
-## Task 2: Insert Products with Varying Specs
-
-1. Flexibility: No need to create new columns or tables for screen, battery, etc.
+1. Insert records into the products table to demonstrate how different products can have unique set of specifications without altering the table structure.
 
     ```
      <copy>INSERT INTO products (name, price, specs) VALUES
@@ -37,50 +46,55 @@ MySQL-JavaScript unlocks new opportunities in application design that were once 
     ```
     ![Insert Records](./images/insert-records.png " ")
 
-5. Select records from the products table.
+2. Retrieve all product records including the JSON specifications. There is no need to create new columns or tables for screen, battery etc.
 
      ```
      <copy>SELECT * from products;</copy>
      ```
      ![Create Table](./images/select-products.png " ")
 
-## Task 3: Query Specific JSON Fields
+## Task 3: Query and Update Specific JSON Fields
 
-1. Simpler API development: JSON query is aligned with how frontend expects data.
+1. Retrieve each product's name along with its Operating System (OS) by querying the corresponding JSON key inside the specs column.
 
      ```
      <copy>SELECT name, specs->>'$.OS' AS OS FROM products;</copy>
      ```
      ![Create Table](./images/query-json.png " ")
 
-## Task 4: Update JSON Field
-
-1. Targeted updates without rewriting entire row or column structure.
+2. Update a specification (RAM) within the JSON specs column for **Laptop A**, demonstrating how targeted JSON updates eliminate the need to alter the table schema when product specifications change.
 
      ```
      <copy>UPDATE products SET specs = JSON_SET(specs, '$.RAM', '32GB') WHERE name = 'Laptop A';</copy>
      ```
      ![Create Table](./images/update-record.png " ")
 
-2. Select records from the products table.
+3. Select all rows from the product table to confirm the specs JSON field reflects the RAM update.
 
      ```
      <copy>SELECT * from products;</copy>
      ```
      ![Create Table](./images/updated-products.png " ")
 
-## Task 5: Build API Response-like JSON
+## Task 4: Build JSON like API Response
 
-1. Fast JSON response for APIs — no need for backend transformations.
+1. Using JSON_OBJECT(), selected fields, and aliases to format query into ready-to-use JSON structures. This reduces backend transformation logic that would lead to faster JSON response for APIs.
+
+2. Run the following query to see how the response looks when using JSON_OBJECT().
 
      ```
-     <copy>UPDATE products SET specs = JSON_SET(specs, '$.RAM', '32GB') WHERE name = 'Laptop A';</copy>
+     <copy>SELECT JSON_ARRAYAGG(
+          JSON_OBJECT('id', id, 'name', name, 'price', price, 'specs', specs)
+          AS product_catalog FROM products;
+     )</copy>
      ```
      ![Create Table](./images/api-response.png " ")
 
-## Task 6: Add a Functional Index on a JSON Key (for Performance)
+## Task 5: Add a Functional Index on a JSON Key (for Performance)
 
-1. Fast JSON response for APIs — no need for backend transformations.
+1. We can create virtual/generated columsn that would extract key from specs (e.g., OS), and index them.
+
+2. This improves filtering and searching performance for API endpoints querying JSON data.
 
      ```
      <copy>CREATE INDEX idx_os ON products ((JSON_UNQUOTE(specs→'$.OS')));;</copy>
