@@ -124,4 +124,4 @@ In Conclusion, OPSI Exadata Insights provides comprehensive capacity analysis to
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Feb 2025
+- **Last Updated By/Date** - Vivek Verma, Jul 2025
