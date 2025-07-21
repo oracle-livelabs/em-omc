@@ -82,5 +82,5 @@ You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
 * **Author** - Supriya Joshi, OCI Logging Analytics
-* **Contributors** -  Supriya Joshi, Jolly kundu, Kumar Varun, Royce Fu
+* **Contributors** -  Supriya Joshi, Jolly Kundu, Kumar Varun, Royce Fu
 * **Last Updated By/Date** - Supriya Joshi, Jul, 2025
