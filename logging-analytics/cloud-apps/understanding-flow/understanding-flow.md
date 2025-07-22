@@ -2,15 +2,15 @@
 
 ## Introduction
 
-<To Do>
+To Do
 
-Estimated Time: <To Do>
+Estimated Time: To Do
 
 ### Objectives
 
-## Task 1: <To Do>
+## Task 1: To Do
 
-## Task 2: <To Do>
+## Task 2: To Do
 
 You may now proceed to the [next lab](#next).
 ## Acknowledgements

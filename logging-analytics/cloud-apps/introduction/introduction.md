@@ -1,15 +1,15 @@
-# Logging Analytics Overview <To Do>
+# Logging Analytics Overview To Do
 ## Introduction
 
-<To Do>
+To Do
 
-Estimated Workshop Time: <To Do>
+Estimated Workshop Time: To Do
 
 ### Objectives
 
 In this workshop, you will learn how to:
 
-<To Do>          
+To Do          
 
 
 ### Prerequisites
@@ -19,11 +19,11 @@ This lab assumes you have:
 * Oracle.com SSO account.
 * Understanding of Logging Analytics concepts.
 * Familiarity with OCI Console.
-<To Do>
+To Do
 
 ## Learn More
 
-<To Do>
+To Do
 
 
 ## Acknowledgements

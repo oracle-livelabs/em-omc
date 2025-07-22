@@ -71,7 +71,7 @@ After the PO is submitted, the initial status becomes **Pending Approval**. The 
 
 ## Task 3: Validate data in Log Analytics
 
-<To Do>
+To Do
 
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:

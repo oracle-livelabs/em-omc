@@ -2,16 +2,16 @@
 
 ## Introduction
 
-<To Do>
+To Do
 
-Estimated Time: <To Do>
+Estimated Time: To Do
 
 ### Objectives
-<To Do>
+To Do
 
-## Task 1: <To Do>
+## Task 1: To Do
 
-## Task 2: <To Do>
+## Task 2: To Do
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
 - TO DO
