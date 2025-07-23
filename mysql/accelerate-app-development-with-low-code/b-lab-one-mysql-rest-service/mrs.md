@@ -2,11 +2,13 @@
 
 ## Introduction
 
-Modern development demands tools that minimize context switching and improve efficiency. The MySQL Shell extension for Visual Studio Code makes that possible by bringing powerful database interaction directly into the developer's workspace. With seamless support for connecting, querying, and scripting in SQL, Javascript, and TypeScript - all inside the familiar VS Code environment - it helps developers stay focused and productive.
+Modern application development demands tools that reduce context switching and improve developer productivity. The MySQL Shell extension for Visual Studio Code brings powerful database interaction directly into your development workspace.
 
-In this lab, you'll learn how to connect to a MySQL DB system using the MySQL Shell extension in Visual Studio Code. This setup is especially useful if you are working in a development environment and prefer using VS code interface to manage your database.
+With seamless support for SQL, Javascript, and TypeScript right inside the familiar VS Code environment developers can connect, query, and script against MySQL databases without ever leaving their IDE.
 
-Estimated time: 20 minutes
+In this lab, you'll learn how to connect to a MySQL DB system using the MySQL Shell extension in Visual Studio Code. This setup is especially useful if you are working in a development environment and prefer using VS code interface to manage your databases.
+
+Estimated time: 25 minutes
 
 ### Objectives
 
@@ -70,7 +72,7 @@ Estimated time: 20 minutes
 
     ![Query Output](./images/query-output.png " ")
 
-12. You can also connect to your MySQL DB system from the left bar navigation by clicking on the **notebook** icon.
+12. You can also connect to your MySQL DB system from the left bar navigation by clicking on the **notebook** icon beside the connection name.
 
     ![Notebook Connection](./images/notebook-connection.png " ")
 
@@ -110,14 +112,14 @@ Estimated time: 20 minutes
      ```
      ![Insert Records](./images/insert-records.png " ")
 
-4. You can view records of the table using the following query.
+4. Retrieve all the records from the employee table using the following query.
 
      ```
      <copy>SELECT * from employee;</copy>
      ```
      ![View Records](./images/view-records.png " ")
 
-5. Here is the output of the query that got executed.
+5. Here is the output of the query where it lists all the records from employee table.
 
     ![View Table](./images/view-table.png " ")
 
@@ -125,70 +127,70 @@ Estimated time: 20 minutes
 
 1. To configure a MySQL DB system for MRS, right click on the MySQL Rest Service database connection and select **Configure Instance for MySQL REST Service Support** from the popup menu. This step will create the MRS metadata schema that will store all metadata information about the REST services.
 
-     ![Launch VS Code](./images/configure-mrs.png " ")
+     ![Configure MRS](./images/configure-mrs.png " ")
 
 2. After MRS has been configured, a new REST Service can be added. Expand MySQL Rest Service database connection to right click the MySQL REST Service entry and select **Add REST Service**.
 
-     ![Launch VS Code](./images/add-rest-service.png " ")
+     ![Add Rest Service](./images/add-rest-service.png " ")
 
 3. Fill in the Rest Service Path as **/HRService** and Rest Service Name as **HRService** and click on **OK**.
 
-     ![Launch VS Code](./images/add-rest-service-details.png " ")
+     ![Enter Details](./images/add-rest-service-details.png " ")
 
 4. Once created, you will see HRService Rest Service under MySQL Rest Service entry.
 
-     ![Launch VS Code](./images/rest-service-added.png " ")
+     ![Added Rest Service](./images/rest-service-added.png " ")
 
 5. To add a MySQL database schema to the MRS Service with MySQL Shell for VS Code, simply right click on schema **HRDB** in the DATABASE CONNECTIONS view and select **Add Schema to REST Service** from the popup menu.
 
-     ![Launch VS Code](./images/add-schema.png " ")
+     ![Add Schema](./images/add-schema.png " ")
 
 6. Once clicked, a new dialog window appears to fill the required details. Once filled, click on OK to add schema to the REST service.
 
-     ![Launch VS Code](./images/add-schema-rest.png " ")
+     ![Add Rest Schema](./images/add-schema-rest.png " ")
 
 7. In the next step, a MySQL table can be added. Right click on the table **employee** in the DATABASE CONNECTIONS view and select **Add Database Object to REST Service** from the popup menu.
 
-     ![Launch VS Code](./images/add-data-object-schema.png " ")
+     ![Add Data Object](./images/add-data-object-schema.png " ")
 
 8. A new dialog box appears to fill the required details.
 
-     ![Launch VS Code](./images/add-data-object-schema-1.png " ")
+     ![Add Data Object Schema](./images/add-data-object-schema-1.png " ")
 
 9. Ensure the desired **CRUD** operations are selected (READ is selected by default) and uncheck **Requires Authentication flag** to make the object publicly available.
 
-     ![Launch VS Code](./images/add-data-object-schema-2.png " ")
+     ![Add Data Object Schema](./images/add-data-object-schema-2.png " ")
 
 10. The MySQL Shell for VS Code extension ships with the **MySQL Router** included and can be used to bootstrap and starting the MySQL Router. Right click the MySQL REST Service tree item and select **Boostrap Local MySQL Router Instance**.
 
-     ![Launch VS Code](./images/bootstrap-instance.png " ")
+     ![Bootstrap Instance](./images/bootstrap-instance.png " ")
 
 11. It opens the terminal where you can enter DB Connection's password as **Welcome$1** and JSON Web Token (JWT) secret as **Welcome$1**. Please note that this JWT secret always needs to be the same for every MySQL Router instance when deploying multiple routers for the same MySQL solution.
 
-     ![Launch VS Code](./images/bootstrap-user.png " ")
+     ![Bootstrap User](./images/bootstrap-user.png " ")
 
-     ![Launch VS Code](./images/jwt-secret.png " ")
+     ![JWT Secret](./images/jwt-secret.png " ")
 
 12. As soon as the MySQL Router is bootstrapped, right click the MySQL Rest service tree item and click on **Start Local MySQL Router Instance**.
 
-     ![Launch VS Code](./images/start-local-instance.png " ")
+     ![Start Local Instance](./images/start-local-instance.png " ")
 
 13. Now that a MySQL REST Service has been created and the MySQL Router has been started we can access the REST endpoints with a web browser.
 
-    ![Launch VS Code](./images/started-local-instance.png " ")
+    ![Started Local Instance](./images/started-local-instance.png " ")
 
 14. Access the APIs using the URL **https://mysql-lab:8447/HRService/HRDB/employee**.
 
-     ![Launch VS Code](./images/chrome-output.png " ")
+     ![Output](./images/chrome-output.png " ")
 
 15. Adding a Primary Key value to the **request path (e.g. /1)** will filter the result to a single data set.
 Adding offset and limit as query parameters allow you to page the full data set. The default page size can be set in the REST Schema and REST Object settings.
 
-     ![Launch VS Code](./images/employee-1.png " ")
+     ![Employees](./images/employee-1.png " ")
 
 16. For further details you can right click MySQL Rest service tree and click on **Browse the MySQL Rest Service Documentation**.
 
-     ![Launch VS Code](./images/documentation.png " ")
+     ![Documentation](./images/documentation.png " ")
 
 ## Acknowledgements
 

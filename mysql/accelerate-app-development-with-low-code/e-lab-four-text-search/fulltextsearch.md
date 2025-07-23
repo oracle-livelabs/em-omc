@@ -1,4 +1,4 @@
-# Use of Full Text Search in MySQL
+# Full Text Search in MySQL
 
 ## Introduction
 
@@ -25,7 +25,10 @@ This lab introduces full-text search capabilities in MySQL and shows how they ca
 
 1. In a new connected shell, you can now connect to the database **FinanceDB** using the following command and click on run button on the top navigation bar to execute the query.
 
-      ![Selecting Ops Insights](./images/finance-db.png " ")
+     ```
+     <copy>use FinanceDB;</copy>
+     ```
+     ![Use FinanceDB](./images/finance-db.png " ")
 
 2. Define an article table with columns id, title, content with content and title having a FULLTEXT index.
 
@@ -39,7 +42,7 @@ This lab introduces full-text search capabilities in MySQL and shows how they ca
      ```
      ![Create Table](./images/articles-table.png " ")
 
-## Task 2: Insert some articles
+## Task 2: Insert articles
 
 1. Populate the table with multiple articles containing natural language text for testing search.
 
@@ -64,13 +67,13 @@ FROM articles
 WHERE MATCH(title, content) AGAINST('full-text search' IN NATURAL LANGUAGE MODE)
 ORDER BY relevance DESC;</copy>
      ```
-     ![Create Table](./images/natural-language.png " ")
+     ![Natural Language](./images/natural-language.png " ")
 
 2. MySQL's natural language mode ranks results based on relevance where it analyzes the significance of words across the dataset, not just presence.
 
 3. Here is the output of the query using natural language which are based on relevance.
 
-     ![Selecting Ops Insights](./images/natural-language-output.png " ")
+     ![MLE Output](./images/natural-language-output.png " ")
 
 ## Task 4: Boolean Mode Search
 
@@ -84,11 +87,11 @@ FROM articles
 WHERE MATCH(title, content)
 AGAINST('+MySQL +JSON' IN BOOLEAN MODE);</copy>
      ```
-     ![Create Table](./images/boolean-search.png " ")
+     ![Boolean Search](./images/boolean-search.png " ")
 
 3. Here is the output of the query using boolean mode search. Results are filtered, not ranked by relevance in the same way as natural language mode.
 
-     ![Selecting Ops Insights](./images/boolean-search-output.png " ")
+     ![Boolean Search Output](./images/boolean-search-output.png " ")
 
 4. You will notice that the returned articles contain both MySQL and JSON either in content or title showing how Boolean logic refines results.
 

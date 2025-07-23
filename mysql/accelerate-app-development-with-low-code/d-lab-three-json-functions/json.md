@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this workshop, we'll explore how MySQL's native JSON data type simplifies flexible schema design and modern application development. MySQL allows storing, querying, and modifying JSON objects efficiently using built-in functions, without needing external parsing logic. With support for indexing JSON keys, developers can achieve fast lokkups and filters on semi-structured data. We'll demonstrate how these capabilities streamline backend logic and help serve frontend ready data directly from the database.
+In this workshop, we'll explore how MySQL's native JSON data type simplifies flexible schema design and modern application development. MySQL allows storing, querying, and modifying JSON objects efficiently using built-in functions, without needing external parsing logic. With support for indexing JSON keys, developers can achieve fast lookups and filters on semi-structured data. We'll demonstrate how these capabilities streamline backend logic and help serve frontend ready data directly from the database.
 
 Estimated time: 10 minutes
 
@@ -21,15 +21,15 @@ Estimated time: 10 minutes
      ```
      <copy>use FinanceDB;</copy>
      ```
-     ![Create Table](./images/finance-db.png " ")
+     ![Use FinanceDB](./images/finance-db.png " ")
 
 2. Create **products** table with id, name, price and a specs column using the native JSON type using the following query and clicking on run button on the top navigation bar to execute the query.
 
      ```
      <copy>CREATE TABLE products (
-          id INT AUTO_INCREMENT PRIMARY KEY, 
-          name VARCHAR(100), 
-          price DECIMAL(10, 2), 
+          id INT AUTO_INCREMENT PRIMARY KEY,
+          name VARCHAR(100),
+          price DECIMAL(10, 2),
           specs JSON);</copy>
      ```
      ![Create Table](./images/products-table.png " ")
@@ -51,7 +51,7 @@ Estimated time: 10 minutes
      ```
      <copy>SELECT * from products;</copy>
      ```
-     ![Create Table](./images/select-products.png " ")
+     ![Select Products](./images/select-products.png " ")
 
 ## Task 3: Query and Update Specific JSON Fields
 
@@ -60,21 +60,22 @@ Estimated time: 10 minutes
      ```
      <copy>SELECT name, specs->>'$.OS' AS OS FROM products;</copy>
      ```
-     ![Create Table](./images/query-json.png " ")
+     ![Query JSON records](./images/query-json.png " ")
 
 2. Update a specification (RAM) within the JSON specs column for **Laptop A**, demonstrating how targeted JSON updates eliminate the need to alter the table schema when product specifications change.
 
      ```
-     <copy>UPDATE products SET specs = JSON_SET(specs, '$.RAM', '32GB') WHERE name = 'Laptop A';</copy>
+     <copy>UPDATE products SET specs = JSON_SET(specs, '$.RAM', '32GB') 
+     WHERE name = 'Laptop A';</copy>
      ```
-     ![Create Table](./images/update-record.png " ")
+     ![Update records](./images/update-record.png " ")
 
 3. Select all rows from the product table to confirm the specs JSON field reflects the RAM update.
 
      ```
      <copy>SELECT * from products;</copy>
      ```
-     ![Create Table](./images/updated-products.png " ")
+     ![Update Products](./images/updated-products.png " ")
 
 ## Task 4: Build JSON like API Response
 
@@ -85,21 +86,21 @@ Estimated time: 10 minutes
      ```
      <copy>SELECT JSON_ARRAYAGG(
           JSON_OBJECT('id', id, 'name', name, 'price', price, 'specs', specs)
-          AS product_catalog FROM products;
-     )</copy>
+          )
+     AS product_catalog FROM products;
+     </copy>
      ```
-     ![Create Table](./images/api-response.png " ")
+     ![API Response](./images/api-response.png " ")
 
 ## Task 5: Add a Functional Index on a JSON Key (for Performance)
 
-1. We can create virtual/generated columsn that would extract key from specs (e.g., OS), and index them.
+1. We can create virtual/generated columns that would extract key from specs (e.g., OS), and index them.
 
 2. This improves filtering and searching performance for API endpoints querying JSON data.
 
      ```
      <copy>CREATE INDEX idx_os ON products ((JSON_UNQUOTE(specs→'$.OS')));;</copy>
      ```
-     ![Create Table](./images/update-record.png " ")
 
 ## Acknowledgements
 

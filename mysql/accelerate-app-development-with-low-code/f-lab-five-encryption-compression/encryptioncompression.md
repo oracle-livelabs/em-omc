@@ -41,14 +41,14 @@ By the end of this lab, you'll be able to:
      <copy>INSERT INTO users (name, ssn_encrypted)
 VALUES ('Alice', AES_ENCRYPT('123-45-6789', 'secretkey'));</copy>
      ```
-     ![Create Table](./images/insert-records.png " ")
+     ![Insert Records](./images/insert-records.png " ")
 
 4. Execute the following query to fetch all records to observe how encrypted data is stored where it appears as unreadable binary content.
 
      ```
      <copy>SELECT * FROM users;</copy>
      ```
-     ![Create Table](./images/select-records.png " ")
+     ![Select Records](./images/select-records.png " ")
 
 5. This query decrypts the ssn_encrypted field using AES\_DECRYPT() function and same secret key. CONVERT() function is used to convert it to readable text.
 
@@ -56,11 +56,11 @@ VALUES ('Alice', AES_ENCRYPT('123-45-6789', 'secretkey'));</copy>
      <copy>SELECT name, CONVERT(AES_DECRYPT(ssn_encrypted, 'secretkey') USING utf8mb4)
      AS ssn FROM users;</copy>
      ```
-     ![Create Table](./images/select-statement.png " ")
+     ![Select Statement](./images/select-statement.png " ")
 
 6. Here is the output of the decryption function where the output ssn is a readable text.
 
-    ![Create Table](./images/decrypted-data.png " ")
+    ![Decrypted Data](./images/decrypted-data.png " ")
 
 7. It is ideal for protecting sensitive data such as Personally Identifiable Information (PII), credit card, or credentials.
 
@@ -81,7 +81,7 @@ VALUES ('Alice', AES_ENCRYPT('123-45-6789', 'secretkey'));</copy>
     password_has CHAR(64)
 );</copy>
      ```
-     ![Create Table](./images/login-table.png " ")
+     ![Login Table](./images/login-table.png " ")
 
 3. Insert records into the table where we store the password as a **one-way secure hash**, which cannot be decrypted, ensuring password security.
 
@@ -89,14 +89,14 @@ VALUES ('Alice', AES_ENCRYPT('123-45-6789', 'secretkey'));</copy>
      <copy>INSERT INTO login (username, password_hash)
 VALUES ('Alice', SHA2('Welcome$1', 256));</copy>
      ```
-     ![Create Table](./images/insert-sha2-records.png " ")
+     ![Isnert Records](./images/insert-sha2-records.png " ")
 
 4. View the stored username and corresponding hashed password. Notice that the password appears as a 64-character hash string.
 
      ```
      <copy>SELECT * FROM login;</copy>
      ```
-     ![Create Table](./images/select-sha2-records.png " ")
+     ![Select Records](./images/select-sha2-records.png " ")
 
 ## Task 3: COMPRESS() and UNCOMPRESS()
 
@@ -122,28 +122,28 @@ VALUES ('Alice', SHA2('Welcome$1', 256));</copy>
      <copy>INSERT INTO documents (title, content_compressed)
 VALUES ('PolicyDoc', COMPRESS(REPEAT('This is a very large block of text. ', 50)));</copy>
      ```
-     ![Create Table](./images/insert-compress-records.png " ")
+     ![Insert Records](./images/insert-compress-records.png " ")
 
 4. Display raw binary content stored in the table. It cannot be read without decompression.
 
      ```
      <copy>SELECT * FROM documents;</copy>
      ```
-     ![Create Table](./images/select-compress-records.png " ")
+     ![Select Records](./images/select-compress-records.png " ")
 
 5. Retrieve the original text from the compressed binary data using UNCOMPRESS() function.
 
      ```
      <copy>SELECT title, UNCOMPRESS(content_compressed) AS content from documents;</copy>
      ```
-     ![Create Table](./images/select-decompress-record.png " ")
+     ![Decompress Records](./images/select-decompress-record.png " ")
 
-6. COnvert decompressed content to readable UTF-8 text to ensure proper character encoding when displaying the decompressed string.
+6. Convert decompressed content to readable UTF-8 text to ensure proper character encoding when displaying the decompressed string.
 
      ```
      <copy>SELECT title, CONVERT(UNCOMPRESS(content_compressed) USING utf8mb4) AS content from documents;</copy>
      ```
-     ![Create Table](./images/converted-record.png " ")
+     ![Converted Records](./images/converted-record.png " ")
 
 7. Use COMPRESS() for storing large, repetitive content to save space in storage or transmission and UNCOMPRESS() to display the compressed content.
 
@@ -161,7 +161,7 @@ VALUES ('PolicyDoc', COMPRESS(REPEAT('This is a very large block of text. ', 50)
      ```
      <copy>SELECT * FROM documents;</copy>
      ```
-     ![Create Table](./images/select-blob-records.png " ")
+     ![Select Records](./images/select-blob-records.png " ")
 
 3. This query returns the size in bytes of the compressed data and the size of the original data after decompression, helping you to quantify storage savings.
 
@@ -171,11 +171,11 @@ VALUES ('PolicyDoc', COMPRESS(REPEAT('This is a very large block of text. ', 50)
      LENGTH(CONVERT(UNCOMPRESS(content_compressed) USING utf8mb4)) AS decompressed_size
      FROM documents WHERE title='PolicyDoc';</copy>
      ```
-     ![Create Table](./images/check-length.png " ")
+     ![Check Length](./images/check-length.png " ")
 
 4. Here is the output of the query executed to compare the size of the compressed data and the original data after decompression.
 
-    ![Create Table](./images/length-reduction.png " ")
+    ![Length Reduction](./images/length-reduction.png " ")
 
 5. It shows how compression reduces storage requirements for large text data directly in MySQL, without needing external tools.
 
