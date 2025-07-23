@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Logging Analytics. We have simulated HeatWave MySQL DB systems, so you don't need to set up or use one from your cloud account.
+This workshop consists of three lab exercises organized to familiarize you with key capabilities of Oracle Cloud services, including Database Management, Ops Insights and Log Analytics. We have simulated HeatWave MySQL DB systems, so you don't need to set up or use one from your cloud account.
 
 Estimated Time: 60 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 60 minutes
 
 * Use Oracle Cloud Infrastructure (OCI) Database Management to monitor the HeatWave MySQL DB systems
 * Use Ops Insights for Capacity Planning and Database Insights
-* Use Logging Analytics to collect and analyze database logs, such as the General Query log, Audit log, and others
+* Use Log Analytics to collect and analyze database logs, such as the General Query log, Audit log, and others
 
 ## Task 1: Heatwave MySQL Database
 
@@ -32,11 +32,11 @@ Oracle Cloud **Observability and Management Platform** provides full-stack visib
 
     *For more information on Ops Insights for HeatWave MySQL please refer to Ops Insights > **[Use Ops Insights for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/operations-insights/home.htm)***
 
-* Logging Analytics
+* Log Analytics
 
-    Oracle Cloud Infrastructure (OCI) Logging Analytics is a cloud solution that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor log data from applications and system infrastructure-both in the cloud and on-premises. It can extract database instance records based on SQL queries provided in the log source configuration. In this lab, you'll learn how to use the Oracle Cloud Logging Analytics to enrich log data collected from the world's most popular open source database-MySQL.
+    Oracle Cloud Infrastructure (OCI) Log Analytics is a cloud solution that lets you index, enrich, aggregate, explore, search, analyze, correlate, visualize and monitor log data from applications and system infrastructure-both in the cloud and on-premises. It can extract database instance records based on SQL queries provided in the log source configuration. In this lab, you'll learn how to use the Oracle Cloud Log Analytics to enrich log data collected from the world's most popular open source database-MySQL.
 
-    *For more information on Logging Analytics and log Explorer please refer to Logging Analytics > **[Use Logging Analytics for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/oracle-defined-sources.html)***
+    *For more information on Log Analytics and log Explorer please refer to Log Analytics > **[Use Log Analytics for HeatWave MySQL](https://docs.oracle.com/en-us/iaas/logging-analytics/doc/oracle-defined-sources.html)***
 
 ## Acknowledgements
 
