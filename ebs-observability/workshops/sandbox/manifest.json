@@ -1,0 +1,51 @@
+{
+    "workshoptitle": "Observability and Management for Oracle E-Business Suite",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../a-introduction/introduction.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "Getting Started",
+            "filename": "../../b-environment-setup/environment-setup.md"
+        },
+        {
+            "title": "Visibility into the EBS Stack",
+            "description": "Visibility into the EBS Stack",
+            "filename": "../../c-lab-one-stack-monitoring/stackmon.md"
+        },
+        {
+            "title": "Application Performance Management",
+            "description": "Application Performance Management",
+            "filename": "../../d-lab-two-apm/apm.md"
+        },
+        {
+            "title": "Managing SQL and Database Performance",
+            "description": "Managing SQL and Database Performance",
+            "filename": "../../e-lab-three-database-management/dbm.md"
+        },
+        {
+            "title": "Analyzing EBS Logs",
+            "description": "Analyzing EBS Logs",
+            "filename": "../../f-lab-four-log-analytics/loganalytics.md"
+        },
+        {
+            "title": "Capacity Planning for EBS Resources",
+            "description": "Capacity Planning for EBS Resources",
+            "filename": "../../g-lab-five-ops-insights/opsi.md"
+        },
+        {
+            "title": "EBS Admin Dashboard",
+            "description": "EBS Admin Dashboard",
+            "filename": "../../h-lab-six-custom-dashboards/admin-dashboard.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
