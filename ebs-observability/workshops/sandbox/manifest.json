@@ -18,8 +18,8 @@
             "filename": "../../c-lab-one-stack-monitoring/stackmon.md"
         },
         {
-            "title": "Application Performance Management",
-            "description": "Application Performance Management",
+            "title": "EBS Application Performance Management",
+            "description": "EBS Application Performance Management",
             "filename": "../../d-lab-two-apm/apm.md"
         },
         {
@@ -28,8 +28,8 @@
             "filename": "../../e-lab-three-database-management/dbm.md"
         },
         {
-            "title": "Analyzing EBS Logs",
-            "description": "Analyzing EBS Logs",
+            "title": "Insights from EBS Logs",
+            "description": "Insights from EBS Logs",
             "filename": "../../f-lab-four-log-analytics/loganalytics.md"
         },
         {
@@ -40,7 +40,7 @@
         {
             "title": "EBS Admin Dashboard",
             "description": "EBS Admin Dashboard",
-            "filename": "../../h-lab-six-custom-dashboards/admin-dashboard.md"
+            "filename": "../../h-lab-six-admin-dashboard/admin-dashboard.md"
         },
         {
             "title": "Need Help?",

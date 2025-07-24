@@ -14,7 +14,7 @@ Estimated time: 10 minutes
 
 ## Task 1: Viewing EBS Application Transactions
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Trace Explorer**.
+1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Trace Explorer** (under the Application Performance Monitoring section). 
 
       ![Selecting APM Trace Explorer](./images/setup/apm-nav.png " ")
 

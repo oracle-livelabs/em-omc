@@ -14,7 +14,7 @@ Estimated time: 10 minutes
 
 ## Task 1: EBS Resources Dashboard
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Stack Monitoring**.
+1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Stack Monitoring** (under the Application Performance Monitoring section). 
 
      ![Selecting Stack Monitoring](./images/setup/stack-monitoring-nav.png " ")
 
@@ -125,11 +125,7 @@ Estimated time: 10 minutes
 
      ![Long Running Concurrent Request Metric Extension](./images/metric-extensions/long-running-conc-requests.png " ")
 
-3. You can also choose a time period from the last **60 minutes, 24 hours, or 7 days** to view the metrics.
-
-     ![Time Selection](./images/select-more-time.png " ")
-
-4. Click **Close** on the bottom to exit the Metric Extension details panel.
+3. Click **Close** on the bottom to exit the Metric Extension details panel.
 
 
 ## Acknowledgements
