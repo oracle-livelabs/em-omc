@@ -1,23 +1,23 @@
-# Logging Analytics
+# Log Analytics
 
 ## Introduction
 
-In this lab, you will learn how to use the Oracle Cloud Logging Analytics service to collect and analyze log data directly from the MySQL log files such as the General Query log and Error log to gain deeper insights into database activity.
+In this lab, you will learn how to use the Oracle Cloud Log Analytics service to collect and analyze log data directly from the MySQL log files such as the General Query log and Error log to gain deeper insights into database activity.
 
 Estimated Lab Time: 20 minutes
 
 ### Objectives
 
-* Learn OCI Logging Analytics fundamentals in the context of log collection from an Application architecture hosted on top of MySQL Database
-* Learn to analyse, monitor, troubleshoot, and derive knowledge from the collected log data using Logging Analytics' Machine Learning features such as Cluster and Link
+* Learn OCI Log Analytics fundamentals in the context of log collection from an Application architecture hosted on top of MySQL Database
+* Learn to analyse, monitor, troubleshoot, and derive knowledge from the collected log data using Log Analytics' Machine Learning features such as Cluster and Link
 * Real-Time Monitoring and Alerting for Database Events
 * Learn to create and use monitoring dashboards
 
 ## Task 1: Getting Familiar with Log Explorer
 
-1. To access Logging Analytics, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left corner. Under **Observability & Management**, navigate to **Logging Analytics**.
+1. To access Log Analytics, click on the Oracle Cloud Console **Navigation menu** (aka hamburger menu) located in the upper left corner. Under **Observability & Management**, navigate to **Log Analytics**.
 
-     ![Selecting Logging Analytics](./images/navigation.png " ")
+     ![Selecting Log Analytics](./images/navigation.png " ")
 
 2. Click on **Administration** from the tab on the top beside Home.
 
@@ -79,7 +79,7 @@ Estimated Lab Time: 20 minutes
 
      ![Line](./images/cluster-analysis.png " ")
 
-2. You can drill down into different Clusters, Potential Issues, Outliers and Trends. Logging Analytics uses unsupervised ML to find related clusters in data. This reduces the approximately 500,000 log records to 500 cluster patterns, in real time.
+2. You can drill down into different Clusters, Potential Issues, Outliers and Trends. Log Analytics uses unsupervised ML to find related clusters in data. This reduces the approximately 500,000 log records to 500 cluster patterns, in real time.
 
       *Note: The numbers you see might be slightly different than the ones shown in the workshop. You can use the START time **March 4, 2025 06:17 PM UTC(-07:00)** and END time **March 18, 2025 06:17 PM UTC(-07:00)** in the time picker to replicate these in your lab environment.*
 
@@ -137,9 +137,9 @@ Estimated Lab Time: 20 minutes
 
 ## Task 5: Real-Time Monitoring and Alerting for Database Events
 
-1. Logging analytics can seamlessly integrate with **log files** from External MySQL DB systems, enabling the capture and analysis of logs such as **error** and **general logs**.
+1. Log analytics can seamlessly integrate with **log files** from External MySQL DB systems, enabling the capture and analysis of logs such as **error** and **general logs**.
 
-2. The **error logs** are used to track critical events such as primary key violations and server errors, while the **general logs** capture all SQL queries like INSERT, UPDATE, and DELETE executed on the server. These log files are forwarded to OCI Logging Analytics, enabling monitoring and analysis of logs for any issues or suspicious activities, with the ability to create alarms based on specific patterns.
+2. The **error logs** are used to track critical events such as primary key violations and server errors, while the **general logs** capture all SQL queries like INSERT, UPDATE, and DELETE executed on the server. These log files are forwarded to OCI Log Analytics, enabling monitoring and analysis of logs for any issues or suspicious activities, with the ability to create alarms based on specific patterns.
 
 3. We've gone through all the steps for working with the **error logs**. Now, you can follow the same steps for the **general logs** to analyze query patterns, spot any issues, and setup alerts for anything unusual that might affect performance.
 
@@ -163,7 +163,7 @@ Estimated Lab Time: 20 minutes
 
       ![General Log HeatMap](./images/general-logs-heatmap.png " ")
 
-8. OCI Logging Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
+8. OCI Log Analytics allows setting up **alarms** for critical database events, enabling real-time monitoring and alerting for potential security risks.
 
       ![Alarms Setup](./images/alarm-setup.png " ")
 
