@@ -10,9 +10,9 @@ Estimated Time: 60 minutes
 
 * Use OCI Stack Monitoring to monitor the health of EBS stack components such as Concurrent Processing, WebLogic, EBS Forms, OA-Core, and more.
 * Use OCI Application Performance Monitoring (APM) to monitor application transactions, gain insights into the user experience, and proactively monitor EBS service availability.
-* Use OCI Database Management to monitor the performance of databases and SQLs in an EBS environemnt.
+* Use OCI Database Management to monitor the performance of databases and SQLs in an EBS environment.
 * Use OCI Log Analytics to analyze EBS and WebLogic logs, such as Concurrent Manager logs, WebLogic Server logs, and more.
-* Use OCI Ops Insights for host and databse Capacity Planning, as well as Database Insights.
+* Use OCI Ops Insights for host and database Capacity Planning, as well as Database Insights.
 
 
 ## Task 1: Oracle E-Business Suite (EBS)
