@@ -71,7 +71,8 @@
 3. To view the metric history of this detection rule, click on the **View In Metric Explorer** button. This will open a new tab in OCI Monitoring's Metric Explorer. Once the metric chart loads, change the time window to last 30 days. 
 
     ![Metric Explorer Navigation](./images/detection-rules/metric-explorer-nav.png " ")
-    ![Metric Explorer 30 Days](./images/detection-rules/detection-rule.png " ")
+    ![Metric Explorer](./images/detection-rules/metric-explorer.png " ")
+    ![Metric Explorer 30 Days](./images/detection-rules/metric-explorer-30-days.png " ")
 
 4. Return to the detection rule tab and click on the **Error ID Word Cloud** hyperlink to view the search query used for the detection rule. 
 
@@ -95,7 +96,7 @@
 2. Explore the following EBS dashboards by clicking on their links:
 
     #### E-Business Suite Infra & Tech Stack
-    ![EBS Components Dashboard](./images/dashboards/ebs-components-dashboard.png " ")
+    ![EBS Components Dashboard](./images/dashboards/ebs-infra-dashboard.png " ")
 
     #### E-Business Suite - Components
     ![EBS Components Dashboard](./images/dashboards/ebs-components-dashboard.png " ")

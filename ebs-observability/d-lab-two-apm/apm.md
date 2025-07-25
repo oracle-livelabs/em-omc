@@ -44,7 +44,8 @@ Estimated time: 10 minutes
 
 8. Close the Span Details and Trace Details by clicking **Close** on the bottom-left. The Trace Explorer has multiple out-of-box queries that you can view at the top of the Trace Explorer. Click on the **Operations** query to see a view of traces grouped by the the operation performed in the EBS environment. Click on the count hyperlink to view all the spans for that specific operation.
 
-      ![Operations View](./images/trace-explorer/span-details.png " ")
+      ![Closing Span and Trace View](./images/trace-explorer/closing-span-and-trace-details.png " ")
+      ![Operation Traces](./images/trace-explorer/operations-traces.png " ")
       ![Spans for a Specific Operation](./images/trace-explorer/operation-spans.png " ")
 
 ## Task 2: Understanding the End-User Experience
@@ -68,15 +69,11 @@ Estimated time: 10 minutes
 
 ## Taks 3: Service Availability Monitoring
 
-1. On the left pane, click on **Availability Monitoring** to navigate to the dashboard of synthetic tests (called monitors) in this EBS environment. 
-
-      ![Availability Monitoring](./images/availability-monitoring/availability-monitoring-dashboard.png " ")
-
-2. To view a specific monitor, click on the hyperlink in the Availability table. In this case, we will explore the **EBS-Login** monitor. 
+1. On the left pane, click on **Availability Monitoring** to navigate to the dashboard of synthetic tests (called monitors) in this EBS environment. To view a specific monitor, click on the hyperlink in the Availability table. In this case, we will explore the **EBS-Login** monitor. 
 
       ![Availability Monitoring](./images/availability-monitoring/availability-monitor-nav.png " ")
-
-3. The Monitor Details page provides an overview of the monitor setup along with a history of the test exetions that it ran. For each of the monitor executions in the history table, you can view important details such:
+      
+2. The Monitor Details page provides an overview of the monitor setup along with a history of the test exetions that it ran. For each of the monitor executions in the history table, you can view important details such:
 
       * Traces for that specific execution
       * HTTP Archive (HAR) breakdown
@@ -85,31 +82,31 @@ Estimated time: 10 minutes
 
       ![Availability Monitor Details](./images/availability-monitoring/availability-monitor-details.png " ")
 
-4. Click on **View Trace Details** to view the traces for the monitor execution.
+3. Click on **View Trace Details** to view the traces for the monitor execution.
 
       ![Monitor Traces Navigation](./images/availability-monitoring/traces-nav.png " ")
       ![Monitor Traces](./images/availability-monitoring/traces.png " ")
 
-5. Click on **View HAR** to open the HTTP Archive viewer for the monitor execution.
+4. Click on **View HAR** to open the HTTP Archive viewer for the monitor execution.
 
       ![Monitor HAR Navigation](./images/availability-monitoring/har-nav.png " ")
       ![Monitor HAR](./images/availability-monitoring/har-viewer.png " ")
 
-6. Click on **View Screenshots** to view the captured screenshots for the monitor execution.
+5. Click on **View Screenshots** to view the captured screenshots for the monitor execution.
 
       ![Monitor Screenshots Navigation](./images/availability-monitoring/screenshots-nav.png " ")
       ![Monitor Screenshots](./images/availability-monitoring/screenshots.png " ")
 
-7. Click on **View Network Data** to view the network details for the monitor execution.
+6. Click on **View Network Data** to view the network details for the monitor execution.
 
       ![Monitor Network Details Navigation](./images/availability-monitoring/network-nav.png " ")
       ![Monitor Network Details](./images/availability-monitoring/network-data.png " ")
 
-8. To view metrics for the monitor, click on **Metrics** in the left pane.
+7. To view metrics for the monitor, click on **Metrics** in the left pane.
 
       ![Monitor Metrics Navigation](./images/availability-monitoring/metrics-nav.png " ")
 
-9. The metrics view provides important information such as availability, execution failures, latency, and more. Users are able to create alarms for those metrics to recieve proactive alerts and implement remediation steps.
+8. The metrics view provides important information such as availability, execution failures, latency, and more. Users are able to create alarms for those metrics to recieve proactive alerts and implement remediation steps.
 
       ![Monitor Metrics](./images/availability-monitoring/metrics.png " ")
 

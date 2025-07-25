@@ -112,16 +112,16 @@
     ![AWR Explorer Navigation](./images/database-performance/awr-explorer-nav.png " ")
 
 2. View the various sections of AWR Explorer:
-    * ### Load Profile
+    * *Load Profile*
     ![AWR Explorer Load Profile](./images/database-performance/awr-explorer-load-profile.png " ")
 
-    * ### Metrics
+    * *Metrics*
     ![AWR Explorer Metrics](./images/database-performance/awr-explorer-metrics.png " ")
 
-    * ### Wait Events
+    * *Wait Events*
     ![AWR Explorer Wait Events](./images/database-performance/awr-explorer-wait-events.png " ")
 
-    * ### Activity
+    * *Activity*
     ![AWR Explorer Activity](./images/database-performance/awr-explorer-activity.png " ")
 
 
