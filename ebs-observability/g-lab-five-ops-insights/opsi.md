@@ -55,9 +55,18 @@
     ![Capacity Dashboard Navigation](./images/capacity-planning/capacity-dashboard-nav.png " ")
     ![Capacity Dashboard](./images/capacity-planning/capacity-dashboard.png " ")
 
-2. You can explore other Ops Insights demo dashboards by searching for **Demo** in the Management Dashboards page (Optional)
+2. You can explore other Ops Insights demo dashboards by searching for **Demo** in the Management Dashboards page - *Optional*
 
     ![Ops Insights Demo Dashboards](./images/capacity-planning/ops-insights-demo-dashboards.png " ")
+
+    #### Database Performance Dashboard
+
+    ![Ops Insights Configuration Dashboard](./images/capacity-planning/demo-database-performance-dashboard.png " ")
+
+    #### Configuration Dashboard
+
+    ![Ops Insights Configuration Dashboard](./images/capacity-planning/demo-configuration-dashboard.png " ")
+
 
 ## Acknowledgements
 
