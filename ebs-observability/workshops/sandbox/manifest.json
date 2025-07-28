@@ -23,14 +23,14 @@
             "filename": "../../d-lab-two-apm/apm.md"
         },
         {
-            "title": "Managing SQL and Database Performance",
-            "description": "Managing SQL and Database Performance",
-            "filename": "../../e-lab-three-database-management/dbm.md"
-        },
-        {
             "title": "Insights from EBS Logs",
             "description": "Insights from EBS Logs",
-            "filename": "../../f-lab-four-log-analytics/loganalytics.md"
+            "filename": "../../e-lab-three-log-analytics/loganalytics.md"
+        },
+        {
+            "title": "Managing SQL and Database Performance",
+            "description": "Managing SQL and Database Performance",
+            "filename": "../../f-lab-four-database-management/dbm.md"
         },
         {
             "title": "Capacity Planning for EBS Resources",

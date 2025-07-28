@@ -141,13 +141,13 @@
     ![PDB Selection](./images/database-capacity/pdb-selection.png " ")
     ![Capacity Planning Overview](./images/database-capacity/capacity-planning.png " ")
 
-3. This view utilizes data collected in OCI Ops Insights, and we can navigate to that service from here. For more detailed instructions on how to use Ops Insights, check out the lab called *Capacity Planning for EBS Resources*
+3. This view utilizes data collected in OCI Ops Insights, and we can navigate to that service from here. For more detailed instructions on how to use Ops Insights, check out the next lab called *Capacity Planning for EBS Resources*
 
     ![Ops Insights Links](./images/database-capacity/ops-insights-links.png " ")
 
 ## Task 7: Historical SQL Analysis
 
-1. Click on the **SQL Insights** button at the top to open the Database Analysis page in Ops Insights. We will cover SQL Insights in more details in the *Capacity Planning for EBS Resources* lab
+1. Click on the **SQL Insights** button at the top to open the Database Analysis page in Ops Insights. We will cover SQL Insights in more details in the upcoming *Capacity Planning for EBS Resources* lab.
 
     ![SQL Insights Navigation](./images/sql-insights/sql-insights-nav.png " ")
     ![Databases Analysis in Ops Insights](./images/sql-insights/ops-insights-database-analysis.png " ")
