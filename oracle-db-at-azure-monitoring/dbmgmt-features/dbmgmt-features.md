@@ -1,4 +1,4 @@
-# Exploring Oracle Cloud Infrastructure Database Management for Oracle Database@Azure
+# Explore Oracle Cloud Infrastructure Database Management for Oracle Database@Azure
 
 ## Introduction
 
@@ -224,5 +224,5 @@ Oracle Database Management offers comprehensive monitoring and management capabi
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025
 

@@ -1,4 +1,4 @@
-# Exploring Oracle Cloud Infrastructure Ops Insights for Oracle Database@Azure
+# Explore Oracle Cloud Infrastructure Ops Insights for Oracle Database@Azure
 
 ## Introduction
 
@@ -106,5 +106,4 @@ OCI Ops Insights enables administrators to uncover performance issues, forecast 
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
-
+- **Last Updated By/Date** - Royce Fu, July 2025

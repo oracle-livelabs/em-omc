@@ -184,6 +184,50 @@ Provide the credentials for the database connection
     
     ![Enable Multicloud Cloud Database](./images/odaa-enable-cloud-db2.png "Enable Multicloud Cloud Database")
 
+## Task 6: Check Monioring metrics for Oracle Database@Azure Exadata VM Cluster and the Databases in OCI Console and Azure Portal
+
+### Check Oracle Database@Azure Monioring metrics in OCI Console
+- Navigate to the **Oracle Database@Azure Exadata VM Cluster Details** page
+- Click the **Resources menu** on the left
+- Click the **Metrics** link, you can see the metrics for the Exadata VM Cluster metrics under **oci\_database\_cluster** metric namespace.
+
+
+     ![Exadata VM Cluster Metrics](./images/odaa-exadata-vm-cluster-metrics.png "Exadata VM Cluster Metrics")
+
+- Navigate to the **Databases** Resources link, click the database you want to monitor the metrics
+- Click the **Metrics** link, you can see the metrics for the database metrics under **oci\_database\_instance** metric namespace.
+
+
+     ![Database Metrics](./images/odaa-database-metrics.png "Database Metrics")
+
+- Click **Options** drop down menu, you can select **View query in Metrics Explorer** to view the metrics in the Metrics Explorer page.
+
+     ![OCI Monitoring Metrics Explorer](./images/odaa-metrics-explorer.png "OCI Monitoring Metrics Explorer")
+
+- Page will be redirected to the **OCI Monitoring Service** page, click **Edit Query** to edit the query. In the **Metric name** drop down menu, select the metrics you want to monitor.
+
+
+     ![OCI Monitoring Metrics Explorer Edit Query](./images/odaa-metrics-explorer-edit-query.png "OCI Monitoring Metrics Explorer Edit Query")
+
+### Check Oracle Database@Azure Monioring metrics in Azure Monitor
+
+- Navigate to the **Oracle Database@Azure Exadata VM Cluster Details** page in Azure Portal
+- Click the **Metrics** link under **Monitoring** section, you can see the metrics in Azure Monitor with the Scope set to the Oracle Database@Azure Exadata Infrastructure, Metrics Namespace set to **Oracle Exadata VM Cluster standard metrics**.
+- Select the metric from the **Metric** drop down menu, for example **CPU Utilization**, Aggregation set to **Average**.
+
+     ![Azure Monitor Exadata VM Cluster Metrics](./images/odaa-azure-exadata-vm-cluster-metrics.png "Azure Monitor Exadata VM Cluster Metrics")
+
+- Metric Splitting can be applied to the metric, multiple **Split by** values can be selected from the **Values** drop down menu, for example **Oracle resource name** and **Oracle resource type**.
+
+     ![Azure Monitor Exadata VM Cluster Metrics](./images/odaa-azure-exadata-vm-cluster-metrics-2.png "Azure Monitor Exadata VM Cluster Metrics")
+
+- You can also add second metric to overlay on the first metric, for example **DB Time**.
+
+     ![Azure Monitor Exadata VM Cluster Metrics](./images/odaa-azure-exadata-vm-cluster-metrics-3.png "Azure Monitor Exadata VM Cluster Metrics")
+
+*Note*: CDB and PDB level metrics from metrics namespace **oracle\_oci\_database** are only available in Azure Monitor when **OCI Database Management Service** is enabled for Oracle Database@Azure.
+
+
 ## Conclusion
 
 In this lab, you learned the steps to enable **OCI Database Management Service** for **Oracle Database@Azure** to monitor the key performance and configuration metrics of the fleet of **Oracle Database@Azure** cloud databases. In addition, all the database performance and management tools such as **Performance Hub** and **AWR Explorer** are at your finger tips to support DBAs for their day to day database operations. 
@@ -192,4 +236,4 @@ In this lab, you learned the steps to enable **OCI Database Management Service**
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025

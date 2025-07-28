@@ -1,4 +1,4 @@
-#  Setting up Database Management for Oracle Database@Azure Autonomous Databases
+#  Set up Database Management for Oracle Database@Azure Autonomous Databases
 
 ## Introduction
 
@@ -125,4 +125,4 @@ In the Enable Database Management panel, provide the information:
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud InfrastructureEngineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025

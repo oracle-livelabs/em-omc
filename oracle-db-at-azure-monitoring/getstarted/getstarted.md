@@ -67,4 +67,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure and Engineering
 - **Contributors** -  Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025
