@@ -66,12 +66,50 @@ Estimated time: 10 minutes
 
       ![Real User Monitoring Dashboard](./images/real-user-monitoring/rum-dashboard.png " ")
 
+## Taks 3: Exploring EBS Forms Transactions
 
-## Taks 3: Service Availability Monitoring
+1. Click on the **Dashboards** link in the left pane to view APM dashboards.
 
-1. On the left pane, click on **Availability Monitoring** to navigate to the dashboard of synthetic tests (called monitors) in this EBS environment. To view a specific monitor, click on the hyperlink in the Availability table. In this case, we will explore the **EBS-Login** monitor. 
+      ![APM Dashboards Navigation](./images/forms/dashboards-nav.png " ")
 
-      ![Availability Monitoring](./images/availability-monitoring/availability-monitor-nav.png " ")
+2. In the Management Dashboard page, ensure the compartment is set to **EBS Demo** (emdemo -> eStore -> EBS_Demo), and click on the **EBS Forms View** Dashboard.
+
+      ![EBS Forms Dashboard Navigation](./images/forms/forms-dashboard-nav.png " ")
+
+3. Once the dashboard loads, select the following filters in order to view the Forms data:
+
+      * **Compartment**: EBS Demo (emdemo -> eStore -> EBS_Demo)
+      * **APM Domain**: EBS APM Domain
+      * **Time Filter**: Set to last 60 days. Open the time dropdown on the top-right, click on **Custom**, then set it to 60 days.
+
+      ![EBS Forms Dashboard Setup 1](./images/forms/forms-dashboard-setup-1.png " ")
+      ![EBS Forms Dashboard Setup 2](./images/forms/forms-dashboard-setup-2.png " ")
+
+4. The EBS Forms dashboard should now display data in all the widgets. To view transactions (traces) for a particular Forms session, click on the drill-down icon to the right of the **Forms Sessions** row item.
+
+      ![EBS Forms Dashboard User Session Navigation](./images/forms/forms-dashboard-click-session.png " ")
+      ![EBS Forms Dashboard User Session Traces](./images/forms/forms-user-session-traces.png " ")
+
+5. Close the newly opened tab for viewing session traces. To view tansactions grouped by form name, click on the **EBS Form names** wigdet link. Once the grouped Form names load, click on the span count hyperlink to drill down into those transactions.
+
+      ![EBS Forms Dashboard Form Names Navigation](./images/forms/forms-dashboard-click-form-names.png " ")
+      ![EBS Forms Dashboard Form Name Spans](./images/forms/forms-spans-grouped-form-names.png " ")
+
+6. Select any of the spans to view more information. Notice all the EBS-specific attributes that are being collected in APM.
+
+      ![EBS Forms Dashboard Find Requests](./images/forms/find-request-spans.png " ")
+      ![EBS Forms Dashboard Find Request Span](./images/forms/form-span-details.png " ")
+
+## Taks 4: Service Availability Monitoring
+
+1. Close the Span Details page and use the APM navigation dropdown to navigate to the dashboard of synthetic tests (called monitors) in this EBS environment.
+
+      ![Close Span Details](./images/availability-monitoring/close-span-details.png " ")
+      ![Availability Monitoring Navigation](./images/availability-monitoring/availability-monitoring-nav.png " ")
+
+1. To view a specific monitor, click on the hyperlink in the Availability table. In this case, we will explore the **EBS-Login** monitor. 
+
+      ![Availability Monitoring](./images/availability-monitoring/availability-monitors-home.png " ")
       
 2. The Monitor Details page provides an overview of the monitor setup along with a history of the test exetions that it ran. For each of the monitor executions in the history table, you can view important details such:
 
@@ -109,7 +147,7 @@ Estimated time: 10 minutes
 8. The metrics view provides important information such as availability, execution failures, latency, and more. Users are able to create alarms for those metrics to recieve proactive alerts and implement remediation steps.
 
       ![Monitor Metrics](./images/availability-monitoring/metrics.png " ")
-
+      
 
 ## Acknowledgements
 
