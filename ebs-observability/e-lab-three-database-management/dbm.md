@@ -124,6 +124,33 @@
     * *Activity*
     ![AWR Explorer Activity](./images/database-performance/awr-explorer-activity.png " ")
 
+## Task 6: Viewing Database Capacity Trends
+
+1. To get an overview of capacity trends for a database, we will switch over to the Pluggable Database (PDB). Close the AWR Explorer window, then click on **Oracle Database** breadcrum link at the top.
+
+    ![Exit AWR Explorer](./images/database-capacity/close-awr-explorer.png " ")
+    ![Navigate to Databases](./images/database-capacity/navigate-back-to-databases.png " ")
+
+2. Click on the **PDB (EBS Demo)** link, then click on **Capacity Planning** link in the left pane. This will provide a capacity overview for the following:
+
+    * CPU
+    * Storage
+    * Memory 
+    * I/O
+
+    ![PDB Selection](./images/database-capacity/pdb-selection.png " ")
+    ![Capacity Planning Overview](./images/database-capacity/capacity-planning.png " ")
+
+3. This view utilizes data collected in OCI Ops Insights, and we can navigate to that service from here. For more detailed instructions on how to use Ops Insights, check out the lab called *Capacity Planning for EBS Resources*
+
+    ![Ops Insights Links](./images/database-capacity/ops-insights-links.png " ")
+
+## Task 7: Historical SQL Analysis
+
+1. Click on the **SQL Insights** button at the top to open the Database Analysis page in Ops Insights. We will cover SQL Insights in more details in the *Capacity Planning for EBS Resources* lab
+
+    ![SQL Insights Navigation](./images/sql-insights/sql-insights-nav.png " ")
+    ![Databases Analysis in Ops Insights](./images/sql-insights/ops-insights-database-analysis.png " ")
 
 ## Acknowledgements
 

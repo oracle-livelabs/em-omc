@@ -13,7 +13,11 @@
 
 1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Capacity Planning** (under the Ops Insights section). 
 
-    ![Selecting Diagnostics and Management](./images/setup/ops-insights-nav.png " ")
+    ![Selecting Capacity Planning](./images/setup/ops-insights-nav.png " ")
+
+    **Note:** You can also navigate to Capacity Planning from OCI Database Management, as discussed at the end of the *Managing SQL and Database Performance* lab.
+
+    ![Capacity Planning from Database Management](./images/setup/ops-insights-nav-dbm.png " ")
 
 2. The **root** compartment is selected by default in the Compartment field. Click on the filter icon, set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo), and click **Apply**.
 
@@ -48,7 +52,7 @@
 
     ![Degrading SQL](./images/sql-insights/degrading-sql.png " ")
 
-## Task 3: EBS Capacity Forecasting Dashboards
+## Task 3: Dashboards for EBS Resource Capacity
 
 1. To view the Capacity Dashbord, click on the **Dashboards** link on the left pane. Once you see the list of dashboards, you can search for and click on **OPSI capacity dashboard**.
 
