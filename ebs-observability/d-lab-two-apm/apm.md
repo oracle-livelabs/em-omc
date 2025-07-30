@@ -32,7 +32,7 @@ Estimated time: 10 minutes
 
 5. The Trace Details page provides a topology view of the calls made in that trace. Hover over the topology items and arrows to view metrics regarding services used and call duration.
 
-      ![Trace Details 1](./images/trace-explorer/trace-details.png " ")
+      ![Trace Details 1](./images/trace-explorer/trace-details-1.png " ")
 
 6. Below the topology view, is a waterfall view of all the calls made within the trace (called spans). Scroll through the spans until you find the one which errored. Error spans have a red exclamation icon which identifies them. Click on the hyperlink for the erroring span.
 
@@ -80,7 +80,7 @@ Estimated time: 10 minutes
 
       * **Compartment**: EBS Demo (emdemo -> eStore -> EBS_Demo)
       * **APM Domain**: EBS APM Domain
-      * **Time Filter**: Set to last 60 days. Open the time dropdown on the top-right, click on **Custom**, then set it to 60 days.
+      * **Time Filter**: Set to last 180 days. Open the time dropdown on the top-right, click on **Custom**, then set it to 180 days.
 
       ![EBS Forms Dashboard Setup 1](./images/forms/forms-dashboard-setup-1.png " ")
       ![EBS Forms Dashboard Setup 2](./images/forms/forms-dashboard-setup-2.png " ")

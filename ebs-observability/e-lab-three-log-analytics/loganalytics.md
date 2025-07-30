@@ -53,7 +53,7 @@
 
 9. Click on the count hyperlink for one of the highlighted issues to drill-down further. This will tak you to the relevant log records.
 
-    ![Issues Logs Drilldown Navigation](./images/log-explorer/issues-drilldown-nav.png " ")
+    ![Issues Logs Drilldown Navigation](./images/log-explorer/issue-drilldown-nav.png " ")
     ![Issues Logs Drilldown](./images/log-explorer/issue-drilldown.png " ")
 
 ## Task 2: Automatically Detecting Error Logs
