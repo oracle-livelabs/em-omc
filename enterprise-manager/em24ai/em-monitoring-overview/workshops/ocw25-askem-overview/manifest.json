@@ -1,11 +1,11 @@
 {
-  "workshoptitle": "Enterprise Manager Fundamentals: Monitoring Quick Tour",
+  "workshoptitle": "Oracle Enterprise Manager 24ai: Powered by GenAI",
   "help": "livelabs-help-em_us_grp@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
       "description": "Introduction to Enterprise Monitoring workshop",
-      "filename": "./../../intro/intro-monitoring-overview.md"
+      "filename": "./../../intro/ocw25-intro-ask-em.md"
     },
     {
       "title": "Get Started with noVNC Remote Desktop",

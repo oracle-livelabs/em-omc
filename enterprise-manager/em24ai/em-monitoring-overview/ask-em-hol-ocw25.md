@@ -1,6 +1,6 @@
 # Oracle Enterprise Manager 24ai: Powered by GenAI
 ## Introduction
-In today’s fast-paced IT environment, administrators and DBAs face challenges in managing complex systems while ensuring availability and performance. Join this Hands-On Lab to learn about the new modernized Enterprise Manager 24ai platform that supports Zero Downtime (ZDT) Monitoring. Explore the new EM 24 features such as the new remote agents that will streamline monitoring across your host and database fleet. Converse with the GenAI (Ask EM) assistant to ask questions in natural language and quickly get answers and visual insights for more informed decision making. Check out our latest enhancements to Event Compression and Dynamic Runbooks. 
+In today’s fast-paced IT environment, administrators and DBAs face challenges in managing complex systems while ensuring availability and performance. Try out this Hands-On Lab to learn about the new modernized Enterprise Manager 24ai platform that supports Zero Downtime (ZDT) Monitoring. Explore the new EM 24 features such as the new remote agents that will streamline monitoring across your host and database fleet. Converse with the GenAI (Ask EM) assistant to ask questions in natural language and quickly get answers and visual insights for more informed decision making. Check out our latest enhancements to Event Compression and Dynamic Runbooks. 
 
 ### Objectives
 The objective of this lab is to become familiar with the new modernized Enterprise Manager 24ai platform.
@@ -46,7 +46,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Documentation Tab](ask-em-images/ask-em/ask-em-doc.png " ")
 
-5. In the Documentation tab, type in the question below and  hit \<enter\>:
+5. In the Documentation tab, type in the question below and  hit `<`enter`>`:
 
     **What are the new monitoring features in em24ai?**  
 
@@ -332,7 +332,11 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
 11.	View the graph for a visual breakdown of the compression. 
 
-12.	The **navy bars** represent the number of incidents when Event Compression Policies were not enabled. The **orange bars** represent number of incidents if compression policies were used. The **gray line** represents the number of real events analyzed.
+12.	The **navy bars** represent the number of incidents when Event Compression Policies were not enabled. 
+
+    The **orange bars** represent number of incidents if compression policies were used. 
+    
+    The **gray line** represents the number of real events analyzed.
 
     ![Analysis bar](ask-em-images/event-compression-analysis/analysis-bar.png " ")
 
