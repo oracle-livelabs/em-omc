@@ -18,9 +18,8 @@ By the end of this lab, you'll be able to:
 
 * Installation of MySQL Connector/Python and Connector/J
 * Connecting to MySQL from Python and Java
-* Creating Tables via Code Execution
+* Creating Database tables
 * Verifying Database Changes in MySQL
-* Following Security and Best Practice Guidelines
 
 ## Task 1: Using MySQL Connector with Python
 
