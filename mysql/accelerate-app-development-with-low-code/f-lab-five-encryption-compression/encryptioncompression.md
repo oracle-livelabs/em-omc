@@ -15,7 +15,7 @@ By the end of this lab, you'll be able to:
 * compress and decompress text using COMPRESS() and UNCOMPRESS() to save space
 * Compare byte size using LENGTH() to evaluate compression impact
 
-## Task 1: AES\_ENCRYPT() and AES\_DECRYPT()
+## Task 1: AES_ENCRYPT() and AES_DECRYPT()
 
 1. In a new connected shell, you can now connect to the database **HRDB** using the following command and click on run button on the top navigation bar to execute the query. This will switch to the HRDB database.
 

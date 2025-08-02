@@ -14,7 +14,8 @@ Throughout this guided session, you'll work through a series of practical tasks 
 
 - Creating and deploying RESTful applications using MySQL REST Services for seamless data access over HTTP
 - Key MySQL features such as JSON support, Full-Text Search, Encryption, and Compression to help you develop secure and flexible solutions
-- Using JavaScript Stored Procedures to add server-side logic and integrate MySQL with full-stack applications using Java and Python connectors
+- Using JavaScript Stored Procedures to add server-side logic and integrate MySQL with full-stack applications
+- Using MySQL Connectors in Python and Java
 - Exploring how to rapidly build low-code apps with Oracle APEX using MySQL REST Services endpoints
 
 By the end of this workshop, you'll have a solid foundation in MySQL Enterprise Edition and be able to start building your own databases and applications with low code. Our goal is to provide you with a comprehensive and practical introduction to MySQL Enterprise Edition.
