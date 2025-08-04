@@ -27,7 +27,7 @@ Estimated Time: 30 minutes
 - Compare SQL Performance across databases and identify common patterns
 - Identify SQL performance trends across enterprise-wide databases
 
-## Task 1: Setting Up IAM Policies
+## Task 1: Set Up IAM Policies
 
 Ops Insights requires specific permissions:
 - Create a Group and assign users to the group: Establish a user group for Ops Insights admins.

@@ -12,7 +12,7 @@ Estimated Time: 15 minutes
 -   Uncover database performance issues using SQL Insights and ADDM Spotlight.
 -   Make data-driven decisions to optimize resource use, proactively avoid outages, and improve performance.
 
-## Task 1: Getting Started with Oracle Database@Azure Ops Insights
+## Task 1: Get Started with Oracle Database@Azure Ops Insights
 
 *  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Oracle Exadata Database Service on Dedicated Infrastructure**.
 
