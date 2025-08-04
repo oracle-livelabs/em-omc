@@ -28,9 +28,14 @@
             "filename": "../../e-lab-four-text-search/fulltextsearch.md"
         },
         {
-            "title": "Encryption and Compression Functions in MySQL ",
-            "description": "Encryption and Compression Functions in MySQL ",
+            "title": "Encryption and Compression Functions in MySQL",
+            "description": "Encryption and Compression Functions in MySQL",
             "filename": "../../f-lab-five-encryption-compression/encryptioncompression.md"
+        },
+        {
+            "title": "MySQL Connectors",
+            "description": "MySQL Connectors",
+            "filename": "../../g-lab-six-connectors/connectors.md"
         },
         {
               "title": "Need Help?",
