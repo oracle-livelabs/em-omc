@@ -26,7 +26,7 @@ Here are some of the important tasks you can perform using Diagnostics & Managem
 Understand the Oracle Database@Azure compartment structure: 
 Oracle Database@Azure Exadata Infrastructure is created in the auto-generated compartment with the name matches the Azure Subscription ID. 
     ![Oracle Database@Azure Compartment](./images/odaa-compartment1.png "Oracle Database@Azure Compartment")
-    ![Oracle Database@Azure Compartment](./images/odaa-compartment2.png "Oracle Database@Azure Compartment")
+    ![Oracle Database@Azure Compartment](./images/odaa-oci-console-exadata-page.png "Oracle Database@Azure Compartment")
 
 ### Add Required IAM Policies
 
@@ -90,6 +90,7 @@ The database user password checks in Database Management require the password to
 - Click **Create Vault**.
 
      ![Multicloud Vault](./images/odaa-vault1.png "Multicloud Vault")
+     ![Multicloud Vault](./images/odaa-vault2.png "Multicloud Vault")
 
 - Click the vault **OnM_vault**
 - On the Vault Details page, click **Create Key**. 
@@ -188,19 +189,19 @@ Provide the credentials for the database connection
 
 ### Check Oracle Database@Azure Monioring metrics in OCI Console
 - Navigate to the **Oracle Database@Azure Exadata VM Cluster Details** page
-- Click the **Resources menu** on the left
+- Click the **Monitoring** tab
 - Click the **Metrics** link, you can see the metrics for the Exadata VM Cluster metrics under **oci\_database\_cluster** metric namespace.
 
 
      ![Exadata VM Cluster Metrics](./images/odaa-exadata-vm-cluster-metrics.png "Exadata VM Cluster Metrics")
 
-- Navigate to the **Databases** Resources link, click the database you want to monitor the metrics
-- Click the **Metrics** link, you can see the metrics for the database metrics under **oci\_database\_instance** metric namespace.
+- Navigate to the **Databases** tag, click the database you want to monitor the metrics
+- Click the **Monitoring** tab, you can see the metrics for the database metrics under **oci\_database** metric namespace.
 
 
      ![Database Metrics](./images/odaa-database-metrics.png "Database Metrics")
 
-- Click **Options** drop down menu, you can select **View query in Metrics Explorer** to view the metrics in the Metrics Explorer page.
+- Click **...** from the metric widget, you can select **View query in Metrics Explorer** to view the metrics in the Metrics Explorer page.
 
      ![OCI Monitoring Metrics Explorer](./images/odaa-metrics-explorer.png "OCI Monitoring Metrics Explorer")
 

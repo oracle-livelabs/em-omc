@@ -38,7 +38,7 @@ Estimated Time: 10 minutes
 
 - You will be redirected to the Oracle Cloud Console Exadata Infrastructure Details page.
 
-    ![OCI Console Exadata Infrastructure Details](./images/oci-console-exadata-page.png "OCI Console Exadata Infrastructure Details")
+    ![OCI Console Exadata Infrastructure Details](./images/odaa-oci-console-exadata-page.png "OCI Console Exadata Infrastructure Details")
 
 ## Task 2: Log in to Oracle Cloud
 
