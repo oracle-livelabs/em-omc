@@ -57,7 +57,7 @@ Assign proper IAM permissions
 - **Secret Contents**: Enter the ADBSNMP or ADMIN user password
 - Click **Create Secret**.
     
-     ![Multicloud ADB secret](./images/odaa-odaa-adb-secret.png "Multicloud ADB secret")
+     ![Multicloud ADB secret](./images/odaa-adb-secret.png "Multicloud ADB secret")
 
 ## Task 2: Configure network access between Database Management and the Autonomous Database
 
@@ -69,7 +69,7 @@ Assign proper IAM permissions
 
 - **Add ingress and egress security rules** (TCP protocol, port 1521 or 1522) to NSG in the VCN to enable communication between the Database Management private endpoint and the Autonomous Database. If an NSG is not available, create one and add ingress and egress security rules on TCP protocol with a port used for JDBC for the subnet IP CIDR.
 
-     ![Multicloud ADB Security List](./images/odaa-odaa-adb-securitylist.png "Multicloud ADB Security List")
+     ![Multicloud ADB Security List](./images/odaa-adb-securitylist.png "Multicloud ADB Security List")
 
 - Note that if the Autonomous Database and the Database Management private endpoint are not in the same subnet, you must:
     - Replace the JDBC port constraint with All on the non-database end.
