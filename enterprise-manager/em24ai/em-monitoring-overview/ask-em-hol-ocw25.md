@@ -16,9 +16,9 @@ This lab assumes you have:
 | **Task Number** | **Feature**  | **Approx. Time** | **Details**                                                                                                                                                                                                                   
   |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**  | Using the Remote Agent                             | 15 minutes       |     Understand how to add a remote host to a remote agent for monitoring.                                                                                                                                                                                                                                                  |
-  | **2A**  | Ask EM Assistant: Monitoring                                | 6 minutes       | Use the Ask EM assistant to get answers to monitoring questions.                                                                                                                                                 
-  | **2B**  | Ask EM Assistant: Database Performance                        | 6 minutes       | Use the Ask EM assistant to get answers to database performance questions.                                                                                                                                                      
-  | **2C**  | Ask EM Assistant: Database Patching and Compliance                              | 6 minutes       | Use the Ask EM assistant to get answers to database patching and compliance questions.  
+  | **2A**  | Ask EM Assistant - Monitoring                                | 6 minutes       | Use the Ask EM assistant to get answers to monitoring questions.                                                                                                                                                 
+  | **2B**  | Ask EM Assistant - Database Performance                        | 6 minutes       | Use the Ask EM assistant to get answers to database performance questions.                                                                                                                                                      
+  | **2C**  | Ask EM Assistant - Database Patching and Compliance                              | 6 minutes       | Use the Ask EM assistant to get answers to database patching and compliance questions.  
 | **3A**  | Event Compression Policies                              | 10 minutes       | View an example of a compressed incident and author your own Event Compression Policy.  
 | **3B**  | Event Compression Analysis                             | 10 minutes       | Test your Event Compression Policy using the Event Compression Analysis tool and enable it for use in Incident Rules.  
 | **4**  | Dynamic Runbooks for Metrics                              | 10 minutes       | Start a Dynamic Runbook session against a metric in the All-Metrics page.  
@@ -83,7 +83,7 @@ The remote agent name is **emrmtagt.livelabs.com**. Here will walkthrough how to
     ![Final Review Screen](ask-em-images/remote-agent/add-remote-host-target-review.png " ")
 
 
-## Task 2A: Ask EM Assistant: Monitoring
+## Task 2A: Ask EM Assistant - Monitoring
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI). 
 
@@ -203,7 +203,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Close Session](ask-em-images/ask-em-monitoring/ask-em-tel13.png " ")
 
-## Task 2B: Ask EM Assistant: Database Performance
+## Task 2B: Ask EM Assistant - Database Performance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
@@ -276,7 +276,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Close Session](ask-em-images/ask-em/ask-em-close.png " ")
 
-## Task 2C: Ask EM Assistant: Database Patching and Compliance
+## Task 2C: Ask EM Assistant - Database Patching and Compliance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
