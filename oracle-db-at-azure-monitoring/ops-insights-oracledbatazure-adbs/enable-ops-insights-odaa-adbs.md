@@ -34,6 +34,7 @@ Ops Insights requires specific permissions:
 - Define Policies: Write policies that grant the group permissions to use Ops Insights features.
 
     ```
+    <copy>
     allow service operations-insights to read autonomous-database-family in tenancy where ALL{request.operation='GenerateAutonomousDatabaseWallet'}
     allow service operations-insights to read secret-family in tenancy where ANY{target.secret.id='<SecretId>'}
     Allow group odaa_dbmgmt-group to manage opsi-family in compartment MulticloudLink_ODBAA_20240105042431
@@ -44,12 +45,15 @@ Ops Insights requires specific permissions:
     Allow group odaa_dbmgmt-group to manage virtual-network-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to read secret-family in compartment MulticloudLink_ODBAA_20240105042431 where any { target.vault.id = 'ocid1.vault.oc1.iad.example}
     Allow service operations-insights to read secret-family in tenancy where any { target.vault.id = 'ocid1.vault.oc1.iad.example' }
+    </copy>
     ```
 
 - Database user permission
 
     ```
+    <copy>
     SQL> GRANT SELECT ANY DICTIONARY, SELECT_CATALOG_ROLE TO DBSNMP;
+    </copy>
     ```
 
 - To enable IAM connections for your Autonomous Databases using the Ops Insights script (recommended method) follow these steps:
@@ -57,7 +61,9 @@ Ops Insights requires specific permissions:
     - Create a dynamic group containing the OPSI resource (for example, iam_admin_dg_grp):
 
     ```
+    <copy>
     All {instance.compartment.id = '<compartmentid>', request.principal.type='opsidatabaseinsight'}
+    </copy>
     ```
 
 **Run the credential creation script, located in MOS note: OCI : Creating the Autonomous Database Monitoring Credentials for Oracle Cloud Operations Insights (Doc ID 2933173.1)**

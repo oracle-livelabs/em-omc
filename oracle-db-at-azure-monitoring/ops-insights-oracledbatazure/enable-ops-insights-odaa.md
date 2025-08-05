@@ -34,6 +34,7 @@ Estimated Time: 30 minutes
 - Define Policies: Write policies that grant the group permissions to use Ops Insights features.
 
     ```
+    <copy>
     Allow group odaa_dbmgmt-group to manage opsi-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to manage management-dashboard-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to use database-family in compartment MulticloudLink_ODBAA_20240105042431
@@ -42,12 +43,15 @@ Estimated Time: 30 minutes
     Allow group odaa_dbmgmt-group to manage virtual-network-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to read secret-family in compartment MulticloudLink_ODBAA_20240105042431 where any { target.vault.id = 'ocid1.vault.oc1.iad.example}
     Allow service operations-insights to read secret-family in tenancy where any { target.vault.id = 'ocid1.vault.oc1.iad.example' }
+    </copy>
     ```
 
 - Database user permission
 
     ```
+    <copy>
     SQL> GRANT SELECT ANY DICTIONARY, SELECT_CATALOG_ROLE TO DBSNMP;
+    </copy>
     ```
 
 ## Task 2: Create Ops Insights Private Endpoint
