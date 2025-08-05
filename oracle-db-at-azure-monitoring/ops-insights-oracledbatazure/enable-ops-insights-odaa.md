@@ -26,7 +26,7 @@ Estimated Time: 30 minutes
 - Compare SQL Performance across databases and identify common patterns
 - Identify SQL performance trends across enterprise-wide databases
 
-## Task 1: Setting Up IAM Policies
+## Task 1: Set Up IAM Policies
 
 **Ops Insights** requires specific permissions:
 
@@ -34,6 +34,7 @@ Estimated Time: 30 minutes
 - Define Policies: Write policies that grant the group permissions to use Ops Insights features.
 
     ```
+    <copy>
     Allow group odaa_dbmgmt-group to manage opsi-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to manage management-dashboard-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to use database-family in compartment MulticloudLink_ODBAA_20240105042431
@@ -42,12 +43,15 @@ Estimated Time: 30 minutes
     Allow group odaa_dbmgmt-group to manage virtual-network-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to read secret-family in compartment MulticloudLink_ODBAA_20240105042431 where any { target.vault.id = 'ocid1.vault.oc1.iad.example}
     Allow service operations-insights to read secret-family in tenancy where any { target.vault.id = 'ocid1.vault.oc1.iad.example' }
+    </copy>
     ```
 
 - Database user permission
 
     ```
+    <copy>
     SQL> GRANT SELECT ANY DICTIONARY, SELECT_CATALOG_ROLE TO DBSNMP;
+    </copy>
     ```
 
 ## Task 2: Create Ops Insights Private Endpoint
@@ -80,7 +84,7 @@ For Ops Insights to communicate with the Oracle Cloud Database, you must add ing
     ![Ops Insights Security List Egress](./images/odaa-securitylistEgress.png "Ops Insights Security List Egress")
 
 
-## Task 4: Enabling Ops Insights for Oracle Database@Azure Exadata fleet 
+## Task 4: Enable Ops Insights for Oracle Database@Azure Exadata fleet 
 
 With a private endpoint defined, you’re ready to add an Exadata Database Service on Dedicated Infrastructure that uses that endpoint. You can add Exadata Database Service on Dedicated Infrastructures from the Private Endpoint Details page or from the Exadata Fleet Administration page.
 

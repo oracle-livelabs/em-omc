@@ -1,4 +1,4 @@
-# Exploring Oracle Cloud Infrastructure Ops Insights for Oracle Database@Azure
+# Explore Oracle Cloud Infrastructure Ops Insights for Oracle Database@Azure
 
 ## Introduction
 
@@ -12,7 +12,7 @@ Estimated Time: 15 minutes
 -   Uncover database performance issues using SQL Insights and ADDM Spotlight.
 -   Make data-driven decisions to optimize resource use, proactively avoid outages, and improve performance.
 
-## Task 1: Getting Started with Oracle Database@Azure Ops Insights
+## Task 1: Get Started with Oracle Database@Azure Ops Insights
 
 *  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Oracle Exadata Database Service on Dedicated Infrastructure**.
 
@@ -106,5 +106,4 @@ OCI Ops Insights enables administrators to uncover performance issues, forecast 
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
-
+- **Last Updated By/Date** - Royce Fu, July 2025

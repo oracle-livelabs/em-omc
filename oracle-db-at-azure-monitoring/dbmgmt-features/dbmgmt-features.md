@@ -1,4 +1,4 @@
-# Exploring Oracle Cloud Infrastructure Database Management for Oracle Database@Azure
+# Explore Oracle Cloud Infrastructure Database Management for Oracle Database@Azure
 
 ## Introduction
 
@@ -17,7 +17,7 @@ Performance Diagnostics
 -   Diagnose database performance issues quickly.
 -   Explore database performance statistics for advanced diagnostics.
 
-## Task 1: Getting Started with Database Management
+## Task 1: Get Started with Database Management
 
 1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Oracle Database**, and select **Oracle Exadata Database Service on Dedicated Infrastructure**.
 
@@ -31,7 +31,7 @@ Performance Diagnostics
 
 2.  The **Databases** tile (on the **Overview** page) displays the total number of Oracle Databases in the compartment and the number of Oracle Databases for which Database Management is enabled.
 
-## Task 2: Monitoring a Fleet of Databases
+## Task 2: Monitor a Fleet of Databases
 
 1.  On the left pane, click **Diagnostic & Management** and then click **Oracle Database** to navigate to the **Oracle Database fleet summary** page. 
 
@@ -54,7 +54,7 @@ Performance Diagnostics
 
 5.  On **Oracle Database fleet summary** page, click the **Performance** tab. The Performance tab displays a tree map of the performance of your Oracle Databases against various database metrics. You can select the metric from the dropdown menu, such as DB time, CPU, Storage, Memory, and I/O. You can also use Group By drop down to group the databases by Type. This view is more useful when you have a large number of databases in the fleet. The databases are displayed as a collection of rectangles in different sizes and colors, in which the size of a rectangle indicates the value of the selected metric and the color indicates the change percentage for the selected metric over the selected time period.
 
-## Task 3: Working with Database Groups
+## Task 3: Work with Database Groups
 
 1.  Login to the Oracle Cloud Console, click the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Database Management**. Under **Diagnostic & Management** submenu **Oracle Database**, click **Database Groups**.
 
@@ -74,7 +74,7 @@ Performance Diagnostics
 
      ![Fleet Summary](./images/odaa-dbm-database-group-fleet-summary-1.png "Fleet Summary")
 
-## Task 4: Monitoring and Managing Individual Oracle Databases@Azure Databases
+## Task 4: Monitor and Managing Individual Oracle Databases@Azure Databases
 
 1.  On the left pane, click **Oracle Database** to navigate to the **Oracle Database fleet summary** page. Scroll down to the **Members** tab on the Fleet Summary page.
 
@@ -104,7 +104,7 @@ Performance Diagnostics
 
      ![PDBs](./images/odaa-dbm-pdb-performance.png "PDBs tab")
 
-## Task 6: Performing Database Performance Diagnostics for the Oracle Database@Azure
+## Task 6: Perform Database Performance Diagnostics for the Oracle Database@Azure
 
 1.  On the left pane **Resources** section, click the **Performance Hub** button. This will launch the **Performance Hub** page. Performance Hub provides a single view of the database’s performance and enables you to perform the rapid diagnosis of its issues.
 
@@ -157,7 +157,7 @@ Performance Diagnostics
      - Identify CPU bound cells and determine cell offload
      - Identify configurations such as versions and disk status
 
-## Task 7: Performing Other Database Performance Diagnostics for the Oracle Database@Azure
+## Task 7: Perform Other Database Performance Diagnostics for the Oracle Database@Azure
 
 1.  You can click one of the other options on the left pane under Resources to perform the following tasks:
 
@@ -224,5 +224,5 @@ Oracle Database Management offers comprehensive monitoring and management capabi
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025
 
