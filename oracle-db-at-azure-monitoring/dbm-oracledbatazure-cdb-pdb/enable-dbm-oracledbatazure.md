@@ -21,7 +21,7 @@ Here are some of the important tasks you can perform using Diagnostics & Managem
 - Use the other available Diagnostics & Management features to monitor, manage, and administer a single Oracle Database.
 - Use dashboards to visualize, explore and analyze database performance metrics.
 
-## Prerequisites
+## Task: Prerequisites
 
 Understand the Oracle Database@Azure compartment structure: 
 Oracle Database@Azure Exadata Infrastructure is created in the auto-generated compartment with the name matches the Azure Subscription ID. 

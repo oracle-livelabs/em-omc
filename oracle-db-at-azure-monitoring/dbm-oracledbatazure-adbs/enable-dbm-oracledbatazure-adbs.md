@@ -12,7 +12,7 @@ Estimated Time: 60 minutes
 
 Set up Database Management to monitor and manage **Oracle Database@Azure Autonomous Database**.
 
-## Prerequisites
+## Task: Prerequisites
 
 Assign proper IAM permissions
 
