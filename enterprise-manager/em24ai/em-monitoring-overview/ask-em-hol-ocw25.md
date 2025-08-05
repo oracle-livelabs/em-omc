@@ -16,9 +16,9 @@ This lab assumes you have:
 | **Task Number** | **Feature**  | **Approx. Time** | **Details**                                                                                                                                                                                                                   
   |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**  | Using the Remote Agent                             | 15 minutes       |     Understand how to add a remote host to a remote agent for monitoring.                                                                                                                                                                                                                                                  |
-  | **2A**  | Ask EM assistant for Monitoring                                | 6 minutes       | Use the Ask EM assistant to get answers to monitoring questions.                                                                                                                                                 
-  | **2B**  | Ask EM assistant for Database Performance                        | 6 minutes       | Use the Ask EM assistant to get answers to database performance questions.                                                                                                                                                      
-  | **2C**  | Ask EM assistant for Database Patching and Compliance                              | 6 minutes       | Use the Ask EM assistant to get answers to database patching and compliance questions.  
+  | **2A**  | Ask EM Assistant: Monitoring                                | 6 minutes       | Use the Ask EM assistant to get answers to monitoring questions.                                                                                                                                                 
+  | **2B**  | Ask EM Assistant: Database Performance                        | 6 minutes       | Use the Ask EM assistant to get answers to database performance questions.                                                                                                                                                      
+  | **2C**  | Ask EM Assistant: Database Patching and Compliance                              | 6 minutes       | Use the Ask EM assistant to get answers to database patching and compliance questions.  
 | **3A**  | Event Compression Policies                              | 10 minutes       | View an example of a compressed incident and author your own Event Compression Policy.  
 | **3B**  | Event Compression Analysis                             | 10 minutes       | Test your Event Compression Policy using the Event Compression Analysis tool and enable it for use in Incident Rules.  
 | **4**  | Dynamic Runbooks for Metrics                              | 10 minutes       | Start a Dynamic Runbook session against a metric in the All-Metrics page.  
@@ -76,16 +76,18 @@ The remote agent name is **emrmtagt.livelabs.com**. Here will walkthrough how to
 
     ![Add remote host to remote agent](ask-em-images/remote-agent/add-remote-host-addition.png " ")
 
-11. On the Add Remote Host Target review screen, verify the details just entered but **do not** click on Submit. 
+11. On the Add Remote Host Target review screen, verify the details just entered.
+
+    **Do not click on Submit.** 
 
     ![Final Review Screen](ask-em-images/remote-agent/add-remote-host-target-review.png " ")
 
 
-## Task 2A: Ask EM assistant for Monitoring
+## Task 2A: Ask EM Assistant: Monitoring
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI). 
 
-Note: For this task, results may vary.
+**Note: For this task, results may vary.**
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
@@ -201,11 +203,11 @@ Note: For this task, results may vary.
 
     ![AskEM Close Session](ask-em-images/ask-em-monitoring/ask-em-tel13.png " ")
 
-## Task 2B: Ask EM assistant for Database Performance
+## Task 2B: Ask EM Assistant: Database Performance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
-Note: For this task, results may vary.
+**Note: For this task, results may vary.**
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
@@ -240,7 +242,7 @@ Note: For this task, results may vary.
 
 5. In the Telemetry tab, ask this question:
 
-    **Is there a spike in average active sessions?**
+    **Is there a spike in average active sessions on my database?**
 
     ![AskEM Telemetry - Spike in Avg Active Sessions](ask-em-images/ask-em-db-perf/spike-aas-1.png " ")
 
@@ -274,11 +276,11 @@ Note: For this task, results may vary.
 
     ![AskEM Close Session](ask-em-images/ask-em/ask-em-close.png " ")
 
-## Task 2C: Ask EM assistant for Database Patching and Compliance
+## Task 2C: Ask EM Assistant: Database Patching and Compliance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
-Note: For this task, results may vary.
+**Note: For this task, results may vary.**
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
@@ -300,7 +302,7 @@ Note: For this task, results may vary.
 
 5. In the Telemetry tab, ask this question:
 
-    **Which databases are subscribed to 19cDB-Linux-x64-Apps19cDB-Linux-x64-Apps?**
+    **Which databases are subscribed to 19cDB-Linux-x64-Apps?**
 
     ![AskEM Telemetry - List of subscribed targets 2](ask-em-images/ask-em-db-patch/em-db-subscribe.png " ")
 
@@ -501,7 +503,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Analysis bar](ask-em-images/event-compression-analysis/analysis-bar.png " ")
 
-13. Click on one of the bars for **Jul 21** to see the exact events mapped from incidents without compression policies to incidents with compression policies.
+13. Click on one of the bars for **Jul 22** to see the exact events mapped from incidents without compression policies to incidents with compression policies.
 
     ![Select one of the analysis bar](ask-em-images/event-compression-analysis/july-21.png " ")
 

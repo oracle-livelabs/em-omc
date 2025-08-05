@@ -19,12 +19,6 @@
       "filename": "./../../ask-em-hol-ocw25.md"
     },
     {
-      "title": "Troubleshoot Enterprise Manager Environment",
-      "description": "How to initialize and start all the workshop components",
-      "publisheddate": "10/14/2020",
-      "filename": "./../../../initialize-environment/initialize-environment.md"
-    },
-    {
       "title": "Appendix: Frequently Asked Questions (FAQ)",
       "description": "Frequently Asked Questions (FAQ) you may refer to when troubleshooting issues encountered while executing above labs",
       "publisheddate": "8/12/2020",
