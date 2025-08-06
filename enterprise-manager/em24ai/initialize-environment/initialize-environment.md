@@ -1,4 +1,4 @@
-# Initialize Environment
+# Troubleshoot Enterprise Manager Environment
 
 ## Introduction
 
