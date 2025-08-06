@@ -10,7 +10,7 @@
         {
             "title": "Getting Started",
             "description": "Getting Started",
-            "filename": "../../b-environment-setup/environment-setup.md"
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
             "title": "Visibility into the EBS Stack",

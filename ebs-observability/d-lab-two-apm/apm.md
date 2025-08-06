@@ -14,35 +14,39 @@ Estimated time: 10 minutes
 
 ## Task 1: Viewing EBS Application Transactions
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Trace Explorer** (under the Application Performance Monitoring section). 
+1. Login to the Oracle Cloud Console and change the selected region to **US East (Ashburn)** region as shown. 
+
+     ![Selecting OCI Region](./images/setup/region-selection.png " ")
+
+2. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Trace Explorer** (under the Application Performance Monitoring section). 
 
       ![Selecting APM Trace Explorer](./images/setup/apm-nav.png " ")
 
-2. The **root** compartment is selected by default in the Compartment field. Set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo).
+3. The **root** compartment is selected by default in the Compartment field. Set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo).
 
       ![Compartment Navigation](./images/setup/apm-compartment-selection.png " ")
 
-3. APM displays a table of all the application transactions (called traces) that it has collected from EBS. 
+4. APM displays a table of all the application transactions (called traces) that it has collected from EBS. 
 
       ![Selecting a Trace](./images/trace-explorer/trace-explorer.png " ")
 
-4. Click on the three dots to the right of a row item to view the details for that trace, then click **Show trace details**. In this case, we chose an **Error** trace. If you don't see Error traces, you can proceed with any trace in the table.
+5. Click on the three dots to the right of a row item to view the details for that trace, then click **Show trace details**. In this case, we chose an **Error** trace. If you don't see Error traces, you can proceed with any trace in the table.
 
       ![Selecting a Trace](./images/trace-explorer/trace-details-nav.png " ")
 
-5. The Trace Details page provides a topology view of the calls made in that trace. Hover over the topology items and arrows to view metrics regarding services used and call duration.
+6. The Trace Details page provides a topology view of the calls made in that trace. Hover over the topology items and arrows to view metrics regarding services used and call duration.
 
       ![Trace Details 1](./images/trace-explorer/trace-details-1.png " ")
 
-6. Below the topology view, is a waterfall view of all the calls made within the trace (called spans). Scroll through the spans until you find the one which errored. Error spans have a red exclamation icon which identifies them. Click on the hyperlink for the erroring span.
+7. Below the topology view, is a waterfall view of all the calls made within the trace (called spans). Scroll through the spans until you find the one which errored. Error spans have a red exclamation icon which identifies them. Click on the hyperlink for the erroring span.
 
       ![Trace Details 2](./images/trace-explorer/trace-details-2.png " ")
 
-7. This opens the Span Details page, highlighting important attributes for that specific span. Scroll down the table until you see the **ErrorMessage** attribute, which shows more details about that error. 
+8. This opens the Span Details page, highlighting important attributes for that specific span. Scroll down the table until you see the **ErrorMessage** attribute, which shows more details about that error. 
 
       ![Span Details](./images/trace-explorer/span-details.png " ")
 
-8. Close the Span Details and Trace Details by clicking **Close** on the bottom-left. The Trace Explorer has multiple out-of-box queries that you can view at the top of the Trace Explorer. Click on the **Operations** query to see a view of traces grouped by the the operation performed in the EBS environment. Click on the count hyperlink to view all the spans for that specific operation.
+9. Close the Span Details and Trace Details by clicking **Close** on the bottom-left. The Trace Explorer has multiple out-of-box queries that you can view at the top of the Trace Explorer. Click on the **Operations** query to see a view of traces grouped by the the operation performed in the EBS environment. Click on the count hyperlink to view all the spans for that specific operation.
 
       ![Closing Span and Trace View](./images/trace-explorer/closing-span-and-trace-details.png " ")
       ![Operation Traces](./images/trace-explorer/operations-traces.png " ")

@@ -15,34 +15,38 @@ Estimated time: 10 minutes
 
 ## Task 1: Enterprise Health and Alarms
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Stack Monitoring** (under the Application Performance Monitoring section). 
+1. Login to the Oracle Cloud Console and change the selected region to **US East (Ashburn)** region as shown. 
+
+     ![Selecting OCI Region](./images/setup/region-selection.png " ")
+
+2. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Stack Monitoring** (under the Application Performance Monitoring section). 
 
      ![Selecting Stack Monitoring](./images/setup/stack-monitoring-nav.png " ")
 
-2. The **root** compartment is selected by default in the Compartment field. Set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo).
+3. The **root** compartment is selected by default in the Compartment field. Set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo).
 
      ![Compartment Navigation](./images/setup/stack-mon-compartment.png " ")
 
-3. The Enterprise Health and Alarms provides an overall health and performance of your entire enterprise. The top tier enables you to quickly identify then triage resources that are **Down** or **Not Reporting** as well as a summary of open alarms across your enterprise.
+4. The Enterprise Health and Alarms provides an overall health and performance of your entire enterprise. The top tier enables you to quickly identify then triage resources that are **Down** or **Not Reporting** as well as a summary of open alarms across your enterprise.
 
      The **Status by resource** type chart enables you to easily identify what tier of your application has availability issues. Each bar represents each tier of the application stack, (e.g., host, database, application server). Using the status colors, you can quickly assess if all resources within that tier are up or identify the tier that has a resource outage. Reporting of an application stack, such as E-Business Suite, PeopleSoft, and Oracle Database systems are unique. Each bar represents an application and its components, this allows you to identify if any individual component of an application is down or not reporting. Should you identify an area of concern with an application, clicking the bar will navigate you to that resource's homepage. 
 
      ![Enterprise Summary Page](./images/ebs-resources/enterprise-summary.png " ")
 
-4. Click on the number hyperlink under the **Alarms** widget. The Alarms region provides a summary of open alarms by severity across the enterprise.
+5. Click on the number hyperlink under the **Alarms** widget. The Alarms region provides a summary of open alarms by severity across the enterprise.
 
      For all of your monitored resources, Stack Monitoring provides quick access to all open alarms. The **Alarms** region provides a total count of open alarms, as well as a count of alarms by severity. Clicking on a count of alarms invokes a slide-out. 
 
      ![Navigating to Triggered Alarms](./images/ebs-resources/all-alarms-nav.png " ")
 
-5. The Alarms slide-out provides greater details of the open alarms and is filtered by the severity count selected. The alarm slide-out provides details of open alarms. 
+6. The Alarms slide-out provides greater details of the open alarms and is filtered by the severity count selected. The alarm slide-out provides details of open alarms. 
 
      These details include the severity, trigger time, resource name, metric name, dimension of the metric in a firing state, current value, and alarm name. The **current value** and **severity** can help DevOps teams prioritize the order the open alerts should be triaged. The table can be ordered by selecting the column title. Clicking the **Resource Name** will navigate you to the resource’s home page to investigate the alarm. Click **Close** to return to the Enterprise Health and Alarms summary.
 
      ![Alarms Window](./images/ebs-resources/all-alarms.png " ")
      ![Alarm Definition Page](./images/ebs-resources/alarm-definition.png " ")
 
-6. The Enterprise Health and Alarms summary is broken down in to tiers. The upper tier, E-Business Suite, provides quick access to key metrics for EBS such as **Completed Requests by Application**, **Concurrent Manager Requests completing with Errors**, and more. 
+7. The Enterprise Health and Alarms summary is broken down in to tiers. The upper tier, E-Business Suite, provides quick access to key metrics for EBS such as **Completed Requests by Application**, **Concurrent Manager Requests completing with Errors**, and more. 
 
      Clicking any plot point invokes a slide-out provides historical performance information as well as a link to the resource to continue the investigation. Further down the page, additional resource types are shown such as WebLogic Servers, Oracle Databases, and hosts.
      

@@ -11,7 +11,11 @@
 
 ## Task 1: Database and Host Resource Planning
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Capacity Planning** (under the Ops Insights section). 
+1. Login to the Oracle Cloud Console and change the selected region to **US East (Ashburn)** region as shown. 
+
+     ![Selecting OCI Region](./images/setup/region-selection.png " ")
+
+2. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Capacity Planning** (under the Ops Insights section). 
 
     ![Selecting Capacity Planning](./images/setup/ops-insights-nav.png " ")
 
@@ -19,22 +23,22 @@
 
     ![Capacity Planning from Database Management](./images/setup/ops-insights-nav-dbm.png " ")
 
-2. The **root** compartment is selected by default in the Compartment field. Click on the filter icon, set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo), and click **Apply**.
+3. The **root** compartment is selected by default in the Compartment field. Click on the filter icon, set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo), and click **Apply**.
 
     ![Compartment Navigation](./images/setup/ops-insights-compartment.png " ")
 
-3. The Capacity planning page provides a snapshot of resource utlization for databases and hosts (databases are selected by default). To view specific utilization trends and forecasts, click on any of the sub-categories (CPU, Storage, Memory, I/O). In this example, we will look at CPU.
+4. The Capacity planning page provides a snapshot of resource utlization for databases and hosts (databases are selected by default). To view specific utilization trends and forecasts, click on any of the sub-categories (CPU, Storage, Memory, I/O). In this example, we will look at CPU.
 
     ![Capacity Planning Database](./images/capacity-planning/capacity-planning-db.png " ")
 
-3. This provides a trend and forecast chart based on historical utilization data. Change the period to **Last 6 months** on the left to see longer-term trends. 
+5. This provides a trend and forecast chart based on historical utilization data. Change the period to **Last 6 months** on the left to see longer-term trends. 
 
     ![Capacity Planning Database](./images/capacity-planning/capacity-planning-db-cpu.png " ")
     ![Capacity Planning Database 6mo](./images/capacity-planning/capacity-planning-db-cpu-6mo.png " ")
 
     *Note:* for seasonal resource utilization, you can click the **Seasonality aware** radio button at the top of the chart. Since this is a demo environment, there won't be much change based on seasonality. 
 
-4. You can perform the same analysis and forecasting on hosts. Click the **Hosts** link on the left pane to veiw capacity for hosts.
+6. You can perform the same analysis and forecasting on hosts. Click the **Hosts** link on the left pane to veiw capacity for hosts.
 
     ![Capacity Planning Hosts](./images/capacity-planning/capacity-planning-host.png " ")
 

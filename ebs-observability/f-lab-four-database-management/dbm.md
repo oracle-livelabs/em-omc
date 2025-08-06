@@ -11,19 +11,23 @@
 
 ## Task 1: Database Overview
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Diagnostics & Management**. 
+1. Login to the Oracle Cloud Console and change the selected region to **US East (Ashburn)** region as shown. 
+
+     ![Selecting OCI Region](./images/setup/region-selection.png " ")
+
+2. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Diagnostics & Management**. 
 
     ![Selecting Diagnostics and Management](./images/setup/dbm-nav.png " ")
 
-2. The **root** compartment is selected by default in the Compartment field. Set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo).
+3. The **root** compartment is selected by default in the Compartment field. Set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo).
 
     ![Compartment Navigation](./images/setup/dbm-compartment-selection.png " ")
 
-3. This is the Fleet Summary page, which provides an overview of the database fleet being monitored. Click on **CDB EBS Demo** to open the database details for the Container Database. 
+4. This is the Fleet Summary page, which provides an overview of the database fleet being monitored. Click on **CDB EBS Demo** to open the database details for the Container Database. 
 
     ![Database Details Navigation](./images/database-performance/diagnostics-and-management.png " ")
 
-4. The Database Details page provides a summary of the monitored database in addition to links for additional insights.
+5. The Database Details page provides a summary of the monitored database in addition to links for additional insights.
 
     ![Database Details](./images/database-performance/cdb-details.png " ")
 

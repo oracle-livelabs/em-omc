@@ -11,37 +11,41 @@
 
 ## Task 1: Visualizing EBS Log Data
 
-1. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Log Explorer** (under the Log Analytics section). 
+1. Login to the Oracle Cloud Console and change the selected region to **US East (Ashburn)** region as shown. 
+
+     ![Selecting OCI Region](./images/setup/region-selection.png " ")
+
+2. Click on the **Navigation Menu** in the upper left, navigate to **Observability & Management**, and select **Log Explorer** (under the Log Analytics section). 
 
     ![Selecting Diagnostics and Management](./images/setup/log-analytics-nav.png " ")
 
-2. The **root** compartment is selected by default in the Compartment field. Click on the filter icon, set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo), and click **Apply**.
+3. The **root** compartment is selected by default in the Compartment field. Click on the filter icon, set the compartment to **EBS Demo** (emdemo -> eStore -> EBS_Demo), and click **Apply**.
 
     ![Compartment Navigation](./images/setup/log-analytics-compartment.png " ")
 
-3. The Log Explorer allows users to query and visualize log data from various sources. By default, logs will be grouped by source in a pie chart visualization. To explore other visualizations, click the dropdown under the **Visualizations** section to the left. Click on the **Word Cloud** visualizaiton. 
+4. The Log Explorer allows users to query and visualize log data from various sources. By default, logs will be grouped by source in a pie chart visualization. To explore other visualizations, click the dropdown under the **Visualizations** section to the left. Click on the **Word Cloud** visualizaiton. 
 
     ![Log Explorer Visualizations](./images/log-explorer/word-cloud-nav.png " ")
 
-4. This will visualize log data as a word cloud, grouped by log source. We can substitute log source with error labels. To do this, remove **Log Source** from the **Group by** input, then drag and drop the **Label** field to the **Group by** input.
+5. This will visualize log data as a word cloud, grouped by log source. We can substitute log source with error labels. To do this, remove **Log Source** from the **Group by** input, then drag and drop the **Label** field to the **Group by** input.
 
     ![Log Explorer Word Cloud](./images/log-explorer/word-cloud.png " ")
 
-5. To look into a specific error label, click on the link of that error in the table, then click **Drill down**. You can do this with any of the errors that show up.
+6. To look into a specific error label, click on the link of that error in the table, then click **Drill down**. You can do this with any of the errors that show up.
 
     ![Log Explorer Word Cloud for Errors](./images/log-explorer/error-word-cloud.png " ")
 
-6. This will provide a table of log records for that specific error. You can expand the log records to view more information.
+7. This will provide a table of log records for that specific error. You can expand the log records to view more information.
 
     ![Null Pointer Log Drilldown](./images/log-explorer/null-pointer-drilldown.png " ")
     ![Null Pointer Log Record](./images/log-explorer/null-pointer-log-record.png " ")
 
-7. To try out one of the ML-based visualization, clear out the query on top, and click apply. Now, click on the visualizations and select the **Issues** visualization
+8. To try out one of the ML-based visualization, clear out the query on top, and click apply. Now, click on the visualizations and select the **Issues** visualization
 
     ![Clearing Log Query](./images/log-explorer/empty-query.png " ")
     ![Issues Logs Navigation](./images/log-explorer/issues-nav.png " ")
 
-8. Change the time window to **7 Days**. The Issues visualization will go through all the log records and find the following from all the collected log records:
+9. Change the time window to **7 Days**. The Issues visualization will go through all the log records and find the following from all the collected log records:
 
     * Newly surfaced issues
     * Outlier log entries
@@ -51,7 +55,7 @@
     ![Issues Logs](./images/log-explorer/issues.png " ")
     ![Issues Logs 7 Days](./images/log-explorer/issues-7-day.png " ")
 
-9. Click on the count hyperlink for one of the highlighted issues to drill-down further. This will tak you to the relevant log records.
+10. Click on the count hyperlink for one of the highlighted issues to drill-down further. This will tak you to the relevant log records.
 
     ![Issues Logs Drilldown Navigation](./images/log-explorer/issue-drilldown-nav.png " ")
     ![Issues Logs Drilldown](./images/log-explorer/issue-drilldown.png " ")
