@@ -1,4 +1,4 @@
-# Enabling Ops Insights for Oracle Database@Azure Autonomous Database
+# Enable Ops Insights for Oracle Database@Azure Autonomous Database
 
 ## Introduction
 
@@ -27,13 +27,14 @@ Estimated Time: 30 minutes
 - Compare SQL Performance across databases and identify common patterns
 - Identify SQL performance trends across enterprise-wide databases
 
-## Task 1: Setting Up IAM Policies
+## Task 1: Set Up IAM Policies
 
 Ops Insights requires specific permissions:
 - Create a Group and assign users to the group: Establish a user group for Ops Insights admins.
 - Define Policies: Write policies that grant the group permissions to use Ops Insights features.
 
     ```
+    <copy>
     allow service operations-insights to read autonomous-database-family in tenancy where ALL{request.operation='GenerateAutonomousDatabaseWallet'}
     allow service operations-insights to read secret-family in tenancy where ANY{target.secret.id='<SecretId>'}
     Allow group odaa_dbmgmt-group to manage opsi-family in compartment MulticloudLink_ODBAA_20240105042431
@@ -44,12 +45,15 @@ Ops Insights requires specific permissions:
     Allow group odaa_dbmgmt-group to manage virtual-network-family in compartment MulticloudLink_ODBAA_20240105042431
     Allow group odaa_dbmgmt-group to read secret-family in compartment MulticloudLink_ODBAA_20240105042431 where any { target.vault.id = 'ocid1.vault.oc1.iad.example}
     Allow service operations-insights to read secret-family in tenancy where any { target.vault.id = 'ocid1.vault.oc1.iad.example' }
+    </copy>
     ```
 
 - Database user permission
 
     ```
+    <copy>
     SQL> GRANT SELECT ANY DICTIONARY, SELECT_CATALOG_ROLE TO DBSNMP;
+    </copy>
     ```
 
 - To enable IAM connections for your Autonomous Databases using the Ops Insights script (recommended method) follow these steps:
@@ -57,7 +61,9 @@ Ops Insights requires specific permissions:
     - Create a dynamic group containing the OPSI resource (for example, iam_admin_dg_grp):
 
     ```
+    <copy>
     All {instance.compartment.id = '<compartmentid>', request.principal.type='opsidatabaseinsight'}
+    </copy>
     ```
 
 **Run the credential creation script, located in MOS note: OCI : Creating the Autonomous Database Monitoring Credentials for Oracle Cloud Operations Insights (Doc ID 2933173.1)**
@@ -114,4 +120,4 @@ To enable one or more Autonomous Databases for Ops Insights, log in to OCI Conso
 
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure Engineering
 - **Contributors** - Royce Fu, Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025
