@@ -40,25 +40,44 @@
     ![Null Pointer Log Drilldown](./images/log-explorer/null-pointer-drilldown.png " ")
     ![Null Pointer Log Record](./images/log-explorer/null-pointer-log-record.png " ")
 
-8. There are powerful machine-learning visualization in Log Analytics which can help with identifying issues from all the logs collected. To try out one of the ML-based visualization, clear out the query on top, and click **Run**. Then click on the visualizations and select the **Issues** visualization.
+## Task 2: ML-Based Log Analysis
 
-    ![Clearing Log Query](./images/log-explorer/empty-query.png " ")
-    ![Issues Logs Navigation](./images/log-explorer/issues-nav.png " ")
+1. There are powerful machine-learning visualization in Log Analytics which can help with identifying issues from all the logs collected. To view the ML-based visualization, clear out the query on top, and click **Run**. Then click on the visualizations and select the **Issues** visualization.
 
-9. Change the time window to **7 Days**. The Issues visualization will go through all the log records and categorize the logs in the following ways:
+    ![Clearing Log Query](./images/ml-analysis/empty-query.png " ")
+    ![Issues Logs Navigation](./images/ml-analysis/issues-nav.png " ")
+
+2. Change the time window to **7 Days**. The Issues visualization will go through all the log records and categorize the logs in the following ways:
 
     * Newly surfaced issues
     * Outlier log entries
 
-    ![Issues Logs](./images/log-explorer/issues.png " ")
-    ![Issues Logs 7 Days](./images/log-explorer/issues-7-day.png " ")
+    ![Issues Logs](./images/ml-analysis/issues.png " ")
+    ![Issues Logs 7 Days](./images/ml-analysis/issues-7-day.png " ")
 
-10. Click on the **Count** hyperlink for one of the highlighted issues to drill-down further. This will tak you to the relevant log records for further exploration.
+3. Click on the **Count** hyperlink for one of the highlighted issues to drill-down further. This will tak you to the relevant log records for further exploration.
 
-    ![Issues Logs Drilldown Navigation](./images/log-explorer/issue-drilldown-nav.png " ")
-    ![Issues Logs Drilldown](./images/log-explorer/issue-drilldown.png " ")
+    ![Issues Logs Drilldown Navigation](./images/ml-analysis/issue-drilldown-nav.png " ")
+    ![Issues Logs Drilldown](./images/ml-analysis/issue-drilldown.png " ")
 
-## Task 2: Automatically Detecting Error Logs
+4. Next, we will create a linked view across various log fields. Click on the the visualizations and select the **Link** visualization.
+
+    ![Link Visualization Navigation](./images/ml-analysis/link-visualization-nav.png " ")
+
+5. Drag and drop the **Label** and **Problem Priority** fields into the **Group by** box, then click **Apply**. This will create a linked view accross the 3 fields selected. To drill down into the individual log records for a given row item, click on the **Count** hyperlink for that row.
+
+    ![Link Visualization Setup](./images/ml-analysis/link-visualization-setup.png " ")
+    ![Link Visualization](./images/ml-analysis/link-visualization.png " ")
+
+6. Finally, we will look at the Cluster visualization, which uses clustering algorithms to group log data. Click on the the visualizations and select the **Cluster** visualization.
+
+    ![Cluster Visualization Navigation](./images/ml-analysis/cluster-visualization-nav.png " ")
+
+7. Select the **Show Problem Logs Only** checkbox, to focus on problematic logs. To drill down into the individual log records for a given cluster, click on the **Count** hyperlink for that row.
+
+    ![Cluster Visualization](./images/ml-analysis/cluster-visualization.png " ")
+
+## Task 3: Automatically Detecting Error Logs
 
 1. Log Analyics allows users to save log queries and use them for custom dashboard visualization. Users can also create rules to detect when a saved log query returns results for a given time window (eg. check every 5 minutes). Let's explore a detection rule by clicking the navigation dropdown on the top-left and selecting **Administration**. In the Administration page, click on the number hyperlink under **Detection Rules**.
 
@@ -91,7 +110,7 @@
 
 
 
-## Task 3: EBS Log Dashboards
+## Task 4: EBS Log Dashboards
 
 1. Log Analytics provides EBS-specific dashboards that can help with monitoring the health of EBS stack component, Concurrent Processing, and WorkFlow Notification Mailer.
 
