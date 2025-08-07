@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-This workshop consists of 6 lab exercises organized to familiarize you with Oracle E-Business Suite (EBS) observability on Oracle Cloud Infrastructure (OCI). The covered OCI observability services include Stack Monitoring, Application Performance Monitoring (APM), Database Management, Log Analytics, and Ops Insights. We have a demo EBS environment, so you don't need to set up or use one from your cloud account.
+This workshop consists of 6 lab exercises organized to familiarize you with Oracle E-Business Suite (EBS) observability on Oracle Cloud Infrastructure (OCI). The covered OCI observability services include Stack Monitoring, Application Performance Monitoring (APM), Database Management, Log Analytics, and Ops Insights. We have a demo EBS environment, so you don't need to set up or use one from your cloud account. The lab exercises are designed to be independent of one another, allowing you to pick the exercises that interest you the most.
 
 Estimated Time: 60 minutes
 
