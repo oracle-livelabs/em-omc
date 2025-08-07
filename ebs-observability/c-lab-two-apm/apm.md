@@ -1,4 +1,4 @@
-# Application Performance Insights
+# EBS Application Performance Management
 
 ## Introduction
 
