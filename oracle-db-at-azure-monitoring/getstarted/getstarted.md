@@ -11,7 +11,7 @@ Estimated Time: 10 minutes
 ### Objectives
 - Learn how to log in to Oracle Cloud Console from Microsoft Azure Portal
 
-### Prerequisites
+### Task: Prerequisites
 - Oracle Database@Azure Private offer is accepted.
 - Microsoft Azure subscription with Oracle Database@Azure is registered.
 - New OCI Tenant is created and the service limits are increased for Database Management Service and Ops Insights.
@@ -38,7 +38,7 @@ Estimated Time: 10 minutes
 
 - You will be redirected to the Oracle Cloud Console Exadata Infrastructure Details page.
 
-    ![OCI Console Exadata Infrastructure Details](./images/oci-console-exadata-page.png "OCI Console Exadata Infrastructure Details")
+    ![OCI Console Exadata Infrastructure Details](./images/odaa-oci-console-exadata-page.png "OCI Console Exadata Infrastructure Details")
 
 ## Task 2: Log in to Oracle Cloud
 
@@ -67,4 +67,4 @@ You may now **proceed to the next lab**.
 ## Acknowledgements
 - **Author** - Royce Fu, Master Principal Cloud Architect, North America Cloud Infrastructure and Engineering
 - **Contributors** -  Derik Harlow, Murtaza Husain, Sriram Vrinda
-- **Last Updated By/Date** - Royce Fu, January 2025
+- **Last Updated By/Date** - Royce Fu, July 2025

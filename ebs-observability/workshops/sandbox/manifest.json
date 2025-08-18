@@ -1,0 +1,51 @@
+{
+    "workshoptitle": "Observability and Management for Oracle E-Business Suite",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../a-introduction/introduction.md"
+        },
+        {
+            "title": "Getting Started",
+            "description": "Getting Started",
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Visibility into the EBS Stack",
+            "description": "Visibility into the EBS Stack",
+            "filename": "../../b-lab-one-stack-monitoring/stackmon.md"
+        },
+        {
+            "title": "EBS Application Performance Management",
+            "description": "EBS Application Performance Management",
+            "filename": "../../c-lab-two-apm/apm.md"
+        },
+        {
+            "title": "Insights from EBS Logs",
+            "description": "Insights from EBS Logs",
+            "filename": "../../d-lab-three-log-analytics/loganalytics.md"
+        },
+        {
+            "title": "Managing SQL and Database Performance",
+            "description": "Managing SQL and Database Performance",
+            "filename": "../../e-lab-four-database-management/dbm.md"
+        },
+        {
+            "title": "Capacity Planning for EBS Resources",
+            "description": "Capacity Planning for EBS Resources",
+            "filename": "../../f-lab-five-ops-insights/opsi.md"
+        },
+        {
+            "title": "EBS Admin Dashboard",
+            "description": "EBS Admin Dashboard",
+            "filename": "../../g-lab-six-admin-dashboard/admin-dashboard.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}

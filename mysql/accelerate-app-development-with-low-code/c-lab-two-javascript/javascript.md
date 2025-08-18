@@ -10,7 +10,7 @@ Stored programs offer a key advantage by minimizing data movement between the da
 
 * It is time consuming and can cause significant network overhead.
 * Increased latency may become noticeable when applications are “chatty”.
-* Processing large data volumes in the mid- or application-tier requires large amounts of memory and storage, adding cost.
+* Processing large data volumes in the mid-tier or application-tier requires large amounts of memory and storage, adding cost.
 * Data transfer between machines, especially in cloud environments, often must be avoided due to security risks and data protection requirements.
 * Moving large amount of data outside the database service, will increase egress costs.
 * Using stored programs to process data within the database is a common solution to these problems.
