@@ -16,9 +16,9 @@ This lab assumes you have:
 | **Task Number** | **Feature**  | **Approx. Time** | **Details**                                                                                                                                                                                                                   
   |--------|-----------------------------------------------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
   | **1**  | Using the Remote Agent                             | 15 minutes       |     Understand how to add a remote host to a remote agent for monitoring.                                                                                                                                                                                                                                                  |
-  | **2A**  | Ask EM Assistant - Monitoring                                | 6 minutes       | Use the Ask EM assistant to get answers to monitoring questions.                                                                                                                                                 
-  | **2B**  | Ask EM Assistant - Database Performance                        | 6 minutes       | Use the Ask EM assistant to get answers to database performance questions.                                                                                                                                                      
-  | **2C**  | Ask EM Assistant - Database Patching and Compliance                              | 6 minutes       | Use the Ask EM assistant to get answers to database patching and compliance questions.  
+  | **2A**  | Ask EM Assistant — Monitoring                                | 6 minutes       | Use the Ask EM assistant to get answers to monitoring questions.                                                                                                                                                 
+  | **2B**  | Ask EM Assistant — Database Performance                        | 6 minutes       | Use the Ask EM assistant to get answers to database performance questions.                                                                                                                                                      
+  | **2C**  | Ask EM Assistant — Database Patching and Compliance                              | 6 minutes       | Use the Ask EM assistant to get answers to database patching and compliance questions.  
 | **3A**  | Event Compression Policies                              | 10 minutes       | View an example of a compressed incident and author your own Event Compression Policy.  
 | **3B**  | Event Compression Analysis                             | 10 minutes       | Test your Event Compression Policy using the Event Compression Analysis tool and enable it for use in Incident Rules.  
 | **4**  | Dynamic Runbooks for Metrics                              | 10 minutes       | Start a Dynamic Runbook session against a metric in the All-Metrics page.  
@@ -78,22 +78,24 @@ The remote agent name is **emrmtagt.livelabs.com**. Here will walkthrough how to
 
 11. On the Add Remote Host Target review screen, verify the details just entered.
 
-    **Do not click on Submit.** 
+    **Click on the “Cancel” button. Do not click on Submit.** 
 
     ![Final Review Screen](ask-em-images/remote-agent/add-remote-host-target-review.png " ")
 
 
-## Task 2A: Ask EM Assistant - Monitoring
+## Task 2A: Ask EM Assistant — Monitoring
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI). 
 
-**Note: For this task, results may vary.**
+**Note: AI-generated responses may vary each time and might not exactly match the documented lab instructions results.**
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
     ![Enterprise Manager login](ask-em-images/em24-login.png " ")
 
 2. In the upper right corner, click on the **Ask EM assistant icon** to start it.
+
+    **Note: If the Ask EM assistant does not launch, refresh the browser and try again.**
 
     ![Start AskEM](ask-em-images/ask-em-monitoring/ask-em-logon1.png " ")
 
@@ -113,7 +115,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     **Review the answer that it returns.**
     
-    Note: You may need to scroll up to see the first part of the answer.
+    Note: You may need to scroll up to see the first part of the answer. In the interest of time, you can just skim through the information.
 
     ![AskEM Documentation - Review question on monitoring 1](ask-em-images/ask-em-monitoring/ask-em-doc3.png " ")
 
@@ -166,7 +168,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
 10. In the Telemetry tab, ask this question:
 
-    **Show me list of database incidents**
+    **Show me a list of database incidents**
 
     ![AskEM Telemetry - List of DB incidents](ask-em-images/ask-em-monitoring/ask-em-tel7.png " ")
 
@@ -203,17 +205,19 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Close Session](ask-em-images/ask-em-monitoring/ask-em-tel13.png " ")
 
-## Task 2B: Ask EM Assistant - Database Performance
+## Task 2B: Ask EM Assistant — Database Performance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
-**Note: For this task, results may vary.**
+**Note: AI-generated responses may vary each time and might not exactly match the documented lab instructions results.**
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
     ![Enterprise Manager login](ask-em-images/em24-login.png " ")
 
 2. In the upper right corner, click on the **Ask EM assistant icon** to start it.
+
+    **Note: If the Ask EM assistant does not launch, refresh the browser and try again.**
 
     ![Start AskEM](ask-em-images/ask-em/ask-em-start.png " ")
 
@@ -258,13 +262,7 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Telemetry - Top activities on DBs](ask-em-images/ask-em-db-perf/top-activities-1.png " ")
 
-8. In the Telemetry tab, ask this question:
-
-    **Show me how are the resources consumed on my database.**
-
-    ![AskEM Telemetry - Resources consumed on DBs](ask-em-images/ask-em-db-perf/resources-consumed-1.png " ")
-
-9. Go to the **Documentation** tab, ask this question:
+8. Go to the **Documentation** tab, ask this question:
 
     **How to troubleshoot busy wait events?**
 
@@ -272,21 +270,23 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
 
     ![AskEM Documentation - Troubleshoot busy wait events 2](ask-em-images/ask-em-db-perf/documentation-3.png " ")
 
-10. Now **Close** the Ask EM session.
+9. Now **Close** the Ask EM session.
 
     ![AskEM Close Session](ask-em-images/ask-em/ask-em-close.png " ")
 
-## Task 2C: Ask EM Assistant - Database Patching and Compliance
+## Task 2C: Ask EM Assistant — Database Patching and Compliance
 
 The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubleshoot issues, visualize insights, and make informed decisions to boost operational efficiency and provide documentation references. Ask EM requires a connection to the Oracle Cloud Infrastructure (OCI).
 
-**Note: For this task, results may vary.**
+**Note: AI-generated responses may vary each time and might not exactly match the documented lab instructions results.**
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
     ![Enterprise Manager login](ask-em-images/em24-login.png " ")
 
 2. In the upper right corner, click on the **Ask EM assistant icon** to start it.
+
+    **Note: If the Ask EM assistant does not launch, refresh the browser and try again.**
 
     ![Start AskEM](ask-em-images/ask-em/ask-em-start.png " ")
 
@@ -305,12 +305,6 @@ The Ask EM Assistant (Ask EM) is a GenAI-powered feature that helps you troubles
     **Which databases are subscribed to 19cDB-Linux-x64-Apps?**
 
     ![AskEM Telemetry - List of subscribed targets 2](ask-em-images/ask-em-db-patch/em-db-subscribe.png " ")
-
-6. In the Telemetry tab, ask this question:
-
-    **What are the patch recommendations for my database hr.subnet.vcn.oraclevcn.com?**
-
-    ![AskEM Telemetry - Patch recommendations 1](ask-em-images/ask-em-db-patch/em-db-compliance.png " ")
 
 7. In the Telemetry tab, ask this question:
 
@@ -784,9 +778,9 @@ As an example of a universal context runbook, you will review the Triage Notific
 
     ![Scroll to Notification Performance](ask-em-images/universal-runbook/notif-performance.png " ")
 
-5. Notice the Oracle provided runbook named Triage Notification Backlog with Runbook. This is an example of a universal context runbook.  This runbook helps to triage delayed or missing notifications.
+5. Notice the Oracle provided runbook named **Triage Notification Backlog with Runbook**. This is an example of a universal context runbook.  This runbook helps to triage delayed or missing notifications.
 
-    **Click on the link to start a runbook session**. It will open a runbook session in a new tab.
+    **Click on the "Triage Notification Backlog with Runbook" link to start a runbook session**. It will open a runbook session in a new tab.
 
     ![Start new Runbook session](ask-em-images/universal-runbook/universal-runbook.png " ")
 
@@ -815,4 +809,4 @@ As an example of a universal context runbook, you will review the Triage Notific
 ## Acknowledgements
 - **Author** - Desiree Abrokwa, Oracle Enterprise Manager Product Management
 - **Contributing Author** - Ana McCollum, Sumesh Balakrishnan, Anusha Vojjola, Harish Niddagatta, Romit Acharya, Anand Prabhu, Oracle Enterprise Manager Product Management
-- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [July 2025]
+- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [August 2025]

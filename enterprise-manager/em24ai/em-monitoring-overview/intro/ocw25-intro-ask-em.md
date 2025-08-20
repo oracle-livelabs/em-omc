@@ -15,9 +15,7 @@ Watch this overview to learn about the latest innovations in the new Enterprise 
 ### Objectives
 In this workshop, you will learn how to use:
 - Remote Agent
-- Ask EM assistant for Monitoring
-- Ask EM assistant for Database Performance
-- Ask EM assistant for Database Patching and Compliance
+- Ask EM Assistant for Monitoring, Database Performance, and Database Patching & Compliance
 - Event Compression Policies
 - Event Compression Analysis
 - Dynamic Runbooks for Metrics
@@ -27,14 +25,14 @@ In this workshop, you will learn how to use:
 - A Free Tier, Paid or LiveLabs Oracle Cloud account
 
 ## Learn More
-- [Enterprise Manager Cloud Control Solutions](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emcon/enterprise-manager-management-focus-areas.html#GUID-7F3BF18C-97DF-44BC-8BB7-6A864AF1A150)
-- [Enterprise Manager Cloud Control 13.5 Getting Started](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/index.html)
-- [Architecture of Enterprise Manager Cloud Control](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emcon/enterprise-manager-cloud-control-architecture.html#GUID-1A384373-7CD5-434D-9939-874E940CBF21)
-- [Installation and Upgrade](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/install.html)
+- [Enterprise Manager 24ai Focus Areas](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/emcon/enterprise-manager-management-focus-areas.html#GUID-7F3BF18C-97DF-44BC-8BB7-6A864AF1A150)
+- [Enterprise Manager 24ai Getting Started](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/index.html)
+- [Architecture of Enterprise Manager 24ai](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/emcon/enterprise-manager-architecture.html)
+- [Enterprise Manager 24ai Installation and Upgrade](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/install.html)
 - [Enterprise Manager Blogs](https://blogs.oracle.com/oem/)
-- [Enterprise Manager 24ai Overview Videos](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/videos.html)
-- [Enterprise Manager Licensing Guide](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/oemli/index.html)
-- [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
+- [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
+- [Enterprise Manager 24ai Documentation Library](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/index.html)
+- [Enterprise Manager 24ai Tech Forum Video Playlist](https://www.youtube.com/playlist?list=PLiuPvpy8QsiXvGYMP_N3WA6bddXvUH-Y0)
 
 ## Acknowledgements
 - **Author** - Desiree Abrokwa, Oracle Enterprise Manager Product Management
