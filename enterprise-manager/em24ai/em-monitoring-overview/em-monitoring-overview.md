@@ -22,10 +22,10 @@ Oracle Enterprise Manager enables you to get complete monitoring visibility into
 
 
 Watch the video below for a quick walk-through of the lab.
-[Enterprise Monitoring Quick Tour](videohub:1_voigdsx5)
+[Enterprise Monitoring Quick Tour](videohub:1_voigdsx5) <!-- does video need to be replaced? -->
 
 ### Objectives
-The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
+The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager 24ai.
 
 ### Prerequistes
 This lab assumes you have:
@@ -58,54 +58,58 @@ This lab assumes you have:
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”. 
 
-    ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+    ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to “Enterprise >> Summary”.
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
 
-    ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-summary-welcome-page.png " ")
+    ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-manager-welcome-page-24ai.png " ")
 
-3. Enterprise Summary presents a single pane of glass view of the health of your Enterprise assets.
-The Overview pane shows the Target Status of your IT estate. The Status section shows aggregated target availability so you can get a sense of what percentage is UP vs DOWN at a quick glance. The Green slice of the pie are your targets that are up. The Red slice of the pie are the targets that are down. Targets in red may be down due to unscheduled outages. Let’s drill down and take a look at them.
- 
-    ![Enterprise Manager summary page](images/enterprise-summary/enterprise-summary-page.png " ") 
+     ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-summary-navigation-menu-24ai.png " ")
+
+3. Enterprise Summary presents a single pane of glass view of the health of your Enterprise assets. The Overview pane shows the Target Status of your IT estate. The Status section shows aggregated target availability so you can get a sense of what percentage is UP vs DOWN at a quick glance. The Green slice of the pie are your targets that are up. The Red slice of the pie are the targets that are down. Targets in red may be down due to unscheduled outages. Let’s drill down and take a look at them.
+
+     ![Enterprise Manager summary page](images/enterprise-summary/enterprise-summary-page-24ai.png " ") 
 
 4. Click on the Red slice of the pie in the “Status” section. **Note:** You can ignore any differences between the count of targets in the screenshots vs. what you see in your lab environment. The number of targets may vary based on your lab environment.
 
-    ![Enterprise Manager summary page, status section](images/enterprise-summary/pie-chart-red-slice.png " ")  
+    ![Enterprise Manager summary page, status section](images/enterprise-summary/pie-chart-red-slice-24ai.png " ")  
 
    If a dialog pops up, click on ‘Down’ again.
 
-    ![Enterprise Manager summary page, status section](images/enterprise-summary/pie-chart-select-down-again.png " ")   
+    ![Enterprise Manager summary page, status section](images/enterprise-summary/pie-chart-select-down-again-24ai.png " ")   
 
 5. In Enterprise Manager we have an “All Targets” page, which shows all of the targets being monitored by EM. When we clicked on the Red slice of the pie, we essentially placed a filter on the All Targets page to display only Down targets. From here, you can click on the individual target to go to the Target Home Page and take necessary actions such as starting up a Database Instance.
 
-    ![Enterprise Manager All targets page](images/enterprise-summary/down-targets-filtered.png " ")
+    ![Enterprise Manager All targets page](images/enterprise-summary/down-targets-filtered-24ai.png " ")
 
-6. Click on “Enterprise >> Summary” to go back to the Enterprise Summary page.
 
-    ![Step to navigate back to Enterprise Manager summary page](images/enterprise-summary/enterprise-to-summary.png " ")
+6. Click on the hamburger icon on the top left corner, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
+
+    ![Step to navigate back to Enterprise Manager summary page](images/enterprise-summary/enterprise-to-summary-all-targets-page-24ai.png " ")
+
+    ![Step to navigate back to Enterprise Manager summary page](images/enterprise-summary/enterprise-to-summary-navigation-menu-24ai.png " ")
 
 7. Any Incidents, Problems, and Jobs requiring attention is displayed on the Enterprise Summary page with the ability to drill down into them. Click on the incidents link ![Availability symbol](images/noentry.svg " ") for Availability.
 
-    ![Enterprise Manager summary page, status section with Availability incidents selected](images/enterprise-summary/enterprise-summary-availability-link.png " ")
+    ![Enterprise Manager summary page, status section with Availability incidents selected](images/enterprise-summary/enterprise-summary-availability-link-24ai.png " ")
 
 8. A list of critical incidents is displayed in Incident Manager. You can manage the incidents by acknowledging, assigning ownership, changing the priority or status, and more.
 
-    ![A list of critical incidents is displayed in Incident Manager](images/enterprise-summary/incident-manager-availability-incident.png " ")
+    ![A list of critical incidents is displayed in Incident Manager](images/enterprise-summary/incident-manager-availability-incident-24ai.png " ")
 
-9. Click on “Enterprise >> Summary” to go back to the Enterprise Summary page.
+9. Click on the hamburger icon on the top left corner, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
 
 10. You can also filter the view based on the target type. Click on the View dropdown in the “Overview” pane and select “Database Instance” to look at the database status.
 
-    ![Enteprise Manager summary page, status section with filter for target type](images/enterprise-summary/enterprise-summary-database-instance.png " ")
+    ![Enteprise Manager summary page, status section with filter for target type](images/enterprise-summary/enterprise-summary-database-instance-24ai.png " ")
 
 11.	The Status pane is filtered for Database Instance targets and displays a breakdown of the database statuses.
 
-    ![Enterprise Manager summary page, status section](images/enterprise-summary/enterprise-summary-db-instance-filter.png " ")
+    ![Enterprise Manager summary page, status section](images/enterprise-summary/enterprise-summary-db-instance-filter-24ai.png " ")
 
 12.	The right hand pane of the Enterprise Summary page also has Inventory and Usage, Compliance Summary, and Patch Recommendations sections. Inventory and Usage shows a breakdown of database inventory by release. Compliance Summary shows the compliance score for the selected targets as well as security recommendations. Patch Recommendations links to MOS and shows the recommended patches for your targets.
 
-     ![ Enterprise manager summary page, Compliance Summary, and Patch Recommendations sections](images/enterprise-summary/enterprise-summary-inventory-compliance.png " ")
+     ![ Enterprise manager summary page, Compliance Summary, and Patch Recommendations sections](images/enterprise-summary/enterprise-summary-inventory-compliance-24ai.png " ")
 
 
 ## Task 2: Incident Manager
@@ -114,22 +118,25 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-    ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+    ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to “Enterprise >> Monitoring >> Incident Manager”.
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click "Enterprise >> Monitoring >> Incident Manager".
 
-    ![Enterprise Manager welcome page](images/enterprise-manager-welcome-to-incident-manager.png " ")
+    ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-manager-welcome-page-24ai.png " ")
+
+     ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
+
 
 3. In Incident Manager, the Views section contains out-of-box views that comes shipped with Enterprise Manager. You can create your own views and share with others as well. By default, “All open incidents” view is displayed.
 
-    ![Incident Manager page](images/incident-manager/all-open-incidents.png " ")
+    ![Incident Manager page](images/incident-manager/all-open-incidents-24ai.png " ")
 
 4. We will triage unassigned incidents and then acknowledge and assign an incident to an owner. Click on the incident with Summary text “The database status is UNKNOWN”. Details of the incident will be displayed in the bottom pane.
 
-    ![Incident Manager page](images/incident-manager/db-status-unknown-selected.png " ")
+    ![Incident Manager page](images/incident-manager/db-status-unknown-selected-24ai.png " ")
 
 5. Click on “Open in new tab” link to open the incident on a separate tab. You may need to temporarily allow popups in the browser.
-    ![Incident Manager page](images/incident-manager/open-in-new-tab.png " ")
+    ![Incident Manager page](images/incident-manager/open-in-new-tab-24ai.png " ")
 
 
 6. The General tab of this incident contains 5 sections.
@@ -140,17 +147,17 @@ Incident Manager provides in one location the ability to search, view, manage, a
       - Guided Resolution provides the ability to diagnose and take action to resolve the incident.
       - Runbook Sessions provides options to start, create, or view a runbook session against the incident.
 
-     ![Incident Manager page, Incident details](images/incident-manager/general-tab-sections.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager/general-tab-sections-24ai.png " ")
 
 7. Click on “Acknowledge” in the Tracking section to acknowledge the incident. This will automatically assign the incident to the user acknowledging the incident.
 
-     ![Incident Manager acknowledge button](images/incident-manager/incident-acknowledge-button.png " ")
+     ![Incident Manager acknowledge button](images/incident-manager/incident-acknowledge-button-24ai.png " ")
 
-     ![Incident Manager acknowledged completed](images/incident-manager/incident-acknowledged.png " ")
+     ![Incident Manager acknowledged completed](images/incident-manager/incident-acknowledged-24ai.png " ")
 
 8. Click on “Manage”.
 
-     ![Incident Manager page, manage](images/incident-manager/incident-manage-button.png " ")
+     ![Incident Manager page, manage](images/incident-manager/incident-manage-button-24ai.png " ")
 
 9. Update the Status, Priority, and Escalation fields. Add a short comment and click OK.
 
@@ -158,13 +165,13 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
 10.	A confirmation is displayed with the Tracking section updated.
 
-     ![Incident Manager page, Incident details](images/incident-manager/incident-manage-saved.png " ")
+     ![Incident Manager page, Incident details](images/incident-manager/incident-manage-saved-24ai.png " ")
 
 11.	Close the Incident Details tab and go back to the Incident Manager tab.
 
 12.	Click on the Dashboard button next to “Incident Manager: All open incidents”.
 
-     ![Incident Manager page](images/incident-manager/incident-select-dashboard.png " ")
+     ![Incident Manager page](images/incident-manager/incident-select-dashboard-24ai.png " ")
 
 13.	Incident Dashboard provides a holistic view of your incidents. It contains 3 sections.
 
@@ -172,15 +179,15 @@ Incident Manager provides in one location the ability to search, view, manage, a
        - Charts: Provides an easy-to-understand look at the current incident distribution and management status for each incident. Drill down capability with stackable filters to slice and dice data any way you like. Customize to add/update/remove charts to provide a personalized view in Incident Manager.
        - Incident List: Shows the open incidents listed in reverse chronological order by last updated time stamp. From this list, you can perform requisite incident lifecycle actions such as escalating, prioritizing, acknowledging, assigning owners, and adding comments to the incident. The incident list will reflect any filters applied.
 
-     ![Incident Manager, Incident Dashboard](images/incident-manager/incident-dashboard-view.png " ")
+     ![Incident Manager, Incident Dashboard](images/incident-manager/incident-dashboard-view-24ai.png " ")
 
 14.	Click on the “Fatal” link to drill down into these incidents.
 
-     ![Incident Manager, Incident Dashboard](images/incident-manager/incident-dashboard-select-fatal.png " ")
+     ![Incident Manager, Incident Dashboard](images/incident-manager/incident-dashboard-select-fatal-24ai.png " ")
 
 15.	Incident Dashboard is filtered for incidents with “Fatal” severity.
 
-     ![Incident Manager, Incident Dashboard](images/incident-manager/incident-fatal-filtered.png " ")
+     ![Incident Manager, Incident Dashboard](images/incident-manager/incident-fatal-filtered-24ai.png " ")
 
      
 ## Task 3A: Use Dynamic Runbooks for Incidents
@@ -191,11 +198,13 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to "Enterprise >> Monitoring >> Incident Manager".
-     
-     ![Navigate to Incident Manager](images/start-runbook-incident/enterprise-mon-incident-manager.png " ")
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click "Enterprise >> Monitoring >> Incident Manager".
+
+     ![Enterprise Manager welcome page](images/start-runbook-incident/enterprise-manager-welcome-page-24ai.png " ")
+
+     ![Enterprise Manager welcome page](images/start-runbook-incident/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
 
 3. In Incident Manager, the “All open incidents” view is displayed by default. 
 
@@ -203,13 +212,13 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
      **Note**: The Fast Recovery Area (FRA) is a unified storage location for all Oracle Database files related to recovery.  
 
-     ![Highlighted Incident](images/start-runbook-incident/fra-in-incident-manager.png " ")
+     ![Highlighted Incident](images/start-runbook-incident/fra-in-incident-manager-24ai.png " ")
 
 4. In the middle pane on the right, you should see a section called "Runbook Sessions".
 
      Under "Start Runbook Session", select the runbook named “Fast Recovery Area Triage”.
 
-     ![Runbook Sessions section in Incident Manager](images/start-runbook-incident/runbook-sessions-pane.png " ")
+     ![Runbook Sessions section in Incident Manager](images/start-runbook-incident/runbook-sessions-pane-24ai.png " ")
 
 5. You have now started a Runbook session, opened in a new browser tab. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Notice incident details are carried over. Also, there is a chat icon next to each step where you can leave comments that can later be accessed by your team.
 
@@ -233,9 +242,9 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 14. Step 3 requires you to specify the named credential for the target database before you can run the step. 
 
-     To enable the step, enter the following credential: **CDB186\_SYS**. Click Save.
+     To enable the step, select the following credential: **CDB186\_SYS** in the dropdown menu of Named Credential Name. Click Save.
 
-     ![Specify Credentials - Step 3](images/start-runbook-incident/specify-db-cred-pt1.png " ")     
+     ![Specify Credentials - Step 3](images/start-runbook-incident/specify-db-cred-pt1-24ai.png " ")     
 
 15. Before running the step, click the hyperlink for “What’s FRA?”. This will open another tab to documentation on Fast Recovery Area. You can add links to external resources or to other EM pages to assist users with additional diagnostic or contextual information.
 
@@ -271,9 +280,9 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 19. Step 5 requires you to specify host credentials before you can run the step. 
 
-     To enable the step, enter the following credentials: **ORACLE**. Click Save.
+     To enable the step, select the following credentials: **ORACLE** in the dropdown menu of Named Credential Name. Click Save.
 
-     ![Specify value complete - Step 5](images/start-runbook-incident/specify-host-cred-pt1.png " ")
+     ![Specify value complete - Step 5](images/start-runbook-incident/specify-host-cred-pt1-24ai.png " ")
 
 20. Click the play icon. 
 
@@ -326,15 +335,17 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to "Enterprise >> Monitoring >> Runbooks".
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click "Enterprise >> Monitoring >> Runbooks".
 
-     ![Navigate to Runbooks](images/create-runbook-incident/runbooks-menu.png " ")
+     ![Enterprise Manager welcome page](images/create-runbook-incident/enterprise-manager-welcome-page-24ai.png " ")
+
+     ![Navigate to Runbooks](images/create-runbook-incident/runbooks-menu-24ai.png " ")
 
 3. The Runbooks page has Draft Runbooks and Published Runbooks. By default, the Drafts tab is opened. You can create a Runbook through this Runbooks page, directly against an incident in the Incident Manager page, or directly against a metric in the All Metrics page. 
 
-4. Under the Drafts tab, select the "**New Runbook**" link. This is the Runbook draft that was created for you and that you will modify.
+     Under the Drafts tab, select the "**New Runbook**" link. This is the Runbook draft that was created for you and that you will modify.
      
      ![Select New Runbook Draft](images/create-runbook-incident/runbook-drafts.png " ")
 
@@ -364,7 +375,7 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 
      **Prior to beginning:**
      
-     **1. Make sure you have been granted access to the named credentials for the target database $ora\_target\_name on which the FRA incident has occurred and for the host of the target**\
+     **1. Make sure you have been granted access to the named credentials for the target database $ora\_target\_name on which the FRA incident has occurred and for the host of the target**
      **2. Use that named credential values for the steps that require DB named credentials and host named credentials**
 
      ![Step 1 Final Edits - New Runbook](images/create-runbook-incident/overview-prereq-edits.png " ")  
@@ -543,19 +554,21 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to “Targets >> Databases” to see the list of Database targets.
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click “Targets >> Databases” to see the list of Database targets.
      
-     ![Databases Menu Option](images/start-runbook-metric/databases-menu.png " ")
+     ![Enterprise Manager welcome page](images/start-runbook-metric/enterprise-manager-welcome-page-24ai.png " ")
+
+     ![Databases Menu Option](images/start-runbook-metric/databases-menu-24ai.png " ")
 
 3. Once at the Database targets page, locate and expand **cdb186.subnet.vcn.oraclevcn.com** to view its pluggable databases (PDBs). Select the PDB target with the name, **cdb186.subnet.vcn.oraclevcn.com_TESTPDB**.
 
-     ![PDBs on Database Targets Page](images/start-runbook-metric/databases-page-expanded.png " ")
+     ![PDBs on Database Targets Page](images/start-runbook-metric/databases-page-expanded-24ai.png " ")
 
 4. This takes you to the target homepage for the PDB target.
 
-     ![PDB Target Homepage](images/start-runbook-metric/testpdb-homepage.png " ")
+     ![PDB Target Homepage](images/start-runbook-metric/testpdb-homepage-24ai.png " ")
 
 5. From the homepage, navigate to ‘Oracle Database >> Monitoring >> All Metrics’.
 
@@ -567,105 +580,105 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
 7. Click on the "DEMO" tablespace row in the Tablespace Space Used (%) table to see its metric data. 
 
-     ![Select DEMO Tablespace](images/start-runbook-metric/demo-tablespace-selected.png " ")
+     ![Select DEMO Tablespace](images/start-runbook-metric/demo-tablespace-selected-24ai.png " ")
 
-8. Notice that the Last Known Value for the metric is 72% and the warning and critical thresholds are 85% and 97%. With this metric value close to the thresholds, use a runbook to triage this before an alert is triggered and an incident is created. 
+8. Notice that the Last Known Value for the metric is 84% and the warning and critical thresholds are 90% and 97%. With this metric value close to the thresholds, use a runbook to triage this before an alert is triggered and an incident is created. 
 
-      ![Compare Metric Thresholds](images/start-runbook-metric/last-known-value.png " ")
+      ![Compare Metric Thresholds](images/start-runbook-metric/last-known-value-24ai.png " ")
       
-9. Navigate to the Runbook Sessions section. For lab purposes, locate the **Current Sessions** section and select the runbook for **Database Tablespace Full Triage: 2024-06-17 07:18:50** to open an existing runbook session. 
+9. Navigate to the Runbook Sessions section. For lab purposes, locate the **Current Sessions** section and select the runbook for **Database Tablespace Full Triage: 2025-07-31 09:44:49** to open an existing runbook session. 
 
-      ![Current Sessions](images/start-runbook-metric/current-sessions.png " ")
+      ![Current Sessions](images/start-runbook-metric/current-sessions-24ai.png " ")
 
 10. A runbook session appears in a new browser tab. Here you can see a detailed view of the steps needed to run the runbook to triage a possible tablespace full issue in advance. Notice the metric details are carried over.
 
-      ![New Session opened](images/start-runbook-metric/metric-details.png " ")
+      ![New Session opened](images/start-runbook-metric/metric-details-24ai.png " ")
 
 11. The Overview & Prerequisites step describes what the Runbook does, and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the named credentials: **CDB186_PDB**, for the target database and **ORACLE**, for the host of the target. 
 
      Check the checkbox to indicate you have read and completed the step.
-
-      ![Completed Step 1](images/start-runbook-metric/overview-prereq.png " ")
+     
+     ![Completed Step 1](images/start-runbook-metric/overview-prereq-24ai.png " ")
 
 12. Click the play icon in Step 2 to review the trend of the tablespace full metric. Note if there is an increasing trend.
 
-      ![Review Metric Trend](images/start-runbook-metric/review-trend.png " ")
+      ![Review Metric Trend](images/start-runbook-metric/review-trend-24ai.png " ")
 
 13. Notice for Step 3 a gear icon is displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step. 
 
      Click the gear icon.
 
-      ![Step 3 - Gear Icon](images/start-runbook-metric/step-3-gear-icon.png " ")
+      ![Step 3 - Gear Icon](images/start-runbook-metric/step-3-gear-icon-24ai.png " ")
 
 14. Step 3 requires you to specify PDB named credentials before you can run the step. 
 
      To enable the step, enter the following PDB named credential: **CDB186_PDB**. Click Save.
 
-      ![Step 3 - Enter Credentials](images/start-runbook-metric/pdb-cred-after.png " ")
+      ![Step 3 - Enter Credentials](images/start-runbook-metric/pdb-cred-after-24ai.png " ")
 
 15. Click the play icon to find out which tables in the tablespace are consuming the most space.
       
-      ![Step 3 - Play icon](images/start-runbook-metric/step-3-play-icon.png " ")
+      ![Step 3 - Play icon](images/start-runbook-metric/step-3-play-icon-24ai.png " ")
 
 16. A list of tables in the ‘DEMO’ tablespace appears. From the output, the ‘Student’ table appears to be consuming the most space. According to the runbook, review the data in the tables consuming the most space to see if there is any data that can be deleted or if the table itself can be deleted. 
 
      Assume that all the data in all the tables are necessary and continue to Step 4.
 
-      ![Step 3 - Ran](images/start-runbook-metric/tables-consuming-space.png " ")
+      ![Step 3 - Ran](images/start-runbook-metric/tables-consuming-space-24ai.png " ")
 
 17. If you need to increase the tablespace size, first identify the filesystem that is used by the tablespace. 
 
      Click the play icon in Step 4. The filesystem path output will be used in Step 5.
 
-      ![Identify Filesystem Path](images/start-runbook-metric/identify-filesystem.png " ")
+      ![Identify Filesystem Path](images/start-runbook-metric/identify-filesystem-24ai.png " ")
 
 18. Notice for Step 5 another gear icon is displayed instead of the play icon. 
 
      Click on the gear icon. 
 
-      ![Check Filesystem for available space](images/start-runbook-metric/step-5-gear-icon.png " ")
+      ![Check Filesystem for available space](images/start-runbook-metric/step-5-gear-icon-24ai.png " ")
 
 19. Step 5 requires you to specify host named credentials before you can run the step. 
      
-     Enter the following host named credential: **ORACLE**. Click Save.
+     Select the following host named credential: **ORACLE** under the dropdown menu of Named Credential. Click Save.
 
-      ![Check Filesystem for available space](images/start-runbook-metric/oracle-credential.png " ")
+      ![Check Filesystem for available space](images/start-runbook-metric/oracle-credential-24ai.png " ")
 
 20. Click the play icon to check the filesystem, that was identified in Step 4, for available space. There are 342G available in the filesystem which means that you have enough space to increase the size of the tablespace if needed.
 
-      ![Output of checking filesystem size](images/start-runbook-metric/step-5-ran.png " ")
+      ![Output of checking filesystem size](images/start-runbook-metric/step-5-ran-24ai.png " ")
 
 22. Run Step 6 to note if there is a decreasing filesystem space available trend that could impact future growth of tablespace. 
 
-      ![Review filesystem space](images/start-runbook-metric/review-filesystem-space.png " ")
+      ![Review filesystem space](images/start-runbook-metric/review-filesystem-space.png " ") <!-- No data to display -->
 
 23. Scroll to Step 7. If needed and there is space available in the filesystem, add another 100MG datafile from the Tablespace page. Select the hyperlink to navigate to the ‘Tablespace Page’.
 
      **Note**: Runbooks support navigation links to other Enterprise Manager pages in step instructions for further triaging purposes.
 
-      ![Select hyperlink to Tablespace page](images/start-runbook-metric/step-7-add-datafile.png " ")
+      ![Select hyperlink to Tablespace page](images/start-runbook-metric/step-7-add-datafile.png " ")  <!-- update screenshot once Step 22 (Step 6 in RB) is resolved -->
 
 24. A new browser tab opens with a database login screen. 
      
      Log into the database using the PDB named credential: **CDB186_PDB**.
 
-      ![Database Login Page](images/start-runbook-metric/database-login.png " ")
+      ![Database Login Page](images/start-runbook-metric/database-login.png " ") <!-- do not need to update screenshot -->
 
 25. This is the Tablespace page where you can add new datafiles to the tablespace. For lab purposes, we will **NOT** go through the workflow to add a new datafile to the tablespace. 
 
-      ![Tablespace Page](images/start-runbook-metric/tablespace-page.png " ")
+      ![Tablespace Page](images/start-runbook-metric/tablespace-page.png " ") <!-- do not need to update screenshot -->
 
 26. Close out of the current tab to return to the Runbook steps.
 
 27. Check the checkbox to indicate you completed the step.
 
-      ![Completed Step 7](images/start-runbook-metric/step-7-checked.png " ")
+      ![Completed Step 7](images/start-runbook-metric/step-7-checked-24ai.png " ") <!-- update screenshot once Step 22 (Step 6 in RB) is resolved -->
 
 28.	The Runbook remains an active session until you Mark as Done. As an active session, your data will be saved which allows you to go back and run (or rerun) your steps. This is useful for cases where you may want to leave the session halfway through and return to complete it later.
 
 29.	Click “Mark as Done” to indicate that you have gone through all the steps. Once you Mark as Done, you can no longer re-run any steps, but you can view the session in read-only to complete a post-mortem analysis.
 
-      ![Click Mark as Done](images/start-runbook-metric/mark-as-done.png " ")
+      ![Click Mark as Done](images/start-runbook-metric/mark-as-done-24ai.png " ") <!-- update screenshot once Step 22 (Step 6 in RB) is resolved -->
 
 30. Click OK.
 
@@ -682,11 +695,13 @@ Metric and Collection Settings page is where we can view and configure threshold
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to “Targets >> Databases” to see the list of Database targets.
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click “Targets >> Databases” to see the list of Database targets.
+     
+     ![Enterprise Manager welcome page](images/enterprise-manager-welcome-page-24ai.png " ")
 
-     ![Enterprise Manager welcome page](images/emmonlab3step2.png " ")
+     ![Databases Menu Option](images/databases-menu-24ai.png " ")
 
 3. Click on “cdb186.subnet.vcn.oraclevcn.com” to go to the target home page.
 
@@ -703,7 +718,7 @@ As Best Practice:
       - Set thresholds only on metrics you want to be alerted on.
       - Save the modified metric settings and apply to targets using monitoring templates.
 
-     ![Database target home page, metric and collection settings](images/emmonlab3step5.png " ")
+![Database target home page, metric and collection settings](images/emmonlab3step5.png " ")
 
 6. By default, the "Metrics with thresholds" view is displayed. This view will show metrics with a Warning or Critical threshold defined.
 
@@ -721,13 +736,13 @@ As Best Practice:
 
      ![Database target home page, metric and collection settings](images/emmonlab3step9.png " ")
 
-10.	Scroll down to Dump Area Used (%) metric again. Currently the Warning threshold is set to > 95%. Change the Warning threshold to 85% and Critical threshold to 95%.
+10.	Scroll down to Dump Area Used (%) metric again. Currently the Warning threshold is set to > 70%. Change the Warning threshold to 85% and Critical threshold to 95%.
 
      ![Database target home page, metric and collection settings](images/metric-settings/edit-thresholds.png " ")
 
 12.	Click OK to save changes, then you should see a Confirmation message. Click OK.
 
-     ![Database target home page, metric and collection settings](images/emmonlab3step12pt1.png " ")
+     ![Database target home page, metric and collection settings](images/emmonlab3step12pt1.png " ") 
 
      ![Database target home page, metric and collection settings confirmation message](images/emmonlab3step12.png " ")
 
@@ -737,23 +752,23 @@ As Best Practice:
 
 14.	The All Metrics page shows the collected data for all of the metrics on the target.
 
-     ![Database target home page, all metrics](images/metric-settings/all-metrics-page.png " ")
+     ![Database target home page, all metrics](images/metric-settings/all-metrics-page-24ai.png " ")
 
 15.	Expand and highlight the Dump Area Metric Group.
 
-     ![Database target home page, all metric](images/metric-settings/dump-area-expanded.png " ")
+     ![Database target home page, all metric](images/metric-settings/dump-area-expanded-24ai.png " ")
 
 16.	Click on Dump Area Used(%) under the All Metrics palette and then click on the ‘background’ first row in the Dump Area Used(%) table.  
 
-     ![Database target home page, all metric](images/metric-settings/dump-area-used-background.png " ")
+     ![Database target home page, all metric](images/metric-settings/dump-area-used-background-24ai.png " ")
 
 17.	You should see the metric data for Dump Area Used(%) for the background processes.  By default, the last 24 hours are shown but you can change time periods using the View Data dropdown.  In the metric chart, click on Options to view different options for the chart, then click on the Show Thresholds option.
 
-     ![Database target home page, all metric](images/metric-settings/show-thresholds.png " ")
+     ![Database target home page, all metric](images/metric-settings/show-thresholds-24ai.png " ")
 
 18. The Warning and Critical thresholds for the metric will now be shown with the chart as yellow and red lines respectively.  As you review the metric, you can also visually see how close the metric values are to its Warning and Critical thresholds. Notice the metric has passed the new Warning threshold of 85. When the next metric collection occurs, the metric will be evaluated against the new Warning threshold of 85 and should generate a Warning alert. (Note: You do not have to wait for the alert, you can move on to the next lab).
 
-     ![Database target home page, all metric](images/metric-settings/warning-and-critical-shown.png " ")
+     ![Database target home page, all metric](images/metric-settings/warning-and-critical-shown-24ai.png " ")
 
 
 ## Task 5: Corrective Actions
@@ -762,27 +777,29 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+     ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Navigate to “Enterprise >> Monitoring >> Corrective Actions”.
+2. Click on the hamburger icon on the top left corner to open the navigation menu, then click "Enterprise >> Monitoring >> Corrective Actions".
+     
+     ![Enterprise Manager welcome page](images/enterprise-manager-welcome-page-24ai.png " ")
 
      ![Enterprise Manager welcome page](images/emmonlab4step2.png " ")
 
 3. Select “Add Space to Tablespace” from the “Create Library Corrective Action” drop down field and click Go. This Corrective Action will automatically increase tablespaces should they reach a user defined threshold.
 
-     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step3.png " ")
+     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step3.png " ") 
 
 4. Give the Corrective Action a name and click on the “Parameters” tab.
 
-     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step4.png " ")
+     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step4.png " ") 
 
 5. There are a number of parameters available for the Add Space to Tablespace corrective action. These parameters can be adjusted according to your needs. For the purpose of this lab, we will leave the parameter values as is and click on Save to Library.
 
-     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step5.png " ")
+     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step5.png " ") 
 
 6. The Corrective Action is created in Draft status. This gives you an opportunity to test your Corrective Action first before making it available for general use.  For this lab, let’s assume we are ready to make it available for general use. Click on Publish to publish the Corrective Action.
 
-     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step6.png " ")
+     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step6.png " ") 
 
 7. Click on Yes to confirm you want to publish the Corrective Action.
 
@@ -790,15 +807,15 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
 8. A Confirmation banner will appear at the top of the page.
 
-     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step8.png " ")
+     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step8.png " ") 
 
 9. Navigate to “Targets >> Databases”.
 
-     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step9.png " ")
+     ![Enterprise Monitoring, corrective actions page](images/emmonlab4step9.png " ") 
 
 10.	Click on the link for “finance.subnet.vcn.oraclevcn.com” database instance.
 
-     ![Databases page](images/emmonlab4step10.png " ")
+     ![Databases page](images/emmonlab4step10.png " ") 
 
 11.	Navigate to “Oracle Database >> Monitoring >> Metric and Collection Settings”.
 
@@ -810,7 +827,7 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
 13.	Click on Edit in the “Monitored Objects” section.
 
-     ![Database target home page, metric and collection settings](images/emmonlab4step13.png " ")
+     ![Database target home page, metric and collection settings](images/emmonlab4step13.png " ") 
 
 14.	Click Add next to the Warning field under the Corrective Actions section.
 
@@ -830,7 +847,7 @@ Corrective Actions automates response to metric alerts and events. A Corrective 
 
 17.	Click OK.
 
-     ![Database target home page, metric and collection settings](images/emmonlab4step17.png " ")
+     ![Database target home page, metric and collection settings](images/emmonlab4step17.png " ") 
 
     Click Continue.
 
@@ -847,7 +864,7 @@ Metric Extensions expand Oracle's monitoring capabilities to monitor conditions 
 For this lab, a metric extension has already been created and is in Editable status.  As part of creating a metric extension, you can test it against some targets.  You will go through the process of testing the metric extension against some targets.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
-    ![Enterprise Manager login](images/enterprise-manager-login.png " ")
+    ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
 2. Navigate to “Enterprise >> Monitoring >> Metric Extensions”.
     ![Enterprise manager welcome page](images/emmonlab5step2.png " ")
@@ -881,8 +898,7 @@ For this lab, a metric extension has already been created and is in Editable sta
     ![Enterprise Monitoring, metric extensions page](images/emmonlab5step9.png " ")
 
 10.	Click Finish.
-
-    ![Enterprise Monitoring, metric extensions page](images/emmonlab5step10.png " ")
+ 
 
 11.	Highlight ME$RunawaySQL metric extension again and select Actions >> Save as Deployable Draft. At this point, you could deploy the metric extension to different test targets and review the metric data.   If you need to make changes to the metric definition, you will need to create a new version.  For now, let’s assume we’ve reviewed the metric data, verified it is correct and are ready to publish.
 
@@ -890,7 +906,7 @@ For this lab, a metric extension has already been created and is in Editable sta
 
 12.	Click on Actions >> Publish Metric Extension. Once published, the metric extension is ready for general use.  
 
-    ![Enterprise Monitoring, metric extensions page](images/emmonlab5step12.png " ")
+    ![Enterprise Monitoring, metric extensions page](images/emmonlab5step12.png " ") 
 
 13.	Click on Deploy To Targets.
 
@@ -922,7 +938,7 @@ Monitoring templates enable you to deploy standardized monitoring settings acros
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-    ![Enterprise manager login](images/enterprise-manager-login.png " ")
+    ![Enterprise manager login](images/enterprise-manager-login-24ai.png " ")
 
 2. Navigate to “Enterprise >> Monitoring >> Monitoring Templates”.
 
@@ -982,19 +998,19 @@ Administration Groups are designed to simplify the process of setting up targets
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-    ![Enterprise manager login](images/enterprise-manager-login.png " ")
+    ![Enterprise manager login](images/enterprise-manager-login-24ai.png " ")
 
 2. Navigate to "Setup >> Add Target >> Administration Groups".
-
+ 
     ![Enterprise manager welcome page](images/emmonlab7step2.png " ")
 
 3. Click on the Overview tab.
 
-    ![Administration Groups page, overview tab](images/emmonlab7step3.png " ")
+    ![Administration Groups page, overview tab](images/emmonlab7step3.png " ") 
 
 4. The Overview tab of Administration Groups and Template Collections provides an introduction of how to get started along with detailed steps to walk you through the process. For the purpose of this lab, we have already created the hierarchy, template collections and associations. However, we will look at each step to see how the Administration Group was designed and constructed.
 
-    ![Administration Groups page, overview tab](images/emmonlab7step4.png " ")
+    ![Administration Groups page, overview tab](images/emmonlab7step4.png " ") 
 
 5. There are 4 steps involved to setup an Administration Group and Template Collection.
      - Step 1: Setup the Administration Groups Hierarchy
@@ -1002,24 +1018,24 @@ Administration Groups are designed to simplify the process of setting up targets
      - Step 3: Associate Template Collections to Administration Groups
      - Step 4: Synchronize the targets with the selected items
 
-    ![Administration Groups page, overview tab](images/emmonlab7step5.png " ")
+    ![Administration Groups page, overview tab](images/emmonlab7step5.png " ") 
 
 6. Click on the Hierarchy tab.
 
-    ![Administration Groups page, overview tab](images/emmonlab7step6.png " ")
+    ![Administration Groups page, overview tab](images/emmonlab7step6.png " ") 
 
 7. The Hierarchy tab is where you design the levels of your Administration Group hierarchy. Logically, you can think of the top-level group in the hierarchy as a group containing all the targets.  Next consider how you would sub-divide this group of all targets into different sub-groups based on their monitoring settings.  For example, production targets that have one set of monitoring settings would be in one sub-group, and test targets that have a different set of monitoring settings would be in a different sub-group.  These sub-groups represent the next level in the administration group hierarchy.  
 To create this hierarchy, use target properties to define the membership criteria for the groups at each level in the hierarchy.  For our example, we used Lifecycle Status target property (with values of Production and Test) to define the membership criteria of the Production and Test groups respectively.
 
-     ![Administration Groups page, hierarchy tab](images/emmonlab7step7.png " ")     
+![Administration Groups page, hierarchy tab](images/emmonlab7step7.png " ") 
 
 8. Click on the Template Collections tab.
 
-     ![Administration Groups page, hierarchy tab](images/emmonlab7step8.png " ")
+     ![Administration Groups page, hierarchy tab](images/emmonlab7step8.png " ") 
 
 9. Template Collections is a combination of Monitoring Templates, Compliance Standards and/or Cloud Policies that are applied to targets upon joining an Administration Group. In this lab, we have already created two template collections. Highlight “Non-Production Template Collection” and click View.
 
-     ![Administration Groups page, template collections tab](images/emmonlab7step9.png " ")
+     ![Administration Groups page, template collections tab](images/emmonlab7step9.png " ") 
 
 10.	The Non-Production Template Collection contains two Monitoring Templates. Click OK once you are done reviewing the templates.
 
@@ -1027,11 +1043,11 @@ To create this hierarchy, use target properties to define the membership criteri
 
      - Dev\_Test\_DB\_Instance\_Monitoring\_Template: This monitoring template will be applied to Database Instance targets that join the Admin Group with their Lifecycle Status target property defined as "Test".
 
-     ![Administration Groups page, template collections tab](images/emmonlab7step10.png " ")
+     ![Administration Groups page, template collections tab](images/emmonlab7step10.png " ") 
 
 11.	Highlight “Production Template Collection” and click View.
 
-     ![Administration Groups page, template collections tab](images/emmonlab7step11.png " ")
+     ![Administration Groups page, template collections tab](images/emmonlab7step11.png " ") 
 
 12.	The Production Template Collection contains 3 Monitoring Templates. Click OK once you are done reviewing the templates.
 
@@ -1039,29 +1055,30 @@ To create this hierarchy, use target properties to define the membership criteri
 
      - Prod\_DB\_Instance\_Monitoring\_Template: This monitoring template will be applied to Database Instance targets that join the Admin Group with their Lifecycle Status target property defined as "Production".
 
-     - Prod\_Host\_Monitoring\_Template: This monitoring template will be applied to Host targets that join the Admin Group with their Lifecycle Status target property defined as "Production".
+     - Prod\_Host\_Monitoring\_Template: This monitoring template will be applied to Host targets that join the Admin Group with their Lifecycle Status target property defined as "Production". 
+      
 
-     ![Administration Groups page, template collections tab](images/emmonlab7step12.png " ")
+     ![Administration Groups page, template collections tab](images/emmonlab7step12.png " ") 
 
 13.	Click on the Associations tab.
 
-     ![Administration Groups page, template collections tab](images/emmonlab7step13.png " ")
+     ![Administration Groups page, template collections tab](images/emmonlab7step13.png " ") 
 
 14.	The Associations tab is where the association between Template Collections and Administration Groups take place. In this lab we have already associated the “Production Template Collection” with “Prod-Grp” Admin Group. Any target that joins “Prod-Grp” Admin Group will automatically have the Monitoring Templates from “Production Template Collection” applied.
 
-     ![Administration Groups page, associations tab](images/emmonlab7step14.png " ")
+     ![Administration Groups page, associations tab](images/emmonlab7step14.png " ") 
 
 15.	We will go through the exercise of associating a Template Collection with “Test-Grp”. Select “Test-Grp” Admin Group and click on "Associate Template Collection".
 
-     ![Administration Groups page, associations tab](images/emmonlab7step15.png " ")
+     ![Administration Groups page, associations tab](images/emmonlab7step15.png " ") 
 
 16.	Highlight "Non-Production Template Collection" and click Select.
 
-     ![Administration Groups page, associations tab](images/emmonlab7step16.png " ")     
+     ![Administration Groups page, associations tab](images/emmonlab7step16.png " ") 
 
 17.	A Confirmation window will indicate the number of targets that will have Monitoring Templates applied after associating the Template Collection. Click Continue.
 
-     ![Administration Groups page, associations tab](images/emmonlab7step17.png " ")
+     ![Administration Groups page, associations tab](images/emmonlab7step17.png " ") 
 
 18.	A Confirmation banner will display an “Association is successful” message and the “Test-Grp” Admin Group is now associated with “Non-Production Template Collection”.
 
@@ -1073,23 +1090,23 @@ To create this hierarchy, use target properties to define the membership criteri
 
 20.	In the group homepage for Test-Grp, review the Synchronization Status region.  Notice there are 3 targets pending synchronization (i.e. applying of templates) and it is scheduled for a future date specified in the Next Synchronization field.    Instead of waiting for the synchronization to occur, let’s do the synchronization process now by clicking on the “Start Synchronization” button..
 
-     ![Group homepage](images/emmonlab7step20.png " ")
+     ![Group homepage](images/emmonlab7step20.png " ") 
 
 21.	After about a minute or so, you should see the 3 targets synchronized.   You may have to hit the page refresh button to see this.
 
-     ![Group homepage](images/emmonlab7step21.png " ")
+     ![Group homepage](images/emmonlab7step21.png " ") 
 
 22.	We will add a target to “Test-Grp” Admin Group and confirm the monitoring template has been being applied to the target. Navigate to “Targets >> Databases”.
 
-     ![Group homepage with navigation to databases page](images/emmonlab7step22.png " ")
+     ![Group homepage with navigation to databases page](images/emmonlab7step22.png " ") 
 
 23.	Click on “cd186.subnet.vcn.oraclevcn.com” target.
 
-     ![Databases page](images/emmonlab7step23.png " ")
+     ![Databases page](images/emmonlab7step23.png " ") 
 
 24.	Navigate to “Oracle Database >> Target Setup >> Properties”.
 
-     ![database target home page](images/emmonlab7step24.png " ")
+     ![database target home page](images/emmonlab7step24.png " ") 
 
 25.	Click Edit and set the Lifecycle Status for this target to “Test”. Click OK.
 
@@ -1113,7 +1130,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
-     ![enterprise manager login](images/enterprise-manager-login.png " ")
+     ![enterprise manager login](images/enterprise-manager-login-24ai.png " ")
 
 2. Navigate to "Setup >> Incidents >> Incident Rules".
 
@@ -1121,50 +1138,50 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 3. Expand “Incident management rule set for all targets” rule set.
 
-     ![incident rules page](images/emmonlab8step3.png " ")
+     ![incident rules page](images/emmonlab8step3.png " ") 
 
 4. The “Incident management rule set for all targets” rule set covers common use cases for which incidents should be created such as target down events or critical metric alerts. You can enable or disable the rules based on your monitoring requirements. If you want to change a rule, you should make a copy of the rule set and modify it.
 
    Highlight "Create incident for critical metric alerts" and click View.
 
-     ![incident rules page](images/emmonlab8step4.png " ")
+     ![incident rules page](images/emmonlab8step4.png " ") 
 
 5. The "Create incident for critical metric alerts" incident rule will create an incident when the event type is a metric alert and the Severity is Critical.
 
-     ![incident rules page](images/emmonlab8step5.png " ")
+     ![incident rules page](images/emmonlab8step5.png " ") 
 
 6. Click on the “Incident Rules” link to go back to Incident Rules page.
 
-     ![incident rules page](images/emmonlab8step6.png " ")
+     ![incident rules page](images/emmonlab8step6.png " ") 
 
 9. In this lab, we will create a new rule set and add a rule to notify the DBA when there is a critical DB alert. Click on “Create Rule Set”.
 
-     ![incident rules page](images/emmonlab8step9.png " ")
+     ![incident rules page](images/emmonlab8step9.png " ") 
 
 10.	Provide a name for the Rule Set and select the following target types.
 
      - Database Instance
      - Pluggable Database
 
-     ![incident rules, create rule set page](images/emmonlab8step10.png " ")
+     ![incident rules, create rule set page](images/emmonlab8step10.png " ") 
 
 11.	Scroll down and click Create in the Rules section.
 
-     ![incident rules, create rule set page](images/emmonlab8step11.png " ")
+     ![incident rules, create rule set page](images/emmonlab8step11.png " ") 
 
 12.	Keep the default selection of "Incoming events and updates to events" and click Continue.
 
-     ![incident rules, create rule set page with select type of rule to create pop-up](images/emmonlab8step12.png " ")
+     ![incident rules, create rule set page with select type of rule to create pop-up](images/emmonlab8step12.png " ") 
 
 13.	Configure the following fields and click Next. 
      - Type: Metric Alert, All events of type Metric Alert. 
      - Severity: In Critical. 
 
-     ![incident rules, create rule set page](images/emmonlab8step13.png " ")
+     ![incident rules, create rule set page](images/emmonlab8step13.png " ") 
 
 14.	Click Add in the "Create New Rule: Add Actions" page.
 
-     ![incident rules, create rule set page](images/emmonlab8step14.png " ")
+     ![incident rules, create rule set page](images/emmonlab8step14.png " ") 
 
 15.	Configure the following fields and click Continue.                     
 
@@ -1174,27 +1191,27 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
         - Click on option “Create incident (if not associated with one)”   
         - Select “Use Event Compression Policies (Recommended)”
 
-     ![incident rules, create rule set add actions page](images/incident-rules/enable-compression.png " ")
+     ![incident rules, create rule set add actions page](images/incident-rules/enable-compression.png " ") 
 
 16.	Click Next.
 
-     ![incident rules, create rule set add actions page](images/incident-rules/add-actions-next.png " ")
+     ![incident rules, create rule set add actions page](images/incident-rules/add-actions-next.png " ") 
 
 17.	Enter a name for the Rule and click Next.
 
-     ![incident rules, create rule set specify name and description page](images/emmonlab8step17.png " ")
+     ![incident rules, create rule set specify name and description page](images/emmonlab8step17.png " ") 
 
 18.	Click Continue.
 
-     ![incident rules, create rule set review page](images/incident-rules/review-rule.png " ")
+     ![incident rules, create rule set review page](images/incident-rules/review-rule.png " ") 
 
 19.	You’ll be brought back to the main page for Create Rule Set.  Scroll down to the Rules section and click on ‘Create’.
 
-     ![incident rules, create rule set page](images/incident-rules/create-new-rule.png " ")  
-
+     ![incident rules, create rule set page](images/incident-rules/create-new-rule.png " ") 
+ 
 20.	Choose the option “Newly created incidents or updates to incidents” and click Continue.
 
-     ![incident rules, create rule set page with select type of rule to create pop-u](images/emmonlab8step20.png " ")
+     ![incident rules, create rule set page with select type of rule to create pop-u](images/emmonlab8step20.png " ") 
 
 21.	Choose “Specific Incidents”.   And under this option,  select “Rules that created the incidents” and then select the rule that you just created in the previous step.   Then click Next.
 
@@ -1202,23 +1219,23 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 22.	Click ‘Add’.
 
-     ![incident rules, create rule set add actions page](images/emmonlab8step22.png " ")
+     ![incident rules, create rule set add actions page](images/emmonlab8step22.png " ") 
 
 23.	In the "Email To” field,  specify DB TARGET USER.       Then click Continue.
 
-     ![incident rules, create rule set add actions page](images/emmonlab8step23.png " ")
+     ![incident rules, create rule set add actions page](images/emmonlab8step23.png " ") 
 
 24.	Click Next.
 
-     ![incident rules, create rule set add actions page](images/emmonlab8step24.png " ")
+     ![incident rules, create rule set add actions page](images/emmonlab8step24.png " ") 
 
 25.	Enter a name for the Rule and click Next.
 
-     ![incident rules, create rule set specify name and description page](images/emmonlab8step25.png " ")
+     ![incident rules, create rule set specify name and description page](images/emmonlab8step25.png " ") 
 
 26.	Click Continue.
 
-     ![incident rules, create rule set review page](images/emmonlab8step26.png " ")
+     ![incident rules, create rule set review page](images/emmonlab8step26.png " ") 
 
 27.	Click Save.
 
@@ -1226,309 +1243,283 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 28.	The new rule set now appears at the bottom of the Incident Rules page.
 
-     ![incident rules page](images/incident-rules/rule-saved.png " ")
+     ![incident rules page](images/incident-rules/rule-saved.png " ") 
 
     **Note:**  Rule Sets are evaluated and executed in the order specified under the Order column.  When you create your own rule set that has an action to create an incident, you typically want to reorder it such that its order is ahead of the out-of-box rule sets.  This is to ensure that your rule set that creates the incident will be used instead of the out-of-box rule set.   However, for this lab exercise, we can skip this step.
 
 ## Task 10A: Event Compression Policies
 
-Event Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Policy defines the specific set of related events that should be grouped together. Event Compression Policies work with your incident rule sets to determine if, before an incident is created, there is an applicable event compression policy that should compress the events in the rule into a single incident. 
+vent Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Policy defines the specific set of related events that should be grouped together. Before incident creation, Event Compression Policies work with Incident Rule Sets to determine if incoming events should be grouped and compressed into a single incident.
 
-1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
+1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
-     ![enterprise manager login](images/enterprise-manager-login.png " ")
+    ![Enterprise Manager login](ask-em-images/em24-login.png " ")
 
-2. Navigate to Enterprise > Monitoring > Incident Manager.
+2. Click the **hamburger menu** icon.
 
-     ![navigate to incident manager console](images/event-compression/monitoring-to-incident-manager.png " ")
+    ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
 
-3. Let’s take a look at an example of Event Compression. Select the incident with the summary text: “There are 5 target\_availability events on members of db19c.subnet.vcn.oraclevcn.com\_sys”.
+3. Navigate to **Enterprise > Monitoring > Incident Manager**.
 
-     ![select compressed incident in incident manager](images/event-compression/incident-manager-compressed-incident-highlighted.png " ")
+    ![Navigate to Enterprise menu option](ask-em-images/event-compression-policies/enterprise.png " ")
 
-4. The incident details should display in the bottom pane. Click open in new tab.
+    ![Navigate to Incident Manager](ask-em-images/event-compression-policies/monitoring.png " ") 
 
-     ![open compressed incident in new tab](images/event-compression/incident-manager-compressed-incident-open-in-new-tab.png " ")
+4. Let’s take a look at an example of an incident with event compression. 
 
-5. From here you can take a closer look at the incident details. 
+    **Select the incident with the summary text: There are 5 target\_availability events on members of db19c.subnet.vcn.oraclevcn.com\_sys.**
 
-     The incident details display the information about the events that were grouped into this incident. Details include the number of events in the incident, the Event Compression Policy used to compress the events into the incident, the Incident Rule used to create the incident and the list of compressed events in the bottom pane. 
+    ![Select incident](ask-em-images/event-compression-policies/incident.png " ")
 
-     **Note:** You can ignore any differences between the Last Comment field in the screenshot vs. what you see in your lab environment. The Last Comment was updated for lab purposes.
+5. Click **Open in new tab**.
 
-     ![compressed incident details in new tab](images/event-compression/compressed-incident-important-details-highlighted.png " ")
+    ![Open in new tab](ask-em-images/event-compression-policies/open-in-new-tab.png " ")
 
-7. Navigate to the Events Tab.
+6. From here, take a closer look at the incident details to view:
+    - The number of events in the incident
+    - The Incident Rule and RuleSet used to create the incident
+    - The Event Compression Policy used to group the events into this incident
+    - The list of events in the incident
 
-     ![compressed incident details in new tab](images/event-compression/compressed-incident-events-tab-highlighted.png " ")
+    ![Incident Details](ask-em-images/event-compression-policies/incident-details.png " ")
 
-8. This tab shows the latest events that were grouped into this incident. 
+7.	Now let’s take a look at how to use and create Event Compression Policies to create these compressed incidents.
 
-     ![latest events in the compressed incident](images/event-compression/events-tab.png " ")
+8.	Click the **hamburger menu** icon.
 
-9. Now let’s take a look at how to use and create these Event Compression Policies. 
+    ![Navigate back to menu](ask-em-images/event-compression-policies/navigate-back-to-menu.png " ")
 
-     At the top menu, click Setup > Incidents > Event Compression Policies.
+9.	Navigate to **Setup > Incidents > Event Compression Policies**.
 
-     ![navigate to event compression policies page](images/event-compression/incidents-to-event-compression-policies.png " ")
+    ![Setup menu option](ask-em-images/event-compression-policies/setup.png " ")
 
-10. Here is the Event Compression Policies page. There are seven out-of-box policies that represent recommended ways to group related events together into a single incident. Click on any policy name to view more details on the compression. You also have the option to author your own custom policies. 
+    ![Event Compression Policies menu option](ask-em-images/event-compression-policies/event-compression-policies.png " ")
 
-     ![event compression policies page](images/event-compression/event-compression-policies-page.png " ")
+10. There are 7 Oracle-provided Event Compression Policies. You can also author your own policies for custom compression requirements.
 
-11. Let’s take a look at the custom policy that created the compressed events we previously viewed. 
+    ![Event Compression Policies page](ask-em-images/event-compression-policies/policy-page.png " ")
 
-     Click the policy with the name “Target down events for a database system and its members”. 
+11.	Let’s take a look at the policy that created the incident with event compression that we previously viewed.
 
-     ![target down policy for database system and its members](images/event-compression/target-down-db-policy-highlighted.png " ")
+    **Click the policy with the name: Target down events for a database system and its members**.
 
-12. Here you can view the Event Compression Logic for how the events were grouped together. 
+    ![Select custom policy](ask-em-images/event-compression-policies/custom-policy.png " ")
 
-     For this example, the logic groups target availability events for a database system and its members into one incident if the events occurred within a 60 minute time frame. These events were compressed based on the ancestor (i.e., parent) target. 
+12. Here you can view the criteria for how the events were grouped together into the incident.
 
-     ![details of target down policy for database system and its members](images/event-compression/target-down-db-details.png " ")
+    ![Custom policy details](ask-em-images/event-compression-policies/custom-policy-details.png " ")
 
-13. Click the x icon to exit from the screen.
+13. Click the **X** icon to exit from the screen.
 
-     ![exit from details of target down policy](images/event-compression/target-down-db-close.png " ")
+    ![Leave custom policy details](ask-em-images/event-compression-policies/leave-custom-policy.png " ")
 
-14. Now that you have seen an example of an incident with compressed events and the compression logic for one of the policies, we will walk through the steps of creating your own policy. 
+14. Now, we will take a look at and edit a custom policy. In this lab, a custom draft policy has already been created for you that you will modify. This policy groups multiple event types into a singular incident.
 
-     To begin, click the “Create New Policy” icon.
+15. Select **Actions > Edit** for the following policy: **Target down, metric alert, and metric evaluation error events for a database system and its members**.
 
-     ![create new policy](images/event-compression/create-new-policy.png " ")
+    ![Locate new policy details](ask-em-images/event-compression-policies/new-policy.png " ")
 
-15. A page displays where you can create your own policy.
+    ![Edit new policy details](ask-em-images/event-compression-policies/edit-new-policy.png " ")
 
-     ![create new policy page](images/event-compression/create-new-policy-details-blank.png " ")
+16.	In the Event Compression Logic sub-section, you can see the policy applies to:
+    - Multiple event types: Target Availability/Down, Metric Alert, and Metric Evaluation Error
+    - Target Types: Database System, Database Instance, Pluggable Database
+    - Event Severity: Fatal and Critical
+    - Time Window: 60 minutes
+    
+    ![New policy details](ask-em-images/event-compression-policies/new-policy-details.png " ") 
 
-16. For our example, you will be creating a compression policy related to target availability events for coherence targets (i.e., Coherence Cluster, Coherence Node, and Coherence Cache). 
+17. Locate the dropdowns under the header **Compress into One Incident By**. This determines the criteria for grouping the events.
 
-     Add the following polciy name: **Target availability events for a coherence cluster and its member**. 
-     
-     Add the following description: **Compress target availability events for a coherence cluster, coherence node and coherence cache occurring within the 60-minute time window**.
+    ![Locate dropdown to group the events](ask-em-images/event-compression-policies/compress-by.png " ") 
 
-     **Note:** An Oracle Coherence Cluster enables organizations to predictably scale mission-critical applications by providing fast and reliable access to frequently used data.
+18. Select the dropdown for **select Group type**. 
 
-     ![enter policy name and description](images/event-compression/create-new-policy-name.png " ")
+    Search for and click on **Database System**. 
+    
+    This ensures that the specified events for the Database Instance, Pluggable Database, and Database System targets will be grouped into an incident based on the Database System.
 
-17. Now let’s move on to the Event Compression Logic sub-section. 
-     - First, specify the type of events that will be compressed. You can choose the events from an event rule or manually select the event types. You can also specify your policy to compress single event types together (e.g., all target availability events) or multiple event types together (e.g., target availability and metric alert events). For this lab, you will manually select the events:
+    ![Group events by Database System](ask-em-images/event-compression-policies/database-system.png " ") 
 
-          - For "Events of type", search for and select **Target Availability**.  
-               
-               - **Note**: This is also where you could specify multiple event types if needed for your policy.
+19. Click **Save**.
 
-          - For "On targets of type", search for and select: **Oracle Coherence Cache**, **Oracle Coherence Cluster**, and **Oracle Coherence Node**. 
+    ![Save new policy](ask-em-images/event-compression-policies/save-new-policy.png " ") 
 
-          - For "With event severity", select **Fatal** and **Critical**. 
+20. The custom policy you edited is still in a Draft status. 
 
-     ![enter compression logic part one](images/event-compression/create-new-policy-logic-part1.png " ")
+    ![Draft policy](ask-em-images/event-compression-policies/new-policy-draft.png " ") 
 
-18. Now add a time window for these events. Change the current time window of 45 minutes to 60 minutes. 
+21. Continue to **Task 10B: Event Compression Analysis** to test out the policy, publish it and enable it for use by other EM administrators.
 
-     After this, determine the criteria for grouping or compressing the events. The Coherence Cluster target is the parent to the Coherence Cache and Node targets. So you may want to compress together the events from Coherence Cache and Coherence Node targets that are part of the same Coherence Cluster into one incident. 
-     
-     Hence, for "Compress into One incident by", select **same ancestor target type**.
-     
-     For "select Group type", select **Oracle Coherence Cluster**. 
-
-     ![enter compression logic part two](images/event-compression/create-new-policy-logic-part2.png " ")
-
-19. We provide default incident messages based on your selection for the event compression logic. You may modify the default messages as you desire. 
-
-     Let’s keep the default message and click Save.
-
-     ![enter incident message](images/event-compression/create-new-policy-incident-message.png " ")
-
-20. This logic compresses all target availability events, with a fatal or critical severity from the Coherence Cluster, Coherence Cache and Coherence Node targets if they fall within a 60-minute window, into one incident.
-
-21. The policy you created will now appear on the Event Compression Policies page in a draft state. Notice that the other policies are all under the Published status. The published status allows the policy to be used by other administrators. 
-
-     ![policy created is in draft state](images/event-compression/new-policy-highlighted.png " ")
 
 ## Task 10B: Event Compression Analysis
 
-Event Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Analysis uses historical monitoring data from your environment to analyze the impact Event Compression Policies would have had on events that generated incidents over a selected time range in the past. **Note:** Please complete Task 10A before completing this task.
+**Complete Task 10A: Event Compression Policies prior to beginning this task.**
 
-1. Before publishing your policy that you created in Task 10A, test it out using the Event Compression Analysis tool. 
+Event Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Analysis uses historical monitoring data from your environment to analyze the impact Event Compression Policies would have had on your actual incidents had these policies been enabled. 
 
-     To test out the policy, first enable the policy using the toggle button.
+1. Before publishing and enabling your policy (created in **Task 10A: Event Compression Policies**) for use, test it out using the Event Compression Analysis tool.
 
-     ![enable policy for testing](images/event-compression/new-policy-disable-button-highlighted.png " ")
+2. First **enable** the policy for testing using the toggle button.
 
-     ![confirmation dialog to enable policy for testing](images/event-compression/enable-new-policy.png " ")
+    ![Toggle the enable button](ask-em-images/event-compression-analysis/disabled-toggle.png " ")
 
-     ![policy enabled for testing](images/event-compression/new-policy-enable-button-highlighted.png " ")
+    ![Submit the enable policy button](ask-em-images/event-compression-analysis/submit-enablement.png " ")
 
-2.	Click the Event Compression Analysis link.
+    ![Policy is now enabled](ask-em-images/event-compression-analysis/enabled-toggle.png " ")
 
-     ![event compression analysis link](images/event-compression/event-compression-analysis-link.png " ")
+3. Click the **Event Compression Analysis** link.
 
-3. Here is the Event Compression Analysis page. This analysis uses events from your environment and simulates the creation of incidents without Event Compression Policies and with Event Compression Policies. This allows you to analyze the effectiveness of Event Compression Policies on your own events. 
+    ![Select Event Compression Analysis link](ask-em-images/event-compression-analysis/link-to-analysis.png " ")
 
-     ![event compression analysis page](images/event-compression/analysis-page.png " ")
+4. The Event Compression Analysis uses real events from your environment to test the effectiveness of these Event Compression Policies against your own events.
 
-4. To begin a new analysis, click Start New Analysis.
+    To begin a new analysis, click **Start New Analysis**.
 
-     ![start new analysis button](images/event-compression/start-new-analysis.png " ")
+    ![Start new analysis](ask-em-images/event-compression-analysis/start-new-analysis.png " ")
 
-5. A pop-up displays: 
-     - Enter a name for the analysis: **Coherence Targets Policy Analysis**.
+6. Enter the following in the pop-up that displays:
+    - Name: **Analysis for DB System and its members**
+    - Analyze events from these targets:
+        - In the dropdown for **Select a Group**, select: **Prod DB Targets**
+    - Events occurred within this time range:
+        - From: **07/14/2025**
+        - To: **07/28/2025**
+    - Click **Include Draft Policy** so that your draft policy is used in the analysis
 
-     - Next, select the targets for the analysis. For “Select target type”,  keep the default **Group** selection. 
+    At the end, your Compression Policy Analysis criteria should look like the following:
 
-     - In the dropdown "Select a Group" list, select **Coherence Targets**. 
-          - **Note**: The group Coherence Targets was previously created and contains targets of type Coherence Cluster, Coherence Cache and Coherence Node. 
+    ![Analysis entry](ask-em-images/event-compression-analysis/analysis-entry.png " ")
 
-     - For the time range of these events, enter **04/25/2023** to **05/12/2023**. 
+7. Click **Start Analysis**. 
 
-     - Check "**Include Draft Policy**" so that your draft policy is used in the analysis. 
-     
-     At the end, your analysis criteria should look like the following: 
+    ![Start analysis](ask-em-images/event-compression-analysis/analysis-entry-start.png " ")
 
-     ![start a new analysis details](images/event-compression/start-new-analysis-popup.png " ")
+8. A job is submitted that will run the analysis. 
 
-6. Click “Start Analysis”.
+    It takes a few seconds for the analysis to complete so **Refresh your browser** to see analysis results.
 
-     ![select start analysis](images/event-compression/start-new-analysis-popup-saved.png " ")
+    ![Analysis job is ran](ask-em-images/event-compression-analysis/refresh-browser.png " ")
 
-7. A job is submitted that will run the analysis. It takes a few seconds for the analysis to complete so refresh your page to see the finished analysis. 
+9. Click on the analysis name.
 
-     ![analysis submitted and in progress](images/event-compression/analysis-submitted.png " ")
+    ![Select the analysis name](ask-em-images/event-compression-analysis/select-analysis.png " ")
 
-     ![analysis completed](images/event-compression/analysis-complete.png " ")
+10. The top boxes are a summary of the analysis:
+    - 115 events were analyzed
+    - 110 incidents were created <u>without</u> the compression policies enabled
+    - 26 incidents would have been created <u>with</u> the compression policies enabled
+    - There would have been 76% fewer incidents with compression policies enabled
+    - On average, 4.42 events would have been compressed into a singular incident 
 
-8. Click on the analysis name to view the results. 
+    ![Analysis summary](ask-em-images/event-compression-analysis/analysis-summary.png " ")
 
-     ![open analysis](images/event-compression/analysis-name-highlighted.png " ")  
+11.	View the graph for a visual breakdown of the compression: 
 
-     ![analysis details](images/event-compression/analysis-results.png " ")
+    - The **navy bars** represent the number of incidents when Event Compression Policies were not enabled. 
+    - The **orange bars** represent number of incidents if Event Compression Policies were used. 
+    - The **gray line** represents the number of real events analyzed.
 
-9. The top boxes serve as a summary to the analysis. It shows the events analyzed, the incidents created and the compression ratio. For this example, 30 events were analyzed, 30 incidents would have been created without compression policies, while 10 incidents would have been created with the compression policies. This is a 66% reduction of incidents and evaluates to a compression ratio of 3.
+    ![Analysis bar](ask-em-images/event-compression-analysis/analysis-bar.png " ")
 
-     ![analysis details - summary section](images/event-compression/analysis-results-summary-highlighted.png " ")
+13. Click on one of the bars for **Jul 22** to see the exact events mapped from incidents without compression policies to incidents with compression policies.
 
-10. In the graph, this is a visual representation of the compression. The bars are color coded to specify the number of incidents when Event Compression Policies are not used (i.e., navy) versus the number of incidents when compression policies are used (i.e., orange). The gray line represents the number of events analyzed.
+    ![Select one of the analysis bar](ask-em-images/event-compression-analysis/july-21.png " ")
 
-     ![analysis details - graph section](images/event-compression/analysis-results-graph-highlighted.png " ")
+14. This view allows you to see compression in action. View how multiple events that used to belong to one incident each would be grouped into a smaller number of incidents with Event Compression Policies enabled.
 
-11. To further analyze how events and incidents are compressed on a specific date, click on the date's corresponding bars to see another representation of the compression. 
+    ![Analysis mappings](ask-em-images/event-compression-analysis/analysis-map.png " ")
 
-     In this visualization, you will see more information on how events are mapped from incidents without compression policies to incidents with compression policies. 
-     
-     For example, click any of the bars under May 10th.
+15. Click on the orange **Incidents with compression policies** bar to view more details.
 
-     ![analysis details - click on bars in graph](images/event-compression/analysis-bars-highlighted.png " ")
+    ![Analysis orange bar](ask-em-images/event-compression-analysis/orange-bar.png " ")
 
-12. A pop up of a mapping diagram will appear. On the left, the blue bars represent the incidents without compression policies. In the middle, the grey lines represent events. On the right, the orange bars represent incidents with compression policies. The mapping represents how individual events are compressed into incidents using the policies.
+    ![Analysis event details](ask-em-images/event-compression-analysis/analysis-events.png " ")
 
-     ![analysis mapping](images/event-compression/analysis-mapping.png " ")
+16. Click **OK** once you are finished reviewing the details.
 
-13. Click on any of the incidents bars or event lines to view more details. For instance, click on the orange ‘incident with compression policies’ bar on the right:
+    ![Close analysis events](ask-em-images/event-compression-analysis/close-analysis-events.png " ")
 
-     ![click on analysis mapping](images/event-compression/analysis-mapping-selected.png " ")
+17. Click **OK** again.
 
-14. Here you can see the individual events that are compressed into the incident based on the policy that you created. It also shows more information of the incident details such as the incident summary, when it was created and the incident rule that created it. 
+    ![Close analysis mappings](ask-em-images/event-compression-analysis/close-map.png " ")
 
-     ![analysis mapping details](images/event-compression/analysis-bar-details.png " ")
+18. Click the **X icon** to exit out of the analysis.
 
-15. Click OK once you are finished reviewing the details. 
+    ![Close analysis summary](ask-em-images/event-compression-analysis/close-analysis-summary.png " ")
 
-     ![select ok once done viewing the analysis mapping details](images/event-compression/analysis-bar-details-ok-highlighted.png " ")
+19. Now that you have tested and confirmed your policy is working, you will publish it for use.
 
-16. Click OK again.
+    **Navigate back to Setup > Incidents > Event Compression Policies**.
 
-     ![select ok once again](images/event-compression/analysis-mapping-exit.png " ")
+    ![Setup menu option](ask-em-images/event-compression-policies/setup.png " ")
 
-17. And exit out of the analysis. 
+    ![Event Compression Policies menu option](ask-em-images/event-compression-policies/event-compression-policies.png " ")
 
-     ![exit out of the analysis](images/event-compression/analysis-exit.png " ")
+20.	Click the **Actions** icon under your policy and select **Publish**.
 
-18. Now that you have seen the effect of your policy and know that it is working as expected, you may now publish it for use by other administrators. 
+    ![Publish your policy](ask-em-images/event-compression-analysis/publish-new-policy.png " ")
 
-     Navigate to Setup > Incidents > Event Compression Policies.
+    ![Select publish button](ask-em-images/event-compression-analysis/select-publish.png " ")
 
-     ![navigate back to event compression policies page](images/event-compression/incidents-to-event-compression-policies-from-analysis.png " ")
+    ![Policy is now published](ask-em-images/event-compression-analysis/published.png " ")
 
-19. Click the actions icon under your policy. You have the option to edit, create a like, reorder, delete or publish your policies. 
+21. Event Compression Policies work hand-in-hand with Incident Rules to create the incidents with compressed events. Now that your policy has been published, let’s see how it would be enabled for use in Incident Rules.
 
-     Select Publish. 
+22. Navigate to **Setup > Incidents > Incident Rules**.
 
-     ![draft policy actions menu](images/event-compression/new-policy-actions.png " ")
+    ![Navigate to Setup](ask-em-images/event-compression-policies/setup.png " ")
 
-     ![publish draft policy](images/event-compression/publish-the-policy.png " ")
+    ![Navigate to Incident Rules](ask-em-images/event-compression-analysis/incident-rules.png " ")
 
-20. Your policy is now published and ready for use by other administrators.
+23.	An Incident Rule Set has already been created to work with your compression policy.
 
-     ![your policy is published](images/event-compression/new-policy-published.png " ")
+24.	Select the rule set **Compress Target Down, Metric Alert, Metric Error Events**. 
 
-21. Remember that Event Compression Policies works hand-in-hand with Incident Rules to create the incidents with compressed events. Now that your policy has been created, tested and published, let’s see how the Incident Rules would work with the policies. 
+    **Click Edit**.
 
-     Navigate to Setup > Incidents > Incident Rules.
+    ![Edit the rule set](ask-em-images/event-compression-analysis/edit-incident-rule.png " ")
 
-     ![navigate to incident rules page](images/event-compression/incidents-to-incident-rules-from-policies.png " ")
+25.	Scroll down to the Rules section and view the 3 rules for:
+    - Compress **Target Down Events** for Oracle Database System, Database Instance, and Pluggable Databases
+    - Compress **Metric Alert Events** for Oracle Database System, Database Instance, and Pluggable Databases
+    - Compress **Metric Error Events** for Oracle Database System, Database Instance, and Pluggable Databases
 
-22. An incident ruleset has already been created for the purpose of this lab. Let’s review it and enable Event Compression Policies to be used. 
+    ![View the multiple rules in the rule set](ask-em-images/event-compression-analysis/multiple-rules.png " ")
 
-     Select the ruleset “Compress Target Availability Events for Coherence” and click Edit.
+26.	Notice in the Action Summary column that all the rules Create Incidents that Use Event Compression Policies.
 
-     ![edit the ruleset “Compress Target Availability Events for Coherence”](images/event-compression/incident-rules-page-new-rule-for-policy-highlighted.png " ")
+    ![Create incidents that use event compression policies](ask-em-images/event-compression-analysis/use-compression.png " ")
 
-23. Note that the rule set has been created to apply to the Coherence targets group (i.e., Coherence Cluster, Coherence Cache and Coherence Node targets). 
+27.	Scroll down to the **Event Compression** section. 
 
-     ![targets specified in rule set](images/event-compression/coherence-rule-set-beginning.png " ")
+28.	Notice the option, Allow policies to compress events across event types from multiple rules in the rule set (Ruleset Level Compression), has been selected. 
 
-24. Scroll down to the Rules section and select “Compress Target Availability Events for Coherence Cluster, Coherence Node, and Coherence Cache” and “Edit”. 
+    This enables event compression to work across multiple event types (i.e., target availability/down, metric alert, metric evaluation error).
 
-     ![Scroll down to the Rules section and select coherence rule](images/event-compression/edit-compression-rule.png " ")
+    ![Multiple event compression enabled](ask-em-images/event-compression-analysis/multi-compression-enabled.png " ")
 
-25. Review the selected event types and click Next.
+29.	Scroll back up.
 
-     ![Review selected events](images/event-compression/coherence-rule-select-events.png " ")
+30.	Click **Cancel**.
 
-26. In the Add Actions page, select the action in the list and click edit.
+    ![Cancel incident rule](ask-em-images/event-compression-analysis/cancel-rule.png " ")
 
-     ![Edit add actions page](images/event-compression/coherence-rule-add-actions-edit.png " ")
+31. Since your compression policy has been published, it would now work with this Incident Rule Set to compress the target down, metric alert and metric evaluation error events for your database system and its member targets into a singular incident
 
-27. In the “Create Incident or Update Incident” section change the selection from “Each event creates a new incident” to “Use Event Compression Policies (Recommended)”. Click Continue. 
+    ![Finalized incident rule](ask-em-images/event-compression-analysis/final-rule.png " ")
 
-     ![Add actions with 'each event creates a new incident' selected](images/event-compression/coherence-rule-add-actions-create-incident-before.png " ")
-
-     ![Add actions with 'use event compression policies' selected](images/event-compression/coherence-rule-add-actions-create-incident-after.png " ")
-
-28. The action now updates to use Event Compression Policies rather than creating a new incident for every event. Click Next.
-
-     ![Add actions saved with 'use event compression policies' selected](images/event-compression/coherence-rule-add-actions-saved.png " ")
-
-29. Review the event rule name and description and Click Next.
-
-     ![Review the event rule name and description](images/event-compression/coherence-rule-specify-rule-name.png " ")
-
-30. Click Continue.
-
-     ![Click Continue](images/event-compression/coherence-rule-review.png " ")
-
-31. Click Save.
-
-     ![Click Save](images/event-compression/coherence-rule-rule-set-page-save.png " ")
-
-32. The ruleset and rule has now been successfully saved and will now work with your Event Compression Policy to create compressed incidents for coherence targets. 
-
-     ![ruleset and rule has now been successfully saved](images/event-compression/coherence-rule-fixed-incident-rules-page.png " ")
 
 
 ## Learn More
 
   - [Oracle Enterprise Manager](https://www.oracle.com/enterprise-manager/)
   - [Enterprise Manager Documentation Library](https://docs.oracle.com/en/enterprise-manager/index.html)
-  - [Enterprise Monitoring](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/13.5/emmon/enterprise-monitoring.html)
+  - [Enterprise Monitoring](https://docs.oracle.com/en/enterprise-manager/cloud-control/enterprise-manager-cloud-control/24.1/emmon/enterprise-monitoring.html)
   - [Enterprise Manager Monitoring Overview Video](https://www.youtube.com/watch?v=oAnF38qa4EA)
-  - [Strategies for Scalable, Smarter Monitoring using Oracle Enterprise Manager Cloud Control 13c](https://www.oracle.com/a/otn/docs/enterprise-manager/wp_enterprisemanager13c_monitoringstrategies.pdf)
   - [Monitoring Oracle Databases in AWS with Enterprise Manager](https://blogs.oracle.com/observability/post/monitoring-oracle-databases-in-aws-with-enterprise-manager)
 
 ## Acknowledgements
-- **Author** - Karilyn Loui, Oracle Enterprise Manager Product Management
-- **Contributing Author** - Ana McCollum, Daniel Suherman, Murtaza Husain, Desiree Abrokwa, Oracle Enterprise Manager Product Management
-- **Adapted for Cloud** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Last Updated By/Date** – Desiree Abrokwa, Oracle Enterprise Manager Product Management [August 2024]
+- **Author** - Marco Hernandez, Product Manager, Enterprise Manager
+- **Contributors** - Desiree Abrokwa, Ana McCollum, Anand Prabhu - Enterprise Manager Product Management
+- **Last Updated By/Date** - Marco Hernandez, Product Manager, Enterprise Manager August 2025
