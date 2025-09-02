@@ -15,32 +15,32 @@
         {
             "title": "Visibility into the EBS Stack",
             "description": "Visibility into the EBS Stack",
-            "filename": "../../c-lab-one-stack-monitoring/stackmon.md"
+            "filename": "../../b-lab-one-stack-monitoring/stackmon.md"
         },
         {
             "title": "EBS Application Performance Management",
             "description": "EBS Application Performance Management",
-            "filename": "../../d-lab-two-apm/apm.md"
+            "filename": "../../c-lab-two-apm/apm.md"
         },
         {
             "title": "Insights from EBS Logs",
             "description": "Insights from EBS Logs",
-            "filename": "../../e-lab-three-log-analytics/loganalytics.md"
+            "filename": "../../d-lab-three-log-analytics/loganalytics.md"
         },
         {
             "title": "Managing SQL and Database Performance",
             "description": "Managing SQL and Database Performance",
-            "filename": "../../f-lab-four-database-management/dbm.md"
+            "filename": "../../e-lab-four-database-management/dbm.md"
         },
         {
             "title": "Capacity Planning for EBS Resources",
             "description": "Capacity Planning for EBS Resources",
-            "filename": "../../g-lab-five-ops-insights/opsi.md"
+            "filename": "../../f-lab-five-ops-insights/opsi.md"
         },
         {
             "title": "EBS Admin Dashboard",
             "description": "EBS Admin Dashboard",
-            "filename": "../../h-lab-six-admin-dashboard/admin-dashboard.md"
+            "filename": "../../g-lab-six-admin-dashboard/admin-dashboard.md"
         },
         {
             "title": "Need Help?",
