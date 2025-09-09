@@ -1,4 +1,4 @@
-# Logging Analytics Basics
+# Log Analytics Basics
 
 ## Introduction
 
@@ -7,7 +7,7 @@ In this Lab, you will learn to monitor the health, performance, uptime and avail
 Estimated Time: 15 minutes
 
 Watch the video below for a quick walk-through of the lab.
-[Logging Analytics Basics](videohub:1_boq0qvhl)
+[Log Analytics Basics](videohub:1_boq0qvhl)
 
 ### Objectives
 In this lab, our goal is to answer the following questions:
@@ -24,7 +24,7 @@ In this task, you will learn to monitor log trend by entity type and entity.
 1. Click **Custom** under **Time range** pickerSet, then Click on "Start and End Time" and Select START time as **Sep 1, 2022 12:00:00 AM**, END Time as **Sep 30, 2022 12:00:00 PM** and Click Apply.
    ![](images/la-custom-time-range.png "UIdescription")
 
-   You should see a page similar to the one below showing the distribution of different types of logs.
+   You should see a page similar to the one below showing the distribution of different types of logs. 
    ![](images/la-custom-time-range-logs.png "UIdescription")
 
 2. Click on the field "Entity Type" in the Fields Panel in Log Explorer to bring up a faceted view of all the monitored entities.
@@ -112,7 +112,7 @@ In this task, you will learn various Log visualizations of complex EBS apps with
   Drag and drop the field "Label" and "Problem Priority" from the Fields Panel into the "Group by" and click Apply.
   ![](images/prep-for-word-cloud-apply.png "UIdescription")
 
-  Logging Analytics enriches logs with problem labels and error categories for easy problem identification along with their Problem Priority.
+  Log Analytics enriches logs with problem labels and error categories for easy problem identification along with their Problem Priority.
 
   ![](images/word-cloud.png "UIdescription")
 
@@ -123,6 +123,6 @@ In this task, you will learn various Log visualizations of complex EBS apps with
   ![](images/cluster-start.png "UIdescription")
 
 ## Acknowledgements
-* **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
-* **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 24 2022
+* **Author** - Gurusamy Poosamalai, Log Analytics Development Team, Supriya Joshi, Log Analytics Development Team
+* **Contributors** -  Kumar Varun, Log Analytics Product Management, Jolly Kundu - Log Analytics Development Team
+* **Last Updated By/Date** - Sep 10 2025
