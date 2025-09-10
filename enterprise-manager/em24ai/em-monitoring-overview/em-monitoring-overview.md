@@ -40,6 +40,8 @@ This lab assumes you have:
   | **3A**  | Use Dynamic Runbooks for Incidents                             | 10 minutes       | Start a Dynamic Runbook session against an incident in Incident Manager.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.                                                                                                                                                             
   | **3B**  | Create Dynamic Runbooks for Incidents                              | 20 minutes       | Modify and publish a Dynamic Runbook draft.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
    | **3C**  | Use Dynamic Runbooks for Metrics                               | 10 minutes       | Start a Dynamic Runbook session against a metric in the All Metrics page.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue.  
+   | **3D**  | Dynamic Runbooks for Notification Backlog (Universal Context)                              | 5 minutes       | Start a universal context Dynamic Runbook session against a notifications backlog.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue. Universal context runbooks can be used for any functional area in Enterprise Manager, giving your IT Staff versatile automated processes for proactive systmem management.
+   | **3E**  | Access Dynamic Runbook Samples                              | 3 minutes       | View Dynamic Runbook samples available for download.                                                 | Dynamic Runbooks are documented procedures (steps) that IT Staff follow to resolve an issue. Get started immediately by downloading sample runbooks and installing them to your Enterprise Manager site.
    | **4**  | Metric and Collection Settings                         | 5 minutes       | Change the Warning and Critical threshold of a metric from Metric and Collection Settings page. Go to the All Metrics page and review the metric in context of the thresholds.                                                                                                           | Enterprise Manager provides out-of-box monitoring and alert thresholds for managed targets.  You can still customize these monitoring settings based on your requirements.                                                                                                                                                                                                                                                                                                                                 |
   | **5**  | Corrective Actions                          | 8 minutes       | Create a new Corrective Action and associate it with a metric. | Corrective actions allow you to specify automated responses to metric alerts, saving administrators time and ensuring issues are dealt with before they noticeably impact users.  A corrective action can also be used to gather diagnostic information for an alert.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
   | **6**  | Metric Extensions                          | 5 minutes       | Test a Metric Extension on a target to see the results then deploy the same Metric Extension to multiple targets. | Metric Extensions let you extend Enterprise Manager's monitoring capabilities to cover conditions specific to your IT environment, thus enabling you to rely on Enterprise Manager as your single monitoring solution.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
@@ -56,19 +58,11 @@ This lab assumes you have:
 
     ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
 
-2. Click the **hamburger menu** icon.
-
-    ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
-
-3. Navigate to "Enterprise >> Summary" to go to the Enterprise Summary page.
-
-     ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-summary-navigation-menu-24ai.png " ")
-
-4. Enterprise Summary presents a single pane of glass view of the health of your Enterprise assets. The Overview pane shows the Target Status of your IT estate. The Status section shows aggregated target availability so you can get a sense of what percentage is UP vs DOWN at a quick glance. The Green slice of the pie are your targets that are up. The Red slice of the pie are the targets that are down. Targets in red may be down due to unscheduled outages. Let’s drill down and take a look at them.
+2. Enterprise Summary presents a single pane of glass view of the health of your Enterprise assets. The Overview pane shows the Target Status of your IT estate. The Status section shows aggregated target availability so you can get a sense of what percentage is UP vs DOWN at a quick glance. The Green slice of the pie are your targets that are up. The Red slice of the pie are the targets that are down. Targets in red may be down due to unscheduled outages. Let’s drill down and take a look at them.
 
      ![Enterprise Manager summary page](images/enterprise-summary/enterprise-summary-page-24ai.png " ") 
 
-5. Click on the Red slice of the pie in the “Status” section. **Note:** You can ignore any differences between the count of targets in the screenshots vs. what you see in your lab environment. The number of targets may vary based on your lab environment.
+3. Click on the Red slice of the pie in the “Status” section. **Note:** You can ignore any differences between the count of targets in the screenshots vs. what you see in your lab environment. The number of targets may vary based on your lab environment.
 
     ![Enterprise Manager summary page, status section](images/enterprise-summary/pie-chart-red-slice-24ai.png " ")  
 
@@ -76,36 +70,36 @@ This lab assumes you have:
 
     ![Enterprise Manager summary page, status section](images/enterprise-summary/pie-chart-select-down-again-24ai.png " ")   
 
-6. In Enterprise Manager we have an “All Targets” page, which shows all of the targets being monitored by EM. When we clicked on the Red slice of the pie, we essentially placed a filter on the All Targets page to display only Down targets. From here, you can click on the individual target to go to the Target Home Page and take necessary actions such as starting up a Database Instance.
+4. In Enterprise Manager we have an “All Targets” page, which shows all of the targets being monitored by EM. When we clicked on the Red slice of the pie, we essentially placed a filter on the All Targets page to display only Down targets. From here, you can click on the individual target to go to the Target Home Page and take necessary actions such as starting up a Database Instance.
 
     ![Enterprise Manager All targets page](images/enterprise-summary/down-targets-filtered-24ai.png " ")
 
 
-7. Click on the hamburger icon on the top left corner, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
+5. Click on the hamburger icon on the top left corner, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
 
     ![Step to navigate back to Enterprise Manager summary page](images/enterprise-summary/enterprise-to-summary-all-targets-page-24ai.png " ")
 
     ![Step to navigate back to Enterprise Manager summary page](images/enterprise-summary/enterprise-to-summary-navigation-menu-24ai.png " ")
 
-8. Any Incidents, Problems, and Jobs requiring attention is displayed on the Enterprise Summary page with the ability to drill down into them. Click on the incidents link ![Availability symbol](images/noentry.svg " ") for Availability.
+6. In the Incidents table, locate the row for **Availability** and click on the number under ![Availability symbol](images/noentry.svg " ").
 
     ![Enterprise Manager summary page, status section with Availability incidents selected](images/enterprise-summary/enterprise-summary-availability-link-24ai.png " ")
 
-9. A list of critical incidents is displayed in Incident Manager. You can manage the incidents by acknowledging, assigning ownership, changing the priority or status, and more.
+7. A list of incidents with Fatal severity is displayed in Incident Manager. You can manage the incidents by acknowledging, assigning ownership, changing the priority or status, and more.
 
     ![A list of critical incidents is displayed in Incident Manager](images/enterprise-summary/incident-manager-availability-incident-24ai.png " ")
 
-10. Click on the hamburger icon on the top left corner, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
+8. Click on the hamburger icon on the top left corner, then click "Enterprise >> Summary" to go back to the Enterprise Summary page.
 
-11. You can also filter the view based on the target type. Click on the View dropdown in the “Overview” pane and select “Database Instance” to look at the database status.
+9. You can also filter the view based on the target type. Click on the View dropdown in the “Overview” pane and select “Database Instance” to look at the database status.
 
     ![Enteprise Manager summary page, status section with filter for target type](images/enterprise-summary/enterprise-summary-database-instance-24ai.png " ")
 
-12.	The Status pane is filtered for Database Instance targets and displays a breakdown of the database statuses.
+10.	The Status pane is filtered for Database Instance targets and displays a breakdown of the database statuses.
 
     ![Enterprise Manager summary page, status section](images/enterprise-summary/enterprise-summary-db-instance-filter-24ai.png " ")
 
-13.	The right hand pane of the Enterprise Summary page also has Inventory and Usage, Compliance Summary, and Patch Recommendations sections. Inventory and Usage shows a breakdown of database inventory by release. Compliance Summary shows the compliance score for the selected targets as well as security recommendations. Patch Recommendations links to MOS and shows the recommended patches for your targets.
+11.	The right hand pane of the Enterprise Summary page also has Inventory and Usage, Compliance Summary, and Patch Recommendations sections. Inventory and Usage shows a breakdown of database inventory by release. Compliance Summary shows the compliance score for the selected targets as well as security recommendations. Patch Recommendations links to MOS and shows the recommended patches for your targets.
 
      ![ Enterprise manager summary page, Compliance Summary, and Patch Recommendations sections](images/enterprise-summary/enterprise-summary-inventory-compliance-24ai.png " ")
 
@@ -127,7 +121,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
      ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
 
 
-4. In Incident Manager, the Views section contains out-of-box views that comes shipped with Enterprise Manager. You can create your own views and share with others as well. By default, “All open incidents” view is displayed.
+4. In Incident Manager, you can use any of the Out-of-box Views to quickly filter the list of incidents to the subset you're interested in, e.g., My open incidents and problems. You can create your own views and share with others as well. By default, “All open incidents” view is displayed.
 
     ![Incident Manager page](images/incident-manager/all-open-incidents-24ai.png " ")
 
@@ -181,7 +175,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
      ![Incident Manager, Incident Dashboard](images/incident-manager/incident-dashboard-view-24ai.png " ")
 
-15.	Click on the “Fatal” link to drill down into these incidents.
+15.	Click on the “Fatal” link to filter the dashboard to only show incidents of Fatal severity.
 
      ![Incident Manager, Incident Dashboard](images/incident-manager/incident-dashboard-select-fatal-24ai.png " ")
 
@@ -210,8 +204,8 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 4. In Incident Manager, the “All open incidents” view is displayed by default. 
 
-     Click the incident with Summary text “The value of Fast Recovery Area % Used is 70.467”. Details of the incident will be displayed in the bottom pane.
-
+     Click the incident with Summary text “The value of Fast Recovery Area % Used is 70.013”. Details of the incident will be displayed in the bottom pane.
+     **Note**: You can ignore any differences in values that you see for the Fast Recovery Area Used(&) in your lab environment vs. what is shown in this workbook.
      **Note**: The Fast Recovery Area (FRA) is a unified storage location for all Oracle Database files related to recovery.  
 
      ![Highlighted Incident](images/start-runbook-incident/fra-in-incident-manager-24ai.png " ")
@@ -222,7 +216,7 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
      ![Runbook Sessions section in Incident Manager](images/start-runbook-incident/runbook-sessions-pane-24ai.png " ")
 
-6. You have now started a Runbook session, opened in a new browser tab. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Notice incident details are carried over. Also, there is a chat icon next to each step where you can leave comments that can later be accessed by your team.
+6. You have now started a Runbook session, opened in a new browser tab. Here you can see a detailed view of the steps needed to run the Runbook and triage the issue. Notice incident details are carried over. Also, there is a comments icon next to each step where you can leave comments that can later be accessed by your team.
 
      ![Incident details carried over to runbook session](images/start-runbook-incident/runbook-session-incident-details.png " ")
 
@@ -244,7 +238,7 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 10. Step 3 requires you to specify the named credential for the target database before you can run the step. 
 
-     To enable the step, select the following credential: **CDB186\_SYS** in the dropdown menu of Named Credential Name. Click Save.
+     CLick on the field, select the following credential: **CDB186\_SYS** in the dropdown menu of Named Credential Name. Click Save.
 
      ![Specify Credentials - Step 3](images/start-runbook-incident/specify-db-cred-pt1-24ai.png " ")     
 
@@ -282,7 +276,7 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
 18. Step 5 requires you to specify host credentials before you can run the step. 
 
-     To enable the step, select the following credentials: **ORACLE** in the dropdown menu of Named Credential Name. Click Save.
+     Click on the field, select the following credentials: **ORACLE** in the dropdown menu of Named Credential Name. Click Save.
 
      ![Specify value complete - Step 5](images/start-runbook-incident/specify-host-cred-pt1-24ai.png " ")
 
@@ -324,7 +318,7 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 
      ![Mark as Done - OK](images/start-runbook-incident/mark-as-done-pop-up.png " ")
 
-28. A page with all the Runbook Sessions will appear. Click the Actions column to see the actions: open the session in a read-only, extend expiration, or delete the session.
+28. Your runbook session will be kept for 14 days to enable you to do postmortem analysis. You can save it for a longer period by going to the Actions menu and extending its expiraiton date.
 
      ![Actions - Complete Runbook Session](images/start-runbook-incident/runbook-sessions.png " ")
      
@@ -495,6 +489,8 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 
 29. Click OK to save the variable. 
 
+      ![Step 5 - Confirm a Var Pop-Up](images/create-runbook-incident/confirm-a-var-popup.png " ") 
+
 30. Once the variable is saved, it should appear in the Variables section under ‘Author Defined’.
 
      ![Step 5 - Var Saved](images/create-runbook-incident/new-var.png " ") 
@@ -545,10 +541,6 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 
      ![Published Runbook - New Runbook](images/create-runbook-incident/published.png " ")
 
-41. Select the arrow under the Actions column for the "New Runbook". You have the options to create a like version, create a new version, export the runbook, hide it or delete.
-
-     ![Actions on Published Runbook - New Runbook](images/create-runbook-incident/actions.png " ")
-
 
 ## Task 3C: Use Dynamic Runbooks for Metrics
 
@@ -592,7 +584,11 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
       ![Compare Metric Thresholds](images/start-runbook-metric/last-known-value-24ai.png " ")
       
-10. Navigate to the Runbook Sessions section. For lab purposes, locate the **Current Sessions** section and select the runbook for **Database Tablespace Full Triage: 2025-07-31 09:44:49** to open an existing runbook session. 
+10. Navigate to the Runbook Sessions section. 
+
+     ![Current Sessions](images/start-runbook-metric/runbook-sessions-section.png " ")
+
+     For lab purposes, locate the **Current Sessions** section and select the runbook for **Database Tablespace Full Triage: 2025-07-31 09:44:49** to open an existing runbook session. 
 
       ![Current Sessions](images/start-runbook-metric/current-sessions-24ai.png " ")
 
@@ -602,27 +598,27 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
 12. The Overview & Prerequisites step describes what the Runbook does, and the prerequisites needed to run it. In this lab, the prerequisites have already been completed for you. You should have access to the named credentials: **CDB186_PDB**, for the target database and **ORACLE**, for the host of the target. 
 
-     Check the checkbox to indicate you have read and completed the step.
+     **Check the checkbox** to indicate you have read and completed the step.
      
      ![Completed Step 1](images/start-runbook-metric/overview-prereq-24ai.png " ")
 
-13. Click the play icon in Step 2 to review the trend of the tablespace full metric. Note if there is an increasing trend.
+13. **Click the play icon in Step 2** to review the trend of the tablespace full metric. Note if there is an increasing trend.
 
       ![Review Metric Trend](images/start-runbook-metric/review-trend-24ai.png " ")
 
 14. Notice for Step 3 a gear icon is displayed instead of the play icon. The gear icon means some input properties are required before you can execute the step. 
 
-     Click the gear icon.
+     **Click the gear icon**.
 
       ![Step 3 - Gear Icon](images/start-runbook-metric/step-3-gear-icon-24ai.png " ")
 
 15. Step 3 requires you to specify PDB named credentials before you can run the step. 
 
-     To enable the step, select the following PDB named credential: **CDB186_PDB**. Click Save.
+     Click on the credentials field, select the following PDB named credential: **CDB186_PDB**. Click Save.
 
       ![Step 3 - Enter Credentials](images/start-runbook-metric/pdb-cred-after-24ai.png " ")
 
-16. Click the play icon to find out which tables in the tablespace are consuming the most space.
+16. **Click the play icon** to find out which tables in the tablespace are consuming the most space.
       
       ![Step 3 - Play icon](images/start-runbook-metric/step-3-play-icon-24ai.png " ")
 
@@ -634,27 +630,27 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
 18. If you need to increase the tablespace size, first identify the filesystem that is used by the tablespace. 
 
-     Click the play icon in Step 4. The filesystem path output will be used in Step 5.
+     **Click the play icon in Step 4**. The filesystem path output will be used in Step 5.
 
       ![Identify Filesystem Path](images/start-runbook-metric/identify-filesystem-24ai.png " ")
 
 19. Notice for Step 5 another gear icon is displayed instead of the play icon. 
 
-     Click on the gear icon. 
+     **Click on the gear icon**. 
 
       ![Check Filesystem for available space](images/start-runbook-metric/step-5-gear-icon-24ai.png " ")
 
 20. Step 5 requires you to specify host named credentials before you can run the step. 
      
-     Select the following host named credential: **ORACLE** under the dropdown menu of Named Credential. Click Save.
+     Click on the credentials field, select the host named credential: **ORACLE** under the dropdown menu of Named Credential. Click Save.
 
       ![Check Filesystem for available space](images/start-runbook-metric/oracle-credential-24ai.png " ")
 
-21. Click the play icon to check the filesystem, that was identified in Step 4, for available space. There are 342G available in the filesystem which means that you have enough space to increase the size of the tablespace if needed.
+21. **Click the play icon** to check the filesystem, that was identified in Step 4, for available space. There are 342G available in the filesystem which means that you have enough space to increase the size of the tablespace if needed.
 
       ![Output of checking filesystem size](images/start-runbook-metric/step-5-ran-24ai.png " ")
 
-22. Run Step 6 to note if there is a decreasing filesystem space available trend that could impact future growth of tablespace. 
+22. **Run Step 6** to note if there is a decreasing filesystem space available trend that could impact future growth of tablespace. 
 
       ![Review filesystem space](images/start-runbook-metric/review-filesystem-space-24ai.png " ")
 
@@ -666,7 +662,7 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
 24. A new browser tab opens with a database login screen. 
      
-     Log into the database using the PDB named credential: **CDB186_PDB**.
+     Login to the database using the PDB named credential: **CDB186_PDB**.
 
       ![Database Login Page](images/start-runbook-metric/database-login.png " ") 
 
@@ -690,9 +686,90 @@ Runbooks are documented best practice procedures that IT staff follow to prevent
 
       ![Mark as Done - OK](images/start-runbook-metric/mark-as-done-popup.png " ")
 
-31. A page with all the Runbook Sessions will appear. Click the Actions column to see the actions: open the session in a read-only, extend expiration, or delete the session.
+31. Your runbook session will be kept for 14 days to enable you to do postmortem analysis.  You can save it for a longer period by going to the Actions menu and extending its expiration date.
 
       ![Runbook Sessions](images/start-runbook-metric/runbook-sessions.png " ")
+
+
+## Task 3D: Dynamic Runbooks for Notification Backlog (Universal Context) 
+
+Dynamic Runbooks are documented best practice procedures in the form of executable steps that ITOps teams follow to prevent or resolve an issue. Dynamic Runbooks can be executed inside Enterprise Manager (EM) in context of a metric, incident, or any other EM context (universal context).
+
+A universal context runbook can be used for any functional area in EM.  
+
+As an example of a universal context runbook, you will review the Triage Notification Backlog runbook.
+
+1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
+
+    ![Enterprise Manager login](ask-em-images/em24-login.png " ")
+
+2. Click the **hamburger menu** icon.
+
+    ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
+
+3.	Navigate to **Setup > Manage Enterprise Manager > Health Overview**.
+
+    ![Navigate to Setup](ask-em-images/universal-runbook/setup.png " ")
+
+    ![Navigate to Health Overview](ask-em-images/universal-runbook/health-overview.png " ")
+
+4.	Scroll down to the **Notification Performance** section.
+
+    ![Scroll to Notification Performance](ask-em-images/universal-runbook/notif-performance.png " ")
+
+5. Notice the Oracle provided runbook named **Triage Notification Backlog with Runbook**. This is an example of a universal context runbook.  This runbook helps to triage delayed or missing notifications.
+
+    **Click on the "Triage Notification Backlog with Runbook" link to start a runbook session**. It will open a runbook session in a new tab.
+
+    ![Start new Runbook session](ask-em-images/universal-runbook/universal-runbook.png " ")
+
+6. In this runbook session, notice the universal context description.  This means it does not have a pre-defined context, but it has steps to query and take actions on the appropriate EM components.
+
+    ![Universal Context runbook session started](ask-em-images/universal-runbook/traige-notif-backlog.png " ")
+
+7. **Execute the first 4 steps of the runbook**.  You do not have to execute the remaining steps.
+
+     **Click on the checkbox**.
+
+    ![Universal Context Runbook - Overview and Prereqs](ask-em-images/universal-runbook/overview-prereq.png " ")
+
+     **Click on the play button**.
+
+    ![Universal Context Runbook - Step 1](ask-em-images/universal-runbook/step-2.png " ")
+
+     **Click on the play button**.
+
+    ![Universal Context Runbook - Step 2](ask-em-images/universal-runbook/step-3.png " ")
+
+     **Click on the play button**.
+
+    ![Universal Context Runbook - Step 3](ask-em-images/universal-runbook/step-4.png " ")
+
+
+## Task 3E: Access Dynamic Runbook Samples
+
+Runbooks are documented best practice procedures that IT staff follow to prevent or resolve an issue. In Enterprise Manager, you can get started with using Dynamic Runbooks by downloading sample runbooks and installing them to your Enterprise Manager site.
+
+1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
+
+    ![Enterprise Manager login](images/enterprise-manager-login-24ai.png " ")
+
+2. Click the **hamburger menu** icon.
+
+    ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
+
+3. Navigate to "Enterprise >> Monitoring >> Incident Manager".
+
+     ![Enterprise Manager welcome page](images/enterprise-summary/enterprise-to-incident-manager-navigation-menu-24ai.png " ")
+
+4. Notice a yellow box on the top of the page that says "Use Dynamic Runbooks to triage your incidents". Click on the arrow to expand it.
+     ![Dynamic Runbooks Yellow Box](images/sample-runbooks/yellow-box.png " ")
+
+5. In the expanded pane, notice there is a link to a MOS note. While you cannot click on the MOS note link in this lab due to environment restrictions, this is something you can do in your own EM site.
+     ![Dynamic Runbooks Yellow Box Expanded](images/sample-runbooks/yellow-box-expanded.png " ")
+
+6. When you are able to access the MOS note from your EM site, you can see there are three example runbooks available: **FRA (Fast Recovery Area) Runbook**, **Database Tablespace Full Triage Runbook**, and **CPU Utilization Runbook**. Follow the steps in the **Solution** section to download the sample runbooks and install them in your Enterprise Manager site.
+     ![Dynamic Runbooks Yellow Box Expanded](images/sample-runbooks/mos-note.png " ")
 
 
 ## Task 4: Metric and Collection Settings
@@ -719,12 +796,10 @@ Metric and Collection Settings page is where we can view and configure threshold
 
      ![Database target home page](images/emmonlab3step4.png " ")
 
-6. Oracle ships with default out-of-box Metrics and settings. This includes Metrics, Thresholds, and Collection Schedules. This aims to cover generic use cases to get you started. We recommend that you customize the monitoring settings of your targets according to your requirements.
-What we’re looking at right now are database metrics with default settings. These are recommended settings; however, you can modify anything to suit your needs.
-As Best Practice:
+6. Oracle ships with out-of-box metric threshold and collection settings for different target types.  You can further customize these based on your requirements. Here are some Best Practices recommendations:
       - Disable collection for metrics you don’t care about.
       - Set thresholds only on metrics you want to be alerted on.
-      - Save the modified metric settings and apply to targets using monitoring templates.
+      - If these metric settings apply to multiple targets, save the modified metric settings and apply to targets using monitoring templates.
 
 ![Database target home page, metric and collection settings](images/emmonlab3step5.png " ")
 
@@ -891,11 +966,33 @@ For this lab, a metric extension has already been created and is in Editable sta
 
     ![Enterprise Monitoring, metric extensions page](images/emmonlab5step4.png " ")
 
-6. Steps 1 through 4 show the SQL and the metric columns of the metric extension that has been already defined for you. Click on Next until you reach “step 5 of 6”.
+6. This Metric Extension was created to detect run-away queries. While it has already been created, we will walk through the steps of how a metric extension is created.
 
-    ![Enterprise Monitoring, metric extensions page](images/emmonlab5step5.png " ")
+     In the General Properties step, we specify the metric Name, the Adapter which is a method for collecting metric data (in our example we use SQL), and the metric Collection Schedule which is 15 minutes in our example.
 
-7. Click Add to select targets to test the Metric Extension.
+     **Click Next**.
+     
+     ![Enterprise Monitoring, general properties step](images/general-properties.png " ")
+
+7. In Adapter step, we specify the SQL query that will be used to collect the metric data. The SQL query is expected to return a table of data with one or more columns.
+
+     **Click Next**.
+
+     ![Enterprise Monitoring, adapter step](images/adapter-step.png " ")
+
+8. In the Columns step, we describe the different columns of the table of data returned by the SQL query. For each column, we provide a name, specify if it will be used as a key (unique identifier for the row of data) or contain data, define the data type, and unit. You can enable alerts on any column by specifying the alert comparison operator and warning and critical thresholds.
+
+     **Click Next**.
+
+     ![Enterprise Monitoring, columns step](images/columns-step.png " ")
+
+9. In the Credentials step, we identify the credentials used to execute the metric. We will keep the default option of using the monitoring credentials of the target on which the metric will be deployed.
+
+     **Click Next**.
+
+     ![Enterprise Monitoring, credentials step](images/credentials-step.png " ")
+
+10. In the Test step, we can test our Metric Extension against some targets. Click Add to select targets for testing.
 
     ![Enterprise Monitoring, metric extensions page](images/emmonlab5step6.png " ")
 
@@ -948,7 +1045,7 @@ For this lab, a metric extension has already been created and is in Editable sta
 
 ## Task 7: Monitoring Templates
 
-Monitoring templates enable you to deploy standardized monitoring settings across the targets in your data center. Enterprise Manager allows you to define monitoring settings on one target, and deploy the same settings to other targets. This feature is called Monitoring Template. When a change is made to a template, you can reapply the template across affected targets in order to propagate the new changes. The apply operation can be automated using Administration Groups and Template Collections. For any target, you can preserve custom monitoring settings by specifying metric settings that can never be overwritten by a template.
+Monitoring templates enable you to maintain standardized monitoring settings across the targets in your enterprise.  You can define the monitoring settings once in a template, then apply these settings to many targets. When a change is made to a template, you can reapply the template to propagate the new changes. The apply operation can be automated using Administration Groups and Template Collections. For any target, you can also have metric threshold settings specific to that target and prevent it from being overwritten by a template.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
@@ -970,7 +1067,7 @@ Monitoring templates enable you to deploy standardized monitoring settings acros
 
     ![Enterprise monitoring, monitoring templates page](images/emmonlab6step4.png " ")
 
-6. Select Database Instance target type then select cdb186.subnet.vcn.oraclevcn.com.
+6. Select Database Instance target type then select cdb186.subnet.vcn.oraclevcn.com. Then click the Select button.
 
     ![Enterprise monitoring, monitoring templates page with Search and Select targets pop-up](images/emmonlab6step5.png " ")
 
@@ -1012,7 +1109,7 @@ Monitoring templates enable you to deploy standardized monitoring settings acros
 
 ## Task 8: Administration Groups and Template Collections
 
-Administration Groups are designed to simplify the process of setting up targets for management in Enterprise Manager. Typically, management settings such as monitoring settings and compliance standards are applied to a target manually or by custom scripts defined by the administrator. With Administration Groups, you first define a hierarchy of Administration Groups where targets in each group have the same management settings.  Next for each Administration Group, define and combine management settings (e.g. monitoring settings, compliance standards and cloud policies) into a container (called template collections) and associate them with the appropriate Administration Group. Once that one-time setup is done, all you need to do is add the target to the appropriate Administration Group, and Enterprise Manager will automatically apply the associated management settings to the target as it joins the group.  This greatly simplifies and streamlines the process of target setup. It also enables a datacenter to easily scale as new targets are added to Enterprise Manager for management.
+Administration Groups simplify the process of setting up targets for monitoring. First, define the set of Administration Groups where targets in each group have the same monitoring settings. Next for each Administration Group, define the set of monitoring templates, combine them in a Template Collection, and associate it with the appropriate Administration Group. Once that’s done, simply add the target to the appropriate Administration Group, and Enterprise Manager will automatically apply the associated monitoring settings to the target as it joins the group.
 
 1. Log into an Enterprise Manager VM (using provided IP). The Enterprise Manager credentials are “emadmin/welcome1”.
 
@@ -1055,7 +1152,7 @@ To create this hierarchy, use target properties to define the membership criteri
 
      ![Administration Groups page, hierarchy tab](images/emmonlab7step8.png " ") 
 
-10. Template Collections is a combination of Monitoring Templates, Compliance Standards and/or Cloud Policies that are applied to targets upon joining an Administration Group. In this lab, we have already created two template collections. Highlight “Non-Production Template Collection” and click View.
+10. Template Collections is a combination of Monitoring Templates and Compliance Standards that are applied to targets upon joining an Administration Group. In this lab, we have already created two template collections. Highlight “Non-Production Template Collection” and click View.
 
      ![Administration Groups page, template collections tab](images/emmonlab7step9.png " ") 
 
@@ -1275,7 +1372,7 @@ Incident Rules specify actions to be taken on events.  For example, when a targe
 
 ## Task 10A: Event Compression Policies
 
-vent Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Policy defines the specific set of related events that should be grouped together. Before incident creation, Event Compression Policies work with Incident Rule Sets to determine if incoming events should be grouped and compressed into a single incident.
+Event Compression is the process of grouping (i.e., compressing) multiple correlated events into a smaller subset of actionable incidents. An Event Compression Policy defines the specific set of related events that should be grouped together. Before incident creation, Event Compression Policies work with Incident Rule Sets to determine if incoming events should be grouped and compressed into a single incident.
 
 1. Log into Enterprise Manager using the credentials **emadmin/welcome1**. 
 
@@ -1339,7 +1436,7 @@ vent Compression is the process of grouping (i.e., compressing) multiple correla
 
     ![Leave custom policy details](ask-em-images/event-compression-policies/leave-custom-policy.png " ")
 
-14. Now, we will take a look at and edit a custom policy. In this lab, a custom draft policy has already been created for you that you will modify. This policy groups multiple event types into a singular incident.
+14. Now, we will review and edit a custom policy. In this lab, you will edit a custom draft policy that has already been created for you. This policy groups multiple event types into a single incident.
 
 15. Select **Actions > Edit** for the following policy: **Target down, metric alert, and metric evaluation error events for a database system and its members**.
 
@@ -1546,6 +1643,6 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
   - [Monitoring Oracle Databases in AWS with Enterprise Manager](https://blogs.oracle.com/observability/post/monitoring-oracle-databases-in-aws-with-enterprise-manager)
 
 ## Acknowledgements
-- **Author** - Marco Hernandez, Product Manager, Enterprise Manager
-- **Contributors** - Desiree Abrokwa, Ana McCollum, Anand Prabhu - Enterprise Manager Product Management
+- **Author** - Desiree Abrokwa, Product Manager, Enterprise Manager
+- **Contributors** - Ana McCollum, Anand Prabhu, Marco Hernandez - Enterprise Manager Product Management
 - **Last Updated By/Date** - Marco Hernandez, Product Manager, Enterprise Manager August 2025
