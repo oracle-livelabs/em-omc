@@ -27,7 +27,7 @@ In this lab, you will:
 
   ![](images/create-new.png "UIdescription")
 
-  The below screenshot shows default view of logging analytics explorer page.
+  The below screenshot shows default view of Log Analytics explorer page.
 
   ![](images/default-landing-le.png "UIdescription")
 
@@ -85,6 +85,6 @@ In this task you will learn whether all HR jobs taking this long indicating appl
   As shown in the chart the 'data update process status report' job in 'human resources' application is taking long time to complete. You can now drill down into specific jobs to review analyze further by simply clicking on a bubble.
 
 ## Acknowledgements
-* **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
-* **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 24 2022
+* **Author** - Gurusamy Poosamalai, Log Analytics Development Team, Supriya Joshi, Log Analytics Development Team
+* **Contributors** -  Kumar Varun, Log Analytics Product Management, Jolly Kundu - Log Analytics Development Team
+* **Last Updated By/Date** - Sep 10 2025

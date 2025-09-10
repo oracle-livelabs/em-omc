@@ -48,9 +48,9 @@ In this lab, you will:
 10. Next, you can analyze further based EBS Functional Issues.
 
     ![](images/la-ebs-functional-issue1.png "UIdescription")
-    ![](images/la-ebs-functional-issue2.png "UIdescription")
+   
 
 ## Acknowledgements
-* **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
-* **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 24 2022
+* **Author** - Gurusamy Poosamalai, Log Analytics Development Team, Supriya Joshi, Log Analytics Development Team
+* **Contributors** -  Kumar Varun, Log Analytics Product Management, Jolly Kundu - Log Analytics Development Team
+* **Last Updated By/Date** - Sep 10 2025

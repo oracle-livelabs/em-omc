@@ -1,7 +1,7 @@
 # ML Clustering to analyze large volume of logs
 
 ## Introduction
-It is easier to visualize large volume of data as related clusters. Logging Analytics - Clustering (Unsupervised ML) uses the log data and the enriched domain expertise to find patterns in the data. Clustering works on text as well as numbers, allowing large volume of data to be reduced to fewer patterns for anomaly detection.
+It is easier to visualize large volume of data as related clusters. Log Analytics - Clustering (Unsupervised ML) uses the log data and the enriched domain expertise to find patterns in the data. Clustering works on text as well as numbers, allowing large volume of data to be reduced to fewer patterns for anomaly detection.
 
 Estimated Time: 20 minutes
 
@@ -11,9 +11,7 @@ Watch the video below for a quick walk-through of the lab.
 ### Objectives
 
 In this lab, you will:
-* Analyzing large volume of logs using cluster command
-
-Now we will walk through Analyzing large volume of logs using cluster command.
+* Analyze large volume of logs using cluster command
 
 ## **Task 1:**  Analyzing large volume of logs using **cluster**
 
@@ -28,17 +26,17 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
       ```
       <copy>
-      https://cloud.oracle.com/loganalytics/explorer?viz=cluster&query=*%20%7C%20cluster&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue%2Cocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriayzkchiuhdznrq6peshz4pk6gknqk725shpjtyyj2jpta%3Brs%3Aroot%2Ctrue&startTime=1661990400000&endTime=1664539200000
+     https://cloud.oracle.com/loganalytics/explorer?viz=cluster&encodedQuery=KiB8IGNsdXN0ZXI%3D&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue%2Cocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriayzkchiuhdznrq6peshz4pk6gknqk725shpjtyyj2jpta%3Brs%3Aroot%2Ctrue%3Brg%3Aus-phoenix-1&startTime=1662015600000&endTime=1664564400000&region=us-phoenix-1&tenant=emdemo
       </copy>
       ```
 
 3. Drill down into cluster tab.
 
-   Logging Analytics uses unsupervised ML to find related clusters in data.  This reduces approximately 2,688,453 log records to 500 cluster patterns, in real time.
+   Log Analytics uses unsupervised ML to find related clusters in data.  This reduces approximately 2,688,453 log records to 1273 cluster patterns, in real time.
 
    ![](images/cluster-start-2.png "image10")
 
-  **Note:** The numbers you see might be slightly different than the ones shown in the tutorial. You can use the START time **Sep 1, 2022 12:00:00 AM UTC(+00:00)** and END time **Sep 30, 2022 12:00:00 PM UTC(+00:00)** in the time picker to replicate these in your lab environment.  
+  **Note:** The actuals numbers might be different as you are using live log data.
 
 ## **Task 2:**  Analyzing logs using **Potential Issues**
 
@@ -47,7 +45,7 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 1. Click on the **Potential Issues** tab.
    ![](images/la-cluster-potential-click.png "image11")
 
-2. In this screenshot, we see that out of the 500 clusters, 150 were automatically identified as Potential Issues.
+2. In this screenshot, we see that out of the 1273 clusters, 171 were automatically identified as Potential Issues.
    ![](images/potential-issues-2.png "image11")
 
 3. You will see the potential issues which helps you to analyze your application.
@@ -62,7 +60,7 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
    ![](images/la-cluster-outlier-click.png "outliers")
 
-2. In this screenshot, we see that 82 were automatically identified as outliers.
+2. In this screenshot, we see that 83 were automatically identified as outliers.
 
    ![](images/la-cluster-outlier-tab.png "image11")
 
@@ -78,7 +76,7 @@ Now we will walk through Analyzing large volume of logs using cluster command.
 
    ![](images/la-cluster-trends-click.png "trends")
 
-2. In this screenshot, we see that 47 trends were automatically identified.
+2. In this screenshot, we see that 53 trends were automatically identified.
 
    ![](images/trend-example-2.png "trends")
 
@@ -92,6 +90,6 @@ Now we will walk through Analyzing large volume of logs using cluster command.
    These are the clusters that had the same shape (i.e. occuring at the same time) to as the selected cluster pattern in time. In this case these are the messages issued by EBS Transaction Manager Logs for a database connection issue.
 
 ## Acknowledgements
-* **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
-* **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 24 2022
+* **Author** - Gurusamy Poosamalai, Log Analytics Development Team, Supriya Joshi, Log Analytics Development Team
+* **Contributors** -  Kumar Varun, Log Analytics Product Management, Jolly Kundu - Log Analytics Development Team
+* **Last Updated By/Date** - Sep 10 2025

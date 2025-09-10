@@ -1,4 +1,4 @@
-# Get Familiar with Logging Analytics Explorer GUI
+# Get Familiar with Log Analytics Explorer GUI
 
 ## Introduction
 
@@ -17,7 +17,7 @@ In this lab, you will:
 
 ## **Task 1:**  Navigate to Log Explorer GUI
 
-1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) click **Observability & Management**. Under **Logging Analytics** click **Log Explorer**.
+1. From Navigation Menu ![navigation-menu](images/navigation-menu.png) click **Observability & Management**. Under **Log Analytics** click **Log Explorer**.
 ![](./images/oci-console-la-explorer.png "Log Explorer Menu")
 
   Note : You can also copy-paste the following link in your browser's address bar to navigate to the Log Explorer.
@@ -31,7 +31,7 @@ In this lab, you will:
 ![](./images/oci-console-la-explorer-default.png "Log Explorer Page")
 
 
-## **Task 2:**  Familiarize user interface used in Logging Analytics
+## **Task 2:**  Familiarize user interface used in Log Analytics
 
 Here are the main parts of the user interface that will be used throughout this lab.
 
@@ -54,13 +54,13 @@ Here are the main parts of the user interface that will be used throughout this 
 6. **Main panel**, where the visualization outputs appear above the results of the query.
 ![](images/la-main-panel.png "Log Explorer")
 
-Around 800+ different types of logs (Log Sources) are being collected in Logging Analytics ranging from logs from Oracle Database to Linux OS to Packaged Applications to Cloud Services.
+Around 800+ different types of logs (Log Sources) are being collected in Log Analytics ranging from logs from Oracle Database to Linux OS to Packaged Applications to Cloud Services.
 
 Note: You are working with live logs so it may take a few minutes for logs to show up in your Log Explorer view. Click the **Run** button to re-run the query.
 
 You'll learn log analytics basics and how to use Log Explorer GUI in the next section.
 
 ## Acknowledgements
-* **Author** - Gurusamy Poosamalai, Logging Analytics Development Team
-* **Contributors** -  Kumar Varun, Logging Analytics Product Management, Jolly Kundu - Logging Analytics Development Team
-* **Last Updated By/Date** - Aug 24 2022
+* **Author** - Gurusamy Poosamalai, Log Analytics Development Team, Supriya Joshi, Log Analytics Development Team
+* **Contributors** -  Kumar Varun, Log Analytics Product Management, Jolly Kundu - Log Analytics Development Team
+* **Last Updated By/Date** - Sep 10 2025

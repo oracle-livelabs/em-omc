@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Monitoring E-Business Suite with OCI Logging Analytics",
+    "workshoptitle": "Monitoring E-Business Suite with OCI Log Analytics",
 	  "help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -13,18 +13,18 @@
             "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
         },
         {
-            "title": "Lab 1: Get Familiar with Logging Analytics Explorer GUI",
-            "description": "Get Familiar with OCI Logging Analytics Explorer GUI",
+            "title": "Lab 1: Get Familiar with Log Analytics Explorer GUI",
+            "description": "Get Familiar with OCI Log Analytics Explorer GUI",
             "filename": "../../loganalytics-explorer-gui/log-exlporer-gui.md"
         },
         {
-            "title": "Lab 2: Logging Analytics Basics",
-            "description": "OCI Logging Analytics Basics",
+            "title": "Lab 2: Log Analytics Basics",
+            "description": "OCI Log Analytics Basics",
             "filename": "../../loganalytics-basics/loganalytics-basics.md"
         },
         {
             "title": "Lab 3: ML Clustering to analyze large volume of logs",
-            "description": "OCI Logging Analytics ML Clustering to analyze large volume of logs",
+            "description": "OCI Log Analytics ML Clustering to analyze large volume of logs",
             "filename": "../../loganalytics-ml-clustering/ml-clustering.md"
         },
         {
