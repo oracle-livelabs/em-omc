@@ -51,7 +51,7 @@ In this lab, you will:
 
 ## **Task 2:** Slice-And-Dice log data based on **Time Taken**
 
-  1. Click on the **Gear** icon on the top left of the chart and select **Filter Options** which will launch "Filter Options" a pop-up.
+  1. Click on the **Gear** icon on the top left of the chart and select **Filter Options** which will launch "Filter Options" pop-up.
 
   ![](images/link-filter-options.png "UIdescription")
 
