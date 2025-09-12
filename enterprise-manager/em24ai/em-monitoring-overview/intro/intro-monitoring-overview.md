@@ -134,6 +134,6 @@ Drive Your Autonomous Future with Oracle Enterprise Manager
 - [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
 
 ## Acknowledgements
-- **Author** - Marco Hernandez, Product Manager, Enterprise Manager
-- **Contributors** - Desiree Abrokwa, Ana McCollum, Anand Prabhu - Enterprise Manager Product Management
+- **Author** - Desiree Abrokwa, Product Manager, Enterprise Manager
+- **Contributors** - Marco Hernandez, Desiree Abrokwa, Ana McCollum, Anand Prabhu - Enterprise Manager Product Management
 - **Last Updated By/Date** - Marco Hernandez, Product Manager, Enterprise Manager August 2025
