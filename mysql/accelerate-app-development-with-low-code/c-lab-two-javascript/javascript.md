@@ -103,63 +103,56 @@ MySQL-JavaScript unlocks new opportunities in application design that were once 
 5. Execute the following procedure that calculates risk based on income and credit score, with JavaScript inside MySQL handling the maskung of PII fields for secure data processing.
 
     ```
-     <copy>
-      create PROCEDURE get_masked_customer_by_cif(IN cif_id int)
-      LANGUAGE javascript as $$
+      <copy>
+      CREATE PROCEDURE `javascript_demo`.`get_masked_customer_by_cif`(IN cif_id int, OUT masked JSON)
+      DETERMINISTIC LANGUAGE JAVASCRIPT
+      AS $$
       let selectStatement = session.prepare(
-        "SELECT * FROM cif_details where cif_id = ?"
+      "SELECT * FROM cif_details where cif_id = ?"
       );
       let result = selectStatement.bind(cif_id).execute();
       let row = result.fetchOne();
 
       if(!row){
-      console.log("Error retrieving details");
-      return {error: "No customer found."};
-      }
+            console.log("Error retrieving details");
+            return {error: "No customer found."};
+            }
 
       const maskEmail = (email) => {
             if(!email || !email.includes('@')) return email;
             const [local, domain] = email.split('@');
             if(local.length<=2) return '*'.repeat(local.length) + '@' + domain;
             return local.slice(0,2) + '*'.repeat(local.length-2) + '@' + domain;
-      };
+            };
 
       const maskPhone = (phone) => {
             if(!phone || phone.length<4) return email;
             return '*'.repeat(phone.length-4) + phone.slice(-4);
-      };
+            };
 
       const maskSSN = (ssn) => {
             if(!ssn || ssn.length<4) return ssn;
             return '***-**-' + ssn.slice(-4);
-      };
+            };
 
-      let risk_flag = 'Low';
+      let risk_flag = 'low';
       if (row.income < 50000 || row.credit_score < 600){
-            risk_flag='High';
+            risk_flag='high';
       } else if (row.credit_score < 700) {
-            risk_flag = 'Medium';
+            risk_flag = 'medium';
       }
 
-      console.log(">> PII Masked Record for CIF:", row[0])
-      console.log("   Masked Email: ", maskEmail(row[2]))
-      console.log("   Masked Phone: ", maskPhone(row[3]))
-      console.log("   Masked SSN: ", maskSSN(row[5]))
-      console.log("   Risk Status: ", risk_flag)
-
-      return {
+      masked = {
             name: row[1],
             email: maskEmail(row[2]),
             phone: maskPhone(row[3]),
-            dob: row[4],
             ssn: maskSSN(row[5]),
             income: row[6],
             credit_score: row[7],
-            address: row[8],
-            created_at: row[9]
+            risk_status: risk_flag
       }
       $$;
-    </copy>
+      </copy>
      ```
      ![JS Stored Procedure](./images/js-stored-procedure.png " ")
 
@@ -167,7 +160,9 @@ MySQL-JavaScript unlocks new opportunities in application design that were once 
 
     ```
      <copy>
-    CALL get_masked_customer_by_cif(1);</copy>
+     CALL`javascript_demo`.`get_masked_customer_by_cif`(1, @out);
+     SELECT @out;
+     </copy>
      ```
      ![Call Stored Procedure](./images/call-procedure.png " ")
 
@@ -255,6 +250,6 @@ MySQL-JavaScript unlocks new opportunities in application design that were once 
 
 ## Acknowledgements
 
-* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Author** - Sindhuja Banka, MySQL HeatWave Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
 * **Last Updated By/Date** - Sindhuja Banka, July 2025
