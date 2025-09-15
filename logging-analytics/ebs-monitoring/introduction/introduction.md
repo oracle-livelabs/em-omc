@@ -1,8 +1,8 @@
-﻿# Introduction
+# Introduction
 
 ## About this Workshop
 
-In this workshop learn how to use OCI Log Analytics in a pre-configured environment to easily perform such tasks, including outlier detection, event clustering, log correlation and anomaly detection.
+In this workshop learn how to use OCI Log Analytics in a pre-configured environment to easily perform tasks such as including outlier detection, event clustering, log correlation and anomaly detection.
 
 A typical enterprise environment has massive volume of log telemetry. Finding interesting log data and events and correlating them to a specific business flow from across all your applications, or identifying abnormal behaviour can be challenging.
 
@@ -14,7 +14,7 @@ Estimated Workshop Time: 01 hours 30 minutes
 
 In this workshop, you will:
 
-* Learn log analytics fundamentals in the context of Oracle E-Business Suite (EBS) Application and Infrastructure
+* Learn OCI Log Analytics fundamentals in the context of Oracle E-Business Suite (EBS) Application and Infrastructure
 * Learn advanced ML based analytics to understand large volume of logs in a structured way for RCA
 * Learn log correlation to debug long running concurrent request jobs in E-Business Suite Application
 * Learn to use monitoring dashboards

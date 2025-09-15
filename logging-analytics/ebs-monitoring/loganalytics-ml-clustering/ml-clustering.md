@@ -15,8 +15,12 @@ In this lab, you will:
 
 ## **Task 1:**  Analyzing large volume of logs using **cluster**
 
-1. Click on Scope Filter then search and select Log Group Compartment "ebs-lab-9522" then Click Apply and Close to set scope filter for Analyzing logs.
+1. Click on Scope Filter then search and select Log Group Compartment "ebs-lab-9522" then Click Apply and Close to set scope filter for Analyzing logs. 
   ![](images/la-lg-scope-filter-click.png "ScopeFilter")
+
+     **Note:**  The chosen entity in the scope filter should not be cleared.
+
+
 
 2. Click on the 'Cluster' visualization to invoke machine learning
 
@@ -26,7 +30,7 @@ In this lab, you will:
 
       ```
       <copy>
-     https://cloud.oracle.com/loganalytics/explorer?viz=cluster&encodedQuery=KiB8IGNsdXN0ZXI%3D&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue%2Cocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriayzkchiuhdznrq6peshz4pk6gknqk725shpjtyyj2jpta%3Brs%3Aroot%2Ctrue%3Brg%3Aus-phoenix-1&startTime=1662015600000&endTime=1664564400000&region=us-phoenix-1&tenant=emdemo
+   https://cloud.oracle.com/loganalytics/explorer?viz=cluster&encodedQuery=KiB8IGNsdXN0ZXI%3D&vizOptions=%7B%22customVizOpt%22%3A%7B%22primaryFieldIname%22%3A%22mbody%22%2C%22primaryFieldDname%22%3A%22Original%20Log%20Content%22%7D%7D&scopeFilters=lg%3Aocid1.compartment.oc1..aaaaaaaaxujlxdn7x745hunya7vhmu3odkxcp4c4vkczi5c2gilbksokvdna%2Ctrue%3Ben%3Aroot%2Ctrue%2Cocid1.loganalyticsentity.oc1.phx.amaaaaaaqgp2kriayzkchiuhdznrq6peshz4pk6gknqk725shpjtyyj2jpta%3Brs%3Aroot%2Ctrue%3Brg%3Aus-phoenix-1&startTime=1662015600000&endTime=1664564400000&tenant=emdemo&region=us-phoenix-1
       </copy>
       ```
 
@@ -81,9 +85,15 @@ In this lab, you will:
    ![](images/trend-example-2.png "trends")
 
 3. Scroll down to find the "3 similar trends" shown in the screenshot below.
+
+   **Note:**  The exact number of displayed trends may vary based on the selected time window and timezone. Hence we can see different number of similar trends.
    ![](images/la-cluster-3-similar-trend.png "trends")
 
-4. Next, click on "3 similar trends" to see a set of related logs from the 'EBS Transaction Manager Logs' and 'FMW WLS Server Logs'. Note that the exact number of displayed trends may vary based on the selected time window.
+
+
+4. Next, click on "3 similar trends" to see a set of related logs from the 'EBS Transaction Manager Logs' and 'FMW WLS Server Logs'. 
+
+   **Note:**  The exact number of displayed trends may vary based on the selected time window and timezone.
 
    ![](images/similar-trend-eg-2.png "trends")
 
