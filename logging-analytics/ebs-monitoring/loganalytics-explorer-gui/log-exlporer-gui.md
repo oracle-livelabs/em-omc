@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Let's do a walk through of Log Explorer, which should be the current view on OCI Console.
+Let's do a walk through of Log Explorer.
 
-You should see a page similar to the one below showing the distribution of different types of logs currently being collected in this tenancy in the last 60 minutes.
+Once you navigate to the Log Explorer GUI (as outlined in the tasks below), a page will appear showing the distribution of various log types collected in this tenancy over the past 60 minutes.
 
 Estimated Lab Time: 10 minutes
 

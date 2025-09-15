@@ -183,8 +183,11 @@ Estimated time: 30 minutes
 
     ![Started Local Instance](./images/started-local-instance.png " ")
 
-15. Access the APIs using the URL **https://localhost:8445/HRService/HRDB/employee**.
+15. Access the APIs using the URL:
 
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
      ![Output](./images/chrome-output.png " ")
 
 16. Adding a Primary Key value to the **request path (e.g. /1)** will filter the result to a single data set.
@@ -202,7 +205,11 @@ Adding offset and limit as query parameters allow you to page the full data set.
 
      ![Open API Window](./images/open-api-dialog.png " ")
 
-3. After deployment completes access the Web UI. Open in your browser to launch OpenAPI Web UI, where you can test and explore the REST endpoints for your HR service **https://localhost:8445/myService/openApiUi/#/**.
+3. After deployment completes access the Web UI. Open in your browser to launch OpenAPI Web UI, where you can test and explore the REST endpoints for your HR service.
+
+     ```
+     <copy>https://localhost:8445/myService/openApiUi/#/</copy>
+     ```
 
      ![Swagger UI](./images/swagger-ui.png " ")
 
@@ -229,7 +236,11 @@ Adding offset and limit as query parameters allow you to page the full data set.
 
      ![Swagger Post Response](./images/swagger-post-request.png " ")
 
-9. After that check the output of **https://localhost:8445/HRService/HRDB/employee** on the other chrome tab to see the new employee added in the list.
+9. After that check the output on the other chrome tab to see the new employee added in the list.
+
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
 
      ![Chrome Output](./images/chrome-post.png " ")
 
@@ -241,7 +252,11 @@ Adding offset and limit as query parameters allow you to page the full data set.
 
      ![Swagger Delete Response](./images/swagger-delete-request.png " ")
 
-12. After that check the output of **https://localhost:8445/HRService/HRDB/employee** on the other chrome tab where the deleted record should no longer appear in the list.
+12. After that check the output on the other chrome tab where the deleted record should no longer appear in the list.
+
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
 
      ![Chrome Output](./images/chrome-delete.png " ")
 
@@ -253,7 +268,11 @@ Adding offset and limit as query parameters allow you to page the full data set.
 
      ![Swagger Put Response](./images/swagger-put-request.png " ")
 
-15. After that check the output of **https://localhost:8445/HRService/HRDB/employee** on the other chrome tab to look for the updated details in the response.
+15. After that check the output on the other chrome tab to look for the updated details in the response.
+
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
 
      ![Chrome Output](./images/chrome-put.png " ")
 
@@ -263,6 +282,6 @@ Adding offset and limit as query parameters allow you to page the full data set.
 
 ## Acknowledgements
 
-* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Author** - Sindhuja Banka, MySQL HeatWave Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
 * **Last Updated By/Date** - Sindhuja Banka, August 2025

@@ -49,11 +49,11 @@ By the end of this lab, you'll be able to:
 4. In VS Code’s terminal, run the following command and press Enter to install the necessary Python connector. This step prepares your Python environment to communicate with MySQL databases.
 
      ```
-     <copy>pip install mysql-connector-python</copy>
+     <copy>pip show mysql-connector-python</copy>
      ```
-     ![Select Records](./images/pip-install-python.png " ")
+     ![Select Records](./images/pip-show-python.png " ")
 
-5. After running the install command, check the terminal output for a message indicating that mysql-connector-python has been successfully installed. Look for lines like **Successfully installed mysql-connector-python** to confirm the installation completed without errors.
+5. After running the show command, check the terminal output for a message indicating that mysql-connector-python has been successfully retrieved.
 
      ![Select Statement](./images/python-installation.png " ")
 
@@ -160,6 +160,6 @@ By the end of this lab, you'll be able to:
 
 ## Acknowledgements
 
-* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Author** - Sindhuja Banka, MySQL HeatWave Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
 * **Last Updated By/Date** - Sindhuja Banka, July 2025
