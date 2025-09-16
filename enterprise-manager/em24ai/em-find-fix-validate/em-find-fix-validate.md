@@ -267,8 +267,8 @@ Please note: This is a read-only task. ADDM Spotlight aggregates the ADDM findin
 
 3. *Note*: The next step in this lab requires immediate action as soon as the script is run. Once the script is finished running, the SQL will no longer be visible in the list. As soon as you execute the script, immediately begin the next step. 
 
-Using SQLPlus connect to the sh2 account. Open the file (!vi DBOP.sql) from the SQL prompt and then review the content of the file. At the beginning of the file you will notice how we have tagged the operation with dbms\_sql\_monitor.begin\_operation and ended it with dbms\_sql\_monitor.end\_operation.
-Now execute the file \@DBOP.sql
+    Using SQLPlus connect to the sh2 account. Open the file (!vi DBOP.sql) from the SQL prompt and then review the content of the file. At the beginning of the file you will notice how we have tagged the operation with dbms\_sql\_monitor.begin\_operation and ended it with dbms\_sql\_monitor.end\_operation.
+    Now execute the file \@DBOP.sql
 
     ```
     <copy>sqlplus sh2/sh2@psales
@@ -470,24 +470,6 @@ In this step we need to configure the database to set up optimizer statistics to
 22. You are now viewing the Comparison Report page. It includes sections such as **Summary** which describes the workload impact summeary on the chosen comparison metric, **Breakdown** which visualizes the chosen metric the SQL Statements by different categories, and **Top SQL Statements by Workload Impact** which shows a table displaying Top SQL Statements by the percentage of the difference of their comparison metric to the total value of the comparison metric of all analyzed SQL.
 
     ![Comparison Report](images/comparison-report.png " ")
-
-<!-- 22.  As we can see the majority of our statements have had unchanged performance. We have a significant improvement but the most important thing to notice is that we have no regression. If there had been regression then we have the ability to tune the regressed statement or use SQL Plan Baselines to remediate the identified regressions. Note you can also use SQL Tuning Advisor to remediate regressions by implementing SQL Profile recommendations
-
-      ![](images/emspapubobj.png " ")
-
-23.  Since this application has used stale statistics for a long period, then it would be good to have new statistics implemented. Click on **Publish Object Statistics**
-
-      ![](images/bfd46716f39ec820e1c9c0c9982d5218.jpg " ")
-
-24. We can now change statistics for all tables where we have pending statistics. For the scope of this exercise we will only change statistics for schema STAT1. Click the **Checkbox** for schema STAT1 .Click **Publish**.
-
-    ![](images/1d3a02d5d46d720eefbe226143471f2c.jpg " ")
-
-25. Click **Yes**
-
-    ![](images/a8dc3af7bcf1c5b473e4f0037dd722a4.jpg " ")
-
-    ![](images/e75f7e6b78aafd328d6b57f505245622.jpg " ") -->
 
 You have now learned how to work with SPA. As you can see there are Guided Workflows that will help you during your analysis and verify that you can implement new changes in production with confidence.
 
