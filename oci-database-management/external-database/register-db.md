@@ -310,6 +310,6 @@ When using Resource Manager to deploy an environment, execute a terraform **Appl
 
 ## Acknowledgements
 
-- **Author** - Vivek Verma, Principal Cloud Architect, North America Cloud Engineering
+- **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Pratima Chennupati
-- **Last Updated By/Date** - Vivek Verma, December 2023
+- **Last Updated By/Date** - Vivek Verma, June 2025

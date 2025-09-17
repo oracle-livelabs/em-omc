@@ -1,0 +1,36 @@
+{
+    "workshoptitle": "Monitoring External MySQL Databases using OCI Observability & Management Services",
+      "help": "livelabs-help-em_us@oracle.com",
+      "tutorials": [
+          {
+              "title": "Introduction",
+              "description": "Introduction",
+              "filename": "../../a-introduction/introduction.md"
+          },
+          {
+            "title": "Database Management",
+            "description": "Database Management",
+            "filename": "../../b-lab-one-database-management/dbm.md"
+        },
+        {
+            "title": "Ops Insights",
+            "description": "Ops Insights",
+            "filename": "../../c-lab-two-opsi/opsi.md"
+        },
+        {
+            "title": "Log Analytics",
+            "description": "Log Analytics",
+            "filename": "../../d-lab-three-logging-analytics/logginganalytics.md"
+        },
+        {
+            "title": "Application Performance Monitoring",
+            "description": "Application Performance Monitoring",
+            "filename": "../../e-lab-four-application-performance-monitoring/apm.md"
+        },
+        {
+              "title": "Need Help?",
+              "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+              "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+        }
+      ]
+  }

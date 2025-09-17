@@ -14,31 +14,12 @@
       "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
     },
     {
-      "title": "Lab 1: Prepare setup",
-      "description": "How to download your ORM stack and update security rules for an existing VCN.",
-      "publisheddate": "05/23/2023",
-      "filename": "./../../prepare-setup/prepare-setup.md",
-      "type": "default"
-    },
-    {
-      "title": "Lab 2: Set up compute instance",
-      "description": "How to provision the workshop environment and connect to it",
-      "publisheddate": "03/22/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc.md"
-    },
-    {
-      "title": "Lab 3: Initialize environment",
-      "description": "How to initialize and start all the workshop components.",
-      "publisheddate": "05/23/2023",
-      "filename": "./../../initialize-environment/initialize-environment.md"
-    },
-    {
-      "title": "Lab 4: Monitor general state of Oracle Database",
+      "title": "Lab 1: Monitor general state of Oracle Database",
       "description": "How to monitor the state of the database from Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
       "filename": "./../../monitor-general-state-database/monitor-general-state-database.md"
     },
     {
-      "title": "Lab 5: Diagnose problems and improve performance using SQL Tuning Advisor",
+      "title": "Lab 2: Diagnose problems and improve performance using SQL Tuning Advisor",
       "description": "How to improve the performance of the database using Automatic SQL Tuning Advisor from Oracle Enterprise Manager Cloud Control (Oracle EMCC).",
       "filename": "./../../improve-db-performance-using-sql-tuning-advisor/improve-db-performance-using-sql-tuning-advisor.md"
     },

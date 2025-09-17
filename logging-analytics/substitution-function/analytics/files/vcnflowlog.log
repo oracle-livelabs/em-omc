@@ -1,0 +1,280 @@
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 15,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetH"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 15,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetG"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 2,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetC"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 15,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetB"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 1,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetE"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 7,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetF"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+},
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 90,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetF"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}
+{
+    "data": {
+        "action": "ACCEPT",
+        "bytesOut": 4843,
+        "destinationAddress": "192.168.0.101",
+        "destinationPort": 443,
+        "endTime": 1601204026,
+        "flowid": "27f8550a",
+        "packets": 15,
+        "protocol": 6,
+        "protocolName": "TCP",
+        "sourceAddress": "192.168.0.100",
+        "sourcePort": 46660,
+        "startTime": 1601204026,
+        "status": "OK",
+        "version": "2"
+    },
+    "id": "409971d6",
+    "oracle": {
+        "compartmentid": "ocid1.compartment.oc1..comp1",
+        "ingestedtime": "2020-09-27T10:54:41.449Z",
+        "loggroupid": "ocid1.loggroup.oc1.iad.lgrp1",
+        "logid": "ocid1.log.oc1.iad.lgid1",
+        "tenantid": "ocid1.tenancy.oc1..tenant1",
+        "vcnOcid": "ocid1.vcn.oc1.phx.vcn1",
+        "vniccompartmentocid": "ocid1.compartment.oc1..comp1",
+        "vnicocid": "ocid1.vnic.oc1.iad.vnic1",
+        "vnicsubnetocid": "ocid1.subnet.oc1..subnetD"
+    },
+    "source": "ocid1.subnet.oc1.iad.aaaaaaaaz",
+    "specversion": "1.0",
+    "subject": "ocid1.vnic.oc1.iad.abuwcljtw",
+    "time": "2020-09-27T10:53:46.000Z",
+    "type": "com.oraclecloud.vcn.flowlogs.DataEvent"
+}

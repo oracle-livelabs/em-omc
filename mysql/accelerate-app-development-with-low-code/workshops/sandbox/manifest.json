@@ -1,0 +1,46 @@
+{
+    "workshoptitle": "Code Less, Do More: Accelerate App Development with MySQL",
+      "help": "livelabs-help-em_us@oracle.com",
+      "tutorials": [
+          {
+              "title": "Introduction",
+              "description": "Introduction",
+              "filename": "../../a-introduction/introduction.md"
+          },
+          {
+            "title": "MySQL Rest Service",
+            "description": "MySQL Rest Service",
+            "filename": "../../b-lab-one-mysql-rest-service/mrs.md"
+        },
+        {
+            "title": "Javascript inside MySQL",
+            "description": "Javascript inside MySQL",
+            "filename": "../../c-lab-two-javascript/javascript.md"
+        },
+          {
+            "title": "MySQL Connectors",
+            "description": "MySQL Connectors",
+            "filename": "../../g-lab-six-connectors/connectors.md"
+        },
+        {
+            "title": "JSON Functions",
+            "description": "JSON Functions",
+            "filename": "../../d-lab-three-json-functions/json.md"
+        },
+        {
+            "title": "Full Text Search in MySQL",
+            "description": "Use of Full Text Search in MySQL",
+            "filename": "../../e-lab-four-text-search/fulltextsearch.md"
+        },
+        {
+            "title": "Encryption and Compression Functions in MySQL",
+            "description": "Encryption and Compression Functions in MySQL",
+            "filename": "../../f-lab-five-encryption-compression/encryptioncompression.md"
+        },
+        {
+              "title": "Need Help?",
+              "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+              "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+          }
+      ]
+  }
