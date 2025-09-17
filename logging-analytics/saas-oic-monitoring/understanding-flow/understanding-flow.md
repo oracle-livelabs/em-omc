@@ -112,7 +112,8 @@ After the PO is submitted, the initial status becomes **Pending Approval**. The 
  5. Validate the PO Status. If it's **Open** then the Business Event has occurred.
 
     > **Note:** If PO has another Status, such as <em>Pending Approval</em>, then wait a couple of minutes and refresh the page until the status changes to **Open**. 
-
+ 
+ 6. Note down the PO Order Number for the future lab reference.
 
 You may now proceed to the [next lab](#next).
 

@@ -47,9 +47,79 @@ The following components generate logs that are crucial for end-to-end observabi
 - **Business Context**: PO number, user ID, and transaction ID tracking
 - **Error Propagation**: Error details flow from source to downstream components
 
-## Task 2: Tracing the Oracle Integration Transactions
+[TO-DO] APEX link to check the PO info
 
-### Oracle Integration Cloud Milestones Trend
+## Task 2: Tracing the Purchase Order Business Identifiers
+
+### **Number of the Purchase Order created in last 60 mins**
+
+- Select the Time Range: Last 60 minutes
+- Visualization: Tile
+- Run the following query in Log Explorer: 
+
+   ```sql
+   <copy>
+   'Log Source' = 'OCI Integration Activity Stream Logs' and key=ordernumber | stats count(key)
+   </copy>
+   ```
+
+- Example Result Screenshot: 
+
+![Number of the Purchase Order created in last 60 mins](images/logan-ll-number-of-the-purchase-order-created-in-last-60-mins.png)
+
+### **Purchase Order Integration Runs Duration**
+
+- Select the Time Range: Last 30 days
+- Visualization: Link
+- Run the following query in Log Explorer: 
+
+```sql
+-- Track PO duration
+(300000313760215 or US165676) and 'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | link 'OPC Request ID', Integration | eval Duration = 'End Time' - 'Start Time'
+```
+
+- Example Result Screenshot: 
+
+![Purchase Order Integration Runs Duration](images/logan-ll-purchase-order-integration-runs-duration.png)
+
+
+### **Purchase Order Flow Timeline**
+
+- Select the Time Range: Last 24 hours
+- Visualization: Link
+- Run the following query in Log Explorer: 
+
+   ```sql
+   -- Purchase Order Flow Timeline
+   'Log Source' = 'OCI Integration Activity Stream Logs' | eval 'Purchase Order' = if(Key = poheaderid, Value, null) | link 'Purchase Order' | sequence name = 'Sequence of Events' [ Integration != null ]{1,} select Integration
+   ```
+- Select the Sequence of Events in the table view
+
+Example Result Screenshot: 
+
+![Purchase Order Flow Timeline Visualization](images/logan-ll-purchase-order-flow-timeline-visualization.png)
+
+
+
+### **Track a specific Purchase Order for example: 300000313760215 or US165676 across all systems**
+
+- Select the Time Range: Last 30 days
+- Visualization: Table
+- Run the following query in Log Explorer: 
+
+   ```sql
+   -- Track Purchase Order flow across all systems
+   (300000313760215 or US165676) and 'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | fields -Entity, -'Host Name (Server)', -'Problem Priority', -Label, Integration, Message, Value, Action, 'Action Type', 'OPC Request ID', -'Entity Type'
+   ```
+
+- Example Result Screenshot: 
+
+![Purchase Order Integration Flows](images/logan-ll-purchase-order-integration-flows-details.png)
+
+
+## Task 3: Monitoring the Oracle Integration Transactions Performance
+
+### **Oracle Integration Cloud Milestones Trend**
 
 - Select the Time Range: Last 24 hours
 - Visualization: Records with Histogram
@@ -88,75 +158,35 @@ The following components generate logs that are crucial for end-to-end observabi
 'Log Source' = 'OCI Integration Activity Stream Logs' and 'Action Type' in (Invoke, Log, Notification, Raise_error, Submitnow, Stop, Switch, Raise_new_error, Receive) and Identifier != null | link 'OPC Request ID', 'Transaction ID' | rename 'Group Duration' as 'Transaction Time' | sequence name = Milestones [ Action != null and 'Action Type' != null and 'Event ID' != null ]{1,} select Action, 'Action Type', 'Event ID', Integration | stats latest(Integration) as Integration, latest(Action) as 'Latest Action', unique('OIC Project') as 'Project Name', distinctcount(Identifier) as Integrations, unique(Entity) as Entity, unique(Instance) as Instance | classify correlate = -*, Integration, 'Project Name', 'Transaction ID' 'Start Time', 'Latest Action', 'Transaction Time' as 'Transaction Execution Time' | fields target = ui -'OPC Request ID', -Entity, -Instance
 ```
 
+- Example Result Screenshot: 
+
+![Oracle Integration Cloud Transaction Performance](images/logan-ll-oracle-integration-cloud-transaction-performance.png)
+
 ### Tracking Purchase Order Integration Flows
 
 - Select the Time Range: Last 24 hours
 - Visualization: Link
-- Update the Chart Option by clicking on the **Gear** icon and select **Chart Options** which will launch "Chart Options" a pop-up.
-- ![Chart Options](images/logan-ll-chart-options.png)
 - Run the following query in Log Explorer: 
 
    ```sql
    <copy>
-   'Log Source' = 'OCI Integration Activity Stream Logs' | link 'OPC Request ID' | eventstats distinctcount(Instance) as Instances, distinctcount(Identifier) as Integrations, distinctcount('User ID') as Users, distinctcount('OCI Resource Name') as Environments | stats unique(Instance) as Instance, unique(Identifier) as 'Integration Id', unique(Endpoint) as Endpoint, unique('User ID') as User, unique('OCI Resource Name') as 'OCI Env' | extract field = 'Integration Id' '(?P<Integration>[^!]*)' | rename 'Group Duration' as 'Time Taken' | classify 'Start Time', 'Integration Id', Integration, 'Time Taken' as 'Flows Execution Time Analysis' | fields target = ui -Instances, -Integrations, -Users, -Environments, -'End Time'
+   'Log Source' = 'OCI Integration Activity Stream Logs' | link 'OPC Request ID' | eventstats distinctcount(Instance) as Instances, distinctcount(Identifier) as Integrations, distinctcount('User ID') as Users, distinctcount('OCI Resource Name') as Environments | stats unique(Instance) as Instance, unique(Identifier) as 'Integration Id', unique(Endpoint) as Endpoint, unique('User ID') as User, unique('OCI Resource Name') as 'OCI Env' | extract field = 'Integration Id' '(?P<Integration>[^!]*)' | rename 'Group Duration' as 'Time Taken' | classify 'Start Time', 'Integration Id', Integration, 'Time Taken' as 'Flows Execution Time Analysis' | fields target = ui -Instances, -Integrations, -Users, -Environments
    </copy>
    ```
+- Update the Chart Option by clicking on the **Gear** icon and select **Chart Options** which will launch "Chart Options" a pop-up.
+- ![Chart Options](images/logan-ll-chart-options.png)
 
 - Example Result Screenshot: 
 
-![Purchase Order Integration Flows](images/logan-ll-purchase-order-integration-flows.png)
+![Purchase Order Integration Flows](images/logan-ll-identify-slow-processing-steps.png)
 
 
-## Task 3: Tracing the Purchase Order Business Identifiers
 
-### Create a Purchase Order Flow Timeline Visualization
-
-- Select the Time Range: Last 24 hours
-- Visualization: Link
-- Run the following query in Log Explorer: 
-
-   ```sql
-   -- Create a PO Flow Timeline Visualization
-   'Log Source' = 'OCI Integration Activity Stream Logs' | eval 'Purchase Order' = if(Key = poheaderid, Value, null) | link 'Purchase Order' | sequence name = 'Sequence of Events' [ Integration != null ]{1,} select Integration
-   ```
-- Select the Sequence of Events in the table view
-
-Example Result Screenshot: 
-
-![Purchase Order Flow Timeline Visualization](images/logan-ll-purchase-order-flow-timeline-visualization.png)
-
-### Track a specific Purchase Order for example: 300000313760215 or US165676 across all systems
-
-- Select the Time Range: Last 30 days
-- Visualization: Table
-- Run the following query in Log Explorer: 
-
-   ```sql
-   -- Track Purchase Order flow across all systems
-   (300000313760215 or US165676) and 'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | fields -Entity, -'Host Name (Server)', -'Problem Priority', -Label, Integration, Message, Value, Action, 'Action Type', 'OPC Request ID', -'Entity Type'
-   ```
-
-- Example Result Screenshot: 
-
-![Purchase Order Integration Flows](images/logan-ll-purchase-order-integration-flows-details.png)
-
-### Purchase Order Integration Runs Duration
-
-- Select the Time Range: Last 30 days
-- Visualization: Link
-- Run the following query in Log Explorer: 
-
-```sql
--- Track PO duration
-(300000313760215 or US165676) and 'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | link 'OPC Request ID', Integration | eval Duration = 'End Time' - 'Start Time'
-```
-
-- Example Result Screenshot: 
-
-![Purchase Order Integration Runs Duration](images/logan-ll-purchase-order-integration-runs-duration.png)
-
-
-## Task 4: Visualize the Purchase Order business data in Autonomous Data Warehouse
+### **Potential Performance issues in the Purchase Order integration flows**
+- Too many orders generated in a short period of time
+- Bottleneck in the integration flow
+- Slow FTP Server due to network response time
+- Database performance issue due to high wait events
 
 ### Identify the long running Purchase Order integrations
 
@@ -173,6 +203,7 @@ Example Result Screenshot:
 
 ![Identify the long running Purchase Order integrations](images/logan-ll-identify-the-long-running-purchase-order-integrations.png)
 
+### Identify the long running Purchase Order integrations with Chart
 
 - Select the Time Range: Last 24 hours
 - Visualization: Link
@@ -188,6 +219,8 @@ Example Result Screenshot:
 ![Identify the long running Purchase Order integrations with Chart](images/logan-ll-identify-the-long-running-purchase-order-integrations-with-chart.png)
 
 
+## Task 4: Visualize the Purchase Order business data in Log Analytics
+
 ### Purchase Order table with Order Status
 
 - Select the Time Range: Last 60 minutes
@@ -201,23 +234,6 @@ Example Result Screenshot:
 - Example Result Screenshot: 
 
 ![Purchase Order table with Order Status](images/logan-ll-purchase-order-table-with-order-status.png)
-
-
-### OIC Integrations Run Analysis
-
-- Select the Time Range: Last 24 hours
-- Visualization: Link
-- Run the following query in Log Explorer: 
-
-   ```sql
-   -- Identify slow processing steps
-   'Log Source' = 'OCI Integration Activity Stream Logs' | link 'OPC Request ID' | eventstats distinctcount(Instance) as Instances, distinctcount(Identifier) as Integrations, distinctcount('User ID') as Users, distinctcount('OCI Resource Name') as Environments | stats unique(Instance) as Instance, unique(Identifier) as 'Integration Id', unique(Endpoint) as Endpoint, unique('User ID') as User, unique('OCI Resource Name') as 'OCI Env' | extract field = 'Integration Id' '(?P<Integration>[^!]*)' | rename 'Group Duration' as 'Time Taken' | classify 'Start Time', 'Integration Id', Integration, 'Time Taken' as 'Flows Execution Time Analysis' | fields target = ui -Instances, -Integrations, -Users, -Environments
-   ```
-
-- Example Result Screenshot: 
-
-![Identify slow processing steps](images/logan-ll-identify-slow-processing-steps.png)
-
 
 **Congratulations!** In this lab, you have successfully completed the following tasks:
 - Understanding Oracle Log Analytics concepts and capabilities
