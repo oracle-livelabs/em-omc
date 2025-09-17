@@ -14,7 +14,7 @@ This lab assumes you have -
 - An Oracle Free Tier or Paid Cloud account
 
 ## Task 1: Download Oracle Resource Manager (ORM) stack zip file
-1.  Click on the link below to download the Resource Manager zip file you need to build your environment: [emcc-de-mkplc-freetier.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/UStDLrMBQimssTawQgSLHmB7w3ZmLuLOleclPARH-7jEJpHMoQKv8KPq31yK-_wU/n/c4u02/b/hosted_workshops/o/stacks/emcc-de-mkplc-freetier.zip)
+1.  Click on the link below to download the Resource Manager zip file you need to build your environment: [emcc-de-mkplc-freetier.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/2lAAJz7djqsTrho2Bui619cBq27dqJf3PeStC61AMZwe9S64y2HwYiYOs9ooAh3D/n/c4u02/b/hosted_workshops/o/stacks/emcc-de-mkplc-freetier.zip)
 
 2.  Save in your downloads folder.
 
