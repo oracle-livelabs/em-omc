@@ -50,7 +50,7 @@ Select between *Task 1A* and *Task 1B*
     Password: <copy>welcome1</copy>
     ```
 
-    ![](images/sysman-login.png " ")
+    ![Sysman Login](images/sysman-login.png " ")
 
 2. From the upper left, navigate from **Enterprise** to **Job and Procedures** to then **Library**
 
@@ -79,7 +79,7 @@ Select between *Task 1A* and *Task 1B*
     . ./1-db_lab_start.sh</copy>
     ```
 
-    ![](images/emopt3start.png " ")
+    ![Run script on terminal](images/emopt3start.png " ")
 
 ## Task 2: ADDM Spotlight (Read-only)
 
