@@ -57,21 +57,21 @@ The following components generate logs that are crucial for end-to-end observabi
 
 ## Task 3: Tracing the Purchase Order Business Identifiers
 
-### **Number of the Purchase Order created in last 60 mins**
+### **Number of the Purchase Order created in last 8 hours**
 
-- Select the Time Range: Last 60 minutes
+- Select the Time Range: Last 8 hours
 - Visualization: Tile
 - Run the following query in Log Explorer: 
 
    ```sql
    <copy>
-   'Log Source' = 'OCI Integration Activity Stream Logs' and key=ordernumber | stats count(key)
+   'Log Source' = 'OCI Integration Activity Stream Logs' and Key = ordernumber and Integration = LL_ERPPO_BACKEND_B2B | stats count(Key), count(Key), trend(count(Key)) | compare timeshift = auto
    </copy>
    ```
 
 - Example Result Screenshot: 
 
-![Number of the Purchase Order created in last 60 mins](images/logan-ll-number-of-the-purchase-order-created-in-last-60-mins.png)
+![Number of the Purchase Order created in last 60 mins](images/logan-ll-number-of-the-purchase-order-created-in-last-8-hours.png)
 
 ### **Purchase Order Integration Runs Duration**
 
