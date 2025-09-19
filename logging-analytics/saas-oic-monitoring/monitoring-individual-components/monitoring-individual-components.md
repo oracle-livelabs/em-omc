@@ -37,9 +37,10 @@ In this lab, you will get an overview of the different dashboards, including the
   
 -  **Oracle Integration Insight**  dashboard provides real-time business monitoring by linking technical integrations to business processes and KPIs. The dashboard enables business users, analysts, and IT teams to visualize the progress, performance, and bottlenecks in their business operations. It consists of different widgets like Summary widget, Milestone progress widget, Transction Performance widget , Transaction Tracking Fields widget etc. 
 
-| Component | Observability Log Source | Functional Components | Integration Points | Ingestion method | 
+| Component | Observability Log Source | Functional Components | Upstream and Downstream Systems | Ingestion method | 
 |-----------|-----------|-----------------|-------------------|
-| **Oracle Integration Cloud** | OIC Activity Stream Logs | Flow execution, data transformation, EDI processing | SaaS ERP Cloud, ADW, VBCS | Service Logs via Service Connector |
+| **Oracle Integration Cloud** | OIC Activity Stream Logs | integration execution, B2B processing | SaaS ERP Cloud, ADW, VBCS | Service Logs via Service Connector |
+
 
 - In order to view this dashboard one has to search for and click on the **Oracle Integration Insight** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load.
 ![dashboards-oic-insight](images/dashboards-oic-insight.jpg)
@@ -58,13 +59,22 @@ In this lab, you will get an overview of the different dashboards, including the
 
 - **Oracle Database Audit Analysis** dashboard provides analysis of audited actions for Oracle Databases monitored by Log Analytics using Unified Database Audit Logs available in DB v12.2 onwards. This dashboard is used to understand user activity, schema changes etc.
 
+
+| Component | Observability Log Source | Functional Components | Upstream and Downstream Systems | Ingestion method | 
+|-----------|-----------|-----------------|-------------------|
+| **Oracle Autonomous Data Warehouse** | Business data in table/view, Database Audit Logs | Data persistence, analytics queries, access patterns | OIC, VBCS | Database SQL connector based log ingestion via Management Agent |
+
 - In order to view this dashboard one has to search for and click on the **Oracle Database Audit Analysis** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-db-audit](images/dashboards-db-audit.jpg)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
       ![db-audit-dashboard](images/db-audit-dashboard.jpg)
 
-## Task 5: Overview of Oracle Fusion User Access dashboard
+## Task 5: Overview of Oracle Fusion User Access and Audit Dashboard
 
 **Oracle Fusion User Access** dashboard provides comprehensive visibility into user authentication and access patterns within Oracle Fusion Applications. This dashboard tracks sign-in and sign-out activities of Fusion users, allowing administrators and security teams to monitor who is accessing the system, when, and from where. 
+
+| Component | Observability Log Source | Functional Components | Upstream and Downstream Systems | Ingestion method | 
+|-----------|-----------|-----------------|-------------------|
+| **Oracle SaaS Fusion Apps** | Fusion Audit Logs, User Activity, ESS job requests | ESS Audit, User Activity Audit, Fusion Audit, ESS job requests, Business Objects Audit | OIC via REST/SOAP | Fusion REST API endpoints based log ingestion via Management Agent| 
 
 - In order to view this dashboard one has to search for and click on the **Oracle Fusion User Access** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-fusion-user-access](images/dashboards-fusion-user-access.jpg)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
@@ -103,4 +113,4 @@ You may now proceed to the [next lab](#next).
 ## Acknowledgements
 * **Author** - Supriya Joshi, OCI Log Analytics
 * **Contributors** -  Supriya Joshi, Jolly Kundu, Kumar Varun, Royce Fu
-* **Last Updated By/Date** - Supriya Joshi, Jul, 2025
+* **Last Updated By/Date** - Royce Fu, Sep, 2025
