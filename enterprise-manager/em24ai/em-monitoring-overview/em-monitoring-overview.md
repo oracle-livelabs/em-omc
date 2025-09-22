@@ -81,7 +81,7 @@ This lab assumes you have:
 
     ![Step to navigate back to Enterprise Manager summary page](images/enterprise-summary/enterprise-to-summary-navigation-menu-24ai.png " ")
 
-6. In the Incidents table, locate the row for **Availability** and click on the number under ![Availability symbol](images/noentry.svg " ").
+6. In the Incidents table, locate the row for **Availability** and click on the number under ƒƒ![Availability symbol](images/noentry.svg " ").
 
     ![Enterprise Manager summary page, status section with Availability incidents selected](images/enterprise-summary/enterprise-summary-availability-link-24ai.png " ")
 
@@ -167,7 +167,7 @@ Incident Manager provides in one location the ability to search, view, manage, a
 
      ![Incident Manager page](images/incident-manager/incident-select-dashboard-24ai.png " ")
 
-14.	Incident Dashboard provides a holistic view of your incidents. It contains 3 sections.
+14.	Incident Dashboard provides a holistic view of your incidents. It contains 3 sections:
 
        - Summary: Count of incidents that are open, fatal, escalated, unassigned, and unacknowledged. These are the incidents that need to be triaged or worked on immediately. Fatal and Escalated count are highlighted in Red by default.
        - Charts: Provides an easy-to-understand look at the current incident distribution and management status for each incident. Drill down capability with stackable filters to slice and dice data any way you like. Customize to add/update/remove charts to provide a personalized view in Incident Manager.
@@ -205,7 +205,7 @@ Dynamic Runbooks are documented best practice procedures that IT staff follow to
 4. In Incident Manager, the “All open incidents” view is displayed by default. 
 
      Click the incident with Summary text “The value of Fast Recovery Area % Used is 70.013”. Details of the incident will be displayed in the bottom pane.
-     **Note**: You can ignore any differences in values that you see for the Fast Recovery Area Used(&) in your lab environment vs. what is shown in this workbook.
+     **Note**: You can ignore any differences in values that you see for the Fast Recovery Area Used(%) in your lab environment vs. what is shown in this workbook.
      **Note**: The Fast Recovery Area (FRA) is a unified storage location for all Oracle Database files related to recovery.  
 
      ![Highlighted Incident](images/start-runbook-incident/fra-in-incident-manager-24ai.png " ")
@@ -392,7 +392,7 @@ Runbooks are documented best practice procedures in the form of ordered steps th
 
      Click on the Time Range field. 
      
-     Leave the Start Time as "**evt\_time – 1d**" 
+     Leave the Start Time as "**evt\_time – 1d**". 
      
      Change the End Time to "**evt\_time + 1d**". 
      
