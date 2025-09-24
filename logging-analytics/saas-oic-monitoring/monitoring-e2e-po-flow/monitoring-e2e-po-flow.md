@@ -23,9 +23,9 @@ The following components generate logs that are crucial for end-to-end observabi
 | Component | Observability Log Source | Functional Components | Upstream and Downstream Systems | Ingestion method | 
 |-----------|-----------|-----------------|-------------------|
 | **Oracle SaaS Fusion Apps** | Fusion Audit Logs, User Activity, ESS job requests | ESS Audit, User Activity Audit, Fusion Audit, ESS job requests, Business Objects Audit | OIC via REST/SOAP | Fusion REST API endpoints based log ingestion via Management Agent| 
-| **Oracle Integration Cloud** | OIC Activity Stream Logs | integration execution, B2B processing | SaaS ERP Cloud, ADW, VBCS | Service Logs via Service Connector |
-| **Oracle Autonomous Data Warehouse** | Business data in table/view, Database Audit Logs | Data persistence, analytics queries, access patterns | OIC, VBCS | Database SQL connector based log ingestion via Management Agent |
-| **Oracle Visual Builder Cloud Service** | Application Logs, API Logs, Error Logs | User interactions, backend calls, UI performance | ADW, OIC | VBCS REST API endpoints based log ingestion via Management Agent |
+| **Oracle Integration Cloud** | OIC Activity Stream Logs | integration execution, B2B processing | SaaS ERP Cloud, ADW, APEX | Service Logs via Service Connector |
+| **Oracle Autonomous Data Warehouse** | Business data in table/view, Database Audit Logs | Data persistence, analytics queries, access patterns | OIC, APEX | Database SQL connector based log ingestion via Management Agent |
+| **Oracle APEX Application** | User Activity, Application Usage, Error Logs | User Success and Failed Logins, Application and User Activity, Application Errors | ADW, OIC | Database connector based log ingestion via Management Agent |
 
 ### Monitoring and Log Correlation Strategy
 
@@ -81,7 +81,6 @@ The following components generate logs that are crucial for end-to-end observabi
 
    ```sql
    <copy>
-   -- Track PO duration
    (300000313760215 or US165676) and 'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | link 'OPC Request ID', Integration | eval Duration = 'End Time' - 'Start Time'
    </copy>
    ```
@@ -99,7 +98,6 @@ The following components generate logs that are crucial for end-to-end observabi
 
    ```sql
    <copy>
-   -- Purchase Order Flow Timeline
    'Log Source' = 'OCI Integration Activity Stream Logs' | eval 'Purchase Order' = if(Key = poheaderid, Value, null) | link 'Purchase Order' | sequence name = 'Sequence of Events' [ Integration != null ]{1,} select Integration
    </copy>
    ```
@@ -166,20 +164,6 @@ Example Result Screenshot:
 
 ### Analyze Oracle Integration Cloud Transaction Performance
 
-- Select the Time Range: Last 24 hours
-- Visualization: Link
-- Run the following query in Log Explorer: 
-
-   ```sql
-   <copy>
-   'Log Source' = 'OCI Integration Activity Stream Logs' and 'Action Type' in (Invoke, Log, Notification, Raise_error, Submitnow, Stop, Switch, Raise_new_error, Receive) and Identifier != null | link 'OPC Request ID', 'Transaction ID' | rename 'Group Duration' as 'Transaction Time' | sequence name = Milestones [ Action != null and 'Action Type' != null and 'Event ID' != null ]{1,} select Action, 'Action Type', 'Event ID', Integration | stats latest(Integration) as Integration, latest(Action) as 'Latest Action', unique('OIC Project') as 'Project Name', distinctcount(Identifier) as Integrations, unique(Entity) as Entity, unique(Instance) as Instance | classify correlate = -*, Integration, 'Project Name', 'Transaction ID' 'Start Time', 'Latest Action', 'Transaction Time' as 'Transaction Execution Time' | fields target = ui -'OPC Request ID', -Entity, -Instance
-   </copy>
-   ```
-
-- Example Result Screenshot: 
-
-![Oracle Integration Cloud Transaction Performance](images/logan-ll-oracle-integration-cloud-transaction-performance.png)
-
 ### Tracking Purchase Order Integration Flows
 
 - Select the Time Range: Last 24 hours
@@ -214,7 +198,6 @@ Example Result Screenshot:
 
    ```sql
    <copy>
-   -- Identify the long running Purchase Order integrations
    'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | link 'OPC Request ID', Integration | eval Duration = 'End Time' - 'Start Time' | sort -'Start Time'
    </copy>
    ```
@@ -231,7 +214,6 @@ Example Result Screenshot:
 
    ```sql
    <copy>
-   -- Identify the long running Purchase Order integrations with Chart
    'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) and Integration != rpa_integration and Integration != dell_ftp_receive | link 'OPC Request ID', Integration | stats avg(Duration) as Duration | eval Duration = 'End Time' - 'Start Time' | sort -Duration | fields -'End Time' | classify topcount = 500 correlate = -*, 'OPC Request ID' 'Start Time', Integration, Duration as 'PO Integrations duration'
    </copy>
    ```
@@ -251,7 +233,6 @@ Example Result Screenshot:
 
    ```sql
    <copy>
-   -- Purchase Order table with Order Status
    'Log Source' = AIW_PO_ERP_ATP | fields -'Host Name (Server)', -'Problem Priority', -Label, INVOICE_STATUS, LINE_STATUS, ORDER_AMOUNT, ORDER_NUMBER, 'Order Status', PO_HEADER_ID, -'Entity Type', INVOICE_NAME, -'Log Source'
    </copy>
    ```
