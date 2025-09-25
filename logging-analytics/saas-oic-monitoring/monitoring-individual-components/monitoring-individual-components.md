@@ -41,10 +41,9 @@ In this lab, you will get an overview of the different dashboards, including the
 
 -  **Oracle Integration Insight**  dashboard provides real-time business monitoring by linking technical integrations to business processes and KPIs. The dashboard enables business users, analysts, and IT teams to visualize the progress, performance, and bottlenecks in their business operations. It consists of different widgets like Summary widget, Milestone progress widget, Transction Performance widget , Transaction Tracking Fields widget etc. 
 
-- In order to view this dashboard one has to search for and click on the **Oracle Integration Insight** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load.
-![dashboards-oic-insight](images/dashboards-oic-insight.jpg)
+- In order to view this dashboard one has to search for and click on the **Oracle Integration Insight** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load.![dashboards-oic-insight](images/dashboards-oic-insight.jpg)
 	> **Important tip** : Observe the dashboard widgets & values once they are loaded.
-	![oic-insight-dashboard](images/oic-insight-dashboard.jpg)
+	![oic-insight-dashboard](images/logan-ll-oic-insight-dashboard.jpg)
 
 - **Oracle Integration: Health Overview** dashboard provides an overview of the monitored OIC instances, integrations, and their health based on the metrics and logs. This dashboard is used to gain insights into the current health of your OIC Instances, Integrations, and Flow Instances. Filters can be used to narrow down to a specific OIC Instance, Integration, and Integration Instance. It displays both metrics and log data at the compartment level. 
 
@@ -65,9 +64,9 @@ In this lab, you will get an overview of the different dashboards, including the
       ![db-fusion-user-access-dashboard](images/logan-ll-fusion-user-access-1.png)
 	  ![db-fusion-user-access-dashboard](images/logan-ll-fusion-user-access-2.png)   
 
-**Oracle Fusion OPSS Audit** dashboard leverages OPSS audit logs to provide comprehensive visibility into authentication and access events within Oracle Fusion Applications. By analyzing OPSS audit logs, this dashboard allows administrators and security teams to track new user creation and role assignment, monitor security-related operations, and identify when and where users accessed the system. The insights derived from OPSS audit logs help ensure compliance, detect suspicious access patterns, and enhance overall security monitoring.
+**Oracle Fusion Apps: OPSS Audit Analysis** dashboard leverages OPSS audit logs to provide comprehensive visibility into authentication and access events within Oracle Fusion Applications. By analyzing OPSS audit logs, this dashboard allows administrators and security teams to track new user creation and role assignment, monitor security-related operations, and identify when and where users accessed the system. The insights derived from OPSS audit logs help ensure compliance, detect suspicious access patterns, and enhance overall security monitoring.
 
-- In order to view this dashboard one has to search for and click on the **Oracle Fusion User Access** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-fusion-user-access](images/logan-ll-dashboards-fusion-uopss.png)
+- In order to view this dashboard one has to search for and click on the **Oracle Fusion Apps: OPSS Audit Analysis** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-fusion-opss-access](images/logan-ll-dashboards-fusion-opss-access.png)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
       ![db-fusion-opss-dashboard](images/logan-ll-fusion-opss.png)
 
@@ -77,7 +76,7 @@ In this lab, you will get an overview of the different dashboards, including the
 
 - In order to view this dashboard one has to search for and click on the **Oracle Fusion Apps Enterprise Scheduler Service (ESS) Analysis**  dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-fusion-enterprise](images/dashboards-fusion-enterprise.jpg)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
-      ![fusion-enterprise-dashboard](images/fusion-enterprise-dashboard.jpg)
+      ![fusion-enterprise-dashboard](images/logan-ll-fusion-enterprise-dashboard.png)
 
 ## Task 5: Overview of the Oracle APEX Application dashboard
 
@@ -86,10 +85,10 @@ In this lab, you will get an overview of the different dashboards, including the
 | **Oracle APEX Application** | User Activity, Application Usage, Error Logs | User Success and Failed Logins, Application and User Activity, Application Errors | ADW, OIC | Database connector based log ingestion via Management Agent |
 
 - **Oracle APEX Application** dashboard provides an overview of the monitored APEX Application, including user activity, application usage, and error logs. This dashboard is used to gain insights into the current health of your APEX Application.
-- In order to view this dashboard one has to search for and click on the **Oracle APEX Application** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. Time range is set to **Last 7 days**.
+- In order to view this dashboard one has to search for and click on the **APEX User Activity** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. Time range is set to **Last 7 days**. ![apex-user-activity-access](images/logan-ll-apex-user-activity-access.png)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
-      ![apex-user-activity-dashboard](images/logan-ll-apex-application-dashboard-1.png)
-	  ![apex-application-usage-dashboard](images/logan-ll-apex-application-dashboard-2.png)
+	![apex-application-dashboard](images/logan-ll-apex-user-activity-dashboard-1.png)
+      ![apex-application-dashboard-continued](images/logan-ll-apex-user-activity-dashboard-2.png)
 
 ## Task 6: Overview of Oracle Database Audit Analysis dashboard
 
@@ -101,9 +100,7 @@ In this lab, you will get an overview of the different dashboards, including the
 
 - In order to view this dashboard one has to search for and click on the **Oracle Database Audit Analysis** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. ![dashboards-db-audit](images/dashboards-db-audit.jpg)
       > **Important tip** : Observe the dashboard widgets & values once they are loaded.
-      ![db-audit-dashboard](images/logan-ll-db-audit.jpg)
-
-
+      ![db-audit-dashboard](images/logan-ll-db-audit.png)
 
 **Congratulations!** In this lab, you have successfuly completed the following tasks:
 - Monitoring different dashboards
@@ -121,6 +118,6 @@ In this lab, you will get an overview of the different dashboards, including the
 You may now proceed to the [next lab](#next).
 
 ## Acknowledgements
-* **Author** - Supriya Joshi, OCI Log Analytics
+* **Author** - Supriya Joshi, OCI Log Analytics, Royce Fu, Master Principal Cloud Architect, Kumar Varun, Log Analytics Product Management
 * **Contributors** -  Supriya Joshi, Jolly Kundu, Kumar Varun, Royce Fu
 * **Last Updated By/Date** - Royce Fu, Sep, 2025

@@ -28,7 +28,6 @@ In this lab, you will learn to
     ![log-explorer](images/log-explorer.jpg)
 
 
-
 ## Task 2: Learn different section of Log Explorer
 
 - The different sections of Log Explorer are 

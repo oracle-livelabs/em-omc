@@ -57,10 +57,23 @@ The following components generate logs that are crucial for end-to-end observabi
 
 ## Task 3: Tracing the Purchase Order Business Identifiers
 
+- **Navigate to Oracle Cloud Console**
+   - Log in to your Oracle Cloud Infrastructure console
+   - Navigate to **Observability & Management** → **Log Analytics**
+   - Click on **Log Explorer**
+
+- **Click the Log Explorer filter**
+   - Make sure the Log Group Compartment **emdemo(root)** is selected
+   - Make sure the Region **US West (Phoenix)** is selected
+   - Change the Time Range to **Last 8 hours**
+   - Click on **Apply** or **Close** if needed
+   - ![Log Explorer Filter](images/logan-ll-log-explorer-filter.png)
+
 ### **Number of the Purchase Order created in last 8 hours**
 
 - Select the Time Range: Last 8 hours
 - Visualization: Tile
+- Click the saved search URL [**Number of the Purchase Order created in last 8 hours**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaa55xdml2m2g4fwu5z663a2qr4navhk7kgndvbq4sa7h6p3ajnxkka&jobId=4fabcbda-7e1c-67c8-e86f-46765558dcf5&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
@@ -78,6 +91,7 @@ The following components generate logs that are crucial for end-to-end observabi
 - Select the Time Range: Last 30 days
 - Visualization: Link
 - Run the following query in Log Explorer: 
+- Click the saved search URL [**Purchase Order Integration Runs Duration**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaa7dz5imt6qebrrdet4r4zwme7qjh5mpeo53ox2tlbig2f6q5m64pq&jobId=3f01334b-17d5-3c6a-5e2d-013ff05b6c9e&region=us-phoenix-1) to open the saved search in Log Explorer
 
    ```sql
    <copy>
@@ -94,6 +108,7 @@ The following components generate logs that are crucial for end-to-end observabi
 
 - Select the Time Range: Last 24 hours
 - Visualization: Link
+- Click the saved search URL [**Purchase Order Flow Timeline**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaagibcw7an4rryjyozga3iqr7udva24h4p5idoh2xijcsdmr3idl5q&jobId=2e412276-e814-1cfd-f5df-4ed035aed6d8&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
@@ -108,16 +123,15 @@ Example Result Screenshot:
 ![Purchase Order Flow Timeline Visualization](images/logan-ll-purchase-order-flow-timeline-visualization.png)
 
 
-
 ### **Track a specific Purchase Order for example: 300000313760215 or US165676 across all systems**
 
 - Select the Time Range: Last 30 days
 - Visualization: Table
+- Click the saved search URL [**Track a specific Purchase Order for example: 300000313760215 or US165676 across all systems**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaaatq6boajnavzdpjf2oa6htih5jzdqetq6w4w4jwe4hotoqlb3owq&jobId=95046557-fc66-aa76-508f-0c37f3332164&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
    <copy>
-   -- Track Purchase Order flow across all systems
    (300000313760215 or US165676) and 'Log Source' in ('OCI Integration Activity Stream Logs', AIW_PO_ERP_ATP) | fields -Entity, -'Host Name (Server)', -'Problem Priority', -Label, Integration, Message, Value, Action, 'Action Type', 'OPC Request ID', -'Entity Type'
    </copy>
    ```
@@ -133,6 +147,7 @@ Example Result Screenshot:
 
 - Select the Time Range: Last 24 hours
 - Visualization: Records with Histogram
+- Click the saved search URL [**Oracle Integration Cloud Milestones Trend**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaa5k23nuywnvlorwmhzm3amzqyduix4ijimatifxdqrhddsiah2upq&jobId=f2b2c50a-5088-ca02-2a37-7ac59e121ba6&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
@@ -145,10 +160,11 @@ Example Result Screenshot:
 
 ![Oracle Integration Cloud Milestones Trend](images/logan-ll-oracle-integration-cloud-milestones-trend.png)
 
-### Oracle Integration Action Types Summary
+### **Oracle Integration Action Types Summary**
 
 - Select the Time Range: Last 24 hours
 - Visualization: Pie
+- Click the saved search URL [**Oracle Integration Action Types Summary**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaagsk2yup63wu52yjjvhazqrwrhtlgyah52bki3iumu7pgf4pjnmca&jobId=8d66a7b0-bbac-faa8-b420-0723bbe64cd8&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
@@ -161,13 +177,13 @@ Example Result Screenshot:
 
 ![Oracle Integration Cloud Milestones Trend](images/logan-ll-oracle-integration-cloud-action-types-summary.png)
 
-
-### Analyze Oracle Integration Cloud Transaction Performance
+### **Analyze Oracle Integration Cloud Transaction Performance**
 
 ### Tracking Purchase Order Integration Flows
 
 - Select the Time Range: Last 24 hours
 - Visualization: Link
+- Click the saved search URL [**Analyze Oracle Integration Cloud Transaction Performance**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaa32o74wmh6ler6mxqwilpviqttuqu74yhmnf7rcxqtlbpsd7jkbsa&jobId=85f6ff26-2f02-95f5-ca45-8cca3fd47629&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
@@ -183,17 +199,17 @@ Example Result Screenshot:
 ![Purchase Order Integration Flows](images/logan-ll-identify-slow-processing-steps.png)
 
 
-
 ### **Potential Performance issues in the Purchase Order integration flows**
 - Too many orders generated in a short period of time
 - Bottleneck in the integration flow
 - Slow FTP Server due to network response time
 - Database performance issue due to high wait events
 
-### Identify the long running Purchase Order integrations
+### **Identify the long running Purchase Order integrations**
 
 - Select the Time Range: Last 24 hours
 - Visualization: Link
+- Click the saved search URL [**Identify the long running Purchase Order integrations**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaaceb6o434pqfihntr5xsstfabzgay34j36arevkrfkjmesmcqkgaq&jobId=843d119e-600b-63aa-929e-b9e580e363c8&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
@@ -206,7 +222,7 @@ Example Result Screenshot:
 
 ![Identify the long running Purchase Order integrations](images/logan-ll-identify-the-long-running-purchase-order-integrations.png)
 
-### Identify the long running Purchase Order integrations with Chart
+### **Identify the long running Purchase Order integrations with Chart**
 
 - Select the Time Range: Last 24 hours
 - Visualization: Link
@@ -225,10 +241,11 @@ Example Result Screenshot:
 
 ## Task 5: Visualize the Purchase Order business data in Log Analytics
 
-### Purchase Order table with Order Status
+### **Purchase Order table with Order Status**
 
 - Select the Time Range: Last 60 minutes
 - Visualization: Table
+- Click the saved search URL [**Purchase Order table with Order Status**](https://cloud.oracle.com/loganalytics/explorer?savedSearchId=ocid1.managementsavedsearch.oc1..aaaaaaaab5wb3g3xj6w545h5cdqomtuawaof7krgxcojbiu4bx3nqzr4jkva&jobId=59c9f09f-aac2-3d27-895d-05391943b283&region=us-phoenix-1) to open the saved search in Log Explorer
 - Run the following query in Log Explorer: 
 
    ```sql
