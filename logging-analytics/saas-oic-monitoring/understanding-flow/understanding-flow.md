@@ -52,7 +52,7 @@ The Purchase Order process involves multiple Oracle Cloud services working toget
 - **Visual Builder Cloud Service (VBCS)** - Provides user interface and generates application logs
 - **B2B Trading Partners** - External systems receiving EDI documents via FTP/SFTP
 
-## (Optional)Task 3: Create Purchase Order in ERP Cloud
+## (Optional)Task 2: Create Purchase Order in ERP Cloud
 
 **Note: We have configured OIC Robotic Process Automation (RPA) to create a Purchase Order in ERP Cloud via the robots. Therefore the Task 3 and Task 4 are optional. If you are not using RPA, you can proceed to the next task.** Read more: [Get Started with Robots in Oracle Integration 3](https://livelabs.oracle.com/pls/apex/f?p=133:180:110448655824915::::wid:3996)
 
@@ -95,7 +95,7 @@ The Purchase Order process involves multiple Oracle Cloud services working toget
  10. Click <em>Submit</em> to initiate the Purchase Order processing. After submitting the Purchase Order, a confirmation message will appear with the PO number. Make a note of the **PO Number**
 
 
-## (Optional)Task 4: Validate Purchase Order status
+## (Optional)Task 3: Validate Purchase Order status
 
 After the PO is submitted, the initial status becomes **Pending Approval**. The PO Create event will occur once the status changes to **Open**.
 
