@@ -497,7 +497,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Analysis bar](ask-em-images/event-compression-analysis/analysis-bar.png " ")
 
-13. Click on one of the bars for **Jul 22** to see the exact events mapped from incidents without compression policies to incidents with compression policies.
+13. Click on one of the bars for **Jul 21** to see the exact events mapped from incidents without compression policies to incidents with compression policies.
 
     ![Select one of the analysis bar](ask-em-images/event-compression-analysis/july-21.png " ")
 
