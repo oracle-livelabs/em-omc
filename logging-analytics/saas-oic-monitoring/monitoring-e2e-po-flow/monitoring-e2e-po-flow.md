@@ -1,4 +1,4 @@
-# Lab 4 - Monitoring End-to-End Purchase Order Flow with Oracle Log Analytics
+# Lab 4 - Monitor End-to-End Purchase Order Flow with Oracle Log Analytics
 
 ## Introduction
 
