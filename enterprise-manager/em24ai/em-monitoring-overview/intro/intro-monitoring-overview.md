@@ -1,16 +1,16 @@
 # Introduction
 
 ## About this Workshop
-This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager Cloud Control 13c.
+This goal of this workshop is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager 24ai.
 
-*Estimated Workshop Time*: 118 minutes
+*Estimated Workshop Time*: 120 minutes
 
-### About Oracle Enterprise Manager
-Oracle Enterprise Manager is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
+### About Oracle Enterprise Manager 24ai
+Oracle Enterprise Manager 24ai is Oracle’s on-premise management platform that provides a single dashboard to manage all of your Oracle deployments, in your data center or in the cloud. Through deep integration with Oracle’s product stack, it provides market-leading management and automation support for Oracle applications, databases, middleware, hardware, and engineered systems
 
-Join Oracle's ***Wim Coekaerts***, *senior vice president of software development*, as he describes key innovations delivered in Oracle Enterprise Manager to help customers easily migrate their databases to the cloud and simplify management of hybrid IT environments
+Watch this overview to learn about the latest innovations in the new Enterprise Manager 24ai. This session introduces the key aspects of this groundbreaking release, including enhanced scalability, robust security measures, zero downtime monitoring, and intelligent impact analysis with advisory services. Discover how you can harness the power of modern, AI-infused management technologies to supercharge your Oracle Database and Engineered Systems across your data centers—and on any cloud.
 
-[](youtube:MZJQx6MuHA0)
+[](youtube:ZW5E1kZ6izw)
 
 ### Objectives
 In this workshop, you will learn how to use:
@@ -134,6 +134,6 @@ Drive Your Autonomous Future with Oracle Enterprise Manager
 - [oracle.com/enterprisemanager](https://www.oracle.com/enterprise-manager/)
 
 ## Acknowledgements
-- **Author** - Rene Fontcha, Master Principal Solutions Architect, NA Technology
-- **Contributors** - Dave Le Roy, Björn Bolltoft, Desiree Abrokwa - Enterprise Manager Product Management
-- **Last Updated By/Date** - Rene Fontcha, LiveLabs Platform Lead, NA Technology, February 2022
+- **Author** - Desiree Abrokwa, Product Manager, Enterprise Manager
+- **Contributors** - Marco Hernandez, Desiree Abrokwa, Ana McCollum, Anand Prabhu - Enterprise Manager Product Management
+- **Last Updated By/Date** - Marco Hernandez, Product Manager, Enterprise Manager August 2025

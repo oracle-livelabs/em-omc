@@ -8,14 +8,14 @@ With seamless support for SQL, Javascript, and TypeScript right inside the famil
 
 In this lab, you'll learn how to connect to a MySQL DB system using the MySQL Shell extension in Visual Studio Code. This setup is especially useful if you are working in a development environment and prefer using VS code interface to manage your databases.
 
-Estimated time: 25 minutes
+Estimated time: 30 minutes
 
 ### Objectives
 
 * Connect to a MySQL DB system using MySQL Shell extension for VS Code
 * Create a sample employee table
 * Enable MySQL Rest Service (MRS)
-* Perform CRUD operations using curl via REST API
+* Perform CRUD operations using OpenAPI Web UI
 
 ## Task 1: Connect to a MySQL DB system using MySQL Shell extension for VS Code
 
@@ -129,71 +129,159 @@ Estimated time: 25 minutes
 
      ![Configure MRS](./images/configure-mrs.png " ")
 
-2. After MRS has been configured, a new REST Service can be added. Expand MySQL Rest Service database connection to right click the MySQL REST Service entry and select **Add REST Service**.
+2. Click **OK** to configure instance for MySQL Rest Service Support. Uncheck create default REST authentication app.
+
+     ![Configure Rest](./images/configure-rest.png " ")
+
+3. After MRS has been configured, a new REST Service can be added. Expand MySQL Rest Service database connection to right click the MySQL REST Service entry and select **Add REST Service**.
 
      ![Add Rest Service](./images/add-rest-service.png " ")
 
-3. Fill in the Rest Service Path as **/HRService** and Rest Service Name as **HRService** and click on **OK**.
+4. Fill in the Rest Service Path as **/HRService** and Rest Service Name as **HRService** and click on **OK**.
 
      ![Enter Details](./images/add-rest-service-details.png " ")
 
-4. Once created, you will see HRService Rest Service under MySQL Rest Service entry.
+5. Once created, you will see HRService Rest Service under MySQL Rest Service entry.
 
      ![Added Rest Service](./images/rest-service-added.png " ")
 
-5. To add a MySQL database schema to the MRS Service with MySQL Shell for VS Code, simply right click on schema **HRDB** in the DATABASE CONNECTIONS view and select **Add Schema to REST Service** from the popup menu.
+6. To add a MySQL database schema to the MRS Service with MySQL Shell for VS Code, simply right click on schema **HRDB** in the DATABASE CONNECTIONS view and select **Add Schema to REST Service** from the popup menu.
 
      ![Add Schema](./images/add-schema.png " ")
 
-6. Once clicked, a new dialog window appears to fill the required details. Once filled, click on OK to add schema to the REST service.
+7. Once clicked, a new dialog window appears to fill the required details. Once filled, click on OK to add schema to the REST service.
 
      ![Add Rest Schema](./images/add-schema-rest.png " ")
 
-7. In the next step, a MySQL table can be added. Right click on the table **employee** in the DATABASE CONNECTIONS view and select **Add Database Object to REST Service** from the popup menu.
+8. In the next step, a MySQL table can be added. Right click on the table **employee** in the DATABASE CONNECTIONS view and select **Add Database Object to REST Service** from the popup menu.
 
      ![Add Data Object](./images/add-data-object-schema.png " ")
 
-8. A new dialog box appears to fill the required details.
+9. A new dialog box appears to fill the required details.
 
      ![Add Data Object Schema](./images/add-data-object-schema-1.png " ")
 
-9. Ensure the desired **CRUD** operations are selected (READ is selected by default) and uncheck **Requires Authentication flag** to make the object publicly available.
+10. Ensure the desired **CRUD** operations are selected (READ is selected by default) uncheck **Requires Authentication flag** to make the object publicly available.
 
      ![Add Data Object Schema](./images/add-data-object-schema-2.png " ")
 
-10. The MySQL Shell for VS Code extension ships with the **MySQL Router** included and can be used to bootstrap and starting the MySQL Router. Right click the MySQL REST Service tree item and select **Boostrap Local MySQL Router Instance**.
+11. The MySQL Shell for VS Code extension ships with the **MySQL Router** included and can be used to bootstrap and starting the MySQL Router. Right click the MySQL REST Service tree item and select **Boostrap Local MySQL Router Instance**.
 
      ![Bootstrap Instance](./images/bootstrap-instance.png " ")
 
-11. It opens the terminal where you can enter DB Connection's password as **Welcome$1** and JSON Web Token (JWT) secret as **Welcome$1**. Please note that this JWT secret always needs to be the same for every MySQL Router instance when deploying multiple routers for the same MySQL solution.
+12. It opens the terminal where you can enter DB Connection's password as **Welcome$1** and JSON Web Token (JWT) secret as **Welcome$1**. Please note that this JWT secret always needs to be the same for every MySQL Router instance when deploying multiple routers for the same MySQL solution.
 
      ![Bootstrap User](./images/bootstrap-user.png " ")
 
      ![JWT Secret](./images/jwt-secret.png " ")
 
-12. As soon as the MySQL Router is bootstrapped, right click the MySQL Rest service tree item and click on **Start Local MySQL Router Instance**.
+13. As soon as the MySQL Router is bootstrapped, right click the MySQL Rest service tree item and click on **Start Local MySQL Router Instance**.
 
      ![Start Local Instance](./images/start-local-instance.png " ")
 
-13. Now that a MySQL REST Service has been created and the MySQL Router has been started we can access the REST endpoints with a web browser.
+14. Now that a MySQL REST Service has been created and the MySQL Router has been started we can access the REST endpoints with a web browser.
 
     ![Started Local Instance](./images/started-local-instance.png " ")
 
-14. Access the APIs using the URL **https://mysql-lab:8447/HRService/HRDB/employee**.
+15. Access the APIs using the URL:
 
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
      ![Output](./images/chrome-output.png " ")
 
-15. Adding a Primary Key value to the **request path (e.g. /1)** will filter the result to a single data set.
+16. Adding a Primary Key value to the **request path (e.g. /1)** will filter the result to a single data set.
 Adding offset and limit as query parameters allow you to page the full data set. The default page size can be set in the REST Schema and REST Object settings.
 
      ![Employees](./images/employee-1.png " ")
 
-16. For further details you can right click MySQL Rest service tree and click on **Browse the MySQL Rest Service Documentation**.
+## Task 4: Deploy OpenAPI Web UI and Test CRUD Operations
+
+1. Go back to the VS Code window. Under the database connection, right click on the service and select **Deploy OpenAPI Web UI** which will expose your REST endpoints through a browsable OpenAPI-based UI.
+
+     ![Open API](./images/open-api.png " ")
+
+2. Once the deployment window opens, leave all the default values as they are and simply click **OK** to proceed. This will trigger the deployment of your service and make the OpenAPI-based Web UI available for interaction.
+
+     ![Open API Window](./images/open-api-dialog.png " ")
+
+3. After deployment completes access the Web UI. Open in your browser to launch OpenAPI Web UI, where you can test and explore the REST endpoints for your HR service.
+
+     ```
+     <copy>https://localhost:8445/myService/openApiUi/#/</copy>
+     ```
+
+     ![Swagger UI](./images/swagger-ui.png " ")
+
+4. Once the Web UI loads, you'll see a list of available endpoints grouped by HTTP methods. You can expand each one to try them.
+
+     * **GET** /employee – List employees
+     * **POST** /employee – Create employee
+     * **PUT** /employee/{employeeId} – Update employee
+     * **DELETE** /employee/{employeeId} – Delete employee
+
+5. **Get** method retrieves all employees. Scroll to the **GET /HRService/HRDB/employee** endpoint and expand the menu. Click **Try it out**.
+
+     ![Swagger Get Request](./images/swagger-ui-get.png " ")
+
+6. Then click on **Execute**. You'll get a list of current employees from the HR service in the response section below.
+
+     ![Swagger Get Response](./images/swagger-ui-get-response.png " ")
+
+7. **Post** method adds a new employee. Scroll to the **POST /HRService/HRDB/employee** endpoint and expand the menu. Click **Try it out**.
+
+     ![Swagger Post Request](./images/swagger-post.png " ")
+
+8. In the Request body, enter the details as shown. Here intentionally I added wrong email to modify later in the PUT request. Click **Execute** to submit the new employee record.
+
+     ![Swagger Post Response](./images/swagger-post-request.png " ")
+
+9. After that check the output on the other chrome tab to see the new employee added in the list.
+
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
+
+     ![Chrome Output](./images/chrome-post.png " ")
+
+10. **Delete** method removes an employee. Scroll to the **DELETE /HRService/HRDB/employee/{employeeId}** endpoint and expand the menu. Click **Try it out**.
+
+     ![Swagger Delete Request](./images/swagger-delete.png " ")
+
+11. In the parameters, enter the employee ID to delete (e.g., 5 in this example), then click **Execute**.
+
+     ![Swagger Delete Response](./images/swagger-delete-request.png " ")
+
+12. After that check the output on the other chrome tab where the deleted record should no longer appear in the list.
+
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
+
+     ![Chrome Output](./images/chrome-delete.png " ")
+
+13. **Put** method updates an existing employee. Scroll to the **PUT /HRService/HRDB/employee/{employeeId}** endpoint and expand the menu. Click **Try it out**.
+
+     ![Swagger Put Request](./images/swagger-put.png " ")
+
+14. In the parametersm enter the employee ID to update as 6. In the Request body, make changes to the email and salary fields leaving rest of the fields with their previous values. Once done, click **Execute** to update the employee record.
+
+     ![Swagger Put Response](./images/swagger-put-request.png " ")
+
+15. After that check the output on the other chrome tab to look for the updated details in the response.
+
+     ```
+     <copy>https://localhost:8445/HRService/HRDB/employee</copy>
+     ```
+
+     ![Chrome Output](./images/chrome-put.png " ")
+
+16. For further details you can right click MySQL Rest service tree in the Visual Studio Code and click on **Browse the MySQL Rest Service Documentation**.
 
      ![Documentation](./images/documentation.png " ")
 
 ## Acknowledgements
 
-* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Author** - Sindhuja Banka, MySQL HeatWave Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
-* **Last Updated By/Date** - Sindhuja Banka, July 2025
+* **Last Updated By/Date** - Sindhuja Banka, August 2025

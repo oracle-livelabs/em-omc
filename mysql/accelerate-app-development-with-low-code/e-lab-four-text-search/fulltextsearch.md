@@ -23,12 +23,12 @@ This lab introduces full-text search capabilities in MySQL and shows how they ca
 
 ## Task 1: Create articles table
 
-1. In a new connected shell, you can now connect to the database **FinanceDB** using the following command and click on run button on the top navigation bar to execute the query.
+1. In a new connected shell, you can now connect to the database **FINANCEDB** using the following command and click on run button on the top navigation bar to execute the query.
 
      ```
-     <copy>use FinanceDB;</copy>
+     <copy>use FINANCEDB;</copy>
      ```
-     ![Use FinanceDB](./images/finance-db.png " ")
+     ![Use FINANCEDB](./images/finance-db.png " ")
 
 2. Define an article table with columns id, title, content with content and title having a FULLTEXT index.
 
@@ -97,6 +97,6 @@ AGAINST('+MySQL +JSON' IN BOOLEAN MODE);</copy>
 
 ## Acknowledgements
 
-* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Author** - Sindhuja Banka, MySQL HeatWave Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
 * **Last Updated By/Date** - Sindhuja Banka, July 2025

@@ -16,12 +16,12 @@ Estimated time: 10 minutes
 
 ## Task 1: Create products table
 
-1. In a new connected shell, you can now connect to the database **FinanceDB** using the following command and click on run button on the top navigation bar to execute the query.
+1. In a new connected shell, you can now connect to the database **FINANCEDB** using the following command and click on run button on the top navigation bar to execute the query.
 
      ```
-     <copy>use FinanceDB;</copy>
+     <copy>use FINANCEDB;</copy>
      ```
-     ![Use FinanceDB](./images/finance-db.png " ")
+     ![Use FINANCEDB](./images/finance-db.png " ")
 
 2. Create **products** table with id, name, price and a specs column using the native JSON type using the following query and clicking on run button on the top navigation bar to execute the query.
 
@@ -104,6 +104,6 @@ Estimated time: 10 minutes
 
 ## Acknowledgements
 
-* **Author** - Sindhuja Banka, HeatWave MySQL Product Manager
+* **Author** - Sindhuja Banka, MySQL HeatWave Product Manager
 * **Contributors** - Sindhuja Banka, Anand Prabhu
 * **Last Updated By/Date** - Sindhuja Banka, July 2025
