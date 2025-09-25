@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "Troubleshoot & Optimize performance of Cloud apps business flows with Log Analytics.",
+    "workshoptitle": "Monitor and Optimize Oracle SaaS Apps and OIC Business Flows with Log Analytics",
     "help": "livelabs-help-em_us@oracle.com",
     "tutorials": [
         {
@@ -18,12 +18,12 @@
             "filename": "../../introduction-log-explorer/introduction-log-explorer.md"
         },
         {
-            "title": "Lab 2:  Understanding Lab Flow, Functional, and Technical Architecture",
+            "title": "Lab 2:  Understand Lab Flow, Functional, and Technical Architecture",
             "description": "",
             "filename": "../../understanding-flow/understanding-flow.md"
         },
         {
-            "title": "Lab 3: Monitoring Individual Components",
+            "title": "Lab 3: Monitor Individual Components",
             "description": "This live lab outlines different dashboards",
             "filename": "../../monitoring-individual-components/monitoring-individual-components.md"
         },
@@ -33,7 +33,7 @@
             "filename": "../../monitoring-e2e-po-flow/monitoring-e2e-po-flow.md"
         },
         {
-            "title": "Lab 5: Troubleshooting Business Flows",
+            "title": "Lab 5: Troubleshoot Business Flows",
             "description": "",
             "filename": "../../troubleshoot-business-flow/troubleshoot-business-flow.md"
         }
