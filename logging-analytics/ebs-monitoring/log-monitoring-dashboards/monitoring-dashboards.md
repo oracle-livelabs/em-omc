@@ -38,8 +38,38 @@ In this lab, you will:
       ![](images/close-filter-panel.png "close filter")
 
  
- 7. A dashboard with multiple widgets is displayed.
- ![](images/ebs-dashboard-full.png "ebs1")
+7. A dashboard with multiple widgets is displayed.
+ 
+8. High level view of the E-business application with Active Business Checks, Failed Business Checks and Monitored Components can be seen within below widgets.
+   ![](images/ebs1.png "ebs1")
+
+ 
+9. Topological view showing the interconnected structure of application, middleware, database and compute components can be seen using below widget.
+   ![](images/ebs2.png "ebs2")
+
+10. Geo map showing the locations from which the applications are accessed, helping to identify hotspots.
+   ![](images/ebs3.png "ebs3")
+
+11. Charts showing distribution of various errors in the application.
+   ![](images/ebs4.png "ebs4")
+
+12. A word cloud of various problem labels in each of the entity.
+   ![](images/ebs5.png "ebs5")
+
+13. Details of the functional issues in the application including product areas, business impact, SR etc.
+   ![](images/ebs6.png "ebs6")
+
+14. Analysis of requests and monitored systems.
+   ![](images/ebs7.png "ebs7")
+
+
+
+
+
+
+
+
+
          
    
 ## Acknowledgements
