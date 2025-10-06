@@ -41,7 +41,7 @@ In this lab, you will get an overview of the different dashboards, including the
 
 -  **Oracle Integration Insight**  dashboard provides real-time business monitoring by linking technical integrations to business processes and KPIs. The dashboard enables business users, analysts, and IT teams to visualize the progress, performance, and bottlenecks in their business operations. It consists of different widgets like Summary widget, Milestone progress widget, Transction Performance widget , Transaction Tracking Fields widget etc. 
 
-- In order to view this dashboard, you can search for **Oracle Integration Insight** dashboard with the filter **Created by** as **Users** from the **Dashboard** home page. It will take few seconds for the dashboard widgets to load.![dashboards-oic-insight](images/dashboards-oic-insight.jpg)
+- In order to view this dashboard, you can search for **Oracle Integration Insight** dashboard with the filter **Created by** as **Users** from the **Dashboard** home page. It will take few seconds for the dashboard widgets to load.![dashboards-oic-insight](images/dashboards-oic-insight.png)
 - **Note**: Please select the following filters and time rangefor the dashboard: 
 - **Log Group Compartment**: emdemo(root)
 - **Time Range**: Last 24 hours
@@ -104,7 +104,7 @@ In this lab, you will get an overview of the different dashboards, including the
 |-----------|-----------|-----------------|-------------------|
 | **Oracle APEX Application** | User Activity, Application Usage, Error Logs | User Success and Failed Logins, Application and User Activity, Application Errors | ADW, OIC | Database connector based log ingestion via Management Agent |
 
-- **Oracle APEX Application** dashboard provides an overview of the monitored APEX Application, including user activity, application usage, and error logs. This dashboard is used to gain insights into the current health of your APEX Application.
+- **APEX User Activity** dashboard provides an overview of the monitored APEX Application, including user activity, application usage, and error logs. This dashboard is used to gain insights into the current health of your APEX Application.
 - In order to view this dashboard one has to search for and click on the **APEX User Activity** dashboard from the  **Dashboard** home page. It will take few seconds for the dashboard widgets to load. Time range is set to **Last 30 days**. ![apex-user-activity-access](images/logan-ll-apex-user-activity-access.png)
 - **Note**: Please select the following filters and time rangefor the dashboard: 
 - **Log Group Compartment**: emdemo(root)

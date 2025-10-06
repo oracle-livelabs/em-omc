@@ -106,10 +106,10 @@ The following components generate logs that are crucial for end-to-end observabi
 
    ```sql
    <copy>
-   'Log Source' = 'OCI Integration Activity Stream Logs' | eval 'Purchase Order' = if(Key = poheaderid, Value, null) | link 'Purchase Order' | sequence name = 'Sequence of Events' [ Integration != null ]{1,} select Integration
+   'Log Source' = 'OCI Integration Activity Stream Logs' | eval 'Purchase Order' = if(Key = poheaderid, Value, null) | link 'Purchase Order' | sequence name = 'Action Steps of the PO' [ Integration != null ]{1,} select Integration
    </copy>
    ```
-- Select the Sequence of Events in the table view
+- Select the Action Steps of the PO in the table view
 
 Example Result Screenshot: 
 
@@ -134,7 +134,13 @@ Example Result Screenshot:
 ![Purchase Order Integration Flows](images/logan-ll-purchase-order-integration-flows-details.png)
 
 
-## Task 4: Monitoring the Oracle Integration Transactions Performance
+## Task 4: Monitoring the Oracle Integration Purchase Order Transactions Performance
+
+### **Potential Performance issues in the Purchase Order integration flows**
+- Too many orders generated in a short period of time
+- Bottleneck in the integration flow
+- Slow FTP Server due to network response time
+- Database performance issue due to high wait events
 
 ### **Oracle Integration Cloud Milestones Trend**
 
@@ -162,7 +168,7 @@ Example Result Screenshot:
 
    ```sql
    <copy>
-   'Action Type' in (Invoke, Log, Notification, Raise_error, Submitnow, Stop, Switch, Raise_new_error, Receive) and 'Log Source' = 'OCI Integration Activity Stream Logs' and Identifier != null and 'OPC Request ID' != null | stats count(Action) as Milestones by Action
+   'Action Type' in (Invoke, Log, Notification, Raise_error, Submitnow, Stop, Switch, Raise_new_error, Receive) and 'Log Source' = 'OCI Integration Activity Stream Logs' and Identifier != null and 'OPC Request ID' != null and Action != null | stats count(Action) as Milestones by Action
    </copy>
    ```
 
@@ -190,13 +196,6 @@ Example Result Screenshot:
 - Example Result Screenshot: 
 
 ![Purchase Order Integration Flows](images/logan-ll-identify-slow-processing-steps.png)
-
-
-### **Potential Performance issues in the Purchase Order integration flows**
-- Too many orders generated in a short period of time
-- Bottleneck in the integration flow
-- Slow FTP Server due to network response time
-- Database performance issue due to high wait events
 
 ### **Identify the long running Purchase Order integrations**
 

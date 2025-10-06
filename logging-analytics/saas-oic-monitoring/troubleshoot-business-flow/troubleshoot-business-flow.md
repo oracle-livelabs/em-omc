@@ -39,7 +39,7 @@ The Fusion and OIC Process Monitoring Dashboard provides a centralized view of b
     - Select the following dashboard filters:
         - **Log Group Compartment**: emdemo(root)
         - **Region**: US West (Phoenix)
-        - **Compartment**: AIW25_Log_Analytics
+        - **Compartment**: AIW25\_Log\_Analytics
         - ![dashboard-filters](images/logan-ll-dashboard-filters.png)
     - **Update Time Range** 
     - Set **Time range**  to **Last 24 Hours**. ![time-range](images/logan-ll-dashboard-time-range.png)
@@ -147,7 +147,7 @@ The Fusion and OIC Process Monitoring Dashboard provides comprehensive visibilit
 - **Purpose**: Analyze end-to-end transaction execution and performance for Purchase Order processes
 - **Transaction Purchase Order Integration Run Tracing**: Provides a complete timeline view of integration run execution, showing all milestones and their timing. Trace the Purchase Order Duration Trend. 
 - **Transaction Details ERP Purchase Order**: Provides PO-specific transaction details, showing all tracking fields for Purchase Orders
-- **ERP PO Porcessing Events**: Shows the sequence of events for PO transactions, providing process flow visibility
+- **ERP PO Processing Events**: Shows the sequence of events for PO transactions, providing process flow visibility
 - **OIC Integration Analysis**: Provides detailed analysis of OIC integration flows, showing execution patterns and performance
 - **Key Insights**:
     - Purchase Order Duration Trend
