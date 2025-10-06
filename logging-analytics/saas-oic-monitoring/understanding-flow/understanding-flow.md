@@ -42,14 +42,14 @@ B2B stands for business-to-business integration. This is essentially multiple co
 
 ### Oracle Fusion SaaS ERP Cloud, Oracle Integration Cloud, Oracle Database, and Visual Builder Monitoring Reference Architecture
 
-![Oracle Fusion SaaS ERP, OIC, ADB, VBCS Monitoring Reference Architecture](images/logan-ll-fusion-oic-adb-vbcs-flow-architecture-with-observability.png)
+![Oracle Fusion SaaS ERP, OIC, ADB, APEX Monitoring Reference Architecture](images/logan-ll-fusion-oic-adb-vbcs-flow-architecture-with-observability.png)
 
 The Purchase Order process involves multiple Oracle Cloud services working together to create a seamless business flow with comprehensive observability:
 
 - **Oracle Fusion ERP Cloud** - Initiates the PO creation process and generates business events
 - **Oracle Integration Cloud (OIC)** - Orchestrates data transformation, routing, and B2B processing
 - **Oracle Database (ADW)** - Stores transformed data for analytics and generates database logs
-- **Visual Builder Cloud Service (VBCS)** - Provides user interface and generates application logs
+- **Application Express (APEX)** - Provides user interface and generates apex activity logs
 - **B2B Trading Partners** - External systems receiving EDI documents via FTP/SFTP
 
 ## (Optional)Task 2: Create Purchase Order in ERP Cloud
