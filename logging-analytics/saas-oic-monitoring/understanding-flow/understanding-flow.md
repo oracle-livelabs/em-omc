@@ -5,7 +5,7 @@
 This Lab introduces Oracle Fusion SaaS ERP Cloud and Oracle Integration (OIC) integration and business flow with a focus on observability and log analysis. When a user creates a Purchase Order (PO) in ERP Cloud, a real-time PO event is generated, creating the first observability touchpoint. Oracle Integration captures this event and transforms the relevant data, generating comprehensive integration logs throughout the process. The transformed data is pushed to a custom table in Autonomous Data Warehouse (ADW) and Visual Builder Cloud Service (VBCS), each generating their own log streams. The B2B component within Oracle Integration translates the PO payload into an EDI 850 document using the X12 Business Protocol, which is then delivered to a Trading Partner via FTP, creating additional observability points for delivery tracking. Additionally, an approval workflow is initiated by an ERP Process user who selects the order and attaches Letter of Credit (LOC) information via a web form, generating audit trails and user activity logs. Once approved, the PO record in ERP Cloud is updated with the LOC details for cross-referencing, completing the end-to-end traceable business process.
 
 
-Estimated Time: 60 minutes
+Estimated Time: 10 minutes
 
 ### Objectives
 In this lab, you will:
@@ -42,14 +42,14 @@ B2B stands for business-to-business integration. This is essentially multiple co
 
 ### Oracle Fusion SaaS ERP Cloud, Oracle Integration Cloud, Oracle Database, and Visual Builder Monitoring Reference Architecture
 
-![Oracle Fusion SaaS ERP, OIC, ADB, VBCS Monitoring Reference Architecture](images/logan-ll-fusion-oic-adb-vbcs-flow-architecture-with-observability.png)
+![Oracle Fusion SaaS ERP, OIC, ADB, APEX Monitoring Reference Architecture](images/logan-ll-fusion-oic-adb-vbcs-flow-architecture-with-observability.png)
 
 The Purchase Order process involves multiple Oracle Cloud services working together to create a seamless business flow with comprehensive observability:
 
 - **Oracle Fusion ERP Cloud** - Initiates the PO creation process and generates business events
 - **Oracle Integration Cloud (OIC)** - Orchestrates data transformation, routing, and B2B processing
 - **Oracle Database (ADW)** - Stores transformed data for analytics and generates database logs
-- **Visual Builder Cloud Service (VBCS)** - Provides user interface and generates application logs
+- **Application Express (APEX)** - Provides user interface and generates apex activity logs
 - **B2B Trading Partners** - External systems receiving EDI documents via FTP/SFTP
 
 ## (Optional)Task 2: Create Purchase Order in ERP Cloud

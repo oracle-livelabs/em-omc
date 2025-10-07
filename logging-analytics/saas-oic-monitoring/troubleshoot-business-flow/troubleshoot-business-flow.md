@@ -15,7 +15,7 @@ In this lab, you will:
 - Monitor Purchase Order business flows near-real-time
 - Troubleshoot business process issues using dashboard insights
 
-## Task 1: Understanding the Fusion and OIC Process Monitoring Dashboard
+## Task 1: Understand the Fusion and OIC Process Monitoring Dashboard
 
 ### Dashboard Overview
 
@@ -31,19 +31,20 @@ The Fusion and OIC Process Monitoring Dashboard provides a centralized view of b
 ### Accessing the Process Monitoring Dashboard
 
 - **Navigate to Oracle Cloud Console**
-   - Log in to your Oracle Cloud Infrastructure console
-   - Navigate to **Observability & Management** → **Log Analytics**
+    - Log in to your Oracle Cloud Infrastructure console
+    - Navigate to **Observability & Management** → **Log Analytics**
+    - Select compartment **AIW25\_Log\_Analytics**
+    - Click on **Dashboards** in the left navigation menu
+    - Search for **Fusion OIC Process Monitoring** from the dashboard list
+    - Select the following dashboard filters:
+        - **Log Group Compartment**: emdemo(root)
+        - **Region**: US West (Phoenix)
+        - **Compartment**: AIW25\_Log\_Analytics
+        - ![dashboard-filters](images/logan-ll-dashboard-filters.png)
+    - **Update Time Range** 
+    - Set **Time range**  to **Last 24 Hours**. ![time-range](images/logan-ll-dashboard-time-range.png)
 
-- **Access Process Monitoring**
-   - Select compartment **AIW25\_Log\_Analytics**
-   - Click on **Dashboards** in the left navigation menu
-   - Select **Fusion OIC Process Monitoring** from the dashboard list
-   - Or create a new dashboard specifically for PO monitoring
-
-- **Update Time Range** 
-Set **Time range**  to **Last 24 Hours**. ![time-range](images/logan-ll-dashboard-time-range.png)
-
-## Task 2: Understanding the Dashboard Widgets
+## Task 2: Use the Dashboard Widgets for Comprehensive Business Flow Visibility
 
 The Fusion and OIC Process Monitoring Dashboard provides comprehensive visibility into your business processes through seven specialized tabs. Each widget is designed to monitor specific aspects of your Purchase Order flow and help identify bottlenecks, errors, and performance issues in real-time.
 
@@ -144,24 +145,56 @@ The Fusion and OIC Process Monitoring Dashboard provides comprehensive visibilit
 ### **Transaction Performance**
 
 - **Purpose**: Analyze end-to-end transaction execution and performance for Purchase Order processes
-- **Transaction Execution Times and Milestones Chronology**: Provides a complete timeline view of transaction execution, showing all milestones and their timing
-- **Transaction Tracking Fields**: Shows business process tracking fields and their values, enabling transaction correlation
+- **Transaction Purchase Order Integration Run Tracing**: Provides a complete timeline view of integration run execution, showing all milestones and their timing. Trace the Purchase Order Duration Trend. 
 - **Transaction Details ERP Purchase Order**: Provides PO-specific transaction details, showing all tracking fields for Purchase Orders
-- **Transaction Details ERP Purchase Order Event Sequence**: Shows the sequence of events for PO transactions, providing process flow visibility
-- **OIC Integration Time Taken Analysis**: Provides detailed analysis of OIC integration flows, showing execution patterns and performance
+- **ERP PO Processing Events**: Shows the sequence of events for PO transactions, providing process flow visibility
+- **OIC Integration Analysis**: Provides detailed analysis of OIC integration flows, showing execution patterns and performance
 - **Key Insights**:
+    - Purchase Order Duration Trend
     - Complete transaction timeline
     - Milestone execution order
-    - Performance trends
+    - Trace the Purchase Order Details across all upstream and downstream systems
     - Tracking Fields tracibility
-    - Field mapping accuracy
 
-![Transaction Performance](images/logan-ll-fusion-oic-process-monitoring-dashboard-transaction-performance-1.png)
+![Transaction Performance Purchase Order Integration Run Tracing](images/logan-ll-fusion-oic-process-monitoring-dashboard-transaction-performance-purchase-order-integration-run-tracing.png)
 
-![ERP Purchase Order Transaction Details Event Sequence](images/logan-ll-fusion-oic-process-monitoring-dashboard-erp-purchase-order-transaction-details-event-sequence-1.png)
+![PO Duration Trend](images/logan-ll-po-duration-trend-analysis.png)
 
-![OIC Integration Time Taken Analysis](images/logan-ll-fusion-oic-process-monitoring-dashboard-oic-integration-time-taken-analysis-1.png)
+![Purchase Order Details Across Systems](images/logan-ll-fusion-oic-process-monitoring-dashboard-purchase-order-details-across-systems.png)
 
+![Transaction Performance ERP PO Processing Events](images/logan-ll-fusion-oic-process-monitoring-dashboard-erp-purchase-order-transaction-details-event-sequence.png)
+
+![OIC Integration Analysis](images/logan-ll-fusion-oic-process-monitoring-dashboard-oic-integration-time-taken-analysis.png)
+
+## Task 3: Level-up the monitoring with LoganAI for the AI-driven Insights
+
+LoganAI is Oracle Log Analytics' new Artificial Intelligence capability, designed to interpret, summarize, and enhance your log data—no manual parsing required. It can also blend in metrics retrieved via OCI Monitoring (using MQL) and documents from Object Storage to deliver richer analysis ([Documentation](https://docs.oracle.com/en-us/iaas/log-analytics/doc/use-loganai.html)) that is seamlessly integrated with your log exploration and troubleshooting workflows. 
+
+You can leverage LoganAI for the following:
+- **AI-Powered Summaries**:  Quickly grasp complex log data through concise summaries of individual logs, clusters, groups, and charts.
+- **Context-Aware Follow-ups**: Need more detail? LoganAI suggests relevant next questions tailored to your data’s context—making exploration intuitive and efficient.
+- **Root Cause Detection**: Anomalies and patterns? LoganAI spotlights them fast—helping you dive straight into what matters.
+- **Simplified Explanations**: Complex chart patterns and log clusters become easy-to-understand narratives—ideal for both technical and business audiences.
+
+### Find integration mapping for a particular Purchase Order processing duration trend
+
+- Navigate to the **Transaction Performance** tab in the Fusion OIC Process Monitoring Dashboard
+- Find a circle that represents a PO# you are interested in
+- Right click on the circle and select **View** -> **PO Duration Trend** ![PO Duration Trend](images/logan-ll-po-duration-trend.png)
+- Launch the LoganAI panel by clicking on the **AI explaination** button in the bottom left corner of the chart ![Purchase Order Duration Trend and Transaction Tracing](images/logan-ll-fusion-oic-process-monitoring-dashboard-purchase-order-duration-trend-and-transaction-tracing.png)
+- Ask the follow up question: "What is the duration trend for the POs?"
+- Try with additional questions for example: "Is 'll_erppo_backend_b2b' linked to 'po_erp_b2b_invoice'?" ![ PO integration LoganAI question](images/logan-ll-po-integration-loganai-question.png)
+
+### Summarize the Purchase Order details across all systems
+
+- Navigate to the **Transaction Performance** tab in the Fusion OIC Process Monitoring Dashboard
+- Find a circle that represents a PO# you are interested in in the Transaction Purchase Order Integration Run Tracing bottom visualization chart ![PO Trend View](images/logan-ll-po-trend-view.png)
+- Right click on the circle and select **Trace** -> **PO Details** ![PO Details](images/logan-ll-po-details-view.png)
+- Launch the LoganAI panel by clicking on the LoganAI ![LoganAI](images/logan-ll-loganai-button.png) button
+- Ask the follow up question: "Are Dell Inc. invoices being processed?"
+- ![PO Details LoganAI question](images/logan-ll-po-details-loganai-question.png)
+- Try with your own prompt, for example: "Summarize the purchase order details" 
+- ![PO Details LoganAI summary](images/logan-ll-po-details-loganai-summary.png)
 
 **Congratulations!** In this lab, you have successfully completed the following tasks:
 
@@ -184,6 +217,6 @@ You now have comprehensive knowledge of how to use the Fusion and OIC Process Mo
 * [Oracle Integration 3 - Automate ERP Cloud and B2B Integration with Trading Partners](https://livelabs.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?p210_wid=3803&p210_wec=&session=25827311700854)
 
 ## Acknowledgements
-* **Author** - Royce Fu, Master Principal Cloud Architect,Kumar Varun, Log Analytics Product Management
+* **Author** - Royce Fu, Master Principal Cloud Architect, Kumar Varun, Log Analytics Product Management
 * **Contributors** -  Kumar Varun, Royce Fu, Supriya Joshi, Jolly Kundu
-* **Last Updated By/Date** - Royce Fu, Sep, 2025
+* **Last Updated By/Date** - Royce Fu, Oct, 2025
