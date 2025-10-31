@@ -20,7 +20,7 @@ This lab assumes you have -
 
 1.  Click on the link below to download the Resource Manager zip file you need to build your environment:
 
-	 - [emcc-dbae-2-mkplc-freetier.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/rq7lPAU-avye1ysIcJmFQhT37uvTg_QBcRLXKueBsnqNeA7GwFcmcfXv_YNODV2s/n/c4u02/b/hosted_workshops/o/stacks/emcc-dbae-2-mkplc-freetier.zip)
+	 - [emcc-dbae-2-mkplc-freetier.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-dbae-2-mkplc-freetier.zip)
 
 1.  Save in your downloads folder.
 

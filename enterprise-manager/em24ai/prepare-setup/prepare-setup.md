@@ -23,7 +23,7 @@ This lab assumes you have:
     - [emcc-mkplc-devops-automation.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-devops-automation.zip)
 </if>
 <if type="devops-patching">
-    - [emcc-mkplc-devops-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/0kq1pND_WCBBYLXCDnpxD3iR-h1ZRo4pwEydk0g_IydMXOCenJZl65oFtsADn9_e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-patching.zip)
+    - [emcc-mkplc-devops-patching.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-patching.zip)
 </if>
 <if type="find-fix-validate">
     - [emcc-mkplc-find-fix-validate.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-find-fix-validate.zip)
@@ -53,7 +53,7 @@ This lab assumes you have:
     - [emcc-mkplc-migration-workbench.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-migration-workbench-v1.3.zip)
 </if>
 <if type="migration-workbench-adb">
-    - [emcc-mkplc-migration-workbench-adb.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/zqv4ccIzpSf1XX2xm50vy6buPjOjKa-ABMWyuPeh96N7WIJWqx4wMAPSP-8UXt9e/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench-adb.zip)
+    - [emcc-mkplc-migration-workbench-adb.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench-adb.zip)
 </if>
 <if type="monitoring-overview">
     - [emcc-mkplc-monitoring-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-monitoring-overview.zip)
