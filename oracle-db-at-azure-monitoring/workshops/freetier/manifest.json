@@ -8,7 +8,7 @@
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "Getting Started",
+            "title": "Get Started",
             "description": "This is the prerequisite lab to check the Oracle Database@Azure subscription in Microsoft Azure Portal and log in to Oracle Cloud Console",
             "filename": "../../getstarted/getstarted.md"
         },
@@ -23,7 +23,7 @@
             "filename": "../../dbm-oracledbatazure-adbs/enable-dbm-oracledbatazure-adbs.md"
         },
         {
-            "title": "Lab 3: Exploring Oracle Cloud Infrastructure Database Management Diagnostic & Management",
+            "title": "Lab 3: Explore Oracle Cloud Infrastructure Database Management Diagnostic & Management",
             "description": "Exploring Oracle Cloud Infrastructure Database Management Diagnostic & Management",
             "filename": "../../dbmgmt-features/dbmgmt-features.md"
         },
@@ -38,7 +38,7 @@
             "filename": "../../ops-insights-oracledbatazure-adbs/enable-ops-insights-odaa-adbs.md"
         },
         {
-            "title": "Lab 6: Exploring Oracle Cloud Infrastructure Ops Insights",
+            "title": "Lab 6: Explore Oracle Cloud Infrastructure Ops Insights",
             "description": "Exploring Oracle Cloud Infrastructure Ops Insights",
             "filename": "../../ops-insights-features/ops-insights-features.md"
         },

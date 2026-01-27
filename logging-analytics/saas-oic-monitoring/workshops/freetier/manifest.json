@@ -1,0 +1,41 @@
+{
+    "workshoptitle": "Monitor and Optimize Oracle SaaS Apps and OIC Business Flows with Log Analytics",
+    "help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "This is the prerequisites for customers using Free Trial and Paid tenancies, and Always Free accounts (if applicable). The title of the lab and the Contents Menu title (the title above) match for Prerequisite lab. This lab is always first.",
+            "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login-livelabs2.md"
+        },
+        {
+            "title": "Lab 1:  Introduction to Log Explorer",
+            "description": "This live labs outlines about the log explorer",
+            "filename": "../../introduction-log-explorer/introduction-log-explorer.md"
+        },
+        {
+            "title": "Lab 2:  Understand Lab Flow, Functional, and Technical Architecture",
+            "description": "",
+            "filename": "../../understanding-flow/understanding-flow.md"
+        },
+        {
+            "title": "Lab 3: Monitor Individual Components",
+            "description": "This live lab outlines different dashboards",
+            "filename": "../../monitoring-individual-components/monitoring-individual-components.md"
+        },
+        {
+            "title": "Lab 4: Stitch it Together – Monitor E2E PO Flow",
+            "description": "",
+            "filename": "../../monitoring-e2e-po-flow/monitoring-e2e-po-flow.md"
+        },
+        {
+            "title": "Lab 5: Troubleshoot Business Flows",
+            "description": "",
+            "filename": "../../troubleshoot-business-flow/troubleshoot-business-flow.md"
+        }
+    ]
+}
