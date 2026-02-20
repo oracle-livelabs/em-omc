@@ -19,12 +19,13 @@ In this lab, you will:
 1. Select 'Dashboards' from the top navigation dropdown in Log explorer to view the 'Dashboards'
    ![](images/la-nav-ebs-dashboard.png "Ui Desc")
 
-2. Select Compartment as 'ebs-lab-9522' in the 'Dashboards Scope' section on the left.
+2. Select Compartment as  **AIW25\_Log\_Analytics** in the 'Dashboards Scope' section on the left.
 
    ![](images/la-dash-ebs-compartment.png "Ui Desc")
 
-3. Click on "E-Business Suite Overview" dashboard to see the monitoring dashboard for E-Business Suite and Virtual Cloud Network Flow Logs analysis.
-   ![](images/la-ebs-dashboard.png "Ui Desc")
+3. Click on **E-Business Suite Overview** dashboard to see the monitoring dashboard for E-Business Suite.
+   ![](images/la-dash-ebs.png "ebs dashboard")
+
 
 4. Click **Custom** under **Time range** pickerSet, then Click on "Start and End Time".
    ![](images/la-dash-custom-time.png "Ui Desc")
@@ -32,24 +33,45 @@ In this lab, you will:
 5. Select START time as **Sep 1, 2022 12:00:00 AM**, END Time as **Sep 30, 2022 12:00:00 PM** and Click Apply.
    ![](images/la-custom-time-selection.png "Ui Desc")
 
-6. The below widget shows Virtual Cloud Network Flow Logs analysis like 'Max Packets In By Source Port' , 'Total Packets In by Destination Port'
-   ![](images/la-dash-vcn-packets.png "Ui Desc")
 
-7. The below widgets shows 'VCN Flow Logs Outbound Traffic', 'Traffic By Source IP' and 'Traffic By Destination IP'
-   ![](images/la-dash-vcn-traffic.png "Ui Desc")
+6.  Click on **Open/Close filter panel** to close the filter panel.
+      ![](images/close-filter-panel.png "close filter")
 
-8. Scroll down to 'Functional Issues Overview' to view EBS Functional issues
-   ![](images/la-dash-ebs-functional-overview.png "Ui Desc")
+ 
+7. A dashboard with multiple widgets is displayed.
+ 
+8. High level view of the E-business application with Active Business Checks, Failed Business Checks and Monitored Components can be seen within below widgets.
+   ![](images/ebs1.png "ebs1")
 
-9. Click on the punch-out icon of the widget 'Functional Issues Overview' to analyze further.
+ 
+9. Topological view showing the interconnected structure of application, middleware, database and compute components can be seen using below widget.
+   ![](images/ebs2.png "ebs2")
 
-   ![](images/la-dash-ebs-functional-issues.png "UIdescription")
+10. Geo map showing the locations from which the applications are accessed, helping to identify hotspots.
+   ![](images/ebs3.png "ebs3")
 
-10. Next, you can analyze further based EBS Functional Issues.
+11. Charts showing distribution of various errors in the application.
+   ![](images/ebs4.png "ebs4")
 
-    ![](images/la-ebs-functional-issue1.png "UIdescription")
+12. A word cloud of various problem labels in each of the entity.
+   ![](images/ebs5.png "ebs5")
+
+13. Details of the functional issues in the application including product areas, business impact, SR etc.
+   ![](images/ebs6.png "ebs6")
+
+14. Analysis of requests and monitored systems.
+   ![](images/ebs7.png "ebs7")
+
+
+
+
+
+
+
+
+
+         
    
-
 ## Acknowledgements
 * **Author** - Gurusamy Poosamalai, Log Analytics Development Team, Supriya Joshi, Log Analytics Development Team
 * **Contributors** -  Kumar Varun, Log Analytics Product Management, Jolly Kundu - Log Analytics Development Team

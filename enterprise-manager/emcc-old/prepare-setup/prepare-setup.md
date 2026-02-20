@@ -17,31 +17,31 @@ This lab assumes you have:
 1.  Click on the link below to download the Resource Manager zip file you need to build your environment:
 
 <if type="config-compliance">
-    - [emcc-mkplc-config-compliance.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/IW9bVu4ioxIFVbWzFmFJ3v29dNjRE6sc5nrRNqxf--K8U7wkVwaNwpXOW5iAIytg/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-config-compliance.zip)
+    - [emcc-mkplc-config-compliance.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-config-compliance.zip)
 </if>
 <if type="devops-automation">
-    - [emcc-mkplc-devops-automation.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/xOjert_Cp_Gd44duvANQa74_MD49T3t5qm5Vhm2r5yCNTfkULNej5o2WL8WXoFHL/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-automation.zip)
+    - [emcc-mkplc-devops-automation.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-automation.zip)
 </if>
 <if type="find-fix-validate">
-    - [emcc-mkplc-find-fix-validate.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/RIGLXb1ZD-aVOzFxBA8qglTcKJLaG1OlGrhWNzuNu1rTBLHeYWoyuFup72uATVv0/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-find-fix-validate.zip)
+    - [emcc-mkplc-find-fix-validate.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-find-fix-validate.zip)
 </if>
 <if type="fleet-patching">
-    - [emcc-mkplc-fleet-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/sJYjuQxqsgLIKpnmrDkvPyOySlvR2ftO4kkqgkKDCgnRHi3Z5lvSv1RcO1nr6kj7/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-fleet-patching.zip)
+    - [emcc-mkplc-fleet-patching.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-fleet-patching.zip)
 </if>
 <if type="fleet-upgrade">
-    - [emcc-mkplc-fleet-upgrade.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/_EzQGMhCX2_Jucll-VAmKwkJbnb03HoM6Iww0rayDVUkeZDVFD9mfYVvGcCaFY-7/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-fleet-upgrade.zip)
+    - [emcc-mkplc-fleet-upgrade.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-fleet-upgrade.zip)
 </if>
 <if type="fundamentals">
-    - [emcc-mkplc-fundamentals.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/I4IBoYsyVpJ9GimiR8NZrZESnJiNjN9N_pjMS06qFgZ0kvIs0lsVn1lQ2VCdgaAj/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-fundamentals.zip)
+    - [emcc-mkplc-fundamentals.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-fundamentals.zip)
 </if>
 <if type="job-system-automation">
-    - [emcc-mkplc-job-system-automation.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/O4idO--Wi3OHk7Ga6y60b0Db56ycwv6wor9FYhs3kBoFL7RokFSBs_E9LEBuHdad/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-job-system-automation.zip)
+    - [emcc-mkplc-job-system-automation.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-job-system-automation.zip)
 </if>
 <if type="lifecycle">
-    - [emcc-mkplc-lifecycle.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4COKC5s4DcNvongBW92BKckYdAndE8247gbpNpaK31xaRG6h1LeaZqri6L1QvAEV/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-lifecycle.zip)
+    - [emcc-mkplc-lifecycle.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-lifecycle.zip)
 </if>
 <if type="rat-overview">
-    - [emcc-mkplc-rat-overview.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/_T85iVv1QkU8Z8lF_XkDVOqBiathAloKlRvaHE8M6AqILuh7w2funO18WIp9BZ9f/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-rat-overview.zip)
+    - [emcc-mkplc-rat-overview.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-rat-overview.zip)
 </if>
 
 2.  Save in your downloads folder.
