@@ -70,5 +70,5 @@ This lab assumes you have completed the following labs:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Jul 2024
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain, Marco Hernandez
+- **Last Updated By/Date** - Marco Hernandez, Feb 2026
