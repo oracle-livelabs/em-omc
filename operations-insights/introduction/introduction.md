@@ -61,11 +61,6 @@ In this workshop, you will:
 * Capacity Planning of Oracle Exadata.
 * Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance.
 
-### Prerequisites
-
-* An Oracle Cloud Account
-* Please view this workshop's LiveLabs landing page to see which environments are supported.
-
 ## Learn More
 
 - [Ops Insights]( https://www.oracle.com/manageability/operations-insights/)
@@ -75,5 +70,5 @@ In this workshop, you will:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Jun 2025
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain, Marco Hernandez
+- **Last Updated By/Date** - Marco Hernandez, Feb 2026

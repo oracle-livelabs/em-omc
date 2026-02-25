@@ -43,7 +43,12 @@
             "filename": "../../addm-spotlight/addm-spotlight.md"
         },        
         {
-            "title": "Lab 7: Dashboards",
+            "title": "Lab 7: Exadata Cost Management",
+            "description": "Exadata Cost Management",
+            "filename": "../../exadata-cost-mgmt/opsi-chargeback.md"
+        },
+        {
+            "title": "Lab 8: Dashboards",
             "description": "Ops Insights Dashboards",
             "filename": "../../dashboards/dashboards.md"
         },

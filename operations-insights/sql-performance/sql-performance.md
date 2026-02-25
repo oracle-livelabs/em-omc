@@ -154,7 +154,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
       ![SQL Visualization](./images/sql-explorer-advanced-main.png " ")
 
-20. Click **Views & columns and sample queries** to view available views and columns which can be used in the explorer.
+<!-- 20. Click **Views & columns and sample queries** to view available views and columns which can be used in the explorer.
 
       ![SQL Visualization](./images/sql-explorer-view-queries.png " ")
 
@@ -164,7 +164,7 @@ In this lab create visualuzations using pre-existing performance statistics via 
 
 22. Click on a View to see the underlying columns that can be used to fetch desired data.
 
-      ![SQL Visualization](./images/sql-column-details.png " ")
+      ![SQL Visualization](./images/sql-column-details.png " ") -->
 
 
 ## Acknowledgements
