@@ -4,9 +4,9 @@
 
 In this lab, you will go through the steps to explore Exadata Cost Management.
 
-The vision of Ops Insights service is to provide net-new features for users dealing with FinOps management. The chargeback feature will help organizations utilizing ExaDB-D and ExaDB-C@C to understand their resource usage and associated costs, allowing organizations to pinpoint where their IT spending is going.
+The chargeback feature will help organizations utilizing ExaDB-D and ExaDB-C@C to understand their resource usage and associated costs. These capabilities will allow organizations to pinpoint where their IT spending is going, provide spending accountability, and identify opportunities to reduce overall spend on infrastructure.
 
-By providing "showback" and/or allocating "chargeback" costs to individual departments or business units based on their actual usage of shared infrastrucutre, tenancy or resource administrators can promote accountability and encourage more efficient resource utilization. By assigning costs to individual users or departments, chargeback features incentivize responsible resource usage. Users become more mindful of the resources they consume when they know they will be charged for it, leading to better optimization of IT infrastructure and a reduction of costs associated with overallocated resources.
+By providing "showback" and allocating "chargeback" costs to individual departments or business units based on their actual usage of shared infrastrucutre, tenancy or resource administrators can promote accountability and encourage more efficient resource utilization. By assigning costs to individual users or departments, chargeback features incentivize responsible resource usage. Users become more mindful of the resources they consume when they know they will be charged for it, leading to better optimization of IT infrastructure and a reduction of costs associated with overallocated resources.
 
 The Exadata Cost Management feature will provide organizations with the ability to accurately track, allocate, and manage IT costs associated with the usage of resources within their IT infrastructure.
 
@@ -34,75 +34,67 @@ This lab assumes you have completed the following labs:
 
       ![opsi-chargeback-main](./images/opsi-chargeback-main.png "Exadata Cost Management")
 
-2. The **Exadata Cost Management details** page shows the details of cost associated with this Exadata System at a VM Cluster and database level. The cost associated with each VM Cluster and PDB is depicted by **Color** and **Size** in the Pie Chart.
+2. The **Exadata Cost Management details** page shows the details of cost associated with this Exadata System at a VM Cluster and database level. You can analyze your cost management data with an interactive **Sunburst chart** and the **Databases** table. 
+      
+      The **Sunburst chart** on the left quickly highlights the biggest cost drivers by visualizing the cost associated with each VM Cluster and database depicted by **Color** and **Size**. The legend for the sunburst chart shows separate colors for different cost ranges. 
+      
+      **Note**: A Sunburst chart shows how a whole is broken into parts, using layers of rings to represent levels in a hierarchy. 
 
-      The table on the right shows the commulative cost at a VM Cluster, CDB and PDB level.
+            1. The center is the top level (the “whole” or root category).
+            2. Each ring outward is a deeper level (subcategories of what’s inside).
+            3. Each slice is a category; its angle/arc length shows its size/value relative to its siblings.
+            4. A slice’s children appear as slices directly outside it, lining up with the parent slice.
+     
+      The **Databases** table on the right complements the **Sunburst chart** by listing the VM clusters and databases with key metrics/context such as **Actual cost**, **Attributed cost**, and **VM cluster CPU utilization (%)**. This table shows the cumulative cost at a VM Cluster, CDB, and PDB level. 
 
-      ![opsi-chargeback-details](./images/opsi-chargeback-details.png "Exadata Cost Management")
+      ![opsi-chargeback-details](./images/opsi-chargeback-details.png "Chargeback Details Page")
 
-      The legend for the sunburst chart shows different colors for diffrent cost ranges.
 
-3. **Exadata Cost Management details** page also shows -
+3. You can utilize the **VM cluster** drop down to select a specific VM cluster. For this exercise, we will keep it selected for all VM clusters. Click on the **Primary grouping** drop down to select **CostCenter**, you can observe that it changes the inner ring values of the Sunburst chart to visualize the attributed costs of cost centers **01**, **02**, and **03**. 
 
-      * Usage Trend - Monthly CPU, Storage and Memory usage/utilization percentage by Exadata rack type, VM Cluster CDB and PDB.
+      ![primary-grouping](./images/primary-grouping.png "Primary Grouping")
+
+4. Next, click on the **Secondary grouping** drop down to select **Environment**. This will add another ring to your Sunburst chart to visualize the **Prod** and **Test** environments that belong to each cost center.
+
+      ![secondary-grouping](./images/secondary-grouping.png "Secondary Grouping")
+
+5. You can create cost center hierarchy or LOB manually within your organization. In order to accomplish this, you must utilize OCI standard tags to assign cost center's key value.  Likewise, free-form tags you have created can be utilized to further filter on organizational entities.
+      
+      Apart from the cost, you can also view how many resources are assigned to which cost center and how much is the total charge based on a given time range.
+      
+      ![time-range](./images/time-range.png "Secondary Grouping")
+
+      
+6. Underneath **Color**, select the **VM cluster** button so the Sunburst chart will now use color to differentiate by VM cluster instead of attributed cost. You can see in the outer ring of the Sunburst chart which databases belong to **Test_VMC1** or **PROD_VMC1 VM clusters**.
+
+      ![vm-cluster-button](./images/vm-cluster-button.png "VM cluster button")
+
+7. Select the slice for cost center **01** in the Sunburst chart. You can see the **Databases** table on the right changes the values on the columns to visualize only cost center **01**.
+
+      ![cost-center-01](./images/cost-center-01.png "Cost center 01")
+
+8. Scroll down and you will see the Exadata Cost Management details page also shows:
+
+      * Usage trend – Monthly CPU utilization (%) per VM Cluster (line-graph).
       * Charge Trend - Monthly charge ($) per VM Cluster (bar-chart)
+      
+      These charts are showing the usage and charge trends for cost center **01**.
 
-      ![opsi-chargeback-details2](./images/opsi-chargeback-details2.png "Exadata Cost Management")
+      ![trend-charts](./images/trend-charts.png "Trend charts")
 
-4. Un-select **Test_VMC1** to view data only for **PROD_VMC1**.
+9. In the VM cluster CPU utilization chart, de-select **01 (Test_VMC1)** to view data only for **01 (PROD_VMC1)**.
 
-      ![opsi-chargeback-toggle-cluster](./images/opsi-chargeback-toggle-cluster.png " ")
+      ![deselect-test-vmc1](./images/deselect-test-vmc1.png "Deselect 01 (Test_VMC1)")
 
-5. Select **Test_VMC1** again and click **Show table data** to view the data in tabular form.
+10. Select **01 (Test_VMC1)** again and click **Show table data** to view the data in tabular form.
 
-      ![opsi-chargeback-table-format](./images/opsi-chargeback-table-format.png "Data in tabular format")
+      ![select-show-table](./images/select-show-table.png "Select Show table data button")
 
-6. Click any PDB and the utilization/cost charts will show details of that specific PDB (names and colors will change depending on which PDB you click, but data does not change). Click **NA_PDB**.
+      ![table](./images/table.png "Table data")
 
-      ![opsi-chargeback-cluster](./images/opsi-chargeback-pdb1.png " ")
-
-7. Click in the centre of the sunburst chart to get the details of the complete Exadata System.
-
-      ![opsi-chargeback-cluster](./images/opsi-chargback-full-exadata-system.png " ")
-
-8. Under **VM Cluster** select **PROD_VMCl1**
-
-      ![opsi-chargeback-cluster](./images/opsi-chargeback-cluster.png " ")
-
-9. The sunburst chart will depict the Cost at a PDB level within the *VM Cluster 1*. The table on the right shows the commulative cost at a CDB level.
-
-      ![opsi-chargeback-cluster2](./images/opsi-chargeback-cluster2.png " ")
-
-10. Click on the VM Cluster drop down to select **All** and select **CostCenter** under **Primary Grouping**. You can create cost center hierarchy/LOB manually within your organization. In order to accomplish this, you have to utilize OCI standard tags to assign cost center's key value.
-
-       ![opsi-chargeback-grouping](./images/opsi-chargeback-grouping.png " ")
-
-11. This will display cost associated at a Cost Center or LOB level and PDB level.
-
-      ![opsi-chargeback-grouping2](./images/opsi-chargeback-grouping2.png " ")
-
-12. Apart from the cost, you can also view how many resources are assigned to which cost center and how much is the total charge based on a given time range.
-
-13. Under the Reporting section, you can view existing reports or create new reports based on the data collected on the **Exadata Cost Management details** page. Let's view a previously saved report. Click the **Reports** drop down and select **VM Cluster 1: Lifecycle: Last month**.
-
-      ![opsi-chargeback-select-report](./images/opsi-chargeback-select-report.png " ")
-
-14. This will display data for **VM Cluster 1** grouped by **Lifecycle** for last month.
-
-      ![opsi-chargeback-report-cluster](./images/opsi-chargeback-report-cluster.png " ")
-
-15. The table on the right shows cost associated by **Lifecycle**(Production or Development), **CDB** and **PDB**.
-
-      ![opsi-chargeback-report-cluster](./images/opsi-chargeback-report-cluster.png " ")
-
-16. You can generate reports with multiple levels, such as Cost associated at a LOB level, moving next level to cost associated with CDBs under that LOB and at the next level cost associated with PDBs under those CDBs.
-
-17. Under **VM Cluster** select **All**, select **CDB** for **Primary Grouping** and **LOB** for **Secondary Grouping**.
-
-      ![opsi-chargeback-report-cluster](./images/opsi-chargeback-report-levels.png " ")
 
 ## Acknowledgements
 
 * **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-* **Contributors** - Vivek Verma, Murtaza Husain
-* **Last Updated By/Date** - Vivek Verma, July 2025
+* **Contributors** - Vivek Verma, Murtaza Husain, Derik Harlow, Marco Hernandez
+* **Last Updated By/Date** - Marco Hernandez, March 2026
