@@ -40,7 +40,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/filter-ocw.png " ")
 
-4.  Review the **Inventory** section. The **Inventory** section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
+4.  Review the top section on the page. This section displays the total number of databases enabled for Ops Insights along with the database types. In addition, the CPU, Storage, Memory, and I/O usage charts display overall resource consumption (Top Consumers and Usage Trend) by these database targets.
 
       ![Left Pane](./images/inventory-ocw.png " ")
 
@@ -48,13 +48,21 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/cpu-insights.png " ")
 
+      You can select from different options in the drop-down list in the middle widget **Top CPU consumers** - **Usage (avg. active CPU)**, **Usage change (%)** or **Utilization (%)**
+
 6.  **Storage Insights** - Database utilization percentage for the 90th percentile value of the daily average Storage Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of storage.
 
       ![Left Pane](./images/storage-insights.png " ")
 
+      The drop-down list in the middle widget works similarly as compared to the CPU section.
+
 7.  **Memory Insights** - Database utilization percentage for the 90th percentile value of the daily average Memory Usage over the selected time period.  These sections show the number of databases running with low (0–25%) and high (75–100%) utilization of memory.
 
       ![Left Pane](./images/memory-insights.png " ")
+
+      The drop-down list in the middle widget works similarly as compared to the CPU section.
+
+* **Note**: the hyperlinks in the insights tiles on the left for CPU, Storage and Memory drill down to the details page for those specific resources.
 
 ## Task 2: Capacity Planning - CPU
 
@@ -62,11 +70,11 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/database-cpu-ocw.png " ")
 
-2.  **Database CPU** page has a master-detail design with three primary components:
+2.  **Database CPU** page has a parent-child design with three primary components:
 
-    * Insights – table of databases flagged for CPU utilization insights
-    * Aggregate – treemap of CPU utilization over all databases in the compartment
-    * Trend & Forecast – time series charts of CPU usage trends and forecasts for individual or groups of databases
+    * Insights tab – a parent table of databases from which one database can be selected for trending and forecast
+    * Aggregate tab – a parent treemap showing the entire database fleet that can be used to trend and forecast the entire fleet or sub-groups within the fleet
+    * Trend & Forecast – the child component of time series charts showing maximum and average CPU usage and machine-learning forecasts of future demand
 
       ![Left Pane](./images/database-cpu2-ocw.png " ")
 
@@ -80,7 +88,7 @@ This lab assumes you have completed the following labs:
 
 5.  Check the **Utilization (%)** and **Usage Change (%)** for database **CRM-ST**.
     
-    * Utilization (%) -  Utilization percentage for the 90th percentile value of the daily average storage usage over the selected time period
+    * Utilization (%) -  Utilization percentage for the 90th percentile value of the daily average CPU usage over the selected time period
     * Usage Change (%): Percentage change in the linear trend of storage usage over the selected time
 
 6.  The **Trend and Forecast** chart displays historical time series plots related to CPU allocation and usage for the selected database **CRM-ST**.
@@ -103,7 +111,7 @@ This lab assumes you have completed the following labs:
 
 12.  The value **77.66** AVG ACTIVE CPU USAGE is forecasted for after 15 days for Max usage of CPU.
 
-    You can see the difference in average forecasted value v/s Max forecasted value. If the workload is critical and cannot tolerate any performance issues then the database must be allocated the max forecasted value. If the workload is not so critical and can tolerate deviations in performance then it is ok to allocate CPU based on average forecasted value and save money.
+    **Key Insight**: Traditionally, capacity is allocated to accommodate the maximum demand and represents your spend for the resource. Average usage represents the real value obtained from resource. The difference between the maximum and average can be considered the cost of having to over-allocate resources to meet peak demand. We call this the opportunity cost of workload variability.
 
 13.  The trending and forecast chart facilitates:
 
@@ -112,11 +120,33 @@ This lab assumes you have completed the following labs:
      * Compare maximum to average usage and trends to assess demand volatility
      * Forecast difference between the maximum and average daily CPU usage to estimate potential savings from workload smoothing
 
-14.  Click **Aggregate** on the top and from **Grouping** select **Database Type**.
+14.  The following models can be selected for display on the upper right of the Trend and Forecast chart:
+
+     * **Linear regression**: The linear regression model assumes a linear relationship across variables to predict the future resource usage.
+
+      ![Left Pane](./images/forecast-linear.png " ")
+
+     * **Seasonality aware**: The seasonal option combines a simple model that detects basic seasonality with dynamic, user-selectable data.
+
+      ![Left Pane](./images/forecast-seasonality.png " ")
+
+     * **AutoML forecasting**: The AutoML forecasting option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
+     
+     On the **Database CPU** page, under **Insights** tab, select **All** against **Databases** and search for database **PROLLP**. Within the **Trend & Forecast** chart, click **AutoML forecasting**
+
+      ![Left Pane](./images/prollp-database.png " ")
+
+      A new pop up will appear with the AutoML forecasting charts loaded. It will state the training period and the selected forecast algorithms for maximum usage and average usage. The maximum and average confidence channels are also displayed within the chart. The confidence interval for these are 95%, meaning that 95% of future points are expected to fall within this radius from the forecast.
+
+      ![Left Pane](./images/automl-database.png " ")
+
+      Click **Close** to close the **AutoML forecasting** pop-up and return to **Database CPU** page.    
+
+15.  Click **Aggregate** on the top and from **Grouping** select **Database Type**.
 
       ![Left Pane](./images/aggregate-database.png " ")
 
-     The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types.
+     The page displays a Treemap of all databases breaking it down by Database Type. This lets you compare how your different, individual databases are using their resources as well as between various database types. This also lets you review the problem across fleet of databases. The databases with dark color are critical and are high on utilization. The size of the box displayed on the treemap shows usage in terms of active CPU.
 
 ## Task 3: Capacity Planning - Storage
 
@@ -138,20 +168,29 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/storage-trend-forecast.png " ")
 
-5.  In the **Trend & Forecast** chart View click on **Machine Learning** to project future resource consumption. Machine Learning is a more advanced model that considers seasonality.
+5.  In the **Trend & Forecast** chart view, the **AutoML forecasting** option selects the best fit from multiple machine learning models trained on fixed data window. AutoML (Machine Learning) forecasting leverages Oracle Data Science, employing metalearning to quickly identify the most relevant features, model and hyperparameters for a given training dataset. Forecast and model are precomputed and the forecasts are periodically retrained. The forecast uses up to 13 months of data, or the highest amount of data available for a resource if the resource has less than 13 months since onboarding.
 
       ![Left Pane](./images/storage-trend-forecast-ml.png " ")
+      ![Left Pane](./images/storage-trend-forecast-auto-ml.png " ")
 
-6.  On the **Insights** tab select **30 Day High Utilization Forecast** for **Databases** and search the database **EAMERICA**.
+6.  Click **Close** to go back to the **Database Storage** page. Set **Time Range** from the left pane to **Last 30 days**. From the drop-down on the top select **All** and search for **PAYD** database. Select **PAYD** database.
 
-      ![Left Pane](./images/storage-eamerica.png " ")
+      ![Left Pane](./images/storage-menu-payd.png " ")
 
-7.  In the **Trend & Forecast** chart view select **Tablespace Breakdown** to view details on a tablespace level.
+7.  In the **Trend & Forecast** chart view the storage trend and forecast for the selected database.
 
-      ![Left Pane](./images/storage-eamerica-tablespace.png " ")
+      ![Left Pane](./images/storage-payd-trend-and-forecast.png " ")
+
+8.  Select **Max usage** and **Max usage forecast** from the right panel.
+
+      ![Left Pane](./images/storage-payd-trend-and-forecast.png " ")
+
+      You can see the average forecasted value v/s Max forecasted value for storage. **Max Usage Forecast** for this database is 0.2 TB, whereas **Allocation** shows that total storage allocated to this database is 4 TB. Since, allocation is more but storage used or forecasted is less, it is ok release some storage for this database and save money on storage.
+
+
 
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Apr 2024
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain, Marco Hernandez
+- **Last Updated By/Date** - Marco Hernandez, Feb 2026

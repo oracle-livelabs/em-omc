@@ -20,17 +20,17 @@
         {
             "title": "Lab 2: Capacity Planning of Oracle Databases",
             "description": "Capacity Planning of Oracle Databases",
-            "filename": "../../capacity-planning-adb/capacity-planning-adb-ocw.md"
+            "filename": "../../capacity-planning-adb/capacity-planning-adb.md"
         },
         {
             "title": "Lab 3: Capacity Planning of Oracle Exadata",
             "description": "Capacity Planning of Oracle Exadata",
-            "filename": "../../capacity-planning-exa/capacity-planning-exa-ocw.md"
+            "filename": "../../capacity-planning-exa/capacity-planning-exa.md"
         },
         {
             "title": "Lab 4: Analyze SQL Performance at Fleet level",
             "description": "Analyze SQL Performance at Fleet level and proactively identify SQLs Degrading performance",
-            "filename": "../../sql-performance/sql-performance-ocw.md"
+            "filename": "../../sql-performance/sql-performance.md"
         },
         {
             "title": "Lab 5: AWR Hub",
@@ -43,7 +43,12 @@
             "filename": "../../addm-spotlight/addm-spotlight.md"
         },        
         {
-            "title": "Lab 7: Dashboards",
+            "title": "Lab 7: Exadata Cost Management",
+            "description": "Exadata Cost Management",
+            "filename": "../../exadata-cost-mgmt/opsi-chargeback.md"
+        },
+        {
+            "title": "Lab 8: Dashboards",
             "description": "Ops Insights Dashboards",
             "filename": "../../dashboards/dashboards.md"
         },
