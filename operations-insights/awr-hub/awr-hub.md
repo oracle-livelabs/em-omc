@@ -57,17 +57,17 @@ This lab assumes you have completed the following labs:
 
       The following fields are displayed in **AWR Explorer**. You can select the options in these fields to determine the data to be displayed:
 
-	* **Database**: The name used when registering the database with AWR Hub.
+	*.   **Database**: The name used when registering the database with AWR Hub.
 
-	* **Time Range**: Duration of the snapshot range for which AWR data is displayed. By default, the duration of the latest AWR snapshot range is selected. However, if the snapshot range has more than six snapshots, then the default time range is the duration of the most recent six snapshots in the snapshot range. For example, if the duration of each snapshot (snapshot interval) is 10 minutes, then the time range is 6 * 10 minutes = 1 hour and the data within this time range is displayed.
+	*    **Time Range**: Duration of the snapshot range for which AWR data is displayed. By default, the duration of the latest AWR snapshot range is selected. However, if the snapshot range has more than six snapshots, then the default time range is the duration of the most recent six snapshots in the snapshot range. For example, if the duration of each snapshot (snapshot interval) is 10 minutes, then the time range is 6 * 10 minutes = 1 hour and the data within this time range is displayed.
 
-		Click the **Time Range** field to view the **Custom Time Range** dialog and change the duration within the selected time range, if required.
+	    Click the **Time Range** field to view the **Custom Time Range** dialog and change the duration within the selected time range, if required.
 
-	* **Time Zone**: Time zone in which AWR data is displayed. By default, the UTC (Coordinated Universal Time) time zone is selected. Click this field to replace the default time zone with your local browser time zone.
+	*   **Time Zone**: Time zone in which AWR data is displayed. By default, the UTC (Coordinated Universal Time) time zone is selected. Click this field to replace the default time zone with your local browser time zone.
 
 5. **AWR Explorer** displays the following tabs, which provide information on the important aspects of database performance within the selected time range. These tabs display charts that greatly simplify the ­interpretation and comparison of AWR data.
 
-	* **Load Profile**: This tab displays historical system statistics from AWR tables such as DBA\_HIST\_SYSSTAT. The charts display the default SYSSTAT categories, such as Time Model Overview, Connections, and Logons, which provide an overview of the global health of the database.
+	*   **Load Profile**: This tab displays historical system statistics from AWR tables such as DBA\_HIST\_SYSSTAT. The charts display the default SYSSTAT categories, such as Time Model Overview, Connections, and Logons, which provide an overview of the global health of the database.
 
       On the **Load Profile** tab, you can add charts to display other supported system statistics. To do so:
            1. Ensure that **Custom** is selected in the **System Statistics** drop-down list.
