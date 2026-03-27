@@ -21,37 +21,37 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: AWR Hub
 
-1.  On the **Ops Insights Overview** page, from the left pane click **Database Insights** and then click **AWR-Hub**.
+1. On the **Ops Insights Overview** page, from the left pane click **Database Insights** and then click **AWR-Hub**.
 
       ![Left Pane](./images/awr-hub.png " ")
 
-2.  This will take you to **AWR Hub** page, which lists the Databases providing AWR snapshots.
+2. This will take you to **AWR Hub** page, which lists the Databases providing AWR snapshots.
 
       ![Left Pane](./images/awr-hub01.png " ")
 
-3.  Click **More** (vertical ellipses) in the last column to display the pop-up menu and select **Generate AWR Report**.
+3. Click **More** (vertical ellipses) in the last column to display the pop-up menu and select **Generate AWR Report**.
 
       ![Left Pane](./images/awr-hub02.png " ")
 
-4.  The **Generate Automatic Workload Repository Report** dialogue appears. Selecting a different **Snapshot Start Time** changes the list of available snapshots for the **Start Snapshot** and **End Snapshots** drop-down menus. Select **Snapshot Start Time** and then **Start Snapshot** and **End Snapshots**. Click **Download**.
+4. The **Generate Automatic Workload Repository Report** dialogue appears. Selecting a different **Snapshot Start Time** changes the list of available snapshots for the **Start Snapshot** and **End Snapshots** drop-down menus. Select **Snapshot Start Time** and then **Start Snapshot** and **End Snapshots**. Click **Download**.
 
       ![Left Pane](./images/awr-hub3.png " ")
 
 ## Task 2: AWR Explorer
 
-1.  On the **Ops Insights Overview** page, from the left pane click **AWR-Hub**.
+1. On the **Ops Insights Overview** page, from the left pane click **AWR-Hub**.
 
       ![Left Pane](./images/awr-hub.png " ")
 
-2.  This will take you to **AWR Hub** page, which lists the Databases providing AWR snapshots.
+2. This will take you to **AWR Hub** page, which lists the Databases providing AWR snapshots.
 
       ![Left Pane](./images/awr-hub01.png " ")
 
-3.  Click More (vertical ellipses) in the last column for **SRC_ATPD_TEST** database to display the pop-up menu and select **Launch AWR Explorer**.
+3. Click More (vertical ellipses) in the last column for **SRC_ATPD_TEST** database to display the pop-up menu and select **Launch AWR Explorer**.
 
       ![Left Pane](./images/awr-hub03.png " ")
 
-4.  **AWR Explorer** is displayed showing performance charts for the chosen database.
+4. **AWR Explorer** is displayed showing performance charts for the chosen database.
 
       ![Left Pane](./images/awr-hub04.png " ")
 
@@ -65,14 +65,14 @@ This lab assumes you have completed the following labs:
 
 	* **Time Zone**: Time zone in which AWR data is displayed. By default, the UTC (Coordinated Universal Time) time zone is selected. Click this field to replace the default time zone with your local browser time zone.
 
-5.  **AWR Explorer** displays the following tabs, which provide information on the important aspects of database performance within the selected time range. These tabs display charts that greatly simplify the ­interpretation and comparison of AWR data.
+5. **AWR Explorer** displays the following tabs, which provide information on the important aspects of database performance within the selected time range. These tabs display charts that greatly simplify the ­interpretation and comparison of AWR data.
 
 	* **Load Profile**: This tab displays historical system statistics from AWR tables such as DBA\_HIST\_SYSSTAT. The charts display the default SYSSTAT categories, such as Time Model Overview, Connections, and Logons, which provide an overview of the global health of the database.
 
       On the **Load Profile** tab, you can add charts to display other supported system statistics. To do so:
-           1.  Ensure that **Custom** is selected in the **System Statistics** drop-down list.
-           2.  Click **Add Load Profile Chart**.
-           3.  In the **Add Custom Load Profile Chart** dialog, enter a title for the new chart, select the system statistics that you want to display, and click **Add Load Profile Chart**.
+           1. Ensure that **Custom** is selected in the **System Statistics** drop-down list.
+           2. Click **Add Load Profile Chart**.
+           3. In the **Add Custom Load Profile Chart** dialog, enter a title for the new chart, select the system statistics that you want to display, and click **Add Load Profile Chart**.
 
       * **Wait Events**: This tab displays the top ten wait events sorted by wait time from AWR tables such as DBA\_HIST\_SYSTEM\_EVENT. The charts display the wait event and the corresponding Waits per Second and Average Wait Time information.
       
@@ -80,8 +80,8 @@ This lab assumes you have completed the following labs:
 
       On the **Wait Events** tab, you can also:
 
-           1.  Add new charts to display more wait events. To do so, select a wait event in the **Wait Event** drop-down list and click **Add Wait Event Chart**.
-           2.  View a histogram of the wait event with a breakdown of the percentage of waits by their duration, within a selected snapshot range. To view a histogram, click the **Show histogram** option available for each wait event chart or click on the chart.
+           1. Add new charts to display more wait events. To do so, select a wait event in the **Wait Event** drop-down list and click **Add Wait Event Chart**.
+           2. View a histogram of the wait event with a breakdown of the percentage of waits by their duration, within a selected snapshot range. To view a histogram, click the **Show histogram** option available for each wait event chart or click on the chart.
 
       ![Left Pane](./images/awr-hub-show-histogram.png " ")
 
@@ -95,7 +95,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/awr-hub07.png " ")
 
-6.  **Generate Reports**
+6. **Generate Reports**
 
       You can generate and download various reports from the database in AWR Explorer.
 

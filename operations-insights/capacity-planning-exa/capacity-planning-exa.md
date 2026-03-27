@@ -17,49 +17,49 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Exadata Insights
 
-1.  On the **Overview** page, click on **Exadata Insights** from the left pane.
+1. On the **Overview** page, click on **Exadata Insights** from the left pane.
 
       ![Left Pane](./images/exadata-insights-ocw.png " ")
 
-2.  This will show the Exadata systems registered for Ops Insights.
+2. This will show the Exadata systems registered for Ops Insights.
 
       ![Left Pane](./images/exadata-systems-ocw.png " ")
 
-3.  On this page, the aggregate view of all the discovered Exadata systems will be shown.
+3. On this page, the aggregate view of all the discovered Exadata systems will be shown.
 
       ![Left Pane](./images/aggregate-view-ocw.png " ")
 
-4.  Also, the current and forecast utilization of the Exadata system will be shown in the bottom section. Click on an Exadata system to evaluate more insights. Click on the Full Rack **X8-2\_Full_DBM08.us.oracle.com**.
+4. Also, the current and forecast utilization of the Exadata system will be shown in the bottom section. Click on an Exadata system to evaluate more insights. Click on the Full Rack **X8-2\_Full_DBM08.us.oracle.com**.
 
       ![Left Pane](./images/current-forecast-ocw.png " ")
 
-5.  On the **Exadata System Details** page, you can view **Rack and Key Metrics**. The page displays Software and Hardware Summary.
+5. On the **Exadata System Details** page, you can view **Rack and Key Metrics**. The page displays Software and Hardware Summary.
 
       ![Left Pane](./images/rack-and-key-metrics-ocw.png " ")
 
-6.  Navigate to **Metrics by Database** on the left pane.
+6. Navigate to **Metrics by Database** on the left pane.
 
       ![Left Pane](./images/metrics-by-database-ocw.png " ")
 
-7.  Select the **CPU** tab and choose **Host** under Grouping.
+7. Select the **CPU** tab and choose **Host** under Grouping.
 
       ![Left Pane](./images/metrics-by-database-host-ocw.png " ")
 
-8.  Now choose **Allocation (CPU)** under **Size** and **Usage Change (%)** under **Color**.
+8. Now choose **Allocation (CPU)** under **Size** and **Usage Change (%)** under **Color**.
 
       ![Left Pane](./images/max-allocation-usage-change-ocw.png " ")
 
-9.  To show the trend & forecast of CPU for Host and Database, click on the hostname and highlight the trend graph.
+9. To show the trend & forecast of CPU for Host and Database, click on the hostname and highlight the trend graph.
 
       ![Left Pane](./images/trend-host-cpu-ocw.png " ")
 
       We see the aggregate CPU demand of the 3 databases is very stable at the host-level. At the database-level, 2 have growing demand and one is shrinking.
 
-10.  Select the database and highlight the trend and forecast graph.
+10. Select the database and highlight the trend and forecast graph.
 
       ![Left Pane](./images/trend-host-database-ocw.png " ")
 
-11.  To view **Unused CPU capacity** within your database resources navigate to **Metrics by database**. Under **Grouping** select **Host**. Choose **Usage (avg. active CPU)** under **Size** and **Utilization (%)** under **Color**.
+11. To view **Unused CPU capacity** within your database resources navigate to **Metrics by database**. Under **Grouping** select **Host**. Choose **Usage (avg. active CPU)** under **Size** and **Utilization (%)** under **Color**.
 
       Selecting one of these will allow you to checkmark the **Show Unused Capacity** check.
       Once the **Show Unused Capacity** has been checked, a gray bar will appear on the treemap showing the unused space. 
@@ -72,15 +72,15 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/exa-unused-vmcluster.png " ")
 
-12.  Click **Metrics by Host** on the left pane.
+12. Click **Metrics by Host** on the left pane.
 
       ![Left Pane](./images/metrics-by-host-ocw.png " ")
 
-13.  On the **Metrics by Host** page, you are navigated to the default **CPU** tab where you can see the aggregate trend & forecast. 
+13. On the **Metrics by Host** page, you are navigated to the default **CPU** tab where you can see the aggregate trend & forecast. 
 
       ![Left Pane](./images/cpu-all-hosts-ocw.png " ")
 
-14.  Click the **Exadata Storage Server** option on the left pane.
+14. Click the **Exadata Storage Server** option on the left pane.
 
       ![Left Pane](./images/exadata-storage-server-ocw.png " ")
 

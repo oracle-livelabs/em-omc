@@ -10,11 +10,11 @@ By providing "showback" and allocating "chargeback" costs to individual departme
 
 The Exadata Cost Management feature will provide organizations with the ability to accurately track, allocate, and manage IT costs associated with the usage of resources within their IT infrastructure.
 
-Objectives
+### Objectives
 
-* Enable organizations to track resource usage and associated costs in a hybrid deployment across different departments or business units.
-* Facilitate accurate allocation of IT expenses to departments based on their actual resource consumption.
-* Provide detailed reporting and analysis capabilities to help organizations understand and optimize their IT spending.
+- Enable organizations to track resource usage and associated costs in a hybrid deployment across different departments or business units.
+- Facilitate accurate allocation of IT expenses to departments based on their actual resource consumption.
+- Provide detailed reporting and analysis capabilities to help organizations understand and optimize their IT spending.
 
 Estimated Time: 15 minutes
 

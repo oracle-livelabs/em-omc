@@ -17,7 +17,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Dashboards
 
-1.  On the **Ops Insights** main page, click **Dashboards** from the left pane.
+1. On the **Ops Insights** main page, click **Dashboards** from the left pane.
 
       ![Left Pane](./images/opsi-dash-main.png " ")
 
