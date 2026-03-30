@@ -2,7 +2,7 @@
 
 ## About this Workshop
 
-In this workshop there are 6 tasks. They have been organized to help you become familiar with the use of this service's key capabilities: performing common Database Management tasks using the Oracle Cloud. In this lab, we have simulated a hybrid environment, with autonomous, cloud, and external pluggable databases, so you do not have to setup or use one of your own databases.
+In this workshop there are 8 tasks. They have been organized to help you become familiar with the use of this service's key capabilities: performing common Database Management tasks using the Oracle Cloud. In this lab, we have simulated a hybrid environment, with autonomous, cloud, and external pluggable databases, so you do not have to setup or use one of your own databases.
 
 Estimated Workshop Time: 1 hour
 
@@ -45,4 +45,4 @@ In this workshop, you will:
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
 - **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow
-- **Last Updated By/Date** - Vivek Verma, July 2024
+- **Last Updated By/Date** - Marco Hernandez, Mar 2026
