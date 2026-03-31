@@ -23,7 +23,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Using ADDM Spotlight
 
-1.  On the left menu **Ops Insights**, click **Database Insights** and then click **ADDM Spotlight** to access and view ADDM Spotlight .
+1. On the left menu **Ops Insights**, click **Database Insights** and then click **ADDM Spotlight** to access and view ADDM Spotlight .
 
       ![ADDM Spotlight](./images/addm-spot01.png " ")
 
@@ -32,18 +32,18 @@ This lab assumes you have completed the following labs:
       ![ADDM Spotlight Landing Page](./images/addm-spot02.png " ")
 
       The main ADDM Spotlight screen will show a listing of databases with the following information:
-      1.  Database Name
-      2.  Type
-      3.  Number of Findings
-      4.  Max Overall Impact (%)
-      5.  Most Frequent Category
+      1. Database Name
+      2. Type
+      3. Number of Findings
+      4. Max Overall Impact (%)
+      5. Most Frequent Category
       
       A search bar is located on the upper right hand side, allowing you to search by database name.
 
       On the left hand side, beneath the **Ops Insights** menu, **Filters** section is displayed to further refine your search. **Filters** allows you to further refine the Time Range. By default it will be set to Last 30 days, but can be set to Last day, Last 7 days, Last 90 days, Last 6 months, or a user defined Custom time range.
 
 
-2.  Review ADDM Findings for a Specific Database
+2. Review ADDM Findings for a Specific Database
 
       To review a specific database's findings and recommendations click on the Database Name for the database you wish to review. Click on **HRPDB2**. 
       
@@ -70,5 +70,5 @@ This lab assumes you have completed the following labs:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Jul 2024
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain, Marco Hernandez
+- **Last Updated By/Date** - Marco Hernandez, Feb 2026

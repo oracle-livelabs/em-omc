@@ -17,7 +17,7 @@ This lab assumes you have completed the following labs:
 
 ## Task 1: Dashboards
 
-1.  On the **Ops Insights** main page, click **Dashboards** from the left pane.
+1. On the **Ops Insights** main page, click **Dashboards** from the left pane.
 
       ![Left Pane](./images/opsi-dash-main.png " ")
 
@@ -29,7 +29,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/opsi-demo-insights-fleet-analysis.png " ")
 
-4. Click **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
+4. Click on the number below **Degrading SQL** under **Database Insights** on the left to list the databases with degrading SQL.
 
       ![Left Pane](./images/opsi-degrading-sql.png " ")
 
@@ -39,7 +39,7 @@ This lab assumes you have completed the following labs:
 
       ![Left Pane](./images/opsi-db-analysis.png " ")
 
-6. Click **Degraded plan changes** to list the **Top 50 degraded plan changes**.
+6. Click on the number below **Degraded plan changes** to list the **Top 50 degraded plan changes**.
 
       ![Left Pane](./images/opsi-degraded-plan.png " ")
 
@@ -50,5 +50,5 @@ This lab assumes you have completed the following labs:
 ## Acknowledgements
 
 - **Author** - Vivek Verma, Master Principal Cloud Architect, North America Cloud Engineering
-- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain
-- **Last Updated By/Date** - Vivek Verma, Mar 2025
+- **Contributors** - Vivek Verma, Sriram Vrinda, Derik Harlow, Murtaza Husain, Marco Hernandez
+- **Last Updated By/Date** - Marco Hernandez, Feb 2026
