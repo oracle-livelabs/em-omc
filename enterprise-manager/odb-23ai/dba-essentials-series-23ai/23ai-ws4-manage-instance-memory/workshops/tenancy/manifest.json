@@ -22,7 +22,7 @@
     {
       "title": "Get started",
       "description": "Get a Free Trial",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
     },
     {
       "title": "Lab 1: Shut down and start up database instance",
@@ -44,7 +44,7 @@
     {
       "title": "Need help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }
