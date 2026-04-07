@@ -26,7 +26,7 @@
       "title": "Get started",
       "description": "Get a Free Trial",
       "publisheddate": "10/07/2022",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/cloud-login.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
     },
     {
       "title": "Lab 1: Provision a Pluggable Database (PDB)",
@@ -56,7 +56,7 @@
       "title": "Need help?",
       "description": "Solutions to common problems and directions for receiving live help",
       "publisheddate": "05/24/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }

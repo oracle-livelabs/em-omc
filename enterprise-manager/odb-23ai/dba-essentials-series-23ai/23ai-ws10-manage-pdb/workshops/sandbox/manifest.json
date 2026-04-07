@@ -26,7 +26,7 @@
       "title": "Lab 1: Access the NoVNC Remote Desktop",
       "description": "How to set up a NoVNC remote desktop connection to the compute instance provisioned using Oracle resources",
       "publisheddate": "10/07/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/verify-compute/verify-compute-novnc.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/verify-compute/verify-compute-novnc.md"
     },
     {
       "title": "Lab 2: Initialize environment",
@@ -62,7 +62,7 @@
       "title": "Need help?",
       "description": "Solutions to common problems and directions for receiving live help",
       "publisheddate": "05/24/2024",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-livelabs.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-livelabs.md"
     }
   ]
 }

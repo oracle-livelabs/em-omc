@@ -12,7 +12,7 @@
       "title": "Get started",
       "description": "Get a Free Trial",
       "publisheddate": "06/10/2022",
-      "filename": "https://oracle-livelabs.github.io/common/labs/cloud-login/pre-register-free-tier-account.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/pre-register-free-tier-account.md"
     },
     {
       "title": "Lab 1: Prepare setup",
@@ -24,7 +24,7 @@
       "title": "Lab 2: Setup compute instance",
       "description": "How to provision the workshop environment and connect to it",
       "publisheddate": "08/31/2021",
-      "filename": "https://oracle-livelabs.github.io/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/setup-compute-generic/setup-compute-novnc-ssh.md"
     },
     {
       "title": "Lab 3: Initialize environment",
@@ -48,7 +48,7 @@
       "title": "Need help?",
       "description": "Solutions to Common Problems and Directions for Receiving Live Help",
       "publisheddate": "06/10/2022",
-      "filename": "https://oracle-livelabs.github.io/common/labs/need-help/need-help-freetier.md"
+      "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
     }
   ]
 }
