@@ -4,25 +4,24 @@
 
 Modern applications need more than a healthy endpoint. A customer action can cross a browser, an edge service, several Kubernetes services, Oracle Autonomous Database, and an AI agent workflow. Each layer emits a different signal. OCI Observability and Management services help operators connect those signals into one investigation.
 
-In this workshop, you deploy the OCI-DEMO e-commerce application and control plane, enable the supporting OCI Observability and Management services, and investigate the OCTO Drone Shop, Enterprise CRM Portal, database, and AI agent workflows. You will use OCI Application Performance Monitoring, Real User Monitoring, Synthetic Monitoring, OCI Logging, Log Analytics, Monitoring, Operations Insights, Database Management, WAF, OCI GenAI observability, Agent Fabric telemetry, and Langfuse.
+In this workshop, you deploy [OCTO APM Demo](https://github.com/adibirzu/octo-observability-demo), enable the supporting OCI Observability and Management services, and investigate the OCTO Drone Shop, Enterprise CRM Portal, Oracle ATP database, Java payment sidecar, and AI Studio workflows. You will use OCI Application Performance Monitoring, Real User Monitoring, Synthetic Monitoring, OCI Logging, Log Analytics, Monitoring, Operations Insights, Database Management, WAF, OCI GenAI observability, Langfuse, and the platform correlation contract.
 
 The application monitoring path highlights three use cases: OCI Log Analytics OKE Monitoring, OCI Log Analytics for Security Monitoring, and OCI Application Performance Monitoring tracing. The labs also validate the three collection paths from the source article: direct OpenTelemetry SDK instrumentation, the OCI APM Java agent, and OCI Management Agent or native OCI collection.
 
 ### Prerequisites
 
-- Access to an OCI tenancy with permission to deploy OCI-DEMO resources.
+- Access to an OCI tenancy with permission to deploy OCTO APM Demo resources.
 - OCI CLI profile, instance principal, or resource principal authentication configured for the deployment host.
-- A workstation, bastion, or Cloud Shell session that can run `git`, `bash`, `python3`, OCI CLI, and `kubectl`.
-- A configured `.env.local` file for OCI-DEMO deployment values.
+- A workstation, bastion, or Cloud Shell session that can run `git`, `bash`, `make`, `oci`, `kubectl`, `jq`, and `curl`.
+- A configured `.env` file for OCTO APM Demo deployment values.
 - OCI Console access to Application Performance Monitoring, Logging, Log Analytics, Monitoring, Operations Insights, Database Management, WAF, OKE, Autonomous Database, Generative AI, and agent-related resources.
 - Public or internal access to the deployed application URLs:
-  - `https://cp.octodemo.cloud`
-  - `https://crm.octodemo.cloud`
-  - `https://shop.octodemo.cloud`
+  - `https://drones.${DNS_DOMAIN}`
+  - `https://admin.${DNS_DOMAIN}`
 
 ### Objectives
 
-- Deploy the OCI-DEMO application stack and control plane with the Quick Start workflow.
+- Deploy the OCTO APM Demo stack with Resource Manager or the `make` quickstart.
 - Enable OCI Observability and Management services for the application, Kubernetes, WAF, and database layers.
 - Validate OCI Log Analytics OKE Monitoring and OCI Log Analytics Security Monitoring use cases.
 - Generate e-commerce traffic and inspect the end-to-end request path in OCI APM.
@@ -35,6 +34,9 @@ Estimated Workshop Time: 6.5 hours
 
 ## Learn More
 
+- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
+- [OCTO APM Demo Quickstart](https://github.com/adibirzu/octo-observability-demo/blob/main/docs/QUICKSTART.md)
+- [OCTO APM Demo Correlation Contract](https://github.com/adibirzu/octo-observability-demo/blob/main/site/architecture/correlation-contract.md)
 - [OCI Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
 - [APM Real User Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-real-user-monitoring.html)
 - [OCI Logging Analytics](https://docs.oracle.com/en-us/iaas/log-analytics/)
@@ -55,4 +57,4 @@ Estimated Workshop Time: 6.5 hours
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 18, 2026
+* **Last Updated By/Date** - Royce Fu, June 19, 2026

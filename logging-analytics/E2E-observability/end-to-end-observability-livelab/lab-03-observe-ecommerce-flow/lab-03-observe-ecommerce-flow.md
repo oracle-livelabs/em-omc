@@ -14,7 +14,7 @@ In this lab, you will:
 
 - Generate Drone Shop and CRM activity.
 - Validate OCI Application Performance Monitoring tracing.
-- Confirm that service spans carry useful identity and correlation attributes.
+- Confirm that service spans carry useful identity and correlation attributes from the OCTO correlation contract.
 - Validate direct OpenTelemetry SDK, OCI APM Java agent, and native collection signals.
 - Pivot from the trace to correlated application logs.
 - Use OCI APM documentation concepts to validate traces, spans, RUM, synthetic monitors, and OpenTelemetry ingestion.
@@ -24,7 +24,7 @@ In this lab, you will:
 1. Open the OCTO Drone Shop.
 
     ```text
-    https://shop.octodemo.cloud
+    https://drones.${DNS_DOMAIN}
     ```
 
 2. Browse the catalog, search, and filter by category.
@@ -34,18 +34,23 @@ In this lab, you will:
 4. Open the Enterprise CRM Portal.
 
     ```text
-    https://crm.octodemo.cloud
+    https://admin.${DNS_DOMAIN}
     ```
 
 5. Find the order or customer activity created by the Drone Shop workflow.
 
-6. If the control plane provides the Drone Shop route, open it and generate the same flow from the control plane.
+6. If you want a deterministic trace ID, generate one request with an explicit W3C `traceparent` header.
 
-    ```text
-    https://cp.octodemo.cloud/observability/drone-shop
+    ```bash
+    TRACEPARENT="00-$(openssl rand -hex 16)-$(openssl rand -hex 8)-01"
+    TRACE_ID=$(echo "$TRACEPARENT" | cut -d- -f2)
+    curl -sS -H "traceparent: $TRACEPARENT" \
+      -H "X-Workflow-Id: livelab-ecommerce-flow" \
+      https://drones.${DNS_DOMAIN}/api/products | jq '.[0]'
+    echo "$TRACE_ID"
     ```
 
-7. Record the approximate timestamp, browser path, order identifier, payment result, and idempotency token if the application shows one.
+7. Record the approximate timestamp, browser path, order identifier, payment result, trace ID, and idempotency token if the application shows one.
 
 8. If your environment has the sample data from the source article, look for order `227977` and trace `fbd1747c757417b579a8cedf11dae886`.
 
@@ -55,7 +60,7 @@ In this lab, you will:
 
 1. In the OCI Console, open **Observability & Management**.
 
-2. Open **Application Performance Monitoring** and select the APM domain used by OCI-DEMO.
+2. Open **Application Performance Monitoring** and select the APM domain used by OCTO APM Demo.
 
 3. Open **Trace Explorer**.
 
@@ -65,7 +70,10 @@ In this lab, you will:
 
     ```text
     octo-drone-shop
+    octo-drone-shop-oke
     enterprise-crm-portal
+    enterprise-crm-portal-oke
+    octo-apm-java-demo
     ```
 
 6. Open a trace that overlaps the order timestamp.
@@ -77,6 +85,7 @@ In this lab, you will:
     - A browser or RUM signal starts near the same timestamp.
     - Drone Shop server spans appear for the user action.
     - CRM or integration spans appear when the order sync path runs.
+    - the Spring Boot payment sidecar appears when checkout calls the Java path.
     - database spans appear when the request touches Autonomous Database.
     - errors or long-running spans stand out in the waterfall.
     - a declined payment can show `merchant_authorization_result = declined` with `is-fault = false`.
@@ -122,7 +131,7 @@ In this lab, you will:
     - `DbOracleSqlId`.
     - `sql_id`.
 
-6. Record the trace ID and at least one SQL ID if present.
+6. Record the trace ID, span ID, `oracleApmTraceId`, `oracleApmSpanId`, and at least one SQL ID if present.
 
 7. Check for application security context on validation spans when present.
 
@@ -133,6 +142,8 @@ In this lab, you will:
     ```text
     browser or synthetic request -> Drone Shop span -> CRM or Java span -> ATP span
     shared trace ID:
+    request ID:
+    workflow ID:
     propagation header:
     strongest correlation field:
     ```
@@ -165,6 +176,7 @@ In this lab, you will:
     - Confirm whether it uses a public or private data key.
     - Confirm whether the endpoint follows the OpenTelemetry trace endpoint shape.
     - Confirm whether metrics use the APM OTLP metrics path or native OCI Monitoring.
+    - Confirm that logs stamp `oracleApmTraceId` and `oracleApmSpanId`.
 
 5. Check whether your deployment uses the optional OpenTelemetry Collector.
 
@@ -250,6 +262,10 @@ In this lab, you will:
 
 ## Learn More
 
+- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
+- [OCTO APM Demo workshop Lab 01](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-01-first-trace.md)
+- [OCTO APM Demo trace-log correlation lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-02-trace-log-correlation.md)
+- [OCTO APM Demo correlation contract](https://github.com/adibirzu/octo-observability-demo/blob/main/site/architecture/correlation-contract.md)
 - [OCI Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
 - [Configure OpenTelemetry and other tracers for OCI APM](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-open-source-tracing-systems.html)
 - [APM Real User Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-real-user-monitoring.html)
@@ -259,4 +275,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 18, 2026
+* **Last Updated By/Date** - Royce Fu, June 19, 2026

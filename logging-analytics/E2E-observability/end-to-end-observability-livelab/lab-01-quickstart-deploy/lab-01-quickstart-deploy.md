@@ -1,8 +1,8 @@
-# Lab 1: QuickStart Deployment
+# Lab 1: OCTO APM Demo Quickstart Deployment
 
 ## Introduction
 
-In this lab, you deploy the OCI-DEMO foundation, application platform, control plane, Enterprise CRM Portal, and OCTO Drone Shop. This gives the rest of the workshop a live application path that can generate traces, logs, metrics, WAF events, database activity, and agent telemetry.
+In this lab, you deploy OCTO APM Demo from `adibirzu/octo-observability-demo`. The platform gives the rest of the workshop a live drone retail path that can generate browser telemetry, FastAPI spans, Spring Boot payment spans, structured logs, custom metrics, WAF events, Oracle ATP activity, and AI Studio telemetry.
 
 Estimated Time: 70 minutes
 
@@ -10,174 +10,221 @@ Estimated Time: 70 minutes
 
 In this lab, you will:
 
-- Configure the OCI-DEMO deployment environment.
-- Run the Quick Start dry-run and deployment commands.
-- Deploy the control plane and the e-commerce application workloads.
-- Verify the control plane, CRM, and Drone Shop endpoints.
-- Confirm the runtime and deployment services that make the workshop portable.
+- Clone the OCTO APM Demo repository.
+- Configure the `env.template` deployment values.
+- Choose Resource Manager, `make`, or local-stack deployment.
+- Verify the OCTO Drone Shop and Enterprise CRM Portal endpoints.
+- Confirm the runtime and correlation fields used by later labs.
 
 ## Task 1: Configure the Deployment Environment
 
-1. Open a terminal on the workstation, bastion, or Cloud Shell session that will run the OCI-DEMO deployment.
+1. Open a terminal on the workstation, bastion, or Cloud Shell session that will run the deployment.
 
-2. Clone the OCI-DEMO repository or switch to your existing checkout.
-
-    ```bash
-    git clone https://github.com/adibirzu/OCI-DEMO.git
-    cd OCI-DEMO
-    ```
-
-3. Create the local environment file.
+2. Clone the OCTO APM Demo repository or switch to your existing checkout.
 
     ```bash
-    cp .env.example .env.local
+    git clone https://github.com/adibirzu/octo-observability-demo.git
+    cd octo-observability-demo
     ```
 
-4. Edit `.env.local` with the values for your tenancy, compartment, region, OCI authentication mode, DNS settings, APM domain values, and application hostnames.
+3. Create the deployment environment file.
+
+    ```bash
+    cp env.template .env
+    ```
+
+4. Edit `.env` with your tenancy values.
+
+    ```text
+    OCI_PROFILE=DEFAULT
+    OCI_COMPARTMENT_ID=<compartment-ocid>
+    OCIR_REGION=<oci-region>
+    OCIR_TENANCY=<object-storage-namespace>
+    DNS_DOMAIN=<your-dns-zone>
+    ```
 
 5. Confirm that OCI authentication works from the deployment host.
 
     ```bash
-    oci iam region list --output table
+    oci iam region list --profile "${OCI_PROFILE:-DEFAULT}" --output table
     ```
 
-6. If you are using a non-default OCI CLI profile or an instance principal, record the exact mode because you will reuse it in later commands.
+6. Run the platform preflight check.
 
     ```bash
-    # Profile example
-    python3 deploy.py --component c2 --oci-profile <your-profile> --oci-tenancy <tenancy-ocid> --dry-run
-
-    # Instance principal example
-    python3 deploy.py --component c2 --oci-auth-mode instance_principal --dry-run
+    make doctor
     ```
 
-## Task 2: Run the Quick Start Deployment
+7. Fix any failed preflight item before you deploy. The quickstart expects working `oci`, `jq`, `curl`, `bash`, and the tools required by your chosen deployment path.
 
-1. Run a full dry-run first. The deployment engine resolves the dependency graph, skips already deployed prerequisites, and previews the plan.
+## Task 2: Choose a Deployment Path
 
-    ```bash
-    python3 deploy.py --component all --dry-run
-    ```
-
-2. Review the plan output. Confirm that the plan includes the foundation, observability, OKE, control plane, Enterprise CRM Portal, OCTO Drone Shop, GenAI, Agent Fabric, and Langfuse components needed for this workshop.
-
-3. Deploy the full environment when you are ready.
-
-    ```bash
-    python3 deploy.py --component all
-    ```
-
-4. If your instructor asks you to deploy only the workshop path, deploy the required component groups instead of `all`.
-
-    ```bash
-    python3 deploy.py --component c0,c1,c2,c8,c11,c11b,c15,c27,c28,c12,c24,c34
-    ```
-
-5. If your tenancy has a temporary service-limit preflight issue and your instructor approves the exception, rerun the specific component with the skip flag.
-
-    ```bash
-    python3 deploy.py --component c7 --skip-limits-check
-    ```
-
-## Task 3: Deploy and Open the Control Plane
-
-1. Run the control-plane setup script when your Quick Start run requires the direct control-plane setup path.
-
-    ```bash
-    bash control_plane/setup_control_plane.sh
-    ```
-
-2. Verify the Control Plane VM component.
-
-    ```bash
-    python3 deploy.py --verify c11
-    ```
-
-3. Verify the OKE-hosted control plane.
-
-    ```bash
-    python3 deploy.py --verify c11b
-    ```
-
-4. Open the canonical public control-plane URL.
+1. Use **Resource Manager** when you want the fastest OCI-native evaluation path.
 
     ```text
-    https://cp.octodemo.cloud
+    https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/adibirzu/octo-observability-demo/releases/download/compute-resource-manager-stack-20260602/octo-compute-stack.zip
     ```
 
-5. In the control plane, confirm that the navigation includes observability pages such as DB Management, Ops Insights, Monitoring, Stress Test, Drone Shop, and GenAI Observability.
+2. In OCI Resource Manager, provide the target compartment, DNS domain, and resource prefix.
+
+3. Run **Plan** and then **Apply**.
+
+4. Use the `make` quickstart when you want to inspect and customize the deployment.
+
+    ```bash
+    make tenancy-init
+    make deploy
+    ```
+
+5. Use per-service targets only when you need to update one service.
+
+    ```bash
+    make deploy-shop
+    make deploy-crm
+    make deploy-java-apm
+    ```
+
+6. Use the Helm chart when your workshop environment standardizes on Helm.
+
+    ```bash
+    make deploy-helm
+    ```
+
+7. Use the local stack only for code exploration. Local mode does not send signals to OCI APM, Log Analytics, or OCI Monitoring.
+
+    ```bash
+    make local-up
+    ```
+
+## Task 3: Point DNS and Smoke Test
+
+1. After deployment, record the public load balancer IP addresses from the Resource Manager output or `make deploy` output.
+
+2. Create DNS A records for the two application hostnames.
+
+    ```text
+    drones.${DNS_DOMAIN}    A    <shop-lb-ip>
+    admin.${DNS_DOMAIN}     A    <crm-lb-ip>
+    ```
+
+3. Wait for DNS propagation.
+
+4. Run the platform smoke test.
+
+    ```bash
+    make smoke
+    ```
+
+5. If you used Resource Manager and do not have the repo shell available, run the deployment validator directly.
+
+    ```bash
+    DNS_DOMAIN=<your-dns-zone> ./deploy/validate-deployment.sh
+    ```
+
+6. Confirm that the smoke test reports the storefront, admin portal, APM, RUM, OCI Logging, workflow gateway, GenAI, and Java sidecar checks as healthy.
 
 ## Task 4: Verify the Application Workloads
 
-1. Verify the Enterprise CRM Portal.
+1. Open the OCTO Drone Shop.
 
-    ```bash
-    python3 deploy.py --verify c27
+    ```text
+    https://drones.${DNS_DOMAIN}
     ```
 
-2. Verify the OCTO Drone Shop.
+2. Open the Enterprise CRM Portal.
 
-    ```bash
-    python3 deploy.py --verify c28
+    ```text
+    https://admin.${DNS_DOMAIN}
     ```
 
-3. Check the public health endpoints.
+3. Check the readiness endpoints.
 
     ```bash
-    curl -I https://crm.octodemo.cloud/health
-    curl -I https://shop.octodemo.cloud/health
-    curl -I https://shop.octodemo.cloud/api/integrations/crm/health
+    curl -sS https://drones.${DNS_DOMAIN}/ready | jq
+    curl -sS https://admin.${DNS_DOMAIN}/ready | jq
     ```
 
-4. Check deployment status.
+4. Confirm that the readiness response includes the OCI observability fields.
+
+    ```json
+    {
+      "ready": true,
+      "database": "connected",
+      "apm_configured": true,
+      "rum_configured": true,
+      "logging_configured": true,
+      "java_apm_enabled": true
+    }
+    ```
+
+5. If the OKE deployment path is active, verify the Kubernetes workloads.
 
     ```bash
-    python3 deploy.py --status
+    kubectl get deploy -n octo-drone-shop
+    kubectl get deploy -n enterprise-crm
+    kubectl rollout status deployment/octo-drone-shop -n octo-drone-shop
+    kubectl rollout status deployment/enterprise-crm-portal -n enterprise-crm
     ```
 
-5. Record these values for later labs:
+6. Record these values for later labs:
 
-    - Control plane URL
-    - CRM Portal URL
-    - Drone Shop URL
-    - APM domain name and OCID
-    - Log Analytics namespace
-    - OKE cluster name
-    - Autonomous Database name
+    - Drone Shop URL.
+    - Enterprise CRM Portal URL.
+    - DNS domain.
+    - APM domain name and OCID.
+    - Log Analytics namespace.
+    - OKE cluster name or Compute deployment name.
+    - Autonomous Database name.
 
 ## Task 5: Confirm the Portable Runtime Contract
 
-1. In the OCI Console, confirm which runtime your deployment uses for the application path.
+1. Confirm which runtime your deployment uses for the application path.
 
-    - Compute VM running containers.
+    - Resource Manager compute stack.
     - Managed Kubernetes cluster through OKE.
-    - Both runtimes when your demo environment includes both.
+    - Local stack for code-only exploration.
 
-2. Confirm that OCI Resource Manager, Terraform, or the deployment engine created the runtime and observability resources together.
+2. Confirm that the deployment includes supporting OCI resources when your environment enables them.
 
-3. Confirm that the deployment includes supporting services when your environment enables them:
-
-    - OCIR for container images.
-    - Vault or KMS for secrets and wallet material.
-    - Service Connector Hub for OCI Logging to Log Analytics routing.
-    - Notifications for alarm delivery.
+    - OCIR repositories for container images.
+    - OCI APM domain and data keys.
+    - OCI Logging log group.
+    - Service Connector Hub connectors into Log Analytics.
+    - OCI Monitoring custom metrics and alarms.
+    - Stack Monitoring for ATP or JVM health.
     - Load Balancer and WAF for public edge traffic.
 
-4. Record the runtime value that should appear on spans or resource attributes.
+3. Record the runtime values that should appear on spans, logs, or metrics.
 
     ```text
-    app.runtime = oke | compute | local
     service.namespace = octo
+    service.name = octo-drone-shop | enterprise-crm-portal | octo-apm-java-demo | octo-genai-studio
+    deployment.environment = production | staging | dev
+    app.runtime = oke | compute | local
     db.target = octo-atp
     ```
 
-5. Keep these values for later labs. They prove that the same correlation contract works even when the app moves between Compute and OKE.
+4. Record the primary correlation fields that later labs use.
+
+    ```text
+    trace_id:
+    span_id:
+    oracleApmTraceId:
+    oracleApmSpanId:
+    request_id:
+    workflow_id:
+    ```
+
+5. Keep these values for later labs. They prove that the same investigation works across browser, application, Java sidecar, logs, metrics, and ATP evidence.
 
 ## Learn More
 
-- [OCI-DEMO Quick Start](https://github.com/adibirzu/OCI-DEMO#quick-start)
+- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
+- [OCTO APM Demo Quickstart](https://github.com/adibirzu/octo-observability-demo/blob/main/docs/QUICKSTART.md)
+- [OCTO APM Demo OKE deployment](https://github.com/adibirzu/octo-observability-demo/blob/main/deploy/oke/README.md)
+- [OCTO APM Demo correlation contract](https://github.com/adibirzu/octo-observability-demo/blob/main/site/architecture/correlation-contract.md)
 
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 18, 2026
+* **Last Updated By/Date** - Royce Fu, June 19, 2026

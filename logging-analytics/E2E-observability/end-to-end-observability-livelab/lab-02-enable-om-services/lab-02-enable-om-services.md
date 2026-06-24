@@ -10,46 +10,56 @@ Estimated Time: 95 minutes
 
 In this lab, you will:
 
-- Verify the C2 Observability baseline.
+- Verify the OCTO APM Demo observability bootstrap.
 - Validate the OCI Log Analytics OKE Monitoring solution.
 - Validate OCI Log Analytics for Security Monitoring.
 - Enable Autonomous Database observability through Database Management and Operations Insights.
 - Confirm that application, WAF, and database signals are visible in OCI services.
-- Confirm the full OCI Observability and Management surface used by the source demo.
+- Confirm the full OCI Observability and Management surface used by OCTO APM Demo.
 - Tie each enablement checkpoint to the relevant OCI documentation surface.
 
 ## Task 1: Verify the Observability Baseline
 
-1. From the OCI-DEMO repository, verify the C2 Observability Stack.
+1. From the OCTO APM Demo repository, confirm that the observability bootstrap assets exist.
 
     ```bash
-    python3 deploy.py --verify c2
+    ls deploy/oci/ensure_apm.sh \
+       deploy/oci/ensure_log_analytics_connectors.sh \
+       deploy/oci/ensure_monitoring.sh \
+       deploy/oci/ensure_stack_monitoring.sh \
+       deploy/oci/ensure_waf.sh
     ```
 
-2. If C2 is not deployed, deploy it before continuing.
+2. If the observability resources are not deployed, run the bootstrap path for your environment before continuing.
 
     ```bash
-    python3 deploy.py --component c2
+    ./deploy/bootstrap.sh
     ```
 
-3. In the OCI Console, open **Observability & Management**.
+3. Run the smoke test after bootstrap or deployment.
 
-4. Confirm that these resources exist:
+    ```bash
+    make smoke
+    ```
+
+4. In the OCI Console, open **Observability & Management**.
+
+5. Confirm that these resources exist:
 
     - Log Analytics namespace.
     - OCI APM domain.
     - APM private and public data keys.
     - APM dashboards or saved queries.
     - Log Analytics parsers, sources, dashboards, and detection searches.
-    - OCI Streaming streams for the demo observability pipeline.
+    - Monitoring alarms or alarm definitions for platform signals.
 
-5. Open the APM domain and confirm that Trace Explorer is available.
+6. Open the APM domain and confirm that Trace Explorer is available.
 
-6. Open **Monitoring** and confirm that you can query metrics and inspect alarm status for the compartment that contains the demo resources.
+7. Open **Monitoring** and confirm that you can query metrics and inspect alarm status for the compartment that contains the demo resources.
 
-7. Open **Connector Hub** and confirm that service connectors exist for the log routes that feed Log Analytics.
+8. Open **Connector Hub** and confirm that service connectors exist for the log routes that feed Log Analytics.
 
-8. Record the OCI documentation concept each resource validates.
+9. Record the OCI documentation concept each resource validates.
 
     | Resource | OCI documentation concept |
     | --- | --- |
@@ -61,23 +71,25 @@ In this lab, you will:
 
 ## Task 2: Validate the OCI Log Analytics OKE Monitoring Solution
 
-1. Verify the OKE platform.
+1. Verify whether this deployment uses OKE.
 
     ```bash
-    python3 deploy.py --verify c8
+    kubectl config current-context
+    kubectl get nodes
     ```
 
-2. Enable or verify OKE Native Monitoring. C10 uses the `oci-kubernetes-monitoring` solution and requires C8 plus the C2 Log Analytics baseline.
+2. If your environment uses the OCTO Helm path, confirm the installed release.
 
     ```bash
-    python3 deploy.py --component c10
-    python3 deploy.py --verify c10
+    helm list --all-namespaces | grep octo-apm-demo
     ```
 
-3. If the OKE API endpoint is private and the local runner cannot reach it, generate the Helm commands from a host that can reach the cluster API.
+3. Confirm the core namespaces and deployments.
 
     ```bash
-    C10_HELM_MODE=generate python3 deploy.py --component c10
+    kubectl get deploy -n octo-drone-shop
+    kubectl get deploy -n enterprise-crm
+    kubectl get deploy -n octo-drone-shop | grep octo-apm-java-demo
     ```
 
 4. In Log Analytics, confirm that the Kubernetes entity for the demo cluster shows active status.
@@ -109,18 +121,18 @@ In this lab, you will:
 
     - Open **Developer Services**.
     - Open **Kubernetes Clusters**.
-    - Select the `oci-demo-oke` cluster or your equivalent cluster.
+    - Select the `octo-apm-demo-oke` cluster or your equivalent cluster.
     - Review cluster health, node pools, work requests, audit logs, application logs, and metrics.
 
 11. Record whether OKE evidence comes from Log Analytics, OCI Logging, Monitoring metrics, or all three.
 
 ## Task 3: Enable Database Observability
 
-1. Deploy or verify the DB Advanced component.
+1. From the OCTO APM Demo repository, enable or verify database observability for the ATP target.
 
     ```bash
-    python3 deploy.py --component c15
-    python3 deploy.py --verify c15
+    bash deploy/oci/ensure_db_observability.sh
+    bash deploy/oci/ensure_stack_monitoring.sh
     ```
 
 2. In the OCI Console, open the Autonomous Database used by the demo.
@@ -139,11 +151,10 @@ In this lab, you will:
     db.target = octo-atp
     ```
 
-8. In the control plane, open these routes if they are available:
+8. In the Enterprise CRM Portal, open the observability or operations pages if they are available.
 
     ```text
-    https://cp.octodemo.cloud/observability/db-management
-    https://cp.octodemo.cloud/observability/ops-insights
+    https://admin.${DNS_DOMAIN}
     ```
 
 9. In **Operations Insights**, record the database name, SQL activity window, and any capacity trend that appears for the ATP target.
@@ -157,8 +168,8 @@ In this lab, you will:
 1. Open the Drone Shop and CRM public URLs.
 
     ```text
-    https://shop.octodemo.cloud
-    https://crm.octodemo.cloud
+    https://drones.${DNS_DOMAIN}
+    https://admin.${DNS_DOMAIN}
     ```
 
 2. In OCI APM, open **Real User Monitoring** and confirm browser activity for the application hostnames after you browse the applications.
@@ -193,19 +204,19 @@ In this lab, you will:
     - WAF events.
     - OWASP application security events.
     - MITRE or Sigma-style detections.
-    - Windows, Sysmon, or Active Directory security logs when C5, C16, or C29 exists.
+    - edge-fuzz, container-lab, VM-lab, or Cloud Guard records when your deployment enables those security labs.
 
 3. Search WAF and application security records for the e-commerce hostnames.
 
     ```text
     ('Log Source' contains 'WAF' or Message contains 'OWASP' or Message contains 'MITRE' or Message contains 'x-oci-waf')
-    and (ClientRequestHost in ('shop.octodemo.cloud', 'crm.octodemo.cloud') or Message contains 'octodemo')
+    and (ClientRequestHost in ('drones.${DNS_DOMAIN}', 'admin.${DNS_DOMAIN}') or Message contains 'octo')
     ```
 
 4. If you have a safe test URL from your instructor, send one detection-mode request to the application and confirm that Log Analytics receives the event.
 
     ```bash
-    curl -I "https://shop.octodemo.cloud/?q=%3Cscript%3Ealert(1)%3C/script%3E"
+    curl -I "https://drones.${DNS_DOMAIN}/?q=%3Cscript%3Ealert(1)%3C/script%3E"
     ```
 
 5. Open the matching Log Analytics row and record:
@@ -261,6 +272,10 @@ In this lab, you will:
 
 ## Learn More
 
+- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
+- [OCTO APM Demo observability surface map](https://github.com/adibirzu/octo-observability-demo#oci-observability-surface-map)
+- [OCTO APM Demo Log Analytics assets](https://github.com/adibirzu/octo-observability-demo/tree/main/deploy/oci/log_analytics)
+- [OCTO APM Demo OKE deployment](https://github.com/adibirzu/octo-observability-demo/blob/main/deploy/oke/README.md)
 - [OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm)
 - [OCI Log Analytics](https://docs.oracle.com/en-us/iaas/log-analytics/)
 - [OCI Kubernetes Engine](https://docs.oracle.com/en-us/iaas/Content/ContEng/home.htm)
@@ -277,4 +292,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 18, 2026
+* **Last Updated By/Date** - Royce Fu, June 19, 2026

@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "End-to-End Observability on OCI for Applications Running Anywhere",
+    "workshoptitle": "End-to-End Observability on OCI with OCTO APM Demo",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -9,8 +9,8 @@
             "filename": "../../introduction/introduction.md"
         },
         {
-            "title": "QuickStart Deployment",
-            "description": "Deploy the OCI-DEMO application stack, control plane, CRM Portal, and OCTO Drone Shop.",
+            "title": "OCTO APM Demo Quickstart Deployment",
+            "description": "Deploy OCTO APM Demo from adibirzu/octo-observability-demo and verify the Drone Shop, Enterprise CRM Portal, Java payment sidecar, ATP, and observability endpoints.",
             "type": "livelabs",
             "filename": "../../lab-01-quickstart-deploy/lab-01-quickstart-deploy.md"
         },

@@ -1,6 +1,6 @@
 # LiveLabs Workshop Validation – end-to-end-observability-livelab
 
-Generated on 2026-06-18T23:23:19.499437+00:00
+Generated on 2026-06-24T14:04:13.459762+00:00
 
 ## Structure Check
 - ✅ Required folders and workshop variants present.
@@ -13,7 +13,7 @@ Generated on 2026-06-18T23:23:19.499437+00:00
 ### SOURCE-COVERAGE-VALIDATION.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 4 sentence(s) exceed 20 words; tighten wording.
+  - 5 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### TRACEABILITY.md
@@ -37,7 +37,7 @@ Generated on 2026-06-18T23:23:19.499437+00:00
 ### lab-01-quickstart-deploy/lab-01-quickstart-deploy.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 10 sentence(s) exceed 20 words; tighten wording.
+  - 5 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### lab-02-enable-om-services/lab-02-enable-om-services.md
@@ -49,7 +49,7 @@ Generated on 2026-06-18T23:23:19.499437+00:00
 ### lab-03-observe-ecommerce-flow/lab-03-observe-ecommerce-flow.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 6 sentence(s) exceed 20 words; tighten wording.
+  - 7 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### lab-04-database-loganalytics-rca/lab-04-database-loganalytics-rca.md
@@ -61,5 +61,5 @@ Generated on 2026-06-18T23:23:19.499437+00:00
 ### lab-05-agent-monitoring-anomaly-detection/lab-05-agent-monitoring-anomaly-detection.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 11 sentence(s) exceed 20 words; tighten wording.
+  - 12 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
