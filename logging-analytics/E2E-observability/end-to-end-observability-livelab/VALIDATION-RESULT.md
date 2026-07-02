@@ -1,6 +1,6 @@
 # LiveLabs Workshop Validation – end-to-end-observability-livelab
 
-Generated on 2026-06-24T14:04:13.459762+00:00
+Generated on 2026-07-02T01:28:09.367965+00:00
 
 ## Structure Check
 - ✅ Required folders and workshop variants present.
@@ -13,31 +13,31 @@ Generated on 2026-06-24T14:04:13.459762+00:00
 ### SOURCE-COVERAGE-VALIDATION.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 5 sentence(s) exceed 20 words; tighten wording.
+  - 17 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### TRACEABILITY.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 10 sentence(s) exceed 20 words; tighten wording.
+  - 8 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### WORKSHOP-DETAILS.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 15 sentence(s) exceed 20 words; tighten wording.
+  - 7 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### introduction/introduction.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 8 sentence(s) exceed 20 words; tighten wording.
+  - 7 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### lab-01-quickstart-deploy/lab-01-quickstart-deploy.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 5 sentence(s) exceed 20 words; tighten wording.
+  - 6 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### lab-02-enable-om-services/lab-02-enable-om-services.md
@@ -49,17 +49,17 @@ Generated on 2026-06-24T14:04:13.459762+00:00
 ### lab-03-observe-ecommerce-flow/lab-03-observe-ecommerce-flow.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 7 sentence(s) exceed 20 words; tighten wording.
+  - 10 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
 ### lab-04-database-loganalytics-rca/lab-04-database-loganalytics-rca.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 18 sentence(s) exceed 20 words; tighten wording.
+  - 14 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.
 
-### lab-05-agent-monitoring-anomaly-detection/lab-05-agent-monitoring-anomaly-detection.md
+### lab-05-operationalize-observability/lab-05-operationalize-observability.md
 - ✅ LiveLabs formatting checks passed.
 - ✍️ Lanham score: 3/5
-  - 12 sentence(s) exceed 20 words; tighten wording.
+  - 14 sentence(s) exceed 20 words; tighten wording.
   - Heavy nominalization usage; prefer vivid verbs.

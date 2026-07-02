@@ -2,56 +2,60 @@
 
 ## Introduction
 
-This file cross-validates `end-to-end-observability.md` and the OCTO APM Demo repository against the consolidated five-lab LiveLabs workshop. It records where each source topic appears in the workshop and flags any intentional asset gaps.
+This file maps the approved workshop scope to OCTO APM Demo, the original end-to-end observability narrative, and current Oracle documentation.
 
 Estimated Time: 5 minutes
 
 ### Objectives
 
-In this validation, you will:
-
-- Confirm that each source section maps to one or more LiveLabs locations.
-- Confirm that OCTO APM Demo repository concepts are present in the five-lab flow.
-- Identify gaps that require source assets or SME confirmation rather than more lab text.
+- Confirm that the workshop remains anchored to `adibirzu/octo-observability-demo`.
+- Verify coverage of the four requested application-monitoring use cases.
+- Verify hands-on coverage of the seven focused OCI services.
+- Record intentional prerequisites and runtime gaps.
 
 ## Coverage Matrix
 
-| Source area | Source | LiveLabs coverage | Status |
-| --- | --- | --- | --- |
-| OCTO APM Demo anchor repository | `https://github.com/adibirzu/octo-observability-demo`; `README.md` | Introduction; WORKSHOP-DETAILS; Lab 1 Learn More; TRACEABILITY | Covered |
-| Quickstart deployment paths: Resource Manager, `make doctor`, `make tenancy-init`, `make deploy`, `make smoke`, local stack | `docs/QUICKSTART.md`; `site/getting-started/quickstart.md`; `Makefile` | Lab 1 Task 1 through Task 4 | Covered |
-| Public endpoints and DNS pattern: `drones.${DNS_DOMAIN}`, `admin.${DNS_DOMAIN}`, `/ready` checks | `docs/QUICKSTART.md`; `deploy/oke/README.md`; `deploy/validate-deployment.sh` | Introduction prerequisites; WORKSHOP-DETAILS; Lab 1 Task 3 and Task 4; Lab 3 Task 1 | Covered |
-| Service topology: OCTO Drone Shop, Enterprise CRM Portal, AI Studio, Java payment sidecar, OTEL Gateway, async worker, auto-remediator, shared ATP | `README.md`; `ARCHITECTURE.md`; `site/architecture/service-inventory.md` | Introduction; Lab 1 Task 5; Lab 2 Task 6; Lab 3 Task 2 and Task 4; Lab 5 Task 1 | Covered |
-| OCI Observability surface map: APM, RUM, Logging, Log Analytics, Monitoring, Stack Monitoring, Service Connector Hub, WAF, Cloud Guard, Vault, GenAI, Langfuse | `README.md`; `deploy/oci/`; `site/observability/`; `site/observability-v2/` | Introduction Learn More; Lab 2 Task 1 through Task 6; Lab 4 Task 5 | Covered |
-| OKE monitoring and Kubernetes evidence: `octo-apm-demo-oke`, `octo-drone-shop`, `enterprise-crm`, pod/container records, HPA and autoscaling searches | `deploy/oke/README.md`; `deploy/helm/octo-apm-demo/`; `tools/la-saved-searches/oke-*`; `site/workshop/lab-11-oke-autoscaling.md` | Lab 2 Task 2; Lab 4 Task 5 | Covered |
-| Trace-log correlation contract: W3C `traceparent`, `trace_id`, `span_id`, `oracleApmTraceId`, `oracleApmSpanId`, `request_id`, `workflow_id`, `service.namespace=octo` | `site/architecture/correlation-contract.md`; `shop/server/observability/`; `crm/server/observability/` | Introduction objectives; Lab 1 Task 5; Lab 3 Task 2 through Task 6; Lab 4 Task 3 | Covered |
-| OCTO Drone Shop flow: browse, search, filter, product detail, login, cart, checkout, idempotency, payment state machine, fraud detection, CRM sync | `end-to-end-observability.md`; `shop/README.md`; `site/workshop/lab-01-first-trace.md`; `site/workshop/lab-18-payment-failure-rca-apm.md` | Lab 3 Task 1 and Task 2; Lab 4 Task 1 and Task 2 | Covered |
-| Java payment sidecar: Spring Boot service, OCI APM Java agent, App Servers, Apdex, request rate, CPU, heap, and GC | `README.md`; `services/apm-java-demo/`; `site/workshop/lab-18-payment-failure-rca-apm.md` | Lab 1 Task 4; Lab 3 Task 2 and Task 4 | Covered |
-| Shared ATP data model: products, orders, order items, customers, support tickets, campaigns, leads, shipments, audit logs, invoices, LLMetry rows | `end-to-end-observability.md`; `crm/`; `shop/`; `services/genai-studio/db/` | Lab 4 Task 4; Lab 5 Task 4 | Covered |
-| Invoice SecureFile BLOB, `invoices.pdf_data`, `db.write.invoice_pdf`, scheduled backlog, and manual reconcile evidence | `end-to-end-observability.md`; `site/workshop/lab-17-root-cause-apm-logan.md`; `site/workshop/lab-18-payment-failure-rca-apm.md` | Lab 4 Task 4 | Covered as validation checkpoint |
-| Log Analytics saved searches, dashboards, detection rules, trace-to-log pivots, and security monitoring | `deploy/oci/log_analytics/`; `tools/la-saved-searches/`; `crm/deploy/observability/log-analytics-saved-searches.json`; `site/workshop/lab-02-trace-log-correlation.md`; `site/workshop/lab-06-waf-event-investigation.md` | Lab 2 Task 5 and Task 6; Lab 3 Task 6; Lab 4 Task 3 | Covered |
-| Monitoring custom metrics and alarms: payment success, login failures, checkout idempotency, RUM error rate, HPA, GenAI token and cost metrics | `deploy/oci/ensure_monitoring.sh`; `tools/monitoring-alarms/`; `deploy/oci/monitoring-dashboards/genai-token-cost.json`; `site/workshop/lab-05-metric-and-alarm.md` | Lab 2 Task 4 and Task 6; Lab 4 Task 5; Lab 5 Task 5 | Covered |
-| Security and WAF use cases: edge events, Cloud Guard, auto-remediation, edge-fuzz, container-lab, VM-lab | `deploy/oci/ensure_waf.sh`; `deploy/oci/ensure_cloud_guard*.sh`; `services/auto-remediator/`; `services/edge-fuzz/`; `services/container-lab/`; `services/vm-lab/` | Lab 2 Task 5; Lab 4 Task 3 | Covered |
-| Root-cause flow: APM trace to Log Analytics to Operations Insights to Database Management to Stack Monitoring | `site/workshop/lab-17-root-cause-apm-logan.md`; `site/workshop/lab-10-failed-checkout.md`; `site/workshop/lab-18-payment-failure-rca-apm.md` | Lab 4 Task 2 through Task 6 | Covered |
-| AI Studio and GenAI observability: `octo-genai-studio`, `studio.run_id`, `studio.mode`, `gen_ai.*`, Langfuse, Grafana, token cost, judge scores, RAG lineage | `services/genai-studio/README.md`; `services/genai-studio/app/main.py`; `site/workshop/lab-12-genai-agent-trace.md`; `site/workshop/lab-13-apm-langfuse-grafana-pivot.md`; `site/observability-v2/ai-studio-genai-monitoring.md` | Lab 5 Task 1 through Task 5 | Covered |
-| Original 18-lab OCTO workshop collapsed into the requested five-lab LiveLabs format | `site/workshop/index.md`; `site/workshop/lab-*.md` | Manifest; WORKSHOP-DETAILS; Labs 1-5 | Covered through consolidation |
-| Takeaways: SDK where you own code, APM agent for Java sidecar, Management Agent and native OCI services for database and edge, shared IDs and SQL IDs | `end-to-end-observability.md`; `README.md`; `site/architecture/correlation-contract.md` | Introduction objectives; Lab 3 Task 4; Lab 4 Task 6 | Covered |
+| Requirement | Workshop evidence | Status |
+| --- | --- | --- |
+| Applications running anywhere | Introduction explains portable APM and Log Analytics collection while using OCTO on OKE as the reference deployment. | Covered |
+| OCTO source anchor | Lab 1 clones the OCTO repository; all labs use OCTO paths, endpoints, service names, and correlation fields. | Covered |
+| Five-lab structure | Manifest contains deployment, service connection, tracing, incident investigation, and operationalization labs. | Covered |
+| OCI Log Analytics OKE monitoring | Lab 2 connects OKE through the Kubernetes Monitoring Solution; Lab 4 pivots from an APM pod attribute to Workload, Pod, event, metric, and log evidence. | Covered |
+| OCI Log Analytics Security Monitoring | Lab 2 configures VCN, Compute when applicable, and OCI Audit inputs; Lab 4 uses the three Security solution views to assess application context. | Covered |
+| OCI APM tracing | Lab 3 creates a known W3C trace, follows a browser checkout across Python, Java, and Oracle Database, and pivots to Log Analytics. | Covered |
+| Oracle Database bottleneck diagnosis | Lab 4 invokes the current read-only OCTO N+1 endpoint, identifies repeated database spans and SQL IDs in APM, and continues through Ops Insights and Database Management. | Covered |
+| OCI Monitoring | Lab 2 verifies `octo_apm_demo` metrics and alarms; Lab 5 validates the database-latency alarm and Notifications destination. | Covered |
+| OCI Log Analytics | Labs 2 through 4 use Kubernetes, Security, application, WAF, Audit, and trace-correlated log evidence. | Covered |
+| OCI Events | Lab 5 creates or inspects a Resource Manager Create Job End rule, triggers a Plan job, and verifies match and delivery metrics. | Covered |
+| OCI Application Performance Monitoring | Labs 2 through 4 use the OCTO domain, saved queries, flame charts, service spans, Kubernetes attributes, and database spans. | Covered |
+| OCI Database Management | Labs 2 and 4 enable the target, open Performance Hub, and inspect SQL, execution, wait, and plan evidence. | Covered |
+| OCI Ops Insights | Labs 2 and 4 verify DB Performance and SQL trend evidence for the OCTO database. | Covered |
+| OCI Resource Analytics | Labs 2 and 5 verify a populated instance and query APM, OKE, Database Management, Ops Insights, and available Events views. | Covered |
+| Correlation contract | Labs 1, 3, and 4 use `trace_id`, `span_id`, `oracleApmTraceId`, `oracleApmSpanId`, `request_id`, `workflow_id`, pod identity, and Oracle SQL ID. | Covered |
+| Alert and automation path | Lab 5 distinguishes Monitoring alarms from Events rules while using one confirmed Notifications destination. | Covered |
 
-## Asset Gaps
+## Source Corrections
 
-- The source markdown references five screenshot files under `screenshots/`.
-- No local screenshot files were present in the workspace during validation.
-- The LiveLab covers the screenshot content as textual checkpoints and avoids broken image links.
+1. The OKE Resource Manager stack is the primary full-workshop deployment. A Compute-only deployment cannot complete the OKE use case by itself.
+2. The official Oracle product name is **Kubernetes Monitoring Solution**. OKE is the reference cluster in this workshop.
+3. The Security Monitoring Solution uses the Virtual Cloud Network, Compute, and OCI Audit views. OCTO WAF records remain application-edge evidence.
+4. The current OCTO code exposes `/api/dashboard/n-plus-one` for a read-only database workload. The workshop does not use the stale `?slow=true` source example.
+5. APM identifies the request and SQL bridge. Ops Insights and Database Management perform the deeper database trend and execution diagnosis.
+6. Resource Analytics supplies resource inventory and relationship context, not live application telemetry.
+
+## Prepared-Tenancy Requirements
+
+- OKE and OCTO workloads are running.
+- The tenancy sends data to the Log Analytics Kubernetes and Security solutions.
+- The tenancy enables APM, Monitoring, Database Management, and Ops Insights.
+- At least one subscriber has confirmed the Notifications subscription.
+- Resource Analytics has populated the selected regions, and learners can query its Autonomous AI Database.
 
 ## Result
 
-The five-lab workshop now anchors on `adibirzu/octo-observability-demo` and covers the source article. It maps the OCTO repository quickstart, service topology, correlation contract, OCI observability assets, and workshop flow into LiveLabs format. The only remaining gap is visual asset availability for the source screenshots.
-
-## Documentation Expansion
-
-Labs 2 through 5 include OCI documentation-backed checkpoints and Learn More links for Logging, Log Analytics, OKE, APM, OpenTelemetry, RUM, Monitoring, Service Connector Hub, WAF, Stack Monitoring, Operations Insights, Database Management, Management Agent, Cloud Guard, Data Safe, Notifications, and Generative AI Agents.
+The refocused five-lab workshop covers all four use cases and all seven focused services. Supporting services appear only where they enable routing or delivery.
 
 ## Acknowledgements
 
-* **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 19, 2026
+* **Coverage Reviewed By** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
+* **Last Updated By/Date** - Royce Fu, July 1, 2026

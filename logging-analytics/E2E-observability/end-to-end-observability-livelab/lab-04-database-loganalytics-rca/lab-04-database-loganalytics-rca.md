@@ -1,275 +1,318 @@
-# Lab 4: Investigate Application, Log, and Database Signals
+# Lab 4: Investigate Application and Database Incidents
 
 ## Introduction
 
-In this lab, you investigate a slow or failed application path by combining APM traces, Log Analytics application rows, Log Analytics security monitoring rows, Monitoring charts, WAF evidence, Operations Insights, and Database Management.
+In this lab, you run three investigations against OCTO APM Demo. You will connect an APM trace to its OKE pod, assess application security activity with the Log Analytics Security Monitoring Solution, and diagnose a database-bound N+1 query pattern with APM, Ops Insights, and Database Management.
 
-Estimated Time: 75 minutes
+Estimated Time: 100 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Trigger or select an application symptom.
-- Build an evidence chain from APM to Log Analytics.
-- Add Log Analytics security monitoring evidence when the symptom touches WAF, OWASP, or suspicious requests.
-- Use SQL identifiers to continue the investigation in Operations Insights and Database Management.
-- Validate database persistence evidence, including orders, audit logs, and invoice BLOB spans.
-- Classify whether the issue is application, edge, database, infrastructure, or expected business behavior.
-- Use OCI documentation concepts to separate trace, log, metric, SQL, security, and alarm evidence.
+- Locate the OKE workload and pod that served an application request.
+- Use Log Analytics Kubernetes views, events, metrics, and logs to assess pod health.
+- Use the Security Monitoring Solution to add VCN, Compute, and OCI Audit context.
+- Generate a controlled, read-only N+1 workload in OCTO.
+- Identify repeated Oracle Database spans and SQL IDs in APM.
+- Compare application evidence with Ops Insights and Database Management.
+- Write one evidence-based root-cause summary.
 
-## Task 1: Select a Symptom to Investigate
+## Task 1: Prepare the Investigation Window
 
-1. Open the Enterprise CRM chaos or simulation page if it is available.
+1. Confirm that the seven-service baseline from Lab 2 remains ready.
 
-    ```text
-    https://admin.${DNS_DOMAIN}/admin/chaos
+2. Open the Drone Shop and generate one normal product request.
+
+    ```bash
+    curl -sS "https://drones.${DNS_DOMAIN}/api/products" | jq '.[0]'
     ```
 
-2. Generate a short, controlled application load or select a recent slow checkout, failed checkout, paid order, payment decline, invoice generation, CRM synchronization event, or chaos run.
+3. Record a UTC start time for the investigations.
 
-3. Record the symptom details:
-
-    - affected URL or route
-    - approximate timestamp
-    - user-visible error or latency
-    - order or customer identifier when available
-    - payment result when available
-    - service name
-    - `run_id` or `chaos_id` when available
-
-4. Keep the test short. The goal is observability validation, not load testing.
-
-## Task 2: Build the APM Evidence
-
-1. Open the APM Trace Explorer for the same time range.
-
-2. Filter for traces with high duration, error status, or the affected service.
-
-3. Open the strongest candidate trace.
-
-4. Identify the span where latency or failure first appears.
-
-5. Record these fields from the span:
-
-    - service name
-    - operation name
-    - duration
-    - status code or error type
-    - trace ID
-    - span ID
-    - SQL ID when present
-    - payment or fraud decision when present
-
-6. If the span shows a declined payment with no fault, classify it as a business outcome before treating it as an incident.
-
-7. Decide whether the trace points first to application code, a downstream service, WAF or edge routing, database activity, or an external dependency.
-
-8. Create the first RCA hypothesis.
-
-    ```text
-    Hypothesis:
-    Supporting span:
-    Missing evidence:
-    Next service to inspect:
+    ```bash
+    date -u '+%Y-%m-%dT%H:%M:%SZ'
     ```
 
-## Task 3: Add Log Analytics Application and Security Monitoring Evidence
+4. Set APM, Log Analytics, Monitoring, Ops Insights, and Database Management to the same time range.
 
-1. Open Log Analytics for the same time range.
+5. Keep the trace ID and SQL ID captured in Lab 3 available.
 
-2. Search by the trace ID or `oracleApmTraceId`.
+## Task 2: Investigate the OKE Workload
 
-    ```text
-    oracleApmTraceId = '<trace-id>'
-    ```
+1. In APM, open the Lab 3 checkout trace.
 
-3. Expand the matching rows and compare the log timestamps to the APM waterfall.
-
-4. Search for warnings and errors for the affected services.
+2. Select the root application span and copy these Kubernetes attributes when present:
 
     ```text
-    ('Log Source' in ('OCTO Drone Shop', 'Enterprise CRM Portal')) and (Severity in ('ERROR', 'WARN') or Message contains 'error')
+    k8s.cluster.name:
+    k8s.namespace.name:
+    k8s.pod.name:
+    k8s.node.name:
+    service.name:
+    TraceId:
     ```
 
-5. Search WAF or edge logs when the trace suggests request validation, status code changes, or blocked traffic.
+3. In Log Analytics, open **Solutions**, **Kubernetes**, and the OCTO cluster.
+
+4. In the **Workload** view, filter to the namespace and application service from the APM span.
+
+5. Confirm the workload status and inspect:
+
+    - desired and available replicas
+    - warning events
+    - CPU and memory
+    - network activity
+    - pods grouped by workload
+
+6. Open the **Pod** view and select the pod copied from APM.
+
+7. Check pod status, restart count, node, container image, and recent Kubernetes events.
+
+8. Select **View logs** for the pod. Search for the APM trace ID.
 
     ```text
-    'Log Source' contains 'WAF' and ClientRequestHost in ('drones.${DNS_DOMAIN}', 'admin.${DNS_DOMAIN}')
+    'Trace ID' = '<TRACE_ID>' or oracleApmTraceId = '<TRACE_ID>'
     ```
 
-6. Search security monitoring records when the symptom looks suspicious or policy-driven.
+9. If the OCTO saved search exists, run it for the same trace.
 
     ```text
-    Message contains 'OWASP' or Message contains 'MITRE' or Message contains 'x-oci-waf' or Message contains 'blocked'
+    oke-kubernetes-trace-correlation
     ```
 
-7. Open a related Log Analytics dashboard or saved search for security monitoring. Confirm whether a detection, WAF event, or security row exists for the same time window.
-
-8. Record whether the logs support, contradict, or narrow the APM hypothesis.
-
-9. Record the security monitoring result separately.
+10. Decide whether the pod evidence supports a runtime problem.
 
     ```text
-    Security source:
-    Detection or dashboard:
-    WAF action or score:
-    Related trace ID:
-    Interpretation:
+    APM service and pod:
+    Kubernetes workload status:
+    Pod restarts or warnings:
+    Resource pressure:
+    Matching log record:
+    Runtime problem found: Yes / No
     ```
 
-10. Confirm the log-routing path for the related records.
+## Task 3: Investigate Security Context
+
+1. Send one harmless request that resembles an input-validation probe. Use only the workshop endpoint.
+
+    ```bash
+    curl -I "https://drones.${DNS_DOMAIN}/?q=%3Cscript%3Eworkshop-test%3C%2Fscript%3E"
+    ```
+
+2. Record the UTC time, response status, and any request identifier returned by the edge.
+
+3. In Log Analytics, search OCTO WAF and application-security records for that time.
 
     ```text
-    OCI Logging log group:
-    Service Connector Hub connector:
-    Log Analytics source:
-    Parser:
-    Saved search or dashboard:
+    ('Log Source' contains 'WAF' or Message contains 'workshop-test')
+    and (ClientRequestHost = 'drones.${DNS_DOMAIN}' or Message contains 'octo')
     ```
 
-## Task 4: Investigate Database Impact and Invoice Persistence
+4. Open a matching row and record the WAF action, source IP, host, path, request ID, and trace ID when available.
 
-1. If the APM trace includes a SQL ID, copy it.
+5. Open **Solutions**, **Security**, and review the **Virtual Cloud Network** view for the same time range.
 
-2. Open **Operations Insights** for the Autonomous Database.
+6. Inspect denied connections, target ports, source IPs, and threat-IP context. Determine whether the application request aligns with wider network activity.
 
-3. Use the SQL ID or time range to inspect SQL activity, CPU, waits, and execution trend.
+7. Review the **Compute** view when the OCTO environment includes monitored Compute hosts. Check failed logins and privilege-escalation indicators.
 
-4. Open **Database Management** for the same database.
+8. Review the **OCI Audit** view. Check for unexpected API calls or resource changes around the incident.
 
-5. Review sessions, waits, SQL activity, and active performance data around the symptom timestamp.
+9. Keep the evidence types separate:
 
-6. If no SQL ID appears in the trace, use the application timestamp and database service name to search by time range instead.
+    - OCTO WAF and application-security logs describe the application edge.
+    - The Security Monitoring Solution adds VCN, host, and control-plane context.
 
-7. Decide whether the database evidence indicates:
-
-    - a slow SQL statement
-    - a blocking or waiting session
-    - resource pressure
-    - no database contribution
-
-8. Confirm that the main application tables carry correlation evidence when your environment exposes them.
-
-    | Table | Evidence to check |
-    | --- | --- |
-    | `products` | catalog item details such as SKU, category, price, and stock. |
-    | `orders` | `payment_status`, `payment_gateway_request_id`, idempotency key, and `correlation_id`. |
-    | `order_items` | line items for the order. |
-    | `customers`, `support_tickets`, `campaigns`, `leads`, `shipments` | CRM-side records tied to the user or order. |
-    | `audit_logs` | `trace_id` for privileged or security-relevant activity. |
-    | `invoices` | PDF metadata and BLOB storage when the order reaches paid status. |
-    | `llmetry_events` | assistant session, prompt hash, response hash, token, and trace evidence when AI Studio runs. |
-
-9. If the order generated an invoice, search the APM trace for the invoice persistence span.
+10. Record the security conclusion.
 
     ```text
-    db.write.invoice_pdf
+    Application-edge evidence:
+    VCN evidence:
+    Compute evidence or not applicable:
+    OCI Audit evidence:
+    Broader security incident found: Yes / No
     ```
 
-10. Confirm that the invoice path proves user-to-database coverage:
+## Task 4: Generate a Read-Only Database Workload
 
-    - a browser or API action caused the order state change.
-    - CRM generated a PDF with application code.
-    - Oracle ATP stored the PDF bytes in the `invoices.pdf_data` SecureFile BLOB column.
-    - the BLOB write appears on the same trace or same correlated investigation timeline.
+1. Confirm that this is a workshop deployment. Do not run the workload against a production endpoint.
 
-11. If your environment has historical invoice backlog handling enabled, verify that the scheduled job or manual reconcile endpoint also emits trace or log evidence.
+2. Create a known trace ID for one N+1 request.
+
+    ```bash
+    DB_TRACEPARENT="00-$(openssl rand -hex 16)-$(openssl rand -hex 8)-01"
+    DB_TRACE_ID="$(printf '%s' "${DB_TRACEPARENT}" | cut -d- -f2)"
+    printf 'database trace id: %s\n' "${DB_TRACE_ID}"
+    ```
+
+3. Send one traced request to the OCTO N+1 demonstration endpoint.
+
+    ```bash
+    curl -sS \
+      -H "traceparent: ${DB_TRACEPARENT}" \
+      -H "X-Workflow-Id: livelab-db-bottleneck" \
+      "https://drones.${DNS_DOMAIN}/api/dashboard/n-plus-one" \
+      | jq '{pattern, orders, query_count}'
+    ```
+
+4. Generate a short read-only workload so the SQL pattern is visible in database activity. The endpoint performs one order query followed by one item query per order.
+
+    ```bash
+    for run in {1..12}; do
+      curl -sS \
+        -H "X-Workflow-Id: livelab-db-bottleneck" \
+        "https://drones.${DNS_DOMAIN}/api/dashboard/n-plus-one" \
+        >/dev/null
+    done
+    ```
+
+5. Record the end time and the query count returned by the traced request.
+
+    ```bash
+    date -u '+%Y-%m-%dT%H:%M:%SZ'
+    ```
+
+6. The workload does not update application data. It creates repeated SELECT activity that exposes the N+1 access pattern.
+
+## Task 5: Diagnose the Database-Bound Path in APM
+
+1. Open APM Trace Explorer and search for the known database trace.
 
     ```text
-    invoice reconcile
-    invoice backlog
-    db.write.invoice_pdf
+    TraceId = '<DB_TRACE_ID>'
     ```
 
-12. Record the database service conclusion.
+2. Open the trace and select the `dashboard.n_plus_one` span.
+
+3. Count the database query spans beneath it. Compare the span count with `query_count` from Task 4.
+
+4. Identify the repeated order-item query and copy:
+
+    ```text
+    OperationName:
+    DbStatement:
+    DbOracleSqlId:
+    SpanDuration:
+    Executions visible in trace:
+    ```
+
+5. Run the OCTO saved query when it is available.
+
+    ```text
+    OCTO APM - DB slow spans
+    ```
+
+6. If the saved query does not include short repeated spans, keep the exact-trace view. An N+1 problem can be expensive because of execution count even when each SQL call is individually fast.
+
+7. Pivot to Log Analytics with the database trace ID.
+
+    ```text
+    'Trace ID' = '<DB_TRACE_ID>' or oracleApmTraceId = '<DB_TRACE_ID>'
+    ```
+
+8. Find the `N+1 query demo executed` log record and compare its query count with the trace.
+
+9. State the application-level hypothesis:
+
+    ```text
+    One request loads the order list, then issues one item query per order.
+    The repeated database round trips increase total request time and database work.
+    ```
+
+## Task 6: Confirm Database Impact
+
+1. Open **Ops Insights**, **Database Insights**, and **DB Performance**.
+
+2. Select the OCTO Autonomous Database and the Task 4 time range.
+
+3. Review:
+
+    - Top Activity and average active sessions
+    - CPU insight
+    - degrading SQL
+    - high wait time
+    - Top SQL by activity or elapsed time
+
+4. Open SQL Insights or SQL Warehouse and filter by the Oracle SQL ID copied from APM.
+
+5. Record whether the SQL pattern is new, recurrent, or too small to rise above the current database workload.
+
+6. Open **Database Management**, select the OCTO managed database, and open **Performance Hub**.
+
+7. Use Top Activity or Top SQL for the Task 4 window. Search for the same SQL ID.
+
+8. Review the available execution evidence:
 
     ```text
     SQL ID:
-    Operations Insights trend:
-    Database Management session or wait:
-    Stack Monitoring status:
-    Invoice evidence:
+    Executions:
+    Elapsed time:
+    CPU time:
+    Buffer gets:
+    Physical reads:
+    Dominant wait class or event:
+    Plan hash value:
     ```
 
-## Task 5: Add Metrics, Alarms, and Notification Context
+9. Open the actual SQL detail or execution plan when available. Prefer runtime statistics over a standalone estimated plan.
 
-1. Open **Monitoring** for the same compartment and time range.
+10. Do not assume that a full table scan or high wait count is the root cause. Compare elapsed time, executions, waits, and actual rows before recommending a change.
 
-2. Query metrics that match the symptom. Start with these categories:
+11. Some historical, ASH, AWR, SQL Monitoring, or tuning views depend on database type, collection time, service entitlement, and management-pack access. Use only the capabilities enabled for the workshop tenancy.
 
-    - OKE node or pod CPU and memory.
-    - load balancer response time and backend health.
-    - database CPU, storage, sessions, or waits.
-    - application custom metrics such as payment success rate or login failures.
-    - GenAI or AI Studio metrics if the symptom involves Lab 5 activity.
+12. Compare the services:
 
-3. Record the metric namespace, metric name, dimensions, statistic, interval, and time range.
+    | Service | Question answered |
+    | --- | --- |
+    | OCI APM | Which request and application operation generated the SQL calls? |
+    | Log Analytics | What did the application report for that trace and workload? |
+    | Ops Insights | Is the database or SQL trend new, degrading, or persistent? |
+    | Database Management | What SQL, execution, wait, and plan evidence exists on the managed database? |
 
-4. Check whether an alarm fired during the symptom.
+## Task 7: Verify Recovery and Write the RCA
 
-5. If an alarm exists, record:
+1. The controlled workload ends when the loop completes. Wait two minutes.
 
-    ```text
-    Alarm name:
-    Metric namespace:
-    MQL expression:
-    Severity:
-    Destination topic:
-    Current state:
+2. Send one normal product request.
+
+    ```bash
+    curl -sS "https://drones.${DNS_DOMAIN}/api/products" >/dev/null
     ```
 
-6. If no alarm exists, draft the alarm that would have detected the symptom. Do not create it unless your instructor asks you to.
+3. In APM, compare the normal request with the N+1 trace. Confirm that the normal route has fewer database spans.
 
-## Task 6: Write the RCA Summary
-
-1. Write a short RCA summary with the evidence you collected.
+4. Write the root-cause statement.
 
     ```text
     Symptom:
-    Time range:
-    Affected service or route:
-    APM evidence:
-    Log Analytics evidence:
-    WAF or edge evidence:
-    Database evidence:
-    Invoice or BLOB evidence:
-    Metric and alarm evidence:
-    Most likely cause:
-    Next action:
+    Affected service and operation:
+    APM trace and SQL evidence:
+    OKE evidence:
+    Security evidence:
+    Ops Insights evidence:
+    Database Management evidence:
+    Root cause:
+    Recommended application change:
+    Recovery proof:
     ```
 
-2. Include links to the APM trace, Log Analytics query, Operations Insights page, and Database Management page when your tenancy allows shareable URLs.
+5. A suitable recommendation should address the query pattern, such as eager loading, batching, or one set-based query. Do not propose an index or database parameter change without plan and workload evidence.
 
-3. Classify the issue as one of these categories:
-
-    - application defect
-    - database performance
-    - edge or WAF behavior
-    - infrastructure or Kubernetes capacity
-    - expected business decline
-    - inconclusive
-
-4. Review the summary with your instructor or team before moving to the agent monitoring lab.
+6. Save links to the APM trace, Log Analytics query, Ops Insights page, and Database Management page.
 
 ## Learn More
 
-- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
-- [OCTO APM Demo root-cause lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-17-root-cause-apm-logan.md)
-- [OCTO APM Demo failed-payment lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-18-payment-failure-rca-apm.md)
-- [OCTO APM Demo chaos drill](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-09-chaos-drill.md)
-- [OCI Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
-- [OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm)
-- [OCI Log Analytics](https://docs.oracle.com/en-us/iaas/log-analytics/)
-- [OCI Monitoring](https://docs.oracle.com/en-us/iaas/Content/Monitoring/home.htm)
-- [OCI Service Connector Hub](https://docs.oracle.com/en-us/iaas/Content/connector-hub/home.htm)
-- [OCI Web Application Firewall](https://docs.oracle.com/en-us/iaas/Content/WAF/Concepts/overview.htm)
-- [OCI Operations Insights](https://docs.oracle.com/en-us/iaas/operations-insights/)
+- [OCTO slow SQL drill-down](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-03-slow-sql-drill-down.md)
+- [OCTO root-cause workflow](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-17-root-cause-apm-logan.md)
+- [OCTO N+1 endpoint implementation](https://github.com/adibirzu/octo-observability-demo/blob/main/shop/server/modules/dashboard.py)
+- [OCI APM Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)
+- [Log Analytics Kubernetes Monitoring Solution](https://docs.oracle.com/en-us/iaas/log-analytics/doc/kubernetes-solution.html)
+- [Log Analytics Security Monitoring Solution](https://docs.oracle.com/en-us/iaas/log-analytics/doc/security-monitoring-solution.html)
+- [Analyze database performance in Ops Insights](https://docs.oracle.com/en-us/iaas/operations-insights/doc/analyze-database-performance.html)
 - [OCI Database Management](https://docs.oracle.com/en-us/iaas/database-management/)
-- [OCI Stack Monitoring](https://docs.oracle.com/en-us/iaas/stack-monitoring/)
-- [OCI Notifications](https://docs.oracle.com/en-us/iaas/Content/Notification/home.htm)
 
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 19, 2026
+* **Last Updated By/Date** - Royce Fu, July 1, 2026

@@ -1,278 +1,239 @@
-# Lab 3: Observe the E-Commerce Flow End to End
+# Lab 3: Trace a Customer Transaction End to End
 
 ## Introduction
 
-In this lab, you generate an e-commerce transaction and follow it through OCI APM, RUM, synthetic monitoring, logs, and service spans.
+In this lab, you create a trace with a known W3C trace ID, inspect it in OCI APM, and find the matching application logs. You will then follow a browser checkout across the Drone Shop, Java payment sidecar, and Oracle Database.
 
-The main application monitoring use case is OCI Application Performance Monitoring tracing.
-
-Estimated Time: 75 minutes
+Estimated Time: 65 minutes
 
 ### Objectives
 
 In this lab, you will:
 
-- Generate Drone Shop and CRM activity.
-- Validate OCI Application Performance Monitoring tracing.
-- Confirm that service spans carry useful identity and correlation attributes from the OCTO correlation contract.
-- Validate direct OpenTelemetry SDK, OCI APM Java agent, and native collection signals.
-- Pivot from the trace to correlated application logs.
-- Use OCI APM documentation concepts to validate traces, spans, RUM, synthetic monitors, and OpenTelemetry ingestion.
+- Inject a valid W3C `traceparent` header into an OCTO request.
+- Find the exact trace in OCI APM Trace Explorer.
+- Read service, Kubernetes, HTTP, Java, and database span attributes.
+- Observe a customer checkout across multiple services.
+- Pivot from APM to Log Analytics with `oracleApmTraceId`.
+- Validate the OCTO correlation contract.
 
-## Task 1: Generate E-Commerce Traffic
+## Task 1: Generate a Request with a Known Trace ID
 
-1. Open the OCTO Drone Shop.
+1. From the OCTO repository root, create a W3C trace header.
+
+    ```bash
+    TRACEPARENT="00-$(openssl rand -hex 16)-$(openssl rand -hex 8)-01"
+    TRACE_ID="$(printf '%s' "${TRACEPARENT}" | cut -d- -f2)"
+    printf 'traceparent=%s\ntrace_id=%s\n' "${TRACEPARENT}" "${TRACE_ID}"
+    ```
+
+2. Send the trace header to the Drone Shop.
+
+    ```bash
+    curl -sS \
+      -H "traceparent: ${TRACEPARENT}" \
+      -H "X-Workflow-Id: livelab-tracing" \
+      "https://drones.${DNS_DOMAIN}/api/products" | jq '.[0]'
+    ```
+
+3. Confirm that the response contains a product and that `TRACE_ID` contains 32 hexadecimal characters.
+
+4. Record the request time, trace ID, route, and response status.
+
+    ```text
+    Request time:
+    Trace ID:
+    Route: GET /api/products
+    Status:
+    ```
+
+## Task 2: Inspect the Trace in OCI APM
+
+1. Open **Observability & Management**, **Application Performance Monitoring**, and **Trace Explorer**.
+
+2. Select the OCTO APM domain.
+
+3. Search for the trace ID.
+
+    ```text
+    TraceId = '<TRACE_ID>'
+    ```
+
+4. Allow one to two minutes for first-time ingestion, then run the query again if needed.
+
+5. Open the matched trace and inspect the flame chart.
+
+6. Identify the root FastAPI span and its database children.
+
+7. Record the root-span evidence:
+
+    ```text
+    ServiceName:
+    OperationName:
+    TraceDuration:
+    StatusCode:
+    service.namespace:
+    k8s.namespace.name:
+    k8s.pod.name:
+    ```
+
+8. Select a database child span and record the attributes that exist in your deployment:
+
+    ```text
+    db.system:
+    db.statement or DbStatement:
+    db.oracle.sql_id or DbOracleSqlId:
+    db.target:
+    SpanDuration:
+    ```
+
+9. Confirm that the trace shows where time was spent. A wide span contributes more wall-clock time than a narrow sibling.
+
+## Task 3: Trace a Browser Checkout
+
+1. Open the Drone Shop.
 
     ```text
     https://drones.${DNS_DOMAIN}
     ```
 
-2. Browse the catalog, search, and filter by category.
+2. Sign in with the workshop account, open a product, add it to the cart, and complete a simulated checkout.
 
-3. Open a product detail page, add the item to the cart, and complete a checkout or order submission flow.
+3. Record the checkout time, order identifier, and browser session details shown by the application.
 
-4. Open the Enterprise CRM Portal.
+4. In APM, open the OCTO saved query for the checkout flow when it is available.
 
     ```text
-    https://admin.${DNS_DOMAIN}
+    checkout-end-to-end
     ```
 
-5. Find the order or customer activity created by the Drone Shop workflow.
+5. Otherwise, search recent traces for the OKE service and checkout operation.
 
-6. If you want a deterministic trace ID, generate one request with an explicit W3C `traceparent` header.
+    ```text
+    ServiceName = 'octo-drone-shop-oke' and OperationName = 'shop.checkout'
+    ```
+
+6. Open the checkout trace and find the stages available in your deployment:
+
+    - browser or incoming HTTP request
+    - `octo-drone-shop-oke` checkout logic
+    - `octo-java-app-server-oke` payment verification or authorization
+    - Enterprise CRM synchronization
+    - Oracle Database spans for cart, order, payment, or invoice work
+
+7. Select the Java payment span. Confirm the Java agent contributed it without changing the Python application instrumentation.
+
+8. Select a database span and copy its Oracle SQL ID when present.
+
+9. Record the checkout evidence.
+
+    ```text
+    Checkout trace ID:
+    Root service:
+    Java service:
+    Database target:
+    SQL ID:
+    Slowest span:
+    ```
+
+## Task 4: Validate the Correlation Contract
+
+1. Compare the trace and span attributes with the OCTO correlation contract.
+
+2. Confirm the primary identity fields:
+
+    | Field | Purpose |
+    | --- | --- |
+    | `trace_id` | W3C trace identifier shared across the request |
+    | `span_id` | identifier for one operation |
+    | `oracleApmTraceId` | log field that matches the APM trace ID |
+    | `oracleApmSpanId` | log field that matches an APM span |
+    | `request_id` | application request identifier |
+    | `workflow_id` | business-flow identifier |
+    | `DbOracleSqlId` | bridge from an APM database span to Oracle SQL diagnostics |
+
+3. Confirm the service identity:
+
+    ```text
+    service.namespace = octo
+    deployment.environment = production
+    app.runtime = oke
+    ```
+
+4. Confirm that Kubernetes resource attributes identify the pod that served the request.
+
+5. Keep the checkout trace ID and SQL ID for Lab 4.
+
+## Task 5: Pivot from APM to Log Analytics
+
+1. Copy the known trace ID from Task 1.
+
+2. Open **Log Analytics** and set the same time range as APM.
+
+3. Search the direct OKE application source.
+
+    ```text
+    'Log Source' = 'SOC Application Logs' and 'Trace ID' = '<TRACE_ID>'
+    ```
+
+4. If the application record arrived through OCI Logging and Connector Hub, use the unified source instead.
+
+    ```text
+    'Log Source' = 'OCI Unified Schema Logs' and oracleApmTraceId = '<TRACE_ID>'
+    ```
+
+5. Open a matching record and compare:
+
+    - timestamp
+    - service name
+    - route or operation
+    - log level
+    - `oracleApmTraceId`
+    - `oracleApmSpanId`
+    - `workflow_id`
+    - pod name
+
+6. Use the configured drilldown to return to APM, or paste the trace ID into Trace Explorer.
+
+7. Repeat the search with the checkout trace ID when checkout logs are available.
+
+8. Save one APM trace URL and one Log Analytics query URL.
+
+## Task 6: Verify the Tracing Use Case
+
+1. Run the OCTO verifiers for the known trace when your environment provides the required OCI CLI variables.
 
     ```bash
-    TRACEPARENT="00-$(openssl rand -hex 16)-$(openssl rand -hex 8)-01"
-    TRACE_ID=$(echo "$TRACEPARENT" | cut -d- -f2)
-    curl -sS -H "traceparent: $TRACEPARENT" \
-      -H "X-Workflow-Id: livelab-ecommerce-flow" \
-      https://drones.${DNS_DOMAIN}/api/products | jq '.[0]'
-    echo "$TRACE_ID"
+    ./tools/workshop/verify-01.sh "${TRACE_ID}"
+    ./tools/workshop/verify-02.sh "${TRACE_ID}"
     ```
 
-7. Record the approximate timestamp, browser path, order identifier, payment result, trace ID, and idempotency token if the application shows one.
-
-8. If your environment has the sample data from the source article, look for order `227977` and trace `fbd1747c757417b579a8cedf11dae886`.
-
-9. Otherwise, use the order and trace generated by your own run.
-
-## Task 2: Validate OCI Application Performance Monitoring Tracing
-
-1. In the OCI Console, open **Observability & Management**.
-
-2. Open **Application Performance Monitoring** and select the APM domain used by OCTO APM Demo.
-
-3. Open **Trace Explorer**.
-
-4. Filter the time range to the last 15 minutes.
-
-5. Search for one or more services from the e-commerce path. Use the service names shown in your APM domain if they differ.
+2. Confirm the use-case result.
 
     ```text
-    octo-drone-shop
-    octo-drone-shop-oke
-    enterprise-crm-portal
-    enterprise-crm-portal-oke
-    octo-apm-java-demo
+    APM trace found:
+    Database span found:
+    Correlated Log Analytics rows:
+    APM-to-log round trip:
+    Checkout crossed Python, Java, and Oracle Database:
     ```
 
-6. Open a trace that overlaps the order timestamp.
+3. Explain which instrumentation path produced each signal:
 
-7. Confirm that the waterfall contains browser, service, HTTP, integration, Java payment, and database spans.
-
-8. Confirm that the trace demonstrates the APM tracing use case:
-
-    - A browser or RUM signal starts near the same timestamp.
-    - Drone Shop server spans appear for the user action.
-    - CRM or integration spans appear when the order sync path runs.
-    - the Spring Boot payment sidecar appears when checkout calls the Java path.
-    - database spans appear when the request touches Autonomous Database.
-    - errors or long-running spans stand out in the waterfall.
-    - a declined payment can show `merchant_authorization_result = declined` with `is-fault = false`.
-
-9. Record the trace URL, service names, span count, total duration, and any error or slow span.
-
-10. Open the APM service topology view if it is available.
-
-11. Confirm that service names and edges match the observed trace path.
-
-12. Open the span details panel and record the most useful span attributes for troubleshooting.
-
-    | Attribute type | Examples to inspect |
-    | --- | --- |
-    | HTTP | method, route, URL path, status code, user agent. |
-    | service identity | service name, namespace, instance, deployment environment. |
-    | payment workflow | payment step, gateway request ID, fraud or authorization result. |
-    | database | database system, statement, target, SQL ID. |
-    | error | error type, exception, fault flag, status. |
-
-13. Confirm whether the trace shows a performance problem, a technical error, or an expected business outcome.
-
-## Task 3: Inspect the Correlation Contract
-
-1. In the trace details, inspect the top-level service span.
-
-2. Confirm that the trace or span includes service identity attributes such as:
-
-    - `service.name`.
-    - `service.namespace`.
-    - `deployment.environment`.
-    - `http.method`.
-    - `http.route`.
-    - `http.status_code`.
-
-3. Inspect downstream spans for CRM and database calls.
-
-4. Confirm that HTTP calls preserve W3C trace context through `traceparent` or equivalent trace propagation.
-
-5. Inspect database spans and record any SQL identifier field that appears, such as:
-
-    - `db.oracle.sql_id`.
-    - `DbOracleSqlId`.
-    - `sql_id`.
-
-6. Record the trace ID, span ID, `oracleApmTraceId`, `oracleApmSpanId`, and at least one SQL ID if present.
-
-7. Check for application security context on validation spans when present.
-
-8. Record any WAF score, request validation result, OWASP category, MITRE technique, or client IP.
-
-9. Record how the trace propagation works in this flow.
-
-    ```text
-    browser or synthetic request -> Drone Shop span -> CRM or Java span -> ATP span
-    shared trace ID:
-    request ID:
-    workflow ID:
-    propagation header:
-    strongest correlation field:
-    ```
-
-## Task 4: Validate the Three Instrumentation Paths
-
-1. Validate direct OpenTelemetry SDK instrumentation for services you own.
-
-    - FastAPI service spans appear for Drone Shop, CRM, or GenAI Studio.
-    - SQLAlchemy or database spans show database work.
-    - HTTP client spans show outbound service calls.
-    - resource attributes include `service.name`, `service.namespace=octo`, `deployment.environment`, `app.runtime`, and `db.target=octo-atp`.
-
-2. Validate the OCI APM Java agent path when the Java payment service exists.
-
-    - The Java payment span joins the same trace as the Python or browser span.
-    - The inbound `traceparent` produced a parent-child trace relationship.
-    - The payment service appears in the APM **App Servers** view.
-    - JVM telemetry appears for Apdex, request rate, CPU load, heap, or GC time.
-
-3. Validate OCI Management Agent or native OCI collection for services you do not instrument directly.
-
-    - WAF or load balancer logs appear outside application code.
-    - database activity appears through Operations Insights or Database Management.
-    - Stack Monitoring shows ATP or host health when enabled.
-
-4. Validate OpenTelemetry ingestion details for the services you own.
-
-    - Confirm that the service exports spans to an APM data upload endpoint.
-    - Confirm whether it uses a public or private data key.
-    - Confirm whether the endpoint follows the OpenTelemetry trace endpoint shape.
-    - Confirm whether metrics use the APM OTLP metrics path or native OCI Monitoring.
-    - Confirm that logs stamp `oracleApmTraceId` and `oracleApmSpanId`.
-
-5. Check whether your deployment uses the optional OpenTelemetry Collector.
-
-    ```text
-    services/otel-gateway
-    ```
-
-6. If your deployment enables the collector, record its endpoint and any sampling or redaction policy.
-
-7. If your deployment disables the collector, record that the default path is app to APM.
-
-8. Confirm that the Java service contributes both trace and App Servers evidence when you enable the APM Java agent.
-
-    ```text
-    Java service name:
-    App Servers entry:
-    Apdex:
-    request rate:
-    heap or GC signal:
-    ```
-
-## Task 5: Validate RUM and Synthetic Monitoring Context
-
-1. Open **Real User Monitoring** in the APM domain.
-
-2. Filter the time range to the same user action.
-
-3. Confirm whether the browser page load, user session, geography, or page timing aligns with the trace timestamp.
-
-4. Open **Synthetic Monitoring** in the same APM area.
-
-5. Confirm whether a synthetic monitor exists for the application endpoint.
-
-6. Compare the synthetic result with the user-generated trace.
-
-    | Signal | Evidence |
-    | --- | --- |
-    | RUM | browser timing and user session. |
-    | Synthetic monitor | availability and endpoint latency. |
-    | Trace Explorer | service waterfall and span attributes. |
-
-7. Record whether the symptom came from a real user, a synthetic probe, or both.
-
-## Task 6: Pivot to Logs
-
-1. Copy the trace ID from the APM trace.
-
-2. Open **Log Analytics** and start a search over the last 15 minutes.
-
-3. Search for the APM trace ID in application logs. Use the field name present in your log records.
-
-    ```text
-    oracleApmTraceId = '<trace-id>'
-    ```
-
-4. If your logs normalize the trace ID field differently, search for the raw trace ID string.
-
-    ```text
-    '<trace-id>'
-    ```
-
-5. Confirm that matching log rows include useful fields such as:
-
-    - service name.
-    - operation or route.
-    - status code.
-    - order or customer identifier.
-    - error message when present.
-    - span ID or trace ID.
-
-6. Save one APM trace URL and one Log Analytics search URL for your lab notes.
-
-7. Write the APM tracing use-case result.
-
-    ```text
-    APM trace:
-    Services observed:
-    Slowest span:
-    Error span:
-    Trace ID:
-    Correlated log search:
-    ```
+    - OpenTelemetry SDK and auto-instrumentation for Python services.
+    - OCI APM Java agent or Java OpenTelemetry instrumentation for the payment sidecar.
+    - Native OCI services, Connector Hub, and Log Analytics collection for logs.
 
 ## Learn More
 
-- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
-- [OCTO APM Demo workshop Lab 01](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-01-first-trace.md)
-- [OCTO APM Demo trace-log correlation lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-02-trace-log-correlation.md)
-- [OCTO APM Demo correlation contract](https://github.com/adibirzu/octo-observability-demo/blob/main/site/architecture/correlation-contract.md)
-- [OCI Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
-- [Configure OpenTelemetry and other tracers for OCI APM](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-open-source-tracing-systems.html)
-- [APM Real User Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-real-user-monitoring.html)
-- [OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm)
+- [OCTO first-trace lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-01-first-trace.md)
+- [OCTO trace-to-log lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-02-trace-log-correlation.md)
+- [OCTO correlation contract](https://github.com/adibirzu/octo-observability-demo/blob/main/site/architecture/correlation-contract.md)
+- [OCI APM Trace Explorer](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/use-trace-explorer.html)
+- [Trace and span attributes](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/trace-and-span-attributes.html)
 - [W3C Trace Context](https://www.w3.org/TR/trace-context/)
 
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 19, 2026
+* **Last Updated By/Date** - Royce Fu, July 1, 2026

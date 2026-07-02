@@ -1,5 +1,5 @@
 {
-    "workshoptitle": "End-to-End Observability on OCI with OCTO APM Demo",
+    "workshoptitle": "End-to-End Application Observability on OCI with OCTO APM Demo",
     "help": "livelabs-help-oci_us@oracle.com",
     "tutorials": [
         {
@@ -15,28 +15,28 @@
             "filename": "../../lab-01-quickstart-deploy/lab-01-quickstart-deploy.md"
         },
         {
-            "title": "Enable OCI Operations and Management Services",
-            "description": "Enable and verify OCI APM, RUM, Synthetic Monitoring, Log Analytics OKE Monitoring, Log Analytics Security Monitoring, Monitoring, and database observability.",
+            "title": "Connect OCI Observability Services",
+            "description": "Connect OCI APM, Monitoring, Log Analytics Kubernetes and Security solutions, Database Management, Ops Insights, Events, and Resource Analytics.",
             "type": "livelabs",
             "filename": "../../lab-02-enable-om-services/lab-02-enable-om-services.md"
         },
         {
-            "title": "Observe the E-Commerce Flow End to End",
-            "description": "Generate Drone Shop and CRM traffic, then validate OCI Application Performance Monitoring tracing and correlated logs.",
+            "title": "Trace a Customer Transaction End to End",
+            "description": "Generate a deterministic OCTO request, inspect its distributed trace, and pivot to correlated Log Analytics records.",
             "type": "livelabs",
             "filename": "../../lab-03-observe-ecommerce-flow/lab-03-observe-ecommerce-flow.md"
         },
         {
-            "title": "Investigate Application, Log, and Database Signals",
-            "description": "Run a correlated RCA across APM traces, Log Analytics application and security monitoring, Monitoring, WAF, Operations Insights, and Database Management.",
+            "title": "Investigate Application and Database Incidents",
+            "description": "Investigate an OKE workload, security posture, and a database-bound bottleneck with Log Analytics, APM, Ops Insights, and Database Management.",
             "type": "livelabs",
             "filename": "../../lab-04-database-loganalytics-rca/lab-04-database-loganalytics-rca.md"
         },
         {
-            "title": "Monitor Agent Behavior and Detect Anomalies",
-            "description": "Capture agent behavior changes through OCI APM, Log Analytics, token metrics, tool execution, Langfuse, and anomaly indicators.",
+            "title": "Operationalize Monitoring, Events, and Resource Analytics",
+            "description": "Validate alarms, route a Resource Manager event, and query OCI Resource Analytics for OCTO inventory and relationship context.",
             "type": "livelabs",
-            "filename": "../../lab-05-agent-monitoring-anomaly-detection/lab-05-agent-monitoring-anomaly-detection.md"
+            "filename": "../../lab-05-operationalize-observability/lab-05-operationalize-observability.md"
         },
         {
             "title": "Need Help?",
