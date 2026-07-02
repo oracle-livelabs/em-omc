@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you deploy OCTO APM Demo from `adibirzu/octo-observability-demo`. The platform gives the rest of the workshop a live drone retail path that can generate browser telemetry, FastAPI spans, Spring Boot payment spans, structured logs, custom metrics, WAF events, Oracle ATP activity, and AI Studio telemetry.
+In this lab, you deploy OCTO APM Demo from `adibirzu/octo-observability-demo`. The platform gives the rest of the workshop a live drone retail path that produces browser telemetry, FastAPI spans, Spring Boot payment spans, structured logs, custom metrics, Kubernetes state, and Oracle Database activity.
 
 Estimated Time: 70 minutes
 
@@ -12,7 +12,7 @@ In this lab, you will:
 
 - Clone the OCTO APM Demo repository.
 - Configure the `env.template` deployment values.
-- Choose Resource Manager, `make`, or local-stack deployment.
+- Deploy the OKE reference path with Resource Manager, `make`, or Helm.
 - Verify the OCTO Drone Shop and Enterprise CRM Portal endpoints.
 - Confirm the runtime and correlation fields used by later labs.
 
@@ -59,24 +59,24 @@ In this lab, you will:
 
 ## Task 2: Choose a Deployment Path
 
-1. Use **Resource Manager** when you want the fastest OCI-native evaluation path.
+1. Use the **OKE Resource Manager stack** for the complete workshop. Labs 2 and 4 require a Kubernetes cluster that Log Analytics can monitor.
 
     ```text
-    https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/adibirzu/octo-observability-demo/releases/download/compute-resource-manager-stack-20260602/octo-compute-stack.zip
+    https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/adibirzu/octo-observability-demo/releases/download/resource-manager-stack/octo-stack.zip
     ```
 
-2. In OCI Resource Manager, provide the target compartment, DNS domain, and resource prefix.
+2. In OCI Resource Manager, provide the target compartment, DNS domain, and resource prefix. Confirm that the stack includes OKE, ATP, APM, Logging, Log Analytics, and Monitoring resources.
 
 3. Run **Plan** and then **Apply**.
 
-4. Use the `make` quickstart when you want to inspect and customize the deployment.
+4. Use the `make` quickstart when you want to inspect and customize the OKE deployment.
 
     ```bash
     make tenancy-init
     make deploy
     ```
 
-5. Use per-service targets only when you need to update one service.
+5. Use per-service targets only when you need to update one workload.
 
     ```bash
     make deploy-shop
@@ -90,7 +90,9 @@ In this lab, you will:
     make deploy-helm
     ```
 
-7. Use the local stack only for code exploration. Local mode does not send signals to OCI APM, Log Analytics, or OCI Monitoring.
+7. The private Compute stack remains a supported OCTO deployment, but it cannot complete the OKE-specific exercises without a separate Kubernetes target.
+
+8. Use the local stack only for code exploration. Local mode does not send signals to OCI APM, Log Analytics, or OCI Monitoring.
 
     ```bash
     make local-up
@@ -121,7 +123,7 @@ In this lab, you will:
     DNS_DOMAIN=<your-dns-zone> ./deploy/validate-deployment.sh
     ```
 
-6. Confirm that the smoke test reports the storefront, admin portal, APM, RUM, OCI Logging, workflow gateway, GenAI, and Java sidecar checks as healthy.
+6. Confirm that the smoke test reports the storefront, admin portal, APM, OCI Logging, workflow gateway, and Java sidecar checks as healthy. Treat optional module checks separately.
 
 ## Task 4: Verify the Application Workloads
 
@@ -173,15 +175,16 @@ In this lab, you will:
     - DNS domain.
     - APM domain name and OCID.
     - Log Analytics namespace.
-    - OKE cluster name or Compute deployment name.
+    - OKE cluster name and OCID.
     - Autonomous Database name.
+    - Resource Manager stack name and OCID.
 
 ## Task 5: Confirm the Portable Runtime Contract
 
 1. Confirm which runtime your deployment uses for the application path.
 
-    - Resource Manager compute stack.
-    - Managed Kubernetes cluster through OKE.
+    - OKE through Resource Manager, raw manifests, or Helm.
+    - Private Compute as an optional portability path.
     - Local stack for code-only exploration.
 
 2. Confirm that the deployment includes supporting OCI resources when your environment enables them.
@@ -191,14 +194,14 @@ In this lab, you will:
     - OCI Logging log group.
     - Service Connector Hub connectors into Log Analytics.
     - OCI Monitoring custom metrics and alarms.
-    - Stack Monitoring for ATP or JVM health.
     - Load Balancer and WAF for public edge traffic.
+    - OCI Notifications topic for alarms and Events actions.
 
 3. Record the runtime values that should appear on spans, logs, or metrics.
 
     ```text
     service.namespace = octo
-    service.name = octo-drone-shop | enterprise-crm-portal | octo-apm-java-demo | octo-genai-studio
+    service.name = octo-drone-shop | enterprise-crm-portal | octo-apm-java-demo
     deployment.environment = production | staging | dev
     app.runtime = oke | compute | local
     db.target = octo-atp
@@ -215,7 +218,7 @@ In this lab, you will:
     workflow_id:
     ```
 
-5. Keep these values for later labs. They prove that the same investigation works across browser, application, Java sidecar, logs, metrics, and ATP evidence.
+5. Keep these values for later labs. They connect browser, application, Java sidecar, Kubernetes, logs, metrics, events, and ATP evidence.
 
 ## Learn More
 
@@ -227,4 +230,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 19, 2026
+* **Last Updated By/Date** - Royce Fu, July 1, 2026
