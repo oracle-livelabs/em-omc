@@ -28,7 +28,7 @@ In this lab, you will:
 This lab assumes you have:
 
 - Access to an Oracle Cloud Account or LiveLabs environment where Database Management Demo Mode is enabled.
-- Required policies for Demo Mode. If policies are missing, the Demo Mode policy panel can guide an administrator through the read-only endorse policy.
+- Required policies for Demo Mode. If policies are missing, the Demo Mode policy panel can guide an administrator through the read-only endorse policy. See **Task 2, step 4**.
 
 No database setup is required for this lab.
 
