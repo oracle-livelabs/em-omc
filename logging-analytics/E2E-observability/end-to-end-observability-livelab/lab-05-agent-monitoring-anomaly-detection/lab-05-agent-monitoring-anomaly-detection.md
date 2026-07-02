@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In this lab, you monitor the AI agent path in OCI-DEMO. You will verify the GenAI, Agent Fabric, and Langfuse components, generate baseline agent activity, introduce a controlled behavior change, and detect the change from traces, logs, metrics, token usage, tool execution, and anomaly indicators.
+In this lab, you monitor the OCTO APM Demo AI Studio path. You will verify GenAI Studio and Langfuse components, generate baseline agent activity, introduce a controlled behavior change, and detect the change from traces, logs, metrics, token usage, cost, tool execution, and anomaly indicators.
 
 Estimated Time: 75 minutes
 
@@ -10,7 +10,7 @@ Estimated Time: 75 minutes
 
 In this lab, you will:
 
-- Deploy and verify the GenAI and Agent Fabric components used by agent monitoring.
+- Deploy and verify the GenAI Studio and Langfuse components used by agent monitoring.
 - Capture agent, tool, retrieval, and model spans in OCI APM.
 - Correlate OCI APM traces with Langfuse or LLM observability evidence.
 - Identify behavior changes, judge-score changes, and anomaly signals from agent execution patterns.
@@ -18,61 +18,64 @@ In this lab, you will:
 
 ## Task 1: Verify the Agent Monitoring Components
 
-1. From the OCI-DEMO repository, deploy or verify the GenAI component.
+1. From the OCTO APM Demo repository, confirm the AI Studio settings for your deployment.
 
     ```bash
-    python3 deploy.py --component c12
-    python3 deploy.py --verify c12
+    grep -E 'AI_STUDIO_ENABLED|OCI_GENAI|LANGFUSE|OCI_APM' .env deploy/compute/runtime.env.template 2>/dev/null
     ```
 
-2. Deploy or verify Agent Fabric.
+2. If you use OKE, confirm that the GenAI Studio or AI Studio workload is running.
 
     ```bash
-    python3 deploy.py --component c24
-    python3 deploy.py --verify c24
+    kubectl get deploy,pods -n octo-drone-shop | grep -E 'genai|studio|langfuse|sync'
     ```
 
-3. Deploy or verify Langfuse LLM Observability when it is part of your environment.
+3. Deploy or verify Langfuse when it is part of your environment.
 
     ```bash
-    python3 deploy.py --component c34
-    python3 deploy.py --verify c34
+    ls services/observability-stack deploy/oke/langfuse deploy/compute/langfuse
     ```
 
-4. Confirm that `.env.local` or the component state includes the required APM values.
+4. Confirm that the runtime environment includes the required GenAI and observability values.
 
     ```text
-    C12_OTEL_ENABLED=true
+    AI_STUDIO_ENABLED=true
+    OCI_GENAI_ENDPOINT=<genai-endpoint>
+    OCI_GENAI_MODEL_ID=<model-id>
     OCI_APM_ENDPOINT=<apm-otlp-endpoint>
-    OCI_APM_PRIVATE_DATAKEY=<private-data-key>
-    OCI_APM_DOMAIN_ID=<apm-domain-ocid>
-    OCI_APM_REGION=<region>
-    C24_ENABLED=true
+    OCI_APM_PRIVATE_DATA_KEY=<private-data-key>
+    LANGFUSE_BASE_URL=https://lf.${DNS_DOMAIN}
+    LANGFUSE_PUBLIC_KEY=<public-key>
+    LANGFUSE_SECRET_KEY=<secret-key>
     ```
 
-5. Open the GenAI Observability page.
+5. Open the admin GenAI Observability page.
 
     ```text
-    https://cp.octodemo.cloud/genai-observability
+    https://admin.${DNS_DOMAIN}/admin/genai-observability
     ```
 
-6. Confirm that the page shows GenAI status, trace summaries, token metrics, conversations, RAG activity, and Agent Fabric or MCP tool metrics when your deployment enables those modules.
+6. Confirm that the page shows GenAI status, trace summaries, token metrics, conversations, RAG activity, Langfuse links, and dashboard links when your deployment enables those modules.
 
 7. Map the runtime to OCI Generative AI Agents concepts.
 
     | Agent concept | Evidence to find |
     | --- | --- |
-    | Agent | configured coordinator or operations agent. |
-    | Tool | RAG, SQL, function calling, MCP, or operations tool. |
-    | Endpoint | runtime endpoint or control-plane route used for chat. |
+    | Agent | coordinator, sales analyst, evidence or RAG analyst, code interpreter, product copy, or presenter. |
+    | Tool | ATP query, retrieval, code interpreter, RAG, SQL, or function calling tool. |
+    | Endpoint | AI Studio endpoint such as `/api/studio/brief`, `/api/studio/ask`, `/api/studio/rag`, or `/api/studio/chat`. |
     | Session | conversation ID, trace ID, or request ID. |
     | Guardrail | denied action, approval requirement, or policy event. |
 
-8. If your environment uses the Agent Development Kit, record the ADK package, application entry point, and deployment target.
+8. If your environment uses OCI Generative AI Agents or the Agent Development Kit outside AI Studio, record the ADK package, application entry point, and deployment target as an extension.
 
 ## Task 2: Generate Baseline Agent Activity
 
-1. Open the control-plane GenAI or agent interface.
+1. Open the admin AI Studio interface.
+
+    ```text
+    https://admin.${DNS_DOMAIN}/ai-studio
+    ```
 
 2. Submit a simple operational prompt that should use a small number of tools.
 
@@ -102,7 +105,7 @@ In this lab, you will:
     - RAG retrieval.
     - SQL tool.
     - function calling.
-    - MCP or operations tool.
+    - operations tool.
     - guardrailed action requiring approval.
 
 ## Task 3: Inspect Agent Traces in OCI APM
@@ -111,9 +114,12 @@ In this lab, you will:
 
 2. Filter to the last 15 minutes.
 
-3. Search for GenAI or agent spans. Use the attributes that exist in your environment.
+3. Search for GenAI Studio spans. Use the attributes that exist in your environment.
 
     ```text
+    service.name = 'octo-genai-studio'
+    studio.run_id
+    studio.mode
     gen_ai.operation.name
     gen_ai.request.model
     gen_ai.usage.input_tokens
@@ -123,7 +129,7 @@ In this lab, you will:
 
 4. Open a trace from one of your prompts.
 
-5. Confirm that the trace hierarchy shows the user request, agent planning or routing, tool execution, retrieval or database work, and model call when your deployment enables those stages.
+5. Confirm that the trace hierarchy shows the user request, AI Studio routing, tool execution, retrieval or database work, and model call when your deployment enables those stages.
 
 6. Record these baseline values:
 
@@ -133,7 +139,8 @@ In this lab, you will:
     - input token count.
     - output token count.
     - model name.
-    - agent mode.
+    - studio mode.
+    - cost when available.
 
 7. Inspect semantic attributes on the span. Use the attributes present in your environment.
 
@@ -144,14 +151,21 @@ In this lab, you will:
     gen_ai.usage.input_tokens:
     gen_ai.usage.output_tokens:
     gen_ai.tool.name:
+    studio.run_id:
+    studio.mode:
+    studio.guardrail.allowed:
     error.type:
     ```
 
-8. Record whether the trace shows planning, retrieval, tool execution, model call, and response formatting as separate spans.
+8. Record whether the trace shows supervisor, agent invocation, retrieval, tool execution, model call, and response formatting as separate spans.
 
 ## Task 4: Correlate with Langfuse and Logs
 
-1. Open the Langfuse or LLM observability UI for the deployment if your environment includes C34.
+1. Open the Langfuse or LLM observability UI for the deployment if your environment includes it.
+
+    ```text
+    https://lf.${DNS_DOMAIN}
+    ```
 
 2. Search for the same prompt timestamp, trace ID, conversation ID, or model name.
 
@@ -177,7 +191,7 @@ In this lab, you will:
     | Log Analytics | warnings, denied actions, tool errors, trace ID logs. |
     | Monitoring | token, request, latency, or error metrics. |
     | Langfuse | LLM trace hierarchy, model, tokens, cost, quality scores. |
-    | Control Plane | conversation ID, model route, agent mode, tool summary. |
+    | Admin AI Studio | conversation ID, model route, studio mode, tool summary. |
 
 ## Task 5: Detect a Controlled Behavior Change
 
@@ -204,6 +218,7 @@ In this lab, you will:
     - model route change.
     - token count spike.
     - judge-score or quality-score drop.
+    - cost spike.
     - repeated retrieval misses.
     - guardrail or policy events.
 
@@ -243,6 +258,10 @@ In this lab, you will:
 
 ## Learn More
 
+- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
+- [OCTO APM Demo GenAI agent trace lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-12-genai-agent-trace.md)
+- [OCTO APM Demo APM-Langfuse-Grafana pivot lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-13-apm-langfuse-grafana-pivot.md)
+- [OCTO APM Demo GenAI monitoring guide](https://github.com/adibirzu/octo-observability-demo/blob/main/site/observability-v2/ai-studio-genai-monitoring.md)
 - [OCI Generative AI Agents](https://docs.oracle.com/en-us/iaas/Content/generative-ai-agents/home.htm)
 - [OCI Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
 - [Configure OpenTelemetry and other tracers for OCI APM](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/doc/configure-open-source-tracing-systems.html)
@@ -253,4 +272,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 18, 2026
+* **Last Updated By/Date** - Royce Fu, June 19, 2026

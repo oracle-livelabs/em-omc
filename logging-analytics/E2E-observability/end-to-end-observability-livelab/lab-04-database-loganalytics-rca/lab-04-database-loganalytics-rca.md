@@ -20,13 +20,13 @@ In this lab, you will:
 
 ## Task 1: Select a Symptom to Investigate
 
-1. Open the control-plane stress page if it is available.
+1. Open the Enterprise CRM chaos or simulation page if it is available.
 
     ```text
-    https://cp.octodemo.cloud/stress-test
+    https://admin.${DNS_DOMAIN}/admin/chaos
     ```
 
-2. Generate a short, controlled application load or select a recent slow checkout, failed checkout, paid order, payment decline, invoice generation, or CRM synchronization event.
+2. Generate a short, controlled application load or select a recent slow checkout, failed checkout, paid order, payment decline, invoice generation, CRM synchronization event, or chaos run.
 
 3. Record the symptom details:
 
@@ -36,6 +36,7 @@ In this lab, you will:
     - order or customer identifier when available
     - payment result when available
     - service name
+    - `run_id` or `chaos_id` when available
 
 4. Keep the test short. The goal is observability validation, not load testing.
 
@@ -94,7 +95,7 @@ In this lab, you will:
 5. Search WAF or edge logs when the trace suggests request validation, status code changes, or blocked traffic.
 
     ```text
-    'Log Source' contains 'WAF' and ClientRequestHost in ('shop.octodemo.cloud', 'crm.octodemo.cloud')
+    'Log Source' contains 'WAF' and ClientRequestHost in ('drones.${DNS_DOMAIN}', 'admin.${DNS_DOMAIN}')
     ```
 
 6. Search security monitoring records when the symptom looks suspicious or policy-driven.
@@ -158,6 +159,7 @@ In this lab, you will:
     | `customers`, `support_tickets`, `campaigns`, `leads`, `shipments` | CRM-side records tied to the user or order. |
     | `audit_logs` | `trace_id` for privileged or security-relevant activity. |
     | `invoices` | PDF metadata and BLOB storage when the order reaches paid status. |
+    | `llmetry_events` | assistant session, prompt hash, response hash, token, and trace evidence when AI Studio runs. |
 
 9. If the order generated an invoice, search the APM trace for the invoice persistence span.
 
@@ -200,7 +202,7 @@ In this lab, you will:
     - load balancer response time and backend health.
     - database CPU, storage, sessions, or waits.
     - application custom metrics such as payment success rate or login failures.
-    - GenAI or agent metrics if the symptom involves Lab 5 activity.
+    - GenAI or AI Studio metrics if the symptom involves Lab 5 activity.
 
 3. Record the metric namespace, metric name, dimensions, statistic, interval, and time range.
 
@@ -252,6 +254,10 @@ In this lab, you will:
 
 ## Learn More
 
+- [OCTO APM Demo repository](https://github.com/adibirzu/octo-observability-demo)
+- [OCTO APM Demo root-cause lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-17-root-cause-apm-logan.md)
+- [OCTO APM Demo failed-payment lab](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-18-payment-failure-rca-apm.md)
+- [OCTO APM Demo chaos drill](https://github.com/adibirzu/octo-observability-demo/blob/main/site/workshop/lab-09-chaos-drill.md)
 - [OCI Application Performance Monitoring](https://docs.oracle.com/en-us/iaas/application-performance-monitoring/)
 - [OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/home.htm)
 - [OCI Log Analytics](https://docs.oracle.com/en-us/iaas/log-analytics/)
@@ -266,4 +272,4 @@ In this lab, you will:
 ## Acknowledgements
 
 * **Authors** - Alexandru Birzu, Observability and Manageability Black Belt; Royce Fu, Master Principal Cloud Architect
-* **Last Updated By/Date** - Royce Fu, June 18, 2026
+* **Last Updated By/Date** - Royce Fu, June 19, 2026
