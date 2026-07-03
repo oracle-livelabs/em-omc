@@ -21,7 +21,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y ffmpeg
 
-      - name: Detect oversized images (>1280px)
+      - name: Validate changed images
         shell: bash
         run: |
           set -euo pipefail
@@ -38,12 +38,38 @@ jobs:
           for f in "${files[@]}"; do
             [[ -f "$f" ]] || continue
 
+            codec="$(ffprobe -v error -select_streams v:0 \
+              -show_entries stream=codec_name \
+              -of csv=p=0 "$f" || true)"
+
+            if [[ -z "$codec" ]]; then
+              echo "::error file=$f::Unreadable image file. Please replace it with a valid PNG or JPEG."
+              bad=1
+              continue
+            fi
+
+            case "${f,,}" in
+              *.png)
+                if [[ "$codec" != "png" ]]; then
+                  echo "::error file=$f::File extension is .png, but actual image format is ${codec}."
+                  bad=1
+                fi
+                ;;
+              *.jpg|*.jpeg)
+                if [[ "$codec" != "mjpeg" ]]; then
+                  echo "::error file=$f::File extension is .jpg/.jpeg, but actual image format is ${codec}."
+                  bad=1
+                fi
+                ;;
+            esac
+
             dims="$(ffprobe -v error -select_streams v:0 \
               -show_entries stream=width,height \
               -of csv=p=0:s=x "$f" || true)"
 
             if [[ -z "$dims" ]]; then
-              echo "Skipping unreadable image: $f"
+              echo "::error file=$f::Unable to read image dimensions."
+              bad=1
               continue
             fi
 
@@ -58,7 +84,7 @@ jobs:
 
           if [[ "$bad" -eq 1 ]]; then
             echo ""
-            echo "One or more images exceed ${MAX}px."
+            echo "One or more images are invalid or exceed ${MAX}px."
             echo "Please fix this locally in your fork."
             echo ""
             echo "Note: this script requires 'ffmpeg' to be installed on your system."
