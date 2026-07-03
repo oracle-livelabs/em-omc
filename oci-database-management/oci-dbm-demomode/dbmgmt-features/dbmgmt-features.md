@@ -40,23 +40,23 @@ No database setup is required for this lab.
 
 3. Navigate to **Observability & Management**, and then click **Database Management**.
 
-     ![Navigate to Database Management](./images/dbmgmt-navigation-current.png " ")
+    ![Navigate to Database Management](./images/dbmgmt-navigation-current.png " ")
 
 ## Task 2: Enable Database Management Demo Mode
 
 1. On the **Database Management** overview page, locate the Demo Mode entry point.
 
-     ![Demo Mode entry point on DBM Overview](./images/demo-mode-entry-point.png " ")
+    ![Demo Mode entry point on DBM Overview](./images/demo-mode-entry-point.png " ")
 
 2. Click **Enable Demo Mode**.
 
 3. If the required policies are already available, Demo Mode is enabled and the Demo Mode banner is displayed.
 
-     ![DBM Demo Mode enabled banner](./images/demo-mode-enabled-banner.png " ")
+    ![DBM Demo Mode enabled banner](./images/demo-mode-enabled-banner.png " ")
 
 4. If the required policies are missing, review the policy panel. The panel shows the customer-side read-only endorse policy required to access the demo environment.
 
-     ![Demo Mode policy panel](./images/demo-mode-policy-panel.png " ")
+    ![Demo Mode policy panel](./images/demo-mode-policy-panel.png " ")
 
 5. After the policies are created or validated, wait for the page to refresh and confirm that Demo Mode is enabled.
 
@@ -66,17 +66,17 @@ No database setup is required for this lab.
 
 1. Confirm that the Demo Mode banner or indicator is visible.
 
-     ![Demo Mode banner](./images/demo-mode-banner-current.png " ")
+    ![Demo Mode banner](./images/demo-mode-banner-current.png " ")
 
 2. Confirm that the applied compartment filter shows `dbmgmt`.
 
 3. Confirm that the compartment selector is hidden or locked while Demo Mode is active.
 
-     ![Demo Mode compartment filter and selector](./images/demo-mode-compartment-locked.png " ")
+    ![Demo Mode compartment filter and selector](./images/demo-mode-compartment-locked.png " ")
 
 4. Review the Database Management overview cards and counts. The page should show demo-environment data.
 
-     ![Demo Mode environment overview](./images/demo-mode-environment-current.png " ")
+    ![Demo Mode environment overview](./images/demo-mode-environment-current.png " ")
 
 **Note:** The console region selector may continue to display your current region while Demo Mode is active. Continue the lab as long as the Demo Mode banner and `dbmgmt` compartment filter are visible.
 
@@ -84,7 +84,7 @@ No database setup is required for this lab.
 
 1. On the left pane, expand **Diagnostics & Management**, and then click **Fleet Summary**.
 
-     ![Fleet Summary](./images/demo-mode-fleet-summary-current.png " ")
+    ![Fleet Summary](./images/demo-mode-fleet-summary-current.png " ")
 
 2. Review the summary tiles on the **Fleet Summary** page.
 
@@ -96,13 +96,13 @@ No database setup is required for this lab.
 
 3. In the **Inventory** tile, select available options such as **Type**, **Deployment**, **Version**, or **Cluster** to review different database groupings.
 
-     ![Inventory tile](./images/inventory.png " ")
+    ![Inventory tile](./images/inventory.png " ")
 
-     ![Inventory selection options](./images/inventory_selection.png " ")
+    ![Inventory selection options](./images/inventory_selection.png " ")
 
 4. Click the **Performance** tab.
 
-     ![Performance tree map](./images/dbmgmt_performance.png " ")
+    ![Performance tree map](./images/dbmgmt_performance.png " ")
 
 5. Review the performance tree map. The tree map provides a visual summary of database performance across the selected fleet.
 
@@ -110,19 +110,19 @@ No database setup is required for this lab.
 
 1. On the left pane, under **Database Management**, click **Database Groups**, if available.
 
-     ![Database groups](./images/database_groups.png " ")
+    ![Database groups](./images/database_groups.png " ")
 
 2. Click a database group in the list.
 
-     ![Database group managed databases](./images/databaseGroupsClicked.png " ")
+    ![Database group managed databases](./images/databaseGroupsClicked.png " ")
 
 3. On the **Database group details** page, review the managed databases that are part of the group.
 
-     ![Database group details](./images/dbgroupsdetails.png " ")
+    ![Database group details](./images/dbgroupsdetails.png " ")
 
 4. Click **Fleet Summary** to review the fleet summary for the selected database group.
 
-     ![Database group fleet summary](./images/fleet_summary.png " ")
+    ![Database group fleet summary](./images/fleet_summary.png " ")
 
 **Note:** Demo Mode is intended for exploration. You can try actions such as editing descriptions, moving resources, or creating jobs to see how the workflows behave, but Demo Mode prevents the actual changes from being applied.
 
@@ -134,11 +134,11 @@ No database setup is required for this lab.
 
 3. Scroll down to the **Members** section and click a managed database.
 
-     ![Managed database details](./images/dbdemomode.png " ")
+    ![Managed database details](./images/dbdemomode.png " ")
 
 4. On the left pane, under **Resources**, click **Alert logs**.
 
-     ![Alert logs](./images/mfg-alert-log-ocw.png " ")
+    ![Alert logs](./images/mfg-alert-log-ocw.png " ")
 
 5. Use the available filters to review alert and attention logs for the selected time period.
 
@@ -151,11 +151,11 @@ No database setup is required for this lab.
 
 2. In the **Members** section, click a managed database.
 
-     ![Fleet Summary](./images/demo-mode-fleet-summary-current.png " ")
+    ![Fleet Summary](./images/demo-mode-fleet-summary-current.png " ")
 
 3. On the **Managed database details** page, review the **Summary** section.
 
-     ![Managed database summary](./images/managed-database-summary-current.png " ")
+    ![Managed database summary](./images/managed-database-summary-current.png " ")
 
 4. Review the monitoring charts available for the selected time period.
 
@@ -168,15 +168,15 @@ No database setup is required for this lab.
 
 5. Use the left pane to explore resource pages that are available in Demo Mode, such as **Tablespaces** and **Database parameters**. The **Users** page is not available in this Demo Mode environment.
 
-     ![Tablespaces](./images/tablespaces.png " ")
+    ![Tablespaces](./images/tablespaces.png " ")
 
-     ![Database parameters](./images/databaseParameters.png " ")
+    ![Database parameters](./images/databaseParameters.png " ")
 
 6. Under **Performance**, open **SQL Tuning Advisor** and **SQL tuning sets**, if available.
 
-     ![SQL Tuning Advisor](./images/STA_STS.png " ")
+    ![SQL Tuning Advisor](./images/STA_STS.png " ")
 
-     ![SQL tuning sets](./images/sts_sta.png " ")
+    ![SQL tuning sets](./images/sts_sta.png " ")
 
 **Note:** Tablespaces, Database parameters, SQL Tuning Advisor, and SQL tuning sets may show curated Demo Mode data. You can review the workflows, but changes are not saved while Demo Mode is active.
 
@@ -188,23 +188,23 @@ No database setup is required for this lab.
 
 3. On the **Managed database details** page, click **Performance Hub**.
 
-     ![Performance Hub entry point](./images/perfhub.png " ")
+    ![Performance Hub entry point](./images/perfhub.png " ")
 
 4. Confirm that the Demo Mode banner is visible in Performance Hub.
 
 5. Review the **Performance Hub** page.
 
-     ![Performance Hub details](./images/perfhubinside.png " ")
+    ![Performance Hub details](./images/perfhubinside.png " ")
 
-Performance Hub provides a consolidated view of database performance. In Demo Mode, Performance Hub uses demo-environment data where available so that workload-sensitive charts reflect current demo activity.
+    Performance Hub provides a consolidated view of database performance. In Demo Mode, Performance Hub uses demo-environment data where available so that workload-sensitive charts reflect current demo activity.
 
 6. Click the **SQL Monitoring** tab, if available.
 
-     ![SQL Monitoring](./images/sql-monitoring-ocw.png " ")
+    ![SQL Monitoring](./images/sql-monitoring-ocw.png " ")
 
 7. Click an available SQL ID to review SQL monitoring details.
 
-     ![SQL Monitoring details](./images/sql-monitoring1-ocw.png " ")
+    ![SQL Monitoring details](./images/sql-monitoring1-ocw.png " ")
 
 **Note:** You can open Performance Hub actions such as Tune SQL, Create SQL Tuning Set, credential preference, or session credential flows to see how they work. Demo Mode prevents any underlying write operation from being committed.
 
@@ -212,19 +212,19 @@ Performance Hub provides a consolidated view of database performance. In Demo Mo
 
 1. From the **Managed database details** page, click **AWR Explorer**, if available.
 
-     ![AWR Explorer entry point](./images/awr_report_btn.png " ")
+    ![AWR Explorer entry point](./images/awr_report_btn.png " ")
 
 2. Confirm that the Demo Mode banner is visible and review the available AWR data for the demo database.
 
-     ![AWR Explorer report](./images/awr_report.png " ")
+    ![AWR Explorer report](./images/awr_report.png " ")
 
 3. Return to the **Managed database details** page and click **ADDM Spotlight**, if available. If AWR Explorer or ADDM Spotlight is not listed for the selected database, return to **Fleet Summary** and select another demo database.
 
-     ![ADDM Spotlight entry point](./images/addm_spothlight_btn.png " ")
+    ![ADDM Spotlight entry point](./images/addm_spothlight_btn.png " ")
 
 4. Confirm that ADDM Spotlight renders demo-environment data and shows the Demo Mode banner.
 
-     ![ADDM Spotlight](./images/addm_spothlight.png " ")
+    ![ADDM Spotlight](./images/addm_spothlight.png " ")
 
 **Note:** Performance Hub, AWR Explorer, and ADDM Spotlight use demo-environment data where available, so the displayed values can change over time.
 
@@ -250,7 +250,7 @@ Performance Hub provides a consolidated view of database performance. In Demo Mo
 
 1. Use the Demo Mode banner or available Demo Mode control to disable Demo Mode.
 
-     ![Disable Demo Mode](./images/demo-mode-disable.png " ")
+    ![Disable Demo Mode](./images/demo-mode-disable.png " ")
 
 2. Confirm that the Demo Mode banner is removed.
 
