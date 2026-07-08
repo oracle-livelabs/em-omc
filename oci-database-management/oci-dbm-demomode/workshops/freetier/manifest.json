@@ -1,0 +1,26 @@
+{
+    "workshoptitle": "Explore Oracle Cloud Infrastructure Database Management Demo Mode",
+	"help": "livelabs-help-em_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "Introduction",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Sign in to your Oracle Cloud account.",
+            "filename": "https://raw.githubusercontent.com/oracle-livelabs/common/main/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Lab 1: Explore Database Management Demo Mode",
+            "description": "Explore Database Management using Demo Mode",
+            "filename": "../../dbmgmt-features/dbmgmt-features.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
