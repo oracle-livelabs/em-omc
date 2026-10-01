@@ -1,0 +1,46 @@
+{
+    "workshoptitle": "Optimize Performance of Multicloud Database Fleet Using OCI Database Management",
+    "help": "livelabs-help-db_us@oracle.com",
+    "tutorials": [
+        {
+            "title": "Introduction",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../introduction/introduction.md"
+        },
+        {
+            "title": "Get Started",
+            "description": "Sign in to your Oracle Cloud account.",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/cloud-login/cloud-login.md"
+        },
+        {
+            "title": "Module 1 – OCI Database Management Service",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../dbm-fleet-summary/dbm-fleet-summary.md"
+        },
+        {
+            "title": "Module 2 – OCI Database Management Service",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../dbm-performance-analysis/dbm-performance-analysis.md"
+        },
+        {
+            "title": "Module 3 – Ops Insights Service",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../opsi-sql-and-capacity-planning/opsi-sql-and-capacity-planning.md"
+        },
+        {
+            "title": "Module 4 – Ops Insights Service",
+            "description": "",
+            "type": "livelabs",
+            "filename": "../../opsi-optional-capabilities/opsi-optional-capabilities.md"
+        },
+        {
+            "title": "Need Help?",
+            "description": "Solutions to Common Problems and Directions for Receiving Live Help",
+            "filename": "https://livelabs.oracle.com/cdn/common/labs/need-help/need-help-freetier.md"
+        }
+    ]
+}
