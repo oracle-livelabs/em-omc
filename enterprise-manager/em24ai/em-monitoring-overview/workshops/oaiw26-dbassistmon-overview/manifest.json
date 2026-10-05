@@ -15,8 +15,14 @@
     {
       "title": "Lab 1: Oracle Enterprise Manager 24ai: Powered by GenAI",
       "description": "The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager 24ai.",
-      "publisheddate": "9/16/2025",
-      "filename": "./../../ask-em-hol-ocw25.md"
+      "publisheddate": "08/19/2026",
+      "filename": "./../../ai-db-assistant-hol-ocw26.md"
+    },
+    {
+      "title": "Lab 2: Enterprise Monitoring Quick Tour",
+      "description": "The objective of this lab is to become familiar with Enterprise Monitoring capabilities using Oracle Enterprise Manager EM24ai",
+      "publisheddate": "08/19/2026",
+      "filename": "./../../em-monitoring-overview.md"
     },
     {
       "title": "Appendix: Frequently Asked Questions (FAQ)",

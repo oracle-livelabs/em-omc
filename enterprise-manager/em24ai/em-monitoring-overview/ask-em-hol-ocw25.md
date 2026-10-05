@@ -64,7 +64,7 @@ The remote agent name is **emrmtagt.livelabs.com**. Here will walkthrough how to
 
     ![Select credentials](ask-em-images/remote-agent/host-monitoring-creds-host-admin-credentials.png " ")
 
-9.  For the **Remote Cache** location, enter: **/u01/app/rmcache**. 
+9. For the **Remote Cache** location, enter: **/u01/app/rmcache**. 
 
     For the **Remote Cache Sbin** location, enter: **/u01/app/rmsbincache**.
 
@@ -358,13 +358,13 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Incident Details](ask-em-images/event-compression-policies/incident-details.png " ")
 
-7.	Now let’s take a look at how to use and create Event Compression Policies to create these compressed incidents.
+7. Now let’s take a look at how to use and create Event Compression Policies to create these compressed incidents.
 
-8.	Click the **hamburger menu** icon.
+8. Click the **hamburger menu** icon.
 
     ![Navigate back to menu](ask-em-images/event-compression-policies/navigate-back-to-menu.png " ")
 
-9.	Navigate to **Setup > Incidents > Event Compression Policies**.
+9. Navigate to **Setup > Incidents > Event Compression Policies**.
 
     ![Setup menu option](ask-em-images/event-compression-policies/setup.png " ")
 
@@ -374,7 +374,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Event Compression Policies page](ask-em-images/event-compression-policies/policy-page.png " ")
 
-11.	Let’s take a look at the policy that created the incident with event compression that we previously viewed.
+11. Let’s take a look at the policy that created the incident with event compression that we previously viewed.
 
     **Click the policy with the name: Target down events for a database system and its members**.
 
@@ -396,7 +396,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Edit new policy details](ask-em-images/event-compression-policies/edit-new-policy.png " ")
 
-16.	In the Event Compression Logic sub-section, you can see the policy applies to:
+16. In the Event Compression Logic sub-section, you can see the policy applies to:
     - Multiple event types: Target Availability/Down, Metric Alert, and Metric Evaluation Error
     - Target Types: Database System, Database Instance, Pluggable Database
     - Event Severity: Fatal and Critical
@@ -489,7 +489,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Analysis summary](ask-em-images/event-compression-analysis/analysis-summary.png " ")
 
-11.	View the graph for a visual breakdown of the compression: 
+11. View the graph for a visual breakdown of the compression: 
 
     - The **navy bars** represent the number of incidents when Event Compression Policies were not enabled. 
     - The **orange bars** represent number of incidents if Event Compression Policies were used. 
@@ -531,7 +531,7 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Event Compression Policies menu option](ask-em-images/event-compression-policies/event-compression-policies.png " ")
 
-20.	Click the **Actions** icon under your policy and select **Publish**.
+20. Click the **Actions** icon under your policy and select **Publish**.
 
     ![Publish your policy](ask-em-images/event-compression-analysis/publish-new-policy.png " ")
 
@@ -547,36 +547,36 @@ Event Compression is the process of grouping (i.e., compressing) multiple correl
 
     ![Navigate to Incident Rules](ask-em-images/event-compression-analysis/incident-rules.png " ")
 
-23.	An Incident Rule Set has already been created to work with your compression policy.
+23. An Incident Rule Set has already been created to work with your compression policy.
 
-24.	Select the rule set **Compress Target Down, Metric Alert, Metric Error Events**. 
+24. Select the rule set **Compress Target Down, Metric Alert, Metric Error Events**. 
 
     **Click Edit**.
 
     ![Edit the rule set](ask-em-images/event-compression-analysis/edit-incident-rule.png " ")
 
-25.	Scroll down to the Rules section and view the 3 rules for:
+25. Scroll down to the Rules section and view the 3 rules for:
     - Compress **Target Down Events** for Oracle Database System, Database Instance, and Pluggable Databases
     - Compress **Metric Alert Events** for Oracle Database System, Database Instance, and Pluggable Databases
     - Compress **Metric Error Events** for Oracle Database System, Database Instance, and Pluggable Databases
 
     ![View the multiple rules in the rule set](ask-em-images/event-compression-analysis/multiple-rules.png " ")
 
-26.	Notice in the Action Summary column that all the rules Create Incidents that Use Event Compression Policies.
+26. Notice in the Action Summary column that all the rules Create Incidents that Use Event Compression Policies.
 
     ![Create incidents that use event compression policies](ask-em-images/event-compression-analysis/use-compression.png " ")
 
-27.	Scroll down to the **Event Compression** section. 
+27. Scroll down to the **Event Compression** section. 
 
-28.	Notice the option, Allow policies to compress events across event types from multiple rules in the rule set (Ruleset Level Compression), has been selected. 
+28. Notice the option, Allow policies to compress events across event types from multiple rules in the rule set (Ruleset Level Compression), has been selected. 
 
     This enables event compression to work across multiple event types (i.e., target availability/down, metric alert, metric evaluation error).
 
     ![Multiple event compression enabled](ask-em-images/event-compression-analysis/multi-compression-enabled.png " ")
 
-29.	Scroll back up.
+29. Scroll back up.
 
-30.	Click **Cancel**.
+30. Click **Cancel**.
 
     ![Cancel incident rule](ask-em-images/event-compression-analysis/cancel-rule.png " ")
 
@@ -692,7 +692,7 @@ For this task, a Metric-Based Dynamic Runbook has already been published for you
     
     ![Step 4 - Click play icon](ask-em-images/metric-runbook/step-4-results.png " ")
 
-23.	Notice for Step 5 another gear icon is displayed instead of the play icon.
+23. Notice for Step 5 another gear icon is displayed instead of the play icon.
 
     **Click on the gear icon.**
 
@@ -742,11 +742,11 @@ For this task, a Metric-Based Dynamic Runbook has already been published for you
 
     **Click Mark as Done** to indicate that you have gone through all the steps. 
 
-   ![Mark as done](ask-em-images/metric-runbook/mark-as-done.png " ")
+    ![Mark as done](ask-em-images/metric-runbook/mark-as-done.png " ")
 
 33. **Click OK**.
 
-   ![Select OK](ask-em-images/metric-runbook/select-ok.png " ")
+    ![Select OK](ask-em-images/metric-runbook/select-ok.png " ")
 
 34. A page with your completed Runbook Sessions will appear. 
 
@@ -768,13 +768,13 @@ As an example of a universal context runbook, you will review the Triage Notific
 
     ![Enterprise Manager menu icon](ask-em-images/menu-icon.png " ")
 
-3.	Navigate to **Setup > Manage Enterprise Manager > Health Overview**.
+3. Navigate to **Setup > Manage Enterprise Manager > Health Overview**.
 
     ![Navigate to Setup](ask-em-images/universal-runbook/setup.png " ")
 
     ![Navigate to Health Overview](ask-em-images/universal-runbook/health-overview.png " ")
 
-4.	Scroll down to the **Notification Performance** section.
+4. Scroll down to the **Notification Performance** section.
 
     ![Scroll to Notification Performance](ask-em-images/universal-runbook/notif-performance.png " ")
 
