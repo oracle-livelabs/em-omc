@@ -6,6 +6,9 @@ Use Ops Insights Demo Mode to analyze SQL performance across databases and forec
 
 Estimated Time: 20 minutes
 
+Watch the video below for a quick walk-through of the module.
+[Video Walk-through](videohub:1_qxu1woe0)
+
 ### Objectives
 
 - Enable Ops Insights Demo Mode.

@@ -6,6 +6,9 @@ Explore OCI Database Management using Demo Mode. Review fleet health, resource u
 
 Estimated Time: 10 minutes
 
+Watch the video below for a quick walk-through of the module.
+[Video Walk-through](videohub:1_bn2z7iep)
+
 ### Objectives
 
 - Enable Database Management Demo Mode.
