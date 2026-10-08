@@ -6,6 +6,9 @@ Investigate a sample database using current and historical performance data. Use
 
 Estimated Time: 30 minutes
 
+Watch the video below for a quick walk-through of the module.
+[Video Walk-through](videohub:1_2viqk7u6)
+
 ### Objectives
 
 - Review database availability, activity, and resource usage.

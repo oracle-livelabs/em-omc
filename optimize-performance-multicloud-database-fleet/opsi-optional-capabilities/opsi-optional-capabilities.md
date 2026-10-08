@@ -6,6 +6,9 @@ Explore an optional capability using Demo Mode: Exadata Capacity Planning, SQL E
 
 Estimated Time: 30 minutes
 
+Watch the video below for a quick walk-through of the module.
+[Video Walk-through](videohub:1_k7adeebw)
+
 ### Objectives
 
 Depending on the option you choose:
