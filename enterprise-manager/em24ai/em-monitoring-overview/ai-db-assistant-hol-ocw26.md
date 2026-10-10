@@ -46,6 +46,8 @@ The assistant can return rich widgets, tables, and visualizations directly withi
 
 6. Click on the **Down** pie slice and review the targets that are down and click on **Close**.
 
+    ![Down pie widget](ai-db-assistant-images/ai-db-assistant-monitoring/down-target-widget-maximized.png " ")
+
     ![Down pie widget](ai-db-assistant-images/ai-db-assistant-monitoring/down-target-summary-widget.png " ")
 
 7. Click on **minimize** icon on the upper right corner of the widget.
