@@ -17,49 +17,49 @@ This lab assumes you have:
 1.  Click on the link below to download the Resource Manager zip file you need to build your environment:
 
 <if type="config-compliance">
-    - [emcc-mkplc-config-compliance.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-config-compliance.zip)
+    - [emcc-mkplc-config-compliance.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-config-compliance.zip)
 </if>
 <if type="devops-automation">
-    - [emcc-mkplc-devops-automation.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-devops-automation.zip)
+    - [emcc-mkplc-devops-automation.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-devops-automation.zip)
 </if>
 <if type="devops-patching">
     - [emcc-mkplc-devops-patching.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-devops-patching.zip)
 </if>
 <if type="find-fix-validate">
-    - [emcc-mkplc-find-fix-validate.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-find-fix-validate.zip)
+    - [emcc-mkplc-find-fix-validate.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-find-fix-validate.zip)
 </if>
 <if type="fleet-patching">
-    - [emcc-mkplc-fleet-patching.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-patching.zip)
+    - [emcc-mkplc-fleet-patching.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-patching.zip)
 </if>
 <if type="fleet-patching-ui">
-    - [emcc-mkplc-fleet-patching-ui.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-patching-ui.zip)
+    - [emcc-mkplc-fleet-patching-ui.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-patching-ui.zip)
 </if>
 <if type="fleet-upgrade">
-    - [emcc-mkplc-fleet-upgrade.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-upgrade.zip)
+    - [emcc-mkplc-fleet-upgrade.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-upgrade.zip)
 </if>
 <if type="fleet-upgrade-ui">
-    - [emcc-mkplc-fleet-upgrade-ui.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-upgrade-ui.zip)
+    - [emcc-mkplc-fleet-upgrade-ui.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fleet-upgrade-ui.zip)
 </if>
 <if type="fundamentals">
-    - [emcc-mkplc-fundamentals.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fundamentals.zip)
+    - [emcc-mkplc-fundamentals.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-fundamentals.zip)
 </if>
 <if type="job-system-automation">
-    - [emcc-mkplc-job-system-automation.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-job-system-automation.zip)
+    - [emcc-mkplc-job-system-automation.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-job-system-automation.zip)
 </if>
 <if type="lifecycle">
-    - [emcc-mkplc-lifecycle.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-lifecycle.zip)
+    - [emcc-mkplc-lifecycle.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-lifecycle.zip)
 </if>
 <if type="migration-workbench">
-    - [emcc-mkplc-migration-workbench.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-migration-workbench-v1.3.zip)
+    - [emcc-mkplc-migration-workbench.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-migration-workbench-v1.3.zip)
 </if>
 <if type="migration-workbench-adb">
     - [emcc-mkplc-migration-workbench-adb.zip](https://c4u02.objectstorage.us-ashburn-1.oci.customer-oci.com/p/tfC_fKB7HB5Wo1pvpYu1fHifVw-E7MZruSx9l5J6ebjhGZOwsFawUiJlJhzgR7Hy/n/c4u02/b/hosted_workshops/o/stacks/emcc-mkplc-migration-workbench-adb.zip)
 </if>
 <if type="monitoring-overview">
-    - [emcc-mkplc-monitoring-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-monitoring-overview.zip)
+    - [emcc-mkplc-monitoring-overview.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-monitoring-overview.zip)
 </if>
 <if type="rat-overview">
-    - [emcc-mkplc-rat-overview.zip](https://c4u04.objectstorage.us-ashburn-1.oci.customer-oci.com/p/EcTjWk2IuZPZeNnD_fYMcgUhdNDIDA6rt9gaFj_WZMiL7VvxPBNMY60837hu5hga/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-rat-overview.zip)
+    - [emcc-mkplc-rat-overview.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/4Au3jJ-t8Wtw3LWyYsDMqQk2FdlXDvXCb1MYRS0J6P4QS-GCrv2YNOolWdtFMLZq/n/c4u04/b/livelabsfiles/o/em-omc/emcc-mkplc-rat-overview.zip)
 </if>
 <if type="hybrid-pdbaas">
     - [emcc-mkplc-hybrid-pdbaas.zip](https://objectstorage.us-ashburn-1.oraclecloud.com/p/-JqErQC8a-AiGJnd9ICNRE9dy8AiA-GEjYLAZEffy9qlGQMl0dOq34LPDhsVy_XS/n/omcinternal/b/EMWorkshopBucket/o/emcc-mkplc-hybrid-pdbaas.zip)
